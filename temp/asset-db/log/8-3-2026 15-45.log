@@ -1,0 +1,662 @@
+8-3-2026 15:45:15-debug: asset-db:worker-init (1136ms)
+8-3-2026 15:45:16-debug: Preimport db internal success
+8-3-2026 15:45:16-debug: Preimport db assets success
+8-3-2026 15:45:16-debug: asset-db:worker-effect-data-processing (220ms)
+8-3-2026 15:45:21-debug: Set detail map pack:///resolution-detail-map.json: {}
+8-3-2026 15:45:21-debug: Start up the 'internal' database...
+8-3-2026 15:45:21-debug: asset-db:worker-init-script (42ms)
+8-3-2026 15:45:21-debug: start asset-db with asset: 419
+8-3-2026 15:45:21-debug: Start up the 'assets' database...
+8-3-2026 15:45:21-debug: start asset-db with asset: 327
+8-3-2026 15:45:22-debug: asset-db:worker-startup-database[internal] (5728ms)
+8-3-2026 15:45:22-debug: asset-db:worker-startup-database[assets] (5894ms)
+8-3-2026 15:45:22-debug: Asset DB is ready!
+8-3-2026 15:45:22-debug: init worker message success
+8-3-2026 15:45:22-debug: programming:execute-script (1ms)
+8-3-2026 15:45:23-error: register plugin cocos-service in build worker failed!
+8-3-2026 15:45:23-error: Error: Cannot find module 'fs-extra'Require stack:- C:\Workspace\ABI\Cocos\Packingdom\Packingdom\extensions\cocos-service\contributions\builder\hooks.js- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\creator\dist\module\index.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\editor\preload.js- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\builtin\asset-db\dist\worker\index.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-worker\static\script.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-worker\static\worker.html    at Module._resolveFilename (internal/modules/cjs/loader.js:887:15)    at o._resolveFilename (electron/js2c/renderer_init.js:33:917)    at Function.<anonymous> (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\fix-electron-require\index.js:7:24)    at Function._resolveFilename (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\cc\preload.ts:109:46)    at Module._load (internal/modules/cjs/loader.js:732:27)    at Function.f._load (electron/js2c/asar_bundle.js:5:12913)    at Function._load (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\cc\preload.ts:127:35)    at Module.require (internal/modules/cjs/loader.js:959:19)    at require (internal/modules/cjs/helpers.js:88:18)    at Object.<anonymous> (C:\Workspace\ABI\Cocos\Packingdom\Packingdom\extensions\cocos-service\contributions\builder\hooks.js:1:2833)
+8-3-2026 15:45:23-debug: builder:worker-init (1484ms)
+8-3-2026 15:45:26-debug: programming:execute-script (6ms)
+8-3-2026 15:57:45-debug: refresh db internal success
+8-3-2026 15:57:45-debug: asset-db:worker-effect-data-processing (216ms)
+8-3-2026 15:57:45-debug: refresh db assets success
+8-3-2026 15:57:45-debug: asset-db:refresh-all-database (335ms)
+8-3-2026 15:58:07-debug: programming:execute-script (3ms)
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\amtra.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bac copy.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bàn.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban cong.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban phim, chuot.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\BG.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhnuocdau.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh copy 2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bien.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-6.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-3.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-4.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2-1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm3_.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-5.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\caytreo2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\canh tu.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 3.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau copy.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay8.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia copy.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Cốc trà.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cốc trà copy.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay copy.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cuaso.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay5.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dautren1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat-1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1 cut.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dâu trên2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2 cut.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa_cut.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh cut.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giacong.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giado.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hop.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\kenhophai.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\keotraitim.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy 2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3 copy.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lokeo.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy 2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\may tinh.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\mattruoc2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tem.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\pattern.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thampicnic.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\nodaybuoc.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tui dau.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1-1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thammeo.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuibanh.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2-1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 1.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 2.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuong va san.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\xechohoa.png...
+8-3-2026 15:58:08-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\vaichup.png...
+8-3-2026 15:58:08-debug: refresh db internal success
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban cong.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban cong.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban cong.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban cong.png...
+8-3-2026 15:58:08-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:08-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban cong.png success
+8-3-2026 15:58:08-debug: asset-db:worker-effect-data-processing (218ms)
+8-3-2026 15:58:08-debug: refresh db assets success
+8-3-2026 15:58:08-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban phim, chuot.png'
+8-3-2026 15:58:08-debug: asset-db:refresh-all-database (276ms)
+8-3-2026 15:58:08-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban phim, chuot.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\BG.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-3.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban phim, chuot.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\BG.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-3.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban phim, chuot.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-3.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\BG.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-4.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-5.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-6.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2-1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-4.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-6.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-5.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2-1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-4.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 3.png...
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-6.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2-1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-5.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 1.png...
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm3_.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\canh tu.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm3_.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\caytreo2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\canh tu.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm3_.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\caytreo2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh.png...
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\canh tu.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\caytreo2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 3.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 3.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 3.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 3.png success
+8-3-2026 15:58:08-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:08-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 1.png success
+8-3-2026 15:58:08-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh.png success
+8-3-2026 15:58:08-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:08-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh copy 2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bàn.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau copy.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay5.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh copy 2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bàn.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau copy.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay5.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bàn.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau copy.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh copy 2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay5.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay8.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia copy.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay8.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia copy.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay8.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia copy.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:08-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia copy.png...
+8-3-2026 15:58:08-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia.png...
+8-3-2026 15:58:08-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:08-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia copy.png success
+8-3-2026 15:58:08-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia.png success
+8-3-2026 15:58:08-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cốc trà copy.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Cốc trà.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat-1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Cốc trà.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cốc trà copy.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat-1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Cốc trà.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cốc trà copy.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat-1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dautren1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dâu trên2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1 cut.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dautren1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dâu trên2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1 cut.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dâu trên2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dautren1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1 cut.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1 cut.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1 cut.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat.png success
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay copy.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2 cut.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cuaso.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay copy.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cuaso.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2 cut.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cuaso.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay copy.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2 cut.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa_cut.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giacong.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh cut.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giado.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa_cut.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giacong.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh cut.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giado.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giacong.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa_cut.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh cut.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giado.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao.png...
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giado.png...
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao.png success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giado.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay copy.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay copy.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh copy 2.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh copy 2.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy 2.png...
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhnuocdau.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3 copy.png'
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hop.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhnuocdau.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hop.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhnuocdau.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hop.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\kenhophai.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\keotraitim.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy 2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\kenhophai.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy 2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\keotraitim.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\kenhophai.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3.png...
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\keotraitim.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy 2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay1.png...
+8-3-2026 15:58:09-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy 2.png success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay1.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\keotraitim.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\keotraitim.png success
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3 copy.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lokeo.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3 copy.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lokeo.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3 copy.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lokeo.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2.png...
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy 2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thampicnic.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\nodaybuoc.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1-1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\nodaybuoc.png...
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy 2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1-1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\nodaybuoc.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thampicnic.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy 2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1-1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thampicnic.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\nodaybuoc.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\nodaybuoc.png success
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tem.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2-1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tui dau.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuibanh.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tem.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tui dau.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2-1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuibanh.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tem.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2-1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tui dau.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuibanh.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuong va san.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\vaichup.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuong va san.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\vaichup.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuong va san.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\vaichup.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\vaichup.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\vaichup.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuong va san.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuong va san.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuibanh.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuibanh.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tem.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tem.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\BG.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\BG.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-5.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-5.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-4.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-4.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban phim, chuot.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban phim, chuot.png success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-6.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-6.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2-1.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm3_.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2-1.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm3_.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\canh tu.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\canh tu.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\caytreo2.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\caytreo2.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy.png...
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 2.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 2.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-3.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-3.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay5.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay5.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-2.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-2.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau.png...
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau copy.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau.png success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau copy.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay8.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bàn.png...
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bàn.png success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay8.png success
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cốc trà copy.png...
+8-3-2026 15:58:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cốc trà copy.png success
+8-3-2026 15:58:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Cốc trà.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1.png...
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1.png success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Cốc trà.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay.png...
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dautren1.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dautren1.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa_cut.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa_cut.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat-1.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat-1.png success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dâu trên2.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dâu trên2.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2.png...
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cuaso.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cuaso.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2 cut.png...
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2.png success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2 cut.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau.png...
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau1.png...
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh cut.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau1.png success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh cut.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao2.png...
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\kenhophai.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao2.png success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\kenhophai.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh1.png...
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhnuocdau.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhnuocdau.png success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh1.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-1.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-1.png...
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giacong.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giacong.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hop.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hop.png success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy.png...
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy 2.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy 2.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lokeo.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh2.png...
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh2.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lokeo.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thampicnic.png...
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thampicnic.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1.png...
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1-1.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1.png success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1-1.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3 copy.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3 copy.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2-1.png...
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 1.png...
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2-1.png success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 1.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tui dau.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tui dau.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh.png...
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 2.png...
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 2.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bac copy.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bac copy.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bac copy.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bac copy.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\pattern.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\pattern.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\pattern.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\pattern.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bac copy.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\pattern.png success
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto2.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto2.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thammeo.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thammeo.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thammeo.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thammeo.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thammeo.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bien.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bien.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bien.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bien.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bien.png success
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\amtra.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\amtra.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\amtra.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\amtra.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\mattruoc2.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\mattruoc2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\mattruoc2.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\mattruoc2.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\amtra.png success
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\mattruoc2.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\may tinh.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\may tinh.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\may tinh.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\may tinh.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\may tinh.png success
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut.png success
+8-3-2026 15:58:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\xechohoa.png...
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\xechohoa.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\xechohoa.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\xechohoa.pngbackground: #ffb8b8; color: #000;color: #000;
+8-3-2026 15:58:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
+8-3-2026 15:58:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\xechohoa.png success
+8-3-2026 15:58:10-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;

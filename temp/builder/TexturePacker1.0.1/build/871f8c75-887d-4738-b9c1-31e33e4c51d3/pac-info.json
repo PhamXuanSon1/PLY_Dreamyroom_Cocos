@@ -1,0 +1,119 @@
+{
+  "cacheFiles": {
+    "871f8c75-887d-4738-b9c1-31e33e4c51d3": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\temp\\asset-db\\assets\\87\\871f8c75-887d-4738-b9c1-31e33e4c51d3\\build\\871f8c75-887d-4738-b9c1-31e33e4c51d3",
+    "2f365bb5-0840-4e8f-a671-a27d2c564542@f9941": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\temp\\asset-db\\assets\\2f\\2f365bb5-0840-4e8f-a671-a27d2c564542@f9941\\build\\871f8c75-887d-4738-b9c1-31e33e4c51d3",
+    "6c7d92ea-b17e-49fa-aceb-4359db5b38f6@f9941": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\temp\\asset-db\\assets\\6c\\6c7d92ea-b17e-49fa-aceb-4359db5b38f6@f9941\\build\\871f8c75-887d-4738-b9c1-31e33e4c51d3",
+    "e6fc871c-573e-4335-94e8-766d8aea5875@f9941": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\temp\\asset-db\\assets\\e6\\e6fc871c-573e-4335-94e8-766d8aea5875@f9941\\build\\871f8c75-887d-4738-b9c1-31e33e4c51d3",
+    "f338d984-7269-4a5f-bb53-1770cc768198@f9941": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\temp\\asset-db\\assets\\f3\\f338d984-7269-4a5f-bb53-1770cc768198@f9941\\build\\871f8c75-887d-4738-b9c1-31e33e4c51d3"
+  },
+  "sharpMd5": "8c10c",
+  "md5": "e7e3a",
+  "versionDev": "1.0.2",
+  "result": {
+    "atlases": [
+      {
+        "imageUuid": "11cb6cf58",
+        "textureUuid": "11cb6cf58@6c48a",
+        "compressed": {
+          "imagePathNoExt": "",
+          "suffixs": [
+            ".png"
+          ]
+        },
+        "spriteFrameInfos": [
+          {
+            "name": "Logo",
+            "uuid": "e6fc871c-573e-4335-94e8-766d8aea5875@f9941",
+            "imageUuid": "e6fc871c-573e-4335-94e8-766d8aea5875",
+            "textureUuid": "e6fc871c-573e-4335-94e8-766d8aea5875@6c48a",
+            "file": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\3.Sprites\\Gameplay\\Misc\\Logo.png",
+            "libraryPath": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_e6fc871c-573e-4335-94e8-766d8aea5875@f9941_image_0.png",
+            "trim": {
+              "rotatedWidth": 878,
+              "rotatedHeight": 290,
+              "x": 3,
+              "y": 3,
+              "width": 878,
+              "height": 290
+            },
+            "rawWidth": 878,
+            "rawHeight": 290,
+            "width": 884,
+            "height": 296,
+            "originalPath": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\library/e6/e6fc871c-573e-4335-94e8-766d8aea5875.png",
+            "rotated": false,
+            "x": 0,
+            "y": 0,
+            "rotatedWidth": 884,
+            "rotatedHeight": 296
+          },
+          {
+            "name": "Fail 1",
+            "uuid": "f338d984-7269-4a5f-bb53-1770cc768198@f9941",
+            "imageUuid": "f338d984-7269-4a5f-bb53-1770cc768198",
+            "textureUuid": "f338d984-7269-4a5f-bb53-1770cc768198@6c48a",
+            "file": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\3.Sprites\\Gameplay\\Misc\\Fail 1.png",
+            "libraryPath": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\temp\\builder\\TexturePacker1.0.1\\build\\trimImages\\spritesheet_js_f338d984-7269-4a5f-bb53-1770cc768198@f9941_image_1.png",
+            "trim": {
+              "rotatedWidth": 815,
+              "rotatedHeight": 193,
+              "x": 3,
+              "y": 299,
+              "width": 815,
+              "height": 193
+            },
+            "rawWidth": 815,
+            "rawHeight": 193,
+            "width": 821,
+            "height": 199,
+            "originalPath": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\library/f3/f338d984-7269-4a5f-bb53-1770cc768198.png",
+            "rotated": false,
+            "x": 0,
+            "y": 296,
+            "rotatedWidth": 821,
+            "rotatedHeight": 199
+          }
+        ],
+        "width": 884,
+        "height": 495,
+        "name": "auto-atlas-0",
+        "imagePath": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\temp\\builder\\TexturePacker1.0.1\\build\\871f8c75-887d-4738-b9c1-31e33e4c51d3\\11cb6cf58.png"
+      }
+    ],
+    "options": {
+      "name": "auto-atlas",
+      "width": 2048,
+      "height": 2048,
+      "destDir": "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\temp\\builder\\TexturePacker1.0.1\\build\\871f8c75-887d-4738-b9c1-31e33e4c51d3",
+      "maxWidth": 2048,
+      "maxHeight": 2048,
+      "padding": 2,
+      "allowRotation": false,
+      "forceSquared": false,
+      "powerOfTwo": false,
+      "algorithm": "MaxRects",
+      "format": "png",
+      "quality": 80,
+      "contourBleed": true,
+      "paddingBleed": true,
+      "filterUnused": true,
+      "removeTextureInBundle": true,
+      "removeImageInBundle": true,
+      "removeSpriteAtlasInBundle": true,
+      "compressSettings": {
+        "useCompressTexture": true,
+        "presetId": "03/m4ybQVOJ7SPOhieTjrl"
+      },
+      "textureSetting": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "bleed": 1
+    },
+    "unpackedImages": []
+  }
+}

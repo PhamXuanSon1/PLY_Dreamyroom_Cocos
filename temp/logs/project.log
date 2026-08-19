@@ -1,0 +1,278 @@
+8-19-2026 11:23:50 - verbose: Arguments:
+8-19-2026 11:23:50 - verbose:   C:\ProgramData\cocos\editors\Creator\3.7.4\CocosCreator.exe: true
+8-19-2026 11:23:50 - verbose:   project: F:\CocosProject\PLY_Dreamyroom_Cocos
+8-19-2026 11:23:50 - verbose:   can-show-upgrade-dialog: true
+8-19-2026 11:23:50 - verbose:   dev: false
+8-19-2026 11:23:50 - verbose:   home: C:\Users\Admin\.CocosCreator
+8-19-2026 11:23:50 - verbose:  
+8-19-2026 11:23:54 - verbose: [Package] menu@1.0.0 enable
+8-19-2026 11:23:54 - verbose: [Package] profile@1.0.0 enable
+8-19-2026 11:23:54 - verbose: [Package] project@1.0.4 enable
+8-19-2026 11:23:54 - verbose: [Package] messages@1.0.0 enable
+8-19-2026 11:23:54 - verbose: [Package] program@1.0.3 enable
+8-19-2026 11:23:54 - verbose: [Package] tester@1.0.0 enable
+8-19-2026 11:23:54 - verbose: [Package] information@1.0.0 enable
+8-19-2026 11:23:54 - verbose: [Package] preferences@1.0.0 enable
+8-19-2026 11:23:56 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine
+8-19-2026 11:23:56 - log: Profile changed: engine (modules.includeModules: 2d,3d,animation,audio,base,gfx-webgl,gfx-webgl2,particle,particle-2d,profiler,spine,tween,ui,webview)
+8-19-2026 11:23:56 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\native
+8-19-2026 11:23:56 - verbose: [Package] engine@1.0.7 enable
+8-19-2026 11:23:57 - verbose: [Package] programming@1.0.0 enable
+8-19-2026 11:23:57 - verbose: [Package] device@1.0.1 enable
+8-19-2026 11:23:57 - verbose: [Package] ui-kit@1.0.1 enable
+8-19-2026 11:23:57 - verbose: [Package] asset-db@1.0.0 enable
+8-19-2026 11:23:57 - verbose: [Package] scene@1.0.0 enable
+8-19-2026 11:23:57 - verbose: [Package] server@1.0.0 enable
+8-19-2026 11:23:57 - verbose: [Package] utils@1.0.0 enable
+8-19-2026 11:24:10 - verbose: [Package] preview@1.0.1 enable
+8-19-2026 11:24:10 - verbose: [Package] animator@1.0.0 enable
+8-19-2026 11:24:10 - verbose: [Build-plugin] register pkg scene: 1ms
+8-19-2026 11:24:10 - verbose: Builder PluginManager init: 1ms
+8-19-2026 11:24:10 - verbose: [Package] builder@1.3.5 enable
+8-19-2026 11:24:11 - verbose: [Package] shortcuts@1.0.1 enable
+8-19-2026 11:24:11 - verbose: [Package] animation-graph@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] about@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] assets@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] console@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] crash-reporter@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] extension@3.1.1 enable
+8-19-2026 11:24:11 - verbose: [Package] hierarchy@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] inspector@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] light-probe@1.0.4 enable
+8-19-2026 11:24:11 - verbose: [Package] lightmap@1.0.4 enable
+8-19-2026 11:24:11 - verbose: [Package] node-library@1.0.1 enable
+8-19-2026 11:24:11 - verbose: [Package] package-asset@1.0.1 enable
+8-19-2026 11:24:11 - verbose: [Package] process@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] reference-image@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] reflection-probe@1.0.4 enable
+8-19-2026 11:24:11 - verbose: [Package] engine-extends@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] alipay-mini-game@1.0.1 enable
+8-19-2026 11:24:11 - verbose: [Package] android@1.0.1 enable
+8-19-2026 11:24:11 - verbose: [Package] bytedance-mini-game@1.0.2 enable
+8-19-2026 11:24:11 - verbose: [Package] certificate@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] channel-upload-tools@1.0.0 enable
+8-19-2026 11:24:11 - verbose: [Package] fb-instant-games@1.0.0 enable
+8-19-2026 11:24:12 - verbose: [Package] huawei-agc@1.0.0 enable
+8-19-2026 11:24:12 - verbose: [Package] huawei-quick-game@1.0.1 enable
+8-19-2026 11:24:12 - verbose: [Package] ios@1.0.0 enable
+8-19-2026 11:24:12 - verbose: [Package] linux@1.0.0 enable
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg android: 221ms
+8-19-2026 11:24:12 - verbose: [Package] mac@1.0.0 enable
+8-19-2026 11:24:12 - verbose: [Package] native@1.0.2 enable
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg native: 58ms
+8-19-2026 11:24:12 - verbose: [Package] ohos@1.0.0 enable
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg bytedance-mini-game: 333ms
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg huawei-quick-game: 218ms
+8-19-2026 11:24:12 - verbose: [Package] open-harmonyos@1.0.0 enable
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg fb-instant-games: 284ms
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg huawei-agc: 267ms
+8-19-2026 11:24:12 - verbose: [Package] oppo-mini-game@1.0.1 enable
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg ios: 250ms
+8-19-2026 11:24:12 - verbose: [Package] runtime-dev-tools@1.0.0 enable
+8-19-2026 11:24:12 - verbose: [Package] taobao-creative-app@1.0.0 enable
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg mac: 246ms
+8-19-2026 11:24:12 - verbose: [Package] taobao-mini-game@1.0.0 enable
+8-19-2026 11:24:12 - verbose: [Package] vivo-mini-game@1.0.1 enable
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg ohos: 145ms
+8-19-2026 11:24:12 - verbose: [Package] web-desktop@1.0.1 enable
+8-19-2026 11:24:12 - verbose: [Package] web-mobile@1.0.1 enable
+8-19-2026 11:24:12 - verbose: [Package] wechatgame@1.0.2 enable
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg oppo-mini-game: 198ms
+8-19-2026 11:24:12 - verbose: [Package] wechatprogram@1.0.2 enable
+8-19-2026 11:24:12 - verbose: [Package] windows@1.0.1 enable
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg taobao-creative-app: 209ms
+8-19-2026 11:24:12 - verbose: [Package] xiaomi-quick-game@1.0.1 enable
+8-19-2026 11:24:12 - verbose: [Package] cocos-service@3.0.7 enable
+8-19-2026 11:24:12 - verbose: [Build-plugin] register pkg cocos-service: 43ms
+8-19-2026 11:24:13 - verbose: [Package] im-plugin@3.0.12 enable
+8-19-2026 11:24:13 - verbose: [Build-plugin] register pkg vivo-mini-game: 622ms
+8-19-2026 11:24:13 - verbose: [Build-plugin] register pkg web-desktop: 582ms
+8-19-2026 11:24:13 - verbose: [Build-plugin] register pkg taobao-mini-game: 648ms
+8-19-2026 11:24:13 - verbose: [Build-plugin] register pkg wechatgame: 527ms
+8-19-2026 11:24:13 - verbose: [Build-plugin] register pkg web-mobile: 557ms
+8-19-2026 11:24:13 - log: playable-ads-adapter is loaded
+8-19-2026 11:24:13 - verbose: [Package] playable-ads-adapter@1.3.10 enable
+8-19-2026 11:24:13 - log: playable-ads-adapter is loaded
+8-19-2026 11:24:13 - verbose: [Build-plugin] register pkg playable-ads-adapter: 2ms
+8-19-2026 11:24:13 - verbose: [Build-plugin] register pkg windows: 650ms
+8-19-2026 11:24:13 - verbose: [Package] placeholder@1.0.0 enable
+8-19-2026 11:24:13 - verbose: [Build-plugin] register pkg xiaomi-quick-game: 733ms
+8-19-2026 11:24:14 - log: [Window] playable-ads-adapter is loaded
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: [
+8-19-2026 11:24:14 - verbose: B
+8-19-2026 11:24:15 - verbose: asset-db is ready!
+8-19-2026 11:24:16 - info: [Scene] [Physics][Bullet]: Using asmjs Bullet libs.
+8-19-2026 11:24:16 - info: [Scene] [PHYSICS]: using builtin.
+8-19-2026 11:24:16 - log: [Scene] Cocos Creator v3.7.4
+8-19-2026 11:24:16 - info: [Scene] Forward render pipeline initialized.
+8-19-2026 11:24:17 - warn: [Scene] Found possible circular reference in "pack:///chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js", happened when use "UI" imported from "./UI"  Error: 
+    at Object.execute (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js:72:16)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12Error: [Scene] Found possible circular reference in "pack:///chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js", happened when use "UI" imported from "./UI"  Error: 
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at Module.report (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/be/be027f973d8ff1c6fe3dcfebbc993118a793ec1b.js:16:13)
+    at _reportPossibleCrUseOfUI (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js:13:17)
+    at Object.execute (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js:71:133)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+8-19-2026 11:24:17 - warn: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
+Is this intended? If not, this may indicate a circular reference.
+For example:
+
+ 
+// foo.ts
+import { _decorator } from 'cc';
+import { Bar } from './bar';  // Given that './bar' also reference 'foo.ts'.
+                              // When importing './bar', execution of './bar' is hung on to wait execution of 'foo.ts',
+                              // the `Bar` imported here is `undefined` until './bar' finish its execution.
+                              // It leads to that
+@_decorator.ccclass           //  ↓
+export class Foo {            //  ↓
+    @_decorator.type(Bar)     //  → is equivalent to `@_decorator.type(undefined)`
+    public bar: Bar;          // To eliminate this error, either:
+                              // - Refactor your module structure(recommended), or
+                              // - specify the type as cc class name: `@_decorator.type('Bar'/* or any name you specified for `Bar` */)`
+}Error: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
+Is this intended? If not, this may indicate a circular reference.
+For example:
+
+ 
+// foo.ts
+import { _decorator } from 'cc';
+import { Bar } from './bar';  // Given that './bar' also reference 'foo.ts'.
+@_decorator.ccclass           //  ↓
+export class Foo {            //  ↓
+    @_decorator.type(Bar)     //  → is equivalent to `@_decorator.type(undefined)`
+    public bar: Bar;          // To eliminate this error, either:
+                              // - Refactor your module structure(recommended), or
+                              // - specify the type as cc class name: `@_decorator.type('Bar'/* or any name you specified for `Bar` */)`
+}
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at warn (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169627:12)
+    at warnID (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169846:5)
+    at parseAttributes (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150951:7)
+    at defineProp (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150646:5)
+    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150844:11)
+    at CCClass (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150875:5)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:286034:21)
+8-19-2026 11:24:17 - warn: [Scene] Found possible circular reference in "pack:///chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js", happened when use "UI" imported from "./UI"  Error: 
+    at Object.execute (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js:72:16)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12Error: [Scene] Found possible circular reference in "pack:///chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js", happened when use "UI" imported from "./UI"  Error: 
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at Module.report (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/be/be027f973d8ff1c6fe3dcfebbc993118a793ec1b.js:16:13)
+    at _reportPossibleCrUseOfUI (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js:13:17)
+    at Object.execute (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js:71:133)
+    at doExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
+    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
+    at Array.forEach (<anonymous>)
+8-19-2026 11:24:17 - warn: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
+Is this intended? If not, this may indicate a circular reference.
+For example:
+
+ 
+// foo.ts
+import { _decorator } from 'cc';
+import { Bar } from './bar';  // Given that './bar' also reference 'foo.ts'.
+                              // When importing './bar', execution of './bar' is hung on to wait execution of 'foo.ts',
+                              // the `Bar` imported here is `undefined` until './bar' finish its execution.
+                              // It leads to that
+@_decorator.ccclass           //  ↓
+export class Foo {            //  ↓
+    @_decorator.type(Bar)     //  → is equivalent to `@_decorator.type(undefined)`
+    public bar: Bar;          // To eliminate this error, either:
+                              // - Refactor your module structure(recommended), or
+                              // - specify the type as cc class name: `@_decorator.type('Bar'/* or any name you specified for `Bar` */)`
+}Error: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
+Is this intended? If not, this may indicate a circular reference.
+For example:
+
+ 
+// foo.ts
+import { _decorator } from 'cc';
+import { Bar } from './bar';  // Given that './bar' also reference 'foo.ts'.
+@_decorator.ccclass           //  ↓
+export class Foo {            //  ↓
+    @_decorator.type(Bar)     //  → is equivalent to `@_decorator.type(undefined)`
+    public bar: Bar;          // To eliminate this error, either:
+                              // - Refactor your module structure(recommended), or
+                              // - specify the type as cc class name: `@_decorator.type('Bar'/* or any name you specified for `Bar` */)`
+}
+    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:318)
+    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
+    at console.warn (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+    at warn (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169627:12)
+    at warnID (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169846:5)
+    at parseAttributes (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150951:7)
+    at defineProp (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150646:5)
+    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150844:11)
+    at CCClass (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150875:5)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:286034:21)
+8-19-2026 11:24:17 - error: [Scene] Cannot read property 'type' of nullTypeError: Cannot read property 'type' of null
+    at PoolManager.preLoad (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/b0/b00b52db7ac3e105d08923f9d166ae8b5fbbfd45.js:162:42)
+    at PoolManager.onLoad (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/b0/b00b52db7ac3e105d08923f9d166ae8b5fbbfd45.js:190:16)
+    at eval (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43404:16)
+    at OneOffInvoker.eval [as _invoke] (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:41413:9)
+    at OneOffInvoker.invoke (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:41529:16)
+    at NodeActivator.activateNode (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:43461:25)
+    at Scene._activate (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:49854:44)
+    at Director.runSceneImmediate (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:19140:17)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\builtin\scene\dist\script\3d\manager\scene\utils.ccc:1:377
+    at eval (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:139385:9)

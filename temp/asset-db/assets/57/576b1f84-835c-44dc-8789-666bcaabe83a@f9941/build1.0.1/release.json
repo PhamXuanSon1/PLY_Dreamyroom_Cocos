@@ -1,0 +1,113 @@
+[
+    1,
+    [
+        "57ax+Eg1xE3IeJZmvKq+g6@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "Layer 1151 copy 2",
+            "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 160,
+                "height": 222
+            },
+            "offset": {
+                "x": 0,
+                "y": 0
+            },
+            "originalSize": {
+                "width": 160,
+                "height": 222
+            },
+            "rotated": false,
+            "capInsets": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "vertices": {
+                "rawPosition": [
+                    -80,
+                    -111,
+                    0,
+                    80,
+                    -111,
+                    0,
+                    -80,
+                    111,
+                    0,
+                    80,
+                    111,
+                    0
+                ],
+                "indexes": [
+                    0,
+                    1,
+                    2,
+                    2,
+                    1,
+                    3
+                ],
+                "uv": [
+                    0,
+                    222,
+                    160,
+                    222,
+                    0,
+                    0,
+                    160,
+                    0
+                ],
+                "nuv": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1
+                ],
+                "minPos": {
+                    "x": -80,
+                    "y": -111,
+                    "z": 0
+                },
+                "maxPos": {
+                    "x": 80,
+                    "y": 111,
+                    "z": 0
+                }
+            },
+            "packable": false,
+            "pixelsToUnit": 100,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            },
+            "meshType": 0
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

@@ -1,0 +1,113 @@
+[
+    1,
+    [
+        "ed2Mv7USFMjbGaunl365eq@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "5_bien_hieu_sushi_decor",
+            "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 303,
+                "height": 307
+            },
+            "offset": {
+                "x": 0,
+                "y": 0
+            },
+            "originalSize": {
+                "width": 303,
+                "height": 307
+            },
+            "rotated": false,
+            "capInsets": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "vertices": {
+                "rawPosition": [
+                    -151.5,
+                    -153.5,
+                    0,
+                    151.5,
+                    -153.5,
+                    0,
+                    -151.5,
+                    153.5,
+                    0,
+                    151.5,
+                    153.5,
+                    0
+                ],
+                "indexes": [
+                    0,
+                    1,
+                    2,
+                    2,
+                    1,
+                    3
+                ],
+                "uv": [
+                    0,
+                    307,
+                    303,
+                    307,
+                    0,
+                    0,
+                    303,
+                    0
+                ],
+                "nuv": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1
+                ],
+                "minPos": {
+                    "x": -151.5,
+                    "y": -153.5,
+                    "z": 0
+                },
+                "maxPos": {
+                    "x": 151.5,
+                    "y": 153.5,
+                    "z": 0
+                }
+            },
+            "packable": false,
+            "pixelsToUnit": 100,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            },
+            "meshType": 0
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

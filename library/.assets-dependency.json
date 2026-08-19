@@ -1,0 +1,654 @@
+{
+  "path": {
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Shaders\\builtin-spine.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Shaders\\builtin-sprite.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-fs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Shaders\\Gradient.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Shaders\\Outline.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Shaders\\Place.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-fs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Shaders\\SpriteFolder.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\sprite-fs.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Win\\capi-win.json": [
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Win\\capi-win.atlas.txt"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\NhanVien.json": [
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\NhanVien.atlas.txt"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\CayDua2.json": [
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\CayDua2.atlas.txt"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\Char1.json": [
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\Char1.atlas.txt"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\Char3.json": [
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\Char3.atlas.txt"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\Char4.json": [
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\Char4.atlas.txt"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\LaCo.json": [
+      "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\LaCo.atlas.txt"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Shaders\\Gradient.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Shaders\\builtin-sprite.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Shaders\\builtin-spine.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Shaders\\Outline.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Shaders\\Place.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Shaders\\SpriteFolder.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\0.Spines\\Win\\capi-win.json": [
+      "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\0.Spines\\Win\\capi-win.atlas.txt"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Shaders\\builtin-spine.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Shaders\\builtin-sprite.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Shaders\\Gradient.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Shaders\\Outline.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Shaders\\Place.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Shaders\\SpriteFolder.effect": [
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "E:\\Cocos\\Editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-vs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\common\\common-define.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\sprite-fs.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\0.Spines\\Win\\capi-win.json": [
+      "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\0.Spines\\Win\\capi-win.atlas.txt"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Shaders\\builtin-sprite.effect": [
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-vs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\common\\common-define.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-fs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Shaders\\builtin-spine.effect": [
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-vs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\common\\common-define.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Shaders\\Gradient.effect": [
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-vs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\common\\common-define.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Shaders\\Place.effect": [
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-vs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\common\\common-define.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-fs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Shaders\\Outline.effect": [
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-vs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\common\\common-define.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-fs.chunk"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Shaders\\SpriteFolder.effect": [
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\common\\common-define.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-fs.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\builtin\\internal\\alpha-test.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-vs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-global.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\uniforms\\cc-local.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\common\\common-define.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\sprite-fs.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\internal\\embedded-alpha.chunk",
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\chunks\\builtin\\internal\\alpha-test.chunk"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\Win\\capi-win.json": [
+      "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\Win\\capi-win.atlas.txt"
+    ]
+  },
+  "uuid": {
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\BuiCay_BG.json": [
+      "645d8ea4-6fd0-4ab7-8262-bcf4e5cfaaa8@6c48a"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\CayDua1.json": [
+      "0b2e69cc-ab40-4f7f-8b4e-b17ab674b1b5@6c48a"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\CayDua2.json": [
+      "3344f0f2-4422-41fc-bca9-8362499313fc@6c48a"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\CayDua3.json": [
+      "3bb9685a-2093-480a-8f23-bc272b261e83@6c48a"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\Char1.json": [
+      "d0c6f490-96c3-4047-9a3d-4a2c7bbbe313@6c48a"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\Char2.json": [
+      "2b3d4ae4-e579-4fb5-8400-3ae1cb46d71f@6c48a"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\Char3.json": [
+      "026d545f-d434-46a4-ba45-bc44b7dbd735@6c48a"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\Char4.json": [
+      "2d62ae04-d00f-4b28-98ee-03bbc11b0757@6c48a"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\LaCo.json": [
+      "ee5cec60-f946-4740-a590-3dc48a6a6bf5@6c48a"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Win\\capi-win.json": [
+      "94a02fff-38a5-49f0-90c8-3901cecb4f86@6c48a"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\Gradient.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\Gray.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\Hightlight.mtl": [
+      "145eb8fb-e8ac-462f-a065-5d0f088f71a0"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\HightlightSlot.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\HightlightWhite.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\material.mtl": [
+      "53f396c3-67cd-483a-8fe0-b9269a51b1c5"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\Place.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\Spine.mtl": [
+      "145eb8fb-e8ac-462f-a065-5d0f088f71a0"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\Sprite.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\SpriteFolder.mtl": [
+      "7f0f94b5-f688-446c-91cc-6b2f7377a697"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\Tiling.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Materials\\VFX.mtl": [
+      "69b6324b-dcba-46fc-a447-8b16b6182e1b"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Textures\\Cloud\\Cloud.mtl": [
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Textures\\Merge\\Star.mtl": [
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Textures\\Wind\\leaves-001.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Textures\\Wind\\leaves-002.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Textures\\Wind\\leaves-003.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Textures\\Wind\\leaves.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Textures\\Wind\\Smoke.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\8.Models\\Textures\\Wind\\trail.mtl": [
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e"
+    ],
+    "C:\\Workspace\\ABI\\Cocos\\Packingdom\\Packingdom\\assets\\0.Spines\\Level\\NhanVien.json": [
+      "c1588bf0-2d00-4c43-b6c6-a17a1c288e93@6c48a"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\0.Spines\\Win\\capi-win.json": [
+      "94a02fff-38a5-49f0-90c8-3901cecb4f86@6c48a"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\Gradient.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\Gray.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\HightlightSlot.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\Hightlight.mtl": [
+      "145eb8fb-e8ac-462f-a065-5d0f088f71a0"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\HightlightWhite.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\material.mtl": [
+      "53f396c3-67cd-483a-8fe0-b9269a51b1c5"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\Place.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\Spine.mtl": [
+      "145eb8fb-e8ac-462f-a065-5d0f088f71a0"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\Sprite.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\SpriteFolder.mtl": [
+      "7f0f94b5-f688-446c-91cc-6b2f7377a697"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\VFX.mtl": [
+      "69b6324b-dcba-46fc-a447-8b16b6182e1b"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Materials\\Tiling.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Textures\\Cloud\\Cloud.mtl": [
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Textures\\Merge\\Star.mtl": [
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\leaves-001.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\leaves-002.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\leaves-003.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\leaves.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\Smoke.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "D:\\Backup\\ABI\\Utilities\\CocosPackages\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\trail.mtl": [
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\0.Spines\\Win\\capi-win.json": [
+      "94a02fff-38a5-49f0-90c8-3901cecb4f86@6c48a"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\Gradient.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\Gray.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\Hightlight.mtl": [
+      "145eb8fb-e8ac-462f-a065-5d0f088f71a0"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\HightlightSlot.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\HightlightWhite.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\material.mtl": [
+      "53f396c3-67cd-483a-8fe0-b9269a51b1c5"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\Place.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\Spine.mtl": [
+      "145eb8fb-e8ac-462f-a065-5d0f088f71a0"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\Sprite.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\SpriteFolder.mtl": [
+      "7f0f94b5-f688-446c-91cc-6b2f7377a697"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\Tiling.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Materials\\VFX.mtl": [
+      "69b6324b-dcba-46fc-a447-8b16b6182e1b"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Textures\\Cloud\\Cloud.mtl": [
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Textures\\Merge\\Star.mtl": [
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\leaves-001.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\leaves-002.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\leaves-003.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\leaves.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\Smoke.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "\\\\svmkt\\marketingcollection\\BaseGameCocos\\2DTemplateProject\\assets\\8.Models\\Textures\\Wind\\trail.mtl": [
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\Win\\capi-win.json": [
+      "94a02fff-38a5-49f0-90c8-3901cecb4f86@6c48a"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\Gradient.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\Gray.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\Hightlight.mtl": [
+      "145eb8fb-e8ac-462f-a065-5d0f088f71a0"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\HightlightSlot.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\HightlightWhite.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\material.mtl": [
+      "53f396c3-67cd-483a-8fe0-b9269a51b1c5"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\Place.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\Spine.mtl": [
+      "145eb8fb-e8ac-462f-a065-5d0f088f71a0"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\Sprite.mtl": [
+      "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\SpriteFolder.mtl": [
+      "7f0f94b5-f688-446c-91cc-6b2f7377a697"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\Tiling.mtl": [
+      "0c41eedc-d10a-4f1f-bee7-029e50b5d86f"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Materials\\VFX.mtl": [
+      "69b6324b-dcba-46fc-a447-8b16b6182e1b"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Textures\\Cloud\\Cloud.mtl": [
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Textures\\Merge\\Star.mtl": [
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Textures\\Wind\\leaves-001.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Textures\\Wind\\leaves-002.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Textures\\Wind\\leaves-003.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Textures\\Wind\\leaves.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Textures\\Wind\\Smoke.mtl": [
+      "d1346436-ac96-4271-b863-1f4fdead95b0"
+    ],
+    "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\8.Models\\Textures\\Wind\\trail.mtl": [
+      "17debcc3-0a6b-4b8a-b00b-dc58b885581e"
+    ]
+  }
+}

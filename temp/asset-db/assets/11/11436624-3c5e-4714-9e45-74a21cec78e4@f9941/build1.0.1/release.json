@@ -1,0 +1,113 @@
+[
+    1,
+    [
+        "11Q2YkPF5HFJ5FdKIc7Hjk@6c48a"
+    ],
+    [
+        "_textureSource"
+    ],
+    [
+        "cc.SpriteFrame"
+    ],
+    0,
+    [
+        {
+            "name": "18_ke_3_cuon_sushi copy",
+            "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 286,
+                "height": 235
+            },
+            "offset": {
+                "x": 0,
+                "y": 0
+            },
+            "originalSize": {
+                "width": 286,
+                "height": 235
+            },
+            "rotated": false,
+            "capInsets": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "vertices": {
+                "rawPosition": [
+                    -143,
+                    -117.5,
+                    0,
+                    143,
+                    -117.5,
+                    0,
+                    -143,
+                    117.5,
+                    0,
+                    143,
+                    117.5,
+                    0
+                ],
+                "indexes": [
+                    0,
+                    1,
+                    2,
+                    2,
+                    1,
+                    3
+                ],
+                "uv": [
+                    0,
+                    235,
+                    286,
+                    235,
+                    0,
+                    0,
+                    286,
+                    0
+                ],
+                "nuv": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1
+                ],
+                "minPos": {
+                    "x": -143,
+                    "y": -117.5,
+                    "z": 0
+                },
+                "maxPos": {
+                    "x": 143,
+                    "y": 117.5,
+                    "z": 0
+                }
+            },
+            "packable": false,
+            "pixelsToUnit": 100,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            },
+            "meshType": 0
+        }
+    ],
+    [
+        0
+    ],
+    0,
+    [
+        0
+    ],
+    [
+        0
+    ],
+    [
+        0
+    ]
+]

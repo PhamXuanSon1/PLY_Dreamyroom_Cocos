@@ -1,0 +1,587 @@
+debug: Wed, 19 Aug 2026 04:24:10 GMT
+debug: Project: F:\CocosProject\PLY_Dreamyroom_Cocos
+debug: Targets: editor,preview
+debug: Incremental file seems great.
+debug: Engine path: C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine
+debug: Initializing target [Editor]
+debug: Loading cache
+debug: Loading cache costs 73.54379999637604ms.
+debug: Engine features shipped in editor: base,gfx-webgl,gfx-webgl2,gfx-empty,3d,animation,skeletal-animation,2d,ui,particle,particle-2d,physics-framework,physics-2d-framework,intersection-2d,primitive,profiler,occlusion-query,geometry-renderer,debug-renderer,audio,video,xr,light-probe,terrain,webview,tween,tiled-map,spine,dragon-bones,marionette,custom-pipeline,websocket,websocket-server
+debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc"
+  }
+}
+debug: Initializing target [Preview]
+debug: Loading cache
+debug: Loading cache costs 40.873299956321716ms.
+debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc"
+  }
+}
+debug: Sync engine features: 2d,3d,animation,audio,base,gfx-webgl,gfx-webgl2,particle,particle-2d,profiler,spine,tween,ui,webview
+debug: Reset databases. Enumerated domains: [
+  {
+    "root": "db://internal/",
+    "physical": "C:\\ProgramData\\cocos\\editors\\Creator\\3.7.4\\resources\\resources\\3d\\engine\\editor\\assets"
+  },
+  {
+    "root": "db://assets/",
+    "physical": "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets"
+  }
+]
+debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc",
+    "db://internal/": "file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/",
+    "db://assets/": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/"
+  }
+}
+debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc",
+    "db://internal/": "file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/",
+    "db://assets/": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/"
+  }
+}
+debug: Pulling asset-db.
+debug: Fetch asset-db cost: 8.776799976825714ms.
+debug: Build iteration starts.
+Number of accumulated asset changes: 31
+Feature changed: false
+debug: Target(editor) build started.
+debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 07:00:07 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:14 GMT+0700 (Indochina Time)
+debug: Inspect cce:/internal/x/cc
+debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
+debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
+debug: Resolve cce:/internal/x/cc-fu/gfx-webgl2 from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl2.
+debug: Resolve cce:/internal/x/cc-fu/gfx-empty from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-empty.
+debug: Resolve cce:/internal/x/cc-fu/3d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/3d.
+debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
+debug: Resolve cce:/internal/x/cc-fu/skeletal-animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/skeletal-animation.
+debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
+debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
+debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
+debug: Resolve cce:/internal/x/cc-fu/particle from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle.
+debug: Resolve cce:/internal/x/cc-fu/particle-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle-2d.
+debug: Resolve cce:/internal/x/cc-fu/physics-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-framework.
+debug: Resolve cce:/internal/x/cc-fu/physics-2d-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-framework.
+debug: Resolve cce:/internal/x/cc-fu/intersection-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/intersection-2d.
+debug: Resolve cce:/internal/x/cc-fu/primitive from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/primitive.
+debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
+debug: Resolve cce:/internal/x/cc-fu/geometry-renderer from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/geometry-renderer.
+debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
+debug: Resolve cce:/internal/x/cc-fu/video from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/video.
+debug: Resolve cce:/internal/x/cc-fu/xr from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/xr.
+debug: Resolve cce:/internal/x/cc-fu/light-probe from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/light-probe.
+debug: Resolve cce:/internal/x/cc-fu/terrain from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/terrain.
+debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
+debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
+debug: Resolve cce:/internal/x/cc-fu/tiled-map from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tiled-map.
+debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
+debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
+debug: Resolve cce:/internal/x/cc-fu/custom-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline.
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:00:59 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:14 GMT+0700 (Indochina Time)
+debug: Inspect cce:/internal/x/prerequisite-imports
+debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts
+debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/code-quality/cr.mjs.
+debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Wed Aug 05 2026 17:15:10 GMT+0700 (Indochina Time), Current mtime: Wed Aug 19 2026 11:23:56 GMT+0700 (Indochina Time)
+debug: Inspect cce:/internal/code-quality/cr.mjs
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/x/cc.
+debug: Resolve ./UI from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as cce:/internal/x/cc.
+debug: Resolve ./World from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as cce:/internal/x/cc.
+debug: Resolve ./UI from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts.
+debug: Resolve ./SoundManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts as cce:/internal/x/cc.
+debug: Resolve ./MainCamera from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts as cce:/internal/x/cc.
+debug: Resolve ../Tool/GameController from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts as cce:/internal/x/cc.
+debug: Resolve ./h5-helper from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts as cce:/internal/x/cc.
+debug: Resolve ../Pool/PoolManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as cce:/internal/x/cc.
+debug: Resolve ./PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts as cce:/internal/x/cc.
+debug: Resolve ./PoolControl from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts as cce:/internal/x/cc.
+debug: Resolve ./PoolManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts.
+debug: Resolve ../Pool/PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve ./PointerController from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts as cce:/internal/x/cc.
+debug: Resolve ./World from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve ./SoundManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts.
+debug: Resolve ./InputManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts.
+debug: Resolve ./SoundManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as cce:/internal/x/cc.
+debug: Resolve ../Pool/PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve ./World from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts as cce:/internal/x/cc.
+debug: Resolve ./NodeOrder from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts as cce:/internal/x/cc.
+debug: Resolve ./Ulis from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve ../Manager/PointerController from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts.
+debug: Resolve ../Manager/UI from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as cce:/internal/x/cc.
+debug: Resolve ../Pool/PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve db://assets/7.Scripts/Manager/World from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve ./Ulis from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts as cce:/internal/x/cc.
+debug: Resolve ../Pool/PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts as cce:/internal/x/cc.
+debug: Resolve ../Pool/PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts as cce:/internal/x/cc.
+debug: Resolve db://assets/7.Scripts/Manager/World from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as cce:/internal/x/cc.
+debug: Resolve ./MeshLoader from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts.
+debug: Resolve ../Manager/AssetsManagerCustom from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts.
+debug: Target(editor) ends with cost 1588.437600016594ms.
+debug: Target(preview) build started.
+debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 07:00:07 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:14 GMT+0700 (Indochina Time)
+debug: Inspect cce:/internal/x/cc
+debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
+debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
+debug: Resolve cce:/internal/x/cc-fu/3d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/3d.
+debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
+debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
+debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
+debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
+debug: Resolve cce:/internal/x/cc-fu/gfx-webgl2 from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl2.
+debug: Resolve cce:/internal/x/cc-fu/particle from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle.
+debug: Resolve cce:/internal/x/cc-fu/particle-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle-2d.
+debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
+debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
+debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
+debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
+debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:00:59 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:15 GMT+0700 (Indochina Time)
+debug: Inspect cce:/internal/x/prerequisite-imports
+debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts
+debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/code-quality/cr.mjs.
+debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Wed Aug 05 2026 17:15:10 GMT+0700 (Indochina Time), Current mtime: Wed Aug 19 2026 11:23:56 GMT+0700 (Indochina Time)
+debug: Inspect cce:/internal/code-quality/cr.mjs
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/x/cc.
+debug: Resolve ./UI from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as cce:/internal/x/cc.
+debug: Resolve ./World from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as cce:/internal/x/cc.
+debug: Resolve ./UI from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts.
+debug: Resolve ./SoundManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts as cce:/internal/x/cc.
+debug: Resolve ./MainCamera from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts as cce:/internal/x/cc.
+debug: Resolve ../Tool/GameController from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts as cce:/internal/x/cc.
+debug: Resolve ./h5-helper from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts as cce:/internal/x/cc.
+debug: Resolve ../Pool/PoolManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as cce:/internal/x/cc.
+debug: Resolve ./PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts as cce:/internal/x/cc.
+debug: Resolve ./PoolControl from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts as cce:/internal/x/cc.
+debug: Resolve ./PoolManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts.
+debug: Resolve ../Pool/PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve ./PointerController from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts as cce:/internal/x/cc.
+debug: Resolve ./World from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve ./SoundManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts.
+debug: Resolve ./InputManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts.
+debug: Resolve ./SoundManager from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as cce:/internal/x/cc.
+debug: Resolve ../Pool/PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve ./World from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts as cce:/internal/x/cc.
+debug: Resolve ./NodeOrder from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts as cce:/internal/x/cc.
+debug: Resolve ./Ulis from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as cce:/internal/x/cc.
+debug: Resolve ../Manager/PointerController from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts.
+debug: Resolve ../Manager/UI from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as cce:/internal/x/cc.
+debug: Resolve ../Pool/PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve db://assets/7.Scripts/Manager/World from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve ./Ulis from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts as cce:/internal/x/cc.
+debug: Resolve ../Pool/PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts as cce:/internal/x/cc.
+debug: Resolve ../Pool/PoolMember from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts as cce:/internal/x/cc.
+debug: Resolve db://assets/7.Scripts/Manager/World from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts
+debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as cce:/internal/code-quality/cr.mjs.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as cce:/internal/x/cc.
+debug: Resolve ./MeshLoader from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts.
+debug: Resolve ../Manager/AssetsManagerCustom from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts.
+debug: Inspect file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts as cce:/internal/x/cc.
+debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts as cce:/internal/x/cc.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts.
+debug: Target(preview) ends with cost 1238.2803000211716ms.
+debug: Pulling asset-db.
+debug: Fetch asset-db cost: 36.88630002737045ms.
+debug: Build iteration starts.
+Number of accumulated asset changes: 31
+Feature changed: false
+debug: Target(editor) build started.
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:00:14 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:19 GMT+0700 (Indochina Time)
+debug: Inspect cce:/internal/x/prerequisite-imports
+debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts.
+debug: Target(editor) ends with cost 38.294999957084656ms.
+debug: Target(preview) build started.
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:00:15 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:19 GMT+0700 (Indochina Time)
+debug: Inspect cce:/internal/x/prerequisite-imports
+debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Joystick.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/MainCamera.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/PointerController.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/SoundManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/VFX.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/MatchSprite.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/NodeOrder.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/ReadImagePixel.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/SpriteSizeSetter.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MatchAsset/Ulis.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/AStar.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Black.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Cloud.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/IQ.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/MeshLoader.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SkinManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/SplineLineRenderer.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Tooth.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Misc/Ulis.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolControl.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolManager.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Pool/PoolMember.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts.
+debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts.
+debug: Target(preview) ends with cost 47.53150004148483ms.

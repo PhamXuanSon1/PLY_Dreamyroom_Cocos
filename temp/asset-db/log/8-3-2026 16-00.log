@@ -1,0 +1,22 @@
+8-3-2026 16:00:45-debug: asset-db:worker-init (1029ms)
+8-3-2026 16:00:45-debug: Preimport db internal success
+8-3-2026 16:00:45-debug: Preimport db assets success
+8-3-2026 16:00:45-debug: asset-db:worker-effect-data-processing (154ms)
+8-3-2026 16:00:48-debug: Set detail map pack:///resolution-detail-map.json: {}
+8-3-2026 16:00:48-debug: Start up the 'internal' database...
+8-3-2026 16:00:48-debug: asset-db:worker-init-script (29ms)
+8-3-2026 16:00:48-debug: start asset-db with asset: 419
+8-3-2026 16:00:48-debug: Start up the 'assets' database...
+8-3-2026 16:00:48-debug: asset-db:worker-startup-database[internal] (3561ms)
+8-3-2026 16:00:48-debug: start asset-db with asset: 279
+8-3-2026 16:00:48-debug: asset-db:worker-startup-database[assets] (3598ms)
+8-3-2026 16:00:48-debug: Asset DB is ready!
+8-3-2026 16:00:48-debug: init worker message success
+8-3-2026 16:00:49-error: Error: Cannot find module 'fs-extra'Require stack:- C:\Workspace\ABI\Cocos\Packingdom\Packingdom\extensions\cocos-service\contributions\builder\hooks.js- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\creator\dist\module\index.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\editor\preload.js- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\builtin\asset-db\dist\worker\index.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-worker\static\script.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-worker\static\worker.html    at Module._resolveFilename (internal/modules/cjs/loader.js:887:15)    at o._resolveFilename (electron/js2c/renderer_init.js:33:917)    at Function.<anonymous> (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\fix-electron-require\index.js:7:24)    at Function._resolveFilename (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\cc\preload.ts:109:46)    at Module._load (internal/modules/cjs/loader.js:732:27)    at Function.f._load (electron/js2c/asar_bundle.js:5:12913)    at Function._load (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\cc\preload.ts:127:35)    at Module.require (internal/modules/cjs/loader.js:959:19)    at require (internal/modules/cjs/helpers.js:88:18)    at Object.<anonymous> (C:\Workspace\ABI\Cocos\Packingdom\Packingdom\extensions\cocos-service\contributions\builder\hooks.js:1:2833)
+8-3-2026 16:00:49-error: register plugin cocos-service in build worker failed!
+8-3-2026 16:00:50-debug: builder:worker-init (968ms)
+8-3-2026 16:00:52-debug: programming:execute-script (3ms)
+8-3-2026 16:01:01-debug: refresh db internal success
+8-3-2026 16:01:01-debug: asset-db:worker-effect-data-processing (291ms)
+8-3-2026 16:01:01-debug: refresh db assets success
+8-3-2026 16:01:01-debug: asset-db:refresh-all-database (422ms)
