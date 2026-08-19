@@ -12,7 +12,7 @@
  */
 
 import { _decorator, Component, Node, Vec3, EventTouch, math, input, Input, EventMouse } from 'cc';
-import { InputManager, InputPriority, IPointerHandler, IPinchHandler } from '../core/InputManager';
+import { DreamyInputManager, InputPriority, IPointerHandler, IPinchHandler } from '../core/DreamyInputManager';
 
 const { ccclass, property } = _decorator;
 
@@ -61,14 +61,14 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     }
 
     onEnable() {
-        InputManager.register(this);
-        InputManager.registerPinch(this);
+        DreamyInputManager.register(this);
+        DreamyInputManager.registerPinch(this);
         input.on(Input.EventType.MOUSE_WHEEL, this.onMouseWheel, this);
     }
 
     onDisable() {
-        InputManager.unregister(this);
-        InputManager.unregisterPinch(this);
+        DreamyInputManager.unregister(this);
+        DreamyInputManager.unregisterPinch(this);
         input.off(Input.EventType.MOUSE_WHEEL, this.onMouseWheel, this);
     }
 
@@ -88,7 +88,7 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     // ======================================================== pan
     hitTest(worldPos: Vec3): boolean {
         if (!this.interactionEnabled) return false;
-        return InputManager.hitTestSelfOrChildren(this.node, worldPos);
+        return DreamyInputManager.hitTestSelfOrChildren(this.node, worldPos);
     }
 
     onPointerDown(worldPos: Vec3, _ev: EventTouch): boolean {

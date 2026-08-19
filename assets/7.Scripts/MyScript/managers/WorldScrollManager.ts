@@ -12,7 +12,7 @@
 
 import { _decorator, Component, Node, Vec3, EventTouch, Camera, math } from 'cc';
 import { ItemController } from '../item/ItemController';
-import { InputManager, InputPriority, IPointerHandler } from '../core/InputManager';
+import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { TweenUtil } from '../core/TweenUtil';
 
 const { ccclass, property } = _decorator;
@@ -59,11 +59,11 @@ export class WorldScrollManager extends Component implements IPointerHandler {
     }
 
     onEnable() {
-        InputManager.register(this);
+        DreamyInputManager.register(this);
     }
 
     onDisable() {
-        InputManager.unregister(this);
+        DreamyInputManager.unregister(this);
     }
 
     onDestroy() {

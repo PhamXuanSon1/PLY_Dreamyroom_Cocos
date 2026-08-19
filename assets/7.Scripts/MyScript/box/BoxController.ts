@@ -9,7 +9,7 @@
  */
 
 import { _decorator, Component, Node, Vec3, EventTouch, randomRange } from 'cc';
-import { InputManager, InputPriority, IPointerHandler } from '../core/InputManager';
+import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { BoxGraphic, BoxState } from './BoxGraphic';
 import { ItemManager } from '../managers/ItemManager';
 import { UIManager } from '../managers/UIManager';
@@ -60,13 +60,13 @@ export class BoxController extends Component implements IPointerHandler {
         this.boxGraphic?.changeState(BoxState.ReadyOpen);
     }
 
-    onEnable() { InputManager.register(this); }
-    onDisable() { InputManager.unregister(this); }
+    onEnable() { DreamyInputManager.register(this); }
+    onDisable() { DreamyInputManager.unregister(this); }
 
     // ======================================================== input
     hitTest(worldPos: Vec3): boolean {
         if (this.isClicked) return false;
-        return InputManager.hitTestSelfOrChildren(this.node, worldPos);
+        return DreamyInputManager.hitTestSelfOrChildren(this.node, worldPos);
     }
 
     onPointerDown(_worldPos: Vec3, _ev: EventTouch): boolean {

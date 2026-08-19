@@ -11,7 +11,7 @@
  */
 
 import { _decorator, Component, Node, Label, Sprite, EventTouch, Vec3, sys } from 'cc';
-import { InputManager, InputPriority, IPointerHandler } from '../core/InputManager';
+import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { ItemManager } from './ItemManager';
 import { BallFollowFill } from '../utils/BallFollowFill';
 import { TweenUtil } from '../core/TweenUtil';
@@ -69,11 +69,11 @@ export class UIManager extends Component implements IPointerHandler {
     }
 
     onEnable() {
-        InputManager.register(this);
+        DreamyInputManager.register(this);
     }
 
     onDisable() {
-        InputManager.unregister(this);
+        DreamyInputManager.unregister(this);
     }
 
     onDestroy() {
@@ -140,7 +140,7 @@ export class UIManager extends Component implements IPointerHandler {
 
         if (this.tuSo >= this.mauSo || arrived >= this.endGameCount) {
             this.isGameEnded = true;
-            InputManager.canInput = false;
+            DreamyInputManager.canInput = false;
 
             if (this.GameUICanvas) this.GameUICanvas.active = false;
             if (this.EndUICanvas) this.EndUICanvas.active = true;
@@ -152,7 +152,7 @@ export class UIManager extends Component implements IPointerHandler {
             }
 
             // Cho phép chạm để mở store
-            InputManager.canInput = true;
+            DreamyInputManager.canInput = true;
         }
     }
 

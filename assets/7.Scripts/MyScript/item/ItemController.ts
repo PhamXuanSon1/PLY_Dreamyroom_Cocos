@@ -4,7 +4,7 @@
  */
 
 import { _decorator, Component, Node, Vec3, EventTouch, BoxCollider2D, UITransform, Vec2, Enum } from 'cc';
-import { InputManager, InputPriority, IPointerHandler } from '../core/InputManager';
+import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { ItemGraphic } from './ItemGraphic';
 import { ItemMovement } from './ItemMovement';
 import { OpenItem } from './OpenItem';
@@ -97,11 +97,11 @@ export class ItemController extends Component implements IPointerHandler {
     onEnable() {
         if (!this.itemGraphic) this.itemGraphic = this.getComponent(ItemGraphic) ?? this.addComponent(ItemGraphic);
         if (!this.itemMovement) this.itemMovement = this.getComponent(ItemMovement) ?? this.addComponent(ItemMovement);
-        InputManager.register(this);
+        DreamyInputManager.register(this);
     }
 
     onDisable() {
-        InputManager.unregister(this);
+        DreamyInputManager.unregister(this);
     }
 
     // ======================================================== Input & HitTest
@@ -117,7 +117,7 @@ export class ItemController extends Component implements IPointerHandler {
         }
 
         // 2. Kiểm tra qua UITransform AABB
-        return InputManager.hitTestSelfOrChildren(this.node, worldPos);
+        return DreamyInputManager.hitTestSelfOrChildren(this.node, worldPos);
     }
 
     /** Bắt đầu nhấc item lên (Pick) */
@@ -265,7 +265,7 @@ export class ItemController extends Component implements IPointerHandler {
             this.itemGraphic.restoreTargetSprites();
 
             this.moving = false;
-            InputManager.unregister(this);
+            DreamyInputManager.unregister(this);
 
             // 5. Ẩn item đi (hình ảnh ở Target đã hiện lên thay thế)
             this.node.active = false;

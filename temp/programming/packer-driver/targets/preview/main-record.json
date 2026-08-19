@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 5974.294700026512,
+      "mTimestamp": 14868.273599982262,
       "chunkId": "a54cb34760bec8532b019327fcd8ebfc4159351f",
       "imports": [
         {
@@ -325,7 +325,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 4101517.263100028,
+      "mTimestamp": 21810.01240003109,
       "chunkId": "63b2b601dbb652f55c8ec4e517366ac1f64b34f3",
       "imports": [
         {
@@ -791,7 +791,7 @@
           }
         },
         {
-          "value": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/InputManager.ts",
+          "value": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/DreamyInputManager.ts",
           "resolved": "__unresolved_33",
           "loc": {
             "start": {
@@ -800,7 +800,7 @@
             },
             "end": {
               "line": 37,
-              "column": 100
+              "column": 106
             }
           }
         },
@@ -1447,7 +1447,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/InputManager.ts"
+            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/DreamyInputManager.ts"
           },
           "messages": []
         },
@@ -1741,7 +1741,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1787121366538,
+      "mTimestamp": 1787131803524,
       "chunkId": "cceb4f795e6e637cc67c120b5b44ef3a584b486a",
       "imports": [],
       "type": "esm",
@@ -9670,7 +9670,7 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts": {
       "mTimestamp": {
-        "mtime": 1778474130201.2468,
+        "mtime": 1787129374097.9192,
         "uuid": "3a3a1421-643c-41f0-8077-d0c9e37dd1dd"
       },
       "chunkId": "69ffa38adb12f0bb8ee59f1b1f06c800e8da1279",
@@ -9774,7 +9774,7 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts": {
       "mTimestamp": {
-        "mtime": 1787125302201.682,
+        "mtime": 1787130419415.6873,
         "uuid": "9af7cb90-e1fb-4efd-835f-cf82497f2625"
       },
       "chunkId": "a4fe25436af4e76d1245026dd221444c07d08501",
@@ -9879,7 +9879,7 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/UI.ts": {
       "mTimestamp": {
-        "mtime": 1787114853624.1287,
+        "mtime": 1787130299534.6106,
         "uuid": "5e407573-3124-45d2-9050-3c44d0cf0470"
       },
       "chunkId": "77c55370a094285ba66e3f69b21090fcea0c2139",
@@ -10026,7 +10026,7 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/World.ts": {
       "mTimestamp": {
-        "mtime": 1778474130352.7048,
+        "mtime": 1787129374099.925,
         "uuid": "8bb257ea-7564-45c6-9e82-e5abac5ca929"
       },
       "chunkId": "ce3e39b5ae49f3a7f17b1f28a7f5882ca13998fd",
@@ -14524,10 +14524,10 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/box/BoxController.ts": {
       "mTimestamp": {
-        "mtime": 1786934963124.7793,
+        "mtime": 1787130846194.2336,
         "uuid": "7ced8a7d-fd09-44e8-b1af-b41522ee13b2"
       },
-      "chunkId": "614c58314b3e713163270e50b530a43ad359d629",
+      "chunkId": "5351a2696699ecc8f7535e080f701669df246a24",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -14553,16 +14553,16 @@
           }
         },
         {
-          "value": "../core/InputManager",
+          "value": "../core/DreamyInputManager",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 12,
-              "column": 61
+              "column": 67
             },
             "end": {
               "line": 12,
-              "column": 83
+              "column": 95
             }
           }
         },
@@ -14726,7 +14726,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/InputManager.ts"
+            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/DreamyInputManager.ts"
           },
           "messages": []
         },
@@ -14790,111 +14790,6 @@
           "resolved": {
             "type": "module",
             "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/TweenUtil.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/InputManager.ts": {
-      "mTimestamp": {
-        "mtime": 1787125302201.1528,
-        "uuid": "f7ad4090-a9de-40ad-8c8b-9613ca9f1546"
-      },
-      "chunkId": "ece650ecc45d793a628897e8590f776344e115d4",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 15,
-              "column": 103
-            },
-            "end": {
-              "line": 15,
-              "column": 107
-            }
-          }
-        },
-        {
-          "value": "../item/ItemGraphic",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 17,
-              "column": 28
-            },
-            "end": {
-              "line": 17,
-              "column": 49
-            }
-          }
-        },
-        {
-          "value": "../managers/ItemManager",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 18,
-              "column": 28
-            },
-            "end": {
-              "line": 18,
-              "column": 53
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/item/ItemGraphic.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/managers/ItemManager.ts"
           },
           "messages": []
         }
@@ -15185,10 +15080,10 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/item/ItemController.ts": {
       "mTimestamp": {
-        "mtime": 1787125411660.785,
+        "mtime": 1787130846140.9436,
         "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
       },
-      "chunkId": "a72a04e31aa8f4a9d514d6fa26eeada0afe0da77",
+      "chunkId": "fbed3d8faea2b2e0ef590aa9068ccbe9920196da",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -15214,16 +15109,16 @@
           }
         },
         {
-          "value": "../core/InputManager",
+          "value": "../core/DreamyInputManager",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 7,
-              "column": 61
+              "column": 67
             },
             "end": {
               "line": 7,
-              "column": 83
+              "column": 95
             }
           }
         },
@@ -15429,7 +15324,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/InputManager.ts"
+            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/DreamyInputManager.ts"
           },
           "messages": []
         },
@@ -15625,10 +15520,10 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/managers/WorldScrollManager.ts": {
       "mTimestamp": {
-        "mtime": 1786934963876.699,
+        "mtime": 1787130846140.4795,
         "uuid": "620e00b6-695c-4b80-83bc-9dffc6981667"
       },
-      "chunkId": "9fe13de5c53a79c4d32bf38c4103121fb156410d",
+      "chunkId": "b2818435b2908b21c4987167cd136853da80697d",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -15668,16 +15563,16 @@
           }
         },
         {
-          "value": "../core/InputManager",
+          "value": "../core/DreamyInputManager",
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
               "line": 15,
-              "column": 61
+              "column": 67
             },
             "end": {
               "line": 15,
-              "column": 83
+              "column": 95
             }
           }
         },
@@ -15736,7 +15631,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/InputManager.ts"
+            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/DreamyInputManager.ts"
           },
           "messages": []
         },
@@ -16199,10 +16094,10 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/managers/UIManager.ts": {
       "mTimestamp": {
-        "mtime": 1786934963874.685,
+        "mtime": 1787130846140.9436,
         "uuid": "545bdd38-875f-416b-abc9-b06befd3fa89"
       },
-      "chunkId": "ad2fe4ae009c3638b969bd8b75d25ac041d8fd1f",
+      "chunkId": "d6974ba8c69a3f372291deedaf72fe19d3b2196e",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -16228,16 +16123,16 @@
           }
         },
         {
-          "value": "../core/InputManager",
+          "value": "../core/DreamyInputManager",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 14,
-              "column": 61
+              "column": 67
             },
             "end": {
               "line": 14,
-              "column": 83
+              "column": 95
             }
           }
         },
@@ -16317,7 +16212,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/InputManager.ts"
+            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/DreamyInputManager.ts"
           },
           "messages": []
         },
@@ -16535,7 +16430,7 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/box/BoxGraphic.ts": {
       "mTimestamp": {
-        "mtime": 1786934963125.7563,
+        "mtime": 1787129374102.4348,
         "uuid": "5ca735d3-50fd-42d6-bd8c-3d6078b30e83"
       },
       "chunkId": "4f27d206090583c1b2f627c90ba6b89b15708e56",
@@ -16671,10 +16566,10 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/utils/BaseRoom.ts": {
       "mTimestamp": {
-        "mtime": 1786934963886.377,
+        "mtime": 1787130846186.6255,
         "uuid": "74320d90-14e8-4824-bbef-19d9fc3367d1"
       },
-      "chunkId": "fb2b440b20a33bc9c150953db9731f4c85ceda2f",
+      "chunkId": "36823af1c1e6d37d837d26992a160c168b25a973",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -16700,16 +16595,16 @@
           }
         },
         {
-          "value": "../core/InputManager",
+          "value": "../core/DreamyInputManager",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 15,
-              "column": 76
+              "column": 82
             },
             "end": {
               "line": 15,
-              "column": 98
+              "column": 110
             }
           }
         }
@@ -16747,7 +16642,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/InputManager.ts"
+            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/DreamyInputManager.ts"
           },
           "messages": []
         }
@@ -16944,7 +16839,7 @@
     },
     "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/pipeline/SceneBuilder.ts": {
       "mTimestamp": {
-        "mtime": 1787125435790.5757,
+        "mtime": 1787129374107.8872,
         "uuid": "9823c617-75c7-4125-915f-7b7e2e3428d4"
       },
       "chunkId": "d9afd906c982f3219c2b5255a44bda28b8109518",
@@ -17492,6 +17387,111 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/core/DreamyInputManager.ts": {
+      "mTimestamp": {
+        "mtime": 1787130655234.5947,
+        "uuid": "88586b58-8700-4cc8-a5e4-35b7c54d0649"
+      },
+      "chunkId": "893d36bd4cfda4a737893810a4aa5fa2d4579576",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 15,
+              "column": 103
+            },
+            "end": {
+              "line": 15,
+              "column": 107
+            }
+          }
+        },
+        {
+          "value": "../item/ItemGraphic",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 28
+            },
+            "end": {
+              "line": 17,
+              "column": 49
+            }
+          }
+        },
+        {
+          "value": "../managers/ItemManager",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 18,
+              "column": 28
+            },
+            "end": {
+              "line": 18,
+              "column": 53
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/item/ItemGraphic.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/MyScript/managers/ItemManager.ts"
           },
           "messages": []
         }
