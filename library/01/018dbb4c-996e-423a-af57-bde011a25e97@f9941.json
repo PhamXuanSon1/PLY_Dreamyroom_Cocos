@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "37_table",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 250,
+      "height": 169
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 250,
+      "height": 169
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -125,
+        -84.5,
+        0,
+        125,
+        -84.5,
+        0,
+        -125,
+        84.5,
+        0,
+        125,
+        84.5,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        169,
+        250,
+        169,
+        0,
+        0,
+        250,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -125,
+        "y": -84.5,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 125,
+        "y": 84.5,
+        "z": 0
+      }
+    },
+    "texture": "018dbb4c-996e-423a-af57-bde011a25e97@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

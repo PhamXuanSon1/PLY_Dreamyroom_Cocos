@@ -6,8 +6,8 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
 import { CCInteger, Component, Node, Prefab, Quat, Vec3, _decorator, instantiate, log, v3 } from "cc"; 
-// import { PoolAmount } from "./PoolAmount";
 import { PoolMember, PoolType } from "./PoolMember";
+
 import PoolControl from "./PoolControl";
 
 const { ccclass, property, executeInEditMode } = _decorator;

@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "53_table_sd",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 431,
+      "height": 196
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 431,
+      "height": 196
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -215.5,
+        -98,
+        0,
+        215.5,
+        -98,
+        0,
+        -215.5,
+        98,
+        0,
+        215.5,
+        98,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        196,
+        431,
+        196,
+        0,
+        0,
+        431,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -215.5,
+        "y": -98,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 215.5,
+        "y": 98,
+        "z": 0
+      }
+    },
+    "texture": "b516863a-2ba2-443f-a3c6-e77485909b65@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

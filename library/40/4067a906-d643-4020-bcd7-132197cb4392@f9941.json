@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "16_carpet_sd",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 425,
+      "height": 245
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 425,
+      "height": 245
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -212.5,
+        -122.5,
+        0,
+        212.5,
+        -122.5,
+        0,
+        -212.5,
+        122.5,
+        0,
+        212.5,
+        122.5,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        245,
+        425,
+        245,
+        0,
+        0,
+        425,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -212.5,
+        "y": -122.5,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 212.5,
+        "y": 122.5,
+        "z": 0
+      }
+    },
+    "texture": "4067a906-d643-4020-bcd7-132197cb4392@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "54_sink_sd",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 138,
+      "height": 84
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 138,
+      "height": 84
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -69,
+        -42,
+        0,
+        69,
+        -42,
+        0,
+        -69,
+        42,
+        0,
+        69,
+        42,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        84,
+        138,
+        84,
+        0,
+        0,
+        138,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -69,
+        "y": -42,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 69,
+        "y": 42,
+        "z": 0
+      }
+    },
+    "texture": "eb3600b5-f8f0-449e-8ce5-a9b9bad545c8@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

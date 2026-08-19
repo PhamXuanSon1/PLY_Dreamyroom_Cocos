@@ -4,7 +4,6 @@ import { PointerController } from './PointerController';
 import { SoundType } from './SoundManager';
 import { Clock } from './Clock';
 import { ipm } from './InputManager';
-import { room } from '../Gameplay/Room';
 const { ccclass, property } = _decorator;
 
 export enum BindUIType {

@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "giầy_hoa_R",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 287,
+      "height": 444
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 287,
+      "height": 444
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -143.5,
+        -222,
+        0,
+        143.5,
+        -222,
+        0,
+        -143.5,
+        222,
+        0,
+        143.5,
+        222,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        444,
+        287,
+        444,
+        0,
+        0,
+        287,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -143.5,
+        "y": -222,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 143.5,
+        "y": 222,
+        "z": 0
+      }
+    },
+    "texture": "e54060e6-9485-41af-a40e-d1496d800fbe@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}
