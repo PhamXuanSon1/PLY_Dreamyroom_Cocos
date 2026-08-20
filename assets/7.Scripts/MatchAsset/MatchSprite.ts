@@ -56,8 +56,7 @@ export class MatchSprite extends Component {
         spines.forEach((s, i) => {
 
             let skins: any[] = s.skeletonData.skeletonJson["skins"];
-            let index = skins.findIndex(sk => sk.name == s.node.name);
-            s._defaultSkinIndex = index;   
+            if (skins.some(sk => sk.name == s.node.name)) s.setSkin(s.node.name);
         });
     }
 
@@ -91,8 +90,7 @@ export class MatchSprite extends Component {
             no.index = i;
             let t = no.getComponent(sp.Skeleton);
             let skins: any[] = t.skeletonData.skeletonJson["skins"];
-            let index = skins.findIndex(s => s.name == no.skin);
-            t._defaultSkinIndex = index;            
+            if (skins.some(s => s.name == no.skin)) t.setSkin(no.skin);
         })
     }
 

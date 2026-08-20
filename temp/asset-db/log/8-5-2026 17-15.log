@@ -1,312 +1,0 @@
-8-5-2026 17:15:14-debug: asset-db:worker-init (1063ms)
-8-5-2026 17:15:14-debug: Preimport db internal success
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\0.Spines\Winbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Basebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\4.Sounds\Usebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplaybackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Gameplaybackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Managerbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\MatchAssetbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Miscbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Poolbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Toolbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materialsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Shadersbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Basebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Texturesbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Miscbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Windbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloudbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Mergebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Barbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Shaders\builtin-spine.effectbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Shaders\builtin-sprite.effectbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Shaders\Gradient.effectbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Shaders\Outline.effectbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Shaders\Place.effectbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Manager\AssetsManagerCustom.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Manager\Clock.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Manager\InputManager.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Manager\Joystick.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Shaders\SpriteFolder.effectbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Manager\PointerController.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Manager\MainCamera.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Manager\UI.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Manager\SoundManager.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Manager\VFX.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Manager\World.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\MatchAsset\MatchSprite.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\MatchAsset\NodeOrder.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\MatchAsset\ReadImagePixel.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\MatchAsset\SpriteSizeSetter.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\MatchAsset\Ulis.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\AStar.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Black.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Cloud.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\IQ.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Mats.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\MeshLoader.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\SkinManager.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\SplineLineRenderer.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Tool.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Tooth.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-warn: Importer exec warning: {asset[\\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Ulis.ts](5e9ca170-ce84-41bf-be96-b732989d40aa)}: The importer version is lower than asset
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Ulis.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Pool\PoolControl.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Pool\PoolManager.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Pool\PoolMember.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-warn: Importer exec warning: {asset[\\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Tool\AppLovinAnalytics.ts](c25f6f45-44ae-4d48-bb54-8921501f3f24)}: The importer version is lower than asset
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Tool\AppLovinAnalytics.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Tool\h5-helper.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Tool\GameController.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:15-debug: Preimport db assets success
-8-5-2026 17:15:16-debug: asset-db:worker-effect-data-processing (1312ms)
-8-5-2026 17:15:23-debug: Set detail map pack:///resolution-detail-map.json: {  "./chunks/dd/dd3fa4c2f02fba1cbb11e8e899c49e6d8308d386.js": {    "__unresolved_1": {      "error": "Error: Module \"../Gameplay/Data\" not found for file://svmkt/marketingcollection/BaseGameCocos/2DTemplateProject/assets/7.Scripts/Misc/Tool.ts",      "messages": [        {          "level": "warn",          "text": "Did you forget the extension? Please note that you can not omit extension in module specifier."        }      ]    }  },  "./chunks/03/03d15c6fdb7ff469bea5d87cf2566e15a9e9cbf7.js": {    "__unresolved_1": {      "error": "Error: Module \"../Gameplay/Data\" not found for file://svmkt/marketingcollection/BaseGameCocos/2DTemplateProject/assets/7.Scripts/Misc/Mats.ts",      "messages": [        {          "level": "warn",          "text": "Did you forget the extension? Please note that you can not omit extension in module specifier."        }      ]    }  }}
-8-5-2026 17:15:23-debug: Start up the 'internal' database...
-8-5-2026 17:15:23-debug: asset-db:worker-init-script (115ms)
-8-5-2026 17:15:24-debug: start asset-db with asset: 419
-8-5-2026 17:15:24-debug: Start up the 'assets' database...
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\0.Spinesbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animationsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\2.Fontsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\4.Soundsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Spritesbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\5.Prefabsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\6.Scenesbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scriptsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Modelsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: asset-db:worker-startup-database[internal] (9997ms)
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Arrow.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Box-001.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Box.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Flicker.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Fail.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Hand.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Hightlight.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\OffHightlight.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Place.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Scale.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Slot.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\SlotItem.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Star.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Unlock.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Warning.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\1.Animations\Win.animbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\2.Fonts\AntipastoPro_trial.ttfbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\2.Fonts\Anton.ttfbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\2.Fonts\BodoAmat.ttfbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\2.Fonts\Cute-Dino.ttfbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\2.Fonts\DVN-Fredoka-Bold.ttfbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\2.Fonts\LiberationSans.ttfbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\2.Fonts\sui-generis-rg_dynamic.ttfbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\5.Prefabs\Clock.prefabbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\5.Prefabs\CloudVFX.prefabbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\2.Fonts\TUV-PoetsenOne.ttfbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\5.Prefabs\Star.prefabbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\5.Prefabs\VFX.prefabbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\5.Prefabs\Wind.prefabbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\6.Scenes\PlayScene.scenebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\0.Spines\Win\capi-win.atlas.txtbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\0.Spines\Win\capi-win.jsonbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-log: UUID is initialized for "%s".\\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\0.Spines\Win\capi-win.png
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\auto-atlas.pacbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\0.Spines\Win\capi-win.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\arrow.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Asset 3.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Bttn_green.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Clock.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Asset 3.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Asset 3.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\arrow.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\0.Spines\Win\capi-win.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Clock.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\arrow.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\0.Spines\Win\capi-win.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Clock.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Bttn_green.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Bttn_green.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:25-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Clock_Needle.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\frame_stageframe_03_White_0.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\GreenButton.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\hand.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Clock_Needle.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\img_shiny.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Clock_Needle.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\GreenButton.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\frame_stageframe_03_White_0.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\GreenButton.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\hand.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\frame_stageframe_03_White_0.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\hand.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\JoyStick.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\Particle.prefabbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\img_shiny.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\img_shiny.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\pixel.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\tile003.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\JoyStick.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\MatchAsset\GameObject_sprites_by_order.jsonbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\JoyStick.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\TutorialHand.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\pixel.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\tile003.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\pixel.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\Gradient.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\Gray.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\tile003.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\Hightlight.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\HightlightSlot.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\TutorialHand.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\HightlightWhite.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\material.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\Place.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Base\TutorialHand.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\Spine.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\Sprite.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\SpriteFolder.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\Tiling.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Materials\VFX.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\auto-atlas.pacbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\Cloud.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\Blur.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\capy_lose.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\Fail 1.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\Logo.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud1.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\Blur.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\Blur.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\capy_lose.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\Fail 1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\Logo.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\Logo.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\Fail 1.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Misc\capy_lose.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud1.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:26-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud2.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud3.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud4.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud_2x2_hardshadow.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\fx_star_yellow.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud4.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud3.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud2.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud3.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud4.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\fx_star_yellow.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\fx_star_yellow.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud_2x2_hardshadow.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Cloud\cloud_2x2_hardshadow.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\glow1.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\Star.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\ring.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\sparkle3.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\Star.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\l1.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\glow1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\glow1.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\sparkle3.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\ring.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\Star.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\sparkle3.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\ring.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\l1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Merge\Star.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\l1.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\l2.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\leaves-001.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\l3.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\leaves-002.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\Leaf 2.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\leaf_3x3.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\l2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\leaves-003.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\leaves.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\l2.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\l3.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\l3.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\Leaf 2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\Smoke.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\leaf_3x3.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\trail.mtlbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\Leaf 2.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\leaf_3x3.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\smoke_dusty.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\trail.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\auto-atlas.pacbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\aaa.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\box.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\trail.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\nap_box.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\trail.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\aaa.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\smoke_dusty.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\8.Models\Textures\Wind\smoke_dusty.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\box.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\aaa.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\box.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:27-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\nap_box.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\packed.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\nap_box.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\slot_bar.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\slot_frame.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\slot_frame_bot.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\packed.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\tick.pngbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\packed.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\slot_frame.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\slot_bar.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\slot_frame_bot.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\slot_frame.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\slot_bar.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\slot_frame_bot.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\tick.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\3.Sprites\Gameplay\Base\Bar\tick.png@f9941background: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-debug: start asset-db with asset: 167
-8-5-2026 17:15:28-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\0.Spines\Win\capi-win.jsonbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:15:28-log: UUID is initialized for "%s".\\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\0.Spines\Win\capi-win.png
-8-5-2026 17:15:28-debug: Asset DB is ready!
-8-5-2026 17:15:28-debug: asset-db:worker-startup-database[assets] (13521ms)
-8-5-2026 17:15:28-debug: init worker message success
-8-5-2026 17:15:28-debug: programming:execute-script (7ms)
-8-5-2026 17:15:29-debug: builder:worker-init (1536ms)
-8-5-2026 17:15:30-debug: programming:execute-script (6ms)
-8-5-2026 17:15:48-debug: refresh db internal success
-8-5-2026 17:15:49-debug: asset-db:worker-effect-data-processing (1410ms)
-8-5-2026 17:15:50-debug: refresh db assets success
-8-5-2026 17:15:50-debug: asset-db:refresh-all-database (3220ms)
-8-5-2026 17:16:08-debug: refresh db internal success
-8-5-2026 17:16:09-debug: asset-db:worker-effect-data-processing (1047ms)
-8-5-2026 17:16:09-debug: %cImport%c: \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Mats.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:16:10-debug: refresh db assets success
-8-5-2026 17:16:10-debug: asset-db:refresh-all-database (2230ms)
-8-5-2026 17:16:12-debug: refresh db internal success
-8-5-2026 17:16:12-debug: asset-db:worker-effect-data-processing (194ms)
-8-5-2026 17:16:12-debug: refresh db assets success
-8-5-2026 17:16:12-debug: asset-db:refresh-all-database (488ms)
-8-5-2026 17:16:14-debug: refresh db internal success
-8-5-2026 17:16:15-debug: asset-db:worker-effect-data-processing (269ms)
-8-5-2026 17:16:15-debug: refresh db assets success
-8-5-2026 17:16:15-debug: asset-db:refresh-all-database (976ms)
-8-5-2026 17:16:31-debug: refresh db internal success
-8-5-2026 17:16:32-debug: asset-db:worker-effect-data-processing (1037ms)
-8-5-2026 17:16:32-debug: refresh db assets success
-8-5-2026 17:16:32-debug: asset-db:refresh-all-database (2129ms)
-8-5-2026 17:16:35-debug: start remove asset \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Tool.ts...
-8-5-2026 17:16:35-debug: start remove asset \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Mats.ts...
-8-5-2026 17:16:35-error: asset db removeFile \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Mats.ts fail!
-8-5-2026 17:16:35-error: Error: Failed to perform delete operation
-8-5-2026 17:16:35-error: asset db removeFile \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Tool.ts fail!
-8-5-2026 17:16:35-error: Error: Failed to perform delete operation
-8-5-2026 17:16:35-debug: start refresh asset from \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Mats.ts...
-8-5-2026 17:16:35-debug: start refresh asset from \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Tool.ts...
-8-5-2026 17:16:35-debug: refresh asset \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc success
-8-5-2026 17:16:35-debug: remove asset \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Mats.ts success
-8-5-2026 17:16:35-debug: refresh asset \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc success
-8-5-2026 17:16:35-debug: remove asset \\svmkt\marketingcollection\BaseGameCocos\2DTemplateProject\assets\7.Scripts\Misc\Tool.ts success
-8-5-2026 17:16:35-debug: refresh db internal success
-8-5-2026 17:16:35-debug: asset-db:worker-effect-data-processing (240ms)
-8-5-2026 17:16:36-debug: refresh db assets success
-8-5-2026 17:16:36-debug: asset-db:refresh-all-database (868ms)

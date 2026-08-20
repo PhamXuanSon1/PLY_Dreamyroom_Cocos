@@ -1,937 +1,0 @@
-8-5-2026 17:03:20-debug: asset-db:worker-init (3933ms)
-8-5-2026 17:03:21-debug: Preimport db internal success
-8-5-2026 17:03:21-debug: Preimport db assets success
-8-5-2026 17:03:22-debug: asset-db:worker-effect-data-processing (900ms)
-8-5-2026 17:03:35-debug: Set detail map pack:///resolution-detail-map.json: {}
-8-5-2026 17:03:37-debug: asset-db:worker-init-script (78ms)
-8-5-2026 17:03:35-debug: Start up the 'internal' database...
-8-5-2026 17:03:37-debug: start asset-db with asset: 419
-8-5-2026 17:03:37-debug: Start up the 'assets' database...
-8-5-2026 17:03:40-debug: asset-db:worker-startup-database[internal] (19684ms)
-8-5-2026 17:03:40-debug: start asset-db with asset: 280
-8-5-2026 17:03:40-debug: Asset DB is ready!
-8-5-2026 17:03:40-debug: asset-db:worker-startup-database[assets] (19514ms)
-8-5-2026 17:03:40-debug: init worker message success
-8-5-2026 17:03:41-error: Error: Cannot find module 'fs-extra'Require stack:- C:\Workspace\ABI\Cocos\Packingdom\Packingdom\extensions\cocos-service\contributions\builder\hooks.js- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\creator\dist\module\index.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\editor\preload.js- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\builtin\asset-db\dist\worker\index.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-worker\static\script.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-worker\static\worker.html    at Module._resolveFilename (internal/modules/cjs/loader.js:887:15)    at o._resolveFilename (electron/js2c/renderer_init.js:33:917)    at Function.<anonymous> (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\fix-electron-require\index.js:7:24)    at Function._resolveFilename (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\cc\preload.ts:109:46)    at Module._load (internal/modules/cjs/loader.js:732:27)    at Function.f._load (electron/js2c/asar_bundle.js:5:12913)    at Function._load (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\cc\preload.ts:127:35)    at Module.require (internal/modules/cjs/loader.js:959:19)    at require (internal/modules/cjs/helpers.js:88:18)    at Object.<anonymous> (C:\Workspace\ABI\Cocos\Packingdom\Packingdom\extensions\cocos-service\contributions\builder\hooks.js:1:2833)
-8-5-2026 17:03:41-error: register plugin cocos-service in build worker failed!
-8-5-2026 17:03:42-debug: builder:worker-init (1722ms)
-8-5-2026 17:03:42-debug: programming:execute-script (4ms)
-8-5-2026 17:03:51-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scene...
-8-5-2026 17:03:51-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scenebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:03:51-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes success
-8-5-2026 17:04:05-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scene...
-8-5-2026 17:04:05-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scenebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:05-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes success
-8-5-2026 17:04:09-debug: programming:execute-script (5ms)
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\2_vo_so 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_rong bien.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\7_dai phun.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\5_Chau_cay.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\9_san_ho_truoc_cua_phai 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\11_dai phun2.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_sao_bien 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\22_ly_cam 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\25_sao_tren_ghe_t3 copy 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_bachtuoc.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_binh_xanh_la 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\34_ke 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\35_goi_hong_phai 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\45_hop.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\53_sua.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\24_cau thang.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\58_trang tri.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\19_kem_dua 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\60_base_f2.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\62_goi_hoa_sofa_hong 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1cut.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\64_chau.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\74_ban_vuong 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\75_sao.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\86_tranh.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\87_base.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san_cut.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\54_ruong.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\depca2 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\93_ca.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhhoa 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ghe 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Gradient Fill 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\octo 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tham phong khach 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\oc2 1.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\33_camap.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dienthoai.png...
-8-5-2026 17:04:09-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranhtreotuong4 1.png...
-8-5-2026 17:04:09-debug: refresh db internal success
-8-5-2026 17:04:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\11_dai phun2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\11_dai phun2.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:09-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\11_dai phun2.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:09-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\11_dai phun2.png...
-8-5-2026 17:04:09-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\11_dai phun2.png success
-8-5-2026 17:04:09-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:09-debug: asset-db:worker-effect-data-processing (253ms)
-8-5-2026 17:04:09-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\35_goi_hong_phai 1.png'
-8-5-2026 17:04:09-debug: refresh db assets success
-8-5-2026 17:04:09-debug: asset-db:refresh-all-database (330ms)
-8-5-2026 17:04:09-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\24_cau thang.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\35_goi_hong_phai 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\45_hop.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\53_sua.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\54_ruong.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\24_cau thang.png...
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\35_goi_hong_phai 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\54_ruong.png...
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\24_cau thang.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\45_hop.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\53_sua.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\54_ruong.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\35_goi_hong_phai 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\24_cau thang.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\54_ruong.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\45_hop.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\53_sua.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\24_cau thang.png success
-8-5-2026 17:04:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\54_ruong.png success
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\25_sao_tren_ghe_t3 copy 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\2_vo_so 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\58_trang tri.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\60_base_f2.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\62_goi_hoa_sofa_hong 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\25_sao_tren_ghe_t3 copy 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\2_vo_so 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\60_base_f2.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\58_trang tri.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\62_goi_hoa_sofa_hong 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\2_vo_so 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\25_sao_tren_ghe_t3 copy 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\58_trang tri.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\62_goi_hoa_sofa_hong 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\60_base_f2.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\25_sao_tren_ghe_t3 copy 1.png...
-8-5-2026 17:04:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\25_sao_tren_ghe_t3 copy 1.png success
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_sao_bien 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1cut.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\64_chau.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\74_ban_vuong 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\75_sao.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1cut.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_sao_bien 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\64_chau.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\74_ban_vuong 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\75_sao.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1cut.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_sao_bien 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\74_ban_vuong 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\75_sao.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\64_chau.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san.png...
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\86_tranh.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\87_base.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\9_san_ho_truoc_cua_phai 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\87_base.png...
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\86_tranh.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\87_base.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\9_san_ho_truoc_cua_phai 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\87_base.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\86_tranh.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\9_san_ho_truoc_cua_phai 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san.png success
-8-5-2026 17:04:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\87_base.png success
-8-5-2026 17:04:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:10-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\9_san_ho_truoc_cua_phai 1.png...
-8-5-2026 17:04:10-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\9_san_ho_truoc_cua_phai 1.png success
-8-5-2026 17:04:10-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\22_ly_cam 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san_cut.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\93_ca.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhhoa 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\depca2 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san_cut.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\22_ly_cam 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\93_ca.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhhoa 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\depca2 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san_cut.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\22_ly_cam 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\93_ca.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhhoa 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\depca2 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dienthoai.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ghe 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:10-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ghe 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dienthoai.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dienthoai.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ghe 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ghe 1.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ghe 1.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dienthoai.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dienthoai.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhhoa 1.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhhoa 1.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\45_hop.png...
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\35_goi_hong_phai 1.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\45_hop.png success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\35_goi_hong_phai 1.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\22_ly_cam 1.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\22_ly_cam 1.png success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\53_sua.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\53_sua.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\2_vo_so 1.png...
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\62_goi_hoa_sofa_hong 1.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\2_vo_so 1.png success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\62_goi_hoa_sofa_hong 1.png success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\58_trang tri.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\58_trang tri.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1.png...
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\60_base_f2.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1.png success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\60_base_f2.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\64_chau.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\64_chau.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\75_sao.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\75_sao.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\74_ban_vuong 1.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\74_ban_vuong 1.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1cut.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\63_sofa 1cut.png success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san_cut.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\86_tranh.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\86_tranh.png success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\92_san_cut.png success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_sao_bien 1.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_sao_bien 1.png success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\93_ca.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\93_ca.png success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\depca2 1.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\depca2 1.png success
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\19_kem_dua 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_bachtuoc.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_binh_xanh_la 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\33_camap.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\34_ke 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\19_kem_dua 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\33_camap.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_binh_xanh_la 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_bachtuoc.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\34_ke 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\19_kem_dua 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\33_camap.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_binh_xanh_la 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_bachtuoc.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\34_ke 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_rong bien.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\7_dai phun.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\5_Chau_cay.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Gradient Fill 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\oc2 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\7_dai phun.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Gradient Fill 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\5_Chau_cay.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_rong bien.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\oc2 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\5_Chau_cay.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Gradient Fill 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_rong bien.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\7_dai phun.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\oc2 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\octo 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tham phong khach 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranhtreotuong4 1.png@6c48abackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\octo 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tham phong khach 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranhtreotuong4 1.png@f9941background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\octo 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tham phong khach 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranhtreotuong4 1.pngbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\7_dai phun.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\7_dai phun.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_bachtuoc.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Gradient Fill 1.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_bachtuoc.png success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Gradient Fill 1.png success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\oc2 1.png...
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tham phong khach 1.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\oc2 1.png success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tham phong khach 1.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\33_camap.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\33_camap.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\19_kem_dua 1.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\19_kem_dua 1.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\34_ke 1.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\34_ke 1.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\5_Chau_cay.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\5_Chau_cay.png success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranhtreotuong4 1.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranhtreotuong4 1.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_binh_xanh_la 1.png...
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\32_binh_xanh_la 1.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\octo 1.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\octo 1.png success
-8-5-2026 17:04:11-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_rong bien.png...
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:11-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\4_rong bien.png success
-8-5-2026 17:04:11-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level success
-8-5-2026 17:04:16-debug: programming:execute-script (7ms)
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Bg.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgmn.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Colors-of-our-Spring (1).mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Hen2.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Lose game.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_item_target_done.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_pick_item.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Win game.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_level_failed.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\YouTube.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\SFX_Simple_Alert.mp3...
-8-5-2026 17:04:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Hen.mp3...
-8-5-2026 17:04:16-debug: refresh db internal success
-8-5-2026 17:04:16-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Bg.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:16-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Win game.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:16-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Bg.mp3...
-8-5-2026 17:04:16-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Bg.mp3 success
-8-5-2026 17:04:16-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:16-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:16-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Win game.mp3...
-8-5-2026 17:04:16-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Win game.mp3 success
-8-5-2026 17:04:17-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Hen2.mp3.meta'
-8-5-2026 17:04:17-debug: refresh db assets success
-8-5-2026 17:04:17-debug: asset-db:worker-effect-data-processing (257ms)
-8-5-2026 17:04:17-debug: asset-db:refresh-all-database (321ms)
-8-5-2026 17:04:17-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Usebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Hen2.mp3...
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_item_target_done.mp3...
-8-5-2026 17:04:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Hen2.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_item_target_done.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Hen2.mp3 success
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_item_target_done.mp3 success
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_pick_item.mp3...
-8-5-2026 17:04:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_pick_item.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_pick_item.mp3 success
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\YouTube.mp3...
-8-5-2026 17:04:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\YouTube.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\YouTube.mp3 success
-8-5-2026 17:04:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Lose game.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Lose game.mp3...
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Lose game.mp3 success
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\SFX_Simple_Alert.mp3...
-8-5-2026 17:04:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\SFX_Simple_Alert.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\SFX_Simple_Alert.mp3 success
-8-5-2026 17:04:17-error: Error: Operation was aborted
-8-5-2026 17:04:17-error: asset db removeFile C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3 fail!
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_level_failed.mp3...
-8-5-2026 17:04:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_level_failed.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\sfx_level_failed.mp3 success
-8-5-2026 17:04:17-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3.meta'
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3...
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3 success
-8-5-2026 17:04:17-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3.meta'
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgmn.mp3...
-8-5-2026 17:04:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgmn.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:17-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Usebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgmn.mp3 success
-8-5-2026 17:04:17-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3.meta'
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Hen.mp3...
-8-5-2026 17:04:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Colors-of-our-Spring (1).mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:17-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Usebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Hen.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Colors-of-our-Spring (1).mp3...
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Hen.mp3 success
-8-5-2026 17:04:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\Colors-of-our-Spring (1).mp3 success
-8-5-2026 17:04:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:04:17-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3.meta'
-8-5-2026 17:04:19-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx...
-8-5-2026 17:04:19-debug: refresh db internal success
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx-ChestClaim.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx-ChestOpen.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfxbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx-ChestOpen2.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx-ChestPlace.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx-GiftboxOpen.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_bag_gold_landing.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_bgm_play_9.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_booster_1.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_booster_3.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_booster_2.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx...
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_box_level_jump_mainscreen.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_box_order_complete_closeBox.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_capy_fun.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_capy_fun_0.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_car_landing.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_click_button.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_close_door.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_clothes.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_coin_hit_scoreboard.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_collection_bar_appear.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_confirm_collect_coin.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_emotion_char_11_12.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_emotion_char_2_9.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_emotion_char_3_10.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_emotion_char_4.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_emotion_char_5_15.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_emotion_char_6_13.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_emotion_char_8_14.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_item_desk_phone_landing.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_item_glass_landing.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_item_landing_end_new.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_item_landing_end_fixed.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_item_landing_false.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_item_landing_new.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\Sfx_knife_landing.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_level_hard.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_lose_capy_cry.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_motorbike_landing.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_open_door.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_room_clean_success_blink.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_popup_open.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_skeleton_landing.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_sword_01_landing.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_sword_02_landing.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_tab_bear.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_tab_cat_01.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_tab_cat_02.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_tab_cow.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_tab_duck.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_tab_duck_toy.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_tab_frog.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_tab_out2.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_tab_parrot.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_tap_item_basic_fixed.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_transition_close_sence.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_transition_open_sence.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_wind_ambient.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx\sfx_win_capy_wohoo.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:19-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds success
-8-5-2026 17:04:19-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Sfx success
-8-5-2026 17:04:19-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3.meta'
-8-5-2026 17:04:19-debug: refresh db assets success
-8-5-2026 17:04:19-debug: asset-db:worker-effect-data-processing (193ms)
-8-5-2026 17:04:19-debug: asset-db:refresh-all-database (356ms)
-8-5-2026 17:04:19-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3.meta'
-8-5-2026 17:04:26-debug: start move asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\MatchAsset -> C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAsset...
-8-5-2026 17:04:26-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAsset...
-8-5-2026 17:04:26-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAssetbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:26-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAsset\ReadImagePixel.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:26-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAsset\MatchSprite.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:26-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAsset\Ulis.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:26-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAsset\NodeOrder.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:26-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAsset\SpriteSizeSetter.tsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:26-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAsset\GameObject_sprites_by_order.jsonbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:26-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAsset\GameObject_sprites_by_order.jsonbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:26-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts success
-8-5-2026 17:04:26-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay...
-8-5-2026 17:04:26-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts success
-8-5-2026 17:04:26-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplaybackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:26-debug: move asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\MatchAsset -> C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\MatchAsset success
-8-5-2026 17:04:26-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scriptsbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:28-debug: programming:execute-script (2ms)
-8-5-2026 17:04:29-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Room.ts...
-8-5-2026 17:04:29-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Thing.ts...
-8-5-2026 17:04:29-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Slot.ts...
-8-5-2026 17:04:29-debug: refresh db internal success
-8-5-2026 17:04:29-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Room.tsbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:29-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Slot.tsbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:29-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Slot.ts...
-8-5-2026 17:04:29-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay success
-8-5-2026 17:04:29-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Slot.ts success
-8-5-2026 17:04:29-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Room.ts...
-8-5-2026 17:04:29-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay success
-8-5-2026 17:04:29-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Room.ts success
-8-5-2026 17:04:29-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Thing.ts...
-8-5-2026 17:04:29-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Thing.tsbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:04:29-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay\Thing.ts success
-8-5-2026 17:04:29-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplay success
-8-5-2026 17:04:29-debug: refresh db assets success
-8-5-2026 17:04:29-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3.meta'
-8-5-2026 17:04:29-debug: asset-db:worker-effect-data-processing (294ms)
-8-5-2026 17:04:29-debug: asset-db:refresh-all-database (358ms)
-8-5-2026 17:04:29-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\7.Scripts\Gameplaybackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:40-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scene...
-8-5-2026 17:04:40-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scenebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:04:40-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes success
-8-5-2026 17:04:45-debug: refresh db internal success
-8-5-2026 17:04:46-debug: refresh db assets success
-8-5-2026 17:04:46-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3.meta'
-8-5-2026 17:04:46-debug: asset-db:worker-effect-data-processing (317ms)
-8-5-2026 17:04:46-debug: asset-db:refresh-all-database (373ms)
-8-5-2026 17:04:46-debug: Query all assets info in project
-8-5-2026 17:04:46-debug: BuildAssetLibrary query-assets with assets 664
-8-5-2026 17:04:46-debug: init custom config: keepNodeUuid: false, useCache: true
-8-5-2026 17:04:46-debug:   Number of other assets: 493
-8-5-2026 17:04:46-debug:   Number of all scenes: 1
-8-5-2026 17:04:46-debug: Query asset bundle start0%
-8-5-2026 17:04:46-debug: Process: heapTotal 216.93MB heapUsed 194.82MB rss 554.33MB
-8-5-2026 17:04:46-debug:   Number of all scripts: 27
-8-5-2026 17:04:46-debug: // ---- build task Query asset bundle ----
-8-5-2026 17:04:46-debug: // ---- build task Query asset bundle ---- (9ms)
-8-5-2026 17:04:46-debug: run build task Query asset bundle success in 9 ms √3%
-8-5-2026 17:04:46-debug: Process: heapTotal 216.93MB heapUsed 190.11MB rss 554.54MB
-8-5-2026 17:04:46-debug: init bundle assets
-8-5-2026 17:04:46-debug: // ---- build task Query and organize assets ----
-8-5-2026 17:04:46-debug: Query and organize assets start3%
-8-5-2026 17:04:46-debug: Number of scenes: 1
-8-5-2026 17:04:46-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,1baf0fc9-befa-459c-8bdd-af1a450a0319,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,28d6d6b8-3f66-4a73-9795-17a0852ba2d4,ec8106fe-05bf-4e94-943c-e0d3b7bb5e45,620b6bf3-0369-4560-837f-2a2c00b73c26,2df0a40b-26c2-47ce-be0d-4d3cd4164737,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
-8-5-2026 17:04:46-debug: run build task Query and organize assets success in 5 ms √7%
-8-5-2026 17:04:46-debug: // ---- build task Query and organize assets ---- (5ms)
-8-5-2026 17:04:46-debug: Organize scripts start7%
-8-5-2026 17:04:46-debug: Process: heapTotal 216.93MB heapUsed 190.27MB rss 554.57MB
-8-5-2026 17:04:46-debug: sort script group...
-8-5-2026 17:04:46-debug: // ---- build task Organize scripts ----
-8-5-2026 17:04:46-debug: // ---- build task Organize scripts ---- (1ms)
-8-5-2026 17:04:46-debug: run build task Organize scripts success in 1 ms √10%
-8-5-2026 17:04:46-debug: Process: heapTotal 216.93MB heapUsed 190.31MB rss 554.57MB
-8-5-2026 17:04:46-debug: // ---- build task Init settings and config ----
-8-5-2026 17:04:46-debug: Init settings and config start10%
-8-5-2026 17:04:46-debug: // ---- build task Init settings and config ---- (1ms)
-8-5-2026 17:04:46-debug: builder.tasks.settings.macro does not defined in i18n
-8-5-2026 17:04:46-debug: run build task Init settings and config success in 1 ms √11%
-8-5-2026 17:04:46-debug: // ---- build task builder.tasks.settings.macro ----
-8-5-2026 17:04:46-debug: Process: heapTotal 216.93MB heapUsed 190.35MB rss 554.57MB
-8-5-2026 17:04:46-debug: builder.tasks.settings.macro start11%
-8-5-2026 17:04:46-debug: // ---- build task builder.tasks.settings.macro ---- (3ms)
-8-5-2026 17:04:46-debug: run build task builder.tasks.settings.macro success in 3 ms √11%
-8-5-2026 17:04:46-debug: Sort some build options to settings.json start11%
-8-5-2026 17:04:46-debug: // ---- build task Sort some build options to settings.json ----
-8-5-2026 17:04:46-debug: Process: heapTotal 216.93MB heapUsed 190.39MB rss 554.57MB
-8-5-2026 17:04:46-debug: // ---- build task Sort some build options to settings.json ---- (20ms)
-8-5-2026 17:04:46-debug: run build task Sort some build options to settings.json success in 20 ms √12%
-8-5-2026 17:04:46-debug: custom joint texture layouts start12%
-8-5-2026 17:04:46-debug: Process: heapTotal 217.17MB heapUsed 190.67MB rss 555.19MB
-8-5-2026 17:04:46-debug: // ---- build task custom joint texture layouts ----
-8-5-2026 17:04:46-debug: // ---- build task custom joint texture layouts ---- (2ms)
-8-5-2026 17:04:46-debug: run build task custom joint texture layouts success in 2 ms √12%
-8-5-2026 17:04:46-debug: Process: heapTotal 217.17MB heapUsed 190.70MB rss 555.19MB
-8-5-2026 17:04:46-debug: custom joint physics start12%
-8-5-2026 17:04:46-debug: // ---- build task custom joint physics ----
-8-5-2026 17:04:46-debug: run build task custom joint physics success in 0 ms √13%
-8-5-2026 17:04:46-debug: Fill script data to settings start13%
-8-5-2026 17:04:46-debug: Process: heapTotal 217.17MB heapUsed 190.72MB rss 555.19MB
-8-5-2026 17:04:46-debug: // ---- build task Fill script data to settings ----
-8-5-2026 17:04:46-debug: // ---- build task Fill script data to settings ---- (1ms)
-8-5-2026 17:04:46-debug: run build task Fill script data to settings success in 1 ms √13%
-8-5-2026 17:04:46-debug: Process: heapTotal 217.17MB heapUsed 190.75MB rss 555.20MB
-8-5-2026 17:04:46-debug: Fill scene data to settings start13%
-8-5-2026 17:04:46-debug: // ---- build task Fill scene data to settings ----
-8-5-2026 17:04:46-debug: // ---- build task Fill scene data to settings ---- (1ms)
-8-5-2026 17:04:46-debug: Organize assets groups，generate packedAssets and rawAssets data start14%
-8-5-2026 17:04:46-debug: run build task Fill scene data to settings success in 1 ms √14%
-8-5-2026 17:04:46-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
-8-5-2026 17:04:46-debug: Process: heapTotal 217.17MB heapUsed 190.78MB rss 555.20MB
-8-5-2026 17:04:46-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
-8-5-2026 17:04:46-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √14%
-8-5-2026 17:04:46-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
-8-5-2026 17:04:46-debug: Generate md5AssetsMap from suffixMap to settings start14%
-8-5-2026 17:04:46-debug: options.md5Cache is false.
-8-5-2026 17:04:46-debug: Process: heapTotal 217.17MB heapUsed 190.83MB rss 555.20MB
-8-5-2026 17:04:46-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
-8-5-2026 17:04:46-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √15%
-8-5-2026 17:05:03-debug: refresh db internal success
-8-5-2026 17:05:03-debug: refresh db assets success
-8-5-2026 17:05:03-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3.meta'
-8-5-2026 17:05:03-debug: asset-db:worker-effect-data-processing (188ms)
-8-5-2026 17:05:03-debug: asset-db:refresh-all-database (270ms)
-8-5-2026 17:05:16-debug: programming:execute-script (2ms)
-8-5-2026 17:05:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Box.prefab...
-8-5-2026 17:05:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Thing.prefab...
-8-5-2026 17:05:16-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Slot.prefab...
-8-5-2026 17:05:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Slot.prefab...
-8-5-2026 17:05:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Slot.prefabbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:05:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Thing.prefab...
-8-5-2026 17:05:17-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Slot.prefabbackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:05:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Thing.prefabbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:05:17-error: Importer exec failed: {asset[C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Slot.prefab](22137787-44e8-4275-a5f7-33063620a48f)}
-8-5-2026 17:05:17-error: Error: ENOENT: no such file or directory, open 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Slot.prefab'
-8-5-2026 17:05:17-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Box.prefab...
-8-5-2026 17:05:17-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Box.prefabbackground: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:05:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs success
-8-5-2026 17:05:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Slot.prefab success
-8-5-2026 17:05:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Thing.prefab success
-8-5-2026 17:05:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs success
-8-5-2026 17:05:17-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs success
-8-5-2026 17:05:17-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\5.Prefabs\Box.prefab success
-8-5-2026 17:05:17-debug: refresh db internal success
-8-5-2026 17:05:17-debug: refresh db assets success
-8-5-2026 17:05:17-error: Error: ENOENT: no such file or directory, stat 'C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3.meta'
-8-5-2026 17:05:17-debug: asset-db:worker-effect-data-processing (238ms)
-8-5-2026 17:05:17-debug: asset-db:refresh-all-database (345ms)
-8-5-2026 17:05:35-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scene...
-8-5-2026 17:05:35-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scenebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:05:35-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes success
-8-5-2026 17:05:35-debug: Query all assets info in project
-8-5-2026 17:05:35-debug: BuildAssetLibrary query-assets with assets 661
-8-5-2026 17:05:35-debug: init custom config: keepNodeUuid: false, useCache: true
-8-5-2026 17:05:35-debug:   Number of other assets: 490
-8-5-2026 17:05:35-debug:   Number of all scripts: 27
-8-5-2026 17:05:35-debug: // ---- build task Query asset bundle ----
-8-5-2026 17:05:35-debug: Query asset bundle start0%
-8-5-2026 17:05:35-debug:   Number of all scenes: 1
-8-5-2026 17:05:35-debug: Process: heapTotal 204.85MB heapUsed 191.96MB rss 544.54MB
-8-5-2026 17:05:35-debug: run build task Query asset bundle success in 13 ms √3%
-8-5-2026 17:05:35-debug: // ---- build task Query asset bundle ---- (13ms)
-8-5-2026 17:05:35-debug: Process: heapTotal 204.85MB heapUsed 191.97MB rss 543.86MB
-8-5-2026 17:05:35-debug: Query and organize assets start3%
-8-5-2026 17:05:35-debug: // ---- build task Query and organize assets ----
-8-5-2026 17:05:35-debug: init bundle assets
-8-5-2026 17:05:35-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,1baf0fc9-befa-459c-8bdd-af1a450a0319,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,28d6d6b8-3f66-4a73-9795-17a0852ba2d4,ec8106fe-05bf-4e94-943c-e0d3b7bb5e45,620b6bf3-0369-4560-837f-2a2c00b73c26,2df0a40b-26c2-47ce-be0d-4d3cd4164737,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
-8-5-2026 17:05:35-debug: Number of scenes: 1
-8-5-2026 17:05:35-debug: // ---- build task Query and organize assets ---- (5ms)
-8-5-2026 17:05:35-debug: run build task Query and organize assets success in 5 ms √7%
-8-5-2026 17:05:35-debug: Organize scripts start7%
-8-5-2026 17:05:35-debug: Process: heapTotal 204.85MB heapUsed 192.13MB rss 544.09MB
-8-5-2026 17:05:35-debug: // ---- build task Organize scripts ----
-8-5-2026 17:05:35-debug: sort script group...
-8-5-2026 17:05:35-debug: // ---- build task Organize scripts ---- (1ms)
-8-5-2026 17:05:35-debug: Init settings and config start10%
-8-5-2026 17:05:35-debug: run build task Organize scripts success in 1 ms √10%
-8-5-2026 17:05:35-debug: // ---- build task Init settings and config ----
-8-5-2026 17:05:35-debug: Process: heapTotal 204.85MB heapUsed 192.17MB rss 544.09MB
-8-5-2026 17:05:35-debug: // ---- build task Init settings and config ---- (1ms)
-8-5-2026 17:05:35-debug: run build task Init settings and config success in 1 ms √11%
-8-5-2026 17:05:35-debug: // ---- build task builder.tasks.settings.macro ----
-8-5-2026 17:05:35-debug: builder.tasks.settings.macro start11%
-8-5-2026 17:05:35-debug: Process: heapTotal 204.85MB heapUsed 192.21MB rss 544.13MB
-8-5-2026 17:05:35-debug: builder.tasks.settings.macro does not defined in i18n
-8-5-2026 17:05:35-debug: // ---- build task builder.tasks.settings.macro ---- (15ms)
-8-5-2026 17:05:35-debug: run build task builder.tasks.settings.macro success in 15 ms √11%
-8-5-2026 17:05:35-debug: Sort some build options to settings.json start11%
-8-5-2026 17:05:35-debug: Process: heapTotal 205.48MB heapUsed 192.65MB rss 544.60MB
-8-5-2026 17:05:35-debug: // ---- build task Sort some build options to settings.json ----
-8-5-2026 17:05:35-debug: // ---- build task Sort some build options to settings.json ---- (12ms)
-8-5-2026 17:05:35-debug: run build task Sort some build options to settings.json success in 12 ms √12%
-8-5-2026 17:05:35-debug: custom joint texture layouts start12%
-8-5-2026 17:05:35-debug: Process: heapTotal 205.72MB heapUsed 192.93MB rss 545.23MB
-8-5-2026 17:05:35-debug: // ---- build task custom joint texture layouts ----
-8-5-2026 17:05:35-debug: // ---- build task custom joint texture layouts ---- (3ms)
-8-5-2026 17:05:35-debug: run build task custom joint texture layouts success in 3 ms √12%
-8-5-2026 17:05:35-debug: custom joint physics start12%
-8-5-2026 17:05:35-debug: // ---- build task custom joint physics ----
-8-5-2026 17:05:35-debug: Process: heapTotal 205.72MB heapUsed 192.96MB rss 545.29MB
-8-5-2026 17:05:35-debug: // ---- build task custom joint physics ---- (1ms)
-8-5-2026 17:05:35-debug: run build task custom joint physics success in 1 ms √13%
-8-5-2026 17:05:35-debug: Process: heapTotal 205.72MB heapUsed 192.99MB rss 545.29MB
-8-5-2026 17:05:35-debug: // ---- build task Fill script data to settings ----
-8-5-2026 17:05:35-debug: Fill script data to settings start13%
-8-5-2026 17:05:35-debug: run build task Fill script data to settings success in 1 ms √13%
-8-5-2026 17:05:35-debug: // ---- build task Fill scene data to settings ----
-8-5-2026 17:05:35-debug: // ---- build task Fill script data to settings ---- (1ms)
-8-5-2026 17:05:35-debug: Process: heapTotal 205.72MB heapUsed 193.02MB rss 545.29MB
-8-5-2026 17:05:35-debug: Fill scene data to settings start13%
-8-5-2026 17:05:35-debug: // ---- build task Fill scene data to settings ---- (1ms)
-8-5-2026 17:05:35-debug: run build task Fill scene data to settings success in 1 ms √14%
-8-5-2026 17:05:35-debug: Organize assets groups，generate packedAssets and rawAssets data start14%
-8-5-2026 17:05:35-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
-8-5-2026 17:05:35-debug: Process: heapTotal 205.72MB heapUsed 193.05MB rss 545.30MB
-8-5-2026 17:05:35-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
-8-5-2026 17:05:35-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √14%
-8-5-2026 17:05:35-debug: Generate md5AssetsMap from suffixMap to settings start14%
-8-5-2026 17:05:35-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
-8-5-2026 17:05:35-debug: Process: heapTotal 205.72MB heapUsed 193.09MB rss 545.37MB
-8-5-2026 17:05:35-debug: options.md5Cache is false.
-8-5-2026 17:05:35-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
-8-5-2026 17:05:35-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √15%
-8-5-2026 17:06:12-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scene...
-8-5-2026 17:06:12-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scenebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:06:12-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes success
-8-5-2026 17:06:12-debug: Query all assets info in project
-8-5-2026 17:06:12-debug: BuildAssetLibrary query-assets with assets 661
-8-5-2026 17:06:12-debug: init custom config: keepNodeUuid: false, useCache: true
-8-5-2026 17:06:12-debug:   Number of all scripts: 27
-8-5-2026 17:06:12-debug:   Number of other assets: 490
-8-5-2026 17:06:12-debug: // ---- build task Query asset bundle ----
-8-5-2026 17:06:12-debug: Query asset bundle start0%
-8-5-2026 17:06:12-debug: Process: heapTotal 206.04MB heapUsed 194.25MB rss 544.10MB
-8-5-2026 17:06:12-debug:   Number of all scenes: 1
-8-5-2026 17:06:12-debug: // ---- build task Query asset bundle ---- (13ms)
-8-5-2026 17:06:12-debug: Query and organize assets start3%
-8-5-2026 17:06:12-debug: // ---- build task Query and organize assets ----
-8-5-2026 17:06:12-debug: run build task Query asset bundle success in 13 ms √3%
-8-5-2026 17:06:12-debug: Process: heapTotal 206.04MB heapUsed 194.18MB rss 543.36MB
-8-5-2026 17:06:12-debug: init bundle assets
-8-5-2026 17:06:12-debug: Number of scenes: 1
-8-5-2026 17:06:12-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,1baf0fc9-befa-459c-8bdd-af1a450a0319,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,28d6d6b8-3f66-4a73-9795-17a0852ba2d4,ec8106fe-05bf-4e94-943c-e0d3b7bb5e45,620b6bf3-0369-4560-837f-2a2c00b73c26,2df0a40b-26c2-47ce-be0d-4d3cd4164737,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
-8-5-2026 17:06:12-debug: run build task Query and organize assets success in 4 ms √7%
-8-5-2026 17:06:12-debug: // ---- build task Organize scripts ----
-8-5-2026 17:06:12-debug: // ---- build task Query and organize assets ---- (4ms)
-8-5-2026 17:06:12-debug: Process: heapTotal 206.04MB heapUsed 194.32MB rss 543.51MB
-8-5-2026 17:06:12-debug: Organize scripts start7%
-8-5-2026 17:06:12-debug: sort script group...
-8-5-2026 17:06:12-debug: // ---- build task Organize scripts ---- (1ms)
-8-5-2026 17:06:12-debug: Init settings and config start10%
-8-5-2026 17:06:12-debug: run build task Organize scripts success in 1 ms √10%
-8-5-2026 17:06:12-debug: Process: heapTotal 206.04MB heapUsed 194.36MB rss 543.58MB
-8-5-2026 17:06:12-debug: // ---- build task Init settings and config ----
-8-5-2026 17:06:12-debug: run build task Init settings and config success in 0 ms √11%
-8-5-2026 17:06:12-debug: builder.tasks.settings.macro does not defined in i18n
-8-5-2026 17:06:12-debug: Process: heapTotal 206.04MB heapUsed 194.40MB rss 543.58MB
-8-5-2026 17:06:12-debug: // ---- build task builder.tasks.settings.macro ----
-8-5-2026 17:06:12-debug: builder.tasks.settings.macro start11%
-8-5-2026 17:06:12-debug: // ---- build task builder.tasks.settings.macro ---- (1ms)
-8-5-2026 17:06:12-debug: run build task builder.tasks.settings.macro success in 1 ms √11%
-8-5-2026 17:06:12-debug: Process: heapTotal 206.04MB heapUsed 194.43MB rss 543.62MB
-8-5-2026 17:06:12-debug: // ---- build task Sort some build options to settings.json ----
-8-5-2026 17:06:12-debug: Sort some build options to settings.json start11%
-8-5-2026 17:06:12-debug: custom joint texture layouts start12%
-8-5-2026 17:06:12-debug: // ---- build task custom joint texture layouts ----
-8-5-2026 17:06:12-debug: Process: heapTotal 206.28MB heapUsed 194.70MB rss 544.18MB
-8-5-2026 17:06:12-debug: run build task Sort some build options to settings.json success in 5 ms √12%
-8-5-2026 17:06:12-debug: // ---- build task Sort some build options to settings.json ---- (5ms)
-8-5-2026 17:06:12-debug: // ---- build task custom joint texture layouts ---- (1ms)
-8-5-2026 17:06:12-debug: run build task custom joint texture layouts success in 1 ms √12%
-8-5-2026 17:06:12-debug: custom joint physics start12%
-8-5-2026 17:06:12-debug: Process: heapTotal 206.28MB heapUsed 194.73MB rss 544.18MB
-8-5-2026 17:06:12-debug: // ---- build task custom joint physics ----
-8-5-2026 17:06:13-debug: // ---- build task custom joint physics ---- (1ms)
-8-5-2026 17:06:13-debug: run build task custom joint physics success in 1 ms √13%
-8-5-2026 17:06:13-debug: Fill script data to settings start13%
-8-5-2026 17:06:13-debug: // ---- build task Fill script data to settings ----
-8-5-2026 17:06:13-debug: Process: heapTotal 210.53MB heapUsed 196.61MB rss 546.75MB
-8-5-2026 17:06:13-debug: // ---- build task Fill script data to settings ---- (1ms)
-8-5-2026 17:06:13-debug: run build task Fill script data to settings success in 1 ms √13%
-8-5-2026 17:06:13-debug: Fill scene data to settings start13%
-8-5-2026 17:06:13-debug: // ---- build task Fill scene data to settings ----
-8-5-2026 17:06:13-debug: Process: heapTotal 210.53MB heapUsed 196.64MB rss 546.84MB
-8-5-2026 17:06:13-debug: // ---- build task Fill scene data to settings ---- (2ms)
-8-5-2026 17:06:13-debug: run build task Fill scene data to settings success in 2 ms √14%
-8-5-2026 17:06:13-debug: Organize assets groups，generate packedAssets and rawAssets data start14%
-8-5-2026 17:06:13-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
-8-5-2026 17:06:13-debug: Process: heapTotal 210.53MB heapUsed 196.67MB rss 546.84MB
-8-5-2026 17:06:13-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (1ms)
-8-5-2026 17:06:13-debug: Generate md5AssetsMap from suffixMap to settings start14%
-8-5-2026 17:06:13-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 1 ms √14%
-8-5-2026 17:06:13-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
-8-5-2026 17:06:13-debug: Process: heapTotal 210.53MB heapUsed 196.71MB rss 546.82MB
-8-5-2026 17:06:13-debug: options.md5Cache is false.
-8-5-2026 17:06:13-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 2 ms √15%
-8-5-2026 17:06:13-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (2ms)
-8-5-2026 17:06:20-debug: start remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3...
-8-5-2026 17:06:20-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3...
-8-5-2026 17:06:20-debug: %cDestroy%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3background: #ffb8b8; color: #000;color: #000;
-8-5-2026 17:06:20-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use success
-8-5-2026 17:06:20-debug: remove asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Use\bgm.mp3 success
-8-5-2026 17:06:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\4.Sounds\Usebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:06:20-debug: refresh db internal success
-8-5-2026 17:06:21-debug: asset-db:worker-effect-data-processing (276ms)
-8-5-2026 17:06:21-debug: refresh db assets success
-8-5-2026 17:06:21-debug: asset-db:refresh-all-database (363ms)
-8-5-2026 17:06:23-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scene...
-8-5-2026 17:06:23-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scenebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:06:23-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes success
-8-5-2026 17:06:23-debug: Query all assets info in project
-8-5-2026 17:06:23-debug: BuildAssetLibrary query-assets with assets 660
-8-5-2026 17:06:23-debug: init custom config: keepNodeUuid: false, useCache: true
-8-5-2026 17:06:23-debug:   Number of all scenes: 1
-8-5-2026 17:06:23-debug:   Number of other assets: 489
-8-5-2026 17:06:23-debug: // ---- build task Query asset bundle ----
-8-5-2026 17:06:23-debug: Query asset bundle start0%
-8-5-2026 17:06:23-debug: Process: heapTotal 216.11MB heapUsed 192.16MB rss 553.63MB
-8-5-2026 17:06:23-debug:   Number of all scripts: 27
-8-5-2026 17:06:23-debug: // ---- build task Query asset bundle ---- (9ms)
-8-5-2026 17:06:23-debug: run build task Query asset bundle success in 9 ms √3%
-8-5-2026 17:06:23-debug: Process: heapTotal 216.11MB heapUsed 194.19MB rss 553.63MB
-8-5-2026 17:06:23-debug: // ---- build task Query and organize assets ----
-8-5-2026 17:06:23-debug: Query and organize assets start3%
-8-5-2026 17:06:23-debug: init bundle assets
-8-5-2026 17:06:23-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,1baf0fc9-befa-459c-8bdd-af1a450a0319,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,28d6d6b8-3f66-4a73-9795-17a0852ba2d4,ec8106fe-05bf-4e94-943c-e0d3b7bb5e45,620b6bf3-0369-4560-837f-2a2c00b73c26,2df0a40b-26c2-47ce-be0d-4d3cd4164737,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
-8-5-2026 17:06:23-debug: Number of scenes: 1
-8-5-2026 17:06:23-debug: // ---- build task Query and organize assets ---- (4ms)
-8-5-2026 17:06:23-debug: run build task Query and organize assets success in 4 ms √7%
-8-5-2026 17:06:23-debug: // ---- build task Organize scripts ----
-8-5-2026 17:06:23-debug: Organize scripts start7%
-8-5-2026 17:06:23-debug: sort script group...
-8-5-2026 17:06:23-debug: Process: heapTotal 216.11MB heapUsed 194.35MB rss 553.66MB
-8-5-2026 17:06:23-debug: // ---- build task Organize scripts ---- (1ms)
-8-5-2026 17:06:23-debug: // ---- build task Init settings and config ----
-8-5-2026 17:06:23-debug: Init settings and config start10%
-8-5-2026 17:06:23-debug: run build task Organize scripts success in 1 ms √10%
-8-5-2026 17:06:23-debug: Process: heapTotal 216.11MB heapUsed 194.40MB rss 553.66MB
-8-5-2026 17:06:23-debug: run build task Init settings and config success in 0 ms √11%
-8-5-2026 17:06:23-debug: builder.tasks.settings.macro start11%
-8-5-2026 17:06:23-debug: builder.tasks.settings.macro does not defined in i18n
-8-5-2026 17:06:23-debug: // ---- build task builder.tasks.settings.macro ----
-8-5-2026 17:06:23-debug: Process: heapTotal 216.11MB heapUsed 194.43MB rss 553.67MB
-8-5-2026 17:06:23-debug: // ---- build task builder.tasks.settings.macro ---- (2ms)
-8-5-2026 17:06:23-debug: run build task builder.tasks.settings.macro success in 2 ms √11%
-8-5-2026 17:06:23-debug: Process: heapTotal 216.11MB heapUsed 194.46MB rss 553.67MB
-8-5-2026 17:06:23-debug: // ---- build task Sort some build options to settings.json ----
-8-5-2026 17:06:23-debug: Sort some build options to settings.json start11%
-8-5-2026 17:06:23-debug: // ---- build task Sort some build options to settings.json ---- (16ms)
-8-5-2026 17:06:23-debug: run build task Sort some build options to settings.json success in 16 ms √12%
-8-5-2026 17:06:23-debug: // ---- build task custom joint texture layouts ----
-8-5-2026 17:06:23-debug: custom joint texture layouts start12%
-8-5-2026 17:06:23-debug: Process: heapTotal 217.60MB heapUsed 190.92MB rss 556.39MB
-8-5-2026 17:06:23-debug: // ---- build task custom joint texture layouts ---- (2ms)
-8-5-2026 17:06:23-debug: run build task custom joint texture layouts success in 2 ms √12%
-8-5-2026 17:06:23-debug: custom joint physics start12%
-8-5-2026 17:06:23-debug: // ---- build task custom joint physics ----
-8-5-2026 17:06:23-debug: Process: heapTotal 217.60MB heapUsed 190.95MB rss 556.39MB
-8-5-2026 17:06:23-debug: // ---- build task custom joint physics ---- (1ms)
-8-5-2026 17:06:23-debug: run build task custom joint physics success in 1 ms √13%
-8-5-2026 17:06:23-debug: Fill script data to settings start13%
-8-5-2026 17:06:23-debug: Process: heapTotal 217.60MB heapUsed 190.97MB rss 556.39MB
-8-5-2026 17:06:23-debug: // ---- build task Fill script data to settings ----
-8-5-2026 17:06:23-debug: // ---- build task Fill script data to settings ---- (1ms)
-8-5-2026 17:06:23-debug: run build task Fill script data to settings success in 1 ms √13%
-8-5-2026 17:06:23-debug: // ---- build task Fill scene data to settings ----
-8-5-2026 17:06:23-debug: Process: heapTotal 217.60MB heapUsed 191.00MB rss 556.40MB
-8-5-2026 17:06:23-debug: Fill scene data to settings start13%
-8-5-2026 17:06:23-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
-8-5-2026 17:06:23-debug: // ---- build task Fill scene data to settings ---- (1ms)
-8-5-2026 17:06:23-debug: run build task Fill scene data to settings success in 1 ms √14%
-8-5-2026 17:06:23-debug: Process: heapTotal 217.60MB heapUsed 191.03MB rss 556.40MB
-8-5-2026 17:06:23-debug: Organize assets groups，generate packedAssets and rawAssets data start14%
-8-5-2026 17:06:24-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 2 ms √14%
-8-5-2026 17:06:24-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
-8-5-2026 17:06:24-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (2ms)
-8-5-2026 17:06:24-debug: options.md5Cache is false.
-8-5-2026 17:06:24-debug: Process: heapTotal 217.60MB heapUsed 191.08MB rss 556.41MB
-8-5-2026 17:06:24-debug: Generate md5AssetsMap from suffixMap to settings start14%
-8-5-2026 17:06:24-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 1 ms √15%
-8-5-2026 17:06:24-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (1ms)
-8-5-2026 17:06:42-debug: refresh db internal success
-8-5-2026 17:06:42-debug: asset-db:worker-effect-data-processing (331ms)
-8-5-2026 17:06:43-debug: refresh db assets success
-8-5-2026 17:06:43-debug: asset-db:refresh-all-database (430ms)
-8-5-2026 17:06:46-debug: refresh db internal success
-8-5-2026 17:06:46-debug: start refresh asset from C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scene...
-8-5-2026 17:06:46-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes\PlayScene.scenebackground: #aaff85; color: #000;color: #000;
-8-5-2026 17:06:46-debug: refresh asset C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\6.Scenes success
-8-5-2026 17:06:46-debug: asset-db:worker-effect-data-processing (309ms)
-8-5-2026 17:06:46-debug: refresh db assets success
-8-5-2026 17:06:46-debug: asset-db:refresh-all-database (399ms)
-8-5-2026 17:06:47-debug: Query all assets info in project
-8-5-2026 17:06:47-debug: BuildAssetLibrary query-assets with assets 660
-8-5-2026 17:06:47-debug: init custom config: keepNodeUuid: false, useCache: true
-8-5-2026 17:06:47-debug:   Number of all scripts: 27
-8-5-2026 17:06:47-debug:   Number of other assets: 489
-8-5-2026 17:06:47-debug: Query asset bundle start0%
-8-5-2026 17:06:47-debug:   Number of all scenes: 1
-8-5-2026 17:06:47-debug: Process: heapTotal 218.00MB heapUsed 194.39MB rss 555.77MB
-8-5-2026 17:06:47-debug: // ---- build task Query asset bundle ----
-8-5-2026 17:06:47-debug: run build task Query asset bundle success in 9 ms √3%
-8-5-2026 17:06:47-debug: // ---- build task Query asset bundle ---- (9ms)
-8-5-2026 17:06:47-debug: Process: heapTotal 218.00MB heapUsed 189.51MB rss 555.44MB
-8-5-2026 17:06:47-debug: init bundle assets
-8-5-2026 17:06:47-debug: Query and organize assets start3%
-8-5-2026 17:06:47-debug: // ---- build task Query and organize assets ----
-8-5-2026 17:06:47-debug: Query preload assets from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,1baf0fc9-befa-459c-8bdd-af1a450a0319,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,28d6d6b8-3f66-4a73-9795-17a0852ba2d4,ec8106fe-05bf-4e94-943c-e0d3b7bb5e45,620b6bf3-0369-4560-837f-2a2c00b73c26,2df0a40b-26c2-47ce-be0d-4d3cd4164737,ff9be190-20a4-4e48-b68c-76e3c7cff085,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,9361fd90-ba52-4f84-aa93-6e878fd576ca,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98
-8-5-2026 17:06:47-debug: Number of scenes: 1
-8-5-2026 17:06:47-debug: run build task Query and organize assets success in 13 ms √7%
-8-5-2026 17:06:47-debug: // ---- build task Query and organize assets ---- (13ms)
-8-5-2026 17:06:47-debug: Organize scripts start7%
-8-5-2026 17:06:47-debug: Process: heapTotal 219.25MB heapUsed 192.59MB rss 557.11MB
-8-5-2026 17:06:47-debug: sort script group...
-8-5-2026 17:06:47-debug: // ---- build task Organize scripts ----
-8-5-2026 17:06:47-debug: // ---- build task Organize scripts ---- (2ms)
-8-5-2026 17:06:47-debug: run build task Organize scripts success in 2 ms √10%
-8-5-2026 17:06:47-debug: Process: heapTotal 219.25MB heapUsed 192.64MB rss 557.11MB
-8-5-2026 17:06:47-debug: Init settings and config start10%
-8-5-2026 17:06:47-debug: // ---- build task Init settings and config ----
-8-5-2026 17:06:47-debug: // ---- build task Init settings and config ---- (1ms)
-8-5-2026 17:06:47-debug: run build task Init settings and config success in 1 ms √11%
-8-5-2026 17:06:47-debug: // ---- build task builder.tasks.settings.macro ----
-8-5-2026 17:06:47-debug: builder.tasks.settings.macro start11%
-8-5-2026 17:06:47-debug: Process: heapTotal 219.25MB heapUsed 192.68MB rss 557.11MB
-8-5-2026 17:06:47-debug: builder.tasks.settings.macro does not defined in i18n
-8-5-2026 17:06:47-debug: // ---- build task builder.tasks.settings.macro ---- (3ms)
-8-5-2026 17:06:47-debug: run build task builder.tasks.settings.macro success in 3 ms √11%
-8-5-2026 17:06:47-debug: Sort some build options to settings.json start11%
-8-5-2026 17:06:47-debug: Process: heapTotal 219.25MB heapUsed 192.72MB rss 557.12MB
-8-5-2026 17:06:47-debug: // ---- build task Sort some build options to settings.json ----
-8-5-2026 17:06:47-debug: // ---- build task Sort some build options to settings.json ---- (7ms)
-8-5-2026 17:06:47-debug: run build task Sort some build options to settings.json success in 7 ms √12%
-8-5-2026 17:06:47-debug: custom joint texture layouts start12%
-8-5-2026 17:06:47-debug: // ---- build task custom joint texture layouts ----
-8-5-2026 17:06:47-debug: Process: heapTotal 219.49MB heapUsed 193.00MB rss 557.74MB
-8-5-2026 17:06:47-debug: // ---- build task custom joint texture layouts ---- (4ms)
-8-5-2026 17:06:47-debug: run build task custom joint texture layouts success in 4 ms √12%
-8-5-2026 17:06:47-debug: custom joint physics start12%
-8-5-2026 17:06:47-debug: // ---- build task custom joint physics ----
-8-5-2026 17:06:47-debug: Process: heapTotal 219.49MB heapUsed 193.03MB rss 557.75MB
-8-5-2026 17:06:47-debug: // ---- build task custom joint physics ---- (1ms)
-8-5-2026 17:06:47-debug: run build task custom joint physics success in 1 ms √13%
-8-5-2026 17:06:47-debug: Fill script data to settings start13%
-8-5-2026 17:06:47-debug: // ---- build task Fill script data to settings ----
-8-5-2026 17:06:47-debug: Process: heapTotal 219.49MB heapUsed 193.05MB rss 557.75MB
-8-5-2026 17:06:47-debug: // ---- build task Fill scene data to settings ----
-8-5-2026 17:06:47-debug: // ---- build task Fill script data to settings ---- (1ms)
-8-5-2026 17:06:47-debug: Fill scene data to settings start13%
-8-5-2026 17:06:47-debug: Process: heapTotal 219.49MB heapUsed 193.08MB rss 557.75MB
-8-5-2026 17:06:47-debug: run build task Fill script data to settings success in 1 ms √13%
-8-5-2026 17:06:47-debug: // ---- build task Fill scene data to settings ---- (1ms)
-8-5-2026 17:06:47-debug: run build task Fill scene data to settings success in 1 ms √14%
-8-5-2026 17:06:47-debug: Organize assets groups，generate packedAssets and rawAssets data start14%
-8-5-2026 17:06:47-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ----
-8-5-2026 17:06:47-debug: Process: heapTotal 219.49MB heapUsed 193.11MB rss 557.76MB
-8-5-2026 17:06:47-debug: // ---- build task Organize assets groups，generate packedAssets and rawAssets data ---- (2ms)
-8-5-2026 17:06:47-debug: run build task Organize assets groups，generate packedAssets and rawAssets data success in 2 ms √14%
-8-5-2026 17:06:47-debug: Generate md5AssetsMap from suffixMap to settings start14%
-8-5-2026 17:06:47-debug: Process: heapTotal 219.49MB heapUsed 193.16MB rss 557.77MB
-8-5-2026 17:06:47-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ----
-8-5-2026 17:06:47-debug: options.md5Cache is false.
-8-5-2026 17:06:47-debug: // ---- build task Generate md5AssetsMap from suffixMap to settings ---- (2ms)
-8-5-2026 17:06:47-debug: run build task Generate md5AssetsMap from suffixMap to settings success in 2 ms √15%
-8-5-2026 17:07:02-debug: refresh db internal success
-8-5-2026 17:07:02-debug: asset-db:worker-effect-data-processing (242ms)
-8-5-2026 17:07:02-debug: refresh db assets success
-8-5-2026 17:07:02-debug: asset-db:refresh-all-database (328ms)

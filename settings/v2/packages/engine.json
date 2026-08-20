@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.7",
+  "__version__": "1.0.12",
   "modules": {
     "graphics": {
       "pipeline": "custom-pipeline",
@@ -24,7 +24,7 @@
             "_value": true
           },
           "skeletal-animation": {
-            "_value": false
+            "_value": true
           },
           "3d": {
             "_value": true
@@ -152,11 +152,11 @@
             "_value": false
           },
           "spine": {
-            "_value": false,
+            "_value": true,
             "_option": "spine-3.8"
           },
           "spine-3.8": {
-            "_value": false,
+            "_value": true,
             "_flags": {
               "LOAD_SPINE_MANUALLY": false
             }
@@ -190,7 +190,9 @@
             "_value": false
           }
         },
-        "flags": {},
+        "flags": {
+          "LOAD_SPINE_MANUALLY": false
+        },
         "name": "Migrated Configuration",
         "includeModules": [
           "2d",
@@ -199,7 +201,6 @@
           "audio",
           "base",
           "custom-pipeline",
-          "custom-pipeline-post-process",
           "gfx-webgl",
           "gfx-webgl2",
           "graphics",
@@ -209,6 +210,8 @@
           "particle-2d",
           "primitive",
           "profiler",
+          "skeletal-animation",
+          "spine-3.8",
           "tween",
           "ui",
           "webview"
@@ -222,9 +225,6 @@
     "globalConfigKey": "migrationsConfig",
     "cache": {
       "base": {
-        "_value": true
-      },
-      "graphcis": {
         "_value": true
       },
       "gfx-webgl": {
@@ -337,8 +337,11 @@
       "marionette": {
         "_value": false
       },
-      "custom-pipeline": {
-        "_value": false
+      "graphics": {
+        "_value": true
+      },
+      "render-pipeline": {
+        "_option": "legacy-pipeline"
       }
     },
     "flags": {},
@@ -356,7 +359,8 @@
       "spine",
       "tween",
       "ui",
-      "webview"
+      "webview",
+      "legacy-pipeline"
     ],
     "noDeprecatedFeatures": {
       "value": false,

@@ -2,6 +2,7 @@
   "__type__": "cc.EffectAsset",
   "_name": "util/splash-screen",
   "_objFlags": 0,
+  "__editorExtras__": {},
   "_native": "",
   "techniques": [
     {
@@ -166,6 +167,7 @@
           "count": 1,
           "defines": [],
           "stageFlags": 16,
+          "sampleType": 0,
           "binding": 2
         }
       ],
@@ -267,6 +269,7 @@
               "count": 1,
               "defines": [],
               "stageFlags": 16,
+              "sampleType": 0,
               "binding": 2
             }
           ],

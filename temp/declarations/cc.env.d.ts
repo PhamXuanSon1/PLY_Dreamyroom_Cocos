@@ -10,6 +10,41 @@ declare module 'cc/env'{
 	export const NATIVE: boolean;
 
 	/**
+	 * Running in ANDROID platform
+	 */
+	export const ANDROID: boolean;
+
+	/**
+	 * Running in IOS platform
+	 */
+	export const IOS: boolean;
+
+	/**
+	 * Running in MAC platform
+	 */
+	export const MAC: boolean;
+
+	/**
+	 * Running in WINDOWS platform
+	 */
+	export const WINDOWS: boolean;
+
+	/**
+	 * Running in LINUX platform
+	 */
+	export const LINUX: boolean;
+
+	/**
+	 * Running in OHOS platform
+	 */
+	export const OHOS: boolean;
+
+	/**
+	 * Running in OPEN_HARMONY platform
+	 */
+	export const OPEN_HARMONY: boolean;
+
+	/**
 	 * Running in the Wechat's mini game.
 	 */
 	export const WECHAT: boolean;
@@ -18,11 +53,6 @@ declare module 'cc/env'{
 	 * Running in the Wechat's mini program.
 	 */
 	export const WECHAT_MINI_PROGRAM: boolean;
-
-	/**
-	 * Running in the baidu's mini game.
-	 */
-	export const BAIDU: boolean;
 
 	/**
 	 * Running in the xiaomi's quick game.
@@ -65,24 +95,29 @@ declare module 'cc/env'{
 	export const HUAWEI: boolean;
 
 	/**
-	 * Running in the cocosplay.
+	 * Running in the migu's quick game.
 	 */
-	export const COCOSPLAY: boolean;
+	export const MIGU: boolean;
 
 	/**
-	 * Running in the qtt's quick game.
+	 * Running in the honor's quick game.
 	 */
-	export const QTT: boolean;
+	export const HONOR: boolean;
 
 	/**
-	 * Running in the linksure's quick game.
+	 * Running in the cocos runtime.
 	 */
-	export const LINKSURE: boolean;
+	export const COCOS_RUNTIME: boolean;
 
 	/**
 	 * Running in the editor.
 	 */
 	export const EDITOR: boolean;
+
+	/**
+	 * Run in editor but not in editor preview.
+	 */
+	export const EDITOR_NOT_IN_PREVIEW: boolean;
 
 	/**
 	 * Preview in browser or simulator.

@@ -1,291 +1,0 @@
-8-3-2026 14:03:32-debug: asset-db:worker-init (1116ms)
-8-3-2026 14:03:32-debug: Preimport db internal success
-8-3-2026 14:03:32-debug: Preimport db assets success
-8-3-2026 14:03:32-debug: asset-db:worker-effect-data-processing (195ms)
-8-3-2026 14:03:38-debug: Set detail map pack:///resolution-detail-map.json: {}
-8-3-2026 14:03:39-debug: Start up the 'internal' database...
-8-3-2026 14:03:39-debug: asset-db:worker-init-script (53ms)
-8-3-2026 14:03:39-debug: start asset-db with asset: 419
-8-3-2026 14:03:39-debug: Start up the 'assets' database...
-8-3-2026 14:03:39-debug: asset-db:worker-startup-database[internal] (6810ms)
-8-3-2026 14:03:39-debug: start asset-db with asset: 238
-8-3-2026 14:03:39-debug: Asset DB is ready!
-8-3-2026 14:03:39-debug: asset-db:worker-startup-database[assets] (6797ms)
-8-3-2026 14:03:39-debug: init worker message success
-8-3-2026 14:03:39-debug: programming:execute-script (1ms)
-8-3-2026 14:03:39-error: Error: Cannot find module 'fs-extra'Require stack:- C:\Workspace\ABI\Cocos\Packingdom\Packingdom\extensions\cocos-service\contributions\builder\hooks.js- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\creator\dist\module\index.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\editor\preload.js- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\builtin\asset-db\dist\worker\index.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-worker\static\script.ccc- E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\@base\electron-worker\static\worker.html    at Module._resolveFilename (internal/modules/cjs/loader.js:887:15)    at o._resolveFilename (electron/js2c/renderer_init.js:33:917)    at Function.<anonymous> (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\fix-electron-require\index.js:7:24)    at Function._resolveFilename (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\cc\preload.ts:109:46)    at Module._load (internal/modules/cjs/loader.js:732:27)    at Function.f._load (electron/js2c/asar_bundle.js:5:12913)    at Function._load (E:\Cocos\Editors\Creator\3.7.4\resources\app.asar\node_modules\cc\preload.ts:127:35)    at Module.require (internal/modules/cjs/loader.js:959:19)    at require (internal/modules/cjs/helpers.js:88:18)    at Object.<anonymous> (C:\Workspace\ABI\Cocos\Packingdom\Packingdom\extensions\cocos-service\contributions\builder\hooks.js:1:2833)
-8-3-2026 14:03:39-error: register plugin cocos-service in build worker failed!
-8-3-2026 14:03:41-debug: builder:worker-init (1662ms)
-8-3-2026 14:03:43-debug: programming:execute-script (6ms)
-8-3-2026 14:04:19-debug: refresh db internal success
-8-3-2026 14:04:19-debug: asset-db:worker-effect-data-processing (188ms)
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\amtra.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban cong.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban phim, chuot.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh copy 2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bac copy.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh copy 2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bac copy.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh copy 2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bac copy.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\amtra.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban phim, chuot.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban cong.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\amtra.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban phim, chuot.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\ban cong.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\BG.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bien.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhnuocdau.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\BG.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\BG.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\banh.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bien.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhnuocdau.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bien.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\binhnuocdau.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-3.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-4.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buidauto2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-5.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-6.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-4.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-3.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-4.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-3.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-5.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-6.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bàn.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2-1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-5.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1-6.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\buihoa1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm3_.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:19-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bàn.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2-1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\canh tu.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\bàn.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2-1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\caytreo2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm3_.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm3_.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Bướm2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\canh tu.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 3.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\caytreo2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\canh tu.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\caytreo2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau copy.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 3.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay5.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\char 3.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay8.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau copy.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia copy.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau copy.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chau.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay5.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay5.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay8.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chaucay8.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay copy.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia copy.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cuaso.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia copy.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cốc trà copy.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay copy.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\chong_dia.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cocgiay copy.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cuaso.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Cốc trà.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cuaso.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat-1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cốc trà copy.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\cốc trà copy.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dautren1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dâu trên2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Cốc trà.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\Cốc trà.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat-1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1 cut.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dat-1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dautren1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dâu trên2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dautren1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\dâu trên2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1 cut.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2 cut.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap1 cut.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa_cut.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giacong.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2 cut.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\gap2 cut.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa_cut.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giachauhoa_cut.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh cut.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giacong.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giacong.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giado.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh cut.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giado.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giadebanh cut.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giado.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hop.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\giodungdau1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\kenhophai.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\keotraitim.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hop.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hangrao.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\hop.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy 2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\kenhophai.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\keotraitim.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\kenhophai.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\keotraitim.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3 copy.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy 2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy 2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay2 copy.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3 copy.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3 copy.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lokeo.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\khay3.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy 2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lokeo.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lokeo.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lobanh2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\mattruoc2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy 2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy 2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\may tinh.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut copy.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\lomut.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\nodaybuoc.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\pattern.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tem.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\may tinh.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\may tinh.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\mattruoc2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thammeo.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\mattruoc2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tem.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tem.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\nodaybuoc.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thampicnic.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1-1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\nodaybuoc.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thammeo.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thammeo.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\pattern.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\pattern.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1-1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thampicnic.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1-1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2-1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\thampicnic.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tui dau.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2-1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tranh2-1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuibanh.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 1.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tui dau.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 2.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tui dau.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuibanh.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 1.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuibanh.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuong va san.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 1.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 2.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\vaichup.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh cut 2.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\xechohoa.pngbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tulanh.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuong va san.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\xechohoa.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\tuong va san.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Levelbackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\xechohoa.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\vaichup.png@6c48abackground: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: %cImport%c: C:\Workspace\ABI\Cocos\Packingdom\Packingdom\assets\3.Sprites\Gameplay\Level\vaichup.png@f9941background: #aaff85; color: #000;color: #000;
-8-3-2026 14:04:20-debug: refresh db assets success
-8-3-2026 14:04:20-debug: asset-db:refresh-all-database (1480ms)

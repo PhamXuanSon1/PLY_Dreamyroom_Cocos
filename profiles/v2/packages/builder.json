@@ -1,5 +1,5 @@
 {
-  "__version__": "1.3.5",
+  "__version__": "1.3.9",
   "log": {
     "level": 1
   },
@@ -50,7 +50,13 @@
           ],
           "web-mobile": [],
           "packages": {},
-          "__version__": "1.3.5"
+          "__version__": "1.3.5",
+          "overwriteProjectSettings": {
+            "includeModules": {
+              "gfx-webgl2": "inherit-project-setting"
+            }
+          },
+          "buildMode": "normal"
         },
         "time": "8-5-2026 17:09",
         "dirty": false
