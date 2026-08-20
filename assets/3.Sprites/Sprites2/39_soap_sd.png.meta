@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "d60412f6-e24e-476a-8800-eedc528a7594",
+  "uuid": "f3c32c08-fac2-4103-bed2-d21b9fdd56ee",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "d60412f6-e24e-476a-8800-eedc528a7594@6c48a",
+      "uuid": "f3c32c08-fac2-4103-bed2-d21b9fdd56ee@6c48a",
       "displayName": "39_soap_sd",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "d60412f6-e24e-476a-8800-eedc528a7594",
+        "imageUuidOrDatabaseUri": "f3c32c08-fac2-4103-bed2-d21b9fdd56ee",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "d60412f6-e24e-476a-8800-eedc528a7594@f9941",
+      "uuid": "f3c32c08-fac2-4103-bed2-d21b9fdd56ee@f9941",
       "displayName": "39_soap_sd",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "d60412f6-e24e-476a-8800-eedc528a7594@6c48a",
+        "imageUuidOrDatabaseUri": "f3c32c08-fac2-4103-bed2-d21b9fdd56ee@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "d60412f6-e24e-476a-8800-eedc528a7594@f9941"
+    "redirect": "f3c32c08-fac2-4103-bed2-d21b9fdd56ee@f9941"
   }
 }

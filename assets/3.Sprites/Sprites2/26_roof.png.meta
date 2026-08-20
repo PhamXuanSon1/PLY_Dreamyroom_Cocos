@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "727bfc3e-44d5-44d4-b7e6-91d34d9617ba",
+  "uuid": "c8d6ed6f-c1ee-4433-a53e-7004529d6168",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "727bfc3e-44d5-44d4-b7e6-91d34d9617ba@6c48a",
+      "uuid": "c8d6ed6f-c1ee-4433-a53e-7004529d6168@6c48a",
       "displayName": "26_roof",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "727bfc3e-44d5-44d4-b7e6-91d34d9617ba",
+        "imageUuidOrDatabaseUri": "c8d6ed6f-c1ee-4433-a53e-7004529d6168",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "727bfc3e-44d5-44d4-b7e6-91d34d9617ba@f9941",
+      "uuid": "c8d6ed6f-c1ee-4433-a53e-7004529d6168@f9941",
       "displayName": "26_roof",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "727bfc3e-44d5-44d4-b7e6-91d34d9617ba@6c48a",
+        "imageUuidOrDatabaseUri": "c8d6ed6f-c1ee-4433-a53e-7004529d6168@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "727bfc3e-44d5-44d4-b7e6-91d34d9617ba@f9941"
+    "redirect": "c8d6ed6f-c1ee-4433-a53e-7004529d6168@f9941"
   }
 }

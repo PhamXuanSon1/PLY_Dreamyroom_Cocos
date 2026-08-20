@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "62084966-cbc0-40ac-8b44-8698f9ccf3ef",
+  "uuid": "93f42e65-0b30-4960-addf-e38dbe0bb96f",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "62084966-cbc0-40ac-8b44-8698f9ccf3ef@6c48a",
+      "uuid": "93f42e65-0b30-4960-addf-e38dbe0bb96f@6c48a",
       "displayName": "46_candle_sd",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "62084966-cbc0-40ac-8b44-8698f9ccf3ef",
+        "imageUuidOrDatabaseUri": "93f42e65-0b30-4960-addf-e38dbe0bb96f",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "62084966-cbc0-40ac-8b44-8698f9ccf3ef@f9941",
+      "uuid": "93f42e65-0b30-4960-addf-e38dbe0bb96f@f9941",
       "displayName": "46_candle_sd",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "62084966-cbc0-40ac-8b44-8698f9ccf3ef@6c48a",
+        "imageUuidOrDatabaseUri": "93f42e65-0b30-4960-addf-e38dbe0bb96f@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "62084966-cbc0-40ac-8b44-8698f9ccf3ef@f9941"
+    "redirect": "93f42e65-0b30-4960-addf-e38dbe0bb96f@f9941"
   }
 }

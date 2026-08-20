@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "51_room_sd",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 554,
+      "height": 590
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 554,
+      "height": 590
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -277,
+        -295,
+        0,
+        277,
+        -295,
+        0,
+        -277,
+        295,
+        0,
+        277,
+        295,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        590,
+        554,
+        590,
+        0,
+        0,
+        554,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -277,
+        "y": -295,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 277,
+        "y": 295,
+        "z": 0
+      }
+    },
+    "texture": "1186e640-3304-4d2b-8a8f-7e8c30c1544e@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

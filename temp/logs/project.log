@@ -1,131 +1,131 @@
-8-19-2026 16:29:57 - verbose: Arguments:
-8-19-2026 16:29:57 - verbose:   C:\ProgramData\cocos\editors\Creator\3.7.4\CocosCreator.exe: true
-8-19-2026 16:29:57 - verbose:   project: F:\CocosProject\PLY_Dreamyroom_Cocos
-8-19-2026 16:29:57 - verbose:   can-show-upgrade-dialog: true
-8-19-2026 16:29:57 - verbose:   dev: false
-8-19-2026 16:29:57 - verbose:   home: C:\Users\Admin\.CocosCreator
-8-19-2026 16:29:57 - verbose:  
-8-19-2026 16:30:01 - verbose: [Package] menu@1.0.0 enable
-8-19-2026 16:30:01 - verbose: [Package] profile@1.0.0 enable
-8-19-2026 16:30:01 - verbose: [Package] project@1.0.4 enable
-8-19-2026 16:30:01 - verbose: [Package] messages@1.0.0 enable
-8-19-2026 16:30:01 - verbose: [Package] program@1.0.3 enable
-8-19-2026 16:30:01 - verbose: [Package] tester@1.0.0 enable
-8-19-2026 16:30:01 - verbose: [Package] information@1.0.0 enable
-8-19-2026 16:30:01 - verbose: [Package] preferences@1.0.0 enable
-8-19-2026 16:30:03 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine
-8-19-2026 16:30:03 - log: Profile changed: engine (modules.includeModules: 2d,3d,animation,audio,base,gfx-webgl,gfx-webgl2,particle,particle-2d,profiler,spine,tween,ui,webview)
-8-19-2026 16:30:03 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\native
-8-19-2026 16:30:03 - verbose: [Package] engine@1.0.7 enable
-8-19-2026 16:30:04 - verbose: [Package] programming@1.0.0 enable
-8-19-2026 16:30:04 - verbose: [Package] device@1.0.1 enable
-8-19-2026 16:30:04 - verbose: [Package] ui-kit@1.0.1 enable
-8-19-2026 16:30:04 - verbose: [Package] asset-db@1.0.0 enable
-8-19-2026 16:30:04 - verbose: [Package] scene@1.0.0 enable
-8-19-2026 16:30:04 - verbose: [Package] server@1.0.0 enable
-8-19-2026 16:30:04 - verbose: [Package] utils@1.0.0 enable
-8-19-2026 16:30:18 - verbose: [Package] preview@1.0.1 enable
-8-19-2026 16:30:18 - verbose: [Package] animator@1.0.0 enable
-8-19-2026 16:30:18 - verbose: [Build-plugin] register pkg scene: 1ms
-8-19-2026 16:30:18 - verbose: Builder PluginManager init: 2ms
-8-19-2026 16:30:18 - verbose: [Package] builder@1.3.5 enable
-8-19-2026 16:30:18 - verbose: [Package] shortcuts@1.0.1 enable
-8-19-2026 16:30:18 - verbose: [Package] animation-graph@1.0.0 enable
-8-19-2026 16:30:18 - verbose: [Package] about@1.0.0 enable
-8-19-2026 16:30:18 - verbose: [Package] assets@1.0.0 enable
-8-19-2026 16:30:18 - verbose: [Package] console@1.0.0 enable
-8-19-2026 16:30:18 - verbose: [Package] crash-reporter@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] extension@3.1.1 enable
-8-19-2026 16:30:19 - verbose: [Package] hierarchy@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] inspector@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] light-probe@1.0.4 enable
-8-19-2026 16:30:19 - verbose: [Package] lightmap@1.0.4 enable
-8-19-2026 16:30:19 - verbose: [Package] node-library@1.0.1 enable
-8-19-2026 16:30:19 - verbose: [Package] package-asset@1.0.1 enable
-8-19-2026 16:30:19 - verbose: [Package] process@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] reference-image@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] reflection-probe@1.0.4 enable
-8-19-2026 16:30:19 - verbose: [Package] engine-extends@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] alipay-mini-game@1.0.1 enable
-8-19-2026 16:30:19 - verbose: [Package] android@1.0.1 enable
-8-19-2026 16:30:19 - verbose: [Package] bytedance-mini-game@1.0.2 enable
-8-19-2026 16:30:19 - verbose: [Package] certificate@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] channel-upload-tools@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] fb-instant-games@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] huawei-agc@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] huawei-quick-game@1.0.1 enable
-8-19-2026 16:30:19 - verbose: [Build-plugin] register pkg android: 178ms
-8-19-2026 16:30:19 - verbose: [Package] ios@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] linux@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] mac@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Package] native@1.0.2 enable
-8-19-2026 16:30:19 - verbose: [Build-plugin] register pkg native: 62ms
-8-19-2026 16:30:19 - verbose: [Package] ohos@1.0.0 enable
-8-19-2026 16:30:19 - verbose: [Build-plugin] register pkg fb-instant-games: 258ms
-8-19-2026 16:30:19 - verbose: [Build-plugin] register pkg bytedance-mini-game: 327ms
-8-19-2026 16:30:19 - verbose: [Build-plugin] register pkg huawei-quick-game: 212ms
-8-19-2026 16:30:19 - verbose: [Build-plugin] register pkg ios: 188ms
-8-19-2026 16:30:19 - verbose: [Build-plugin] register pkg huawei-agc: 240ms
-8-19-2026 16:30:19 - verbose: [Package] im-plugin@3.0.12 enable
-8-19-2026 16:30:20 - verbose: [Package] cocos-service@3.0.7 enable
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg cocos-service: 37ms
-8-19-2026 16:30:20 - verbose: [Package] open-harmonyos@1.0.0 enable
-8-19-2026 16:30:20 - verbose: [Package] oppo-mini-game@1.0.1 enable
-8-19-2026 16:30:20 - verbose: [Package] runtime-dev-tools@1.0.0 enable
-8-19-2026 16:30:20 - verbose: [Package] taobao-creative-app@1.0.0 enable
-8-19-2026 16:30:20 - verbose: [Package] taobao-mini-game@1.0.0 enable
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg mac: 631ms
-8-19-2026 16:30:20 - verbose: [Package] vivo-mini-game@1.0.1 enable
-8-19-2026 16:30:20 - verbose: [Package] web-desktop@1.0.1 enable
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg oppo-mini-game: 138ms
-8-19-2026 16:30:20 - verbose: [Package] web-mobile@1.0.1 enable
-8-19-2026 16:30:20 - verbose: [Package] wechatgame@1.0.2 enable
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg ohos: 623ms
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg taobao-creative-app: 169ms
-8-19-2026 16:30:20 - verbose: [Package] wechatprogram@1.0.2 enable
-8-19-2026 16:30:20 - verbose: [Package] windows@1.0.1 enable
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg vivo-mini-game: 152ms
-8-19-2026 16:30:20 - verbose: [Package] xiaomi-quick-game@1.0.1 enable
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg web-desktop: 140ms
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg taobao-mini-game: 207ms
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg web-mobile: 132ms
-8-19-2026 16:30:20 - log: playable-ads-adapter is loaded
-8-19-2026 16:30:20 - verbose: [Package] playable-ads-adapter@1.3.10 enable
-8-19-2026 16:30:20 - log: playable-ads-adapter is loaded
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg playable-ads-adapter: 2ms
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg wechatgame: 199ms
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg windows: 153ms
-8-19-2026 16:30:20 - verbose: [Package] placeholder@1.0.0 enable
-8-19-2026 16:30:20 - verbose: [Build-plugin] register pkg xiaomi-quick-game: 157ms
-8-19-2026 16:30:21 - log: [Window] playable-ads-adapter is loaded
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: [
-8-19-2026 16:30:22 - verbose: B
-8-19-2026 16:30:25 - verbose: asset-db is ready!
-8-19-2026 16:30:26 - info: [Scene] [Physics][Bullet]: Using asmjs Bullet libs.
-8-19-2026 16:30:26 - info: [Scene] [PHYSICS]: using builtin.
-8-19-2026 16:30:26 - log: [Scene] Cocos Creator v3.7.4
-8-19-2026 16:30:26 - info: [Scene] Forward render pipeline initialized.
-8-19-2026 16:30:26 - warn: [Scene] Found possible circular reference in "pack:///chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js", happened when use "UI" imported from "./UI"  Error: 
+8-20-2026 17:30:42 - verbose: Arguments:
+8-20-2026 17:30:42 - verbose:   C:\ProgramData\cocos\editors\Creator\3.7.4\CocosCreator.exe: true
+8-20-2026 17:30:42 - verbose:   project: F:\CocosProject\PLY_Dreamyroom_Cocos
+8-20-2026 17:30:42 - verbose:   can-show-upgrade-dialog: true
+8-20-2026 17:30:42 - verbose:   dev: false
+8-20-2026 17:30:42 - verbose:   home: C:\Users\Admin\.CocosCreator
+8-20-2026 17:30:42 - verbose:  
+8-20-2026 17:30:46 - verbose: [Package] menu@1.0.0 enable
+8-20-2026 17:30:46 - verbose: [Package] profile@1.0.0 enable
+8-20-2026 17:30:46 - verbose: [Package] project@1.0.4 enable
+8-20-2026 17:30:46 - verbose: [Package] messages@1.0.0 enable
+8-20-2026 17:30:46 - verbose: [Package] program@1.0.3 enable
+8-20-2026 17:30:46 - verbose: [Package] tester@1.0.0 enable
+8-20-2026 17:30:46 - verbose: [Package] information@1.0.0 enable
+8-20-2026 17:30:46 - verbose: [Package] preferences@1.0.0 enable
+8-20-2026 17:30:48 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine
+8-20-2026 17:30:48 - log: Profile changed: engine (modules.includeModules: 2d,3d,animation,audio,base,gfx-webgl,gfx-webgl2,particle,particle-2d,profiler,spine,tween,ui,webview)
+8-20-2026 17:30:48 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\native
+8-20-2026 17:30:48 - verbose: [Package] engine@1.0.7 enable
+8-20-2026 17:30:49 - verbose: [Package] programming@1.0.0 enable
+8-20-2026 17:30:49 - verbose: [Package] device@1.0.1 enable
+8-20-2026 17:30:49 - verbose: [Package] ui-kit@1.0.1 enable
+8-20-2026 17:30:49 - verbose: [Package] asset-db@1.0.0 enable
+8-20-2026 17:30:49 - verbose: [Package] scene@1.0.0 enable
+8-20-2026 17:30:50 - verbose: [Package] server@1.0.0 enable
+8-20-2026 17:30:50 - verbose: [Package] utils@1.0.0 enable
+8-20-2026 17:30:54 - verbose: [Package] preview@1.0.1 enable
+8-20-2026 17:30:54 - verbose: [Package] animator@1.0.0 enable
+8-20-2026 17:30:54 - verbose: [Build-plugin] register pkg scene: 1ms
+8-20-2026 17:30:54 - verbose: Builder PluginManager init: 2ms
+8-20-2026 17:30:54 - verbose: [Package] builder@1.3.5 enable
+8-20-2026 17:30:54 - verbose: [Package] shortcuts@1.0.1 enable
+8-20-2026 17:30:54 - verbose: [Package] animation-graph@1.0.0 enable
+8-20-2026 17:30:54 - verbose: [Package] about@1.0.0 enable
+8-20-2026 17:30:54 - verbose: [Package] assets@1.0.0 enable
+8-20-2026 17:30:54 - verbose: [Package] console@1.0.0 enable
+8-20-2026 17:30:54 - verbose: [Package] crash-reporter@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] extension@3.1.1 enable
+8-20-2026 17:30:55 - verbose: [Package] hierarchy@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] inspector@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] light-probe@1.0.4 enable
+8-20-2026 17:30:55 - verbose: [Package] lightmap@1.0.4 enable
+8-20-2026 17:30:55 - verbose: [Package] node-library@1.0.1 enable
+8-20-2026 17:30:55 - verbose: [Package] package-asset@1.0.1 enable
+8-20-2026 17:30:55 - verbose: [Package] process@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] reference-image@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] reflection-probe@1.0.4 enable
+8-20-2026 17:30:55 - verbose: [Package] engine-extends@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] alipay-mini-game@1.0.1 enable
+8-20-2026 17:30:55 - verbose: [Package] android@1.0.1 enable
+8-20-2026 17:30:55 - verbose: [Package] bytedance-mini-game@1.0.2 enable
+8-20-2026 17:30:55 - verbose: [Package] certificate@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] channel-upload-tools@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] fb-instant-games@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] huawei-agc@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] huawei-quick-game@1.0.1 enable
+8-20-2026 17:30:55 - verbose: [Package] ios@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Build-plugin] register pkg bytedance-mini-game: 150ms
+8-20-2026 17:30:55 - verbose: [Package] linux@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Package] mac@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Build-plugin] register pkg fb-instant-games: 125ms
+8-20-2026 17:30:55 - verbose: [Build-plugin] register pkg android: 248ms
+8-20-2026 17:30:55 - verbose: [Package] native@1.0.2 enable
+8-20-2026 17:30:55 - verbose: [Build-plugin] register pkg native: 55ms
+8-20-2026 17:30:55 - verbose: [Package] ohos@1.0.0 enable
+8-20-2026 17:30:55 - verbose: [Build-plugin] register pkg huawei-agc: 226ms
+8-20-2026 17:30:55 - verbose: [Build-plugin] register pkg huawei-quick-game: 204ms
+8-20-2026 17:30:55 - verbose: [Package] im-plugin@3.0.12 enable
+8-20-2026 17:30:56 - verbose: [Package] cocos-service@3.0.7 enable
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg cocos-service: 38ms
+8-20-2026 17:30:56 - verbose: [Package] open-harmonyos@1.0.0 enable
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg ios: 600ms
+8-20-2026 17:30:56 - verbose: [Package] oppo-mini-game@1.0.1 enable
+8-20-2026 17:30:56 - verbose: [Package] runtime-dev-tools@1.0.0 enable
+8-20-2026 17:30:56 - verbose: [Package] taobao-creative-app@1.0.0 enable
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg mac: 627ms
+8-20-2026 17:30:56 - verbose: [Package] taobao-mini-game@1.0.0 enable
+8-20-2026 17:30:56 - verbose: [Package] vivo-mini-game@1.0.1 enable
+8-20-2026 17:30:56 - verbose: [Package] web-desktop@1.0.1 enable
+8-20-2026 17:30:56 - verbose: [Package] web-mobile@1.0.1 enable
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg ohos: 615ms
+8-20-2026 17:30:56 - verbose: [Package] wechatgame@1.0.2 enable
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg oppo-mini-game: 195ms
+8-20-2026 17:30:56 - verbose: [Package] wechatprogram@1.0.2 enable
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg taobao-creative-app: 189ms
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg vivo-mini-game: 144ms
+8-20-2026 17:30:56 - verbose: [Package] windows@1.0.1 enable
+8-20-2026 17:30:56 - verbose: [Package] xiaomi-quick-game@1.0.1 enable
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg taobao-mini-game: 214ms
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg web-desktop: 195ms
+8-20-2026 17:30:56 - log: playable-ads-adapter is loaded
+8-20-2026 17:30:56 - verbose: [Package] playable-ads-adapter@1.3.10 enable
+8-20-2026 17:30:56 - log: playable-ads-adapter is loaded
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg playable-ads-adapter: 1ms
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg web-mobile: 230ms
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg wechatgame: 203ms
+8-20-2026 17:30:56 - verbose: [Package] placeholder@1.0.0 enable
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg windows: 188ms
+8-20-2026 17:30:56 - verbose: [Build-plugin] register pkg xiaomi-quick-game: 281ms
+8-20-2026 17:30:57 - log: [Window] playable-ads-adapter is loaded
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: [
+8-20-2026 17:30:57 - verbose: B
+8-20-2026 17:31:01 - verbose: asset-db is ready!
+8-20-2026 17:31:02 - info: [Scene] [Physics][Bullet]: Using asmjs Bullet libs.
+8-20-2026 17:31:02 - info: [Scene] [PHYSICS]: using builtin.
+8-20-2026 17:31:02 - log: [Scene] Cocos Creator v3.7.4
+8-20-2026 17:31:02 - info: [Scene] Forward render pipeline initialized.
+8-20-2026 17:31:02 - warn: [Scene] Found possible circular reference in "pack:///chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js", happened when use "UI" imported from "./UI"  Error: 
     at Object.execute (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js:72:16)
     at doExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
     at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
@@ -153,7 +153,7 @@
     at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
     at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
     at Array.forEach (<anonymous>)
-8-19-2026 16:30:26 - warn: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
+8-20-2026 17:31:02 - warn: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
 Is this intended? If not, this may indicate a circular reference.
 For example:
 
@@ -195,11 +195,11 @@ export class Foo {            //  ↓
     at declareProperties (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150844:11)
     at CCClass (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150875:5)
     at eval (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:286034:21)
-8-19-2026 16:30:26 - log: [Scene] No need to specify the "type" of "ItemGraphic.listScale" because cc.Vec3 is a child class of ValueType.
-8-19-2026 16:30:26 - log: [Scene] No need to specify the "type" of "ItemGraphic.listRotation" because cc.Vec3 is a child class of ValueType.
-8-19-2026 16:30:26 - log: [Scene] No need to specify the "type" of "ItemMovement.originalScale" because cc.Vec3 is a child class of ValueType.
-8-19-2026 16:30:26 - log: [Scene] No need to specify the "type" of "ItemMovement.originalRotation" because cc.Vec3 is a child class of ValueType.
-8-19-2026 16:30:27 - warn: [Scene] Found possible circular reference in "pack:///chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js", happened when use "UI" imported from "./UI"  Error: 
+8-20-2026 17:31:02 - log: [Scene] No need to specify the "type" of "ItemGraphic.listScale" because cc.Vec3 is a child class of ValueType.
+8-20-2026 17:31:02 - log: [Scene] No need to specify the "type" of "ItemGraphic.listRotation" because cc.Vec3 is a child class of ValueType.
+8-20-2026 17:31:02 - log: [Scene] No need to specify the "type" of "ItemMovement.originalScale" because cc.Vec3 is a child class of ValueType.
+8-20-2026 17:31:02 - log: [Scene] No need to specify the "type" of "ItemMovement.originalRotation" because cc.Vec3 is a child class of ValueType.
+8-20-2026 17:31:03 - warn: [Scene] Found possible circular reference in "pack:///chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js", happened when use "UI" imported from "./UI"  Error: 
     at Object.execute (file:///F:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e2c024c45eba9d0fbd72bd908b052c3fad60a29.js:72:16)
     at doExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
     at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
@@ -227,7 +227,7 @@ export class Foo {            //  ↓
     at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
     at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
     at Array.forEach (<anonymous>)
-8-19-2026 16:30:27 - warn: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
+8-20-2026 17:31:03 - warn: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
 Is this intended? If not, this may indicate a circular reference.
 For example:
 
@@ -269,8 +269,69 @@ export class Foo {            //  ↓
     at declareProperties (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150844:11)
     at CCClass (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:150875:5)
     at eval (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:286034:21)
-8-19-2026 16:30:27 - log: [Scene] No need to specify the "type" of "ItemGraphic.listScale" because cc.Vec3 is a child class of ValueType.
-8-19-2026 16:30:27 - log: [Scene] No need to specify the "type" of "ItemGraphic.listRotation" because cc.Vec3 is a child class of ValueType.
-8-19-2026 16:30:27 - log: [Scene] No need to specify the "type" of "ItemMovement.originalScale" because cc.Vec3 is a child class of ValueType.
-8-19-2026 16:30:27 - log: [Scene] No need to specify the "type" of "ItemMovement.originalRotation" because cc.Vec3 is a child class of ValueType.
-8-19-2026 16:31:59 - warn: Metrics: no valid info
+8-20-2026 17:31:03 - log: [Scene] No need to specify the "type" of "ItemGraphic.listScale" because cc.Vec3 is a child class of ValueType.
+8-20-2026 17:31:03 - log: [Scene] No need to specify the "type" of "ItemGraphic.listRotation" because cc.Vec3 is a child class of ValueType.
+8-20-2026 17:31:03 - log: [Scene] No need to specify the "type" of "ItemMovement.originalScale" because cc.Vec3 is a child class of ValueType.
+8-20-2026 17:31:03 - log: [Scene] No need to specify the "type" of "ItemMovement.originalRotation" because cc.Vec3 is a child class of ValueType.
+8-20-2026 17:31:09 - warn: [Scene] Node "Hand" has no path "Node".Error: [Scene] Node "Hand" has no path "Node".
+    at warn (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169627:12)
+    at warnID (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169846:5)
+    at HierarchyPath.get (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:9890:13)
+    at TrackPath.[NormalizedFollow] (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:129784:29)
+    at TrackBinding.createRuntimeBinding (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:129829:59)
+    at binder (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:5668:41)
+    at AnimationClip._createEvalWithBinder (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:6009:33)
+8-20-2026 17:31:09 - warn: [Scene] Previous error occurred when instantiating animation clip Hand on node Hand.Error: [Scene] Previous error occurred when instantiating animation clip Hand on node Hand.
+    at warn (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169627:12)
+    at warnID (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:169846:5)
+    at binder (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:5675:15)
+    at AnimationClip._createEvalWithBinder (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:6009:33)
+    at AnimationClip.createEvaluator (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:5681:23)
+    at AnimationState.initialize (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:12272:35)
+    at Animation._doCreateState (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:7294:19)
+8-20-2026 17:32:34 - error: [Assets] ENOENT: no such file or directory, open 'F:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spines\Win\capi-win.json'Error: ENOENT: no such file or directory, open 'F:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spines\Win\capi-win.json'
+    at Object.openSync (fs.js:476:3)
+    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.e.readFileSync (electron/js2c/asar_bundle.js:5:8872)
+    at SpineImporter.validate (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\importer\importers\spine.ccc:1:2385)
+    at ImporterManager.find (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\asset-db\libs\importer.ccc:89:39)
+    at ParallelQueue._generate (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:79:57)
+    at ParallelQueue._step (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\workflow-extra\dist\index.js:113:18)
+    at ParallelQueue.start (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\workflow-extra\dist\index.js:82:18)
+    at afterPreImport (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:14313)
+8-20-2026 17:32:39 - error: [Assets] Importer exec failed: {asset[F:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spines\box38\box-ingame.json](a700defe-a8a5-437e-8441-e6b4fe3b4065)}[Assets] Importer exec failed: {asset[F:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spines\box38\box-ingame.json](a700defe-a8a5-437e-8441-e6b4fe3b4065)}  
+at Object.error (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\builtin\asset-db\dist\worker\console.ccc:1:1311)  
+at ImportTask.importAsset (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\asset-db\libs\task.ccc:220:29)  
+at ImportTask.exec (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\asset-db\libs\task.ccc:68:25)  
+at ParallelQueue._generate (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:97:25)
+8-20-2026 17:32:39 - error: [Assets] Failed to load atlas file: "F:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spines\box38\box-ingame.atlas.txt". Error: Unknown texture filter true
+    at Function.eval [as filterFromString] (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:262267:23)
+    at TextureAtlas.eval (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:262379:48)
+    at new TextureAtlas (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:262355:18)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\importer\importers\spine.ccc:1:2805
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\importer\importers\spine.ccc:1:1414
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)Error: Failed to load atlas file: "F:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spines\box38\box-ingame.atlas.txt". Error: Unknown texture filter true
+    at Function.eval [as filterFromString] (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:262267:23)
+    at TextureAtlas.eval (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:262379:48)
+    at new TextureAtlas (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:262355:18)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\importer\importers\spine.ccc:1:2805
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\importer\importers\spine.ccc:1:1414
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\importer\importers\spine.ccc:1:2877
+    at C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\importer\importers\spine.ccc:1:1414
+    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)
+8-20-2026 17:32:46 - log: [Window] Deprecated as of 10.7.0. highlight(lang, code, ...args) has been deprecated.
+8-20-2026 17:32:46 - log: [Window] Deprecated as of 10.7.0. Please use highlight(code, options) instead.
+https://github.com/highlightjs/highlight.js/issues/2277
+8-20-2026 17:33:40 - error: [Assets] ENOENT: no such file or directory, open 'F:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spines\box38\box-ingame.json'Error: ENOENT: no such file or directory, open 'F:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spines\box38\box-ingame.json'
+    at Object.openSync (fs.js:476:3)
+    at Object.func [as openSync] (electron/js2c/asar_bundle.js:5:1846)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.e.readFileSync (electron/js2c/asar_bundle.js:5:8872)
+    at SpineImporter.validate (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\importer\importers\spine.ccc:1:2385)
+    at ImporterManager.find (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\asset-db\libs\importer.ccc:89:39)
+    at ParallelQueue._generate (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\@editor\asset-db\libs\asset-db.ccc:79:57)
+    at ParallelQueue._step (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\workflow-extra\dist\index.js:113:18)
+    at ParallelQueue.start (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\node_modules\workflow-extra\dist\index.js:82:18)
+    at afterPreImport (C:\ProgramData\cocos\editors\Creator\3.7.4\resources\app.asar\builtin\asset-db\dist\worker\asset-db-manager.ccc:1:14313)

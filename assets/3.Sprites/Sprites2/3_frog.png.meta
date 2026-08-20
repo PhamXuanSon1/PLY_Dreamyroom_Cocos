@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "e527edb5-8bcb-42dd-8c12-cf0ed4068e77",
+  "uuid": "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "e527edb5-8bcb-42dd-8c12-cf0ed4068e77@6c48a",
+      "uuid": "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f@6c48a",
       "displayName": "3_frog",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "e527edb5-8bcb-42dd-8c12-cf0ed4068e77",
+        "imageUuidOrDatabaseUri": "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "e527edb5-8bcb-42dd-8c12-cf0ed4068e77@f9941",
+      "uuid": "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f@f9941",
       "displayName": "3_frog",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "e527edb5-8bcb-42dd-8c12-cf0ed4068e77@6c48a",
+        "imageUuidOrDatabaseUri": "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "e527edb5-8bcb-42dd-8c12-cf0ed4068e77@f9941"
+    "redirect": "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f@f9941"
   }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "46486aaf-6888-42a9-80ab-2165bb7398ca",
+  "uuid": "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "46486aaf-6888-42a9-80ab-2165bb7398ca@6c48a",
+      "uuid": "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769@6c48a",
       "displayName": "33_apple_sd",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "46486aaf-6888-42a9-80ab-2165bb7398ca",
+        "imageUuidOrDatabaseUri": "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "46486aaf-6888-42a9-80ab-2165bb7398ca@f9941",
+      "uuid": "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769@f9941",
       "displayName": "33_apple_sd",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "46486aaf-6888-42a9-80ab-2165bb7398ca@6c48a",
+        "imageUuidOrDatabaseUri": "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "46486aaf-6888-42a9-80ab-2165bb7398ca@f9941"
+    "redirect": "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769@f9941"
   }
 }

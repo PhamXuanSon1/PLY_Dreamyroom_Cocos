@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "e484a6b4-56b9-42b2-91a6-9d27978a06e6",
+  "uuid": "c3891c85-676e-4efc-ace4-f1d7b9342c76",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "e484a6b4-56b9-42b2-91a6-9d27978a06e6@6c48a",
+      "uuid": "c3891c85-676e-4efc-ace4-f1d7b9342c76@6c48a",
       "displayName": "63_pumpkin",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "e484a6b4-56b9-42b2-91a6-9d27978a06e6",
+        "imageUuidOrDatabaseUri": "c3891c85-676e-4efc-ace4-f1d7b9342c76",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "e484a6b4-56b9-42b2-91a6-9d27978a06e6@f9941",
+      "uuid": "c3891c85-676e-4efc-ace4-f1d7b9342c76@f9941",
       "displayName": "63_pumpkin",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "e484a6b4-56b9-42b2-91a6-9d27978a06e6@6c48a",
+        "imageUuidOrDatabaseUri": "c3891c85-676e-4efc-ace4-f1d7b9342c76@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "e484a6b4-56b9-42b2-91a6-9d27978a06e6@f9941"
+    "redirect": "c3891c85-676e-4efc-ace4-f1d7b9342c76@f9941"
   }
 }

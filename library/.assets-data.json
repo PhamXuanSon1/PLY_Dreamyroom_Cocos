@@ -668,8 +668,7 @@
     "value": {
       "depends": [
         "37150f18-4c52-4f26-bdc5-00b4308270f1",
-        "d9a130a1-bdfd-479f-ba07-63b27cb739dd",
-        "91b967fa-865d-4859-87f7-a9dc54b0bd23@f9941",
+        "0408aba9-4671-4e64-841a-73f50dc131bb@f9941",
         "71f387ff-a785-420f-a491-f13c1b433827",
         "71f387ff-a785-420f-a491-f13c1b433827",
         "d9a130a1-bdfd-479f-ba07-63b27cb739dd",
@@ -987,9 +986,7 @@
   },
   "93fee55d-99dc-40f0-b98d-f5bc13d8777a": {
     "url": "db://assets/0.Spines/Win/capi-win.atlas.txt",
-    "value": {
-      "depends": []
-    }
+    "value": {}
   },
   "9582636a-4b41-4bb3-ac30-f4c9bea31a49": {
     "url": "db://assets/0.Spines/Win/capi-win.json",
@@ -1001,9 +998,7 @@
   },
   "94a02fff-38a5-49f0-90c8-3901cecb4f86": {
     "url": "db://assets/0.Spines/Win/capi-win.png",
-    "value": {
-      "depends": []
-    }
+    "value": {}
   },
   "23c364d7-a54a-4b82-904e-0fda72a90a7b": {
     "url": "db://assets/3.Sprites/Chung/ChatGPT Image May 13, 2026, 10_50_10 AM (1).png",
@@ -7752,6 +7747,3892 @@
     "value": {
       "depends": [
         "78c2c7b9-414e-4656-af7c-a8f861b98f5a@6c48a"
+      ]
+    }
+  },
+  "bcc24bf9-41f1-497e-9ecc-dfbc93925777": {
+    "url": "db://assets/3.Sprites/Sprites2",
+    "value": {}
+  },
+  "ac9175b9-91cc-46e2-a155-9115434bc1da": {
+    "url": "db://assets/3.Sprites/Chung/ChatGPT Image May 13, 2026, 10_50_10 AM (1).png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b2904546-dcb9-4371-90d2-bcc09faa77d0": {
+    "url": "db://assets/3.Sprites/Chung/ChatGPT_Image_May_13__2026__10_50_10_AM-removebg-preview.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "f3f026d0-2801-4bb2-9b57-96344b2d4676": {
+    "url": "db://assets/3.Sprites/Chung/green_button.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "0408aba9-4671-4e64-841a-73f50dc131bb": {
+    "url": "db://assets/3.Sprites/Chung/Hand.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "e493c109-ea19-429a-b842-154150079dc7": {
+    "url": "db://assets/3.Sprites/Chung/Install.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "0408aba9-4671-4e64-841a-73f50dc131bb@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/Hand.png@6c48a",
+    "value": {
+      "depends": [
+        "0408aba9-4671-4e64-841a-73f50dc131bb"
+      ]
+    }
+  },
+  "0408aba9-4671-4e64-841a-73f50dc131bb@f9941": {
+    "url": "db://assets/3.Sprites/Chung/Hand.png@f9941",
+    "value": {
+      "depends": [
+        "0408aba9-4671-4e64-841a-73f50dc131bb@6c48a"
+      ]
+    }
+  },
+  "089a1f34-0792-44c3-954a-8ab671aefec5": {
+    "url": "db://assets/3.Sprites/Chung/Logo.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "ac9175b9-91cc-46e2-a155-9115434bc1da@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/ChatGPT Image May 13, 2026, 10_50_10 AM (1).png@6c48a",
+    "value": {
+      "depends": [
+        "ac9175b9-91cc-46e2-a155-9115434bc1da"
+      ]
+    }
+  },
+  "ac9175b9-91cc-46e2-a155-9115434bc1da@f9941": {
+    "url": "db://assets/3.Sprites/Chung/ChatGPT Image May 13, 2026, 10_50_10 AM (1).png@f9941",
+    "value": {
+      "depends": [
+        "ac9175b9-91cc-46e2-a155-9115434bc1da@6c48a"
+      ]
+    }
+  },
+  "ee247a59-6f6a-4b1f-a0d4-938507f99290": {
+    "url": "db://assets/3.Sprites/Chung/TapToDecor.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b2904546-dcb9-4371-90d2-bcc09faa77d0@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/ChatGPT_Image_May_13__2026__10_50_10_AM-removebg-preview.png@6c48a",
+    "value": {
+      "depends": [
+        "b2904546-dcb9-4371-90d2-bcc09faa77d0"
+      ]
+    }
+  },
+  "f3f026d0-2801-4bb2-9b57-96344b2d4676@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/green_button.png@6c48a",
+    "value": {
+      "depends": [
+        "f3f026d0-2801-4bb2-9b57-96344b2d4676"
+      ]
+    }
+  },
+  "f3f026d0-2801-4bb2-9b57-96344b2d4676@f9941": {
+    "url": "db://assets/3.Sprites/Chung/green_button.png@f9941",
+    "value": {
+      "depends": [
+        "f3f026d0-2801-4bb2-9b57-96344b2d4676@6c48a"
+      ]
+    }
+  },
+  "b2904546-dcb9-4371-90d2-bcc09faa77d0@f9941": {
+    "url": "db://assets/3.Sprites/Chung/ChatGPT_Image_May_13__2026__10_50_10_AM-removebg-preview.png@f9941",
+    "value": {
+      "depends": [
+        "b2904546-dcb9-4371-90d2-bcc09faa77d0@6c48a"
+      ]
+    }
+  },
+  "c57af6a3-9372-4a35-9e49-78f8966c3ced": {
+    "url": "db://assets/3.Sprites/Sprites2/10_mushroom.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "ded2b8b4-91a2-4280-8ad3-c88b40dd41a2": {
+    "url": "db://assets/3.Sprites/Sprites2/10_mushroom_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "e493c109-ea19-429a-b842-154150079dc7@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/Install.png@6c48a",
+    "value": {
+      "depends": [
+        "e493c109-ea19-429a-b842-154150079dc7"
+      ]
+    }
+  },
+  "ee247a59-6f6a-4b1f-a0d4-938507f99290@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/TapToDecor.png@6c48a",
+    "value": {
+      "depends": [
+        "ee247a59-6f6a-4b1f-a0d4-938507f99290"
+      ]
+    }
+  },
+  "089a1f34-0792-44c3-954a-8ab671aefec5@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/Logo.png@6c48a",
+    "value": {
+      "depends": [
+        "089a1f34-0792-44c3-954a-8ab671aefec5"
+      ]
+    }
+  },
+  "e493c109-ea19-429a-b842-154150079dc7@f9941": {
+    "url": "db://assets/3.Sprites/Chung/Install.png@f9941",
+    "value": {
+      "depends": [
+        "e493c109-ea19-429a-b842-154150079dc7@6c48a"
+      ]
+    }
+  },
+  "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941": {
+    "url": "db://assets/3.Sprites/Chung/TapToDecor.png@f9941",
+    "value": {
+      "depends": [
+        "ee247a59-6f6a-4b1f-a0d4-938507f99290@6c48a"
+      ]
+    }
+  },
+  "99e50a7b-0356-4b4f-9b20-b037d369f397": {
+    "url": "db://assets/3.Sprites/Sprites2/11_mushroom.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "a2f64d2a-366d-4208-ae1c-b494c8f6ed9e": {
+    "url": "db://assets/3.Sprites/Sprites2/11_mushroom_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "089a1f34-0792-44c3-954a-8ab671aefec5@f9941": {
+    "url": "db://assets/3.Sprites/Chung/Logo.png@f9941",
+    "value": {
+      "depends": [
+        "089a1f34-0792-44c3-954a-8ab671aefec5@6c48a"
+      ]
+    }
+  },
+  "ade1c260-f292-453a-b2db-079e0331444d": {
+    "url": "db://assets/3.Sprites/Sprites2/12_swing.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "ded2b8b4-91a2-4280-8ad3-c88b40dd41a2@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/10_mushroom_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "ded2b8b4-91a2-4280-8ad3-c88b40dd41a2"
+      ]
+    }
+  },
+  "c57af6a3-9372-4a35-9e49-78f8966c3ced@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/10_mushroom.png@6c48a",
+    "value": {
+      "depends": [
+        "c57af6a3-9372-4a35-9e49-78f8966c3ced"
+      ]
+    }
+  },
+  "a2f64d2a-366d-4208-ae1c-b494c8f6ed9e@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/11_mushroom_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "a2f64d2a-366d-4208-ae1c-b494c8f6ed9e"
+      ]
+    }
+  },
+  "ded2b8b4-91a2-4280-8ad3-c88b40dd41a2@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/10_mushroom_sd.png@f9941",
+    "value": {
+      "depends": [
+        "ded2b8b4-91a2-4280-8ad3-c88b40dd41a2@6c48a"
+      ]
+    }
+  },
+  "b39133dd-c807-4bc4-b924-ec63c585eed5": {
+    "url": "db://assets/3.Sprites/Sprites2/12_swing_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "c57af6a3-9372-4a35-9e49-78f8966c3ced@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/10_mushroom.png@f9941",
+    "value": {
+      "depends": [
+        "c57af6a3-9372-4a35-9e49-78f8966c3ced@6c48a"
+      ]
+    }
+  },
+  "b95c7182-b5d5-4f6a-85b9-40a31889e20b": {
+    "url": "db://assets/3.Sprites/Sprites2/13_floor.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "a2f64d2a-366d-4208-ae1c-b494c8f6ed9e@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/11_mushroom_sd.png@f9941",
+    "value": {
+      "depends": [
+        "a2f64d2a-366d-4208-ae1c-b494c8f6ed9e@6c48a"
+      ]
+    }
+  },
+  "40a71262-2d58-496c-8904-5fd5eeeaeb20": {
+    "url": "db://assets/3.Sprites/Sprites2/13_floor_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "99e50a7b-0356-4b4f-9b20-b037d369f397@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/11_mushroom.png@6c48a",
+    "value": {
+      "depends": [
+        "99e50a7b-0356-4b4f-9b20-b037d369f397"
+      ]
+    }
+  },
+  "99e50a7b-0356-4b4f-9b20-b037d369f397@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/11_mushroom.png@f9941",
+    "value": {
+      "depends": [
+        "99e50a7b-0356-4b4f-9b20-b037d369f397@6c48a"
+      ]
+    }
+  },
+  "575173aa-cd0d-485d-aa45-e54b3eafc104": {
+    "url": "db://assets/3.Sprites/Sprites2/14_floor.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "ade1c260-f292-453a-b2db-079e0331444d@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/12_swing.png@6c48a",
+    "value": {
+      "depends": [
+        "ade1c260-f292-453a-b2db-079e0331444d"
+      ]
+    }
+  },
+  "ade1c260-f292-453a-b2db-079e0331444d@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/12_swing.png@f9941",
+    "value": {
+      "depends": [
+        "ade1c260-f292-453a-b2db-079e0331444d@6c48a"
+      ]
+    }
+  },
+  "2a37b1e6-98f4-49a9-a71a-cb2f6f48e808": {
+    "url": "db://assets/3.Sprites/Sprites2/14_floor_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b39133dd-c807-4bc4-b924-ec63c585eed5@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/12_swing_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "b39133dd-c807-4bc4-b924-ec63c585eed5"
+      ]
+    }
+  },
+  "40a71262-2d58-496c-8904-5fd5eeeaeb20@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/13_floor_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "40a71262-2d58-496c-8904-5fd5eeeaeb20"
+      ]
+    }
+  },
+  "40a71262-2d58-496c-8904-5fd5eeeaeb20@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/13_floor_sd.png@f9941",
+    "value": {
+      "depends": [
+        "40a71262-2d58-496c-8904-5fd5eeeaeb20@6c48a"
+      ]
+    }
+  },
+  "5300065f-9bf0-4bf2-be93-e8335ba5d494": {
+    "url": "db://assets/3.Sprites/Sprites2/15_room.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b39133dd-c807-4bc4-b924-ec63c585eed5@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/12_swing_sd.png@f9941",
+    "value": {
+      "depends": [
+        "b39133dd-c807-4bc4-b924-ec63c585eed5@6c48a"
+      ]
+    }
+  },
+  "71b69d85-7661-4c19-9bdf-53309dbf84b2": {
+    "url": "db://assets/3.Sprites/Sprites2/15_room_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "575173aa-cd0d-485d-aa45-e54b3eafc104@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/14_floor.png@6c48a",
+    "value": {
+      "depends": [
+        "575173aa-cd0d-485d-aa45-e54b3eafc104"
+      ]
+    }
+  },
+  "b95c7182-b5d5-4f6a-85b9-40a31889e20b@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/13_floor.png@6c48a",
+    "value": {
+      "depends": [
+        "b95c7182-b5d5-4f6a-85b9-40a31889e20b"
+      ]
+    }
+  },
+  "2a37b1e6-98f4-49a9-a71a-cb2f6f48e808@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/14_floor_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "2a37b1e6-98f4-49a9-a71a-cb2f6f48e808"
+      ]
+    }
+  },
+  "575173aa-cd0d-485d-aa45-e54b3eafc104@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/14_floor.png@f9941",
+    "value": {
+      "depends": [
+        "575173aa-cd0d-485d-aa45-e54b3eafc104@6c48a"
+      ]
+    }
+  },
+  "f5d9cc50-2668-4a00-8f77-f8f63695722e": {
+    "url": "db://assets/3.Sprites/Sprites2/16_carpet.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b95c7182-b5d5-4f6a-85b9-40a31889e20b@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/13_floor.png@f9941",
+    "value": {
+      "depends": [
+        "b95c7182-b5d5-4f6a-85b9-40a31889e20b@6c48a"
+      ]
+    }
+  },
+  "2a37b1e6-98f4-49a9-a71a-cb2f6f48e808@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/14_floor_sd.png@f9941",
+    "value": {
+      "depends": [
+        "2a37b1e6-98f4-49a9-a71a-cb2f6f48e808@6c48a"
+      ]
+    }
+  },
+  "03bf73f4-42ab-474e-b96c-d41036a5705d": {
+    "url": "db://assets/3.Sprites/Sprites2/16_carpet_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "61694a14-e7b3-440e-9827-140aaf091bc9": {
+    "url": "db://assets/3.Sprites/Sprites2/17_lamp.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "5300065f-9bf0-4bf2-be93-e8335ba5d494@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/15_room.png@6c48a",
+    "value": {
+      "depends": [
+        "5300065f-9bf0-4bf2-be93-e8335ba5d494"
+      ]
+    }
+  },
+  "03bf73f4-42ab-474e-b96c-d41036a5705d@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/16_carpet_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "03bf73f4-42ab-474e-b96c-d41036a5705d"
+      ]
+    }
+  },
+  "71b69d85-7661-4c19-9bdf-53309dbf84b2@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/15_room_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "71b69d85-7661-4c19-9bdf-53309dbf84b2"
+      ]
+    }
+  },
+  "f5d9cc50-2668-4a00-8f77-f8f63695722e@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/16_carpet.png@6c48a",
+    "value": {
+      "depends": [
+        "f5d9cc50-2668-4a00-8f77-f8f63695722e"
+      ]
+    }
+  },
+  "03bf73f4-42ab-474e-b96c-d41036a5705d@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/16_carpet_sd.png@f9941",
+    "value": {
+      "depends": [
+        "03bf73f4-42ab-474e-b96c-d41036a5705d@6c48a"
+      ]
+    }
+  },
+  "1a80b6da-5a59-4ded-9a03-8ba0386e5ebf": {
+    "url": "db://assets/3.Sprites/Sprites2/17_lamp_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "61694a14-e7b3-440e-9827-140aaf091bc9@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/17_lamp.png@6c48a",
+    "value": {
+      "depends": [
+        "61694a14-e7b3-440e-9827-140aaf091bc9"
+      ]
+    }
+  },
+  "5300065f-9bf0-4bf2-be93-e8335ba5d494@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/15_room.png@f9941",
+    "value": {
+      "depends": [
+        "5300065f-9bf0-4bf2-be93-e8335ba5d494@6c48a"
+      ]
+    }
+  },
+  "42354942-929c-4cd0-9184-a60df38ffc3b": {
+    "url": "db://assets/3.Sprites/Sprites2/18_bed.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "f5d9cc50-2668-4a00-8f77-f8f63695722e@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/16_carpet.png@f9941",
+    "value": {
+      "depends": [
+        "f5d9cc50-2668-4a00-8f77-f8f63695722e@6c48a"
+      ]
+    }
+  },
+  "71b69d85-7661-4c19-9bdf-53309dbf84b2@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/15_room_sd.png@f9941",
+    "value": {
+      "depends": [
+        "71b69d85-7661-4c19-9bdf-53309dbf84b2@6c48a"
+      ]
+    }
+  },
+  "828d5d95-a096-489a-932e-0513d02b2fe5": {
+    "url": "db://assets/3.Sprites/Sprites2/18_bed_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "c5a93f6d-00eb-4fc4-b697-bf7dbc254a2f": {
+    "url": "db://assets/3.Sprites/Sprites2/19_decor.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "61694a14-e7b3-440e-9827-140aaf091bc9@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/17_lamp.png@f9941",
+    "value": {
+      "depends": [
+        "61694a14-e7b3-440e-9827-140aaf091bc9@6c48a"
+      ]
+    }
+  },
+  "f7fd3702-b4ea-4366-a646-91fdc8223bb2": {
+    "url": "db://assets/3.Sprites/Sprites2/19_decor_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1a80b6da-5a59-4ded-9a03-8ba0386e5ebf@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/17_lamp_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "1a80b6da-5a59-4ded-9a03-8ba0386e5ebf"
+      ]
+    }
+  },
+  "c5a93f6d-00eb-4fc4-b697-bf7dbc254a2f@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/19_decor.png@6c48a",
+    "value": {
+      "depends": [
+        "c5a93f6d-00eb-4fc4-b697-bf7dbc254a2f"
+      ]
+    }
+  },
+  "828d5d95-a096-489a-932e-0513d02b2fe5@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/18_bed_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "828d5d95-a096-489a-932e-0513d02b2fe5"
+      ]
+    }
+  },
+  "f7fd3702-b4ea-4366-a646-91fdc8223bb2@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/19_decor_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "f7fd3702-b4ea-4366-a646-91fdc8223bb2"
+      ]
+    }
+  },
+  "1a80b6da-5a59-4ded-9a03-8ba0386e5ebf@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/17_lamp_sd.png@f9941",
+    "value": {
+      "depends": [
+        "1a80b6da-5a59-4ded-9a03-8ba0386e5ebf@6c48a"
+      ]
+    }
+  },
+  "01a3c248-dba9-4c12-959a-19d8472af393": {
+    "url": "db://assets/3.Sprites/Sprites2/1_lake.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "c5a93f6d-00eb-4fc4-b697-bf7dbc254a2f@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/19_decor.png@f9941",
+    "value": {
+      "depends": [
+        "c5a93f6d-00eb-4fc4-b697-bf7dbc254a2f@6c48a"
+      ]
+    }
+  },
+  "57e3946c-6bb8-4d04-8009-158a1985b169": {
+    "url": "db://assets/3.Sprites/Sprites2/1_lake_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "f7fd3702-b4ea-4366-a646-91fdc8223bb2@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/19_decor_sd.png@f9941",
+    "value": {
+      "depends": [
+        "f7fd3702-b4ea-4366-a646-91fdc8223bb2@6c48a"
+      ]
+    }
+  },
+  "828d5d95-a096-489a-932e-0513d02b2fe5@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/18_bed_sd.png@f9941",
+    "value": {
+      "depends": [
+        "828d5d95-a096-489a-932e-0513d02b2fe5@6c48a"
+      ]
+    }
+  },
+  "53b3d68a-c4a8-4fd8-9f1d-9b862958e681": {
+    "url": "db://assets/3.Sprites/Sprites2/1_lake_top.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "7dec10d1-32e7-4220-bc36-6457b90446e0": {
+    "url": "db://assets/3.Sprites/Sprites2/20_closet.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "42354942-929c-4cd0-9184-a60df38ffc3b@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/18_bed.png@6c48a",
+    "value": {
+      "depends": [
+        "42354942-929c-4cd0-9184-a60df38ffc3b"
+      ]
+    }
+  },
+  "53b3d68a-c4a8-4fd8-9f1d-9b862958e681@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/1_lake_top.png@6c48a",
+    "value": {
+      "depends": [
+        "53b3d68a-c4a8-4fd8-9f1d-9b862958e681"
+      ]
+    }
+  },
+  "57e3946c-6bb8-4d04-8009-158a1985b169@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/1_lake_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "57e3946c-6bb8-4d04-8009-158a1985b169"
+      ]
+    }
+  },
+  "42354942-929c-4cd0-9184-a60df38ffc3b@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/18_bed.png@f9941",
+    "value": {
+      "depends": [
+        "42354942-929c-4cd0-9184-a60df38ffc3b@6c48a"
+      ]
+    }
+  },
+  "0757e810-aff1-4cc7-bdeb-2b062428b151": {
+    "url": "db://assets/3.Sprites/Sprites2/20_closet_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "7dec10d1-32e7-4220-bc36-6457b90446e0@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/20_closet.png@6c48a",
+    "value": {
+      "depends": [
+        "7dec10d1-32e7-4220-bc36-6457b90446e0"
+      ]
+    }
+  },
+  "53b3d68a-c4a8-4fd8-9f1d-9b862958e681@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/1_lake_top.png@f9941",
+    "value": {
+      "depends": [
+        "53b3d68a-c4a8-4fd8-9f1d-9b862958e681@6c48a"
+      ]
+    }
+  },
+  "cba27571-fae7-4b2b-a4e3-84a27b88dff3": {
+    "url": "db://assets/3.Sprites/Sprites2/21_shelf.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "57e3946c-6bb8-4d04-8009-158a1985b169@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/1_lake_sd.png@f9941",
+    "value": {
+      "depends": [
+        "57e3946c-6bb8-4d04-8009-158a1985b169@6c48a"
+      ]
+    }
+  },
+  "6a108ed3-ec32-4189-b0f5-afcdb718f189": {
+    "url": "db://assets/3.Sprites/Sprites2/21_shelf_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "7dec10d1-32e7-4220-bc36-6457b90446e0@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/20_closet.png@f9941",
+    "value": {
+      "depends": [
+        "7dec10d1-32e7-4220-bc36-6457b90446e0@6c48a"
+      ]
+    }
+  },
+  "f4953771-c36c-467e-86b5-67d8a213e892": {
+    "url": "db://assets/3.Sprites/Sprites2/22_mushroom.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "01a3c248-dba9-4c12-959a-19d8472af393@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/1_lake.png@6c48a",
+    "value": {
+      "depends": [
+        "01a3c248-dba9-4c12-959a-19d8472af393"
+      ]
+    }
+  },
+  "0757e810-aff1-4cc7-bdeb-2b062428b151@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/20_closet_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "0757e810-aff1-4cc7-bdeb-2b062428b151"
+      ]
+    }
+  },
+  "01a3c248-dba9-4c12-959a-19d8472af393@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/1_lake.png@f9941",
+    "value": {
+      "depends": [
+        "01a3c248-dba9-4c12-959a-19d8472af393@6c48a"
+      ]
+    }
+  },
+  "cfa93a0b-b56d-40d2-8f5f-cca732014ea7": {
+    "url": "db://assets/3.Sprites/Sprites2/22_mushroom_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "f4953771-c36c-467e-86b5-67d8a213e892@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/22_mushroom.png@6c48a",
+    "value": {
+      "depends": [
+        "f4953771-c36c-467e-86b5-67d8a213e892"
+      ]
+    }
+  },
+  "0757e810-aff1-4cc7-bdeb-2b062428b151@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/20_closet_sd.png@f9941",
+    "value": {
+      "depends": [
+        "0757e810-aff1-4cc7-bdeb-2b062428b151@6c48a"
+      ]
+    }
+  },
+  "ad45ccad-9422-4466-97a3-3d92a3ed80d5": {
+    "url": "db://assets/3.Sprites/Sprites2/23_flower.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "6a108ed3-ec32-4189-b0f5-afcdb718f189@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/21_shelf_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "6a108ed3-ec32-4189-b0f5-afcdb718f189"
+      ]
+    }
+  },
+  "f4953771-c36c-467e-86b5-67d8a213e892@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/22_mushroom.png@f9941",
+    "value": {
+      "depends": [
+        "f4953771-c36c-467e-86b5-67d8a213e892@6c48a"
+      ]
+    }
+  },
+  "aa1a7af0-09a3-4d8e-8c52-7b38e70148bf": {
+    "url": "db://assets/3.Sprites/Sprites2/23_flower_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "cba27571-fae7-4b2b-a4e3-84a27b88dff3@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/21_shelf.png@6c48a",
+    "value": {
+      "depends": [
+        "cba27571-fae7-4b2b-a4e3-84a27b88dff3"
+      ]
+    }
+  },
+  "cba27571-fae7-4b2b-a4e3-84a27b88dff3@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/21_shelf.png@f9941",
+    "value": {
+      "depends": [
+        "cba27571-fae7-4b2b-a4e3-84a27b88dff3@6c48a"
+      ]
+    }
+  },
+  "6a108ed3-ec32-4189-b0f5-afcdb718f189@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/21_shelf_sd.png@f9941",
+    "value": {
+      "depends": [
+        "6a108ed3-ec32-4189-b0f5-afcdb718f189@6c48a"
+      ]
+    }
+  },
+  "cfa93a0b-b56d-40d2-8f5f-cca732014ea7@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/22_mushroom_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "cfa93a0b-b56d-40d2-8f5f-cca732014ea7"
+      ]
+    }
+  },
+  "63c3514f-f6fb-480d-96ee-eb63abb4ac23": {
+    "url": "db://assets/3.Sprites/Sprites2/24_wool.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b4644745-c71c-4939-97c4-5aa4b1da9217": {
+    "url": "db://assets/3.Sprites/Sprites2/24_wool_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "cfa93a0b-b56d-40d2-8f5f-cca732014ea7@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/22_mushroom_sd.png@f9941",
+    "value": {
+      "depends": [
+        "cfa93a0b-b56d-40d2-8f5f-cca732014ea7@6c48a"
+      ]
+    }
+  },
+  "59a07288-c6ea-4dd6-8244-6196586ae18a": {
+    "url": "db://assets/3.Sprites/Sprites2/25_char.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "ad45ccad-9422-4466-97a3-3d92a3ed80d5@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/23_flower.png@6c48a",
+    "value": {
+      "depends": [
+        "ad45ccad-9422-4466-97a3-3d92a3ed80d5"
+      ]
+    }
+  },
+  "ad45ccad-9422-4466-97a3-3d92a3ed80d5@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/23_flower.png@f9941",
+    "value": {
+      "depends": [
+        "ad45ccad-9422-4466-97a3-3d92a3ed80d5@6c48a"
+      ]
+    }
+  },
+  "38d45b05-0fb8-4139-a781-68c1930c1fcc": {
+    "url": "db://assets/3.Sprites/Sprites2/25_char_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "aa1a7af0-09a3-4d8e-8c52-7b38e70148bf@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/23_flower_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "aa1a7af0-09a3-4d8e-8c52-7b38e70148bf"
+      ]
+    }
+  },
+  "b4644745-c71c-4939-97c4-5aa4b1da9217@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/24_wool_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "b4644745-c71c-4939-97c4-5aa4b1da9217"
+      ]
+    }
+  },
+  "b4644745-c71c-4939-97c4-5aa4b1da9217@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/24_wool_sd.png@f9941",
+    "value": {
+      "depends": [
+        "b4644745-c71c-4939-97c4-5aa4b1da9217@6c48a"
+      ]
+    }
+  },
+  "aa1a7af0-09a3-4d8e-8c52-7b38e70148bf@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/23_flower_sd.png@f9941",
+    "value": {
+      "depends": [
+        "aa1a7af0-09a3-4d8e-8c52-7b38e70148bf@6c48a"
+      ]
+    }
+  },
+  "c8d6ed6f-c1ee-4433-a53e-7004529d6168": {
+    "url": "db://assets/3.Sprites/Sprites2/26_roof.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "6c07416c-ef8e-4719-8e92-3b3b96ff5320": {
+    "url": "db://assets/3.Sprites/Sprites2/28_chair.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "63c3514f-f6fb-480d-96ee-eb63abb4ac23@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/24_wool.png@6c48a",
+    "value": {
+      "depends": [
+        "63c3514f-f6fb-480d-96ee-eb63abb4ac23"
+      ]
+    }
+  },
+  "59a07288-c6ea-4dd6-8244-6196586ae18a@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/25_char.png@6c48a",
+    "value": {
+      "depends": [
+        "59a07288-c6ea-4dd6-8244-6196586ae18a"
+      ]
+    }
+  },
+  "63c3514f-f6fb-480d-96ee-eb63abb4ac23@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/24_wool.png@f9941",
+    "value": {
+      "depends": [
+        "63c3514f-f6fb-480d-96ee-eb63abb4ac23@6c48a"
+      ]
+    }
+  },
+  "38da77e5-0b83-4fe0-916b-aa5d5257817e": {
+    "url": "db://assets/3.Sprites/Sprites2/28_chair_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "59a07288-c6ea-4dd6-8244-6196586ae18a@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/25_char.png@f9941",
+    "value": {
+      "depends": [
+        "59a07288-c6ea-4dd6-8244-6196586ae18a@6c48a"
+      ]
+    }
+  },
+  "4d15bce1-f469-491b-894a-63da20fa1228": {
+    "url": "db://assets/3.Sprites/Sprites2/29_chair.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "38d45b05-0fb8-4139-a781-68c1930c1fcc@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/25_char_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "38d45b05-0fb8-4139-a781-68c1930c1fcc"
+      ]
+    }
+  },
+  "6c07416c-ef8e-4719-8e92-3b3b96ff5320@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/28_chair.png@6c48a",
+    "value": {
+      "depends": [
+        "6c07416c-ef8e-4719-8e92-3b3b96ff5320"
+      ]
+    }
+  },
+  "38da77e5-0b83-4fe0-916b-aa5d5257817e@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/28_chair_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "38da77e5-0b83-4fe0-916b-aa5d5257817e"
+      ]
+    }
+  },
+  "38d45b05-0fb8-4139-a781-68c1930c1fcc@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/25_char_sd.png@f9941",
+    "value": {
+      "depends": [
+        "38d45b05-0fb8-4139-a781-68c1930c1fcc@6c48a"
+      ]
+    }
+  },
+  "6c07416c-ef8e-4719-8e92-3b3b96ff5320@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/28_chair.png@f9941",
+    "value": {
+      "depends": [
+        "6c07416c-ef8e-4719-8e92-3b3b96ff5320@6c48a"
+      ]
+    }
+  },
+  "6897a7ee-6d8d-4389-8659-44b0ef038fa6": {
+    "url": "db://assets/3.Sprites/Sprites2/29_chair_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "262bde1b-feec-424f-b313-354c69fdb77c": {
+    "url": "db://assets/3.Sprites/Sprites2/2_weed.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "38da77e5-0b83-4fe0-916b-aa5d5257817e@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/28_chair_sd.png@f9941",
+    "value": {
+      "depends": [
+        "38da77e5-0b83-4fe0-916b-aa5d5257817e@6c48a"
+      ]
+    }
+  },
+  "cdc74779-e793-42ba-8850-fc1dc604f033": {
+    "url": "db://assets/3.Sprites/Sprites2/2_weed_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "c8d6ed6f-c1ee-4433-a53e-7004529d6168@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/26_roof.png@6c48a",
+    "value": {
+      "depends": [
+        "c8d6ed6f-c1ee-4433-a53e-7004529d6168"
+      ]
+    }
+  },
+  "6897a7ee-6d8d-4389-8659-44b0ef038fa6@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/29_chair_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "6897a7ee-6d8d-4389-8659-44b0ef038fa6"
+      ]
+    }
+  },
+  "4d15bce1-f469-491b-894a-63da20fa1228@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/29_chair.png@6c48a",
+    "value": {
+      "depends": [
+        "4d15bce1-f469-491b-894a-63da20fa1228"
+      ]
+    }
+  },
+  "6897a7ee-6d8d-4389-8659-44b0ef038fa6@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/29_chair_sd.png@f9941",
+    "value": {
+      "depends": [
+        "6897a7ee-6d8d-4389-8659-44b0ef038fa6@6c48a"
+      ]
+    }
+  },
+  "4587a408-44fb-4559-9a88-14b67562887c": {
+    "url": "db://assets/3.Sprites/Sprites2/30_basket.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "4d15bce1-f469-491b-894a-63da20fa1228@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/29_chair.png@f9941",
+    "value": {
+      "depends": [
+        "4d15bce1-f469-491b-894a-63da20fa1228@6c48a"
+      ]
+    }
+  },
+  "27861aeb-44a3-401f-aca5-031032c85a12": {
+    "url": "db://assets/3.Sprites/Sprites2/30_basket_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "262bde1b-feec-424f-b313-354c69fdb77c@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/2_weed.png@6c48a",
+    "value": {
+      "depends": [
+        "262bde1b-feec-424f-b313-354c69fdb77c"
+      ]
+    }
+  },
+  "c8d6ed6f-c1ee-4433-a53e-7004529d6168@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/26_roof.png@f9941",
+    "value": {
+      "depends": [
+        "c8d6ed6f-c1ee-4433-a53e-7004529d6168@6c48a"
+      ]
+    }
+  },
+  "7b45d2e7-97f3-4376-bb23-3efa8d48c2b9": {
+    "url": "db://assets/3.Sprites/Sprites2/30_basket_top.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "262bde1b-feec-424f-b313-354c69fdb77c@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/2_weed.png@f9941",
+    "value": {
+      "depends": [
+        "262bde1b-feec-424f-b313-354c69fdb77c@6c48a"
+      ]
+    }
+  },
+  "235ffd56-2760-4e32-ac8f-aec940f5aa68": {
+    "url": "db://assets/3.Sprites/Sprites2/31_vegan.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "cdc74779-e793-42ba-8850-fc1dc604f033@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/2_weed_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "cdc74779-e793-42ba-8850-fc1dc604f033"
+      ]
+    }
+  },
+  "cdc74779-e793-42ba-8850-fc1dc604f033@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/2_weed_sd.png@f9941",
+    "value": {
+      "depends": [
+        "cdc74779-e793-42ba-8850-fc1dc604f033@6c48a"
+      ]
+    }
+  },
+  "9668ab77-aefe-4400-97de-a60e79664288": {
+    "url": "db://assets/3.Sprites/Sprites2/32_char.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "4587a408-44fb-4559-9a88-14b67562887c@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/30_basket.png@6c48a",
+    "value": {
+      "depends": [
+        "4587a408-44fb-4559-9a88-14b67562887c"
+      ]
+    }
+  },
+  "27861aeb-44a3-401f-aca5-031032c85a12@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/30_basket_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "27861aeb-44a3-401f-aca5-031032c85a12"
+      ]
+    }
+  },
+  "235ffd56-2760-4e32-ac8f-aec940f5aa68@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/31_vegan.png@6c48a",
+    "value": {
+      "depends": [
+        "235ffd56-2760-4e32-ac8f-aec940f5aa68"
+      ]
+    }
+  },
+  "4587a408-44fb-4559-9a88-14b67562887c@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/30_basket.png@f9941",
+    "value": {
+      "depends": [
+        "4587a408-44fb-4559-9a88-14b67562887c@6c48a"
+      ]
+    }
+  },
+  "c58ac7c7-b01e-4d7b-9a9e-f6319e71a79f": {
+    "url": "db://assets/3.Sprites/Sprites2/32_char_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "7b45d2e7-97f3-4376-bb23-3efa8d48c2b9@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/30_basket_top.png@6c48a",
+    "value": {
+      "depends": [
+        "7b45d2e7-97f3-4376-bb23-3efa8d48c2b9"
+      ]
+    }
+  },
+  "27861aeb-44a3-401f-aca5-031032c85a12@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/30_basket_sd.png@f9941",
+    "value": {
+      "depends": [
+        "27861aeb-44a3-401f-aca5-031032c85a12@6c48a"
+      ]
+    }
+  },
+  "2d94b967-f737-48c8-964d-41f8887d84af": {
+    "url": "db://assets/3.Sprites/Sprites2/33_apple.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "235ffd56-2760-4e32-ac8f-aec940f5aa68@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/31_vegan.png@f9941",
+    "value": {
+      "depends": [
+        "235ffd56-2760-4e32-ac8f-aec940f5aa68@6c48a"
+      ]
+    }
+  },
+  "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769": {
+    "url": "db://assets/3.Sprites/Sprites2/33_apple_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "7b45d2e7-97f3-4376-bb23-3efa8d48c2b9@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/30_basket_top.png@f9941",
+    "value": {
+      "depends": [
+        "7b45d2e7-97f3-4376-bb23-3efa8d48c2b9@6c48a"
+      ]
+    }
+  },
+  "2654e172-3fa1-4742-9664-28ae951a9ccf": {
+    "url": "db://assets/3.Sprites/Sprites2/34_apple.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "9668ab77-aefe-4400-97de-a60e79664288@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/32_char.png@6c48a",
+    "value": {
+      "depends": [
+        "9668ab77-aefe-4400-97de-a60e79664288"
+      ]
+    }
+  },
+  "c58ac7c7-b01e-4d7b-9a9e-f6319e71a79f@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/32_char_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "c58ac7c7-b01e-4d7b-9a9e-f6319e71a79f"
+      ]
+    }
+  },
+  "9668ab77-aefe-4400-97de-a60e79664288@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/32_char.png@f9941",
+    "value": {
+      "depends": [
+        "9668ab77-aefe-4400-97de-a60e79664288@6c48a"
+      ]
+    }
+  },
+  "5fb6b382-c7f2-45df-be9f-5fea3837e5a1": {
+    "url": "db://assets/3.Sprites/Sprites2/34_apple_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "c58ac7c7-b01e-4d7b-9a9e-f6319e71a79f@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/32_char_sd.png@f9941",
+    "value": {
+      "depends": [
+        "c58ac7c7-b01e-4d7b-9a9e-f6319e71a79f@6c48a"
+      ]
+    }
+  },
+  "d11106e5-8b2c-4584-ae19-9799a8142101": {
+    "url": "db://assets/3.Sprites/Sprites2/35_floor.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "2654e172-3fa1-4742-9664-28ae951a9ccf@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/34_apple.png@6c48a",
+    "value": {
+      "depends": [
+        "2654e172-3fa1-4742-9664-28ae951a9ccf"
+      ]
+    }
+  },
+  "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/33_apple_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769"
+      ]
+    }
+  },
+  "2654e172-3fa1-4742-9664-28ae951a9ccf@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/34_apple.png@f9941",
+    "value": {
+      "depends": [
+        "2654e172-3fa1-4742-9664-28ae951a9ccf@6c48a"
+      ]
+    }
+  },
+  "ea99413e-ce8b-4dff-b227-037813460f70": {
+    "url": "db://assets/3.Sprites/Sprites2/35_floor_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/33_apple_sd.png@f9941",
+    "value": {
+      "depends": [
+        "a4ba6152-9cd5-4a16-8fd8-c5812cd0c769@6c48a"
+      ]
+    }
+  },
+  "2d94b967-f737-48c8-964d-41f8887d84af@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/33_apple.png@6c48a",
+    "value": {
+      "depends": [
+        "2d94b967-f737-48c8-964d-41f8887d84af"
+      ]
+    }
+  },
+  "cbf09080-88e3-4939-b737-144307b0f092": {
+    "url": "db://assets/3.Sprites/Sprites2/36_room.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "2d94b967-f737-48c8-964d-41f8887d84af@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/33_apple.png@f9941",
+    "value": {
+      "depends": [
+        "2d94b967-f737-48c8-964d-41f8887d84af@6c48a"
+      ]
+    }
+  },
+  "0e8e8be2-1340-4791-9c53-e56fbf9f1dc8": {
+    "url": "db://assets/3.Sprites/Sprites2/36_room_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "5fb6b382-c7f2-45df-be9f-5fea3837e5a1@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/34_apple_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "5fb6b382-c7f2-45df-be9f-5fea3837e5a1"
+      ]
+    }
+  },
+  "cbf09080-88e3-4939-b737-144307b0f092@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/36_room.png@6c48a",
+    "value": {
+      "depends": [
+        "cbf09080-88e3-4939-b737-144307b0f092"
+      ]
+    }
+  },
+  "d11106e5-8b2c-4584-ae19-9799a8142101@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/35_floor.png@6c48a",
+    "value": {
+      "depends": [
+        "d11106e5-8b2c-4584-ae19-9799a8142101"
+      ]
+    }
+  },
+  "5fb6b382-c7f2-45df-be9f-5fea3837e5a1@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/34_apple_sd.png@f9941",
+    "value": {
+      "depends": [
+        "5fb6b382-c7f2-45df-be9f-5fea3837e5a1@6c48a"
+      ]
+    }
+  },
+  "6b81cca1-28fb-4794-b59c-6f2a2b86308d": {
+    "url": "db://assets/3.Sprites/Sprites2/37_table.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "cbf09080-88e3-4939-b737-144307b0f092@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/36_room.png@f9941",
+    "value": {
+      "depends": [
+        "cbf09080-88e3-4939-b737-144307b0f092@6c48a"
+      ]
+    }
+  },
+  "5122a595-7ebb-449a-a18d-328d2a3737f1": {
+    "url": "db://assets/3.Sprites/Sprites2/37_table_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "ea99413e-ce8b-4dff-b227-037813460f70@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/35_floor_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "ea99413e-ce8b-4dff-b227-037813460f70"
+      ]
+    }
+  },
+  "d11106e5-8b2c-4584-ae19-9799a8142101@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/35_floor.png@f9941",
+    "value": {
+      "depends": [
+        "d11106e5-8b2c-4584-ae19-9799a8142101@6c48a"
+      ]
+    }
+  },
+  "a79ea4b5-bb4c-4e82-b4ad-d34e0aede2a8": {
+    "url": "db://assets/3.Sprites/Sprites2/38_soap.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "0e8e8be2-1340-4791-9c53-e56fbf9f1dc8@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/36_room_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "0e8e8be2-1340-4791-9c53-e56fbf9f1dc8"
+      ]
+    }
+  },
+  "ea99413e-ce8b-4dff-b227-037813460f70@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/35_floor_sd.png@f9941",
+    "value": {
+      "depends": [
+        "ea99413e-ce8b-4dff-b227-037813460f70@6c48a"
+      ]
+    }
+  },
+  "0f83ac12-302a-4b6c-b1a3-4f3b14182cde": {
+    "url": "db://assets/3.Sprites/Sprites2/38_soap_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "0e8e8be2-1340-4791-9c53-e56fbf9f1dc8@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/36_room_sd.png@f9941",
+    "value": {
+      "depends": [
+        "0e8e8be2-1340-4791-9c53-e56fbf9f1dc8@6c48a"
+      ]
+    }
+  },
+  "dadc5c4c-7af3-43c8-88e6-9d2e17534bdd": {
+    "url": "db://assets/3.Sprites/Sprites2/39_soap.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "6b81cca1-28fb-4794-b59c-6f2a2b86308d@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/37_table.png@6c48a",
+    "value": {
+      "depends": [
+        "6b81cca1-28fb-4794-b59c-6f2a2b86308d"
+      ]
+    }
+  },
+  "a79ea4b5-bb4c-4e82-b4ad-d34e0aede2a8@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/38_soap.png@6c48a",
+    "value": {
+      "depends": [
+        "a79ea4b5-bb4c-4e82-b4ad-d34e0aede2a8"
+      ]
+    }
+  },
+  "6b81cca1-28fb-4794-b59c-6f2a2b86308d@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/37_table.png@f9941",
+    "value": {
+      "depends": [
+        "6b81cca1-28fb-4794-b59c-6f2a2b86308d@6c48a"
+      ]
+    }
+  },
+  "f3c32c08-fac2-4103-bed2-d21b9fdd56ee": {
+    "url": "db://assets/3.Sprites/Sprites2/39_soap_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "a79ea4b5-bb4c-4e82-b4ad-d34e0aede2a8@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/38_soap.png@f9941",
+    "value": {
+      "depends": [
+        "a79ea4b5-bb4c-4e82-b4ad-d34e0aede2a8@6c48a"
+      ]
+    }
+  },
+  "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f": {
+    "url": "db://assets/3.Sprites/Sprites2/3_frog.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "5122a595-7ebb-449a-a18d-328d2a3737f1@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/37_table_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "5122a595-7ebb-449a-a18d-328d2a3737f1"
+      ]
+    }
+  },
+  "5122a595-7ebb-449a-a18d-328d2a3737f1@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/37_table_sd.png@f9941",
+    "value": {
+      "depends": [
+        "5122a595-7ebb-449a-a18d-328d2a3737f1@6c48a"
+      ]
+    }
+  },
+  "81d5937b-cb9d-4bd0-a092-a83f3640d1ea": {
+    "url": "db://assets/3.Sprites/Sprites2/3_frog_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "0f83ac12-302a-4b6c-b1a3-4f3b14182cde@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/38_soap_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "0f83ac12-302a-4b6c-b1a3-4f3b14182cde"
+      ]
+    }
+  },
+  "0f83ac12-302a-4b6c-b1a3-4f3b14182cde@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/38_soap_sd.png@f9941",
+    "value": {
+      "depends": [
+        "0f83ac12-302a-4b6c-b1a3-4f3b14182cde@6c48a"
+      ]
+    }
+  },
+  "a1b99ad0-88b4-44c1-b204-00ddeb52199a": {
+    "url": "db://assets/3.Sprites/Sprites2/40_towel.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/3_frog.png@6c48a",
+    "value": {
+      "depends": [
+        "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f"
+      ]
+    }
+  },
+  "dadc5c4c-7af3-43c8-88e6-9d2e17534bdd@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/39_soap.png@6c48a",
+    "value": {
+      "depends": [
+        "dadc5c4c-7af3-43c8-88e6-9d2e17534bdd"
+      ]
+    }
+  },
+  "f3c32c08-fac2-4103-bed2-d21b9fdd56ee@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/39_soap_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "f3c32c08-fac2-4103-bed2-d21b9fdd56ee"
+      ]
+    }
+  },
+  "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/3_frog.png@f9941",
+    "value": {
+      "depends": [
+        "bdf6df07-5b36-42c7-9c8f-d5742ea8aa5f@6c48a"
+      ]
+    }
+  },
+  "e28ff301-2eeb-40eb-8dc5-57249d7c826f": {
+    "url": "db://assets/3.Sprites/Sprites2/40_towel_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "81d5937b-cb9d-4bd0-a092-a83f3640d1ea@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/3_frog_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "81d5937b-cb9d-4bd0-a092-a83f3640d1ea"
+      ]
+    }
+  },
+  "f3c32c08-fac2-4103-bed2-d21b9fdd56ee@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/39_soap_sd.png@f9941",
+    "value": {
+      "depends": [
+        "f3c32c08-fac2-4103-bed2-d21b9fdd56ee@6c48a"
+      ]
+    }
+  },
+  "e091aacb-0654-408a-838d-820d52699d73": {
+    "url": "db://assets/3.Sprites/Sprites2/41_flower.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "dadc5c4c-7af3-43c8-88e6-9d2e17534bdd@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/39_soap.png@f9941",
+    "value": {
+      "depends": [
+        "dadc5c4c-7af3-43c8-88e6-9d2e17534bdd@6c48a"
+      ]
+    }
+  },
+  "d282e0f7-dac4-411c-9c60-88c3020f8d95": {
+    "url": "db://assets/3.Sprites/Sprites2/41_flower_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "81d5937b-cb9d-4bd0-a092-a83f3640d1ea@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/3_frog_sd.png@f9941",
+    "value": {
+      "depends": [
+        "81d5937b-cb9d-4bd0-a092-a83f3640d1ea@6c48a"
+      ]
+    }
+  },
+  "c6d4c006-c2f5-48e0-994f-3df8765590f9": {
+    "url": "db://assets/3.Sprites/Sprites2/42_brush.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "e091aacb-0654-408a-838d-820d52699d73@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/41_flower.png@6c48a",
+    "value": {
+      "depends": [
+        "e091aacb-0654-408a-838d-820d52699d73"
+      ]
+    }
+  },
+  "e28ff301-2eeb-40eb-8dc5-57249d7c826f@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/40_towel_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "e28ff301-2eeb-40eb-8dc5-57249d7c826f"
+      ]
+    }
+  },
+  "a1b99ad0-88b4-44c1-b204-00ddeb52199a@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/40_towel.png@6c48a",
+    "value": {
+      "depends": [
+        "a1b99ad0-88b4-44c1-b204-00ddeb52199a"
+      ]
+    }
+  },
+  "e091aacb-0654-408a-838d-820d52699d73@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/41_flower.png@f9941",
+    "value": {
+      "depends": [
+        "e091aacb-0654-408a-838d-820d52699d73@6c48a"
+      ]
+    }
+  },
+  "a1b99ad0-88b4-44c1-b204-00ddeb52199a@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/40_towel.png@f9941",
+    "value": {
+      "depends": [
+        "a1b99ad0-88b4-44c1-b204-00ddeb52199a@6c48a"
+      ]
+    }
+  },
+  "e28ff301-2eeb-40eb-8dc5-57249d7c826f@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/40_towel_sd.png@f9941",
+    "value": {
+      "depends": [
+        "e28ff301-2eeb-40eb-8dc5-57249d7c826f@6c48a"
+      ]
+    }
+  },
+  "65d2ceba-859f-49c6-98e8-752dcd9da01d": {
+    "url": "db://assets/3.Sprites/Sprites2/42_brush_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "09a3ed45-2107-4755-885e-cbb1475f3dda": {
+    "url": "db://assets/3.Sprites/Sprites2/43_bathtub.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8": {
+    "url": "db://assets/3.Sprites/Sprites2/43_bathtub_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "c6d4c006-c2f5-48e0-994f-3df8765590f9@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/42_brush.png@6c48a",
+    "value": {
+      "depends": [
+        "c6d4c006-c2f5-48e0-994f-3df8765590f9"
+      ]
+    }
+  },
+  "c6d4c006-c2f5-48e0-994f-3df8765590f9@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/42_brush.png@f9941",
+    "value": {
+      "depends": [
+        "c6d4c006-c2f5-48e0-994f-3df8765590f9@6c48a"
+      ]
+    }
+  },
+  "0779009c-3229-4382-8262-e03a30bfa941": {
+    "url": "db://assets/3.Sprites/Sprites2/44_shower.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "d282e0f7-dac4-411c-9c60-88c3020f8d95@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/41_flower_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "d282e0f7-dac4-411c-9c60-88c3020f8d95"
+      ]
+    }
+  },
+  "d282e0f7-dac4-411c-9c60-88c3020f8d95@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/41_flower_sd.png@f9941",
+    "value": {
+      "depends": [
+        "d282e0f7-dac4-411c-9c60-88c3020f8d95@6c48a"
+      ]
+    }
+  },
+  "59e6be45-672b-423b-8bf1-04a70576c831": {
+    "url": "db://assets/3.Sprites/Sprites2/44_shower_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "09a3ed45-2107-4755-885e-cbb1475f3dda@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/43_bathtub.png@6c48a",
+    "value": {
+      "depends": [
+        "09a3ed45-2107-4755-885e-cbb1475f3dda"
+      ]
+    }
+  },
+  "65d2ceba-859f-49c6-98e8-752dcd9da01d@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/42_brush_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "65d2ceba-859f-49c6-98e8-752dcd9da01d"
+      ]
+    }
+  },
+  "09a3ed45-2107-4755-885e-cbb1475f3dda@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/43_bathtub.png@f9941",
+    "value": {
+      "depends": [
+        "09a3ed45-2107-4755-885e-cbb1475f3dda@6c48a"
+      ]
+    }
+  },
+  "d5488e20-bef8-400c-8745-7ae152334e7e": {
+    "url": "db://assets/3.Sprites/Sprites2/45_towel.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "65d2ceba-859f-49c6-98e8-752dcd9da01d@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/42_brush_sd.png@f9941",
+    "value": {
+      "depends": [
+        "65d2ceba-859f-49c6-98e8-752dcd9da01d@6c48a"
+      ]
+    }
+  },
+  "5b0ff52f-81b6-4ff8-a686-1b89067d9cbc": {
+    "url": "db://assets/3.Sprites/Sprites2/45_towel_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/43_bathtub_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8"
+      ]
+    }
+  },
+  "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/43_bathtub_sd.png@f9941",
+    "value": {
+      "depends": [
+        "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8@6c48a"
+      ]
+    }
+  },
+  "2ffe59dd-5249-489f-ab41-781c131b0703": {
+    "url": "db://assets/3.Sprites/Sprites2/46_candle.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "0779009c-3229-4382-8262-e03a30bfa941@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/44_shower.png@6c48a",
+    "value": {
+      "depends": [
+        "0779009c-3229-4382-8262-e03a30bfa941"
+      ]
+    }
+  },
+  "0779009c-3229-4382-8262-e03a30bfa941@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/44_shower.png@f9941",
+    "value": {
+      "depends": [
+        "0779009c-3229-4382-8262-e03a30bfa941@6c48a"
+      ]
+    }
+  },
+  "93f42e65-0b30-4960-addf-e38dbe0bb96f": {
+    "url": "db://assets/3.Sprites/Sprites2/46_candle_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "d5488e20-bef8-400c-8745-7ae152334e7e@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/45_towel.png@6c48a",
+    "value": {
+      "depends": [
+        "d5488e20-bef8-400c-8745-7ae152334e7e"
+      ]
+    }
+  },
+  "5b0ff52f-81b6-4ff8-a686-1b89067d9cbc@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/45_towel_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "5b0ff52f-81b6-4ff8-a686-1b89067d9cbc"
+      ]
+    }
+  },
+  "d5488e20-bef8-400c-8745-7ae152334e7e@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/45_towel.png@f9941",
+    "value": {
+      "depends": [
+        "d5488e20-bef8-400c-8745-7ae152334e7e@6c48a"
+      ]
+    }
+  },
+  "3e5958c4-992a-40f5-af69-37888d7c6701": {
+    "url": "db://assets/3.Sprites/Sprites2/47_chair.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "5b0ff52f-81b6-4ff8-a686-1b89067d9cbc@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/45_towel_sd.png@f9941",
+    "value": {
+      "depends": [
+        "5b0ff52f-81b6-4ff8-a686-1b89067d9cbc@6c48a"
+      ]
+    }
+  },
+  "2061cd92-a651-418d-878f-09f41885a38c": {
+    "url": "db://assets/3.Sprites/Sprites2/47_chair_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "2ffe59dd-5249-489f-ab41-781c131b0703@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/46_candle.png@6c48a",
+    "value": {
+      "depends": [
+        "2ffe59dd-5249-489f-ab41-781c131b0703"
+      ]
+    }
+  },
+  "2ffe59dd-5249-489f-ab41-781c131b0703@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/46_candle.png@f9941",
+    "value": {
+      "depends": [
+        "2ffe59dd-5249-489f-ab41-781c131b0703@6c48a"
+      ]
+    }
+  },
+  "8507b17f-baed-45d1-a981-4c7e05579109": {
+    "url": "db://assets/3.Sprites/Sprites2/48_carpet.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "93f42e65-0b30-4960-addf-e38dbe0bb96f@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/46_candle_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "93f42e65-0b30-4960-addf-e38dbe0bb96f"
+      ]
+    }
+  },
+  "2061cd92-a651-418d-878f-09f41885a38c@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/47_chair_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "2061cd92-a651-418d-878f-09f41885a38c"
+      ]
+    }
+  },
+  "2061cd92-a651-418d-878f-09f41885a38c@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/47_chair_sd.png@f9941",
+    "value": {
+      "depends": [
+        "2061cd92-a651-418d-878f-09f41885a38c@6c48a"
+      ]
+    }
+  },
+  "6ca53180-1b78-495c-8c9f-3c2361557d3c": {
+    "url": "db://assets/3.Sprites/Sprites2/48_carpet_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "93f42e65-0b30-4960-addf-e38dbe0bb96f@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/46_candle_sd.png@f9941",
+    "value": {
+      "depends": [
+        "93f42e65-0b30-4960-addf-e38dbe0bb96f@6c48a"
+      ]
+    }
+  },
+  "d8dd3844-67f0-40b3-866d-d7a25e92c99e": {
+    "url": "db://assets/3.Sprites/Sprites2/49_shoes.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "3e5958c4-992a-40f5-af69-37888d7c6701@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/47_chair.png@6c48a",
+    "value": {
+      "depends": [
+        "3e5958c4-992a-40f5-af69-37888d7c6701"
+      ]
+    }
+  },
+  "59e6be45-672b-423b-8bf1-04a70576c831@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/44_shower_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "59e6be45-672b-423b-8bf1-04a70576c831"
+      ]
+    }
+  },
+  "8507b17f-baed-45d1-a981-4c7e05579109@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/48_carpet.png@6c48a",
+    "value": {
+      "depends": [
+        "8507b17f-baed-45d1-a981-4c7e05579109"
+      ]
+    }
+  },
+  "3e5958c4-992a-40f5-af69-37888d7c6701@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/47_chair.png@f9941",
+    "value": {
+      "depends": [
+        "3e5958c4-992a-40f5-af69-37888d7c6701@6c48a"
+      ]
+    }
+  },
+  "b47deae2-fdfb-4723-8d31-a13f2e669c88": {
+    "url": "db://assets/3.Sprites/Sprites2/49_shoes_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "8507b17f-baed-45d1-a981-4c7e05579109@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/48_carpet.png@f9941",
+    "value": {
+      "depends": [
+        "8507b17f-baed-45d1-a981-4c7e05579109@6c48a"
+      ]
+    }
+  },
+  "036648ca-e52f-4c73-a693-4d99cedbf6aa": {
+    "url": "db://assets/3.Sprites/Sprites2/4_chestnut.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "59e6be45-672b-423b-8bf1-04a70576c831@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/44_shower_sd.png@f9941",
+    "value": {
+      "depends": [
+        "59e6be45-672b-423b-8bf1-04a70576c831@6c48a"
+      ]
+    }
+  },
+  "26336b86-95e1-4b01-a546-a46dd0e86a76": {
+    "url": "db://assets/3.Sprites/Sprites2/4_chestnut_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "6ca53180-1b78-495c-8c9f-3c2361557d3c@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/48_carpet_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "6ca53180-1b78-495c-8c9f-3c2361557d3c"
+      ]
+    }
+  },
+  "6ca53180-1b78-495c-8c9f-3c2361557d3c@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/48_carpet_sd.png@f9941",
+    "value": {
+      "depends": [
+        "6ca53180-1b78-495c-8c9f-3c2361557d3c@6c48a"
+      ]
+    }
+  },
+  "780ebd33-87f4-4351-94ae-b8dfdb50f1ea": {
+    "url": "db://assets/3.Sprites/Sprites2/50_roof.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "d8dd3844-67f0-40b3-866d-d7a25e92c99e@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/49_shoes.png@6c48a",
+    "value": {
+      "depends": [
+        "d8dd3844-67f0-40b3-866d-d7a25e92c99e"
+      ]
+    }
+  },
+  "b47deae2-fdfb-4723-8d31-a13f2e669c88@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/49_shoes_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "b47deae2-fdfb-4723-8d31-a13f2e669c88"
+      ]
+    }
+  },
+  "036648ca-e52f-4c73-a693-4d99cedbf6aa@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/4_chestnut.png@6c48a",
+    "value": {
+      "depends": [
+        "036648ca-e52f-4c73-a693-4d99cedbf6aa"
+      ]
+    }
+  },
+  "b47deae2-fdfb-4723-8d31-a13f2e669c88@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/49_shoes_sd.png@f9941",
+    "value": {
+      "depends": [
+        "b47deae2-fdfb-4723-8d31-a13f2e669c88@6c48a"
+      ]
+    }
+  },
+  "d8dd3844-67f0-40b3-866d-d7a25e92c99e@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/49_shoes.png@f9941",
+    "value": {
+      "depends": [
+        "d8dd3844-67f0-40b3-866d-d7a25e92c99e@6c48a"
+      ]
+    }
+  },
+  "a614e094-76a1-4bd1-8884-4f15e2dad22c": {
+    "url": "db://assets/3.Sprites/Sprites2/51_room.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1186e640-3304-4d2b-8a8f-7e8c30c1544e": {
+    "url": "db://assets/3.Sprites/Sprites2/51_room_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "26336b86-95e1-4b01-a546-a46dd0e86a76@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/4_chestnut_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "26336b86-95e1-4b01-a546-a46dd0e86a76"
+      ]
+    }
+  },
+  "036648ca-e52f-4c73-a693-4d99cedbf6aa@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/4_chestnut.png@f9941",
+    "value": {
+      "depends": [
+        "036648ca-e52f-4c73-a693-4d99cedbf6aa@6c48a"
+      ]
+    }
+  },
+  "3e7de38f-dd9a-4fad-946c-1d0a73dfcde9": {
+    "url": "db://assets/3.Sprites/Sprites2/52_carpet.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "26336b86-95e1-4b01-a546-a46dd0e86a76@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/4_chestnut_sd.png@f9941",
+    "value": {
+      "depends": [
+        "26336b86-95e1-4b01-a546-a46dd0e86a76@6c48a"
+      ]
+    }
+  },
+  "dfe3887d-3a73-455f-acdd-4ba81c4518f7": {
+    "url": "db://assets/3.Sprites/Sprites2/52_carpet_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "780ebd33-87f4-4351-94ae-b8dfdb50f1ea@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/50_roof.png@6c48a",
+    "value": {
+      "depends": [
+        "780ebd33-87f4-4351-94ae-b8dfdb50f1ea"
+      ]
+    }
+  },
+  "3e7de38f-dd9a-4fad-946c-1d0a73dfcde9@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/52_carpet.png@6c48a",
+    "value": {
+      "depends": [
+        "3e7de38f-dd9a-4fad-946c-1d0a73dfcde9"
+      ]
+    }
+  },
+  "780ebd33-87f4-4351-94ae-b8dfdb50f1ea@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/50_roof.png@f9941",
+    "value": {
+      "depends": [
+        "780ebd33-87f4-4351-94ae-b8dfdb50f1ea@6c48a"
+      ]
+    }
+  },
+  "a019192a-b26f-495e-a305-5a48accd687c": {
+    "url": "db://assets/3.Sprites/Sprites2/53_table.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1186e640-3304-4d2b-8a8f-7e8c30c1544e@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/51_room_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "1186e640-3304-4d2b-8a8f-7e8c30c1544e"
+      ]
+    }
+  },
+  "3e7de38f-dd9a-4fad-946c-1d0a73dfcde9@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/52_carpet.png@f9941",
+    "value": {
+      "depends": [
+        "3e7de38f-dd9a-4fad-946c-1d0a73dfcde9@6c48a"
+      ]
+    }
+  },
+  "1b093f06-72a2-43c2-97c3-53ba2c22e51b": {
+    "url": "db://assets/3.Sprites/Sprites2/53_table_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "dfe3887d-3a73-455f-acdd-4ba81c4518f7@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/52_carpet_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "dfe3887d-3a73-455f-acdd-4ba81c4518f7"
+      ]
+    }
+  },
+  "a614e094-76a1-4bd1-8884-4f15e2dad22c@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/51_room.png@6c48a",
+    "value": {
+      "depends": [
+        "a614e094-76a1-4bd1-8884-4f15e2dad22c"
+      ]
+    }
+  },
+  "1186e640-3304-4d2b-8a8f-7e8c30c1544e@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/51_room_sd.png@f9941",
+    "value": {
+      "depends": [
+        "1186e640-3304-4d2b-8a8f-7e8c30c1544e@6c48a"
+      ]
+    }
+  },
+  "7111232f-95cd-43b0-89f1-f3ada144dc90": {
+    "url": "db://assets/3.Sprites/Sprites2/54_sink.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "dfe3887d-3a73-455f-acdd-4ba81c4518f7@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/52_carpet_sd.png@f9941",
+    "value": {
+      "depends": [
+        "dfe3887d-3a73-455f-acdd-4ba81c4518f7@6c48a"
+      ]
+    }
+  },
+  "d759fe6b-25ce-485a-832d-f1b410edb046": {
+    "url": "db://assets/3.Sprites/Sprites2/54_sink_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "a614e094-76a1-4bd1-8884-4f15e2dad22c@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/51_room.png@f9941",
+    "value": {
+      "depends": [
+        "a614e094-76a1-4bd1-8884-4f15e2dad22c@6c48a"
+      ]
+    }
+  },
+  "c35406eb-0ea8-4b89-a2dc-039b77adcab4": {
+    "url": "db://assets/3.Sprites/Sprites2/55_water.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "7111232f-95cd-43b0-89f1-f3ada144dc90@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/54_sink.png@6c48a",
+    "value": {
+      "depends": [
+        "7111232f-95cd-43b0-89f1-f3ada144dc90"
+      ]
+    }
+  },
+  "1b093f06-72a2-43c2-97c3-53ba2c22e51b@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/53_table_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "1b093f06-72a2-43c2-97c3-53ba2c22e51b"
+      ]
+    }
+  },
+  "a019192a-b26f-495e-a305-5a48accd687c@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/53_table.png@6c48a",
+    "value": {
+      "depends": [
+        "a019192a-b26f-495e-a305-5a48accd687c"
+      ]
+    }
+  },
+  "7111232f-95cd-43b0-89f1-f3ada144dc90@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/54_sink.png@f9941",
+    "value": {
+      "depends": [
+        "7111232f-95cd-43b0-89f1-f3ada144dc90@6c48a"
+      ]
+    }
+  },
+  "b25a5992-9a15-4a44-93b0-1d736b8da1e0": {
+    "url": "db://assets/3.Sprites/Sprites2/55_water_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "a019192a-b26f-495e-a305-5a48accd687c@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/53_table.png@f9941",
+    "value": {
+      "depends": [
+        "a019192a-b26f-495e-a305-5a48accd687c@6c48a"
+      ]
+    }
+  },
+  "66baef42-4eba-4ac3-83c7-7d8185f92cab": {
+    "url": "db://assets/3.Sprites/Sprites2/56_knife.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1b093f06-72a2-43c2-97c3-53ba2c22e51b@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/53_table_sd.png@f9941",
+    "value": {
+      "depends": [
+        "1b093f06-72a2-43c2-97c3-53ba2c22e51b@6c48a"
+      ]
+    }
+  },
+  "17579cb4-6451-4b52-8d64-309915f2398b": {
+    "url": "db://assets/3.Sprites/Sprites2/56_knife_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "c35406eb-0ea8-4b89-a2dc-039b77adcab4@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/55_water.png@6c48a",
+    "value": {
+      "depends": [
+        "c35406eb-0ea8-4b89-a2dc-039b77adcab4"
+      ]
+    }
+  },
+  "17579cb4-6451-4b52-8d64-309915f2398b@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/56_knife_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "17579cb4-6451-4b52-8d64-309915f2398b"
+      ]
+    }
+  },
+  "c35406eb-0ea8-4b89-a2dc-039b77adcab4@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/55_water.png@f9941",
+    "value": {
+      "depends": [
+        "c35406eb-0ea8-4b89-a2dc-039b77adcab4@6c48a"
+      ]
+    }
+  },
+  "bf6b8755-d025-45fe-bfec-beef207a267a": {
+    "url": "db://assets/3.Sprites/Sprites2/57_board.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "17579cb4-6451-4b52-8d64-309915f2398b@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/56_knife_sd.png@f9941",
+    "value": {
+      "depends": [
+        "17579cb4-6451-4b52-8d64-309915f2398b@6c48a"
+      ]
+    }
+  },
+  "e31e2f41-462f-4c29-a9dc-49ed72ff4d41": {
+    "url": "db://assets/3.Sprites/Sprites2/57_board_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b25a5992-9a15-4a44-93b0-1d736b8da1e0@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/55_water_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "b25a5992-9a15-4a44-93b0-1d736b8da1e0"
+      ]
+    }
+  },
+  "b25a5992-9a15-4a44-93b0-1d736b8da1e0@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/55_water_sd.png@f9941",
+    "value": {
+      "depends": [
+        "b25a5992-9a15-4a44-93b0-1d736b8da1e0@6c48a"
+      ]
+    }
+  },
+  "ce819edf-2547-4c02-bef7-dbd54af8cb6d": {
+    "url": "db://assets/3.Sprites/Sprites2/58_tomato.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "e31e2f41-462f-4c29-a9dc-49ed72ff4d41@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/57_board_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "e31e2f41-462f-4c29-a9dc-49ed72ff4d41"
+      ]
+    }
+  },
+  "d759fe6b-25ce-485a-832d-f1b410edb046@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/54_sink_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "d759fe6b-25ce-485a-832d-f1b410edb046"
+      ]
+    }
+  },
+  "e31e2f41-462f-4c29-a9dc-49ed72ff4d41@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/57_board_sd.png@f9941",
+    "value": {
+      "depends": [
+        "e31e2f41-462f-4c29-a9dc-49ed72ff4d41@6c48a"
+      ]
+    }
+  },
+  "d759fe6b-25ce-485a-832d-f1b410edb046@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/54_sink_sd.png@f9941",
+    "value": {
+      "depends": [
+        "d759fe6b-25ce-485a-832d-f1b410edb046@6c48a"
+      ]
+    }
+  },
+  "b94d77b8-845b-4cae-95a0-1dfb53467250": {
+    "url": "db://assets/3.Sprites/Sprites2/58_tomato_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "14851b9a-ab51-44d6-b93c-e03ff16c850e": {
+    "url": "db://assets/3.Sprites/Sprites2/59_cabage.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "bf6b8755-d025-45fe-bfec-beef207a267a@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/57_board.png@6c48a",
+    "value": {
+      "depends": [
+        "bf6b8755-d025-45fe-bfec-beef207a267a"
+      ]
+    }
+  },
+  "ce819edf-2547-4c02-bef7-dbd54af8cb6d@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/58_tomato.png@6c48a",
+    "value": {
+      "depends": [
+        "ce819edf-2547-4c02-bef7-dbd54af8cb6d"
+      ]
+    }
+  },
+  "b94d77b8-845b-4cae-95a0-1dfb53467250@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/58_tomato_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "b94d77b8-845b-4cae-95a0-1dfb53467250"
+      ]
+    }
+  },
+  "66baef42-4eba-4ac3-83c7-7d8185f92cab@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/56_knife.png@6c48a",
+    "value": {
+      "depends": [
+        "66baef42-4eba-4ac3-83c7-7d8185f92cab"
+      ]
+    }
+  },
+  "ce819edf-2547-4c02-bef7-dbd54af8cb6d@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/58_tomato.png@f9941",
+    "value": {
+      "depends": [
+        "ce819edf-2547-4c02-bef7-dbd54af8cb6d@6c48a"
+      ]
+    }
+  },
+  "b94d77b8-845b-4cae-95a0-1dfb53467250@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/58_tomato_sd.png@f9941",
+    "value": {
+      "depends": [
+        "b94d77b8-845b-4cae-95a0-1dfb53467250@6c48a"
+      ]
+    }
+  },
+  "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e": {
+    "url": "db://assets/3.Sprites/Sprites2/59_cabage_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "a6d85522-3bd5-4cec-8aa0-45c2d47a39ad": {
+    "url": "db://assets/3.Sprites/Sprites2/5_squirrel.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "66baef42-4eba-4ac3-83c7-7d8185f92cab@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/56_knife.png@f9941",
+    "value": {
+      "depends": [
+        "66baef42-4eba-4ac3-83c7-7d8185f92cab@6c48a"
+      ]
+    }
+  },
+  "516549ec-ef35-4850-930b-9ef590605ee1": {
+    "url": "db://assets/3.Sprites/Sprites2/5_squirrel_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "bf6b8755-d025-45fe-bfec-beef207a267a@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/57_board.png@f9941",
+    "value": {
+      "depends": [
+        "bf6b8755-d025-45fe-bfec-beef207a267a@6c48a"
+      ]
+    }
+  },
+  "e73870ae-bd8f-436e-8335-b334efb93f64": {
+    "url": "db://assets/3.Sprites/Sprites2/60_daikon.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/59_cabage_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e"
+      ]
+    }
+  },
+  "516549ec-ef35-4850-930b-9ef590605ee1@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/5_squirrel_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "516549ec-ef35-4850-930b-9ef590605ee1"
+      ]
+    }
+  },
+  "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/59_cabage_sd.png@f9941",
+    "value": {
+      "depends": [
+        "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e@6c48a"
+      ]
+    }
+  },
+  "8dd530c7-b1cc-4677-8c4b-88a9d9bf6184": {
+    "url": "db://assets/3.Sprites/Sprites2/60_daikon_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "a6d85522-3bd5-4cec-8aa0-45c2d47a39ad@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/5_squirrel.png@6c48a",
+    "value": {
+      "depends": [
+        "a6d85522-3bd5-4cec-8aa0-45c2d47a39ad"
+      ]
+    }
+  },
+  "516549ec-ef35-4850-930b-9ef590605ee1@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/5_squirrel_sd.png@f9941",
+    "value": {
+      "depends": [
+        "516549ec-ef35-4850-930b-9ef590605ee1@6c48a"
+      ]
+    }
+  },
+  "0269dc8e-2b35-494c-9d71-11449ba85914": {
+    "url": "db://assets/3.Sprites/Sprites2/61_basket.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "e73870ae-bd8f-436e-8335-b334efb93f64@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/60_daikon.png@6c48a",
+    "value": {
+      "depends": [
+        "e73870ae-bd8f-436e-8335-b334efb93f64"
+      ]
+    }
+  },
+  "a6d85522-3bd5-4cec-8aa0-45c2d47a39ad@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/5_squirrel.png@f9941",
+    "value": {
+      "depends": [
+        "a6d85522-3bd5-4cec-8aa0-45c2d47a39ad@6c48a"
+      ]
+    }
+  },
+  "192df8f9-5ef8-4364-ad64-7a6afb6d62fc": {
+    "url": "db://assets/3.Sprites/Sprites2/61_basket_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "e73870ae-bd8f-436e-8335-b334efb93f64@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/60_daikon.png@f9941",
+    "value": {
+      "depends": [
+        "e73870ae-bd8f-436e-8335-b334efb93f64@6c48a"
+      ]
+    }
+  },
+  "b96d4ed0-42ad-4b1f-8007-a8732edf1c70": {
+    "url": "db://assets/3.Sprites/Sprites2/62_basket.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "8dd530c7-b1cc-4677-8c4b-88a9d9bf6184@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/60_daikon_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "8dd530c7-b1cc-4677-8c4b-88a9d9bf6184"
+      ]
+    }
+  },
+  "0269dc8e-2b35-494c-9d71-11449ba85914@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/61_basket.png@6c48a",
+    "value": {
+      "depends": [
+        "0269dc8e-2b35-494c-9d71-11449ba85914"
+      ]
+    }
+  },
+  "8dd530c7-b1cc-4677-8c4b-88a9d9bf6184@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/60_daikon_sd.png@f9941",
+    "value": {
+      "depends": [
+        "8dd530c7-b1cc-4677-8c4b-88a9d9bf6184@6c48a"
+      ]
+    }
+  },
+  "cc909900-e782-4998-928b-30bd757e5364": {
+    "url": "db://assets/3.Sprites/Sprites2/62_basket_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "0269dc8e-2b35-494c-9d71-11449ba85914@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/61_basket.png@f9941",
+    "value": {
+      "depends": [
+        "0269dc8e-2b35-494c-9d71-11449ba85914@6c48a"
+      ]
+    }
+  },
+  "c3891c85-676e-4efc-ace4-f1d7b9342c76": {
+    "url": "db://assets/3.Sprites/Sprites2/63_pumpkin.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "192df8f9-5ef8-4364-ad64-7a6afb6d62fc@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/61_basket_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "192df8f9-5ef8-4364-ad64-7a6afb6d62fc"
+      ]
+    }
+  },
+  "192df8f9-5ef8-4364-ad64-7a6afb6d62fc@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/61_basket_sd.png@f9941",
+    "value": {
+      "depends": [
+        "192df8f9-5ef8-4364-ad64-7a6afb6d62fc@6c48a"
+      ]
+    }
+  },
+  "6184ab64-a34f-44ae-bdf3-6eeaacec5fb0": {
+    "url": "db://assets/3.Sprites/Sprites2/63_pumpkin_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "14851b9a-ab51-44d6-b93c-e03ff16c850e@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/59_cabage.png@6c48a",
+    "value": {
+      "depends": [
+        "14851b9a-ab51-44d6-b93c-e03ff16c850e"
+      ]
+    }
+  },
+  "14851b9a-ab51-44d6-b93c-e03ff16c850e@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/59_cabage.png@f9941",
+    "value": {
+      "depends": [
+        "14851b9a-ab51-44d6-b93c-e03ff16c850e@6c48a"
+      ]
+    }
+  },
+  "d55025b0-45dc-4e31-ae72-2a2e57d2bfc7": {
+    "url": "db://assets/3.Sprites/Sprites2/64_table.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b96d4ed0-42ad-4b1f-8007-a8732edf1c70@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/62_basket.png@6c48a",
+    "value": {
+      "depends": [
+        "b96d4ed0-42ad-4b1f-8007-a8732edf1c70"
+      ]
+    }
+  },
+  "b96d4ed0-42ad-4b1f-8007-a8732edf1c70@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/62_basket.png@f9941",
+    "value": {
+      "depends": [
+        "b96d4ed0-42ad-4b1f-8007-a8732edf1c70@6c48a"
+      ]
+    }
+  },
+  "4d515018-a223-4a75-b3f2-bb8003b4b1bf": {
+    "url": "db://assets/3.Sprites/Sprites2/64_table_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "cc909900-e782-4998-928b-30bd757e5364@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/62_basket_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "cc909900-e782-4998-928b-30bd757e5364"
+      ]
+    }
+  },
+  "cc909900-e782-4998-928b-30bd757e5364@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/62_basket_sd.png@f9941",
+    "value": {
+      "depends": [
+        "cc909900-e782-4998-928b-30bd757e5364@6c48a"
+      ]
+    }
+  },
+  "bb2f6691-2b3d-4e49-837c-182a035e3dca": {
+    "url": "db://assets/3.Sprites/Sprites2/65_carpet.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "d55025b0-45dc-4e31-ae72-2a2e57d2bfc7@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/64_table.png@6c48a",
+    "value": {
+      "depends": [
+        "d55025b0-45dc-4e31-ae72-2a2e57d2bfc7"
+      ]
+    }
+  },
+  "bb2f6691-2b3d-4e49-837c-182a035e3dca@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/65_carpet.png@6c48a",
+    "value": {
+      "depends": [
+        "bb2f6691-2b3d-4e49-837c-182a035e3dca"
+      ]
+    }
+  },
+  "d55025b0-45dc-4e31-ae72-2a2e57d2bfc7@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/64_table.png@f9941",
+    "value": {
+      "depends": [
+        "d55025b0-45dc-4e31-ae72-2a2e57d2bfc7@6c48a"
+      ]
+    }
+  },
+  "5a21f9c8-347d-44cf-8ae5-aad1d60c67ef": {
+    "url": "db://assets/3.Sprites/Sprites2/65_carpet_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "bb2f6691-2b3d-4e49-837c-182a035e3dca@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/65_carpet.png@f9941",
+    "value": {
+      "depends": [
+        "bb2f6691-2b3d-4e49-837c-182a035e3dca@6c48a"
+      ]
+    }
+  },
+  "efc1f1ec-0c85-4ba9-bea4-a967b9e9f95f": {
+    "url": "db://assets/3.Sprites/Sprites2/66_chair.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "c3891c85-676e-4efc-ace4-f1d7b9342c76@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/63_pumpkin.png@6c48a",
+    "value": {
+      "depends": [
+        "c3891c85-676e-4efc-ace4-f1d7b9342c76"
+      ]
+    }
+  },
+  "6184ab64-a34f-44ae-bdf3-6eeaacec5fb0@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/63_pumpkin_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "6184ab64-a34f-44ae-bdf3-6eeaacec5fb0"
+      ]
+    }
+  },
+  "c3891c85-676e-4efc-ace4-f1d7b9342c76@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/63_pumpkin.png@f9941",
+    "value": {
+      "depends": [
+        "c3891c85-676e-4efc-ace4-f1d7b9342c76@6c48a"
+      ]
+    }
+  },
+  "9abfcabf-b6f5-46fc-a6da-7ad936705a85": {
+    "url": "db://assets/3.Sprites/Sprites2/66_chair_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "6184ab64-a34f-44ae-bdf3-6eeaacec5fb0@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/63_pumpkin_sd.png@f9941",
+    "value": {
+      "depends": [
+        "6184ab64-a34f-44ae-bdf3-6eeaacec5fb0@6c48a"
+      ]
+    }
+  },
+  "1c96c3f4-7ce5-4a7b-8145-3e4064c3da0c": {
+    "url": "db://assets/3.Sprites/Sprites2/67_chair.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "4d515018-a223-4a75-b3f2-bb8003b4b1bf@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/64_table_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "4d515018-a223-4a75-b3f2-bb8003b4b1bf"
+      ]
+    }
+  },
+  "5a21f9c8-347d-44cf-8ae5-aad1d60c67ef@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/65_carpet_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "5a21f9c8-347d-44cf-8ae5-aad1d60c67ef"
+      ]
+    }
+  },
+  "4d515018-a223-4a75-b3f2-bb8003b4b1bf@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/64_table_sd.png@f9941",
+    "value": {
+      "depends": [
+        "4d515018-a223-4a75-b3f2-bb8003b4b1bf@6c48a"
+      ]
+    }
+  },
+  "3bc86027-3468-4a61-b486-957d2fcebcda": {
+    "url": "db://assets/3.Sprites/Sprites2/67_chair_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "5a21f9c8-347d-44cf-8ae5-aad1d60c67ef@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/65_carpet_sd.png@f9941",
+    "value": {
+      "depends": [
+        "5a21f9c8-347d-44cf-8ae5-aad1d60c67ef@6c48a"
+      ]
+    }
+  },
+  "8765b8f6-ad5b-4fe3-9ca3-3bffeb50d171": {
+    "url": "db://assets/3.Sprites/Sprites2/69_chair.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "9abfcabf-b6f5-46fc-a6da-7ad936705a85@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/66_chair_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "9abfcabf-b6f5-46fc-a6da-7ad936705a85"
+      ]
+    }
+  },
+  "efc1f1ec-0c85-4ba9-bea4-a967b9e9f95f@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/66_chair.png@6c48a",
+    "value": {
+      "depends": [
+        "efc1f1ec-0c85-4ba9-bea4-a967b9e9f95f"
+      ]
+    }
+  },
+  "9abfcabf-b6f5-46fc-a6da-7ad936705a85@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/66_chair_sd.png@f9941",
+    "value": {
+      "depends": [
+        "9abfcabf-b6f5-46fc-a6da-7ad936705a85@6c48a"
+      ]
+    }
+  },
+  "1303a4da-560b-4063-9c8e-e47704f98e9a": {
+    "url": "db://assets/3.Sprites/Sprites2/69_chair_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1c96c3f4-7ce5-4a7b-8145-3e4064c3da0c@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/67_chair.png@6c48a",
+    "value": {
+      "depends": [
+        "1c96c3f4-7ce5-4a7b-8145-3e4064c3da0c"
+      ]
+    }
+  },
+  "efc1f1ec-0c85-4ba9-bea4-a967b9e9f95f@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/66_chair.png@f9941",
+    "value": {
+      "depends": [
+        "efc1f1ec-0c85-4ba9-bea4-a967b9e9f95f@6c48a"
+      ]
+    }
+  },
+  "3297dd57-3fac-4f7b-b563-443efd6e6e24": {
+    "url": "db://assets/3.Sprites/Sprites2/6_mushroom.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1c96c3f4-7ce5-4a7b-8145-3e4064c3da0c@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/67_chair.png@f9941",
+    "value": {
+      "depends": [
+        "1c96c3f4-7ce5-4a7b-8145-3e4064c3da0c@6c48a"
+      ]
+    }
+  },
+  "44518c8e-f107-438a-9bd9-7f4a1443614f": {
+    "url": "db://assets/3.Sprites/Sprites2/6_mushroom_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1303a4da-560b-4063-9c8e-e47704f98e9a@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/69_chair_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "1303a4da-560b-4063-9c8e-e47704f98e9a"
+      ]
+    }
+  },
+  "8765b8f6-ad5b-4fe3-9ca3-3bffeb50d171@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/69_chair.png@6c48a",
+    "value": {
+      "depends": [
+        "8765b8f6-ad5b-4fe3-9ca3-3bffeb50d171"
+      ]
+    }
+  },
+  "8765b8f6-ad5b-4fe3-9ca3-3bffeb50d171@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/69_chair.png@f9941",
+    "value": {
+      "depends": [
+        "8765b8f6-ad5b-4fe3-9ca3-3bffeb50d171@6c48a"
+      ]
+    }
+  },
+  "3aa73d4f-53ac-4089-a654-77f77a2515d0": {
+    "url": "db://assets/3.Sprites/Sprites2/70_flower.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1303a4da-560b-4063-9c8e-e47704f98e9a@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/69_chair_sd.png@f9941",
+    "value": {
+      "depends": [
+        "1303a4da-560b-4063-9c8e-e47704f98e9a@6c48a"
+      ]
+    }
+  },
+  "a0787ba9-fa4f-46de-933e-0c35607061f0": {
+    "url": "db://assets/3.Sprites/Sprites2/70_flower_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "3297dd57-3fac-4f7b-b563-443efd6e6e24@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/6_mushroom.png@6c48a",
+    "value": {
+      "depends": [
+        "3297dd57-3fac-4f7b-b563-443efd6e6e24"
+      ]
+    }
+  },
+  "3297dd57-3fac-4f7b-b563-443efd6e6e24@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/6_mushroom.png@f9941",
+    "value": {
+      "depends": [
+        "3297dd57-3fac-4f7b-b563-443efd6e6e24@6c48a"
+      ]
+    }
+  },
+  "c7a3389b-0f97-4f10-a369-edb1358bfc86": {
+    "url": "db://assets/3.Sprites/Sprites2/71_bread.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "44518c8e-f107-438a-9bd9-7f4a1443614f@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/6_mushroom_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "44518c8e-f107-438a-9bd9-7f4a1443614f"
+      ]
+    }
+  },
+  "44518c8e-f107-438a-9bd9-7f4a1443614f@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/6_mushroom_sd.png@f9941",
+    "value": {
+      "depends": [
+        "44518c8e-f107-438a-9bd9-7f4a1443614f@6c48a"
+      ]
+    }
+  },
+  "fc6d2aab-f60a-4a78-bc0a-301b24d1865a": {
+    "url": "db://assets/3.Sprites/Sprites2/71_bread_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "3bc86027-3468-4a61-b486-957d2fcebcda@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/67_chair_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "3bc86027-3468-4a61-b486-957d2fcebcda"
+      ]
+    }
+  },
+  "3bc86027-3468-4a61-b486-957d2fcebcda@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/67_chair_sd.png@f9941",
+    "value": {
+      "depends": [
+        "3bc86027-3468-4a61-b486-957d2fcebcda@6c48a"
+      ]
+    }
+  },
+  "8f8d965f-bfca-45fb-b6d9-384971f141b9": {
+    "url": "db://assets/3.Sprites/Sprites2/72_roof.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "a0787ba9-fa4f-46de-933e-0c35607061f0@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/70_flower_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "a0787ba9-fa4f-46de-933e-0c35607061f0"
+      ]
+    }
+  },
+  "3aa73d4f-53ac-4089-a654-77f77a2515d0@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/70_flower.png@6c48a",
+    "value": {
+      "depends": [
+        "3aa73d4f-53ac-4089-a654-77f77a2515d0"
+      ]
+    }
+  },
+  "c7a3389b-0f97-4f10-a369-edb1358bfc86@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/71_bread.png@6c48a",
+    "value": {
+      "depends": [
+        "c7a3389b-0f97-4f10-a369-edb1358bfc86"
+      ]
+    }
+  },
+  "a0787ba9-fa4f-46de-933e-0c35607061f0@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/70_flower_sd.png@f9941",
+    "value": {
+      "depends": [
+        "a0787ba9-fa4f-46de-933e-0c35607061f0@6c48a"
+      ]
+    }
+  },
+  "323c9e95-4276-4c5f-b320-82b7ae71eaf8": {
+    "url": "db://assets/3.Sprites/Sprites2/73_poster.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "c7a3389b-0f97-4f10-a369-edb1358bfc86@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/71_bread.png@f9941",
+    "value": {
+      "depends": [
+        "c7a3389b-0f97-4f10-a369-edb1358bfc86@6c48a"
+      ]
+    }
+  },
+  "3aa73d4f-53ac-4089-a654-77f77a2515d0@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/70_flower.png@f9941",
+    "value": {
+      "depends": [
+        "3aa73d4f-53ac-4089-a654-77f77a2515d0@6c48a"
+      ]
+    }
+  },
+  "3293745f-9d5b-42d5-b304-398d5720fa68": {
+    "url": "db://assets/3.Sprites/Sprites2/73_poster_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "d7f4c4e2-7cd0-413d-92fe-ffeccb5da797": {
+    "url": "db://assets/3.Sprites/Sprites2/73_poster_top.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "fc6d2aab-f60a-4a78-bc0a-301b24d1865a@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/71_bread_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "fc6d2aab-f60a-4a78-bc0a-301b24d1865a"
+      ]
+    }
+  },
+  "fc6d2aab-f60a-4a78-bc0a-301b24d1865a@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/71_bread_sd.png@f9941",
+    "value": {
+      "depends": [
+        "fc6d2aab-f60a-4a78-bc0a-301b24d1865a@6c48a"
+      ]
+    }
+  },
+  "12cc21b8-33d7-491c-b559-87664389e524": {
+    "url": "db://assets/3.Sprites/Sprites2/74_bird.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "3293745f-9d5b-42d5-b304-398d5720fa68@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/73_poster_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "3293745f-9d5b-42d5-b304-398d5720fa68"
+      ]
+    }
+  },
+  "8f8d965f-bfca-45fb-b6d9-384971f141b9@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/72_roof.png@6c48a",
+    "value": {
+      "depends": [
+        "8f8d965f-bfca-45fb-b6d9-384971f141b9"
+      ]
+    }
+  },
+  "d7f4c4e2-7cd0-413d-92fe-ffeccb5da797@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/73_poster_top.png@6c48a",
+    "value": {
+      "depends": [
+        "d7f4c4e2-7cd0-413d-92fe-ffeccb5da797"
+      ]
+    }
+  },
+  "3293745f-9d5b-42d5-b304-398d5720fa68@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/73_poster_sd.png@f9941",
+    "value": {
+      "depends": [
+        "3293745f-9d5b-42d5-b304-398d5720fa68@6c48a"
+      ]
+    }
+  },
+  "bd6820f7-671e-481b-8c1d-faaa6c5900d5": {
+    "url": "db://assets/3.Sprites/Sprites2/74_bird_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "8f8d965f-bfca-45fb-b6d9-384971f141b9@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/72_roof.png@f9941",
+    "value": {
+      "depends": [
+        "8f8d965f-bfca-45fb-b6d9-384971f141b9@6c48a"
+      ]
+    }
+  },
+  "d7f4c4e2-7cd0-413d-92fe-ffeccb5da797@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/73_poster_top.png@f9941",
+    "value": {
+      "depends": [
+        "d7f4c4e2-7cd0-413d-92fe-ffeccb5da797@6c48a"
+      ]
+    }
+  },
+  "2c700ded-db19-41d8-81a0-8dbcfcd3791d": {
+    "url": "db://assets/3.Sprites/Sprites2/74_letter.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1a42d208-8460-4244-95c2-656849f4be80": {
+    "url": "db://assets/3.Sprites/Sprites2/74_letter_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "323c9e95-4276-4c5f-b320-82b7ae71eaf8@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/73_poster.png@6c48a",
+    "value": {
+      "depends": [
+        "323c9e95-4276-4c5f-b320-82b7ae71eaf8"
+      ]
+    }
+  },
+  "323c9e95-4276-4c5f-b320-82b7ae71eaf8@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/73_poster.png@f9941",
+    "value": {
+      "depends": [
+        "323c9e95-4276-4c5f-b320-82b7ae71eaf8@6c48a"
+      ]
+    }
+  },
+  "f0b6dd3b-5c98-4168-9317-83f7384b4bc4": {
+    "url": "db://assets/3.Sprites/Sprites2/75_letter.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "12cc21b8-33d7-491c-b559-87664389e524@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/74_bird.png@6c48a",
+    "value": {
+      "depends": [
+        "12cc21b8-33d7-491c-b559-87664389e524"
+      ]
+    }
+  },
+  "12cc21b8-33d7-491c-b559-87664389e524@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/74_bird.png@f9941",
+    "value": {
+      "depends": [
+        "12cc21b8-33d7-491c-b559-87664389e524@6c48a"
+      ]
+    }
+  },
+  "473520a5-ae33-46aa-a489-594fb8915894": {
+    "url": "db://assets/3.Sprites/Sprites2/75_letter_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "bd6820f7-671e-481b-8c1d-faaa6c5900d5@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/74_bird_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "bd6820f7-671e-481b-8c1d-faaa6c5900d5"
+      ]
+    }
+  },
+  "2c700ded-db19-41d8-81a0-8dbcfcd3791d@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/74_letter.png@6c48a",
+    "value": {
+      "depends": [
+        "2c700ded-db19-41d8-81a0-8dbcfcd3791d"
+      ]
+    }
+  },
+  "bd6820f7-671e-481b-8c1d-faaa6c5900d5@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/74_bird_sd.png@f9941",
+    "value": {
+      "depends": [
+        "bd6820f7-671e-481b-8c1d-faaa6c5900d5@6c48a"
+      ]
+    }
+  },
+  "ba9a402a-5886-489d-ae69-3586e8c039d6": {
+    "url": "db://assets/3.Sprites/Sprites2/75_mushroom.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1a42d208-8460-4244-95c2-656849f4be80@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/74_letter_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "1a42d208-8460-4244-95c2-656849f4be80"
+      ]
+    }
+  },
+  "2c700ded-db19-41d8-81a0-8dbcfcd3791d@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/74_letter.png@f9941",
+    "value": {
+      "depends": [
+        "2c700ded-db19-41d8-81a0-8dbcfcd3791d@6c48a"
+      ]
+    }
+  },
+  "d8dc71f2-f023-4470-877e-1e6911cd9f5b": {
+    "url": "db://assets/3.Sprites/Sprites2/75_mushroom_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "f0b6dd3b-5c98-4168-9317-83f7384b4bc4@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/75_letter.png@6c48a",
+    "value": {
+      "depends": [
+        "f0b6dd3b-5c98-4168-9317-83f7384b4bc4"
+      ]
+    }
+  },
+  "1a42d208-8460-4244-95c2-656849f4be80@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/74_letter_sd.png@f9941",
+    "value": {
+      "depends": [
+        "1a42d208-8460-4244-95c2-656849f4be80@6c48a"
+      ]
+    }
+  },
+  "a0c8dfed-bdbc-4ed2-8c14-f134b2a07d57": {
+    "url": "db://assets/3.Sprites/Sprites2/76_flower.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "473520a5-ae33-46aa-a489-594fb8915894@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/75_letter_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "473520a5-ae33-46aa-a489-594fb8915894"
+      ]
+    }
+  },
+  "f0b6dd3b-5c98-4168-9317-83f7384b4bc4@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/75_letter.png@f9941",
+    "value": {
+      "depends": [
+        "f0b6dd3b-5c98-4168-9317-83f7384b4bc4@6c48a"
+      ]
+    }
+  },
+  "56a938f5-8252-41aa-bbb1-ec51ef8fe483": {
+    "url": "db://assets/3.Sprites/Sprites2/76_flower_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "473520a5-ae33-46aa-a489-594fb8915894@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/75_letter_sd.png@f9941",
+    "value": {
+      "depends": [
+        "473520a5-ae33-46aa-a489-594fb8915894@6c48a"
+      ]
+    }
+  },
+  "95086628-5ab9-4a81-a90a-517f9500bb5e": {
+    "url": "db://assets/3.Sprites/Sprites2/77_flower.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "ba9a402a-5886-489d-ae69-3586e8c039d6@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/75_mushroom.png@6c48a",
+    "value": {
+      "depends": [
+        "ba9a402a-5886-489d-ae69-3586e8c039d6"
+      ]
+    }
+  },
+  "a0c8dfed-bdbc-4ed2-8c14-f134b2a07d57@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/76_flower.png@6c48a",
+    "value": {
+      "depends": [
+        "a0c8dfed-bdbc-4ed2-8c14-f134b2a07d57"
+      ]
+    }
+  },
+  "95086628-5ab9-4a81-a90a-517f9500bb5e@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/77_flower.png@6c48a",
+    "value": {
+      "depends": [
+        "95086628-5ab9-4a81-a90a-517f9500bb5e"
+      ]
+    }
+  },
+  "56a938f5-8252-41aa-bbb1-ec51ef8fe483@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/76_flower_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "56a938f5-8252-41aa-bbb1-ec51ef8fe483"
+      ]
+    }
+  },
+  "d8dc71f2-f023-4470-877e-1e6911cd9f5b@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/75_mushroom_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "d8dc71f2-f023-4470-877e-1e6911cd9f5b"
+      ]
+    }
+  },
+  "ba9a402a-5886-489d-ae69-3586e8c039d6@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/75_mushroom.png@f9941",
+    "value": {
+      "depends": [
+        "ba9a402a-5886-489d-ae69-3586e8c039d6@6c48a"
+      ]
+    }
+  },
+  "de55b042-571a-489d-bf86-dcd0784a7bbb": {
+    "url": "db://assets/3.Sprites/Sprites2/77_flower_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "a0c8dfed-bdbc-4ed2-8c14-f134b2a07d57@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/76_flower.png@f9941",
+    "value": {
+      "depends": [
+        "a0c8dfed-bdbc-4ed2-8c14-f134b2a07d57@6c48a"
+      ]
+    }
+  },
+  "bfe4c66d-934c-4f39-aeaf-d07814f0d69b": {
+    "url": "db://assets/3.Sprites/Sprites2/78_flower.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "56a938f5-8252-41aa-bbb1-ec51ef8fe483@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/76_flower_sd.png@f9941",
+    "value": {
+      "depends": [
+        "56a938f5-8252-41aa-bbb1-ec51ef8fe483@6c48a"
+      ]
+    }
+  },
+  "95086628-5ab9-4a81-a90a-517f9500bb5e@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/77_flower.png@f9941",
+    "value": {
+      "depends": [
+        "95086628-5ab9-4a81-a90a-517f9500bb5e@6c48a"
+      ]
+    }
+  },
+  "b282b271-f420-4f7e-afde-574502b5a66b": {
+    "url": "db://assets/3.Sprites/Sprites2/78_flower_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "6ca967ac-5275-44c4-b13e-2bddf39c9bd6": {
+    "url": "db://assets/3.Sprites/Sprites2/79_flower.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "d8dc71f2-f023-4470-877e-1e6911cd9f5b@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/75_mushroom_sd.png@f9941",
+    "value": {
+      "depends": [
+        "d8dc71f2-f023-4470-877e-1e6911cd9f5b@6c48a"
+      ]
+    }
+  },
+  "5c442774-0273-49c8-a248-80e7f01bd680": {
+    "url": "db://assets/3.Sprites/Sprites2/79_flower_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "6ca967ac-5275-44c4-b13e-2bddf39c9bd6@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/79_flower.png@6c48a",
+    "value": {
+      "depends": [
+        "6ca967ac-5275-44c4-b13e-2bddf39c9bd6"
+      ]
+    }
+  },
+  "de55b042-571a-489d-bf86-dcd0784a7bbb@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/77_flower_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "de55b042-571a-489d-bf86-dcd0784a7bbb"
+      ]
+    }
+  },
+  "bfe4c66d-934c-4f39-aeaf-d07814f0d69b@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/78_flower.png@6c48a",
+    "value": {
+      "depends": [
+        "bfe4c66d-934c-4f39-aeaf-d07814f0d69b"
+      ]
+    }
+  },
+  "de55b042-571a-489d-bf86-dcd0784a7bbb@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/77_flower_sd.png@f9941",
+    "value": {
+      "depends": [
+        "de55b042-571a-489d-bf86-dcd0784a7bbb@6c48a"
+      ]
+    }
+  },
+  "d5d5b2e9-f6f2-4217-a0e2-6a6fd7e1cca7": {
+    "url": "db://assets/3.Sprites/Sprites2/7_mushroom.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "6ca967ac-5275-44c4-b13e-2bddf39c9bd6@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/79_flower.png@f9941",
+    "value": {
+      "depends": [
+        "6ca967ac-5275-44c4-b13e-2bddf39c9bd6@6c48a"
+      ]
+    }
+  },
+  "2f754b15-8915-4fa9-9738-a097f756cc1c": {
+    "url": "db://assets/3.Sprites/Sprites2/7_mushroom_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "bfe4c66d-934c-4f39-aeaf-d07814f0d69b@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/78_flower.png@f9941",
+    "value": {
+      "depends": [
+        "bfe4c66d-934c-4f39-aeaf-d07814f0d69b@6c48a"
+      ]
+    }
+  },
+  "5569204d-0389-408c-bc87-87892a2a5fde": {
+    "url": "db://assets/3.Sprites/Sprites2/80_flower.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "b282b271-f420-4f7e-afde-574502b5a66b@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/78_flower_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "b282b271-f420-4f7e-afde-574502b5a66b"
+      ]
+    }
+  },
+  "b282b271-f420-4f7e-afde-574502b5a66b@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/78_flower_sd.png@f9941",
+    "value": {
+      "depends": [
+        "b282b271-f420-4f7e-afde-574502b5a66b@6c48a"
+      ]
+    }
+  },
+  "91fc8a10-3437-48d6-843c-b66a492bdaf5": {
+    "url": "db://assets/3.Sprites/Sprites2/80_flower_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "5c442774-0273-49c8-a248-80e7f01bd680@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/79_flower_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "5c442774-0273-49c8-a248-80e7f01bd680"
+      ]
+    }
+  },
+  "5c442774-0273-49c8-a248-80e7f01bd680@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/79_flower_sd.png@f9941",
+    "value": {
+      "depends": [
+        "5c442774-0273-49c8-a248-80e7f01bd680@6c48a"
+      ]
+    }
+  },
+  "263667fd-2236-4ef1-bee6-0e93b37d4e67": {
+    "url": "db://assets/3.Sprites/Sprites2/81_flower.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "d5d5b2e9-f6f2-4217-a0e2-6a6fd7e1cca7@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/7_mushroom.png@6c48a",
+    "value": {
+      "depends": [
+        "d5d5b2e9-f6f2-4217-a0e2-6a6fd7e1cca7"
+      ]
+    }
+  },
+  "2f754b15-8915-4fa9-9738-a097f756cc1c@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/7_mushroom_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "2f754b15-8915-4fa9-9738-a097f756cc1c"
+      ]
+    }
+  },
+  "5569204d-0389-408c-bc87-87892a2a5fde@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/80_flower.png@6c48a",
+    "value": {
+      "depends": [
+        "5569204d-0389-408c-bc87-87892a2a5fde"
+      ]
+    }
+  },
+  "91fc8a10-3437-48d6-843c-b66a492bdaf5@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/80_flower_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "91fc8a10-3437-48d6-843c-b66a492bdaf5"
+      ]
+    }
+  },
+  "d5d5b2e9-f6f2-4217-a0e2-6a6fd7e1cca7@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/7_mushroom.png@f9941",
+    "value": {
+      "depends": [
+        "d5d5b2e9-f6f2-4217-a0e2-6a6fd7e1cca7@6c48a"
+      ]
+    }
+  },
+  "c0909022-cfe2-41d7-a41e-743ca69cc2f8": {
+    "url": "db://assets/3.Sprites/Sprites2/81_flower_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "2f754b15-8915-4fa9-9738-a097f756cc1c@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/7_mushroom_sd.png@f9941",
+    "value": {
+      "depends": [
+        "2f754b15-8915-4fa9-9738-a097f756cc1c@6c48a"
+      ]
+    }
+  },
+  "202faf13-45e0-4bed-974c-334e78d839b7": {
+    "url": "db://assets/3.Sprites/Sprites2/82_butterfly.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "5569204d-0389-408c-bc87-87892a2a5fde@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/80_flower.png@f9941",
+    "value": {
+      "depends": [
+        "5569204d-0389-408c-bc87-87892a2a5fde@6c48a"
+      ]
+    }
+  },
+  "1f64a4c6-e4f2-43ad-8c07-5bfdd9756c28": {
+    "url": "db://assets/3.Sprites/Sprites2/83_butterfly.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "91fc8a10-3437-48d6-843c-b66a492bdaf5@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/80_flower_sd.png@f9941",
+    "value": {
+      "depends": [
+        "91fc8a10-3437-48d6-843c-b66a492bdaf5@6c48a"
+      ]
+    }
+  },
+  "446e68ac-270c-4fc7-8475-108e80af2274": {
+    "url": "db://assets/3.Sprites/Sprites2/84_nest.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "263667fd-2236-4ef1-bee6-0e93b37d4e67@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/81_flower.png@6c48a",
+    "value": {
+      "depends": [
+        "263667fd-2236-4ef1-bee6-0e93b37d4e67"
+      ]
+    }
+  },
+  "263667fd-2236-4ef1-bee6-0e93b37d4e67@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/81_flower.png@f9941",
+    "value": {
+      "depends": [
+        "263667fd-2236-4ef1-bee6-0e93b37d4e67@6c48a"
+      ]
+    }
+  },
+  "af00b59d-c7ff-4552-9df9-e1b32881c9ac": {
+    "url": "db://assets/3.Sprites/Sprites2/84_nest_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "202faf13-45e0-4bed-974c-334e78d839b7@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/82_butterfly.png@6c48a",
+    "value": {
+      "depends": [
+        "202faf13-45e0-4bed-974c-334e78d839b7"
+      ]
+    }
+  },
+  "1f64a4c6-e4f2-43ad-8c07-5bfdd9756c28@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/83_butterfly.png@6c48a",
+    "value": {
+      "depends": [
+        "1f64a4c6-e4f2-43ad-8c07-5bfdd9756c28"
+      ]
+    }
+  },
+  "c0909022-cfe2-41d7-a41e-743ca69cc2f8@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/81_flower_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "c0909022-cfe2-41d7-a41e-743ca69cc2f8"
+      ]
+    }
+  },
+  "202faf13-45e0-4bed-974c-334e78d839b7@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/82_butterfly.png@f9941",
+    "value": {
+      "depends": [
+        "202faf13-45e0-4bed-974c-334e78d839b7@6c48a"
+      ]
+    }
+  },
+  "96354d92-b2e2-474d-86e9-b8da20449b42": {
+    "url": "db://assets/3.Sprites/Sprites2/85_bird.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "446e68ac-270c-4fc7-8475-108e80af2274@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/84_nest.png@6c48a",
+    "value": {
+      "depends": [
+        "446e68ac-270c-4fc7-8475-108e80af2274"
+      ]
+    }
+  },
+  "c0909022-cfe2-41d7-a41e-743ca69cc2f8@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/81_flower_sd.png@f9941",
+    "value": {
+      "depends": [
+        "c0909022-cfe2-41d7-a41e-743ca69cc2f8@6c48a"
+      ]
+    }
+  },
+  "ecadef27-b952-4b9d-b393-aeb23ce89abd": {
+    "url": "db://assets/3.Sprites/Sprites2/86_bird.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "1f64a4c6-e4f2-43ad-8c07-5bfdd9756c28@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/83_butterfly.png@f9941",
+    "value": {
+      "depends": [
+        "1f64a4c6-e4f2-43ad-8c07-5bfdd9756c28@6c48a"
+      ]
+    }
+  },
+  "9ff07dc3-0bd0-432a-aea8-69743766f17d": {
+    "url": "db://assets/3.Sprites/Sprites2/8_mushroom.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "446e68ac-270c-4fc7-8475-108e80af2274@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/84_nest.png@f9941",
+    "value": {
+      "depends": [
+        "446e68ac-270c-4fc7-8475-108e80af2274@6c48a"
+      ]
+    }
+  },
+  "32fe33a6-2bc1-4849-a0a6-66cfbb727700": {
+    "url": "db://assets/3.Sprites/Sprites2/8_mushroom_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "96354d92-b2e2-474d-86e9-b8da20449b42@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/85_bird.png@6c48a",
+    "value": {
+      "depends": [
+        "96354d92-b2e2-474d-86e9-b8da20449b42"
+      ]
+    }
+  },
+  "ecadef27-b952-4b9d-b393-aeb23ce89abd@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/86_bird.png@6c48a",
+    "value": {
+      "depends": [
+        "ecadef27-b952-4b9d-b393-aeb23ce89abd"
+      ]
+    }
+  },
+  "32fe33a6-2bc1-4849-a0a6-66cfbb727700@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/8_mushroom_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "32fe33a6-2bc1-4849-a0a6-66cfbb727700"
+      ]
+    }
+  },
+  "9ff07dc3-0bd0-432a-aea8-69743766f17d@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/8_mushroom.png@6c48a",
+    "value": {
+      "depends": [
+        "9ff07dc3-0bd0-432a-aea8-69743766f17d"
+      ]
+    }
+  },
+  "ecadef27-b952-4b9d-b393-aeb23ce89abd@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/86_bird.png@f9941",
+    "value": {
+      "depends": [
+        "ecadef27-b952-4b9d-b393-aeb23ce89abd@6c48a"
+      ]
+    }
+  },
+  "96354d92-b2e2-474d-86e9-b8da20449b42@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/85_bird.png@f9941",
+    "value": {
+      "depends": [
+        "96354d92-b2e2-474d-86e9-b8da20449b42@6c48a"
+      ]
+    }
+  },
+  "5ccdb043-1b59-4c79-83fb-a75450efd3f5": {
+    "url": "db://assets/3.Sprites/Sprites2/9_mushroom.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "d1921e39-6ad9-4b56-aca7-277f0bdf2a0d": {
+    "url": "db://assets/3.Sprites/Sprites2/9_mushroom_sd.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "32fe33a6-2bc1-4849-a0a6-66cfbb727700@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/8_mushroom_sd.png@f9941",
+    "value": {
+      "depends": [
+        "32fe33a6-2bc1-4849-a0a6-66cfbb727700@6c48a"
+      ]
+    }
+  },
+  "9ff07dc3-0bd0-432a-aea8-69743766f17d@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/8_mushroom.png@f9941",
+    "value": {
+      "depends": [
+        "9ff07dc3-0bd0-432a-aea8-69743766f17d@6c48a"
+      ]
+    }
+  },
+  "413c3ae0-9f26-4568-ba40-ff49a64f6322": {
+    "url": "db://assets/3.Sprites/Sprites2/base_room.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "af00b59d-c7ff-4552-9df9-e1b32881c9ac@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/84_nest_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "af00b59d-c7ff-4552-9df9-e1b32881c9ac"
+      ]
+    }
+  },
+  "af00b59d-c7ff-4552-9df9-e1b32881c9ac@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/84_nest_sd.png@f9941",
+    "value": {
+      "depends": [
+        "af00b59d-c7ff-4552-9df9-e1b32881c9ac@6c48a"
+      ]
+    }
+  },
+  "d1921e39-6ad9-4b56-aca7-277f0bdf2a0d@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/9_mushroom_sd.png@6c48a",
+    "value": {
+      "depends": [
+        "d1921e39-6ad9-4b56-aca7-277f0bdf2a0d"
+      ]
+    }
+  },
+  "5ccdb043-1b59-4c79-83fb-a75450efd3f5@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/9_mushroom.png@6c48a",
+    "value": {
+      "depends": [
+        "5ccdb043-1b59-4c79-83fb-a75450efd3f5"
+      ]
+    }
+  },
+  "d1921e39-6ad9-4b56-aca7-277f0bdf2a0d@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/9_mushroom_sd.png@f9941",
+    "value": {
+      "depends": [
+        "d1921e39-6ad9-4b56-aca7-277f0bdf2a0d@6c48a"
+      ]
+    }
+  },
+  "5ccdb043-1b59-4c79-83fb-a75450efd3f5@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/9_mushroom.png@f9941",
+    "value": {
+      "depends": [
+        "5ccdb043-1b59-4c79-83fb-a75450efd3f5@6c48a"
+      ]
+    }
+  },
+  "413c3ae0-9f26-4568-ba40-ff49a64f6322@6c48a": {
+    "url": "db://assets/3.Sprites/Sprites2/base_room.png@6c48a",
+    "value": {
+      "depends": [
+        "413c3ae0-9f26-4568-ba40-ff49a64f6322"
+      ]
+    }
+  },
+  "413c3ae0-9f26-4568-ba40-ff49a64f6322@f9941": {
+    "url": "db://assets/3.Sprites/Sprites2/base_room.png@f9941",
+    "value": {
+      "depends": [
+        "413c3ae0-9f26-4568-ba40-ff49a64f6322@6c48a"
+      ]
+    }
+  },
+  "06f193d7-3c0b-4169-9f88-89d9bd815852": {
+    "url": "db://assets/0.Spines/box38",
+    "value": {}
+  },
+  "8e8bddd5-c304-45b6-a60f-9c555ae1770f": {
+    "url": "db://assets/0.Spines/box38/box-ingame.png",
+    "value": {}
+  },
+  "9902095a-ab39-407a-9c1a-0fb6fb2607e9": {
+    "url": "db://assets/0.Spines/box38/box-ingame.atlas.txt",
+    "value": {}
+  },
+  "a700defe-a8a5-437e-8441-e6b4fe3b4065": {
+    "url": "db://assets/0.Spines/box38/box-ingame.json",
+    "value": {}
+  },
+  "8e8bddd5-c304-45b6-a60f-9c555ae1770f@6c48a": {
+    "url": "db://assets/0.Spines/box38/box-ingame.png@6c48a",
+    "value": {
+      "depends": [
+        "8e8bddd5-c304-45b6-a60f-9c555ae1770f"
+      ]
+    }
+  },
+  "8e8bddd5-c304-45b6-a60f-9c555ae1770f@f9941": {
+    "url": "db://assets/0.Spines/box38/box-ingame.png@f9941",
+    "value": {
+      "depends": [
+        "8e8bddd5-c304-45b6-a60f-9c555ae1770f@6c48a"
       ]
     }
   }

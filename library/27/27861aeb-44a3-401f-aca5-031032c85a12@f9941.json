@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "30_basket_sd",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 173,
+      "height": 144
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 173,
+      "height": 144
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -86.5,
+        -72,
+        0,
+        86.5,
+        -72,
+        0,
+        -86.5,
+        72,
+        0,
+        86.5,
+        72,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        144,
+        173,
+        144,
+        0,
+        0,
+        173,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -86.5,
+        "y": -72,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 86.5,
+        "y": 72,
+        "z": 0
+      }
+    },
+    "texture": "27861aeb-44a3-401f-aca5-031032c85a12@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}

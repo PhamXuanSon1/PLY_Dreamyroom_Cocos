@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "f31ccf2a-7214-4dbb-9beb-0af20c72815f",
+  "uuid": "b282b271-f420-4f7e-afde-574502b5a66b",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "f31ccf2a-7214-4dbb-9beb-0af20c72815f@6c48a",
+      "uuid": "b282b271-f420-4f7e-afde-574502b5a66b@6c48a",
       "displayName": "78_flower_sd",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "f31ccf2a-7214-4dbb-9beb-0af20c72815f",
+        "imageUuidOrDatabaseUri": "b282b271-f420-4f7e-afde-574502b5a66b",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "f31ccf2a-7214-4dbb-9beb-0af20c72815f@f9941",
+      "uuid": "b282b271-f420-4f7e-afde-574502b5a66b@f9941",
       "displayName": "78_flower_sd",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "f31ccf2a-7214-4dbb-9beb-0af20c72815f@6c48a",
+        "imageUuidOrDatabaseUri": "b282b271-f420-4f7e-afde-574502b5a66b@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "f31ccf2a-7214-4dbb-9beb-0af20c72815f@f9941"
+    "redirect": "b282b271-f420-4f7e-afde-574502b5a66b@f9941"
   }
 }

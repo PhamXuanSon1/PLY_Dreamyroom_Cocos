@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "7f53e26a-e0e6-49e8-9a4c-3377a93eb921",
+  "uuid": "cbf09080-88e3-4939-b737-144307b0f092",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "7f53e26a-e0e6-49e8-9a4c-3377a93eb921@6c48a",
+      "uuid": "cbf09080-88e3-4939-b737-144307b0f092@6c48a",
       "displayName": "36_room",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "7f53e26a-e0e6-49e8-9a4c-3377a93eb921",
+        "imageUuidOrDatabaseUri": "cbf09080-88e3-4939-b737-144307b0f092",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "7f53e26a-e0e6-49e8-9a4c-3377a93eb921@f9941",
+      "uuid": "cbf09080-88e3-4939-b737-144307b0f092@f9941",
       "displayName": "36_room",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "7f53e26a-e0e6-49e8-9a4c-3377a93eb921@6c48a",
+        "imageUuidOrDatabaseUri": "cbf09080-88e3-4939-b737-144307b0f092@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "7f53e26a-e0e6-49e8-9a4c-3377a93eb921@f9941"
+    "redirect": "cbf09080-88e3-4939-b737-144307b0f092@f9941"
   }
 }

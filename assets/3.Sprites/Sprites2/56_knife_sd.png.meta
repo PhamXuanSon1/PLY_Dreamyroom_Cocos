@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "5addbc86-bcd4-4868-b3ee-208320c51a30",
+  "uuid": "17579cb4-6451-4b52-8d64-309915f2398b",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "5addbc86-bcd4-4868-b3ee-208320c51a30@6c48a",
+      "uuid": "17579cb4-6451-4b52-8d64-309915f2398b@6c48a",
       "displayName": "56_knife_sd",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "5addbc86-bcd4-4868-b3ee-208320c51a30",
+        "imageUuidOrDatabaseUri": "17579cb4-6451-4b52-8d64-309915f2398b",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "5addbc86-bcd4-4868-b3ee-208320c51a30@f9941",
+      "uuid": "17579cb4-6451-4b52-8d64-309915f2398b@f9941",
       "displayName": "56_knife_sd",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "5addbc86-bcd4-4868-b3ee-208320c51a30@6c48a",
+        "imageUuidOrDatabaseUri": "17579cb4-6451-4b52-8d64-309915f2398b@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "5addbc86-bcd4-4868-b3ee-208320c51a30@f9941"
+    "redirect": "17579cb4-6451-4b52-8d64-309915f2398b@f9941"
   }
 }

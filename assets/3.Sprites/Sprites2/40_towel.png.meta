@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "43fa03e8-dc14-49b9-8d78-4ae5172bf4d3",
+  "uuid": "a1b99ad0-88b4-44c1-b204-00ddeb52199a",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "43fa03e8-dc14-49b9-8d78-4ae5172bf4d3@6c48a",
+      "uuid": "a1b99ad0-88b4-44c1-b204-00ddeb52199a@6c48a",
       "displayName": "40_towel",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "43fa03e8-dc14-49b9-8d78-4ae5172bf4d3",
+        "imageUuidOrDatabaseUri": "a1b99ad0-88b4-44c1-b204-00ddeb52199a",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "43fa03e8-dc14-49b9-8d78-4ae5172bf4d3@f9941",
+      "uuid": "a1b99ad0-88b4-44c1-b204-00ddeb52199a@f9941",
       "displayName": "40_towel",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "43fa03e8-dc14-49b9-8d78-4ae5172bf4d3@6c48a",
+        "imageUuidOrDatabaseUri": "a1b99ad0-88b4-44c1-b204-00ddeb52199a@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "43fa03e8-dc14-49b9-8d78-4ae5172bf4d3@f9941"
+    "redirect": "a1b99ad0-88b4-44c1-b204-00ddeb52199a@f9941"
   }
 }

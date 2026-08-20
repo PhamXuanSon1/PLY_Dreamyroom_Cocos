@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "c2434150-08a1-4ec5-912c-051fe547ffca",
+  "uuid": "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "c2434150-08a1-4ec5-912c-051fe547ffca@6c48a",
+      "uuid": "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8@6c48a",
       "displayName": "43_bathtub_sd",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "c2434150-08a1-4ec5-912c-051fe547ffca",
+        "imageUuidOrDatabaseUri": "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "c2434150-08a1-4ec5-912c-051fe547ffca@f9941",
+      "uuid": "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8@f9941",
       "displayName": "43_bathtub_sd",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "c2434150-08a1-4ec5-912c-051fe547ffca@6c48a",
+        "imageUuidOrDatabaseUri": "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "c2434150-08a1-4ec5-912c-051fe547ffca@f9941"
+    "redirect": "b2e21b1e-f7f7-4b8c-9936-ac3d107ac2c8@f9941"
   }
 }

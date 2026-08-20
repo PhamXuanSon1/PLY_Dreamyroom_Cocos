@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "a6ad7f73-8cda-48c4-a949-40b667fcfbdd",
+  "uuid": "f4953771-c36c-467e-86b5-67d8a213e892",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "a6ad7f73-8cda-48c4-a949-40b667fcfbdd@6c48a",
+      "uuid": "f4953771-c36c-467e-86b5-67d8a213e892@6c48a",
       "displayName": "22_mushroom",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "a6ad7f73-8cda-48c4-a949-40b667fcfbdd",
+        "imageUuidOrDatabaseUri": "f4953771-c36c-467e-86b5-67d8a213e892",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "a6ad7f73-8cda-48c4-a949-40b667fcfbdd@f9941",
+      "uuid": "f4953771-c36c-467e-86b5-67d8a213e892@f9941",
       "displayName": "22_mushroom",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "a6ad7f73-8cda-48c4-a949-40b667fcfbdd@6c48a",
+        "imageUuidOrDatabaseUri": "f4953771-c36c-467e-86b5-67d8a213e892@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "a6ad7f73-8cda-48c4-a949-40b667fcfbdd@f9941"
+    "redirect": "f4953771-c36c-467e-86b5-67d8a213e892@f9941"
   }
 }

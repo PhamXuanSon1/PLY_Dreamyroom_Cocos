@@ -1,11 +1,11 @@
-debug: Wed, 19 Aug 2026 09:30:18 GMT
+debug: Thu, 20 Aug 2026 10:30:54 GMT
 debug: Project: F:\CocosProject\PLY_Dreamyroom_Cocos
 debug: Targets: editor,preview
 debug: Incremental file seems great.
 debug: Engine path: C:\ProgramData\cocos\editors\Creator\3.7.4\resources\resources\3d\engine
 debug: Initializing target [Editor]
 debug: Loading cache
-debug: Loading cache costs 3.648900032043457ms.
+debug: Loading cache costs 4.095799922943115ms.
 debug: Engine features shipped in editor: base,gfx-webgl,gfx-webgl2,gfx-empty,3d,animation,skeletal-animation,2d,ui,particle,particle-2d,physics-framework,physics-2d-framework,intersection-2d,primitive,profiler,occlusion-query,geometry-renderer,debug-renderer,audio,video,xr,light-probe,terrain,webview,tween,tiled-map,spine,dragon-bones,marionette,custom-pipeline,websocket,websocket-server
 debug: Our import map(foo:/bar): {
   "imports": {
@@ -14,7 +14,7 @@ debug: Our import map(foo:/bar): {
 }
 debug: Initializing target [Preview]
 debug: Loading cache
-debug: Loading cache costs 4.815199971199036ms.
+debug: Loading cache costs 4.580999970436096ms.
 debug: Our import map(foo:/bar): {
   "imports": {
     "cc": "cce:/internal/x/cc"
@@ -46,12 +46,12 @@ debug: Our import map(foo:/bar): {
   }
 }
 debug: Pulling asset-db.
-debug: Fetch asset-db cost: 14.562799990177155ms.
+debug: Fetch asset-db cost: 13.174600005149841ms.
 debug: Build iteration starts.
 Number of accumulated asset changes: 63
 Feature changed: false
 debug: Target(editor) build started.
-debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 07:00:05 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:14 GMT+0700 (Indochina Time)
+debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 07:00:14 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:05 GMT+0700 (Indochina Time)
 debug: Inspect cce:/internal/x/cc
 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
@@ -82,7 +82,7 @@ debug: Resolve cce:/internal/x/cc-fu/tiled-map from cce:/internal/x/cc as extern
 debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline.
-debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:01:37 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:14 GMT+0700 (Indochina Time)
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:00:36 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:05 GMT+0700 (Indochina Time)
 debug: Inspect cce:/internal/x/prerequisite-imports
 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
@@ -98,7 +98,7 @@ debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scr
 debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts as cce:/internal/x/cc.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts.
 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/code-quality/cr.mjs.
-debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Wed Aug 19 2026 16:12:31 GMT+0700 (Indochina Time), Current mtime: Wed Aug 19 2026 16:30:03 GMT+0700 (Indochina Time)
+debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Thu Aug 20 2026 16:55:32 GMT+0700 (Indochina Time), Current mtime: Thu Aug 20 2026 17:30:49 GMT+0700 (Indochina Time)
 debug: Inspect cce:/internal/code-quality/cr.mjs
 debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/x/cc.
 debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/x/cc.
@@ -453,9 +453,9 @@ debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scr
 debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts as cce:/internal/x/cc.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts.
-debug: Target(editor) ends with cost 201.77820003032684ms.
+debug: Target(editor) ends with cost 196.8164999485016ms.
 debug: Target(preview) build started.
-debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 07:00:05 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:14 GMT+0700 (Indochina Time)
+debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 07:00:14 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:05 GMT+0700 (Indochina Time)
 debug: Inspect cce:/internal/x/cc
 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
@@ -472,7 +472,7 @@ debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external d
 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
 debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
-debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:01:38 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:15 GMT+0700 (Indochina Time)
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:00:36 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:05 GMT+0700 (Indochina Time)
 debug: Inspect cce:/internal/x/prerequisite-imports
 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
@@ -488,7 +488,7 @@ debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scr
 debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/Clock.ts as cce:/internal/x/cc.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts.
 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/code-quality/cr.mjs.
-debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Wed Aug 19 2026 16:12:31 GMT+0700 (Indochina Time), Current mtime: Wed Aug 19 2026 16:30:03 GMT+0700 (Indochina Time)
+debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Thu Aug 20 2026 16:55:32 GMT+0700 (Indochina Time), Current mtime: Thu Aug 20 2026 17:30:49 GMT+0700 (Indochina Time)
 debug: Inspect cce:/internal/code-quality/cr.mjs
 debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/x/cc.
 debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts as cce:/internal/x/cc.
@@ -843,14 +843,14 @@ debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scr
 debug: Resolve cc from file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts as cce:/internal/x/cc.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts.
-debug: Target(preview) ends with cost 158.51510000228882ms.
+debug: Target(preview) ends with cost 163.03649997711182ms.
 debug: Pulling asset-db.
-debug: Fetch asset-db cost: 64.00270003080368ms.
+debug: Fetch asset-db cost: 1251.2483999729156ms.
 debug: Build iteration starts.
 Number of accumulated asset changes: 63
 Feature changed: false
 debug: Target(editor) build started.
-debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:00:14 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:21 GMT+0700 (Indochina Time)
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:00:05 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:13 GMT+0700 (Indochina Time)
 debug: Inspect cce:/internal/x/prerequisite-imports
 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts.
@@ -915,9 +915,9 @@ debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Poo
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts.
-debug: Target(editor) ends with cost 133.34710001945496ms.
+debug: Target(editor) ends with cost 140.03189992904663ms.
 debug: Target(preview) build started.
-debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:00:15 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:21 GMT+0700 (Indochina Time)
+debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:00:05 GMT+0700 (Indochina Time), Current mtime: Thu Jan 01 1970 07:00:13 GMT+0700 (Indochina Time)
 debug: Inspect cce:/internal/x/prerequisite-imports
 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.7.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/AssetsManagerCustom.ts.
@@ -982,4 +982,4 @@ debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Poo
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/AppLovinAnalytics.ts.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/GameController.ts.
 debug: Resolve file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts from cce:/internal/x/prerequisite-imports as file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Tool/h5-helper.ts.
-debug: Target(preview) ends with cost 109.68860000371933ms.
+debug: Target(preview) ends with cost 77.25250005722046ms.

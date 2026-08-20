@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "919ba900-9142-4fc7-936d-01d44376b760",
+  "uuid": "9ff07dc3-0bd0-432a-aea8-69743766f17d",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "919ba900-9142-4fc7-936d-01d44376b760@6c48a",
+      "uuid": "9ff07dc3-0bd0-432a-aea8-69743766f17d@6c48a",
       "displayName": "8_mushroom",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "919ba900-9142-4fc7-936d-01d44376b760",
+        "imageUuidOrDatabaseUri": "9ff07dc3-0bd0-432a-aea8-69743766f17d",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "919ba900-9142-4fc7-936d-01d44376b760@f9941",
+      "uuid": "9ff07dc3-0bd0-432a-aea8-69743766f17d@f9941",
       "displayName": "8_mushroom",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "919ba900-9142-4fc7-936d-01d44376b760@6c48a",
+        "imageUuidOrDatabaseUri": "9ff07dc3-0bd0-432a-aea8-69743766f17d@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "919ba900-9142-4fc7-936d-01d44376b760@f9941"
+    "redirect": "9ff07dc3-0bd0-432a-aea8-69743766f17d@f9941"
   }
 }

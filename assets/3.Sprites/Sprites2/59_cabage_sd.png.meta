@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "2e948827-98d0-4914-b41b-8645553262cd",
+  "uuid": "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "2e948827-98d0-4914-b41b-8645553262cd@6c48a",
+      "uuid": "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e@6c48a",
       "displayName": "59_cabage_sd",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "2e948827-98d0-4914-b41b-8645553262cd",
+        "imageUuidOrDatabaseUri": "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "2e948827-98d0-4914-b41b-8645553262cd@f9941",
+      "uuid": "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e@f9941",
       "displayName": "59_cabage_sd",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "2e948827-98d0-4914-b41b-8645553262cd@6c48a",
+        "imageUuidOrDatabaseUri": "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "2e948827-98d0-4914-b41b-8645553262cd@f9941"
+    "redirect": "5baa1d2d-fc4e-4969-bf16-a51e1e9e370e@f9941"
   }
 }

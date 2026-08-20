@@ -2,7 +2,7 @@
   "ver": "1.0.25",
   "importer": "image",
   "imported": true,
-  "uuid": "f55c7d27-28f1-427b-a23b-763d8cc3ebeb",
+  "uuid": "e73870ae-bd8f-436e-8335-b334efb93f64",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "f55c7d27-28f1-427b-a23b-763d8cc3ebeb@6c48a",
+      "uuid": "e73870ae-bd8f-436e-8335-b334efb93f64@6c48a",
       "displayName": "60_daikon",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "f55c7d27-28f1-427b-a23b-763d8cc3ebeb",
+        "imageUuidOrDatabaseUri": "e73870ae-bd8f-436e-8335-b334efb93f64",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "f55c7d27-28f1-427b-a23b-763d8cc3ebeb@f9941",
+      "uuid": "e73870ae-bd8f-436e-8335-b334efb93f64@f9941",
       "displayName": "60_daikon",
       "id": "f9941",
       "name": "spriteFrame",
@@ -114,7 +114,7 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "f55c7d27-28f1-427b-a23b-763d8cc3ebeb@6c48a",
+        "imageUuidOrDatabaseUri": "e73870ae-bd8f-436e-8335-b334efb93f64@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.12",
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": true,
-    "redirect": "f55c7d27-28f1-427b-a23b-763d8cc3ebeb@f9941"
+    "redirect": "e73870ae-bd8f-436e-8335-b334efb93f64@f9941"
   }
 }
