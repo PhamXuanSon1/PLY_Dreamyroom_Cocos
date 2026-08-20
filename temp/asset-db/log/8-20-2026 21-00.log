@@ -1,0 +1,42 @@
+8-20-2026 21:00:11-debug: asset-db:worker-init (4432ms)
+8-20-2026 21:00:18-debug: Preimport db internal success
+8-20-2026 21:00:19-debug: Preimport db assets success
+8-20-2026 21:00:20-debug: asset-db:worker-effect-data-processing (788ms)
+8-20-2026 21:00:34-debug: Set detail map pack:///resolution-detail-map.json: {}
+8-20-2026 21:00:34-debug: Start up the 'internal' database...
+8-20-2026 21:00:35-debug: asset-db:worker-init-script (214ms)
+8-20-2026 21:00:36-debug: start asset-db with asset: 419
+8-20-2026 21:00:36-debug: Start up the 'assets' database...
+8-20-2026 21:00:39-debug: asset-db:worker-startup-database[internal] (21656ms)
+8-20-2026 21:00:40-debug: start asset-db with asset: 455
+8-20-2026 21:00:40-debug: Asset DB is ready!
+8-20-2026 21:00:40-debug: asset-db:worker-startup-database[assets] (21590ms)
+8-20-2026 21:00:40-debug: init worker message success
+8-20-2026 21:00:40-debug: programming:execute-script (1ms)
+8-20-2026 21:00:42-debug: builder:worker-init (1979ms)
+8-20-2026 21:00:42-debug: programming:execute-script (8ms)
+8-20-2026 21:03:15-debug: refresh db internal success
+8-20-2026 21:03:15-debug: asset-db:worker-effect-data-processing (292ms)
+8-20-2026 21:03:15-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\4.Soundsbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:03:15-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\7.Scriptsbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:03:15-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\7.Scripts\MatchAssetbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:03:15-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\8.Models\Texturesbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:03:15-debug: refresh db assets success
+8-20-2026 21:03:15-debug: asset-db:refresh-all-database (470ms)
+8-20-2026 21:04:03-debug: refresh db internal success
+8-20-2026 21:04:04-debug: asset-db:worker-effect-data-processing (277ms)
+8-20-2026 21:04:04-debug: refresh db assets success
+8-20-2026 21:04:04-debug: asset-db:refresh-all-database (483ms)
+8-20-2026 21:04:16-debug: start remove asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\data\Level1504_PLY17_Level1504.json...
+8-20-2026 21:04:16-debug: refresh db internal success
+8-20-2026 21:04:16-debug: %cDestroy%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\data\Level1504_PLY17_Level1504.jsonbackground: #ffb8b8; color: #000;color: #000;
+8-20-2026 21:04:16-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\data\Level1504_PLY17_Level1504.json...
+8-20-2026 21:04:16-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\data success
+8-20-2026 21:04:16-debug: remove asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\data\Level1504_PLY17_Level1504.json success
+8-20-2026 21:04:16-debug: asset-db:worker-effect-data-processing (200ms)
+8-20-2026 21:04:17-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\databackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:04:17-debug: refresh db assets success
+8-20-2026 21:04:17-debug: asset-db:refresh-all-database (352ms)
+8-20-2026 21:04:17-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\6.Scenes\PlayScene.scene...
+8-20-2026 21:04:17-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\6.Scenes\PlayScene.scenebackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:04:17-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\6.Scenes success
