@@ -1,14 +1,14 @@
-20-8-2026 21:12:21 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine
-20-8-2026 21:12:22 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\native
-20-8-2026 21:12:23 - log: Request namespace: device-list
-20-8-2026 21:12:32 - log: playable-ads-adapter is loaded
-20-8-2026 21:12:32 - log: playable-ads-adapter is loaded
-20-8-2026 21:13:25 - log: [Scene] meshopt wasm decoder initialized
-20-8-2026 21:13:26 - log: [Scene] [box2d]:box2d wasm lib loaded.
-20-8-2026 21:13:26 - log: [Scene] [bullet]:bullet wasm lib loaded.
-20-8-2026 21:13:26 - log: [Scene] [PHYSICS]: using builtin.
-20-8-2026 21:13:26 - log: [Scene] Cocos Creator v3.8.6
-20-8-2026 21:13:26 - warn: [Scene] Found possible circular reference in "pack:///chunks/2e/2e3f7510fd9296f3620d15e92db32b07e9f05310.js", happened when use "UI" imported from "./UI"  Error: 
+20-8-2026 21:26:33 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine
+20-8-2026 21:26:33 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\native
+20-8-2026 21:26:33 - log: Request namespace: device-list
+20-8-2026 21:26:38 - log: playable-ads-adapter is loaded
+20-8-2026 21:26:38 - log: playable-ads-adapter is loaded
+20-8-2026 21:26:44 - log: [Scene] meshopt wasm decoder initialized
+20-8-2026 21:26:44 - log: [Scene] [box2d]:box2d wasm lib loaded.
+20-8-2026 21:26:44 - log: [Scene] [bullet]:bullet wasm lib loaded.
+20-8-2026 21:26:44 - log: [Scene] [PHYSICS]: using builtin.
+20-8-2026 21:26:45 - log: [Scene] Cocos Creator v3.8.6
+20-8-2026 21:26:45 - warn: [Scene] Found possible circular reference in "pack:///chunks/2e/2e3f7510fd9296f3620d15e92db32b07e9f05310.js", happened when use "UI" imported from "./UI"  Error: 
     at Object.execute (file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e3f7510fd9296f3620d15e92db32b07e9f05310.js:72:16)
     at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
     at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
@@ -66,7 +66,7 @@
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
     at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
-20-8-2026 21:13:26 - warn: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
+20-8-2026 21:26:45 - warn: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
 Is this intended? If not, this may indicate a circular reference.
 For example:
 
@@ -128,13 +128,13 @@ export class Foo {            //  ↓
     at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
     at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
     at ScriptManager.init (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:3794)
-20-8-2026 21:13:26 - log: [Scene] No need to specify the "type" of "ItemGraphic.listScale" because cc.Vec3 is a child class of ValueType.
-20-8-2026 21:13:26 - log: [Scene] No need to specify the "type" of "ItemGraphic.listRotation" because cc.Vec3 is a child class of ValueType.
-20-8-2026 21:13:26 - log: [Scene] No need to specify the "type" of "ItemMovement.originalScale" because cc.Vec3 is a child class of ValueType.
-20-8-2026 21:13:26 - log: [Scene] No need to specify the "type" of "ItemMovement.originalRotation" because cc.Vec3 is a child class of ValueType.
-20-8-2026 21:13:26 - log: [Scene] Using custom pipeline: Builtin
-20-8-2026 21:13:26 - log: [Scene] [PHYSICS2D]: switch from box2d-wasm to builtin.
-20-8-2026 21:13:41 - warn: [Scene] Node "Hand" has no path "Node".Error: [Scene] Node "Hand" has no path "Node".
+20-8-2026 21:26:45 - log: [Scene] No need to specify the "type" of "ItemGraphic.listScale" because cc.Vec3 is a child class of ValueType.
+20-8-2026 21:26:45 - log: [Scene] No need to specify the "type" of "ItemGraphic.listRotation" because cc.Vec3 is a child class of ValueType.
+20-8-2026 21:26:45 - log: [Scene] No need to specify the "type" of "ItemMovement.originalScale" because cc.Vec3 is a child class of ValueType.
+20-8-2026 21:26:45 - log: [Scene] No need to specify the "type" of "ItemMovement.originalRotation" because cc.Vec3 is a child class of ValueType.
+20-8-2026 21:26:45 - log: [Scene] Using custom pipeline: Builtin
+20-8-2026 21:26:45 - log: [Scene] [PHYSICS2D]: switch from box2d-wasm to builtin.
+20-8-2026 21:26:47 - warn: [Scene] Node "Hand" has no path "Node".Error: [Scene] Node "Hand" has no path "Node".
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -161,7 +161,7 @@ export class Foo {            //  ↓
     at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:117467:9)
     at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:151169:9)
     at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\src\helpers.ts:100:17)
-20-8-2026 21:13:41 - warn: [Scene] Previous error occurred when instantiating animation clip Hand on node Hand.Error: [Scene] Previous error occurred when instantiating animation clip Hand on node Hand.
+20-8-2026 21:26:47 - warn: [Scene] Previous error occurred when instantiating animation clip Hand on node Hand.Error: [Scene] Previous error occurred when instantiating animation clip Hand on node Hand.
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
@@ -185,231 +185,47 @@ export class Foo {            //  ↓
     at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:117467:9)
     at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:151169:9)
     at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\src\helpers.ts:100:17)
-20-8-2026 21:14:03 - warn: [Scene] Found possible circular reference in "pack:///chunks/2e/2e3f7510fd9296f3620d15e92db32b07e9f05310.js", happened when use "UI" imported from "./UI"  Error: 
-    at Object.execute (file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e3f7510fd9296f3620d15e92db32b07e9f05310.js:72:16)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
-    at Array.forEach (<anonymous>)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
-    at Array.forEach (<anonymous>)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js:13:13
-    at Object.execute (file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js:8:7)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)Error: [Scene] Found possible circular reference in "pack:///chunks/2e/2e3f7510fd9296f3620d15e92db32b07e9f05310.js", happened when use "UI" imported from "./UI"  Error: 
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
-    at Array.forEach (<anonymous>)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
-    at Array.forEach (<anonymous>)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js:13:13
-    at Object.execute (file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js:8:7)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
-    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at Module.report (file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js:16:13)
-    at _reportPossibleCrUseOfUI (file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e3f7510fd9296f3620d15e92db32b07e9f05310.js:13:17)
-    at Object.execute (file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e3f7510fd9296f3620d15e92db32b07e9f05310.js:71:133)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
-    at Array.forEach (<anonymous>)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
-    at Array.forEach (<anonymous>)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js:13:13
-    at Object.execute (file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js:8:7)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-20-8-2026 21:14:03 - warn: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
-Is this intended? If not, this may indicate a circular reference.
-For example:
-
- 
-// foo.ts
-import { _decorator } from 'cc';
-import { Bar } from './bar';  // Given that './bar' also reference 'foo.ts'.
-                              // When importing './bar', execution of './bar' is hung on to wait execution of 'foo.ts',
-                              // the `Bar` imported here is `undefined` until './bar' finish its execution.
-                              // It leads to that
-@_decorator.ccclass           //  ↓
-export class Foo {            //  ↓
-    @_decorator.type(Bar)     //  → is equivalent to `@_decorator.type(undefined)`
-    public bar: Bar;          // To eliminate this error, either:
-                              // - Refactor your module structure(recommended), or
-                              // - specify the type as cc class name: `@_decorator.type('Bar'/* or any name you specified for `Bar` */)`
-}Error: [Scene] You are explicitly specifying `undefined` type to cc property "ui" of cc class "World".
-Is this intended? If not, this may indicate a circular reference.
-For example:
-
- 
-// foo.ts
-import { _decorator } from 'cc';
-import { Bar } from './bar';  // Given that './bar' also reference 'foo.ts'.
-@_decorator.ccclass           //  ↓
-export class Foo {            //  ↓
-    @_decorator.type(Bar)     //  → is equivalent to `@_decorator.type(undefined)`
-    public bar: Bar;          // To eliminate this error, either:
-                              // - Refactor your module structure(recommended), or
-                              // - specify the type as cc class name: `@_decorator.type('Bar'/* or any name you specified for `Bar` */)`
-}
-    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
-    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
+20-8-2026 21:27:34 - log: [Scene] control-duoi-B1-line
+20-8-2026 21:27:34 - log: [Scene] line1
+20-8-2026 21:27:34 - log: [Scene] line2
+20-8-2026 21:27:34 - log: [Scene] napduoi-A1-line
+20-8-2026 21:27:39 - warn: [Scene] Can not find environment map, disable IBL lightingError: [Scene] Can not find environment map, disable IBL lighting
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at parseAttributes (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127994:7)
-    at defineProp (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127741:5)
-    at declareProperties (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127905:11)
-    at CCClass (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:127930:5)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:269970:21)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:270981:18)
-    at Object.execute (file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/2e/2e3f7510fd9296f3620d15e92db32b07e9f05310.js:81:42)
-    at doExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:517:30)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:508:21)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
-    at Array.forEach (<anonymous>)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:493:28
-    at Array.forEach (<anonymous>)
-    at postOrderExec (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:491:10)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\static\executor\systemjs-bridge\out\index.js:440:12
-    at file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js:13:13
-    at Object.execute (file:///D:/CocosProject/PLY_Dreamyroom_Cocos/temp/programming/packer-driver/targets/editor/chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js:8:7)
-    at Executor._importPrerequisiteModules (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:358:13)
-    at Executor.reload (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@editor\lib-programming\src\executor\index.ts:235:13)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1787
-    at GlobalEnv.processQueue (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:2184)
-    at GlobalEnv.record (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scripts.ccc:1:1955)
-20-8-2026 21:14:03 - log: [Scene] No need to specify the "type" of "ItemGraphic.listScale" because cc.Vec3 is a child class of ValueType.
-20-8-2026 21:14:03 - log: [Scene] No need to specify the "type" of "ItemGraphic.listRotation" because cc.Vec3 is a child class of ValueType.
-20-8-2026 21:14:03 - log: [Scene] No need to specify the "type" of "ItemMovement.originalScale" because cc.Vec3 is a child class of ValueType.
-20-8-2026 21:14:03 - log: [Scene] No need to specify the "type" of "ItemMovement.originalRotation" because cc.Vec3 is a child class of ValueType.
-20-8-2026 21:14:04 - warn: [Scene] Node "Hand" has no path "Node".Error: [Scene] Node "Hand" has no path "Node".
+    at SkyboxInfo.set envmap (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:57078:13)
+    at SkyboxInfo.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\asset\asset-watcher.ccc:1:1091)
+    at AssetDump.decode (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\dump\types\asset-dump.ccc:1:946)
+    at _decodeByType (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\dump\decode.ccc:1:4617)
+    at decodePatch (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\dump\decode.ccc:1:6313)
+    at decodePatch (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\dump\decode.ccc:1:6952)
+    at decodeScene (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\dump\decode.ccc:1:3735)
+    at SceneUndoCommand.applyData (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\undo\scene.ccc:1:722)
+    at SceneUndoCommand.undo (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\undo\scene.ccc:1:616)
+    at SceneUndoCommand.perform (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\undo\base.ccc:1:209)
+    at SceneUndoManager.undo (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\undo\base.ccc:1:752)
+    at SceneUndoManager.undo (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\undo\scene.ccc:1:3833)
+    at GeneralSceneFacade.undo (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\facade\general-scene-facade.ccc:1:12889)
+    at SceneFacadeManager.undo (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\facade\scene-facade-manager.ccc:1:15411)
+20-8-2026 21:27:39 - warn: [Scene] Can not find environment map, disable IBL lightingError: [Scene] Can not find environment map, disable IBL lighting
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
     at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
     at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at HierarchyPath.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:11506:13)
-    at TrackPath.[NormalizedFollow] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:108168:29)
-    at TrackBinding.createRuntimeBinding (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:108205:59)
-    at binder (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:6839:41)
-    at AnimationClip._createEvalWithBinder (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:7211:36)
-    at AnimationClip.createEvaluator (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:6849:23)
-    at AnimationState.initialize (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:9259:35)
-    at Animation._doCreateState (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8357:19)
-    at Animation.createState (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8199:23)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8041:20)
-    at Array.forEach (<anonymous>)
-    at Animation.set clips (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8039:17)
-    at Animation.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\asset\asset-watcher.ccc:1:1091)
-    at Animation.onLoad (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8079:22)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:50963:132)
-    at OneOffInvoker.eval [as _invoke] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:48877:9)
-    at OneOffInvoker.invoke (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:48996:18)
-    at NodeActivator.activateNode (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:51014:27)
-    at Scene._activate (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:58797:44)
-    at Director.runSceneImmediate (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:19222:17)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scene\utils.ccc:1:1367
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:109875:17)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:117467:9)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:151169:9)
-    at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\src\helpers.ts:100:17)
-20-8-2026 21:14:04 - warn: [Scene] Previous error occurred when instantiating animation clip Hand on node Hand.Error: [Scene] Previous error occurred when instantiating animation clip Hand on node Hand.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at binder (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:6845:15)
-    at AnimationClip._createEvalWithBinder (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:7211:36)
-    at AnimationClip.createEvaluator (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:6849:23)
-    at AnimationState.initialize (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:9259:35)
-    at Animation._doCreateState (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8357:19)
-    at Animation.createState (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8199:23)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8041:20)
-    at Array.forEach (<anonymous>)
-    at Animation.set clips (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8039:17)
-    at Animation.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\asset\asset-watcher.ccc:1:1091)
-    at Animation.onLoad (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8079:22)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:50963:132)
-    at OneOffInvoker.eval [as _invoke] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:48877:9)
-    at OneOffInvoker.invoke (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:48996:18)
-    at NodeActivator.activateNode (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:51014:27)
-    at Scene._activate (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:58797:44)
-    at Director.runSceneImmediate (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:19222:17)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scene\utils.ccc:1:1367
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:109875:17)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:117467:9)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:151169:9)
-    at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\src\helpers.ts:100:17)
-20-8-2026 21:14:55 - warn: [Scene] Node "Hand" has no path "Node".Error: [Scene] Node "Hand" has no path "Node".
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at HierarchyPath.get (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:11506:13)
-    at TrackPath.[NormalizedFollow] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:108168:29)
-    at TrackBinding.createRuntimeBinding (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:108205:59)
-    at binder (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:6839:41)
-    at AnimationClip._createEvalWithBinder (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:7211:36)
-    at AnimationClip.createEvaluator (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:6849:23)
-    at AnimationState.initialize (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:9259:35)
-    at Animation._doCreateState (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8357:19)
-    at Animation.createState (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8199:23)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8041:20)
-    at Array.forEach (<anonymous>)
-    at Animation.set clips (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8039:17)
-    at Animation.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\asset\asset-watcher.ccc:1:1091)
-    at Animation.onLoad (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8079:22)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:50963:132)
-    at OneOffInvoker.eval [as _invoke] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:48877:9)
-    at OneOffInvoker.invoke (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:48996:18)
-    at NodeActivator.activateNode (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:51014:27)
-    at Scene._activate (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:58797:44)
-    at Director.runSceneImmediate (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:19222:17)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scene\utils.ccc:1:375
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:117467:9)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:151169:9)
-    at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\src\helpers.ts:100:17)
-20-8-2026 21:14:55 - warn: [Scene] Previous error occurred when instantiating animation clip Hand on node Hand.Error: [Scene] Previous error occurred when instantiating animation clip Hand on node Hand.
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\@sentry\src\instrument\console.ts:40:20)
-    at warn (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:146866:12)
-    at warnID (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:147054:5)
-    at binder (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:6845:15)
-    at AnimationClip._createEvalWithBinder (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:7211:36)
-    at AnimationClip.createEvaluator (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:6849:23)
-    at AnimationState.initialize (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:9259:35)
-    at Animation._doCreateState (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8357:19)
-    at Animation.createState (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8199:23)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8041:20)
-    at Array.forEach (<anonymous>)
-    at Animation.set clips (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8039:17)
-    at Animation.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\asset\asset-watcher.ccc:1:1091)
-    at Animation.onLoad (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:8079:22)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:50963:132)
-    at OneOffInvoker.eval [as _invoke] (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:48877:9)
-    at OneOffInvoker.invoke (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:48996:18)
-    at NodeActivator.activateNode (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:51014:27)
-    at Scene._activate (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:58797:44)
-    at Director.runSceneImmediate (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:19222:17)
-    at C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\scene\utils.ccc:1:375
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:117467:9)
-    at eval (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:151169:9)
-    at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\node_modules\src\helpers.ts:100:17)
+    at SkyboxInfo.set envmap (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\resources\3d\engine\bin\.cache\dev\editor\bundled\index.js:57078:13)
+    at SkyboxInfo.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\manager\asset\asset-watcher.ccc:1:1091)
+    at AssetDump.decode (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\dump\types\asset-dump.ccc:1:946)
+    at _decodeByType (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\dump\decode.ccc:1:4617)
+    at decodePatch (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\dump\decode.ccc:1:6313)
+    at decodePatch (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\dump\decode.ccc:1:6952)
+    at decodeScene (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\dump\decode.ccc:1:3735)
+    at SceneUndoCommand.applyData (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\undo\scene.ccc:1:722)
+    at SceneUndoCommand.undo (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\undo\scene.ccc:1:616)
+    at SceneUndoCommand.perform (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\undo\base.ccc:1:209)
+    at SceneUndoManager.undo (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\undo\base.ccc:1:752)
+    at SceneUndoManager.undo (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\export\undo\scene.ccc:1:3833)
+    at GeneralSceneFacade.undo (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\facade\general-scene-facade.ccc:1:12889)
+    at SceneFacadeManager.undo (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\scene\dist\script\3d\facade\scene-facade-manager.ccc:1:15411)
+20-8-2026 21:28:18 - log: [Scene] control-duoi-B1-line
+20-8-2026 21:28:18 - log: [Scene] line1
+20-8-2026 21:28:18 - log: [Scene] line2
+20-8-2026 21:28:18 - log: [Scene] napduoi-A1-line

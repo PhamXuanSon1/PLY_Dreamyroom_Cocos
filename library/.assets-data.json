@@ -986,7 +986,8 @@
         "211c343a-400f-49f3-8416-f2b97be3891f@f9941",
         "d99e37a8-4118-4d31-8654-1d5538156f1c@f9941",
         "b7d47de7-5a89-4423-be89-058cacb08ba6@f9941",
-        "c6a61899-b2f1-4055-953b-fd22da9f8337"
+        "c6a61899-b2f1-4055-953b-fd22da9f8337",
+        "baa6248d-8e38-4cee-9c9f-b2524b45bc58"
       ],
       "dependScripts": [
         "14a54ca0-e12a-490a-948a-754db1575003",
@@ -12580,5 +12581,94 @@
         "8e8bddd5-c304-45b6-a60f-9c555ae1770f@6c48a"
       ]
     }
+  },
+  "2f354f2f-49a3-4830-89ad-cf973cc2c98e": {
+    "url": "db://assets/0.Spine",
+    "value": {},
+    "versionCode": 1
+  },
+  "afc19b92-7eab-45d9-9d2f-0a1ccd858e9b": {
+    "url": "db://assets/0.Spine/box42/box-ingame.atlas.txt",
+    "value": {},
+    "versionCode": 1
+  },
+  "2443c98c-fbb0-41a0-bf97-f6ee96708764": {
+    "url": "db://assets/0.Spine/box42/box-ingame.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "e03c2de2-39fa-4fdd-813e-8ccca0135aaf": {
+    "url": "db://assets/0.Spine/box42/box-ingame.json",
+    "value": {},
+    "versionCode": 1
+  },
+  "0f0754c1-6ea5-4520-9fd6-a5e25b4af560": {
+    "url": "db://assets/0.Spine/box42",
+    "value": {},
+    "versionCode": 1
+  },
+  "3e8f3682-db97-43d7-823d-91a5e8616b61": {
+    "url": "db://assets/0.Spine/box42/box42",
+    "value": {},
+    "versionCode": 1
+  },
+  "2443c98c-fbb0-41a0-bf97-f6ee96708764@6c48a": {
+    "url": "db://assets/0.Spine/box42/box-ingame.png@6c48a",
+    "value": {
+      "depends": [
+        "2443c98c-fbb0-41a0-bf97-f6ee96708764"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2443c98c-fbb0-41a0-bf97-f6ee96708764@f9941": {
+    "url": "db://assets/0.Spine/box42/box-ingame.png@f9941",
+    "value": {
+      "depends": [
+        "2443c98c-fbb0-41a0-bf97-f6ee96708764@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ace97c9e-65fe-4489-b79c-767a4e526caf": {
+    "url": "db://assets/0.Spine/box-ingame.atlas.txt",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "b55a76fd-0305-493d-b1cc-37b379c81126": {
+    "url": "db://assets/0.Spine/box-ingame.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "b55a76fd-0305-493d-b1cc-37b379c81126@6c48a": {
+    "url": "db://assets/0.Spine/box-ingame.png@6c48a",
+    "value": {
+      "depends": [
+        "b55a76fd-0305-493d-b1cc-37b379c81126"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b55a76fd-0305-493d-b1cc-37b379c81126@f9941": {
+    "url": "db://assets/0.Spine/box-ingame.png@f9941",
+    "value": {
+      "depends": [
+        "b55a76fd-0305-493d-b1cc-37b379c81126@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "baa6248d-8e38-4cee-9c9f-b2524b45bc58": {
+    "url": "db://assets/0.Spine/box-ingame.json",
+    "value": {
+      "depends": [
+        "b55a76fd-0305-493d-b1cc-37b379c81126@6c48a"
+      ]
+    },
+    "versionCode": 1
   }
 }

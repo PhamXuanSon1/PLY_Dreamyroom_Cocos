@@ -153,7 +153,7 @@
           },
           "spine": {
             "_value": true,
-            "_option": "spine-3.8"
+            "_option": "spine-4.2"
           },
           "spine-3.8": {
             "_value": true,
@@ -164,7 +164,7 @@
           "spine-4.2": {
             "_value": false,
             "_flags": {
-              "LOAD_SPINE_MANUALLY": false
+              "LOAD_SPINE_MANUALLY": true
             }
           },
           "dragon-bones": {
@@ -191,7 +191,7 @@
           }
         },
         "flags": {
-          "LOAD_SPINE_MANUALLY": false
+          "LOAD_SPINE_MANUALLY": true
         },
         "name": "Migrated Configuration",
         "includeModules": [
@@ -201,6 +201,7 @@
           "audio",
           "base",
           "custom-pipeline",
+          "custom-pipeline-post-process",
           "gfx-webgl",
           "gfx-webgl2",
           "graphics",
@@ -211,7 +212,7 @@
           "primitive",
           "profiler",
           "skeletal-animation",
-          "spine-3.8",
+          "spine-4.2",
           "tween",
           "ui",
           "webview"

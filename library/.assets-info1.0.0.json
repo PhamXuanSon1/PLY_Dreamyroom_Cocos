@@ -4015,7 +4015,7 @@
       "uuid": "898454b9-1a6a-4cc1-81c8-c23b8907f47f"
     },
     "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\6.Scenes\\PlayScene.scene": {
-      "time": 1787235296249.213,
+      "time": 1787236169621.948,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\3.Sprites\\Chung\\ChatGPT Image May 13, 2026, 10_50_10 AM (1).png": {
@@ -6371,6 +6371,34 @@
     },
     "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\resources\\art\\PLY29_Level34\\sprites\\wd_01_sd.png.meta": {
       "time": 1787235205003.6682
+    },
+    "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine.meta": {
+      "time": 1787235792577.3542
+    },
+    "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine": {
+      "time": 1787235925327.4038,
+      "uuid": "2f354f2f-49a3-4830-89ad-cf973cc2c98e"
+    },
+    "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box-ingame.atlas.txt.meta": {
+      "time": 1787235925337.4028
+    },
+    "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box-ingame.png.meta": {
+      "time": 1787236097836.2715
+    },
+    "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box-ingame.json.meta": {
+      "time": 1787235925496.5457
+    },
+    "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box-ingame.atlas.txt": {
+      "time": 1787127548780.7395,
+      "uuid": "ace97c9e-65fe-4489-b79c-767a4e526caf"
+    },
+    "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box-ingame.png": {
+      "time": 1787127548779.7415,
+      "uuid": "b55a76fd-0305-493d-b1cc-37b379c81126"
+    },
+    "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box-ingame.json": {
+      "time": 1787127548450.8716,
+      "uuid": "baa6248d-8e38-4cee-9c9f-b2524b45bc58"
     }
   },
   "missing": {
@@ -6398,6 +6426,31 @@
       "path": "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\data\\Level1504_PLY17_Level1504.json",
       "time": 1787020524246.8079,
       "removeTime": 1787235205004
+    },
+    "afc19b92-7eab-45d9-9d2f-0a1ccd858e9b": {
+      "path": "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box42\\box-ingame.atlas.txt",
+      "time": 1787127548780.7395,
+      "removeTime": 1787235912454
+    },
+    "e03c2de2-39fa-4fdd-813e-8ccca0135aaf": {
+      "path": "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box42\\box-ingame.json",
+      "time": 1787127548450.8716,
+      "removeTime": 1787235912454
+    },
+    "2443c98c-fbb0-41a0-bf97-f6ee96708764": {
+      "path": "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box42\\box-ingame.png",
+      "time": 1787127548779.7415,
+      "removeTime": 1787235912454
+    },
+    "3e8f3682-db97-43d7-823d-91a5e8616b61": {
+      "path": "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box42\\box42",
+      "time": 1787235808954.952,
+      "removeTime": 1787235812240
+    },
+    "0f0754c1-6ea5-4520-9fd6-a5e25b4af560": {
+      "path": "D:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spine\\box42",
+      "time": 1787235812240.8213,
+      "removeTime": 1787235912454
     }
   }
 }

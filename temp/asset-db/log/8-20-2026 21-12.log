@@ -2370,3 +2370,260 @@
 8-20-2026 21:14:57-debug: [Build Memory track]: Sort some build options to settings.json start:221.17MB, end 221.47MB, increase: 304.61KB
 8-20-2026 21:14:57-debug: // ---- build task Sort some build options to settings.json ---- (4ms)
 8-20-2026 21:14:57-log: run build task Sort some build options to settings.json success in 4 ms√, progress: 15%
+8-20-2026 21:15:46-debug: refresh db internal success
+8-20-2026 21:15:46-debug: refresh db assets success
+8-20-2026 21:15:46-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:15:46-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:15:46-debug: asset-db:refresh-all-database (382ms)
+8-20-2026 21:15:46-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+8-20-2026 21:15:46-debug: asset-db:worker-effect-data-processing (2ms)
+8-20-2026 21:19:30-debug: refresh db internal success
+8-20-2026 21:19:30-debug: refresh db assets success
+8-20-2026 21:19:30-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:19:30-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:19:30-debug: asset-db:refresh-all-database (316ms)
+8-20-2026 21:19:30-debug: asset-db:worker-effect-data-processing (2ms)
+8-20-2026 21:19:30-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+8-20-2026 21:22:02-debug: refresh db internal success
+8-20-2026 21:22:02-debug: refresh db assets success
+8-20-2026 21:22:02-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:22:02-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:22:02-debug: asset-db:refresh-all-database (273ms)
+8-20-2026 21:22:02-debug: asset-db:worker-effect-data-processing (2ms)
+8-20-2026 21:22:02-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+8-20-2026 21:22:08-debug: refresh db internal success
+8-20-2026 21:22:09-debug: refresh db assets success
+8-20-2026 21:22:09-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:22:09-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:22:09-debug: asset-db:refresh-all-database (162ms)
+8-20-2026 21:22:09-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+8-20-2026 21:22:09-debug: asset-db:worker-effect-data-processing (1ms)
+8-20-2026 21:22:11-debug: refresh db internal success
+8-20-2026 21:22:11-debug: refresh db assets success
+8-20-2026 21:22:11-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:22:11-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:22:11-debug: asset-db:refresh-all-database (149ms)
+8-20-2026 21:22:11-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+8-20-2026 21:22:11-debug: asset-db:worker-effect-data-processing (1ms)
+8-20-2026 21:23:03-debug: refresh db internal success
+8-20-2026 21:23:03-debug: refresh db assets success
+8-20-2026 21:23:03-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:23:03-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:23:03-debug: asset-db:refresh-all-database (333ms)
+8-20-2026 21:23:03-debug: asset-db:worker-effect-data-processing (1ms)
+8-20-2026 21:23:03-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+8-20-2026 21:23:12-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine...
+8-20-2026 21:23:12-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spinebackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:12-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets success
+8-20-2026 21:23:19-debug: refresh db internal success
+8-20-2026 21:23:19-debug: refresh db assets success
+8-20-2026 21:23:19-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:23:19-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:23:19-debug: asset-db:refresh-all-database (158ms)
+8-20-2026 21:23:19-debug: asset-db:worker-effect-data-processing (2ms)
+8-20-2026 21:23:19-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+8-20-2026 21:23:21-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42...
+8-20-2026 21:23:21-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.atlas.txtbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:21-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.jsonbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:21-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.pngbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:21-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42background: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:21-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42background: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:21-log: UUID is initialized for D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.png.
+8-20-2026 21:23:21-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.png@6c48abackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:21-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.png@f9941background: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:21-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine success
+8-20-2026 21:23:21-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.jsonbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:21-log: UUID is initialized for D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.png.
+8-20-2026 21:23:21-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spinebackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:28-debug: start move asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.atlas.txt -> D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.atlas.txt...
+8-20-2026 21:23:28-debug: start move asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.json -> D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.json...
+8-20-2026 21:23:28-debug: start move asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.png -> D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png...
+8-20-2026 21:23:28-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.atlas.txt...
+8-20-2026 21:23:28-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.json...
+8-20-2026 21:23:28-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png...
+8-20-2026 21:23:28-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.atlas.txtbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:28-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.jsonbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:28-log: UUID is initialized for D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png.
+8-20-2026 21:23:28-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.pngbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:28-debug: %cReImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png@6c48abackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:28-debug: %cReImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png@f9941background: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:29-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42 success
+8-20-2026 21:23:29-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42...
+8-20-2026 21:23:29-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42 success
+8-20-2026 21:23:29-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42 success
+8-20-2026 21:23:29-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42...
+8-20-2026 21:23:29-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42...
+8-20-2026 21:23:29-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42background: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:29-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.jsonbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:29-log: UUID is initialized for D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png.
+8-20-2026 21:23:29-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42 success
+8-20-2026 21:23:29-debug: move asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.atlas.txt -> D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.atlas.txt success
+8-20-2026 21:23:29-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42 success
+8-20-2026 21:23:29-debug: move asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.json -> D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.json success
+8-20-2026 21:23:29-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42 success
+8-20-2026 21:23:29-debug: move asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42\box-ingame.png -> D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png success
+8-20-2026 21:23:29-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42background: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:30-debug: programming:execute-script (1ms)
+8-20-2026 21:23:32-debug: start remove asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42...
+8-20-2026 21:23:32-debug: refresh db internal success
+8-20-2026 21:23:32-debug: %cDestroy%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42background: #ffb8b8; color: #000;color: #000;
+8-20-2026 21:23:32-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42background: #aaff85; color: #000;color: #000;
+8-20-2026 21:23:32-log: The asset database is locked, asset operations(bound _refreshAsset) will delay response, please wait a moment.
+8-20-2026 21:23:32-debug: refresh db assets success
+8-20-2026 21:23:32-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:23:32-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:23:32-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42 success
+8-20-2026 21:23:32-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42...
+8-20-2026 21:23:32-debug: remove asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box42 success
+8-20-2026 21:23:32-debug: asset-db:refresh-all-database (215ms)
+8-20-2026 21:23:32-debug: asset-db:worker-effect-data-processing (3ms)
+8-20-2026 21:23:32-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+8-20-2026 21:23:45-debug: Cannot find the asset handler of operate open for importer spine-data
+8-20-2026 21:23:49-debug: refresh db internal success
+8-20-2026 21:23:49-debug: refresh db assets success
+8-20-2026 21:23:49-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:23:49-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:23:49-debug: asset-db:refresh-all-database (192ms)
+8-20-2026 21:23:49-debug: asset-db:worker-effect-data-processing (1ms)
+8-20-2026 21:23:49-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+8-20-2026 21:24:06-debug: Query all assets info in project
+8-20-2026 21:24:06-debug: init custom config: keepNodeUuid: false, useCache: true
+8-20-2026 21:24:06-debug: Skip compress image, progress: 0%
+8-20-2026 21:24:06-debug: Init all bundles start..., progress: 0%
+8-20-2026 21:24:06-debug: Num of bundles: 3..., progress: 0%
+8-20-2026 21:24:06-debug: Query asset bundle start, progress: 0%
+8-20-2026 21:24:06-debug: // ---- build task Query asset bundle ----
+8-20-2026 21:24:06-debug: Init bundle root assets start..., progress: 0%
+8-20-2026 21:24:06-debug: Query preload assets/scripts from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,9361fd90-ba52-4f84-aa93-6e878fd576ca,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,6a2d0734-bd9e-4ddf-946e-caa52498cb75,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,15049ccd-4dd7-451e-a8ae-af66735c929e,521c5f6e-1a26-42e2-8108-4400c912d9bf,4c3ce6de-e6d1-47f7-aa36-36b9b58f72d3,4361db28-3f24-44cc-8e51-32ee5fd651ac,cafd95c9-c558-46f9-9812-1224b65c09ee,28d6d6b8-3f66-4a73-9795-17a0852ba2d4,2df0a40b-26c2-47ce-be0d-4d3cd4164737,dace6a58-1705-48c7-a275-70afc9534e88,ec8106fe-05bf-4e94-943c-e0d3b7bb5e45,39f74202-ead5-4a45-b966-273d526adbf1,8f6ac413-2f1e-4b88-b26f-54556b5dd510,45e7c0c8-2699-4912-b45f-d42bb8384189,84ac6f69-3086-455a-86a4-561da8ee710b,5c601d96-e4c7-4698-991b-7ee674b11079,bf0a6d94-58f0-4ad2-bdf2-c4a31c7dd856,ff9b0199-ce04-4cfe-86cc-6c719f08d6e4,de1c2107-70c8-4021-8459-6399f24d01c6,cbf30902-517f-40dc-af90-a550bac27cf1
+8-20-2026 21:24:06-debug: Init bundle root assets success..., progress: 0%
+8-20-2026 21:24:06-debug:   Number of other assets: 1265
+8-20-2026 21:24:06-debug:   Number of all scenes: 1
+8-20-2026 21:24:06-debug:   Number of all scripts: 68
+8-20-2026 21:24:06-debug: // ---- build task Query asset bundle ---- (22ms)
+8-20-2026 21:24:06-log: run build task Query asset bundle success in 22 ms√, progress: 5%
+8-20-2026 21:24:06-debug: [Build Memory track]: Query asset bundle start:212.69MB, end 212.74MB, increase: 43.69KB
+8-20-2026 21:24:06-debug: Query asset bundle start, progress: 5%
+8-20-2026 21:24:06-debug: // ---- build task Query asset bundle ----
+8-20-2026 21:24:06-debug: // ---- build task Query asset bundle ---- (4ms)
+8-20-2026 21:24:06-log: run build task Query asset bundle success in 4 ms√, progress: 10%
+8-20-2026 21:24:06-debug: [Build Memory track]: Query asset bundle start:212.76MB, end 213.01MB, increase: 249.39KB
+8-20-2026 21:24:06-debug: Sort some build options to settings.json start, progress: 10%
+8-20-2026 21:24:06-debug: // ---- build task Sort some build options to settings.json ----
+8-20-2026 21:24:06-debug: // ---- build task Sort some build options to settings.json ---- (3ms)
+8-20-2026 21:24:06-log: run build task Sort some build options to settings.json success in 3 ms√, progress: 12%
+8-20-2026 21:24:06-debug: [Build Memory track]: Sort some build options to settings.json start:213.03MB, end 213.07MB, increase: 33.63KB
+8-20-2026 21:24:06-debug: Fill script data to settings start, progress: 12%
+8-20-2026 21:24:06-debug: // ---- build task Fill script data to settings ----
+8-20-2026 21:24:06-debug: // ---- build task Fill script data to settings ---- (9ms)
+8-20-2026 21:24:06-log: run build task Fill script data to settings success in 9 ms√, progress: 13%
+8-20-2026 21:24:06-debug: [Build Memory track]: Fill script data to settings start:213.10MB, end 212.37MB, increase: -740.37KB
+8-20-2026 21:24:06-debug: Sort some build options to settings.json start, progress: 13%
+8-20-2026 21:24:06-debug: // ---- build task Sort some build options to settings.json ----
+8-20-2026 21:24:06-debug: // ---- build task Sort some build options to settings.json ---- (14ms)
+8-20-2026 21:24:06-log: run build task Sort some build options to settings.json success in 14 ms√, progress: 15%
+8-20-2026 21:24:06-debug: [Build Memory track]: Sort some build options to settings.json start:212.40MB, end 212.70MB, increase: 308.98KB
+8-20-2026 21:24:14-debug: Cannot find the asset handler of operate open for importer spine-data
+8-20-2026 21:24:18-debug: refresh db internal success
+8-20-2026 21:24:18-debug: refresh db assets success
+8-20-2026 21:24:18-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:24:18-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:24:18-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+8-20-2026 21:24:18-debug: asset-db:refresh-all-database (214ms)
+8-20-2026 21:24:26-debug: Query all assets info in project
+8-20-2026 21:24:26-debug: init custom config: keepNodeUuid: false, useCache: true
+8-20-2026 21:24:26-debug: Skip compress image, progress: 0%
+8-20-2026 21:24:26-debug: Init all bundles start..., progress: 0%
+8-20-2026 21:24:26-debug: Query asset bundle start, progress: 0%
+8-20-2026 21:24:26-debug: // ---- build task Query asset bundle ----
+8-20-2026 21:24:26-debug: Num of bundles: 3..., progress: 0%
+8-20-2026 21:24:26-debug: Init bundle root assets start..., progress: 0%
+8-20-2026 21:24:26-debug: Query preload assets/scripts from cc.config.json: 60f7195c-ec2a-45eb-ba94-8955f60e81d0,1c02ae6f-4492-4915-b8f8-7492a3b1e4cd,810e96e4-e456-4468-9b59-f4e8f39732c0,efe8e2a3-eace-427b-b4f1-cb8a937ec77d,e9aa9a3e-5b2b-4ac7-a2c7-073de2b2b24f,8bbdbcdd-5cd4-4100-b6d5-b7c9625b6107,50f4348b-c883-4e2f-8f11-ce233b859fa1,fda095cb-831d-4601-ad94-846013963de8,f92806d7-1768-443f-afe8-12bcde84d0f0,dd3a144d-ab7f-41f0-82b8-2e43a090d496,f0416e68-0200-4b77-a926-4f9d16e494da,511d2633-09a7-4bdd-ac42-f778032124b3,5d45aa00-e064-4938-b314-4265f0c2258c,9361fd90-ba52-4f84-aa93-6e878fd576ca,970b0598-bcb0-4714-91fb-2e81440dccd8,bcd64cc6-2dd9-43f6-abbe-66318d332032,d930590d-bb92-4cc8-8bd1-23cd027f9edf,a3cd009f-0ab0-420d-9278-b9fdab939bbc,6a2d0734-bd9e-4ddf-946e-caa52498cb75,d1346436-ac96-4271-b863-1f4fdead95b0,971bdb23-3ff6-43eb-b422-1c30165a3663,17debcc3-0a6b-4b8a-b00b-dc58b885581e,711ebe11-f673-4cd9-9a83-63c60ba54c5b,c0143906-9aed-447e-9436-2ae8512d1b6e,14da1725-c4c2-42b4-ab08-ee0aeb6898b3,081cab31-dccd-428e-8652-f2404cc81c47,78e0584a-4343-4727-8f37-e14e65c2a2db,871c3b6c-7379-419d-bda3-794b239ab90d,c27215d8-6835-4b68-bfbb-bdeac6100c04,b5d6115f-0370-4d7c-aad3-c194cc71cf98,15049ccd-4dd7-451e-a8ae-af66735c929e,521c5f6e-1a26-42e2-8108-4400c912d9bf,4c3ce6de-e6d1-47f7-aa36-36b9b58f72d3,4361db28-3f24-44cc-8e51-32ee5fd651ac,cafd95c9-c558-46f9-9812-1224b65c09ee,28d6d6b8-3f66-4a73-9795-17a0852ba2d4,2df0a40b-26c2-47ce-be0d-4d3cd4164737,dace6a58-1705-48c7-a275-70afc9534e88,ec8106fe-05bf-4e94-943c-e0d3b7bb5e45,39f74202-ead5-4a45-b966-273d526adbf1,8f6ac413-2f1e-4b88-b26f-54556b5dd510,45e7c0c8-2699-4912-b45f-d42bb8384189,84ac6f69-3086-455a-86a4-561da8ee710b,5c601d96-e4c7-4698-991b-7ee674b11079,bf0a6d94-58f0-4ad2-bdf2-c4a31c7dd856,ff9b0199-ce04-4cfe-86cc-6c719f08d6e4,de1c2107-70c8-4021-8459-6399f24d01c6,cbf30902-517f-40dc-af90-a550bac27cf1
+8-20-2026 21:24:26-debug:   Number of other assets: 1265
+8-20-2026 21:24:26-debug: Init bundle root assets success..., progress: 0%
+8-20-2026 21:24:26-debug:   Number of all scripts: 68
+8-20-2026 21:24:26-debug:   Number of all scenes: 1
+8-20-2026 21:24:26-debug: // ---- build task Query asset bundle ---- (20ms)
+8-20-2026 21:24:26-log: run build task Query asset bundle success in 20 ms√, progress: 5%
+8-20-2026 21:24:26-debug: [Build Memory track]: Query asset bundle start:214.91MB, end 214.90MB, increase: -16.32KB
+8-20-2026 21:24:26-debug: Query asset bundle start, progress: 5%
+8-20-2026 21:24:26-debug: // ---- build task Query asset bundle ----
+8-20-2026 21:24:26-debug: // ---- build task Query asset bundle ---- (3ms)
+8-20-2026 21:24:26-log: run build task Query asset bundle success in 3 ms√, progress: 10%
+8-20-2026 21:24:26-debug: [Build Memory track]: Query asset bundle start:214.92MB, end 215.16MB, increase: 245.54KB
+8-20-2026 21:24:26-debug: Sort some build options to settings.json start, progress: 10%
+8-20-2026 21:24:26-debug: // ---- build task Sort some build options to settings.json ----
+8-20-2026 21:24:26-log: run build task Sort some build options to settings.json success in 1 ms√, progress: 12%
+8-20-2026 21:24:26-debug: [Build Memory track]: Sort some build options to settings.json start:215.19MB, end 215.22MB, increase: 25.65KB
+8-20-2026 21:24:26-debug: Fill script data to settings start, progress: 12%
+8-20-2026 21:24:26-debug: // ---- build task Sort some build options to settings.json ---- (1ms)
+8-20-2026 21:24:26-debug: // ---- build task Fill script data to settings ----
+8-20-2026 21:24:26-debug: // ---- build task Fill script data to settings ---- (1ms)
+8-20-2026 21:24:26-log: run build task Fill script data to settings success in 1 ms√, progress: 13%
+8-20-2026 21:24:26-debug: [Build Memory track]: Fill script data to settings start:215.24MB, end 215.27MB, increase: 25.76KB
+8-20-2026 21:24:26-debug: // ---- build task Sort some build options to settings.json ----
+8-20-2026 21:24:26-debug: Sort some build options to settings.json start, progress: 13%
+8-20-2026 21:24:26-log: run build task Sort some build options to settings.json success in 3 ms√, progress: 15%
+8-20-2026 21:24:26-debug: [Build Memory track]: Sort some build options to settings.json start:215.29MB, end 215.60MB, increase: 310.91KB
+8-20-2026 21:24:26-debug: // ---- build task Sort some build options to settings.json ---- (3ms)
+8-20-2026 21:24:45-debug: refresh db internal success
+8-20-2026 21:24:46-debug: refresh db assets success
+8-20-2026 21:24:46-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:24:46-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:24:46-debug: asset-db:refresh-all-database (211ms)
+8-20-2026 21:24:46-debug: asset-db:worker-effect-data-processing (42ms)
+8-20-2026 21:24:46-debug: asset-db-hook-engine-extends-afterRefresh (43ms)
+8-20-2026 21:25:00-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.pngbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:00-debug: %cReImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png@6c48abackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:00-debug: %cReImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png@f9941background: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:00-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.jsonbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:00-log: UUID is initialized for D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png.
+8-20-2026 21:25:00-debug: asset-db:reimport-asset2443c98c-fbb0-41a0-bf97-f6ee96708764 (86ms)
+8-20-2026 21:25:12-debug: programming:execute-script (1ms)
+8-20-2026 21:25:12-debug: start remove asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42...
+8-20-2026 21:25:12-debug: refresh db internal success
+8-20-2026 21:25:12-debug: %cDestroy%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42background: #ffb8b8; color: #000;color: #000;
+8-20-2026 21:25:12-debug: %cDestroy%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.atlas.txtbackground: #ffb8b8; color: #000;color: #000;
+8-20-2026 21:25:12-debug: %cDestroy%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.jsonbackground: #ffb8b8; color: #000;color: #000;
+8-20-2026 21:25:12-debug: %cDestroy%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png@6c48abackground: #ffb8b8; color: #000;color: #000;
+8-20-2026 21:25:12-debug: %cDestroy%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.png@f9941background: #ffb8b8; color: #000;color: #000;
+8-20-2026 21:25:12-debug: %cDestroy%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42\box-ingame.pngbackground: #ffb8b8; color: #000;color: #000;
+8-20-2026 21:25:12-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spinebackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:12-debug: refresh db assets success
+8-20-2026 21:25:12-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:25:12-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:25:12-debug: asset-db:refresh-all-database (211ms)
+8-20-2026 21:25:12-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42...
+8-20-2026 21:25:12-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine success
+8-20-2026 21:25:12-debug: remove asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box42 success
+8-20-2026 21:25:23-debug: refresh db internal success
+8-20-2026 21:25:24-debug: refresh db assets success
+8-20-2026 21:25:24-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:25:24-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:25:24-debug: asset-db:refresh-all-database (271ms)
+8-20-2026 21:25:24-debug: asset-db:worker-effect-data-processing (7ms)
+8-20-2026 21:25:24-debug: asset-db-hook-engine-extends-afterRefresh (8ms)
+8-20-2026 21:25:25-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box-ingame.atlas.txt...
+8-20-2026 21:25:25-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box-ingame.atlas.txtbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:25-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box-ingame.png...
+8-20-2026 21:25:25-debug: start refresh asset from D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box-ingame.json...
+8-20-2026 21:25:25-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box-ingame.pngbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:25-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box-ingame.png@6c48abackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:25-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box-ingame.png@f9941background: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:25-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box-ingame.jsonbackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:25-log: UUID is initialized for D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine\box-ingame.png.
+8-20-2026 21:25:25-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine success
+8-20-2026 21:25:25-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine success
+8-20-2026 21:25:25-debug: refresh asset D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spine success
+8-20-2026 21:25:25-debug: %cImport%c: D:\CocosProject\PLY_Dreamyroom_Cocos\assets\0.Spinebackground: #aaff85; color: #000;color: #000;
+8-20-2026 21:25:52-debug: refresh db internal success
+8-20-2026 21:25:53-debug: refresh db assets success
+8-20-2026 21:25:53-debug: Run asset db hook engine-extends:afterRefresh ...
+8-20-2026 21:25:53-debug: Run asset db hook engine-extends:afterRefresh success!
+8-20-2026 21:25:53-debug: asset-db:refresh-all-database (200ms)
+8-20-2026 21:25:53-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+8-20-2026 21:25:53-debug: asset-db:worker-effect-data-processing (1ms)
+8-20-2026 21:26:02-warn: Please set the application in {preferences} -> {program} -> {scriptEditor} to better open the script
+8-20-2026 21:26:04-warn: Please set the application in {preferences} -> {program} -> {scriptEditor} to better open the script
+8-20-2026 21:26:07-warn: Please set the application in {preferences} -> {program} -> {scriptEditor} to better open the script
+8-20-2026 21:26:09-warn: Please set the application in {preferences} -> {program} -> {scriptEditor} to better open the script
+8-20-2026 21:26:12-warn: Please set the application in {preferences} -> {program} -> {scriptEditor} to better open the script
