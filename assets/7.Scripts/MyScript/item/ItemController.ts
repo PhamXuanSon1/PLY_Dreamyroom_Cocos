@@ -133,7 +133,10 @@ export class ItemController extends Component implements IPointerHandler {
         this.dragging = true;
         this.itemGraphic.bringToFront();
 
-        // 3. Thông báo cho ItemManager
+        // 3. Hiện bóng (shadow) ở vị trí đích — chỉ hiện khi đang kéo item này
+        this.showTargetShadow();
+
+        // 4. Thông báo cho ItemManager
         const im = ItemManager.instance;
         if (im) {
             im.isDragging = true;
@@ -178,6 +181,26 @@ export class ItemController extends Component implements IPointerHandler {
         this.snapFailed();
     }
 
+    // ======================================================== Target shadow
+    /** Bật bóng ở đích khi bắt đầu kéo item. */
+    private showTargetShadow(): void {
+        const target = this.targetPoint;
+        if (!target || !target.isValid || this.isPlaced) return;
+
+        target.active = true;
+        this.itemGraphic.handleTargetSprites(target, true);
+    }
+
+    /** Tắt bóng khi thả tay mà chưa ghép được. */
+    private hideTargetShadow(): void {
+        const target = this.targetPoint;
+        if (!target || !target.isValid || this.isPlaced) return;
+
+        // trả sprite về màu gốc trước rồi mới ẩn node, để lần sau bật lại sạch sẽ
+        this.itemGraphic.restoreTargetSprites();
+        target.active = false;
+    }
+
     // ======================================================== Snap Logic
     /** Kiểm tra xem item có đủ gần đích để ghép không */
     private checkSnap(): void {
@@ -209,6 +232,9 @@ export class ItemController extends Component implements IPointerHandler {
         }
 
         this.itemMovement.snapFailedAnimation();
+
+        // Thả hụt -> ẩn bóng đi, chỉ hiện lại khi cầm item lên lần sau
+        this.hideTargetShadow();
 
         if (this.currentHolderSlot) {
             this.currentHolderSlot.startBobbingAnimation();

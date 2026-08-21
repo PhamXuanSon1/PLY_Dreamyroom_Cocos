@@ -138,6 +138,8 @@ export class BoxController extends Component implements IPointerHandler {
 
             const finish = () => {
                 this.finishedTutorial = true;
+                // Unity giữ cờ này trên ItemManager — đồng bộ để script khác đọc được
+                if (ItemManager.instance) ItemManager.instance.finishedTutorial = true;
                 this.isClicked = false;
             };
 
@@ -186,12 +188,6 @@ export class BoxController extends Component implements IPointerHandler {
         TweenUtil.scaleTo(currentItem, new Vec3(targetScale, targetScale, targetScale), 0.4, 'backOut');
 
         currentItem.setRotationFromEuler(0, 0, randomRange(-90, 90));
-
-        // Bật bóng (Shadow) tại vị trí đích của item vừa sinh ra từ hộp
-        if (itemScript && itemScript.targetPoint) {
-            itemScript.targetPoint.active = true;
-            itemScript.itemGraphic?.handleTargetSprites(itemScript.targetPoint, true);
-        }
 
         const holder = im.getCurrentHolder();
         if (!holder) return;
