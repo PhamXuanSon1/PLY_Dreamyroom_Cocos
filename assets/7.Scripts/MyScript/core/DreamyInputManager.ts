@@ -96,7 +96,7 @@ export class DreamyInputManager extends Component {
         if (this.dragLayerRoot) {
             ItemGraphic.dragLayerRoot = this.dragLayerRoot;
         } else {
-            ItemGraphic.dragLayerRoot = this.node;
+            ItemGraphic.dragLayerRoot = null;
         }
     }
 

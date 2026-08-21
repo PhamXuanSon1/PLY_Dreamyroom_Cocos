@@ -16,6 +16,7 @@ import { TurnOnSpine } from '../utils/TurnOnSpine';
 import { ChangeLight } from '../utils/ChangeLight';
 import { ObjectPool, PoolType } from '../core/ObjectPool';
 import { BlinkEffect } from '../effects/BlinkEffect';
+import { TweenUtil } from '../core/TweenUtil';
 import { sm, SoundType } from '../../Manager/SoundManager';
 import { SoundManager as DreamySoundManager } from '../core/SoundManager';
 
@@ -88,6 +89,7 @@ export class ItemController extends Component implements IPointerHandler {
     private dragging = false;
     private moving = false;
     private itemCollider: Collider2D | null = null;
+    private initialWorldPos = new Vec3();
 
     // ======================================================== Lifecycle
     onLoad() {
@@ -120,6 +122,8 @@ export class ItemController extends Component implements IPointerHandler {
     /** Bắt đầu nhấc item lên (Pick) */
     onPointerDown(_worldPos: Vec3, _ev: EventTouch): boolean {
         if (this.isPlaced || this.moving) return false;
+
+        this.initialWorldPos = this.node.worldPosition.clone();
 
         // 1. Phát âm thanh Pick từ PLY_SoundManager
         if (sm) {
@@ -209,9 +213,22 @@ export class ItemController extends Component implements IPointerHandler {
             return;
         }
 
-        const distance = Vec3.distance(this.node.worldPosition, this.targetPoint.worldPosition);
+        const targetCollider = this.targetPoint.getComponent(Collider2D);
+        let isSnapped = false;
 
-        if (distance <= this.snapDistance) {
+        if (targetCollider && targetCollider.worldAABB) {
+            const itemPos2D = new Vec2(this.node.worldPosition.x, this.node.worldPosition.y);
+            isSnapped = targetCollider.worldAABB.contains(itemPos2D);
+        }
+
+        if (!isSnapped) {
+            const distance = Vec3.distance(this.node.worldPosition, this.targetPoint.worldPosition);
+            if (distance <= this.snapDistance) {
+                isSnapped = true;
+            }
+        }
+
+        if (isSnapped) {
             // Kiểm tra điều kiện phụ (SeatHandler nếu có)
             const seat = this.getComponent(SeatHandler);
             if (seat && !seat.canPlace()) {
@@ -225,7 +242,7 @@ export class ItemController extends Component implements IPointerHandler {
         }
     }
 
-    /** Thả trượt: Bay về vị trí ban đầu + phát âm thanh LandFail */
+    /** Thả trượt: Bay về vị trí ban đầu (Holder / vị trí nhấc lên) + phát âm thanh LandFail */
     private snapFailed(): void {
         if (sm) {
             sm.playSound(SoundType.LandFail);
@@ -237,12 +254,22 @@ export class ItemController extends Component implements IPointerHandler {
         this.hideTargetShadow();
 
         if (this.currentHolderSlot) {
-            this.currentHolderSlot.startBobbingAnimation();
-            this.itemGraphic.restoreOriginalLayers();
+            const returnPos = this.currentHolderSlot.originPosition
+                ? this.currentHolderSlot.originPosition.worldPosition.clone()
+                : this.currentHolderSlot.node.worldPosition.clone();
+
+            TweenUtil.killAll(this.node);
+            TweenUtil.moveTo(this.node, returnPos, this.moveDuration, 'quadOut', () => {
+                this.itemGraphic.restoreOriginalLayers();
+                this.currentHolderSlot?.startBobbingAnimation();
+            });
         } else if (WorldScrollManager.instance) {
             WorldScrollManager.instance.itemReturned(this);
         } else {
-            this.itemGraphic.restoreOriginalLayers();
+            TweenUtil.killAll(this.node);
+            TweenUtil.moveTo(this.node, this.initialWorldPos, this.moveDuration, 'quadOut', () => {
+                this.itemGraphic.restoreOriginalLayers();
+            });
         }
     }
 

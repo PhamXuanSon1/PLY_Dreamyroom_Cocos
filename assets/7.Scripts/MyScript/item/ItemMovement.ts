@@ -12,17 +12,34 @@
 
 import { _decorator, Component, Node, Vec3, tween, Tween, randomRange } from 'cc';
 import { ItemGraphic } from './ItemGraphic';
+import { ItemManager } from '../managers/ItemManager';
 
 const { ccclass, property } = _decorator;
 
 @ccclass('ItemMovement')
 export class ItemMovement extends Component {
 
-    // ---- cấu hình chung (bên Unity nằm trên ItemManager) ----
+    // ---- cấu hình chung (lấy động từ ItemManager trên Inspector) ----
+    private static _enableDragScale: boolean | null = null;
+    private static _dragScaleAmount: number | null = null;
+
     /** Unity: ItemManager.enableDragScale */
-    static enableDragScale = true;
-    /** Unity: ItemManager.dragScaleAmount = 1.1 */
-    static dragScaleAmount = 1.1;
+    static get enableDragScale(): boolean {
+        if (ItemManager.instance) return ItemManager.instance.enableDragScale;
+        return ItemMovement._enableDragScale ?? false;
+    }
+    static set enableDragScale(v: boolean) {
+        ItemMovement._enableDragScale = v;
+    }
+
+    /** Unity: ItemManager.dragScaleAmount */
+    static get dragScaleAmount(): number {
+        if (ItemManager.instance) return ItemManager.instance.dragScaleAmount;
+        return ItemMovement._dragScaleAmount ?? 1.1;
+    }
+    static set dragScaleAmount(v: number) {
+        ItemMovement._dragScaleAmount = v;
+    }
 
     // ---- field khớp tên bản Unity ----
     // Bên Unity 2 field này gán trong Awake, trong scene chúng là [0,0,0].
@@ -79,14 +96,14 @@ export class ItemMovement extends Component {
         // được click ngay khi vừa bay ra khỏi hộp) — nếu không item sẽ scale về 0.
         if (ItemMovement.isZeroScale(this.originalScale)) this.captureOriginal();
 
-        const target = ItemMovement.enableDragScale
-            ? new Vec3(
+        if (ItemMovement.enableDragScale) {
+            const target = new Vec3(
                 this.originalScale.x * ItemMovement.dragScaleAmount,
                 this.originalScale.y * ItemMovement.dragScaleAmount,
-                this.originalScale.z * ItemMovement.dragScaleAmount)
-            : this.originalScale.clone();
-
-        tween(this.node).to(0.2, { scale: target }, { easing: 'quadOut' }).start();
+                this.originalScale.z * ItemMovement.dragScaleAmount,
+            );
+            tween(this.node).to(0.2, { scale: target }, { easing: 'quadOut' }).start();
+        }
 
         // trả lại rotation gốc
         tween(this.node).to(0.3, { eulerAngles: this.originalRotation.clone() }, { easing: 'quadOut' }).start();

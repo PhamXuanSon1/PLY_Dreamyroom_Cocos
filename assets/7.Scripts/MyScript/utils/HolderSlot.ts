@@ -41,6 +41,8 @@ export class HolderSlot extends Component {
     setItem(item: Node): void {
         this.itemInSlot = item;
         this.isEmpty = false;
+        // Đặt Item là node con (Child) của Holder slot này
+        item.setParent(this.node, true);
         this.startBobbingAnimation();
     }
 

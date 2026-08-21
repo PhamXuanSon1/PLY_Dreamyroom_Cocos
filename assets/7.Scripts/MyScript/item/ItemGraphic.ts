@@ -79,7 +79,7 @@ export class ItemGraphic extends Component {
     private resolveDragLayer(): Node | null {
         const root = (ItemGraphic.dragLayerRoot && ItemGraphic.dragLayerRoot.isValid)
             ? ItemGraphic.dragLayerRoot
-            : this.node.parent?.parent ?? null;
+            : this.node.parent ?? this.node.parent?.parent ?? null;
         if (!root) return null;
 
         let layer = root.getChildByName(DRAG_LAYER_NAME);
