@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "47_chair",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 159,
+      "height": 156
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 159,
+      "height": 156
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -79.5,
+        -78,
+        0,
+        79.5,
+        -78,
+        0,
+        -79.5,
+        78,
+        0,
+        79.5,
+        78,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        156,
+        159,
+        156,
+        0,
+        0,
+        159,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -79.5,
+        "y": -78,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 79.5,
+        "y": 78,
+        "z": 0
+      }
+    },
+    "texture": "87ac628e-ac6b-4644-866a-80efdd30ac60@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}
