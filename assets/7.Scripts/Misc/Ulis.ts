@@ -6,7 +6,7 @@
 //  - https://docs.cocos.com/creator/2.4/manual/en/scripting/life-cycle-callbacks.html
 
 import { EventTouch, Node, Rect, Sprite, SpriteFrame, TweenEasing, UITransform, Vec2, Vec3, _decorator, misc, rect, resources, v2, v3 } from 'cc';
-import { pc } from '../Manager/PointerController';
+import { ipm } from '../Manager/InputManager';
 import { ui } from '../Manager/UI';
 const {ccclass, property} = _decorator;
 
@@ -423,10 +423,10 @@ export class Zoom {
     
     
     binding() {
-        if(!pc) return;
-        pc.bindingStart = this.onTouchStart.bind(this);
-        pc.bindingMove = this.onTouchMove.bind(this);
-        pc.bindingEnd = this.onTouchEnd.bind(this);
+        if(!ipm) return;
+        ipm.bindingStart = this.onTouchStart.bind(this);
+        ipm.bindingMove = this.onTouchMove.bind(this);
+        ipm.bindingEnd = this.onTouchEnd.bind(this);
     }
     startPos: Vec3 = null
     s1: Vec2 = null!;

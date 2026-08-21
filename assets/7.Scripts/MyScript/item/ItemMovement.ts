@@ -11,6 +11,7 @@
  */
 
 import { _decorator, Component, Node, Vec3, tween, Tween, randomRange } from 'cc';
+import { ItemGraphic } from './ItemGraphic';
 
 const { ccclass, property } = _decorator;
 
@@ -40,12 +41,32 @@ export class ItemMovement extends Component {
 
     start() {
         // SceneBuilder gán field ở pass 2, có thể ghi đè bằng [0,0,0] từ JSON.
-        // Bắt lại ở start() cho chắc.
-        if (this.originalScale.equals(Vec3.ZERO)) this.captureOriginal();
+        // Bắt lại ở start() cho chắc — captureOriginal() tự bỏ qua scale 0.
+        if (ItemMovement.isZeroScale(this.originalScale)) this.captureOriginal();
     }
 
-    private captureOriginal(): void {
-        this.originalScale = this.node.scale.clone();
+    /** scale gần bằng 0 => không dùng làm scale gốc được. */
+    private static isZeroScale(v: Vec3): boolean {
+        return Math.abs(v.x) < 1e-4 || Math.abs(v.y) < 1e-4;
+    }
+
+    /**
+     * Chụp lại scale/rotation gốc từ node.
+     * ⚠ Item vừa sinh ra từ hộp bị setScale(0) rồi mới tween phóng to, nên nếu chụp
+     *   đúng frame đó sẽ ra [0,0,0] và item biến mất khi click. Vì vậy khi node đang
+     *   ở scale 0 thì lấy listScale của ItemGraphic (scale khi nằm trong thanh bar),
+     *   cuối cùng mới fallback về 1.
+     */
+    captureOriginal(): void {
+        const s = this.node.scale;
+        if (!ItemMovement.isZeroScale(s)) {
+            this.originalScale = s.clone();
+        } else {
+            const list = this.getComponent(ItemGraphic)?.listScale;
+            this.originalScale = (list && !ItemMovement.isZeroScale(list))
+                ? list.clone()
+                : new Vec3(1, 1, 1);
+        }
         this.originalRotation = this.node.eulerAngles.clone();
     }
 
@@ -53,6 +74,10 @@ export class ItemMovement extends Component {
     startDragAnimation(): void {
         Tween.stopAllByTarget(this.node);
         this.isScaling = true;
+
+        // Phòng trường hợp originalScale vẫn còn [0,0,0] (bị JSON ghi đè, hoặc item
+        // được click ngay khi vừa bay ra khỏi hộp) — nếu không item sẽ scale về 0.
+        if (ItemMovement.isZeroScale(this.originalScale)) this.captureOriginal();
 
         const target = ItemMovement.enableDragScale
             ? new Vec3(

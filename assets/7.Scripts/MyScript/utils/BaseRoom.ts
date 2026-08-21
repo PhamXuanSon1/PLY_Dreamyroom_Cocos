@@ -88,7 +88,7 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     // ======================================================== pan
     hitTest(worldPos: Vec3): boolean {
         if (!this.interactionEnabled) return false;
-        return DreamyInputManager.hitTestSelfOrChildren(this.node, worldPos);
+        return DreamyInputManager.hitTestCollider(this.node, worldPos);
     }
 
     onPointerDown(worldPos: Vec3, _ev: EventTouch): boolean {

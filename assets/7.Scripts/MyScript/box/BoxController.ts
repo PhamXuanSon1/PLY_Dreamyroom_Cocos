@@ -8,13 +8,14 @@
  *   - Bỏ SetLayerRecursively (dead code bên Unity, không nơi nào gọi).
  */
 
-import { _decorator, Component, Node, Vec3, EventTouch, randomRange } from 'cc';
+import { _decorator, BoxCollider2D, Component, EventTouch, Node, randomRange, Vec2, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
-import { BoxGraphic, BoxState } from './BoxGraphic';
+import { BoxGraphic } from './BoxGraphic';
 import { ItemManager } from '../managers/ItemManager';
 import { UIManager } from '../managers/UIManager';
 import { BaseRoomManager } from '../managers/BaseRoomManager';
 import { ItemController } from '../item/ItemController';
+import { ItemMovement } from '../item/ItemMovement';
 import { HolderSlot } from '../utils/HolderSlot';
 import { HandOfBox } from '../utils/HandOfBox';
 import { SoundManager, FxType } from '../core/SoundManager';
@@ -25,14 +26,11 @@ const { ccclass, property } = _decorator;
 @ccclass('BoxController')
 export class BoxController extends Component implements IPointerHandler {
 
-    @property({ type: Node, tooltip: 'Vị trí item rớt ra từ hộp.' })
-    StartTf: Node | null = null;
-
-    @property({ type: Node, tooltip: 'Vị trí hộp bay tới trước khi biến mất.' })
-    endTf: Node | null = null;
-
     @property({ type: Node, tooltip: 'Vị trí hộp di chuyển tới sau intro.' })
     MoveAfterIntroPosOfBox: Node | null = null;
+
+    @property({ tooltip: 'Thời gian di chuyển hộp tới vị trí MoveAfterIntroPosOfBox (giây).' })
+    moveAfterIntroDuration = 1.2;
 
     @property({ type: Node, tooltip: 'Bàn tay/chữ hướng dẫn click vào hộp.' })
     handText: Node | null = null;
@@ -43,13 +41,24 @@ export class BoxController extends Component implements IPointerHandler {
     @property({ type: Node, tooltip: 'Thanh trượt UI hiện khi bắt đầu tương tác.' })
     slider: Node | null = null;
 
-    @property({ type: Node, tooltip: 'Object slogan.' })
-    sloganText: Node | null = null;
-
     @property({ tooltip: 'Đã xong lượt click tutorial mở hộp đầu tiên chưa.' })
     finishedTutorial = false;
 
+    // ========================================== THÔNG SỐ NHẢY ITEM (DOJUMP)
+    @property({ tooltip: 'Độ cao cực đại của đường bay Parabol (pixel).' })
+    jumpHeight = 150;
+
+    @property({ tooltip: 'Thời gian item bay từ hộp tới Holder (giây).' })
+    jumpDuration = 1.0;
+
+    @property({ tooltip: 'Số nhịp nảy khi bay (mặc định 1 nhịp).' })
+    jumpCount = 1;
+
+    @property({ tooltip: 'Kiểu gia tốc nảy (easing), vd: backOut, quadOut, sineOut.' })
+    jumpEasing = 'backOut';
+
     private isClicked = false;
+    private isClosing = false;
     private boxGraphic: BoxGraphic | null = null;
 
     readonly inputPriority = InputPriority.Box;
@@ -57,20 +66,36 @@ export class BoxController extends Component implements IPointerHandler {
     // ======================================================== lifecycle
     onLoad() {
         this.boxGraphic = this.getComponent(BoxGraphic);
-        this.boxGraphic?.changeState(BoxState.ReadyOpen);
+        this.boxGraphic?.playReady();
     }
 
-    onEnable() { DreamyInputManager.register(this); }
-    onDisable() { DreamyInputManager.unregister(this); }
+    onEnable() {
+        DreamyInputManager.register(this);
+        this.node.on(Node.EventType.TOUCH_START, this.onDirectTouch, this);
+    }
+
+    onDisable() {
+        DreamyInputManager.unregister(this);
+        this.node.off(Node.EventType.TOUCH_START, this.onDirectTouch, this);
+    }
+
+    private onDirectTouch(): void {
+        this.onClick();
+    }
 
     // ======================================================== input
     hitTest(worldPos: Vec3): boolean {
-        if (this.isClicked) return false;
-        return DreamyInputManager.hitTestSelfOrChildren(this.node, worldPos);
+        if (this.isClicked || this.isClosing) return false;
+        if (DreamyInputManager.hitTestCollider(this.node, worldPos)) return true;
+        const ut = this.getComponent(UITransform);
+        if (ut && ut.getBoundingBoxToWorld().contains(new Vec2(worldPos.x, worldPos.y))) {
+            return true;
+        }
+        return false;
     }
 
     onPointerDown(_worldPos: Vec3, _ev: EventTouch): boolean {
-        if (this.isClicked) return false;
+        if (this.isClicked || this.isClosing) return false;
         this.onClick();
         return true;
     }
@@ -78,7 +103,7 @@ export class BoxController extends Component implements IPointerHandler {
     // ======================================================== logic
     /** Unity: OnClick */
     private onClick(): void {
-        if (this.isClicked) return;
+        if (this.isClicked || this.isClosing) return;
 
         SoundManager.instance?.playFx(FxType.ClickBox);
 
@@ -88,29 +113,32 @@ export class BoxController extends Component implements IPointerHandler {
             im.enableFirstClickObjects();
         }
 
-        UIManager.instance?.activateGameLogoAndPlaynow();
+        if (this.handText) {
+            this.handText.active = false;
+        }
 
-        if (this.handText) this.handText.active = false;
+        if (this.handOfBox) {
+            this.handOfBox.moveAfterIntro(this.moveAfterIntroDuration);
+            this.handOfBox.node.active = false;
+        }
+
         this.isClicked = true;
 
         if (this.slider) this.slider.active = true;
 
         // ---- CLICK ĐẦU TIÊN ----
         if (!this.finishedTutorial) {
-            this.boxGraphic?.changeState(BoxState.FirstOpen);
+            this.boxGraphic?.playFirstOpen();
 
             TweenUtil.delayedCall(this, 1, () => this.spawnItem());
 
             if (this.MoveAfterIntroPosOfBox) {
-                TweenUtil.moveTo(this.node, this.MoveAfterIntroPosOfBox.worldPosition, 1.2, 'linear');
+                TweenUtil.moveTo(this.node, this.MoveAfterIntroPosOfBox.worldPosition, this.moveAfterIntroDuration, 'linear');
             }
-
-            this.handOfBox?.moveAfterIntro(1.2);
 
             const finish = () => {
                 this.finishedTutorial = true;
                 this.isClicked = false;
-                this.boxGraphic?.setAutoOpenEnabled(true);
             };
 
             if (BaseRoomManager.instance) BaseRoomManager.instance.playIntroAnimation(finish);
@@ -120,15 +148,13 @@ export class BoxController extends Component implements IPointerHandler {
         }
 
         // ---- NHỮNG CLICK SAU ----
-        this.boxGraphic?.changeState(BoxState.CLickBox);
+        this.boxGraphic?.playItemDispense();
         this.spawnItem();
         this.isClicked = false;
     }
 
     /** Unity: SpawnItem */
     private spawnItem(): void {
-        if (!this.StartTf) return;
-
         const im = ItemManager.instance;
         if (!im) return;
 
@@ -143,16 +169,29 @@ export class BoxController extends Component implements IPointerHandler {
             return;
         }
 
-        currentItem.setWorldPosition(this.StartTf.worldPosition.clone());
+        currentItem.setWorldPosition(this.node.worldPosition.clone());
         currentItem.active = true;
 
-        const pop = im.enablePopScale ? im.popScaleAmount : 1;
-        currentItem.setScale(pop, pop, pop);
-
         const itemScript = currentItem.getComponent(ItemController);
-        itemScript?.itemGraphic?.bringToFront();
+
+        // ⚠ Chốt scale gốc TRƯỚC khi setScale(0), nếu không ItemMovement.start()
+        //   sẽ chụp nhầm [0,0,0] và item bị scale về 0 ngay khi click.
+        currentItem.getComponent(ItemMovement)?.captureOriginal();
+
+        // Đặt scale ban đầu bằng 0 khi vừa sinh ra tại hộp
+        currentItem.setScale(0, 0, 0);
+
+        // Tween scale phóng to dần từ 0 lên 1 (hoặc target scale) trong quá trình bay
+        const targetScale = im.enablePopScale ? im.popScaleAmount : 1;
+        TweenUtil.scaleTo(currentItem, new Vec3(targetScale, targetScale, targetScale), 0.4, 'backOut');
 
         currentItem.setRotationFromEuler(0, 0, randomRange(-90, 90));
+
+        // Bật bóng (Shadow) tại vị trí đích của item vừa sinh ra từ hộp
+        if (itemScript && itemScript.targetPoint) {
+            itemScript.targetPoint.active = true;
+            itemScript.itemGraphic?.handleTargetSprites(itemScript.targetPoint, true);
+        }
 
         const holder = im.getCurrentHolder();
         if (!holder) return;
@@ -165,7 +204,12 @@ export class BoxController extends Component implements IPointerHandler {
 
         // Unity: DOJump(holder.position, 1.5f, 1, 1f).SetEase(Ease.OutBack)
         TweenUtil.jumpTo(
-            currentItem, holder.worldPosition, 150, 1, 1, 'backOut',
+            currentItem,
+            holder.worldPosition,
+            this.jumpHeight,
+            this.jumpCount,
+            this.jumpDuration,
+            this.jumpEasing,
             () => {
                 if (!holderSlot) return;
                 holderSlot.setItem(currentItem);
@@ -174,10 +218,19 @@ export class BoxController extends Component implements IPointerHandler {
         );
     }
 
-    /** Unity: GoToEndPos */
-    goToEndPos(): void {
-        if (!this.endTf) return;
-        TweenUtil.moveTo(this.node, this.endTf.worldPosition, 0.5, 'sineInOut',
-            () => { this.node.active = false; });
+    /** Khóa tương tác, chạy hiệu ứng đóng và ẩn Box sau thời gian giữ nguyên gameplay cũ. */
+    closeAndHide(delay = 2): void {
+        if (this.isClosing) return;
+        this.isClosing = true;
+        this.isClicked = true;
+        this.boxGraphic?.playClosing();
+        this.scheduleOnce(() => this.goToEndPos(), delay);
+    }
+
+    /** Hiệu ứng kết thúc trên node Box; chỉ BoxController được quyền ẩn node này. */
+    private goToEndPos(): void {
+        TweenUtil.scaleTo(this.node, Vec3.ZERO, 0.5, 'sineInOut', () => {
+            this.node.active = false;
+        });
     }
 }

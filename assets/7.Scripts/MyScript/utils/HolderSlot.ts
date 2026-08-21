@@ -56,16 +56,15 @@ export class HolderSlot extends Component {
 
         this.stopBobbingAnimation();
 
-        // .clone() BẮT BUỘC — xem ghi chú đầu file
-        const startPos = item.worldPosition.clone();
+        const startPos = item.position.clone();
         const upPos = new Vec3(startPos.x, startPos.y + this.bobbingDistance, startPos.z);
         const half = this.bobbingDuration / 2;
 
         this.bobbing = tween(item)
             .repeatForever(
                 tween(item)
-                    .to(half, { worldPosition: upPos }, { easing: 'sineInOut' })
-                    .to(half, { worldPosition: startPos }, { easing: 'sineInOut' }),
+                    .to(half, { position: upPos }, { easing: 'sineInOut' })
+                    .to(half, { position: startPos }, { easing: 'sineInOut' }),
             )
             .start();
     }

@@ -119,10 +119,39 @@ export class ItemManager extends Component {
         ItemManager.instance = this;
         ItemGraphic.targetShadowColor = this.targetShadowColor.clone();
         ItemGraphic.targetNormalColor = this.targetNormalColor.clone();
+        this.resetItemIndex();
+        this.ensureHolders();
     }
 
+    resetItemIndex(): void {
+        if (this.spawnFromLast) {
+            this.currentItemIndex = this.itemList.length - 1;
+        } else {
+            this.currentItemIndex = 0;
+        }
+    }
+
+    ensureHolders(): void {
+        if (!this.holderItemList || this.holderItemList.length === 0 || this.holderItemList.some(h => !h || !h.isValid)) {
+            const slots = this.node.scene?.getComponentsInChildren(HolderSlot) ?? [];
+            if (slots.length > 0) {
+                this.holderItemList = slots.map(s => s.node);
+            }
+        }
+    }
+
+    @property({ tooltip: 'Chỉ hiện bóng (Shadow) khi item được sinh ra từ Hộp (Click Box -> ra Item -> hiện bóng)' })
+    showShadowOnSpawnOnly = true;
+
     start() {
+        this.ensureHolders();
         if (this.handIntro) this.handIntro.active = false;
+
+        if (this.showShadowOnSpawnOnly) {
+            this.initTargetShadows();
+        } else {
+            this.updateVisibleShadows();
+        }
 
         // Unity: DOVirtual.DelayedCall(0.1f, ...)
         this.scheduleOnce(() => {
@@ -133,6 +162,17 @@ export class ItemManager extends Component {
                 this.idleTimer = this.idleTimeToHint;   // bật hint ngay sau khi xếp xong
             }
         }, 0.1);
+    }
+
+    /** Ẩn tất cả bóng đích của các item chưa được sinh ra */
+    initTargetShadows(): void {
+        for (const node of this.itemList) {
+            if (!node || !node.isValid) continue;
+            const item = node.getComponent(ItemController);
+            if (item && item.targetPoint && !item.isPlaced) {
+                item.targetPoint.active = false;
+            }
+        }
     }
 
     onDestroy() {
@@ -226,18 +266,28 @@ export class ItemManager extends Component {
     // ======================================================== item / holder
     /** Unity: GetCurrentItem */
     getCurrentItem(): Node | null {
-        if (this.currentItemIndex >= 0 && this.currentItemIndex < this.itemList.length) {
-            const idx = this.currentItemIndex;
-            this.currentItemIndex += this.spawnFromLast ? -1 : 1;
-            return this.itemList[idx];
+        if (this.spawnFromLast) {
+            if (this.currentItemIndex >= 0 && this.currentItemIndex < this.itemList.length) {
+                const item = this.itemList[this.currentItemIndex];
+                this.currentItemIndex--;
+                return item;
+            }
+        } else {
+            if (this.currentItemIndex >= 0 && this.currentItemIndex < this.itemList.length) {
+                const item = this.itemList[this.currentItemIndex];
+                this.currentItemIndex++;
+                return item;
+            }
         }
         return null;
     }
 
     /** Unity: GetCurrentHolder — holder trống đầu tiên. */
     getCurrentHolder(): Node | null {
+        this.ensureHolders();
         for (const h of this.holderItemList) {
-            const slot = h?.getComponent(HolderSlot);
+            if (!h || !h.isValid) continue;
+            const slot = h.getComponent(HolderSlot);
             if (slot && slot.isEmpty) {
                 this.currentHolder = h;
                 return h;
@@ -247,8 +297,10 @@ export class ItemManager extends Component {
     }
 
     hasAvailableHolder(): boolean {
+        this.ensureHolders();
         for (const h of this.holderItemList) {
-            const slot = h?.getComponent(HolderSlot);
+            if (!h || !h.isValid) continue;
+            const slot = h.getComponent(HolderSlot);
             if (slot && slot.isEmpty) return true;
         }
         return false;

@@ -66,9 +66,10 @@ export class TweenUtil {
                     const t = state.t;
                     const x = from.x + (to.x - from.x) * t;
                     const y = from.y + (to.y - from.y) * t;
-                    // parabol 4h·t·(1-t) cho mỗi nhịp nhảy
+                    // Parabol 4h * t * (1-t) chuẩn, không bị giật tại t >= 1
+                    const clampedT = Math.min(Math.max(t, 0), 1);
                     const n = Math.max(1, jumps);
-                    const local = (t * n) % 1;
+                    const local = (clampedT * n) % 1;
                     const arc = 4 * height * local * (1 - local);
                     node.setWorldPosition(x, y + arc, from.z);
                 },

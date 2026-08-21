@@ -12,7 +12,7 @@
  * Xem COCOS_MIGRATION_PLAN.md mục 5.2.
  */
 
-import { _decorator, Component, Node, input, Input, EventTouch, Vec3, Vec2, UITransform, Layers } from 'cc';
+import { _decorator, Component, Node, input, Input, EventTouch, Vec3, Vec2, UITransform, Layers, Collider2D } from 'cc';
 import { EDITOR } from 'cc/env';
 import { ItemGraphic } from '../item/ItemGraphic';
 import { ItemManager } from '../managers/ItemManager';
@@ -260,23 +260,17 @@ export class DreamyInputManager extends Component {
         return new Vec3(p.x, p.y, 0);
     }
 
-    /** Thay cho Physics.RaycastAll — hit-test AABB trong UI space (có kiểm tra LayerMask). */
-    static hitTestNode(node: Node, worldPos: Vec3): boolean {
-        if (!DreamyInputManager.isNodeInteractable(node)) return false;
-        const ut = node.getComponent(UITransform);
-        if (!ut) return false;
-        return ut.getBoundingBoxToWorld().contains(new Vec2(worldPos.x, worldPos.y));
+    /** Thay cho Physics.RaycastAll — hit-test bằng Collider2D (BoxCollider2D, CircleCollider2D, PolygonCollider2D...) trên Node */
+    static hitTestCollider(node: Node, worldPos: Vec3): boolean {
+        if (!node || !DreamyInputManager.isNodeInteractable(node)) return false;
+        const collider = node.getComponent(Collider2D);
+        if (!collider || !collider.worldAABB) return false;
+        return collider.worldAABB.contains(new Vec2(worldPos.x, worldPos.y));
     }
 
-
-    /** Trúng chính node này hoặc con của nó (thay ItemController.IsHitSelf bên Unity). */
-    static hitTestSelfOrChildren(node: Node, worldPos: Vec3): boolean {
-        if (DreamyInputManager.hitTestNode(node, worldPos)) return true;
-        for (const c of node.children) {
-            if (!c.activeInHierarchy) continue;
-            if (DreamyInputManager.hitTestSelfOrChildren(c, worldPos)) return true;
-        }
-        return false;
+    /** Tương thích ngược: chuyển hướng về hitTestCollider */
+    static hitTestNode(node: Node, worldPos: Vec3): boolean {
+        return DreamyInputManager.hitTestCollider(node, worldPos);
     }
 
     /**

@@ -2,7 +2,6 @@
 
 import { _decorator, Component, Node } from 'cc';
 import { BoxController } from '../box/BoxController';
-import { BoxGraphic, BoxState } from '../box/BoxGraphic';
 
 const { ccclass, property } = _decorator;
 
@@ -15,16 +14,13 @@ export class BoxManager extends Component {
     box: Node | null = null;
 
     private boxController: BoxController | null = null;
-    private boxGraphic: BoxGraphic | null = null;
-
-    /** Đảm bảo animation kết thúc chỉ chạy đúng 1 lần. */
+    /** Đảm bảo flow kết thúc chỉ chạy đúng một lần. */
     private isBoxHandled = false;
 
     onLoad() {
         BoxManager.instance = this;
         if (this.box) {
             this.boxController = this.box.getComponent(BoxController);
-            this.boxGraphic = this.box.getComponent(BoxGraphic);
         }
     }
 
@@ -32,12 +28,10 @@ export class BoxManager extends Component {
         if (BoxManager.instance === this) BoxManager.instance = null;
     }
 
-    /** Unity: HandleEmptyItems — hết item thì mở hộp rồi 2s sau bay đi. */
+    /** ItemManager báo hết item; Manager chỉ điều phối, Controller xử lý Box. */
     handleEmptyItems(): void {
-        if (this.isBoxHandled || !this.boxGraphic) return;
+        if (this.isBoxHandled || !this.boxController) return;
         this.isBoxHandled = true;
-
-        this.boxGraphic.changeState(BoxState.Opened);
-        this.scheduleOnce(() => this.boxController?.goToEndPos(), 2);
+        this.boxController.closeAndHide();
     }
 }

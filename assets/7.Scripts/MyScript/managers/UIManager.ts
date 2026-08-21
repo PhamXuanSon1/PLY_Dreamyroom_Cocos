@@ -24,12 +24,6 @@ export class UIManager extends Component implements IPointerHandler {
     static instance: UIManager | null = null;
 
     // ---------------- UI ----------------
-    @property({ type: Node, tooltip: 'Logo game.' })
-    GameLogo: Node | null = null;
-
-    @property({ type: Node, tooltip: 'Nút Play Now.' })
-    Playnow: Node | null = null;
-
     @property({ type: Label, tooltip: 'Chữ tiến trình, vd 1/12.' })
     textNumber: Label | null = null;
 
@@ -94,15 +88,6 @@ export class UIManager extends Component implements IPointerHandler {
         // Unity: DOTween.To(() => tuSo, x => {tuSo = x; UpdateText();}, 0, 2f)
         // Đếm về 0 trong 2 giây — giữ nguyên để khớp nhịp intro.
         TweenUtil.valueTo(2, () => this.updateText(), 'linear');
-
-        if (this.GameLogo) this.GameLogo.active = true;
-        if (this.Playnow) this.Playnow.active = true;
-    }
-
-    /** Unity: ActivateGameLogoAndPlaynow */
-    activateGameLogoAndPlaynow(): void {
-        if (this.GameLogo) this.GameLogo.active = true;
-        if (this.Playnow) this.Playnow.active = true;
     }
 
     // ======================================================== input
@@ -144,8 +129,6 @@ export class UIManager extends Component implements IPointerHandler {
 
             if (this.GameUICanvas) this.GameUICanvas.active = false;
             if (this.EndUICanvas) this.EndUICanvas.active = true;
-            if (this.GameLogo) this.GameLogo.active = false;
-            if (this.Playnow) this.Playnow.active = false;
 
             if (im) {
                 for (const c of im.WinConfetti) if (c?.isValid) c.active = true;

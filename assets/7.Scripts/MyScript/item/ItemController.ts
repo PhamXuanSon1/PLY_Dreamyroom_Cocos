@@ -3,7 +3,7 @@
  * Sử dụng hệ thống âm thanh từ PLY_SoundManager (sm).
  */
 
-import { _decorator, Component, Node, Vec3, EventTouch, BoxCollider2D, UITransform, Vec2, Enum } from 'cc';
+import { _decorator, BoxCollider2D, Collider2D, Component, Enum, EventTouch, Node, UITransform, Vec2, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { ItemGraphic } from './ItemGraphic';
 import { ItemMovement } from './ItemMovement';
@@ -87,11 +87,13 @@ export class ItemController extends Component implements IPointerHandler {
 
     private dragging = false;
     private moving = false;
+    private itemCollider: Collider2D | null = null;
 
     // ======================================================== Lifecycle
     onLoad() {
         this.itemGraphic = this.getComponent(ItemGraphic) ?? this.addComponent(ItemGraphic);
         this.itemMovement = this.getComponent(ItemMovement) ?? this.addComponent(ItemMovement);
+        this.setupCollider();
     }
 
     onEnable() {
@@ -104,20 +106,15 @@ export class ItemController extends Component implements IPointerHandler {
         DreamyInputManager.unregister(this);
     }
 
+    /** Đồng bộ collider để Item luôn dùng Collider 2D (Box/Polygon/Circle) cho thao tác kéo-thả. */
+    private setupCollider(): void {
+        this.itemCollider = this.getComponent(Collider2D) ?? this.addComponent(BoxCollider2D);
+    }
+
     // ======================================================== Input & HitTest
     hitTest(worldPos: Vec3): boolean {
         if (this.isPlaced || this.moving || !this.node.activeInHierarchy) return false;
-
-        // 1. Kiểm tra qua BoxCollider2D nếu có
-        const col = this.getComponent(BoxCollider2D);
-        if (col && col.worldAABB) {
-            if (col.worldAABB.contains(new Vec2(worldPos.x, worldPos.y))) {
-                return true;
-            }
-        }
-
-        // 2. Kiểm tra qua UITransform AABB
-        return DreamyInputManager.hitTestSelfOrChildren(this.node, worldPos);
+        return DreamyInputManager.hitTestCollider(this.node, worldPos);
     }
 
     /** Bắt đầu nhấc item lên (Pick) */

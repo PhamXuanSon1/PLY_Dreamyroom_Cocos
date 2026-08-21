@@ -1,8 +1,11 @@
 /**
- * BoxGraphic — port từ Assets/_GAME/Script/Box/BoxGraphic.cs (Unity)
+ * BoxGraphic — Điều khiển Spine Skeleton cho chiếc hộp (Box).
  *
- * Tên animation Spine giữ NGUYÊN XI như bản Unity.
- * Bên Unity ChangeSpine() chạy trong Update; ở đây dùng schedule 0.1s cho rẻ.
+ * Chu trình Animation Spine:
+ * 1. Mới vào game: Phát `1-ready-Loop` (Loop).
+ * 2. Nhận click đầu tiên: Phát `2-OPEN` (1 lần) -> Tự nối tiếp `3-OPEN-loop-break` (Loop).
+ * 3. Các lần click sau: Phát `3-OPEN-click` (1 lần) -> Tự nối tiếp `3-OPEN-loop-break` (Loop).
+ * 4. Khi hết item (kết thúc): Phát `Setup-A-2`.
  */
 
 import { _decorator, Component, sp } from 'cc';
@@ -10,102 +13,117 @@ import { _decorator, Component, sp } from 'cc';
 const { ccclass, property } = _decorator;
 
 export enum BoxState {
-    Closed, Opened, CLickBox, FirstOpen, OpenLoopBreak, ReadyOpen,
+    Closed,
+    Opened,
+    CLickBox,
+    FirstOpen,
+    OpenLoopBreak,
+    ReadyOpen,
 }
 
 @ccclass('BoxGraphic')
 export class BoxGraphic extends Component {
 
-    @property({ type: sp.Skeleton, tooltip: 'Spine điều khiển hiệu ứng hộp.' })
+    // ========================================== COMPONENTS
+    @property({ type: sp.Skeleton, tooltip: 'Spine Skeleton điều khiển chiếc hộp (nếu để trống tự tìm trên Box hoặc BoxImage)' })
     boxSkeleton: sp.Skeleton | null = null;
 
-    @property({ tooltip: 'Bao lâu không thao tác thì hộp tự hé mở (giây).' })
-    autoOpenDelay = 4;
+    // ========================================== ANIMATION NAMES
+    @property({ tooltip: '1. Anim chờ khi mới vào game (Loop)' })
+    animReadyLoop = '1-ready-Loop';
 
-    @property({ tooltip: 'Hộp giữ trạng thái hé mở bao lâu trước khi lặp lại.' })
-    openedDuration = 4;
+    @property({ tooltip: '2. Anim mở hộp lần đầu tiên khi click (1 lần)' })
+    animFirstOpen = '2-OPEN';
 
-    @property({ tooltip: 'Bật chế độ tự hé mở để gọi chú ý.' })
-    autoOpenEnabled = false;
+    @property({ tooltip: '3. Anim mở chờ các click tiếp theo (Loop)' })
+    animOpenedLoop = '3-OPEN-loop-break';
 
-    idleTimer = 0;
+    @property({ tooltip: '4. Anim click nhả item (1 lần)' })
+    animClick = '3-OPEN-click';
+
+    @property({ tooltip: '5. Anim khi hết item/đóng hộp kết thúc' })
+    animClosed = 'Setup-A-2';
+
     currentState: BoxState = BoxState.Closed;
 
-    private autoCloseScheduled = false;
-
     onLoad() {
-        this.schedule(this.tick, 0.1);
+        this.resolveSkeletonComponent();
     }
 
-    onDestroy() {
-        this.unschedule(this.tick);
-    }
-
-    /** Unity: ChangeSpine trong Update */
-    private tick(): void {
-        if (!this.boxSkeleton) return;
-        if (!this.autoOpenEnabled) return;
-        if (this.currentState === BoxState.Opened) return;
-
-        this.idleTimer += 0.1;
-        if (this.idleTimer >= this.autoOpenDelay) {
-            this.changeState(BoxState.Opened);
+    /** Tự động tìm Spine Skeleton nếu chưa kéo vào Inspector */
+    private resolveSkeletonComponent(): void {
+        if (!this.boxSkeleton) {
+            this.boxSkeleton = this.getComponent(sp.Skeleton)
+                || this.node.getChildByName('BoxImage')?.getComponent(sp.Skeleton)
+                || this.getComponentInChildren(sp.Skeleton);
         }
     }
 
-    setAutoOpenEnabled(enabled: boolean): void {
-        this.autoOpenEnabled = enabled;
-        if (enabled) this.idleTimer = 0;
+    /** Hiển thị trạng thái chờ ban đầu (1-ready-Loop). */
+    playReady(): void {
+        this.currentState = BoxState.ReadyOpen;
+        this.resolveSkeletonComponent();
+        if (!this.boxSkeleton) return;
+        this.boxSkeleton.setAnimation(0, this.animReadyLoop, true);
     }
 
-    /** Unity: ChangeState */
-    changeState(newState: BoxState): void {
+    /** Mở hộp lần đầu (2-OPEN -> 3-OPEN-loop-break). */
+    playFirstOpen(): void {
+        this.currentState = BoxState.FirstOpen;
+        this.resolveSkeletonComponent();
         if (!this.boxSkeleton) return;
-        if (this.currentState === newState) return;
+        this.boxSkeleton.setAnimation(0, this.animFirstOpen, false);
+        this.boxSkeleton.addAnimation(0, this.animOpenedLoop, true, 0);
+    }
 
-        this.unscheduleAllCallbacks();
-        this.schedule(this.tick, 0.1);
-        this.autoCloseScheduled = false;
+    /** Click nhả item (3-OPEN-click -> 3-OPEN-loop-break). */
+    playItemDispense(): void {
+        this.currentState = BoxState.CLickBox;
+        this.resolveSkeletonComponent();
+        if (!this.boxSkeleton) return;
+        this.boxSkeleton.setAnimation(0, this.animClick, false);
+        this.boxSkeleton.addAnimation(0, this.animOpenedLoop, true, 0);
+    }
 
-        this.currentState = newState;
-        this.idleTimer = 0;
+    /** Giữ trạng thái mở chờ tương tác tiếp (3-OPEN-loop-break). */
+    playOpenedLoop(): void {
+        this.currentState = BoxState.Opened;
+        this.resolveSkeletonComponent();
+        if (!this.boxSkeleton) return;
+        this.boxSkeleton.setAnimation(0, this.animOpenedLoop, true);
+    }
 
-        switch (this.currentState) {
-            case BoxState.Closed:
-                this.boxSkeleton.setAnimation(0, 'Setup-A-2', false);
-                break;
-            case BoxState.Opened:
-                this.restartOpenedAnimation();
-                break;
-            case BoxState.CLickBox:
-                this.boxSkeleton.setAnimation(0, '3-OPEN-click', false);
+    /** Hiệu ứng đóng hộp khi hết item (Setup-A-2). */
+    playClosing(): void {
+        this.currentState = BoxState.Closed;
+        this.resolveSkeletonComponent();
+        if (!this.boxSkeleton) return;
+        this.boxSkeleton.setAnimation(0, this.animClosed, false);
+    }
+
+    /** Tương thích hàm changeState cũ */
+    changeState(newState: BoxState): void {
+        switch (newState) {
+            case BoxState.ReadyOpen:
+                this.playReady();
                 break;
             case BoxState.FirstOpen:
-                this.boxSkeleton.setAnimation(0, '2-OPEN', false);
+                this.playFirstOpen();
                 break;
-            case BoxState.ReadyOpen:
-                this.restartReadyOpenAnimation();
+            case BoxState.CLickBox:
+                this.playItemDispense();
                 break;
-            default:
+            case BoxState.Opened:
+            case BoxState.OpenLoopBreak:
+                this.playOpenedLoop();
+                break;
+            case BoxState.Closed:
+                this.playClosing();
                 break;
         }
     }
 
-    private restartReadyOpenAnimation(): void {
-        if (!this.boxSkeleton) return;
-        this.boxSkeleton.setAnimation(0, '1-ready-Loop', false);
-        this.autoCloseScheduled = true;
-        this.scheduleOnce(() => {
-            if (this.currentState === BoxState.ReadyOpen) this.restartReadyOpenAnimation();
-        }, this.openedDuration);
-    }
-
-    private restartOpenedAnimation(): void {
-        if (!this.boxSkeleton) return;
-        this.boxSkeleton.setAnimation(0, '3-OPEN-loop-break', false);
-        this.autoCloseScheduled = true;
-        this.scheduleOnce(() => {
-            if (this.currentState === BoxState.Opened) this.restartOpenedAnimation();
-        }, this.openedDuration);
+    setAutoOpenEnabled(_enabled: boolean): void {
+        // Tương thích chữ ký hàm cũ nếu có nơi gọi
     }
 }

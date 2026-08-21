@@ -1,24 +1,14 @@
-/** HandOfBox — port từ Assets/_GAME/Script/Utils/HandOfBox.cs (Unity) */
+/** HandOfBox — Quản lý bàn tay hướng dẫn theo hộp lúc intro */
 
-import { _decorator, Component, Node } from 'cc';
-import { TweenUtil } from '../core/TweenUtil';
+import { _decorator, Component } from 'cc';
 
-const { ccclass, property } = _decorator;
+const { ccclass } = _decorator;
 
 @ccclass('HandOfBox')
 export class HandOfBox extends Component {
 
-    @property({ type: Node, tooltip: 'Vị trí bàn tay bay tới sau intro.' })
-    MoveAfterIntroPosOfHand: Node | null = null;
-
-    moveAfterIntro(duration: number): void {
-        if (!this.MoveAfterIntroPosOfHand) return;
-        TweenUtil.moveTo(
-            this.node,
-            this.MoveAfterIntroPosOfHand.worldPosition,
-            duration,
-            'linear',
-            () => { this.node.active = false; },
-        );
+    moveAfterIntro(_duration?: number): void {
+        this.node.active = false;
     }
 }
+
