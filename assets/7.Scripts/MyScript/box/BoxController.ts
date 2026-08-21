@@ -192,9 +192,6 @@ export class BoxController extends Component implements IPointerHandler {
         const holder = im.getCurrentHolder();
         if (!holder) return;
 
-        // Đặt Item làm con (Child) của Holder ngay từ khi bắt đầu bay ra khỏi hộp
-        currentItem.setParent(holder, true);
-
         const holderSlot = holder.getComponent(HolderSlot);
         if (holderSlot) {
             holderSlot.isEmpty = false;

@@ -12,8 +12,8 @@ export class GameController extends Component {
 
   start() {
     playableHelper.gameStart();
-    const androidUrl = "https://play.google.com/store/apps/details?id=com.abi.packingdom";
-    const iosUrl = "https://apps.apple.com/us/app/packingdom/id6760441822";
+    const androidUrl = "https://play.google.com/store/apps/details?id=com.abi.dream.unpacking";
+    const iosUrl = "https://apps.apple.com/us/app/dreamy-room/id6742221896?platform=iphone";
     playableHelper.setStoreUrl(iosUrl, androidUrl); // this section only needs for Google and Unity channel
   }
 
