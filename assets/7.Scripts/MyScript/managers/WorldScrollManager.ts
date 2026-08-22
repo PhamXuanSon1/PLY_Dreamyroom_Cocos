@@ -14,6 +14,7 @@ import { _decorator, Component, Node, Vec3, EventTouch, Camera, math } from 'cc'
 import { ItemController } from '../item/ItemController';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { TweenUtil } from '../core/TweenUtil';
+import { UIManager } from './UIManager';
 
 const { ccclass, property } = _decorator;
 
@@ -138,10 +139,12 @@ export class WorldScrollManager extends Component implements IPointerHandler {
     // ======================================================== input
     /** Cuộn nhận sự kiện ở bất kỳ đâu — item đã được ưu tiên trước. */
     hitTest(_worldPos: Vec3): boolean {
+        if (UIManager.instance?.isGameEnded) return false;
         return this.activeItems.length > 0;
     }
 
     onPointerDown(worldPos: Vec3, _ev: EventTouch): boolean {
+        if (UIManager.instance?.isGameEnded) return false;
         // Đang kéo item thì không cuộn (Unity: if (!ItemManager.isDragging) HandleInput()).
         // Thực tế InputManager đã chặn sẵn vì item bắt sự kiện trước, đây là lớp bảo hiểm.
         if (this.currentDraggedItem) return false;

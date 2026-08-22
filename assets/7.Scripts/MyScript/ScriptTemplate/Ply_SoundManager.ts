@@ -6,18 +6,37 @@ const { ccclass, property } = _decorator;
  * Enum cac loai hieu ung am thanh (FX).
  */
 export enum FxType {
-    Click = 0,
-    Happy = 1,
-    Wrong = 2,
-    Spray = 3,
-    Brush = 4,
-    Correct = 5,
-    Pop = 6,
-    Comb = 7,
-    Scissors = 8,
-    Curling = 9,
+    ClickBox = 0,
+    PickItem = 1,
+    HeavyWood = 2,
+    SmallWood = 3,
+    Cloth = 4,
+    dropMetal = 5,
+    Glass = 6,
+    dropOnFloor = 7,
+    cat1 = 8,
+    cat2 = 9,
+    cat3 = 10,
+    water = 11,
+    burnOn = 12,
+    bookOpen = 13,
+    CapyDrop = 14,
+    Grass = 15,
+    Chair = 16,
+    CoinBag = 17,
+    GoldChest = 18,
+    WoodenFish = 19,
+    Window = 20,
+    WoodenDoor = 21,
+    Skeleton = 22,
+    WoodenChair = 23,
+    ComCop = 24,
+    Rem = 25,
+    ClothesDrop = 26,
 }
 Enum(FxType);
+
+const FX_TYPE_COUNT = 27;
 
 /**
  * Cau hinh du lieu am thanh.
@@ -45,31 +64,82 @@ class FxAudio {
     clickBox: SoundData = new SoundData();
 
     @property(SoundData)
-    happy: SoundData = new SoundData();
+    pickItem: SoundData = new SoundData();
 
     @property(SoundData)
-    wrong: SoundData = new SoundData();
+    heavyWood: SoundData = new SoundData();
 
     @property(SoundData)
-    spray: SoundData = new SoundData();
+    smallWood: SoundData = new SoundData();
 
     @property(SoundData)
-    brush: SoundData = new SoundData();
+    cloth: SoundData = new SoundData();
 
     @property(SoundData)
-    correct: SoundData = new SoundData();
+    dropMetal: SoundData = new SoundData();
 
     @property(SoundData)
-    pop: SoundData = new SoundData();
+    glass: SoundData = new SoundData();
 
     @property(SoundData)
-    comb: SoundData = new SoundData();
+    dropOnFloor: SoundData = new SoundData();
 
     @property(SoundData)
-    scissors: SoundData = new SoundData();
+    cat1: SoundData = new SoundData();
 
     @property(SoundData)
-    curling: SoundData = new SoundData();
+    cat2: SoundData = new SoundData();
+
+    @property(SoundData)
+    cat3: SoundData = new SoundData();
+
+    @property(SoundData)
+    water: SoundData = new SoundData();
+
+    @property(SoundData)
+    burnOn: SoundData = new SoundData();
+
+    @property(SoundData)
+    bookOpen: SoundData = new SoundData();
+
+    @property(SoundData)
+    capyDrop: SoundData = new SoundData();
+
+    @property(SoundData)
+    grass: SoundData = new SoundData();
+
+    @property(SoundData)
+    chair: SoundData = new SoundData();
+
+    @property(SoundData)
+    coinBag: SoundData = new SoundData();
+
+    @property(SoundData)
+    goldChest: SoundData = new SoundData();
+
+    @property(SoundData)
+    woodenFish: SoundData = new SoundData();
+
+    @property(SoundData)
+    window: SoundData = new SoundData();
+
+    @property(SoundData)
+    woodenDoor: SoundData = new SoundData();
+
+    @property(SoundData)
+    skeleton: SoundData = new SoundData();
+
+    @property(SoundData)
+    woodenChair: SoundData = new SoundData();
+
+    @property(SoundData)
+    comCop: SoundData = new SoundData();
+
+    @property(SoundData)
+    rem: SoundData = new SoundData();
+
+    @property(SoundData)
+    clothesDrop: SoundData = new SoundData();
 }
 
 /**
@@ -92,9 +162,9 @@ export class Ply_SoundManager extends Ply_Singleton {
     @property(AudioSource)
     bgm1: AudioSource | null = null;
 
-    private fxSources: (AudioSource | null)[] = new Array(10).fill(null);
-    private queuedCount: number[] = new Array(10).fill(0);
-    private queueTimers: (number | null)[] = new Array(10).fill(null);
+    private fxSources: (AudioSource | null)[] = new Array(FX_TYPE_COUNT).fill(null);
+    private queuedCount: number[] = new Array(FX_TYPE_COUNT).fill(0);
+    private queueTimers: (number | null)[] = new Array(FX_TYPE_COUNT).fill(null);
 
     private isMute: boolean = false;
 
@@ -249,16 +319,33 @@ export class Ply_SoundManager extends Ply_Singleton {
      */
     private getSoundData(type: FxType): SoundData | null {
         switch (type) {
-            case FxType.Click: return this.fxAudio.clickBox;
-            case FxType.Happy: return this.fxAudio.happy;
-            case FxType.Wrong: return this.fxAudio.wrong;
-            case FxType.Spray: return this.fxAudio.spray;
-            case FxType.Brush: return this.fxAudio.brush;
-            case FxType.Correct: return this.fxAudio.correct;
-            case FxType.Pop: return this.fxAudio.pop;
-            case FxType.Comb: return this.fxAudio.comb;
-            case FxType.Scissors: return this.fxAudio.scissors;
-            case FxType.Curling: return this.fxAudio.curling;
+            case FxType.ClickBox: return this.fxAudio.clickBox;
+            case FxType.PickItem: return this.fxAudio.pickItem;
+            case FxType.HeavyWood: return this.fxAudio.heavyWood;
+            case FxType.SmallWood: return this.fxAudio.smallWood;
+            case FxType.Cloth: return this.fxAudio.cloth;
+            case FxType.dropMetal: return this.fxAudio.dropMetal;
+            case FxType.Glass: return this.fxAudio.glass;
+            case FxType.dropOnFloor: return this.fxAudio.dropOnFloor;
+            case FxType.cat1: return this.fxAudio.cat1;
+            case FxType.cat2: return this.fxAudio.cat2;
+            case FxType.cat3: return this.fxAudio.cat3;
+            case FxType.water: return this.fxAudio.water;
+            case FxType.burnOn: return this.fxAudio.burnOn;
+            case FxType.bookOpen: return this.fxAudio.bookOpen;
+            case FxType.CapyDrop: return this.fxAudio.capyDrop;
+            case FxType.Grass: return this.fxAudio.grass;
+            case FxType.Chair: return this.fxAudio.chair;
+            case FxType.CoinBag: return this.fxAudio.coinBag;
+            case FxType.GoldChest: return this.fxAudio.goldChest;
+            case FxType.WoodenFish: return this.fxAudio.woodenFish;
+            case FxType.Window: return this.fxAudio.window;
+            case FxType.WoodenDoor: return this.fxAudio.woodenDoor;
+            case FxType.Skeleton: return this.fxAudio.skeleton;
+            case FxType.WoodenChair: return this.fxAudio.woodenChair;
+            case FxType.ComCop: return this.fxAudio.comCop;
+            case FxType.Rem: return this.fxAudio.rem;
+            case FxType.ClothesDrop: return this.fxAudio.clothesDrop;
             default: return null;
         }
     }

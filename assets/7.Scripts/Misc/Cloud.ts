@@ -45,13 +45,9 @@ export class Cloud extends PoolMember {
     }
 
     update(deltaTime: number) {
+        if (!this.target) return;
         try {
-            if(this.target) {
-                this.node.worldPosition = this.target.worldPosition.clone();
-            } else {
-                this.despawn();
-            }
-            
+            this.node.worldPosition = this.target.worldPosition.clone();
         } catch (error) {
             this.target = null;
             this.despawn();

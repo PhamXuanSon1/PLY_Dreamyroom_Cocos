@@ -13,6 +13,7 @@
 
 import { _decorator, Component, Node, Vec3, EventTouch, math, input, Input, EventMouse } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler, IPinchHandler } from '../core/DreamyInputManager';
+import { UIManager } from '../managers/UIManager';
 
 const { ccclass, property } = _decorator;
 
@@ -87,11 +88,13 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
 
     // ======================================================== pan
     hitTest(worldPos: Vec3): boolean {
+        if (UIManager.instance?.isGameEnded) return false;
         if (!this.interactionEnabled) return false;
         return DreamyInputManager.hitTestCollider(this.node, worldPos);
     }
 
     onPointerDown(worldPos: Vec3, _ev: EventTouch): boolean {
+        if (UIManager.instance?.isGameEnded) return false;
         if (!this.interactionEnabled) return false;
         this.dragging = true;
         this.dragStartWorld.set(worldPos);
@@ -117,12 +120,14 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     // ======================================================== zoom
     /** Pinch 2 ngón. delta > 0 = xoè ra = phóng to. */
     onPinch(deltaDistance: number): void {
+        if (UIManager.instance?.isGameEnded) return;
         if (!this.interactionEnabled) return;
         this.dragging = false;   // đang pinch thì không pan
         this.setScaleFactor(this.currentScaleFactor + deltaDistance * this.mobileZoomSpeed);
     }
 
     private onMouseWheel(ev: EventMouse): void {
+        if (UIManager.instance?.isGameEnded) return;
         if (!this.interactionEnabled) return;
         const scroll = ev.getScrollY();
         if (Math.abs(scroll) < 0.01) return;

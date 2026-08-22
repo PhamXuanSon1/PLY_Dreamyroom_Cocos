@@ -15,6 +15,7 @@ import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/Drea
 import { ItemManager } from './ItemManager';
 import { BallFollowFill } from '../utils/BallFollowFill';
 import { TweenUtil } from '../core/TweenUtil';
+import { GameController } from '../../Tool/GameController';
 
 const { ccclass, property } = _decorator;
 
@@ -54,6 +55,9 @@ export class UIManager extends Component implements IPointerHandler {
 
     @property({ tooltip: 'URL store mở khi bấm CTA. Thay cho Playable.InstallFullGame().' })
     storeUrl = '';
+
+    @property({ type: Node, tooltip: 'Node hoặc Component GameController để gọi redirectToStore().' })
+    gameController: Node | GameController | null = null;
 
     readonly inputPriority = InputPriority.UI;
 
@@ -139,12 +143,29 @@ export class UIManager extends Component implements IPointerHandler {
         }
     }
 
-    /** Unity: GotoStore — bỏ Luna/AppLovin, chỉ mở URL. */
     gotoStore(): void {
-        if (!this.storeUrl) {
-            console.log('[UIManager] gotoStore() — chưa đặt storeUrl.');
-            return;
+        console.log("Test: goToStore");
+        if (this.gameController) {
+            if (this.gameController instanceof GameController) {
+                this.gameController.redirectToStore();
+                return;
+            } else if (this.gameController instanceof Node) {
+                const gc = this.gameController.getComponent(GameController);
+                if (gc) {
+                    gc.redirectToStore();
+                    return;
+                }
+            } else if ((this.gameController as any).redirectToStore) {
+                (this.gameController as any).redirectToStore();
+                return;
+            }
         }
-        sys.openURL(this.storeUrl);
+
+        const gc = this.node.scene?.getComponentInChildren(GameController);
+        if (gc) {
+            gc.redirectToStore();
+        } else {
+            console.warn("[UIManager] Không tìm thấy GameController để redirectToStore!");
+        }
     }
 }

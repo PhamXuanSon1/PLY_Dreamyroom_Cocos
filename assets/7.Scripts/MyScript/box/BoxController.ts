@@ -85,6 +85,7 @@ export class BoxController extends Component implements IPointerHandler {
 
     // ======================================================== input
     hitTest(worldPos: Vec3): boolean {
+        if (UIManager.instance?.isGameEnded) return false;
         if (this.isClicked || this.isClosing) return false;
         if (DreamyInputManager.hitTestCollider(this.node, worldPos)) return true;
         const ut = this.getComponent(UITransform);
@@ -95,6 +96,7 @@ export class BoxController extends Component implements IPointerHandler {
     }
 
     onPointerDown(_worldPos: Vec3, _ev: EventTouch): boolean {
+        if (UIManager.instance?.isGameEnded) return false;
         if (this.isClicked || this.isClosing) return false;
         this.onClick();
         return true;
@@ -103,6 +105,10 @@ export class BoxController extends Component implements IPointerHandler {
     // ======================================================== logic
     /** Unity: OnClick */
     private onClick(): void {
+        if (UIManager.instance?.isGameEnded) {
+            UIManager.instance.gotoStore();
+            return;
+        }
         if (this.isClicked || this.isClosing) return;
 
         SoundManager.instance?.playFx(FxType.ClickBox);

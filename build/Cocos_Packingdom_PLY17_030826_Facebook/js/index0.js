@@ -1,1 +1,0 @@
-function redirectStore(){FbPlayableAd.onCTAClick()}

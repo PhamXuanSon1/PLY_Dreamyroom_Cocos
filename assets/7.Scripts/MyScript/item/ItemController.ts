@@ -3,17 +3,19 @@
  * Sử dụng hệ thống âm thanh từ PLY_SoundManager (sm).
  */
 
-import { _decorator, BoxCollider2D, Collider2D, Component, Enum, EventTouch, Node, UITransform, Vec2, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Collider2D, Component, Enum, EventTouch, Node, ParticleSystem2D, UITransform, Vec2, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { ItemGraphic } from './ItemGraphic';
 import { ItemMovement } from './ItemMovement';
 import { OpenItem } from './OpenItem';
 import { ItemManager } from '../managers/ItemManager';
+import { UIManager } from '../managers/UIManager';
 import { WorldScrollManager } from '../managers/WorldScrollManager';
 import { SeatHandler } from '../utils/SeatHandler';
 import { HolderSlot } from '../utils/HolderSlot';
 import { TurnOnSpine } from '../utils/TurnOnSpine';
 import { ChangeLight } from '../utils/ChangeLight';
+import { Ply_Pool, PoolType as PlyPoolType } from '../ScriptTemplate/Ply_Pool';
 import { ObjectPool, PoolType } from '../core/ObjectPool';
 import { BlinkEffect } from '../effects/BlinkEffect';
 import { TweenUtil } from '../core/TweenUtil';
@@ -115,12 +117,14 @@ export class ItemController extends Component implements IPointerHandler {
 
     // ======================================================== Input & HitTest
     hitTest(worldPos: Vec3): boolean {
+        if (UIManager.instance?.isGameEnded) return false;
         if (this.isPlaced || this.moving || !this.node.activeInHierarchy) return false;
         return DreamyInputManager.hitTestCollider(this.node, worldPos);
     }
 
     /** Bắt đầu nhấc item lên (Pick) */
     onPointerDown(_worldPos: Vec3, _ev: EventTouch): boolean {
+        if (UIManager.instance?.isGameEnded) return false;
         if (this.isPlaced || this.moving) return false;
 
         this.initialWorldPos = this.node.worldPosition.clone();
@@ -331,16 +335,33 @@ export class ItemController extends Component implements IPointerHandler {
         });
     }
 
-    /** Spawn hiệu ứng lấp lánh khi đặt đúng */
+    /** Spawn hiệu ứng lấp lánh khi đặt đúng vào target */
     private spawnBlinkEffect(target: Node): void {
-        const pool = ObjectPool.instance;
-        if (!pool) return;
+        let fxNode: Node | null = null;
 
-        const fx = pool.spawn(PoolType.BlinkFX, target.worldPosition);
-        if (!fx) return;
+        // 1. Lấy effect từ Ply_Pool (hoặc ObjectPool)
+        if (Ply_Pool.Ins) {
+            const unit = Ply_Pool.Ins.spawn(PlyPoolType.CorrectEffect, target.worldPosition);
+            if (unit) fxNode = unit.node;
+        } else if (ObjectPool.instance) {
+            fxNode = ObjectPool.instance.spawn(PoolType.BlinkFX, target.worldPosition);
+        }
 
-        fx.setParent(target, true);
-        fx.active = true;
-        fx.getComponent(BlinkEffect)?.deSpawnByTime(2);
+        if (!fxNode) return;
+
+        // 2. Cho nó là con của targetNode và đặt tại tâm
+        fxNode.setParent(target, false);
+        fxNode.setPosition(Vec3.ZERO);
+        fxNode.active = true;
+
+        // 3. Reset ParticleSystem2D để kích hoạt phát hạt
+        const ps = fxNode.getComponentInChildren(ParticleSystem2D);
+        if (ps) {
+            ps.resetSystem();
+        }
+
+        // 4. Bật deSpawnByTime tự thu hồi về pool sau thời gian định sẵn (2s)
+        const blink = fxNode.getComponent(BlinkEffect) ?? fxNode.addComponent(BlinkEffect);
+        blink.deSpawnByTime(2);
     }
 }

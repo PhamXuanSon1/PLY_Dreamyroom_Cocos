@@ -105,10 +105,10 @@ export class Ply_Pool extends Ply_Singleton {
             // Khoi tao mot node moi tu prefab va lay component Ply_GameUnit
             const unitNode = instantiate(prefab);
             unitNode.setParent(this.node);
-            gameUnit = unitNode.getComponent(Ply_GameUnit);
+            gameUnit = unitNode.getComponent(Ply_GameUnit) ?? unitNode.addComponent(Ply_GameUnit);
         }
 
-        if (gameUnit) {
+        if (gameUnit && gameUnit.node) {
             gameUnit.node.setPosition(pos);
             gameUnit.node.setRotation(rot);
             gameUnit.node.active = true;
@@ -123,6 +123,7 @@ export class Ply_Pool extends Ply_Singleton {
      * @param gameUnit - Game unit can thu hoi
      */
     public despawn(poolType: PoolType, gameUnit: Ply_GameUnit) {
+        if (!gameUnit || !gameUnit.node || !gameUnit.node.isValid) return;
         gameUnit.node.active = false;
 
         // Tra node ve lai Pool node de lan spawn tiep theo setPosition() hoat dong dung
@@ -134,7 +135,10 @@ export class Ply_Pool extends Ply_Singleton {
         if (!this.dict.has(poolType)) {
             this.dict.set(poolType, []);
         }
-        this.dict.get(poolType)!.push(gameUnit);
+        const list = this.dict.get(poolType)!;
+        if (list.indexOf(gameUnit) < 0) {
+            list.push(gameUnit);
+        }
     }
 
     /**

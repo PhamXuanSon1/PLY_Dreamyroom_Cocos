@@ -730,7 +730,15 @@
   },
   "c6a61899-b2f1-4055-953b-fd22da9f8337": {
     "url": "db://assets/5.Prefabs/Star.prefab",
-    "value": {},
+    "value": {
+      "depends": [
+        "361c46fa-3562-4930-95e7-efa5b355f31b",
+        "d2bab5eb-3241-4785-b002-47e3232e6551@f9941"
+      ],
+      "dependScripts": [
+        "315c2939-a5cc-4218-99d6-93241bd5a7b1"
+      ]
+    },
     "versionCode": 1
   },
   "301cfc00-2526-493f-9637-5f6a450ae1dc": {
@@ -753,8 +761,10 @@
         "09a52473-597d-4bac-b4f4-3e83d63d8c5e",
         "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941",
         "089a1f34-0792-44c3-954a-8ab671aefec5@f9941",
-        "2c464e2f-9a4b-435a-aa78-4931e10fa8e9@f9941",
         "ac9175b9-91cc-46e2-a155-9115434bc1da@f9941",
+        "2c464e2f-9a4b-435a-aa78-4931e10fa8e9@f9941",
+        "f3f026d0-2801-4bb2-9b57-96344b2d4676@f9941",
+        "e493c109-ea19-429a-b842-154150079dc7@f9941",
         "7d8f9b89-4fd1-4c9f-a3ab-38ec7cded7ca@f9941",
         "940d5472-95c6-4763-912e-1c835a872a37@f9941",
         "fa903a36-80bb-48b3-88e1-978bd356b56e@f9941",
@@ -858,6 +868,8 @@
         "c7234e22-ca10-4314-8cfa-73d12c076cfd@f9941",
         "8ddce89a-dff0-46b7-80ac-978546b9a860",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
+        "e1fc69b2-618c-4694-9672-0920e014cfe4",
+        "deb41301-a9a0-4e4d-aae6-86c9a29d164b",
         "c6a61899-b2f1-4055-953b-fd22da9f8337"
       ],
       "dependScripts": [
@@ -866,6 +878,7 @@
         "9af7cb90-e1fb-4efd-835f-cf82497f2625",
         "88586b58-8700-4cc8-a5e4-35b7c54d0649",
         "5e407573-3124-45d2-9050-3c44d0cf0470",
+        "545bdd38-875f-416b-abc9-b06befd3fa89",
         "5a2b1271-6ea2-401f-92bf-a18202e56188",
         "ffc0c2df-0287-40ef-8beb-7f4381ae1550",
         "d558005a-8f0f-441f-95a3-dfdeb2a6e567",
@@ -874,13 +887,13 @@
         "8a38c844-8233-4ba7-95a7-565bb74d651f",
         "7ced8a7d-fd09-44e8-b1af-b41522ee13b2",
         "5ca735d3-50fd-42d6-bd8c-3d6078b30e83",
-        "9823c617-75c7-4125-915f-7b7e2e3428d4",
         "17a738fe-8388-410c-be30-44ff21f69b67",
         "f639f692-0a25-4a1a-8020-59856aaff465",
         "7443b598-ce0a-4555-8222-8eb8d76d1a1c",
         "a6ea4dda-3a5c-40cf-a6c5-7e2bba4057f1",
-        "545bdd38-875f-416b-abc9-b06befd3fa89",
         "d9861e9b-d60a-4605-8e0f-c42436b51e4c",
+        "0659ac3c-d084-4732-95e3-f16cbbd9eca1",
+        "784b8157-3757-4d0b-a788-266a2078d644",
         "8bb257ea-7564-45c6-9e82-e5abac5ca929",
         "73724883-5040-47d2-a5b5-2ec0108d55f8",
         "01ff5841-a600-461d-9d61-edea348e44af",
@@ -16853,6 +16866,48 @@
       "depends": [
         "2c464e2f-9a4b-435a-aa78-4931e10fa8e9@6c48a"
       ]
+    },
+    "versionCode": 1
+  },
+  "a0c0ad6a-fcc6-4de4-8048-f3fe74d1ab72": {
+    "url": "db://assets/1.Animations/BlinkEffect/BlinkEffect.anim",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a1e746e5-1f59-4fa9-bd7c-9cd7fb9d26f6": {
+    "url": "db://assets/1.Animations/BlinkEffect",
+    "value": {},
+    "versionCode": 1
+  },
+  "e1fc69b2-618c-4694-9672-0920e014cfe4": {
+    "url": "db://assets/5.Prefabs/BlinkEffect.prefab",
+    "value": {
+      "depends": [
+        "361c46fa-3562-4930-95e7-efa5b355f31b",
+        "d2bab5eb-3241-4785-b002-47e3232e6551@f9941"
+      ],
+      "dependScripts": [
+        "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a48afad9-cadd-4d5b-8e24-4aba907e022d": {
+    "url": "db://assets/4.Sounds/BGM",
+    "value": {},
+    "versionCode": 1
+  },
+  "9c61b917-d85f-4349-b401-3faadd87fa76": {
+    "url": "db://assets/4.Sounds/BGM/Fantasy Fairy Tale Music Magical ✦ Ethereal Fantasy Music ✦ 528 hz ✦ No copyright - moonangel (mp3cut.net).mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "deb41301-a9a0-4e4d-aae6-86c9a29d164b": {
+    "url": "db://assets/4.Sounds/BGM/Fantasy Fairy Tale Music Magical ✦ Ethereal Fantasy Music ✦ 528 hz ✦ No copyright - moonangel (mp3cut.net) (1).mp3",
+    "value": {
+      "depends": []
     },
     "versionCode": 1
   }

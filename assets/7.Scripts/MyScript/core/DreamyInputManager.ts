@@ -16,6 +16,7 @@ import { _decorator, Component, Node, input, Input, EventTouch, Vec3, Vec2, UITr
 import { EDITOR } from 'cc/env';
 import { ItemGraphic } from '../item/ItemGraphic';
 import { ItemManager } from '../managers/ItemManager';
+import { UIManager } from '../managers/UIManager';
 
 const { ccclass, property, executeInEditMode } = _decorator;
 
@@ -170,6 +171,12 @@ export class DreamyInputManager extends Component {
         }
         if (!DreamyInputManager.canInput) return;
 
+        // Nếu game đã kết thúc -> Mọi cú chạm tiếp theo trên màn hình sẽ mở store ngay
+        if (UIManager.instance?.isGameEnded) {
+            UIManager.instance.gotoStore();
+            return;
+        }
+
         const worldPos = DreamyInputManager.toWorld(ev);
 
         // Broadcast: ItemManager cần biết mọi lần chạm (reset idle timer, first-click,
@@ -178,7 +185,14 @@ export class DreamyInputManager extends Component {
         ItemManager.instance?.onAnyPointerDown();
 
         const candidates = this.handlers
-            .filter((h) => h.node && h.node.isValid && h.node.activeInHierarchy && DreamyInputManager.isNodeInteractable(h.node) && h.hitTest(worldPos))
+            .filter((h) => {
+                if (!h.node || !h.node.isValid || !h.node.activeInHierarchy) return false;
+                // UI handler (như UIManager) không bị ràng buộc bởi layer mask của gameplay
+                if (h.inputPriority !== InputPriority.UI && !DreamyInputManager.isNodeInteractable(h.node)) {
+                    return false;
+                }
+                return h.hitTest(worldPos);
+            })
             .sort((a, b) => (a.inputPriority - b.inputPriority)
                 || (-DreamyInputManager.compareRenderOrder(a.node, b.node)));
 

@@ -1,1 +1,0 @@
-function redirectStore(){window.install && window.install()} function onGameEnd(){window.gameEnd && window.gameEnd()} function onGameReady(){window.gameReady && window.gameReady()} function gameStart() { console.log('game has started') } function gameClose() { console.log('game closed') }

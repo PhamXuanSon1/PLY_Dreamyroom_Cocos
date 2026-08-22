@@ -4,7 +4,7 @@
  * Khác bản Unity:
  *   - Bản Unity tạo `new GameObject()` cho mỗi FX, không parent và không destroy
  *     -> rác tích luỹ. Ở đây dùng pool AudioSource cố định dưới 1 node.
- *   - Gộp 28 field SoundData rời thành mảng clips[] đánh theo index của FxType.
+ *   - Gộp 27 field SoundData rời thành mảng clips[] đánh theo index của FxType.
  *   - Thêm bước mở khoá audio ở lần chạm đầu (browser chặn autoplay, thiếu là
  *     mất sạch tiếng trên iOS Safari).
  */
@@ -20,7 +20,7 @@ export enum FxType {
     water = 11, burnOn = 12, bookOpen = 13, CapyDrop = 14, Grass = 15,
     Chair = 16, CoinBag = 17, GoldChest = 18, WoodenFish = 19, Window = 20,
     WoodenDoor = 21, Skeleton = 22, WoodenChair = 23, ComCop = 24, Rem = 25,
-    ClothesDrop = 26, Decor = 27,
+    ClothesDrop = 26,
 }
 
 /** Đổi tên FxType (chuỗi trong JSON / Inspector) sang enum. */
