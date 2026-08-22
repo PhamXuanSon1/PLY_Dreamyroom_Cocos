@@ -1,5 +1,5 @@
+
 import { _decorator, Component, EventTouch, Input, input, misc, Node, v2, Vec2 } from 'cc';
-import { World } from './World';
 import { ui } from './UI';
 const { ccclass, property } = _decorator;
 

@@ -1,7 +1,7 @@
 import { _decorator, Animation, Camera, Color, Component, Director, Enum, EventTouch, Label, misc, Node, ParticleSystem2D, PhysicsSystem, size, Size, Sprite, toDegree, Tween, tween, UITransform, v2, v3, Vec2, Vec3, view, Widget } from 'cc';
-import { World } from './World';
+import playableHelper from '../Tool/h5-helper';
 import { PointerController } from './PointerController';
-import { SoundType } from './SoundManager';
+import { Ply_SoundManager, FxType } from '../MyScript/ScriptTemplate/Ply_SoundManager';
 import { Clock } from './Clock';
 import { ipm } from './InputManager';
 const { ccclass, property } = _decorator;
@@ -64,8 +64,9 @@ export class UI extends Component {
 
     openStore(...args: any) {
         console.log('openStore');  
-        World.ins.soundmanager.stopAll();      
-        World.ins.openStore.redirectToStore();
+        Ply_SoundManager.Ins?.stopAll();      
+        playableHelper.gameEnd();
+        playableHelper.redirect();
     }
 
     first: boolean = true;
@@ -83,7 +84,7 @@ export class UI extends Component {
         this.offHand();
         this.endcard.active = true;
         this.bindingToStore();       
-        World.ins.soundmanager.playSound(SoundType.Fail);    
+        Ply_SoundManager.Ins?.playFx(FxType.dropOnFloor);    
     }
 
 
@@ -93,7 +94,7 @@ export class UI extends Component {
         this.offHand();
         this.winCard.active = true;
         this.bindingToStore();  
-        World.ins.soundmanager.playSound(SoundType.Win);      
+        Ply_SoundManager.Ins?.playFx(FxType.GoldChest);      
     }
 
     offHand() {

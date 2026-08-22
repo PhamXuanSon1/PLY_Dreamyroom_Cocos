@@ -64,7 +64,7 @@ export class PoolAmount {
 
 export var pm: PoolManager = null;
 
-@ccclass
+@ccclass('PoolManager')
 @executeInEditMode(true)
 export class PoolManager extends Component{
 

@@ -1,10 +1,9 @@
-import { _decorator, Component, game, Node, PhysicsSystem, Pool} from 'cc';
+import { _decorator, Component, Node } from 'cc';
 import { UI } from './UI';
-import SoundManager, { SoundType } from './SoundManager';
 import { MainCamera } from './MainCamera';
 import { GameController } from '../Tool/GameController';
-import { PoolManager } from '../Pool/PoolManager';
-import { PoolMember } from '../Pool/PoolMember';
+import { Ply_Pool } from '../MyScript/ScriptTemplate/Ply_Pool';
+import { Ply_SoundManager } from '../MyScript/ScriptTemplate/Ply_SoundManager';
 const { ccclass, property, executeInEditMode } = _decorator;
 
 @ccclass('World')
@@ -18,27 +17,43 @@ export class World extends Component {
         }
         return this.instance;
     }
+
     @property(UI)
     ui: UI = null!;
     
     @property(GameController)
     openStore: GameController = null; 
 
-    @property(PoolManager)
-    poolManager: PoolManager = null; 
+    @property(Ply_Pool)
+    poolManager: Ply_Pool = null; 
 
     @property(MainCamera)
     camera: MainCamera = null; 
 
-    @property(SoundManager)
-    soundmanager: SoundManager = null; 
+    @property(Ply_SoundManager)
+    soundmanager: Ply_SoundManager = null; 
+
+    get pool(): Ply_Pool | null {
+        return this.poolManager || Ply_Pool.Ins;
+    }
+
+    get sound(): Ply_SoundManager | null {
+        return this.soundmanager || Ply_SoundManager.Ins;
+    }
 
     despawn(node: Node) {
-        this.poolManager.despawn(node.getComponent(PoolMember));
+        if (!node || !node.isValid) return;
+        node.active = false;
     }
     
     onLoad() {
         World.instance = this;
+        if (!this.poolManager && Ply_Pool.Ins) {
+            this.poolManager = Ply_Pool.Ins;
+        }
+        if (!this.soundmanager && Ply_SoundManager.Ins) {
+            this.soundmanager = Ply_SoundManager.Ins;
+        }
     }  
 
     start() {

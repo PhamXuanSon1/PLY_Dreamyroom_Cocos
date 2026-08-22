@@ -1,5 +1,6 @@
 import { _decorator, Component, Node } from 'cc';
-import { Ply_Pool, PoolType } from './Ply_Pool';
+import { PoolType } from './Ply_Types';
+import { Ply_Pool } from './Ply_Pool';
 const { ccclass, property } = _decorator;
 
 /**

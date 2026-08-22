@@ -449,6 +449,36 @@ export class Ply_SoundManager extends Ply_Singleton {
     }
 
     /**
+     * Dung toan bo am thanh (alias cho mute).
+     */
+    public stopAll(): void {
+        this.mute();
+    }
+
+    /**
+     * Phat nhac nen.
+     */
+    public playBGM(): void {
+        this.playBGM1();
+    }
+
+    /**
+     * Dung nhac nen.
+     */
+    public stopBGM(): void {
+        if (this.bgm1) {
+            this.bgm1.stop();
+        }
+    }
+
+    /**
+     * Phat am thanh theo FxType (alias cho playFx).
+     */
+    public playSound(fxType: FxType): void {
+        this.playFx(fxType);
+    }
+
+    /**
      * Tao mot AudioSource component moi tren node con.
      */
     private createAudioSource(name: string): AudioSource {

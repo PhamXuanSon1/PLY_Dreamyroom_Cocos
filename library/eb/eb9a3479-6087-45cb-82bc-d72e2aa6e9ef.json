@@ -1,16 +1,6 @@
-[
-  {
-    "__type__": "cc.animation.AnimationGraphVariant",
-    "_name": "",
-    "_objFlags": 0,
-    "_native": "",
-    "_graph": null,
-    "_clipOverrides": {
-      "__id__": 1
-    }
-  },
-  {
-    "__type__": "cc.animation.ClipOverrideMap",
-    "_entries": []
-  }
-]
+{
+  "__type__": "cc.Asset",
+  "_name": "animgraphvari",
+  "_objFlags": 0,
+  "_native": ""
+}

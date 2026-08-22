@@ -1,5 +1,5 @@
 import { _decorator, Camera, Component, EventKeyboard, EventTouch, geometry, Input, input, KeyCode, Node, PhysicsSystem, Vec2 } from 'cc';
-import { World } from './World';
+import { ui } from './UI';
 const { ccclass, property } = _decorator;
 
 export var pc: PointerController = null;
@@ -47,7 +47,7 @@ export class PointerController extends Component {
         console.log("binding");
         
         input.on(Input.EventType.TOUCH_START, () => {
-            World.ins.ui.openStore();
+            ui?.openStore();
         });
     }
 

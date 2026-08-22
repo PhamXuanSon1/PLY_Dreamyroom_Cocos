@@ -1,0 +1,201 @@
+box-ingame.png
+size: 608,1036
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BOX-Left-body
+  rotate: false
+  xy: 166, 255
+  size: 160, 163
+  orig: 195, 195
+  offset: 16, 14
+  index: -1
+BOX-Right-body
+  rotate: false
+  xy: 165, 90
+  size: 160, 163
+  orig: 195, 195
+  offset: 19, 14
+  index: -1
+BOX-inside
+  rotate: true
+  xy: 347, 543
+  size: 160, 162
+  orig: 195, 195
+  offset: 17, 16
+  index: -1
+BOX-shadow
+  rotate: false
+  xy: 347, 870
+  size: 163, 163
+  orig: 195, 195
+  offset: 16, 14
+  index: -1
+Bot
+  rotate: false
+  xy: 496, 301
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+cap
+  rotate: false
+  xy: 163, 10
+  size: 158, 78
+  orig: 159, 80
+  offset: 1, 2
+  index: -1
+cap2
+  rotate: false
+  xy: 328, 225
+  size: 158, 78
+  orig: 159, 80
+  offset: 0, 2
+  index: -1
+capB
+  rotate: false
+  xy: 323, 2
+  size: 155, 69
+  orig: 159, 80
+  offset: 2, 2
+  index: -1
+capC
+  rotate: false
+  xy: 327, 73
+  size: 156, 70
+  orig: 159, 80
+  offset: 1, 9
+  index: -1
+extra-skin/BOX-green-stripe
+  rotate: true
+  xy: 178, 420
+  size: 161, 163
+  orig: 195, 195
+  offset: 16, 14
+  index: -1
+extra-skin/BOX-green-stripe1
+  rotate: false
+  xy: 2, 255
+  size: 162, 163
+  orig: 195, 195
+  offset: 17, 14
+  index: -1
+extra-skin/BOX-pink-stripe
+  rotate: false
+  xy: 2, 90
+  size: 161, 163
+  orig: 195, 195
+  offset: 16, 14
+  index: -1
+extra-skin/BOX-pink-stripe1
+  rotate: false
+  xy: 347, 705
+  size: 162, 163
+  orig: 195, 195
+  offset: 17, 14
+  index: -1
+extra-skin/cap
+  rotate: true
+  xy: 512, 875
+  size: 158, 80
+  orig: 159, 80
+  offset: 1, 0
+  index: -1
+extra-skin/cap-pink-stripe
+  rotate: false
+  xy: 2, 8
+  size: 159, 80
+  orig: 159, 80
+  offset: 0, 0
+  index: -1
+extra-skin/cap2
+  rotate: false
+  xy: 327, 145
+  size: 158, 78
+  orig: 159, 80
+  offset: 0, 2
+  index: -1
+highlight
+  rotate: false
+  xy: 2, 583
+  size: 343, 450
+  orig: 343, 450
+  offset: 0, 0
+  index: -1
+inside-stuff
+  rotate: false
+  xy: 488, 187
+  size: 111, 112
+  orig: 130, 130
+  offset: 6, 13
+  index: -1
+planes
+  rotate: false
+  xy: 487, 69
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+tape0
+  rotate: false
+  xy: 2, 420
+  size: 174, 161
+  orig: 176, 168
+  offset: 1, 7
+  index: -1
+tape1
+  rotate: false
+  xy: 343, 403
+  size: 186, 138
+  orig: 189, 138
+  offset: 0, 0
+  index: -1
+tape2
+  rotate: false
+  xy: 328, 305
+  size: 166, 96
+  orig: 166, 96
+  offset: 0, 0
+  index: -1
+tape3
+  rotate: true
+  xy: 511, 756
+  size: 112, 88
+  orig: 112, 88
+  offset: 0, 0
+  index: -1
+tape4
+  rotate: false
+  xy: 511, 668
+  size: 81, 86
+  orig: 81, 88
+  offset: 0, 0
+  index: -1
+zx4
+  rotate: true
+  xy: 568, 623
+  size: 43, 38
+  orig: 45, 40
+  offset: 1, 1
+  index: -1
+zx5
+  rotate: false
+  xy: 511, 583
+  size: 43, 38
+  orig: 45, 40
+  offset: 1, 1
+  index: -1
+zx6
+  rotate: false
+  xy: 511, 623
+  size: 55, 43
+  orig: 57, 45
+  offset: 1, 1
+  index: -1
+zx9
+  rotate: false
+  xy: 511, 543
+  size: 43, 38
+  orig: 45, 40
+  offset: 1, 1
+  index: -1

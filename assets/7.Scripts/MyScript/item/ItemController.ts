@@ -19,7 +19,6 @@ import { Ply_Pool, PoolType as PlyPoolType } from '../ScriptTemplate/Ply_Pool';
 import { ObjectPool, PoolType } from '../core/ObjectPool';
 import { BlinkEffect } from '../effects/BlinkEffect';
 import { TweenUtil } from '../core/TweenUtil';
-import { sm, SoundType } from '../../Manager/SoundManager';
 import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
 
 const { ccclass, property } = _decorator;
@@ -135,12 +134,8 @@ export class ItemController extends Component implements IPointerHandler {
 
         this.initialWorldPos = this.node.worldPosition.clone();
 
-        // 1. Phát âm thanh Pick từ PLY_SoundManager
-        if (sm) {
-            sm.playSound(SoundType.Pick);
-        } else {
-            Ply_SoundManager.Ins?.playFx(FxType.PickItem);
-        }
+        // 1. Phát âm thanh Pick từ Ply_SoundManager
+        Ply_SoundManager.Ins?.playFx(FxType.PickItem);
 
         // 2. Animation & đưa lên lớp kéo trên cùng
         this.itemMovement.startDragAnimation();
@@ -265,9 +260,7 @@ export class ItemController extends Component implements IPointerHandler {
 
     /** Thả trượt: Bay về vị trí ban đầu (Holder / vị trí nhấc lên) + phát âm thanh LandFail */
     private snapFailed(): void {
-        if (sm) {
-            sm.playSound(SoundType.LandFail);
-        }
+        Ply_SoundManager.Ins?.playFx(FxType.dropOnFloor);
 
         this.itemMovement.snapFailedAnimation();
 
@@ -317,10 +310,7 @@ export class ItemController extends Component implements IPointerHandler {
             this.getComponent(TurnOnSpine)?.activateSpine();
             this.getComponent(OpenItem)?.onItemPlaced();
 
-            // 3. Phát âm thanh Done / LandRight từ PLY_SoundManager
-            if (sm) {
-                sm.playSound(SoundType.Done);
-            }
+            // 3. Phát âm thanh Done / LandRight từ Ply_SoundManager
             const materialTypes = this.materialTypes.length > 0
                 ? this.materialTypes
                 : [this.materialType];
@@ -330,6 +320,8 @@ export class ItemController extends Component implements IPointerHandler {
                 .filter((fxType): fxType is FxType => fxType !== null);
             if (fxTypes.length > 0) {
                 Ply_SoundManager.Ins?.playFxSequence(fxTypes);
+            } else {
+                Ply_SoundManager.Ins?.playFx(FxType.HeavyWood);
             }
 
 

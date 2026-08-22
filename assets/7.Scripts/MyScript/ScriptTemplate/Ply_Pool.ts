@@ -1,18 +1,9 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3, Quat, CCInteger, Enum } from 'cc';
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, Quat, CCInteger } from 'cc';
 import { Ply_Singleton } from './Ply_Singleton';
 import { Ply_GameUnit } from './Ply_GameUnit';
+import { PoolType } from './Ply_Types';
+export { PoolType };
 const { ccclass, property } = _decorator;
-
-/**
- * Enum cac loai Pool - them cac loai khac neu can.
- */
-export enum PoolType {
-    Heart = 0,
-    CorrectEffect = 1,
-    BreakHeart = 2,
-}
-// Dang ky enum de hien thi tren inspector cua Cocos Creator
-Enum(PoolType);
 
 /**
  * Quan ly Object Pool duoc chuyen tu Unity Ply_Pool.
