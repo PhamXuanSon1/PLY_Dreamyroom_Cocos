@@ -84,10 +84,21 @@ export class ItemManager extends Component {
     // ---------------- Hint Settings ----------------
     private idleTimer = 0;
 
-    @property({ tooltip: 'Thời gian chờ (giây) không thao tác sẽ hiện Hint gợi ý.' })
-    idleTimeToHint = 5;
+    @property({ tooltip: 'Thời gian chờ (giây) không thao tác sẽ hiện Hint gợi ý (mặc định 3s).' })
+    idleTimeToHint = 3;
 
     private hasShownHint = false;
+
+    private stuckTimer = 0;
+
+    @property({ tooltip: 'Thời gian chờ (giây) không ghép được item tiếp theo sẽ hiện Hint cố định (mặc định 5s).' })
+    stuckTimeToHint = 5;
+
+    /** Cờ báo hiệu đang ở chế độ Hint cố định 5s (chỉ tắt khi ghép xong item đó hoặc click item khác) */
+    isStuckHintActive = false;
+
+    /** Item đang được gán hint 5s */
+    stuckTargetItem: ItemController | null = null;
 
     @property({ type: Node, tooltip: 'Object bàn tay chỉ dẫn Hint khi người chơi rảnh rỗi quá lâu.' })
     handHint: Node | null = null;
@@ -177,7 +188,9 @@ export class ItemManager extends Component {
     onAnyPointerDown(): void {
         this.enableFirstClickObjects();
         this.resetIdleTimer();
-        this.hideHint();
+        if (!this.isStuckHintActive) {
+            this.hideHint();
+        }
     }
 
     // ======================================================== Unity: EnableFirstClickObjects
@@ -191,13 +204,23 @@ export class ItemManager extends Component {
 
     // ======================================================== Unity: Update
     update(dt: number) {
-        if (this.isDragging) return;
+        if (UIManager.instance?.isGameEnded) return;
 
-        this.idleTimer += dt;
+        // 1. Đếm thời gian không tương tác (Idle 3s)
+        if (!this.isDragging) {
+            this.idleTimer += dt;
+            if (!this.isStuckHintActive && this.idleTimer >= this.idleTimeToHint && !this.hasShownHint) {
+                this.showHint();
+                this.hasShownHint = true;
+            }
+        }
 
-        if (this.idleTimer >= this.idleTimeToHint && !this.hasShownHint) {
-            this.showHint();
-            this.hasShownHint = true;
+        // 2. Đếm thời gian không chơi được tiếp (Stuck 5s)
+        if (!this.isStuckHintActive) {
+            this.stuckTimer += dt;
+            if (this.stuckTimer >= this.stuckTimeToHint) {
+                this.triggerStuckHint();
+            }
         }
 
         // Đổi state của box nếu list = 0
@@ -284,6 +307,7 @@ export class ItemManager extends Component {
     /** Unity: ItemArrivedAtTarget */
     itemArrivedAtTarget(): void {
         this.arrivedItemCount++;
+        this.onItemCompleted();
 
         const ui = UIManager.instance;
         if (ui) {
@@ -299,6 +323,58 @@ export class ItemManager extends Component {
     resetIdleTimer(): void {
         this.idleTimer = 0;
         this.hasShownHint = false;
+    }
+
+    /** Reset bộ đếm 5s không chơi được tiếp */
+    resetStuckTimer(): void {
+        this.stuckTimer = 0;
+    }
+
+    /** Kích hoạt trạng thái 5s không chơi được tiếp -> hiện hint cố định cho item */
+    triggerStuckHint(): void {
+        let item = this.getLastItem();
+        if (!this.canUseItemHint(item)) {
+            item = this.getValidHintItem();
+            if (item) this.setLastItem(item);
+        }
+
+        if (!item || !item.targetPoint) return;
+
+        const ui = UIManager.instance;
+        if (ui && ui.tuSo >= ui.mauSo) return;
+
+        this.isStuckHintActive = true;
+        this.stuckTargetItem = item;
+        this.hasShownHint = true;
+        if (this.handIntro) this.handIntro.active = false;
+        this.runHintTween(item);
+    }
+
+    /** Huỷ trạng thái 5s stuck khi người chơi click sang item khác -> chuyển về logic 3s không tương tác */
+    cancelStuckHint(): void {
+        this.isStuckHintActive = false;
+        this.stuckTargetItem = null;
+        this.stuckTimer = 0;
+        this.idleTimer = 0;
+        this.hasShownHint = false;
+        this.hideHint();
+    }
+
+    /** Hiện lại stuck hint (sau khi người chơi thả trượt item đang bị stuck) */
+    showStuckHintAgain(): void {
+        if (!this.isStuckHintActive || !this.stuckTargetItem || !this.stuckTargetItem.isValid) return;
+        if (this.stuckTargetItem.isPlaced) return;
+        this.runHintTween(this.stuckTargetItem);
+    }
+
+    /** Hoàn thành ghép item -> tắt hint và reset toàn bộ bộ đếm về trạng thái bình thường */
+    onItemCompleted(): void {
+        this.isStuckHintActive = false;
+        this.stuckTargetItem = null;
+        this.stuckTimer = 0;
+        this.idleTimer = 0;
+        this.hasShownHint = false;
+        this.hideHint();
     }
 
     /** Unity: ShowHint */

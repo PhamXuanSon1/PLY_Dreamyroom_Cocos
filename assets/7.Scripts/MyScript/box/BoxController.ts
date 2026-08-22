@@ -18,7 +18,7 @@ import { ItemController } from '../item/ItemController';
 import { ItemMovement } from '../item/ItemMovement';
 import { HolderSlot } from '../utils/HolderSlot';
 import { HandOfBox } from '../utils/HandOfBox';
-import { SoundManager, FxType } from '../core/SoundManager';
+import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
 import { TweenUtil } from '../core/TweenUtil';
 
 const { ccclass, property } = _decorator;
@@ -111,7 +111,7 @@ export class BoxController extends Component implements IPointerHandler {
         }
         if (this.isClicked || this.isClosing) return;
 
-        SoundManager.instance?.playFx(FxType.ClickBox);
+        Ply_SoundManager.Ins?.playFx(FxType.ClickBox);
 
         const im = ItemManager.instance;
         if (im) {

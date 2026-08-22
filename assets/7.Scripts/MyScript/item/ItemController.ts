@@ -20,7 +20,7 @@ import { ObjectPool, PoolType } from '../core/ObjectPool';
 import { BlinkEffect } from '../effects/BlinkEffect';
 import { TweenUtil } from '../core/TweenUtil';
 import { sm, SoundType } from '../../Manager/SoundManager';
-import { SoundManager as DreamySoundManager } from '../core/SoundManager';
+import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
 
 const { ccclass, property } = _decorator;
 
@@ -78,6 +78,12 @@ export class ItemController extends Component implements IPointerHandler {
     })
     materialType: MaterialType = MaterialType.None;
 
+    @property({
+        type: [Enum(MaterialType)],
+        tooltip: 'Danh sach FX phat lan luot khi ghep dung. Neu co gia tri o day, Material Type se duoc bo qua.'
+    })
+    materialTypes: MaterialType[] = [];
+
     /** Đã ghép thành công vào đích hay chưa */
     isPlaced = false;
 
@@ -133,7 +139,7 @@ export class ItemController extends Component implements IPointerHandler {
         if (sm) {
             sm.playSound(SoundType.Pick);
         } else {
-            DreamySoundManager.instance?.playFx('PickItem');
+            Ply_SoundManager.Ins?.playFx(FxType.PickItem);
         }
 
         // 2. Animation & đưa lên lớp kéo trên cùng
@@ -147,10 +153,21 @@ export class ItemController extends Component implements IPointerHandler {
         // 4. Thông báo cho ItemManager
         const im = ItemManager.instance;
         if (im) {
+            if (im.isStuckHintActive) {
+                if (im.stuckTargetItem && im.stuckTargetItem !== this) {
+                    // Chạm sang item khác -> huỷ stuck hint 5s và chuyển về logic 3s
+                    im.cancelStuckHint();
+                } else if (im.stuckTargetItem === this) {
+                    // Đang kéo đúng item stuck -> tạm ẩn hint trong lúc kéo
+                    if (im.handHint) im.handHint.active = false;
+                }
+            } else {
+                if (im.handHint) im.handHint.active = false;
+            }
+
             im.isDragging = true;
             im.setLastItem(this);
             im.resetIdleTimer();
-            if (im.handHint) im.handHint.active = false;
         }
 
         this.currentHolderSlot?.stopBobbingAnimation();
@@ -266,13 +283,16 @@ export class ItemController extends Component implements IPointerHandler {
             TweenUtil.moveTo(this.node, returnPos, this.moveDuration, 'quadOut', () => {
                 this.itemGraphic.restoreOriginalLayers();
                 this.currentHolderSlot?.startBobbingAnimation();
+                ItemManager.instance?.showStuckHintAgain();
             });
         } else if (WorldScrollManager.instance) {
             WorldScrollManager.instance.itemReturned(this);
+            ItemManager.instance?.showStuckHintAgain();
         } else {
             TweenUtil.killAll(this.node);
             TweenUtil.moveTo(this.node, this.initialWorldPos, this.moveDuration, 'quadOut', () => {
                 this.itemGraphic.restoreOriginalLayers();
+                ItemManager.instance?.showStuckHintAgain();
             });
         }
     }
@@ -301,9 +321,15 @@ export class ItemController extends Component implements IPointerHandler {
             if (sm) {
                 sm.playSound(SoundType.Done);
             }
-            if (this.materialType !== MaterialType.None) {
-                const soundName = MaterialType[this.materialType];
-                DreamySoundManager.instance?.playFx(soundName);
+            const materialTypes = this.materialTypes.length > 0
+                ? this.materialTypes
+                : [this.materialType];
+            const fxTypes = materialTypes
+                .filter((materialType) => materialType !== MaterialType.None)
+                .map((materialType) => this.materialTypeToFxType(materialType))
+                .filter((fxType): fxType is FxType => fxType !== null);
+            if (fxTypes.length > 0) {
+                Ply_SoundManager.Ins?.playFxSequence(fxTypes);
             }
 
 
@@ -333,6 +359,13 @@ export class ItemController extends Component implements IPointerHandler {
 
             ChangeLight.notifyItemPlaced();
         });
+    }
+
+    private materialTypeToFxType(materialType: MaterialType): FxType | null {
+        const soundName = MaterialType[materialType];
+        const fxType = FxType[soundName as keyof typeof FxType]
+            ?? FxType[`${soundName.charAt(0).toLowerCase()}${soundName.slice(1)}` as keyof typeof FxType];
+        return typeof fxType === 'number' ? fxType : null;
     }
 
     /** Spawn hiệu ứng lấp lánh khi đặt đúng vào target */

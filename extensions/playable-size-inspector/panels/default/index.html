@@ -88,6 +88,26 @@
             </div>
             <div id="batch-status" class="batch-status"></div>
           </div>
+          <div class="batch-bar">
+            <div class="batch-bar-left">
+              <span class="batch-badge">🎵 Batch Optimize Ticked Audio:</span>
+              <label class="inline-field batch-field">
+                <span>Bitrate</span>
+                <select id="batch-audio-bitrate">
+                  <option value="128">128 kbps</option>
+                  <option value="96" selected>96 kbps ⭐</option>
+                  <option value="64">64 kbps</option>
+                  <option value="48">48 kbps</option>
+                  <option value="32">32 kbps</option>
+                </select>
+              </label>
+              <button id="batch-select-all-audio-btn" class="action-button batch-reset-btn">Select All Audio</button>
+              <button id="batch-clear-audio-btn" class="action-button batch-reset-btn">Clear Selection</button>
+              <button id="batch-apply-audio-btn" class="action-button batch-apply-btn">🎵 Optimize Ticked Audio</button>
+              <button id="batch-reset-audio-btn" class="action-button reset-button batch-reset-btn">Reset Ticked Audio</button>
+            </div>
+            <div id="batch-audio-status" class="batch-status"></div>
+          </div>
           <div id="asset-results" class="panel-content empty">Run a scan to list every file included in the build.</div>
         </div>
 

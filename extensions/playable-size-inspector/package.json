@@ -85,6 +85,16 @@
         "methods": [
           "resetAllPngs"
         ]
+      },
+      "optimize-selected-audio": {
+        "methods": [
+          "optimizeSelectedAudio"
+        ]
+      },
+      "reset-selected-audio": {
+        "methods": [
+          "resetSelectedAudio"
+        ]
       }
     }
   }

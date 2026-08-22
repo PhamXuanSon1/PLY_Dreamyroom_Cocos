@@ -165,6 +165,10 @@ export class Ply_SoundManager extends Ply_Singleton {
     private fxSources: (AudioSource | null)[] = new Array(FX_TYPE_COUNT).fill(null);
     private queuedCount: number[] = new Array(FX_TYPE_COUNT).fill(0);
     private queueTimers: (number | null)[] = new Array(FX_TYPE_COUNT).fill(null);
+    private sequenceSource: AudioSource | null = null;
+    private sequence: FxType[] = [];
+    private sequenceIndex = 0;
+    private sequenceCallback: (() => void) | null = null;
 
     private isMute: boolean = false;
 
@@ -197,6 +201,66 @@ export class Ply_SoundManager extends Ply_Singleton {
         for (let i = 1; i < data.repeatCount; i++) {
             source.playOneShot(data.clip, data.volume);
         }
+    }
+
+    /**
+     * Phat cac FX theo thu tu. FX sau chi bat dau khi FX truoc da phat xong.
+     * Goi lai ham nay se huy sequence dang phat va thay bang sequence moi.
+     */
+    public playFxSequence(fxTypes: readonly FxType[]): void {
+        this.stopFxSequence();
+        if (this.isMute) return;
+
+        this.sequence = fxTypes.filter((fxType) => {
+            const data = this.getSoundData(fxType);
+            return !!data?.clip;
+        });
+        this.sequenceIndex = 0;
+        this.playNextFxInSequence();
+    }
+
+    private playNextFxInSequence(): void {
+        if (this.isMute || this.sequenceIndex >= this.sequence.length) {
+            this.stopFxSequence();
+            return;
+        }
+
+        const fxType = this.sequence[this.sequenceIndex++];
+        const data = this.getSoundData(fxType);
+        if (!data?.clip) {
+            this.playNextFxInSequence();
+            return;
+        }
+
+        if (!this.sequenceSource) {
+            this.sequenceSource = this.createAudioSource('SoundFX_Sequence');
+        }
+
+        this.sequenceSource.loop = false;
+        this.sequenceSource.clip = data.clip;
+        this.sequenceSource.volume = data.volume;
+        this.sequenceSource.play();
+
+        const callback = () => {
+            if (!this.sequenceSource?.playing) {
+                this.unschedule(callback);
+                if (this.sequenceCallback === callback) this.sequenceCallback = null;
+                this.playNextFxInSequence();
+            }
+        };
+        this.sequenceCallback = callback;
+        this.schedule(callback, 0.016);
+    }
+
+    /** Dung sequence FX dang phat. */
+    public stopFxSequence(): void {
+        if (this.sequenceCallback) {
+            this.unschedule(this.sequenceCallback);
+            this.sequenceCallback = null;
+        }
+        this.sequenceSource?.stop();
+        this.sequence = [];
+        this.sequenceIndex = 0;
     }
 
     /**
@@ -355,6 +419,7 @@ export class Ply_SoundManager extends Ply_Singleton {
      */
     public muteFx() {
         this.isMute = true;
+        this.stopFxSequence();
         for (let i = 0; i < this.fxSources.length; i++) {
             if (this.fxSources[i]) {
                 this.fxSources[i]!.stop();
@@ -367,6 +432,7 @@ export class Ply_SoundManager extends Ply_Singleton {
      */
     public mute() {
         this.isMute = true;
+        this.stopFxSequence();
         if (this.bgm1) this.bgm1.stop();
         for (let i = 0; i < this.fxSources.length; i++) {
             if (this.fxSources[i]) {
@@ -392,6 +458,7 @@ export class Ply_SoundManager extends Ply_Singleton {
     }
 
     onDestroy() {
+        this.stopFxSequence();
         super.onDestroy();
         if (Ply_SoundManager.Ins === this) {
             Ply_SoundManager.Ins = null;

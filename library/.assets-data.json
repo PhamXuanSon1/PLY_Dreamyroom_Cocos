@@ -759,7 +759,6 @@
         "0408aba9-4671-4e64-841a-73f50dc131bb@f9941",
         "58291885-390c-4610-847d-03703733bcbc",
         "09a52473-597d-4bac-b4f4-3e83d63d8c5e",
-        "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941",
         "089a1f34-0792-44c3-954a-8ab671aefec5@f9941",
         "ac9175b9-91cc-46e2-a155-9115434bc1da@f9941",
         "2c464e2f-9a4b-435a-aa78-4931e10fa8e9@f9941",
@@ -868,8 +867,19 @@
         "c7234e22-ca10-4314-8cfa-73d12c076cfd@f9941",
         "8ddce89a-dff0-46b7-80ac-978546b9a860",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
+        "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941",
         "e1fc69b2-618c-4694-9672-0920e014cfe4",
         "deb41301-a9a0-4e4d-aae6-86c9a29d164b",
+        "bb3b63d8-6495-4588-bc26-cf7294bd51d3",
+        "64ae03a6-aa86-4177-ba34-9bcf579bfe4d",
+        "a88a5c3e-fe57-4d78-ba1e-73e9803bcce9",
+        "2566a2e9-952c-46ec-b7b5-018e69e45f93",
+        "82a6a74e-d8c0-42ec-b0d0-2e0968abe284",
+        "eeb67d4d-5ff6-43d7-a04e-d6376625d1e0",
+        "ef70624d-667d-4e62-9349-d790b0f2050a",
+        "7e2af722-7b11-4556-a5d6-f0bd3b4ee759",
+        "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5",
+        "63d1baa4-820b-4681-950c-f60679d90469",
         "c6a61899-b2f1-4055-953b-fd22da9f8337"
       ],
       "dependScripts": [
@@ -894,6 +904,7 @@
         "d9861e9b-d60a-4605-8e0f-c42436b51e4c",
         "0659ac3c-d084-4732-95e3-f16cbbd9eca1",
         "784b8157-3757-4d0b-a788-266a2078d644",
+        "01f9a797-a3c5-4494-833e-348ebe65b0ee",
         "8bb257ea-7564-45c6-9e82-e5abac5ca929",
         "73724883-5040-47d2-a5b5-2ec0108d55f8",
         "01ff5841-a600-461d-9d61-edea348e44af",
@@ -16906,6 +16917,81 @@
   },
   "deb41301-a9a0-4e4d-aae6-86c9a29d164b": {
     "url": "db://assets/4.Sounds/BGM/Fantasy Fairy Tale Music Magical ✦ Ethereal Fantasy Music ✦ 528 hz ✦ No copyright - moonangel (mp3cut.net) (1).mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "bb3b63d8-6495-4588-bc26-cf7294bd51d3": {
+    "url": "db://assets/4.Sounds/ClickBox.ogg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "64ae03a6-aa86-4177-ba34-9bcf579bfe4d": {
+    "url": "db://assets/4.Sounds/PickItem.ogg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a88a5c3e-fe57-4d78-ba1e-73e9803bcce9": {
+    "url": "db://assets/4.Sounds/HeavyWood.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "2566a2e9-952c-46ec-b7b5-018e69e45f93": {
+    "url": "db://assets/4.Sounds/SmallWood.ogg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "82a6a74e-d8c0-42ec-b0d0-2e0968abe284": {
+    "url": "db://assets/4.Sounds/Cloth.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "63d1baa4-820b-4681-950c-f60679d90469": {
+    "url": "db://assets/4.Sounds/clothes-drop.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "81c76fb7-1e38-44d9-9b78-d7ea6ed5ea5e": {
+    "url": "db://assets/4.Sounds/WoodenDoor Small.wav",
+    "value": {},
+    "versionCode": 1
+  },
+  "eeb67d4d-5ff6-43d7-a04e-d6376625d1e0": {
+    "url": "db://assets/4.Sounds/DropMetal.ogg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "7e2af722-7b11-4556-a5d6-f0bd3b4ee759": {
+    "url": "db://assets/4.Sounds/Grass.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "ef70624d-667d-4e62-9349-d790b0f2050a": {
+    "url": "db://assets/4.Sounds/Glass.ogg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5": {
+    "url": "db://assets/4.Sounds/WoodenDoor Small.mp3",
     "value": {
       "depends": []
     },

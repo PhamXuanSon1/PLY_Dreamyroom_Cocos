@@ -239,6 +239,99 @@ exports.methods = {
     };
   },
 
+  async optimizeSelectedAudio(payload) {
+    const sourceRoot = String(payload && payload.sourceRoot || '').trim();
+    const outputRoot = String(payload && payload.outputRoot || '').trim();
+    const audioBitrate = Number(payload && payload.audioBitrate || 96);
+    const relativePaths = Array.isArray(payload && payload.relativePaths)
+      ? payload.relativePaths.map((item) => String(item || '').trim()).filter(Boolean)
+      : [];
+
+    if (!sourceRoot || !outputRoot) {
+      throw new Error('Missing sourceRoot or outputRoot.');
+    }
+    if (isSameResolvedPath(sourceRoot, outputRoot)) {
+      throw new Error('Build Root and Output Root must be different so the original asset stays untouched.');
+    }
+    if (!relativePaths.length) {
+      throw new Error('Tick at least one audio file before running the batch optimize.');
+    }
+
+    await ensureOutputBuildCopy({ sourceRoot, outputRoot });
+
+    const reports = await runWithConcurrency(relativePaths, 3, async (relativePath) => {
+      const normalized = toPosixRelative(relativePath);
+      try {
+        const inputPath = resolveBuildFile(sourceRoot, relativePath);
+        const outputPath = resolveBuildFile(outputRoot, relativePath);
+        const report = await runSafeAudioOptimizeToDestination({
+          inputPath,
+          outputPath,
+          audioBitrate,
+        });
+        return { relativePath: normalized, ...report };
+      } catch (error) {
+        return {
+          relativePath: normalized,
+          error: error.message || String(error),
+          optimized: false,
+        };
+      }
+    });
+
+    return summarizeBatchAssetReports(reports, { audioBitrate });
+  },
+
+  async resetSelectedAudio(payload) {
+    const sourceRoot = String(payload && payload.sourceRoot || '').trim();
+    const outputRoot = String(payload && payload.outputRoot || '').trim();
+    const relativePaths = Array.isArray(payload && payload.relativePaths)
+      ? payload.relativePaths.map((item) => String(item || '').trim()).filter(Boolean)
+      : [];
+
+    if (!sourceRoot || !outputRoot) {
+      throw new Error('Missing sourceRoot or outputRoot.');
+    }
+    if (isSameResolvedPath(sourceRoot, outputRoot)) {
+      throw new Error('Build Root and Output Root must be different so Reset cannot overwrite the original build.');
+    }
+    if (!relativePaths.length) {
+      throw new Error('Tick at least one audio file before running the batch reset.');
+    }
+
+    await ensureOutputBuildCopy({ sourceRoot, outputRoot });
+
+    const reports = await runWithConcurrency(relativePaths, 8, async (relativePath) => {
+      const normalized = toPosixRelative(relativePath);
+      try {
+        const sourceFile = resolveBuildFile(sourceRoot, relativePath);
+        const outputFile = resolveBuildFile(outputRoot, relativePath);
+        const sourceStat = await fs.stat(sourceFile);
+        const beforeBytes = await fs.stat(outputFile).then((stat) => stat.size).catch(() => sourceStat.size);
+        await fs.mkdir(path.dirname(outputFile), { recursive: true });
+        await fs.copyFile(sourceFile, outputFile);
+        return {
+          relativePath: normalized,
+          inputPath: sourceFile,
+          outputPath: outputFile,
+          beforeBytes,
+          afterBytes: sourceStat.size,
+          optimized: false,
+          reset: true,
+          skippedReason: 'reset-to-original',
+        };
+      } catch (error) {
+        return {
+          relativePath: normalized,
+          error: error.message || String(error),
+          optimized: false,
+        };
+      }
+    });
+
+    return summarizeBatchAssetReports(reports, {});
+  },
+
   async optimizeAllPngs(payload) {
     const sourceRoot = String(payload && payload.sourceRoot || '').trim();
     const outputRoot = String(payload && payload.outputRoot || '').trim();
@@ -345,6 +438,42 @@ exports.methods = {
     };
   },
 };
+
+function toPosixRelative(relativePath) {
+  return String(relativePath || '').split(path.sep).join('/');
+}
+
+function summarizeBatchAssetReports(reports, extra = {}) {
+  let totalBeforeBytes = 0;
+  let totalAfterBytes = 0;
+  let optimizedCount = 0;
+  let unchangedCount = 0;
+  let failedCount = 0;
+
+  for (const report of reports) {
+    totalBeforeBytes += Number(report.beforeBytes || 0);
+    totalAfterBytes += Number(report.afterBytes || report.beforeBytes || 0);
+    if (report.error) {
+      failedCount++;
+    } else if (report.optimized) {
+      optimizedCount++;
+    } else {
+      unchangedCount++;
+    }
+  }
+
+  return {
+    totalFiles: reports.length,
+    optimizedCount,
+    unchangedCount,
+    failedCount,
+    totalBeforeBytes,
+    totalAfterBytes,
+    savedBytes: Math.max(0, totalBeforeBytes - totalAfterBytes),
+    results: reports,
+    ...extra,
+  };
+}
 
 async function runOptimizeScript({ sourceRoot, outputRoot, maxTextureSize, jpegQuality }) {
   const scriptPath = path.join(__dirname, 'scripts', 'optimize-build-copy.ps1');

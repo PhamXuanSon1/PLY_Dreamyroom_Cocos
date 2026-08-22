@@ -49,6 +49,12 @@ module.exports = Editor.Panel.define({
     batchApplyPngBtn: '#batch-apply-png-btn',
     batchResetPngBtn: '#batch-reset-png-btn',
     batchStatus: '#batch-status',
+    batchAudioBitrate: '#batch-audio-bitrate',
+    batchSelectAllAudioBtn: '#batch-select-all-audio-btn',
+    batchClearAudioBtn: '#batch-clear-audio-btn',
+    batchApplyAudioBtn: '#batch-apply-audio-btn',
+    batchResetAudioBtn: '#batch-reset-audio-btn',
+    batchAudioStatus: '#batch-audio-status',
   },
 
   ready() {
@@ -69,6 +75,7 @@ module.exports = Editor.Panel.define({
       projectRoot: Editor.Project.path,
       buildRoot: '',
       scanSourceLabel: 'Original Build',
+      tickedAudio: new Set(),
     };
 
     this.$.scanButton.addEventListener('confirm', () => {
@@ -94,6 +101,34 @@ module.exports = Editor.Panel.define({
         void runBatchPngResetAction.call(this);
       });
     }
+
+    if (this.$.batchSelectAllAudioBtn) {
+      this.$.batchSelectAllAudioBtn.addEventListener('click', () => {
+        setAllVisibleAudioTicked.call(this, true);
+      });
+    }
+
+    if (this.$.batchClearAudioBtn) {
+      this.$.batchClearAudioBtn.addEventListener('click', () => {
+        this.state.tickedAudio.clear();
+        renderAssetResults.call(this);
+        updateAudioBatchStatus.call(this);
+      });
+    }
+
+    if (this.$.batchApplyAudioBtn) {
+      this.$.batchApplyAudioBtn.addEventListener('click', () => {
+        void runBatchAudioAction.call(this, 'optimize');
+      });
+    }
+
+    if (this.$.batchResetAudioBtn) {
+      this.$.batchResetAudioBtn.addEventListener('click', () => {
+        void runBatchAudioAction.call(this, 'reset');
+      });
+    }
+
+    updateAudioBatchStatus.call(this);
 
     this.$.assetResults.tabIndex = 0;
     this.$.assetResults.addEventListener('keydown', (event) => {
@@ -272,6 +307,8 @@ async function scanPlayable() {
     this.state.fileIndex = fileIndex;
     this.state.typeRows = typeRows;
     this.state.assetRows = assetRows;
+    // A fresh scan replaces every row, so stale ticks would point at nothing.
+    this.state.tickedAudio.clear();
     this.state.importRows = importRows;
     this.state.totalBuildBytes = buildFiles.reduce((sum, file) => sum + file.size, 0);
 
@@ -834,14 +871,21 @@ function renderAssetResults() {
   if (!rows.length) {
     this.$.assetResults.className = 'panel-content empty';
     this.$.assetResults.textContent = 'No built assets found for this filter.';
+    updateAudioBatchStatus.call(this);
     return;
   }
+
+  const tickableRows = rows.filter(isTickableAudio);
+  const allTickable = tickableRows.length > 0;
+  const allTicked = allTickable
+    && tickableRows.every((entry) => this.state.tickedAudio.has(entry.relativePath));
 
   this.$.assetResults.className = 'panel-content';
   this.$.assetResults.innerHTML = `
     <table class="result-table">
       <thead>
         <tr>
+          <th class="tick-cell"><input type="checkbox" id="tick-all-audio" title="Tick every optimizable audio file in this view"${allTickable && allTicked ? ' checked' : ''}${allTickable ? '' : ' disabled'}></th>
           <th>#</th>
           <th>Built File</th>
           <th>Type</th>
@@ -853,6 +897,9 @@ function renderAssetResults() {
       <tbody>
         ${rows.map((entry, index) => `
           <tr class="result-row ${isSelected(this, 'asset', index) ? 'selected' : ''}" data-kind="asset" data-index="${index}">
+            <td class="tick-cell">${isTickableAudio(entry)
+              ? `<input type="checkbox" class="row-tick" data-relative-path="${escapeHtml(entry.relativePath)}"${this.state.tickedAudio.has(entry.relativePath) ? ' checked' : ''}>`
+              : ''}</td>
             <td>${index + 1}</td>
             <td class="build-file">${escapeHtml(entry.relativePath)}</td>
             <td>${escapeHtml(typeLabel(entry.category))}</td>
@@ -866,6 +913,85 @@ function renderAssetResults() {
   `;
 
   wireSelectionRows.call(this, this.$.assetResults);
+  wireAudioTickBoxes.call(this, this.$.assetResults);
+  updateAudioBatchStatus.call(this);
+}
+
+// Only .mp3/.ogg audio can go through the safe direct optimizer, so those are
+// the rows that get a tick box.
+function isTickableAudio(entry) {
+  return Boolean(entry && entry.category === 'audio' && entry.canOptimizeDirectly);
+}
+
+function getTickableAudioRows(panel) {
+  return getFilteredAssetRows(panel).filter(isTickableAudio);
+}
+
+function setAllVisibleAudioTicked(ticked) {
+  for (const entry of getTickableAudioRows(this)) {
+    if (ticked) {
+      this.state.tickedAudio.add(entry.relativePath);
+    } else {
+      this.state.tickedAudio.delete(entry.relativePath);
+    }
+  }
+  renderAssetResults.call(this);
+  updateAudioBatchStatus.call(this);
+}
+
+function wireAudioTickBoxes(root) {
+  const tickAll = root.querySelector('#tick-all-audio');
+  if (tickAll) {
+    tickAll.addEventListener('click', (event) => event.stopPropagation());
+    tickAll.addEventListener('change', (event) => {
+      setAllVisibleAudioTicked.call(this, event.target.checked);
+    });
+  }
+
+  for (const box of root.querySelectorAll('.row-tick')) {
+    // Stop the row click handler from stealing the tick and re-rendering.
+    box.addEventListener('click', (event) => event.stopPropagation());
+    box.addEventListener('change', (event) => {
+      const relativePath = box.dataset.relativePath;
+      if (event.target.checked) {
+        this.state.tickedAudio.add(relativePath);
+      } else {
+        this.state.tickedAudio.delete(relativePath);
+      }
+      const tickAllBox = root.querySelector('#tick-all-audio');
+      if (tickAllBox && !tickAllBox.disabled) {
+        const tickable = getTickableAudioRows(this);
+        tickAllBox.checked = tickable.length > 0
+          && tickable.every((entry) => this.state.tickedAudio.has(entry.relativePath));
+      }
+      updateAudioBatchStatus.call(this);
+    });
+  }
+}
+
+function getTickedAudioRows(panel) {
+  return panel.state.assetRows.filter(
+    (entry) => isTickableAudio(entry) && panel.state.tickedAudio.has(entry.relativePath)
+  );
+}
+
+function updateAudioBatchStatus() {
+  const tickedCount = getTickedAudioRows(this).length;
+  const tickedKB = round(
+    getTickedAudioRows(this).reduce((sum, entry) => sum + Number(entry.size || 0), 0) / 1024
+  );
+
+  if (this.$.batchAudioStatus) {
+    this.$.batchAudioStatus.textContent = tickedCount
+      ? `${tickedCount} ticked (${tickedKB} KB)`
+      : 'No audio ticked';
+  }
+
+  for (const button of [this.$.batchApplyAudioBtn, this.$.batchResetAudioBtn]) {
+    if (button) {
+      button.disabled = tickedCount === 0;
+    }
+  }
 }
 
 function renderImportResults() {
@@ -1518,6 +1644,103 @@ async function runAssetResetAction(entry) {
   }
 
   renderDetail.call(this);
+}
+
+async function runBatchAudioAction(mode) {
+  if (this.state.scanning) {
+    return;
+  }
+
+  const targets = getTickedAudioRows(this);
+  if (!targets.length) {
+    setStatus.call(this, 'Tick at least one audio file first.');
+    return;
+  }
+
+  const isReset = mode === 'reset';
+  const audioBitrate = Number((this.$.batchAudioBitrate && this.$.batchAudioBitrate.value) || 96);
+  const sourceRootInput = String(this.$.buildRootInput.value || DEFAULT_BUILD_ROOT).trim() || DEFAULT_BUILD_ROOT;
+  const outputRootInput = String(this.$.outputRootInput.value || DEFAULT_OUTPUT_ROOT).trim() || DEFAULT_OUTPUT_ROOT;
+  const sourceRoot = path.resolve(Editor.Project.path, sourceRootInput);
+  const outputRoot = path.resolve(Editor.Project.path, outputRootInput);
+  const relativePaths = targets.map((entry) => entry.relativePath);
+
+  this.state.scanning = true;
+  const busyLabel = isReset
+    ? `Resetting ${targets.length} audio files to original...`
+    : `Optimizing ${targets.length} audio files at ${audioBitrate} kbps...`;
+  if (this.$.batchAudioStatus) {
+    this.$.batchAudioStatus.textContent = busyLabel;
+  }
+  setStatus.call(this, busyLabel);
+  this.$.recommendation.textContent = busyLabel;
+
+  try {
+    const report = await Editor.Message.request(
+      'playable-size-inspector',
+      isReset ? 'reset-selected-audio' : 'optimize-selected-audio',
+      { sourceRoot, outputRoot, relativePaths, audioBitrate }
+    );
+
+    if (Array.isArray(report.results)) {
+      for (const res of report.results) {
+        if (res.error) {
+          continue;
+        }
+
+        const row = this.state.assetRows.find((item) => item.relativePath === res.relativePath);
+        if (row && res.afterBytes) {
+          row.fullPath = res.outputPath || row.fullPath;
+          row.size = res.afterBytes;
+          row.sizeKB = round(res.afterBytes / 1024);
+          row.sizeMB = round(res.afterBytes / (1024 * 1024));
+          row.relativeBuildRoot = res.relativePath;
+        }
+
+        this.state.previewByAsset.set(res.relativePath, {
+          status: 'ready',
+          report: res,
+        });
+      }
+      recalculateAllMetricsFromAssetRows.call(this);
+    }
+
+    if (this.$.scanSourceSelect) {
+      this.$.scanSourceSelect.value = 'optimized';
+    }
+    this.state.scanSourceLabel = 'Optimized Copy';
+    await refreshOptimizedScanAvailability.call(this);
+
+    const savedKB = round(Number(report.savedBytes || 0) / 1024);
+    const failedNote = report.failedCount ? ` ${report.failedCount} failed.` : '';
+    const msg = isReset
+      ? `Reset ${report.totalFiles - report.failedCount}/${report.totalFiles} audio files to original.${failedNote}`
+      : `Optimized ${report.optimizedCount}/${report.totalFiles} audio files, saved ${savedKB} KB at ${audioBitrate} kbps.${failedNote}`;
+
+    renderSummaryFromState.call(this);
+    renderOverviewFromState.call(this);
+    renderTypeResults.call(this);
+    renderAssetResults.call(this);
+    renderDetail.call(this);
+
+    setStatus.call(this, msg);
+    this.$.recommendation.textContent = `${msg} Output copy is active.`;
+    // Set last: renderAssetResults resets this line to the ticked-count readout.
+    if (this.$.batchAudioStatus) {
+      this.$.batchAudioStatus.textContent = isReset
+        ? `Reset ${report.totalFiles - report.failedCount}/${report.totalFiles}`
+        : `Saved ${savedKB} KB (${report.optimizedCount}/${report.totalFiles})`;
+    }
+  } catch (error) {
+    console.error(`[playable-size-inspector] batch audio ${mode} failed:`, error);
+    if (this.$.batchAudioStatus) {
+      this.$.batchAudioStatus.textContent = `Batch audio ${mode} failed`;
+    }
+    setStatus.call(this, error.message || String(error));
+    this.$.recommendation.textContent = error.message || String(error);
+  } finally {
+    this.state.scanning = false;
+  }
 }
 
 async function runBatchPngOptimizeAction(options = {}) {
