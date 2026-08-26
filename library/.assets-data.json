@@ -821,7 +821,7 @@
         "0ca83f0f-01f2-4015-86dd-5a284c704b6e@f9941",
         "f0461c8e-bcf9-4561-a89f-cef446e6c026@f9941",
         "c7234e22-ca10-4314-8cfa-73d12c076cfd@f9941",
-        "5e432389-d7ec-401c-91eb-91025d208ad6",
+        "d5e72c29-edd5-463f-a32b-edad03c5e3c6",
         "0408aba9-4671-4e64-841a-73f50dc131bb@f9941",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
@@ -5493,15 +5493,11 @@
   },
   "3d3e0a84-71f4-4585-a871-02fd4f4c2bf3": {
     "url": "db://assets/0.Spines/box38/box-ingame.atlas.txt",
-    "value": {
-      "depends": []
-    }
+    "value": {}
   },
   "68fee3bb-9865-4d23-ae90-a4b3fd60424d": {
     "url": "db://assets/0.Spines/box38/box-ingame.png",
-    "value": {
-      "depends": []
-    }
+    "value": {}
   },
   "68fee3bb-9865-4d23-ae90-a4b3fd60424d@6c48a": {
     "url": "db://assets/0.Spines/box38/box-ingame.png@6c48a",
@@ -5521,15 +5517,53 @@
   },
   "d218b0ee-855c-4228-b6fc-fc07380ad05f": {
     "url": "db://assets/0.Spines/box38/_spine-4.0-to-3.8.py",
-    "value": {
-      "depends": []
-    }
+    "value": {}
   },
   "5e432389-d7ec-401c-91eb-91025d208ad6": {
     "url": "db://assets/0.Spines/box38/box-ingame.json",
     "value": {
       "depends": [
         "68fee3bb-9865-4d23-ae90-a4b3fd60424d@6c48a"
+      ]
+    }
+  },
+  "be5c1183-df41-44fa-b299-d6556a334351": {
+    "url": "db://assets/0.Spines/box38",
+    "value": {}
+  },
+  "5cab3221-293b-4ab6-b00f-b31ea4076979": {
+    "url": "db://assets/0.Spines/box38/box-ingame.atlas.txt",
+    "value": {
+      "depends": []
+    }
+  },
+  "711e80d0-7a3f-4323-8cfc-ded0d320e009": {
+    "url": "db://assets/0.Spines/box38/box-ingame.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "d5e72c29-edd5-463f-a32b-edad03c5e3c6": {
+    "url": "db://assets/0.Spines/box38/box-ingame.json",
+    "value": {
+      "depends": [
+        "711e80d0-7a3f-4323-8cfc-ded0d320e009@6c48a"
+      ]
+    }
+  },
+  "711e80d0-7a3f-4323-8cfc-ded0d320e009@6c48a": {
+    "url": "db://assets/0.Spines/box38/box-ingame.png@6c48a",
+    "value": {
+      "depends": [
+        "711e80d0-7a3f-4323-8cfc-ded0d320e009"
+      ]
+    }
+  },
+  "711e80d0-7a3f-4323-8cfc-ded0d320e009@f9941": {
+    "url": "db://assets/0.Spines/box38/box-ingame.png@f9941",
+    "value": {
+      "depends": [
+        "711e80d0-7a3f-4323-8cfc-ded0d320e009@6c48a"
       ]
     }
   }

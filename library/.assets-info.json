@@ -9,11 +9,6 @@
     "uuid": "af4a1a8a-562b-4553-9313-6fbe3fadf74c",
     "missing": false
   },
-  "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38": {
-    "time": 1787383321385.9507,
-    "uuid": "6346ce94-529e-4470-8d00-b122dfc50ca5",
-    "missing": false
-  },
   "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\1.Animations\\BlinkEffect": {
     "time": 1787366370147.3716,
     "uuid": "a1e746e5-1f59-4fa9-bd7c-9cd7fb9d26f6",
@@ -510,9 +505,6 @@
   "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\scripts.meta": {
     "time": 1787382102384.6333
   },
-  "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38.meta": {
-    "time": 1787382102384.6333
-  },
   "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\1.Animations\\BlinkEffect.meta": {
     "time": 1787382102384.6333
   },
@@ -808,7 +800,7 @@
     "time": 1787382102619.4307
   },
   "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines": {
-    "time": 1787382418677.4226,
+    "time": 1787560060608.821,
     "uuid": "91ce8cc5-cd6c-4470-a59f-ad70a442a383",
     "missing": false
   },
@@ -1038,7 +1030,7 @@
     "missing": false
   },
   "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\6.Scenes\\PlayScene.scene": {
-    "time": 1787383649296.3943,
+    "time": 1787560074383.3225,
     "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1",
     "missing": false
   },
@@ -2927,36 +2919,36 @@
     "uuid": "b9de327c-e848-42e2-ac24-0f2b13c8f8a8",
     "missing": false
   },
+  "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38.meta": {
+    "time": 1787560060629.3167
+  },
   "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38\\box-ingame.atlas.txt.meta": {
-    "time": 1787383321409.906
-  },
-  "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38\\box-ingame.png.meta": {
-    "time": 1787383321501.1956
-  },
-  "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38\\_spine-4.0-to-3.8.py.meta": {
-    "time": 1787383321527.358
+    "time": 1787560060668.6792
   },
   "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38\\box-ingame.json.meta": {
-    "time": 1787383321547.6162
+    "time": 1787560060676.4219
+  },
+  "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38\\box-ingame.png.meta": {
+    "time": 1787560060735.005
+  },
+  "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38": {
+    "time": 1787560060611.917,
+    "uuid": "be5c1183-df41-44fa-b299-d6556a334351",
+    "missing": false
   },
   "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38\\box-ingame.atlas.txt": {
-    "time": 1787383161421.4531,
-    "uuid": "3d3e0a84-71f4-4585-a871-02fd4f4c2bf3",
-    "missing": false
-  },
-  "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38\\box-ingame.png": {
-    "time": 1787382995609.7332,
-    "uuid": "68fee3bb-9865-4d23-ae90-a4b3fd60424d",
-    "missing": false
-  },
-  "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38\\_spine-4.0-to-3.8.py": {
-    "time": 1787383204033.8137,
-    "uuid": "d218b0ee-855c-4228-b6fc-fc07380ad05f",
+    "time": 1787558869769.6284,
+    "uuid": "5cab3221-293b-4ab6-b00f-b31ea4076979",
     "missing": false
   },
   "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38\\box-ingame.json": {
-    "time": 1787383161420.4546,
-    "uuid": "5e432389-d7ec-401c-91eb-91025d208ad6",
+    "time": 1787558869433.8623,
+    "uuid": "d5e72c29-edd5-463f-a32b-edad03c5e3c6",
+    "missing": false
+  },
+  "F:\\CocosProject\\PLY_Dreamyroom_Cocos\\assets\\0.Spines\\box38\\box-ingame.png": {
+    "time": 1787558869768.6128,
+    "uuid": "711e80d0-7a3f-4323-8cfc-ded0d320e009",
     "missing": false
   }
 }
