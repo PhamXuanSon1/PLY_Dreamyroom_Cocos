@@ -93,8 +93,7 @@ export class SplineLineRenderer extends Component {
     headPoint: Vec3 = null;
 
     calculateGeometry() {
-        if (!this.pointNodes) return;
-        this.points = this.pointNodes.children || [];
+        this.points = this.pointNodes.children;
         this.smoothPoints = generateSmoothPoints(this.points.map(point => point.worldPosition), this.smoothStep, this.tension);
         this.tailPoint = this.smoothPoints[0];
         this.headPoint = this.smoothPoints[this.smoothPoints.length - 1];

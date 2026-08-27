@@ -234,7 +234,7 @@
         "_value": false
       },
       "3d": {
-        "_value": true
+        "_value": false
       },
       "2d": {
         "_value": true
@@ -344,7 +344,6 @@
     "flags": {},
     "includeModules": [
       "2d",
-      "3d",
       "animation",
       "audio",
       "base",

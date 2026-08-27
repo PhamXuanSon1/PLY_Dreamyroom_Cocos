@@ -1,33 +1,3 @@
 {
-  "__version__": "1.0.4",
-  "general": {
-    "designResolution": {
-      "width": 1080,
-      "height": 2350,
-      "fitWidth": false,
-      "fitHeight": true
-    },
-    "renderPipeline": "fd8ec536-a354-4a17-9c74-4f3883c378c8"
-  },
-  "layer": [
-    {
-      "name": "Particle",
-      "value": 1
-    },
-    {
-      "name": "Item",
-      "value": 2
-    },
-    {
-      "name": "Box",
-      "value": 4
-    },
-    {
-      "name": "BaseRoom",
-      "value": 8
-    }
-  ],
-  "sorting-layer": {
-    "layers": []
-  }
+  "__version__": "1.0.4"
 }

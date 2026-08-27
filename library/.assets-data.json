@@ -821,14 +821,11 @@
         "0ca83f0f-01f2-4015-86dd-5a284c704b6e@f9941",
         "f0461c8e-bcf9-4561-a89f-cef446e6c026@f9941",
         "c7234e22-ca10-4314-8cfa-73d12c076cfd@f9941",
-        "921cc9a5-19ed-436a-b838-75e859bd9cc5",
-        "35518090-ba23-47a6-8817-3b9ba388a325",
+        "d5e72c29-edd5-463f-a32b-edad03c5e3c6",
         "0408aba9-4671-4e64-841a-73f50dc131bb@f9941",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
         "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941",
-        "92c333dd-5459-460f-a5d3-f58cdea82ca9",
-        "35518090-ba23-47a6-8817-3b9ba388a325",
         "e1fc69b2-618c-4694-9672-0920e014cfe4",
         "deb41301-a9a0-4e4d-aae6-86c9a29d164b",
         "bb3b63d8-6495-4588-bc26-cf7294bd51d3",
@@ -5536,11 +5533,15 @@
   },
   "5cab3221-293b-4ab6-b00f-b31ea4076979": {
     "url": "db://assets/0.Spines/box38/box-ingame.atlas.txt",
-    "value": {}
+    "value": {
+      "depends": []
+    }
   },
   "711e80d0-7a3f-4323-8cfc-ded0d320e009": {
     "url": "db://assets/0.Spines/box38/box-ingame.png",
-    "value": {}
+    "value": {
+      "depends": []
+    }
   },
   "d5e72c29-edd5-463f-a32b-edad03c5e3c6": {
     "url": "db://assets/0.Spines/box38/box-ingame.json",
@@ -5563,214 +5564,6 @@
     "value": {
       "depends": [
         "711e80d0-7a3f-4323-8cfc-ded0d320e009@6c48a"
-      ]
-    }
-  },
-  "8cac4eb0-7505-46a2-9586-7ae0f4c85cc3": {
-    "url": "db://assets/0.Spines/38",
-    "value": {}
-  },
-  "cac9af53-2ccb-4804-9585-ea89a7a0fb6f": {
-    "url": "db://assets/0.Spines/38/box-gameplay.atlas.txt",
-    "value": {
-      "depends": []
-    }
-  },
-  "e68c614b-e92e-4120-ac7b-2b777a73b39a": {
-    "url": "db://assets/0.Spines/38/box-gameplay.png",
-    "value": {
-      "depends": []
-    }
-  },
-  "ca5e0480-e58e-4146-9733-4b998f9cbfb2": {
-    "url": "db://assets/0.Spines/38/box-gameplay.json",
-    "value": {
-      "depends": [
-        "e68c614b-e92e-4120-ac7b-2b777a73b39a@6c48a"
-      ]
-    }
-  },
-  "e68c614b-e92e-4120-ac7b-2b777a73b39a@6c48a": {
-    "url": "db://assets/0.Spines/38/box-gameplay.png@6c48a",
-    "value": {
-      "depends": [
-        "e68c614b-e92e-4120-ac7b-2b777a73b39a"
-      ]
-    }
-  },
-  "e68c614b-e92e-4120-ac7b-2b777a73b39a@f9941": {
-    "url": "db://assets/0.Spines/38/box-gameplay.png@f9941",
-    "value": {
-      "depends": [
-        "e68c614b-e92e-4120-ac7b-2b777a73b39a@6c48a"
-      ]
-    }
-  },
-  "0404d457-e5ca-4d19-9873-1326b6fb7c79": {
-    "url": "db://assets/0.Spines/box-gameplay.atlas.txt",
-    "value": {
-      "depends": []
-    }
-  },
-  "a55f72c6-a097-48e0-a1cf-216e80a32f22": {
-    "url": "db://assets/0.Spines/box-gameplay.json",
-    "value": {
-      "depends": [
-        "f85b73cf-fa8c-4668-b96e-0adf39c458c5@6c48a"
-      ]
-    }
-  },
-  "f85b73cf-fa8c-4668-b96e-0adf39c458c5": {
-    "url": "db://assets/0.Spines/box-gameplay.png",
-    "value": {
-      "depends": []
-    }
-  },
-  "f85b73cf-fa8c-4668-b96e-0adf39c458c5@6c48a": {
-    "url": "db://assets/0.Spines/box-gameplay.png@6c48a",
-    "value": {
-      "depends": [
-        "f85b73cf-fa8c-4668-b96e-0adf39c458c5"
-      ]
-    }
-  },
-  "f85b73cf-fa8c-4668-b96e-0adf39c458c5@f9941": {
-    "url": "db://assets/0.Spines/box-gameplay.png@f9941",
-    "value": {
-      "depends": [
-        "f85b73cf-fa8c-4668-b96e-0adf39c458c5@6c48a"
-      ]
-    }
-  },
-  "921cc9a5-19ed-436a-b838-75e859bd9cc5": {
-    "url": "db://assets/0.Spines/aircon.json",
-    "value": {
-      "depends": [
-        "00530a8a-3c16-4c86-b780-1215a8aa5c8a@6c48a"
-      ]
-    }
-  },
-  "b7d55e0a-3015-4301-a102-849350722874": {
-    "url": "db://assets/0.Spines/aircon.atlas",
-    "value": {}
-  },
-  "00530a8a-3c16-4c86-b780-1215a8aa5c8a": {
-    "url": "db://assets/0.Spines/aircon.png",
-    "value": {}
-  },
-  "00530a8a-3c16-4c86-b780-1215a8aa5c8a@6c48a": {
-    "url": "db://assets/0.Spines/aircon.png@6c48a",
-    "value": {
-      "depends": [
-        "00530a8a-3c16-4c86-b780-1215a8aa5c8a"
-      ]
-    }
-  },
-  "00530a8a-3c16-4c86-b780-1215a8aa5c8a@f9941": {
-    "url": "db://assets/0.Spines/aircon.png@f9941",
-    "value": {
-      "depends": [
-        "00530a8a-3c16-4c86-b780-1215a8aa5c8a@6c48a"
-      ]
-    }
-  },
-  "0d02bade-1d64-4f12-89b5-66eeb5d5263c": {
-    "url": "db://assets/0.Spines/aircon.atlas.txt",
-    "value": {}
-  },
-  "92c333dd-5459-460f-a5d3-f58cdea82ca9": {
-    "url": "db://assets/0.Spines/aircon.json",
-    "value": {}
-  },
-  "18df6f29-369c-42ae-8203-be4403e5a2d4": {
-    "url": "db://assets/0.Spines/aircon.png",
-    "value": {}
-  },
-  "18df6f29-369c-42ae-8203-be4403e5a2d4@6c48a": {
-    "url": "db://assets/0.Spines/aircon.png@6c48a",
-    "value": {
-      "depends": [
-        "18df6f29-369c-42ae-8203-be4403e5a2d4"
-      ]
-    }
-  },
-  "18df6f29-369c-42ae-8203-be4403e5a2d4@f9941": {
-    "url": "db://assets/0.Spines/aircon.png@f9941",
-    "value": {
-      "depends": [
-        "18df6f29-369c-42ae-8203-be4403e5a2d4@6c48a"
-      ]
-    }
-  },
-  "023040db-98eb-4de5-8c0c-e341e23e7106": {
-    "url": "db://assets/0.Spines/box-gameplay.atlas.txt",
-    "value": {
-      "depends": []
-    }
-  },
-  "d0d3d78c-a946-4dd3-9f42-c27a47d71bb3": {
-    "url": "db://assets/0.Spines/box-gameplay.json",
-    "value": {
-      "depends": [
-        "e5e6d1a0-bd05-4774-b9d2-0ecad16b22c1@6c48a"
-      ]
-    }
-  },
-  "e5e6d1a0-bd05-4774-b9d2-0ecad16b22c1": {
-    "url": "db://assets/0.Spines/box-gameplay.png",
-    "value": {
-      "depends": []
-    }
-  },
-  "e5e6d1a0-bd05-4774-b9d2-0ecad16b22c1@6c48a": {
-    "url": "db://assets/0.Spines/box-gameplay.png@6c48a",
-    "value": {
-      "depends": [
-        "e5e6d1a0-bd05-4774-b9d2-0ecad16b22c1"
-      ]
-    }
-  },
-  "e5e6d1a0-bd05-4774-b9d2-0ecad16b22c1@f9941": {
-    "url": "db://assets/0.Spines/box-gameplay.png@f9941",
-    "value": {
-      "depends": [
-        "e5e6d1a0-bd05-4774-b9d2-0ecad16b22c1@6c48a"
-      ]
-    }
-  },
-  "7dc216ee-64fd-4105-9352-363afa52a7fe": {
-    "url": "db://assets/0.Spines/box-ingame.atlas.txt",
-    "value": {
-      "depends": []
-    }
-  },
-  "35518090-ba23-47a6-8817-3b9ba388a325": {
-    "url": "db://assets/0.Spines/box-ingame.json",
-    "value": {
-      "depends": [
-        "4979cd04-fdc1-49f3-ad74-2b66fe532448@6c48a"
-      ]
-    }
-  },
-  "4979cd04-fdc1-49f3-ad74-2b66fe532448": {
-    "url": "db://assets/0.Spines/box-ingame.png",
-    "value": {
-      "depends": []
-    }
-  },
-  "4979cd04-fdc1-49f3-ad74-2b66fe532448@6c48a": {
-    "url": "db://assets/0.Spines/box-ingame.png@6c48a",
-    "value": {
-      "depends": [
-        "4979cd04-fdc1-49f3-ad74-2b66fe532448"
-      ]
-    }
-  },
-  "4979cd04-fdc1-49f3-ad74-2b66fe532448@f9941": {
-    "url": "db://assets/0.Spines/box-ingame.png@f9941",
-    "value": {
-      "depends": [
-        "4979cd04-fdc1-49f3-ad74-2b66fe532448@6c48a"
       ]
     }
   }
