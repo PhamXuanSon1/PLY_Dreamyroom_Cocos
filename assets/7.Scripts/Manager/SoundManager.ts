@@ -118,7 +118,7 @@ export default class SoundManager extends Component {
     }
     start () {
         // this.playBgMusic();
-        this.audiosource = this.node.getComponentsInChildren(AudioSource);
+        this.audiosource = this.node.getComponentsInChildren(AudioSource) || [];
         this.volumes = this.audiosource.map(a => a.volume);
         this.eventSound();        
         this.schedule(this.checkAudio, 1);

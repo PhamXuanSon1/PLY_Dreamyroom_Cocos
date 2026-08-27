@@ -8,7 +8,7 @@
  *   - Bỏ SetLayerRecursively (dead code bên Unity, không nơi nào gọi).
  */
 
-import { _decorator, BoxCollider2D, Component, EventTouch, Node, randomRange, Vec2, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Component, EventTouch, Node, randomRange, UITransform, Vec2, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { BoxGraphic } from './BoxGraphic';
 import { ItemManager } from '../managers/ItemManager';
@@ -63,10 +63,27 @@ export class BoxController extends Component implements IPointerHandler {
 
     readonly inputPriority = InputPriority.Box;
 
+    private lastClickTime = 0;
+
     // ======================================================== lifecycle
     onLoad() {
         this.boxGraphic = this.getComponent(BoxGraphic);
         this.boxGraphic?.playReady();
+
+        // Đồng bộ UITransform với BoxCollider2D để direct touch trên node khớp hoàn toàn vùng collider
+        this.syncUITransformWithCollider();
+    }
+
+    private syncUITransformWithCollider(): void {
+        const col = this.getComponent(BoxCollider2D);
+        const ut = this.getComponent(UITransform);
+        if (col && ut && col.size.width > 0 && col.size.height > 0) {
+            ut.setContentSize(col.size.width, col.size.height);
+            ut.setAnchorPoint(
+                0.5 - col.offset.x / col.size.width,
+                0.5 - col.offset.y / col.size.height
+            );
+        }
     }
 
     onEnable() {
@@ -87,8 +104,24 @@ export class BoxController extends Component implements IPointerHandler {
     hitTest(worldPos: Vec3): boolean {
         if (UIManager.instance?.isGameEnded) return false;
         if (this.isClicked || this.isClosing) return false;
-        if (DreamyInputManager.hitTestCollider(this.node, worldPos)) return true;
+
+        // 1. Kiểm tra trực tiếp BoxCollider2D theo toạ độ local (chính xác tuyệt đối, không phụ thuộc physics step)
+        const col = this.getComponent(BoxCollider2D);
         const ut = this.getComponent(UITransform);
+        if (col && ut) {
+            const local = ut.convertToNodeSpaceAR(worldPos);
+            const halfW = col.size.width * 0.5;
+            const halfH = col.size.height * 0.5;
+            if (Math.abs(local.x - col.offset.x) <= halfW &&
+                Math.abs(local.y - col.offset.y) <= halfH) {
+                return true;
+            }
+        }
+
+        // 2. Kiểm tra qua DreamyInputManager helper
+        if (DreamyInputManager.hitTestCollider(this.node, worldPos)) return true;
+
+        // 3. Fallback: UITransform bounding box
         if (ut && ut.getBoundingBoxToWorld().contains(new Vec2(worldPos.x, worldPos.y))) {
             return true;
         }
@@ -110,6 +143,11 @@ export class BoxController extends Component implements IPointerHandler {
             return;
         }
         if (this.isClicked || this.isClosing) return;
+
+        // Debounce 200ms để tránh trigger đúp nếu cả DreamyInputManager và node.on(TOUCH_START) cùng kích hoạt
+        const now = Date.now();
+        if (now - this.lastClickTime < 200) return;
+        this.lastClickTime = now;
 
         Ply_SoundManager.Ins?.playFx(FxType.ClickBox);
 

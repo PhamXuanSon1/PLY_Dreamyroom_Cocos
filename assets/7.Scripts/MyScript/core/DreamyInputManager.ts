@@ -12,7 +12,7 @@
  * Xem COCOS_MIGRATION_PLAN.md mục 5.2.
  */
 
-import { _decorator, Component, Node, input, Input, EventTouch, Vec3, Vec2, UITransform, Layers, Collider2D } from 'cc';
+import { _decorator, Component, Node, input, Input, EventTouch, Vec3, Vec2, UITransform, Layers, Collider2D, BoxCollider2D } from 'cc';
 import { EDITOR } from 'cc/env';
 import { ItemGraphic } from '../item/ItemGraphic';
 import { ItemManager } from '../managers/ItemManager';
@@ -187,8 +187,8 @@ export class DreamyInputManager extends Component {
         const candidates = this.handlers
             .filter((h) => {
                 if (!h.node || !h.node.isValid || !h.node.activeInHierarchy) return false;
-                // UI handler (như UIManager) không bị ràng buộc bởi layer mask của gameplay
-                if (h.inputPriority !== InputPriority.UI && !DreamyInputManager.isNodeInteractable(h.node)) {
+                // UI và Box handler không bị ràng buộc bởi layer mask của gameplay
+                if (h.inputPriority !== InputPriority.UI && h.inputPriority !== InputPriority.Box && !DreamyInputManager.isNodeInteractable(h.node)) {
                     return false;
                 }
                 return h.hitTest(worldPos);
@@ -276,10 +276,35 @@ export class DreamyInputManager extends Component {
 
     /** Thay cho Physics.RaycastAll — hit-test bằng Collider2D (BoxCollider2D, CircleCollider2D, PolygonCollider2D...) trên Node */
     static hitTestCollider(node: Node, worldPos: Vec3): boolean {
-        if (!node || !DreamyInputManager.isNodeInteractable(node)) return false;
+        if (!node || !node.isValid || !node.activeInHierarchy) return false;
         const collider = node.getComponent(Collider2D);
-        if (!collider || !collider.worldAABB) return false;
-        return collider.worldAABB.contains(new Vec2(worldPos.x, worldPos.y));
+        if (collider) {
+            // 1. Kiểm tra theo worldAABB của physics nếu có giá trị
+            if (collider.worldAABB && collider.worldAABB.width > 0 && collider.worldAABB.height > 0) {
+                if (collider.worldAABB.contains(new Vec2(worldPos.x, worldPos.y))) {
+                    return true;
+                }
+            }
+            // 2. Fallback chính xác theo toạ độ local cho BoxCollider2D (không phụ thuộc PhysicsSystem2D step)
+            if (collider instanceof BoxCollider2D) {
+                const ut = node.getComponent(UITransform);
+                if (ut) {
+                    const local = ut.convertToNodeSpaceAR(worldPos);
+                    const halfW = collider.size.width * 0.5;
+                    const halfH = collider.size.height * 0.5;
+                    if (Math.abs(local.x - collider.offset.x) <= halfW &&
+                        Math.abs(local.y - collider.offset.y) <= halfH) {
+                        return true;
+                    }
+                }
+            }
+        }
+        // 3. Fallback theo bounding box của UITransform
+        const ut = node.getComponent(UITransform);
+        if (ut && ut.getBoundingBoxToWorld().contains(new Vec2(worldPos.x, worldPos.y))) {
+            return true;
+        }
+        return false;
     }
 
     /** Tương thích ngược: chuyển hướng về hitTestCollider */

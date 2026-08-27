@@ -30,24 +30,36 @@ export class BoxGraphic extends Component {
 
     // ========================================== ANIMATION NAMES
     @property({ tooltip: '1. Anim chờ khi mới vào game (Loop)' })
-    animReadyLoop = '1-ready-Loop';
+    animReadyLoop = '0-pack-idle';
 
     @property({ tooltip: '2. Anim mở hộp lần đầu tiên khi click (1 lần)' })
-    animFirstOpen = '2-OPEN';
+    animFirstOpen = '1-unpack';
 
-    @property({ tooltip: '3. Anim mở chờ các click tiếp theo (Loop)' })
-    animOpenedLoop = '3-OPEN-loop-break';
+    @property({ tooltip: '3. Anim mở chờ các click tiếp theo (1 lần theo chu kỳ)' })
+    animOpenedLoop = '2-unpack-done-loop';
+
+    @property({ tooltip: 'Thời gian delay sau mỗi lần phát Anim Opened Loop (giây)' })
+    openedLoopTime = 2.0;
 
     @property({ tooltip: '4. Anim click nhả item (1 lần)' })
-    animClick = '3-OPEN-click';
+    animClick = '2-unpack-done-click';
 
     @property({ tooltip: '5. Anim khi hết item/đóng hộp kết thúc' })
-    animClosed = 'Setup-A-2';
+    animClosed = '3-unpack-end';
 
     currentState: BoxState = BoxState.Closed;
 
     onLoad() {
         this.resolveSkeletonComponent();
+        this.initSkeletonListener();
+    }
+
+    onDisable() {
+        this.stopOpenedLoopTimer();
+    }
+
+    onDestroy() {
+        this.stopOpenedLoopTimer();
     }
 
     /** Tự động tìm Spine Skeleton nếu chưa kéo vào Inspector */
@@ -56,46 +68,94 @@ export class BoxGraphic extends Component {
             this.boxSkeleton = this.getComponent(sp.Skeleton)
                 || this.node.getChildByName('BoxImage')?.getComponent(sp.Skeleton)
                 || this.getComponentInChildren(sp.Skeleton);
+            if (this.boxSkeleton) {
+                this.initSkeletonListener();
+            }
         }
     }
 
-    /** Hiển thị trạng thái chờ ban đầu (1-ready-Loop). */
+    /** Lắng nghe khi animation kết thúc */
+    private initSkeletonListener(): void {
+        if (!this.boxSkeleton) return;
+        this.boxSkeleton.setCompleteListener((entry: any) => {
+            const animName = entry?.animation?.name;
+            if (animName === this.animFirstOpen || animName === this.animClick || animName === this.animOpenedLoop) {
+                if (this.currentState === BoxState.FirstOpen || this.currentState === BoxState.CLickBox || this.currentState === BoxState.Opened || this.currentState === BoxState.OpenLoopBreak) {
+                    this.currentState = BoxState.Opened;
+                    this.scheduleNextOpenedLoop();
+                }
+            }
+        });
+    }
+
+    /** Dừng timer lặp của opened loop */
+    private stopOpenedLoopTimer(): void {
+        this.unschedule(this.triggerOpenedLoop);
+    }
+
+    /** Lên lịch phát Anim Opened Loop sau khoảng thời gian openedLoopTime */
+    private scheduleNextOpenedLoop(): void {
+        this.stopOpenedLoopTimer();
+        if (this.currentState === BoxState.Closed || this.currentState === BoxState.ReadyOpen) {
+            return;
+        }
+        if (this.openedLoopTime > 0) {
+            this.scheduleOnce(this.triggerOpenedLoop, this.openedLoopTime);
+        } else {
+            this.triggerOpenedLoop();
+        }
+    }
+
+    /** Hàm phát Anim Opened Loop 1 lần */
+    private triggerOpenedLoop = (): void => {
+        if (!this.boxSkeleton) return;
+        if (this.currentState !== BoxState.Opened && this.currentState !== BoxState.FirstOpen && this.currentState !== BoxState.CLickBox && this.currentState !== BoxState.OpenLoopBreak) {
+            return;
+        }
+        this.currentState = BoxState.Opened;
+        this.boxSkeleton.setAnimation(0, this.animOpenedLoop, false);
+    };
+
+    /** Hiển thị trạng thái chờ ban đầu (0-pack-idle). */
     playReady(): void {
         this.currentState = BoxState.ReadyOpen;
+        this.stopOpenedLoopTimer();
         this.resolveSkeletonComponent();
         if (!this.boxSkeleton) return;
         this.boxSkeleton.setAnimation(0, this.animReadyLoop, true);
     }
 
-    /** Mở hộp lần đầu (2-OPEN -> 3-OPEN-loop-break). */
+    /** Mở hộp lần đầu (1-unpack -> delay openedLoopTime -> 2-unpack-done-loop). */
     playFirstOpen(): void {
         this.currentState = BoxState.FirstOpen;
+        this.stopOpenedLoopTimer();
         this.resolveSkeletonComponent();
         if (!this.boxSkeleton) return;
         this.boxSkeleton.setAnimation(0, this.animFirstOpen, false);
-        this.boxSkeleton.addAnimation(0, this.animOpenedLoop, true, 0);
     }
 
-    /** Click nhả item (3-OPEN-click -> 3-OPEN-loop-break). */
+    /** Click nhả item (2-unpack-done-click -> delay openedLoopTime -> 2-unpack-done-loop). */
     playItemDispense(): void {
         this.currentState = BoxState.CLickBox;
+        this.stopOpenedLoopTimer();
         this.resolveSkeletonComponent();
         if (!this.boxSkeleton) return;
         this.boxSkeleton.setAnimation(0, this.animClick, false);
-        this.boxSkeleton.addAnimation(0, this.animOpenedLoop, true, 0);
     }
 
-    /** Giữ trạng thái mở chờ tương tác tiếp (3-OPEN-loop-break). */
+    /** Giữ trạng thái mở chờ tương tác tiếp (phát 1 lần rồi lên lịch chu kỳ). */
     playOpenedLoop(): void {
         this.currentState = BoxState.Opened;
+        this.stopOpenedLoopTimer();
         this.resolveSkeletonComponent();
         if (!this.boxSkeleton) return;
-        this.boxSkeleton.setAnimation(0, this.animOpenedLoop, true);
+        this.boxSkeleton.setAnimation(0, this.animOpenedLoop, false);
     }
 
-    /** Hiệu ứng đóng hộp khi hết item (Setup-A-2). */
+    /** Hiệu ứng đóng hộp khi hết item (3-unpack-end). */
     playClosing(): void {
         this.currentState = BoxState.Closed;
+        this.stopOpenedLoopTimer();
         this.resolveSkeletonComponent();
         if (!this.boxSkeleton) return;
         this.boxSkeleton.setAnimation(0, this.animClosed, false);

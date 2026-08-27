@@ -69,7 +69,7 @@ export var pm: PoolManager = null;
 export class PoolManager extends Component{
 
   
-  @property(PoolControl)
+  @property({ type: () => PoolControl })
   poolControll: PoolControl = null;
   
   link: Map<PoolType, Pool> = new Map<PoolType, Pool>();
@@ -110,7 +110,9 @@ export class PoolManager extends Component{
 
   onLoad() {
     pm = this;
-    this.preLoad(this.poolControll.poolAmounts);
+    if (this.poolControll && this.poolControll.poolAmounts) {
+      this.preLoad(this.poolControll.poolAmounts);
+    }
   }
     
 }
