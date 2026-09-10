@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.7",
+  "__version__": "1.0.12",
   "modules": {
     "graphics": {
       "pipeline": "legacy-pipeline",
@@ -24,7 +24,7 @@
             "_value": true
           },
           "skeletal-animation": {
-            "_value": false
+            "_value": true
           },
           "3d": {
             "_value": false
@@ -35,17 +35,17 @@
           "2d": {
             "_value": true
           },
-          "xr": {
+          "sorting-2d": {
             "_value": false
           },
           "rich-text": {
-            "_value": false
+            "_value": true
           },
           "mask": {
-            "_value": false
+            "_value": true
           },
           "graphics": {
-            "_value": false
+            "_value": true
           },
           "ui-skew": {
             "_value": false
@@ -188,6 +188,9 @@
           },
           "legacy-pipeline": {
             "_value": false
+          },
+          "xr": {
+            "_value": false
           }
         },
         "flags": {
@@ -201,8 +204,12 @@
           "base",
           "custom-pipeline",
           "gfx-webgl",
+          "graphics",
+          "mask",
           "particle-2d",
           "physics-2d-builtin",
+          "rich-text",
+          "skeletal-animation",
           "spine-4.2",
           "tween",
           "ui"
@@ -216,9 +223,6 @@
     "globalConfigKey": "migrationsConfig",
     "cache": {
       "base": {
-        "_value": true
-      },
-      "graphcis": {
         "_value": true
       },
       "gfx-webgl": {
@@ -331,9 +335,6 @@
       "marionette": {
         "_value": false
       },
-      "custom-pipeline": {
-        "_value": false
-      },
       "graphics": {
         "_value": true
       },
@@ -354,7 +355,8 @@
       "spine",
       "tween",
       "ui",
-      "webview"
+      "webview",
+      "legacy-pipeline"
     ],
     "noDeprecatedFeatures": {
       "value": false,

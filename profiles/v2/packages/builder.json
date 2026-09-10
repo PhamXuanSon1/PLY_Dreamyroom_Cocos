@@ -1,5 +1,5 @@
 {
-  "__version__": "1.3.5",
+  "__version__": "1.3.9",
   "log": {
     "level": 1
   },
@@ -43,7 +43,7 @@
           "sourceMaps": false,
           "overwriteProjectSettings": {
             "includeModules": {
-              "gfx-webgl2": "on",
+              "gfx-webgl2": "inherit-project-setting",
               "physics": "inherit-project-setting",
               "physics-2d": "inherit-project-setting"
             },
