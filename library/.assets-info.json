@@ -1,14 +1,6 @@
 {
   "version": "1.0.1",
   "map": {
-    "resources": {
-      "time": 1789113873696.8806,
-      "uuid": "dab22972-2b20-415f-aecb-12dbe1b14825"
-    },
-    "scripts": {
-      "time": 1787121525648.697,
-      "uuid": "af4a1a8a-562b-4553-9313-6fbe3fadf74c"
-    },
     "1.Animations\\BlinkEffect": {
       "time": 1787366370147.3716,
       "uuid": "a1e746e5-1f59-4fa9-bd7c-9cd7fb9d26f6"
@@ -24,10 +16,6 @@
     "3.Sprites\\Chung": {
       "time": 1787381877036.936,
       "uuid": "9def9b2b-946d-4e03-9044-3dfbbb6ec505"
-    },
-    "3.Sprites\\sprites": {
-      "time": 1787381877064.0068,
-      "uuid": "f43ba0b9-5ab7-413d-82d3-ee49ef6a3578"
     },
     "4.Sounds\\BGM": {
       "time": 1787369276662.916,
@@ -401,12 +389,6 @@
       "time": 1786934963914.7063,
       "uuid": "94cd5a39-7dcf-49f7-91f2-4a2d89b906b9"
     },
-    "resources.meta": {
-      "time": 1789113877270.385
-    },
-    "scripts.meta": {
-      "time": 1789031294897.5354
-    },
     "1.Animations\\BlinkEffect.meta": {
       "time": 1789031294897.5354
     },
@@ -418,9 +400,6 @@
     },
     "3.Sprites\\Chung.meta": {
       "time": 1789031294917.653
-    },
-    "3.Sprites\\sprites.meta": {
-      "time": 1789031294918.6548
     },
     "4.Sounds\\BGM.meta": {
       "time": 1789031294918.6548
@@ -714,7 +693,7 @@
       "uuid": "54e1328d-b163-4b60-8f36-be68be73c75c"
     },
     "3.Sprites": {
-      "time": 1787381877036.936,
+      "time": 1789114039154.1387,
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
@@ -886,7 +865,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1789031543018.632,
+      "time": 1789114189289.8792,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -924,678 +903,6 @@
     "3.Sprites\\Chung\\WhiteBar.png": {
       "time": 1782359763203.632,
       "uuid": "ac9175b9-91cc-46e2-a155-9115434bc1da"
-    },
-    "3.Sprites\\sprites\\10_mushroom.png": {
-      "time": 1787020691626.362,
-      "uuid": "a546c921-cb5a-476c-9f3f-d3445bf3a8a7"
-    },
-    "3.Sprites\\sprites\\10_mushroom_sd.png": {
-      "time": 1787020956243.5752,
-      "uuid": "73c47aa3-f0a9-4860-8b70-ec4d431133f5"
-    },
-    "3.Sprites\\sprites\\11_mushroom.png": {
-      "time": 1787020954938.0022,
-      "uuid": "dda87d2b-9a57-4428-ad6d-c204a9405a3c"
-    },
-    "3.Sprites\\sprites\\11_mushroom_sd.png": {
-      "time": 1787020954072.63,
-      "uuid": "0c0adf7c-1b1f-494e-92df-37e1ed50349d"
-    },
-    "3.Sprites\\sprites\\12_swing.png": {
-      "time": 1787020951243.6582,
-      "uuid": "4af26c97-aa07-4c7a-9ed4-d533d982e8bc"
-    },
-    "3.Sprites\\sprites\\12_swing_sd.png": {
-      "time": 1787020951726.6228,
-      "uuid": "bcb42aa1-187d-4b83-8a7b-ccddd20101c2"
-    },
-    "3.Sprites\\sprites\\13_floor.png": {
-      "time": 1787020949848.5762,
-      "uuid": "c4bd028c-5412-41ca-80fc-84f5c6c9c400"
-    },
-    "3.Sprites\\sprites\\13_floor_sd.png": {
-      "time": 1787020950657.2996,
-      "uuid": "fa903a36-80bb-48b3-88e1-978bd356b56e"
-    },
-    "3.Sprites\\sprites\\14_floor.png": {
-      "time": 1787020947966.4265,
-      "uuid": "db066613-f7d5-4a34-9d74-1cbbfc533a00"
-    },
-    "3.Sprites\\sprites\\14_floor_sd.png": {
-      "time": 1787020948989.7668,
-      "uuid": "7baecd63-cec4-4813-80f9-92ac7ef492e5"
-    },
-    "3.Sprites\\sprites\\15_room.png": {
-      "time": 1787020947048.7302,
-      "uuid": "18fff59f-5580-4064-8716-5a6d9b6c3631"
-    },
-    "3.Sprites\\sprites\\15_room_sd.png": {
-      "time": 1787020947632.4355,
-      "uuid": "2316e4d9-d5f2-4b85-899f-303294f7ed9f"
-    },
-    "3.Sprites\\sprites\\16_carpet.png": {
-      "time": 1787020945659.531,
-      "uuid": "9b8630d1-844f-4a6e-af15-76c293dfb7f8"
-    },
-    "3.Sprites\\sprites\\16_carpet_sd.png": {
-      "time": 1787020946228.8086,
-      "uuid": "e0b8b0ac-4deb-46e7-8155-9d1232eed78d"
-    },
-    "3.Sprites\\sprites\\17_lamp.png": {
-      "time": 1787020944535.383,
-      "uuid": "dcd1237e-48d3-4065-8396-a5043f15fc6a"
-    },
-    "3.Sprites\\sprites\\17_lamp_sd.png": {
-      "time": 1787020945106.2515,
-      "uuid": "6df00f3c-56ad-4fee-8680-e5fc8f95575f"
-    },
-    "3.Sprites\\sprites\\18_bed.png": {
-      "time": 1787020958849.3003,
-      "uuid": "988de534-a2af-4c5c-831c-80faa238b32c"
-    },
-    "3.Sprites\\sprites\\18_bed_sd.png": {
-      "time": 1787020959211.3918,
-      "uuid": "8527b4ed-734d-4e9a-8b02-790ab10d2d8e"
-    },
-    "3.Sprites\\sprites\\19_decor.png": {
-      "time": 1787020958149.485,
-      "uuid": "6a9eef1d-d6ac-4a6c-a29a-1d6c8b1d0bd8"
-    },
-    "3.Sprites\\sprites\\19_decor_sd.png": {
-      "time": 1787020956977.9626,
-      "uuid": "511564ef-8d49-421d-9fe4-e6b85744cb18"
-    },
-    "3.Sprites\\sprites\\1_lake.png": {
-      "time": 1787020691577.3562,
-      "uuid": "7fb0d54b-0834-4b9b-9081-7e7cf41e5151"
-    },
-    "3.Sprites\\sprites\\1_lake_sd.png": {
-      "time": 1787020691515.858,
-      "uuid": "a3cc1d3b-b0dd-4107-a822-4bf684ad5d1a"
-    },
-    "3.Sprites\\sprites\\1_lake_top.png": {
-      "time": 1787020691460.8525,
-      "uuid": "38fb6ace-81a3-4990-a045-de4112721f10"
-    },
-    "3.Sprites\\sprites\\20_closet.png": {
-      "time": 1787020955508.735,
-      "uuid": "184c8d98-0f7c-4bba-ae9f-91437a38f32c"
-    },
-    "3.Sprites\\sprites\\20_closet_sd.png": {
-      "time": 1787021203132.3782,
-      "uuid": "12876d47-af10-4e68-82db-ab15a4f6ca0d"
-    },
-    "3.Sprites\\sprites\\21_shelf.png": {
-      "time": 1787021202573.0227,
-      "uuid": "5e7b63d0-82a7-4379-98bc-326ba065ecca"
-    },
-    "3.Sprites\\sprites\\21_shelf_sd.png": {
-      "time": 1787021202009.1055,
-      "uuid": "7dcab7b8-feb2-4dd6-9025-376586887ec5"
-    },
-    "3.Sprites\\sprites\\22_mushroom.png": {
-      "time": 1787021201390.5798,
-      "uuid": "6b752760-8fc3-48a0-b5e0-6015ca1e8bca"
-    },
-    "3.Sprites\\sprites\\22_mushroom_sd.png": {
-      "time": 1787021200532.8022,
-      "uuid": "25bd6b52-86ac-437a-85ef-d27c115b1e28"
-    },
-    "3.Sprites\\sprites\\23_flower.png": {
-      "time": 1787021215914.6875,
-      "uuid": "44279131-f306-46e7-a190-7de52e8a0b50"
-    },
-    "3.Sprites\\sprites\\23_flower_sd.png": {
-      "time": 1787021218607.8606,
-      "uuid": "1723f5a6-ee3c-4166-a7f3-278259f9ad62"
-    },
-    "3.Sprites\\sprites\\24_wool.png": {
-      "time": 1787021214503.35,
-      "uuid": "32a660ae-b2a6-47f0-b766-39037299ec45"
-    },
-    "3.Sprites\\sprites\\24_wool_sd.png": {
-      "time": 1787021215202.107,
-      "uuid": "e1da833d-5ae3-4775-adf7-6fb0f0862cc6"
-    },
-    "3.Sprites\\sprites\\25_char.png": {
-      "time": 1787021212916.4233,
-      "uuid": "1374c4ad-0271-4e13-8a3a-118bfb0c2092"
-    },
-    "3.Sprites\\sprites\\25_char_sd.png": {
-      "time": 1787021213686.1814,
-      "uuid": "d421b9d9-18e4-4130-9ef8-0d08f4b1241f"
-    },
-    "3.Sprites\\sprites\\26_roof.png": {
-      "time": 1787021211383.8315,
-      "uuid": "7d0a98f1-9eec-4d2d-bef3-6411765bfb81"
-    },
-    "3.Sprites\\sprites\\28_chair.png": {
-      "time": 1787021212067.2095,
-      "uuid": "a9ee058e-4cf1-4ae0-9a39-b0ce6fa67f3e"
-    },
-    "3.Sprites\\sprites\\28_chair_sd.png": {
-      "time": 1787021210641.0847,
-      "uuid": "32367304-5311-49f8-b6d5-2d0ab901b6aa"
-    },
-    "3.Sprites\\sprites\\29_chair.png": {
-      "time": 1787021209819.7363,
-      "uuid": "e0f2be9b-b02d-4b2c-aefe-8f21d221d438"
-    },
-    "3.Sprites\\sprites\\29_chair_sd.png": {
-      "time": 1787021206067.0142,
-      "uuid": "0a800adf-49d1-4c9c-bf6b-01fd43777e5c"
-    },
-    "3.Sprites\\sprites\\2_weed.png": {
-      "time": 1787020691407.8496,
-      "uuid": "c49e91c2-5a4a-49ce-8b7f-11ad5fee38f8"
-    },
-    "3.Sprites\\sprites\\2_weed_sd.png": {
-      "time": 1787020691350.8445,
-      "uuid": "e025124d-eeee-4f80-b423-bb82fb2aca0c"
-    },
-    "3.Sprites\\sprites\\30_basket.png": {
-      "time": 1787021205455.0542,
-      "uuid": "263f9661-d74f-4048-aece-755eeea414b1"
-    },
-    "3.Sprites\\sprites\\30_basket_sd.png": {
-      "time": 1787021204852.8198,
-      "uuid": "3730f18c-bd5d-46f9-bdce-360acb8491bb"
-    },
-    "3.Sprites\\sprites\\30_basket_top.png": {
-      "time": 1787021204202.1438,
-      "uuid": "b1ffbbeb-c693-46dd-b053-80c473fb07db"
-    },
-    "3.Sprites\\sprites\\31_vegan.png": {
-      "time": 1787021203698.0366,
-      "uuid": "44e3824c-75b1-4203-9106-846ccefbe408"
-    },
-    "3.Sprites\\sprites\\32_char.png": {
-      "time": 1787021304993.0718,
-      "uuid": "7745bcf4-a7d8-4df3-9a9d-b5619d5fe9c6"
-    },
-    "3.Sprites\\sprites\\32_char_sd.png": {
-      "time": 1787021304554.5073,
-      "uuid": "7cc4698d-d1d2-4bae-bf19-0d314217e04c"
-    },
-    "3.Sprites\\sprites\\33_apple.png": {
-      "time": 1787021303657.34,
-      "uuid": "50907d7a-0b83-49e9-bfdb-7f508da006c7"
-    },
-    "3.Sprites\\sprites\\33_apple_sd.png": {
-      "time": 1787021304093.618,
-      "uuid": "52802b05-06db-4aca-916a-96fea2717e51"
-    },
-    "3.Sprites\\sprites\\34_apple.png": {
-      "time": 1787021302831.8804,
-      "uuid": "79961f4a-df89-4429-a42d-bee23afa194c"
-    },
-    "3.Sprites\\sprites\\34_apple_sd.png": {
-      "time": 1787021303234.9514,
-      "uuid": "8c110f67-dca8-43f1-baf7-83ad21d34633"
-    },
-    "3.Sprites\\sprites\\35_floor.png": {
-      "time": 1787021301064.6943,
-      "uuid": "9ea8097c-93e6-4baa-bb9d-bd9f02df8895"
-    },
-    "3.Sprites\\sprites\\35_floor_sd.png": {
-      "time": 1787021301536.708,
-      "uuid": "bcb4e933-f81a-468d-b099-3e1f5df8a3da"
-    },
-    "3.Sprites\\sprites\\36_room.png": {
-      "time": 1787021300590.3384,
-      "uuid": "9c12f7ea-fa05-4714-be52-80233e945001"
-    },
-    "3.Sprites\\sprites\\36_room_sd.png": {
-      "time": 1787021300092.425,
-      "uuid": "fc728f7a-ca64-48e8-88a1-1970fc1f4151"
-    },
-    "3.Sprites\\sprites\\37_table.png": {
-      "time": 1787021299470.12,
-      "uuid": "f26f271d-c520-4f5f-adca-bc85fec79a2f"
-    },
-    "3.Sprites\\sprites\\37_table_sd.png": {
-      "time": 1787021296958.426,
-      "uuid": "7175d79c-8a2b-44c5-bbcb-b4355ea12139"
-    },
-    "3.Sprites\\sprites\\38_soap.png": {
-      "time": 1787021296113.0034,
-      "uuid": "a2895980-405e-49f6-b6c4-65eaa21a8e6e"
-    },
-    "3.Sprites\\sprites\\38_soap_sd.png": {
-      "time": 1787021295435.6667,
-      "uuid": "742b1e64-1401-4abc-a585-e33cbdaca436"
-    },
-    "3.Sprites\\sprites\\39_soap.png": {
-      "time": 1787021294776.0315,
-      "uuid": "858b3415-cc52-4d90-a7e0-cb7b495a5225"
-    },
-    "3.Sprites\\sprites\\39_soap_sd.png": {
-      "time": 1787021308044.0483,
-      "uuid": "f0e00cbf-bb18-4e28-8d8f-55690189dd8d"
-    },
-    "3.Sprites\\sprites\\3_frog.png": {
-      "time": 1787020691298.8381,
-      "uuid": "db083a8c-ae1c-4b35-aaf8-c3590a36c399"
-    },
-    "3.Sprites\\sprites\\3_frog_sd.png": {
-      "time": 1787020691256.6592,
-      "uuid": "4ed995d9-1765-412c-b0cc-8b955e4bd3a2"
-    },
-    "3.Sprites\\sprites\\40_towel.png": {
-      "time": 1787021307570.7373,
-      "uuid": "a39ec157-f2a3-43db-a7fd-e26e4a8c2b58"
-    },
-    "3.Sprites\\sprites\\40_towel_sd.png": {
-      "time": 1787021307098.7795,
-      "uuid": "e3642d09-a51a-4c70-b330-986b2265cd56"
-    },
-    "3.Sprites\\sprites\\41_flower.png": {
-      "time": 1787021306653.9253,
-      "uuid": "b48eeae2-c380-4cee-8442-e0ff16c809c6"
-    },
-    "3.Sprites\\sprites\\41_flower_sd.png": {
-      "time": 1787021306219.5676,
-      "uuid": "2ec482ec-79bd-4ff9-86c6-d8d4f117bd5c"
-    },
-    "3.Sprites\\sprites\\42_brush.png": {
-      "time": 1787021410889.586,
-      "uuid": "032ae068-58a2-4fa0-9287-27546aff2a1b"
-    },
-    "3.Sprites\\sprites\\42_brush_sd.png": {
-      "time": 1787021407917.08,
-      "uuid": "ab08353c-6a5a-42f1-b8d6-a2d2e55c265c"
-    },
-    "3.Sprites\\sprites\\43_bathtub.png": {
-      "time": 1787021406338.443,
-      "uuid": "6ffa3a3e-2b11-40d6-ace9-282ac2db90cf"
-    },
-    "3.Sprites\\sprites\\43_bathtub_sd.png": {
-      "time": 1787021407082.1106,
-      "uuid": "7156aae3-b1d4-4777-b602-d9265ce6cdfa"
-    },
-    "3.Sprites\\sprites\\44_shower.png": {
-      "time": 1787021405532.1738,
-      "uuid": "25e851de-9ffb-4ccd-86b8-b6361cd204e4"
-    },
-    "3.Sprites\\sprites\\44_shower_sd.png": {
-      "time": 1787021404702.4348,
-      "uuid": "ffc91d51-0720-4ec3-a7ed-6eb3e4d0b349"
-    },
-    "3.Sprites\\sprites\\45_towel.png": {
-      "time": 1787021403837.7144,
-      "uuid": "8ed4affa-11b1-4456-b08e-75958aa94942"
-    },
-    "3.Sprites\\sprites\\45_towel_sd.png": {
-      "time": 1787021402867.2124,
-      "uuid": "47c131c4-1e05-4e43-86ae-1ea4a094a6a7"
-    },
-    "3.Sprites\\sprites\\46_candle.png": {
-      "time": 1787021397993.2854,
-      "uuid": "7c2e8918-86ac-4dec-832c-73206d6ddc15"
-    },
-    "3.Sprites\\sprites\\46_candle_sd.png": {
-      "time": 1787021401984.6443,
-      "uuid": "5fc32b00-8aac-4b27-b8a5-8def2f893867"
-    },
-    "3.Sprites\\sprites\\47_chair.png": {
-      "time": 1787021396091.8142,
-      "uuid": "87ac628e-ac6b-4644-866a-80efdd30ac60"
-    },
-    "3.Sprites\\sprites\\47_chair_sd.png": {
-      "time": 1787021396973.5564,
-      "uuid": "a0c91658-c1c7-4d5d-b532-63fbb0cab874"
-    },
-    "3.Sprites\\sprites\\48_carpet.png": {
-      "time": 1787021395104.9062,
-      "uuid": "5682065d-2362-4b72-8707-3ba3e545b96a"
-    },
-    "3.Sprites\\sprites\\48_carpet_sd.png": {
-      "time": 1787021393792.2405,
-      "uuid": "8d84d802-4d36-476d-90d7-4e83576d5247"
-    },
-    "3.Sprites\\sprites\\49_shoes.png": {
-      "time": 1787021392753.538,
-      "uuid": "7396dcf9-7089-4978-a1aa-d6278ad60c46"
-    },
-    "3.Sprites\\sprites\\49_shoes_sd.png": {
-      "time": 1787021415319.4834,
-      "uuid": "e3044fa1-dacc-4507-95e2-69381348d747"
-    },
-    "3.Sprites\\sprites\\4_chestnut.png": {
-      "time": 1787020691220.4248,
-      "uuid": "d7e6b155-952f-45a4-b960-57fa13ba223f"
-    },
-    "3.Sprites\\sprites\\4_chestnut_sd.png": {
-      "time": 1787020691184.1682,
-      "uuid": "a106f15a-7e7f-4fd9-a2f0-494e62b9f81c"
-    },
-    "3.Sprites\\sprites\\50_roof.png": {
-      "time": 1787021413997.8186,
-      "uuid": "d77657b6-953b-46d4-bed2-c2079abe3a98"
-    },
-    "3.Sprites\\sprites\\51_room.png": {
-      "time": 1787021414378.6738,
-      "uuid": "55ea3b76-20d1-4f0a-8972-32fdc2e4ee7c"
-    },
-    "3.Sprites\\sprites\\51_room_sd.png": {
-      "time": 1787021412690.459,
-      "uuid": "e679e14d-0428-4c25-b84d-64391334c457"
-    },
-    "3.Sprites\\sprites\\52_carpet.png": {
-      "time": 1787021411825.5205,
-      "uuid": "68f9857e-d52e-4943-a94c-4e6ef5f7eeb7"
-    },
-    "3.Sprites\\sprites\\52_carpet_sd.png": {
-      "time": 1787021467563.0464,
-      "uuid": "110e42f8-5106-4dd4-a214-c8bf994de9d8"
-    },
-    "3.Sprites\\sprites\\53_table.png": {
-      "time": 1787021465953.7307,
-      "uuid": "5cd25672-fc4c-46c4-ad9c-17d0d6cfdcb8"
-    },
-    "3.Sprites\\sprites\\53_table_sd.png": {
-      "time": 1787021466867.443,
-      "uuid": "98ef4f9e-53da-4657-abda-70cc2b4c3a2e"
-    },
-    "3.Sprites\\sprites\\54_sink.png": {
-      "time": 1787021465062.9526,
-      "uuid": "ce50d88b-a935-4ade-88df-f3f15ecfaefc"
-    },
-    "3.Sprites\\sprites\\54_sink_sd.png": {
-      "time": 1787021462100.1587,
-      "uuid": "677114eb-1005-40c7-a4b1-2f24d5d8f670"
-    },
-    "3.Sprites\\sprites\\55_water.png": {
-      "time": 1787021469668.4932,
-      "uuid": "0ca83f0f-01f2-4015-86dd-5a284c704b6e"
-    },
-    "3.Sprites\\sprites\\55_water_sd.png": {
-      "time": 1787021470300.1929,
-      "uuid": "f0a284dc-9875-4da5-857a-262f02dadae3"
-    },
-    "3.Sprites\\sprites\\56_knife.png": {
-      "time": 1787021468614.03,
-      "uuid": "f0461c8e-bcf9-4561-a89f-cef446e6c026"
-    },
-    "3.Sprites\\sprites\\56_knife_sd.png": {
-      "time": 1787021469155.064,
-      "uuid": "32f702fc-80b2-4483-9cf5-e12ce474c338"
-    },
-    "3.Sprites\\sprites\\57_board.png": {
-      "time": 1787021468068.9846,
-      "uuid": "c3d71fc2-9f16-4e20-8392-9aac00e6d4ae"
-    },
-    "3.Sprites\\sprites\\57_board_sd.png": {
-      "time": 1786996336000,
-      "uuid": "cdca9a2f-8c36-4bf9-bba2-807ddf5c7da5"
-    },
-    "3.Sprites\\sprites\\58_tomato.png": {
-      "time": 1786996336000,
-      "uuid": "9bd96847-65ba-4757-b89b-507808f580d1"
-    },
-    "3.Sprites\\sprites\\58_tomato_sd.png": {
-      "time": 1786996336000,
-      "uuid": "a1b1fd4d-502e-4925-8089-26ac5d5c6432"
-    },
-    "3.Sprites\\sprites\\59_cabage.png": {
-      "time": 1786996336000,
-      "uuid": "b3e2ee5e-3674-427f-bba7-f6564cb80a22"
-    },
-    "3.Sprites\\sprites\\59_cabage_sd.png": {
-      "time": 1786996336000,
-      "uuid": "0800aac2-18a7-4e4f-8dab-c7ce175fccd8"
-    },
-    "3.Sprites\\sprites\\5_squirrel.png": {
-      "time": 1787020691156.5425,
-      "uuid": "60942c18-d390-483a-9f39-f8a2f1f81ba5"
-    },
-    "3.Sprites\\sprites\\5_squirrel_sd.png": {
-      "time": 1787020691126.5723,
-      "uuid": "bac54ae9-472e-4c39-828a-cc4b157b21a9"
-    },
-    "3.Sprites\\sprites\\60_daikon.png": {
-      "time": 1786996336000,
-      "uuid": "11651ae6-a529-48af-934a-00b3c8a3da71"
-    },
-    "3.Sprites\\sprites\\60_daikon_sd.png": {
-      "time": 1786996336000,
-      "uuid": "f28272b4-2ae0-4599-bead-24051fe499e1"
-    },
-    "3.Sprites\\sprites\\61_basket.png": {
-      "time": 1786996336000,
-      "uuid": "292961db-2c26-47e9-a29f-d99e4e319a16"
-    },
-    "3.Sprites\\sprites\\61_basket_sd.png": {
-      "time": 1786996336000,
-      "uuid": "b2058127-4176-4b70-ab59-061f7ff4159f"
-    },
-    "3.Sprites\\sprites\\62_basket.png": {
-      "time": 1786996336000,
-      "uuid": "f3c1eafb-0690-425e-b46e-6bfa9914d424"
-    },
-    "3.Sprites\\sprites\\62_basket_sd.png": {
-      "time": 1786996336000,
-      "uuid": "983677dd-5700-4226-833f-3b99c9858b3a"
-    },
-    "3.Sprites\\sprites\\63_pumpkin.png": {
-      "time": 1786996336000,
-      "uuid": "668669ab-b9f7-4dc4-8ea6-31ca5d14df84"
-    },
-    "3.Sprites\\sprites\\63_pumpkin_sd.png": {
-      "time": 1786996336000,
-      "uuid": "d2f1fb3b-aad3-4cac-bec1-c1bd497638a4"
-    },
-    "3.Sprites\\sprites\\64_table.png": {
-      "time": 1786996336000,
-      "uuid": "e860d01e-478c-4d04-a8e5-173031056c0e"
-    },
-    "3.Sprites\\sprites\\64_table_sd.png": {
-      "time": 1786996336000,
-      "uuid": "34c9c421-741d-4e78-a0ef-9b8b313d9dd4"
-    },
-    "3.Sprites\\sprites\\65_carpet.png": {
-      "time": 1786996336000,
-      "uuid": "d79b46bd-4f75-41db-bdbc-ee266d440591"
-    },
-    "3.Sprites\\sprites\\65_carpet_sd.png": {
-      "time": 1786996336000,
-      "uuid": "fdcbacf2-c1e5-43cc-8cce-ddb3950c5db2"
-    },
-    "3.Sprites\\sprites\\66_chair.png": {
-      "time": 1786996336000,
-      "uuid": "409b060b-bc5e-4b10-9a0d-ca6e2cf16e1b"
-    },
-    "3.Sprites\\sprites\\66_chair_sd.png": {
-      "time": 1786996336000,
-      "uuid": "de257715-0b01-46cf-91ef-cbd5b9b16dfb"
-    },
-    "3.Sprites\\sprites\\67_chair.png": {
-      "time": 1786996336000,
-      "uuid": "4523b3db-f639-4385-b00c-ce273d0bd689"
-    },
-    "3.Sprites\\sprites\\67_chair_sd.png": {
-      "time": 1786996404000,
-      "uuid": "4fa73c6f-d7e1-4602-941f-338669396ee4"
-    },
-    "3.Sprites\\sprites\\69_chair.png": {
-      "time": 1786996404000,
-      "uuid": "59e35970-2edf-4c47-a896-6838206341bb"
-    },
-    "3.Sprites\\sprites\\69_chair_sd.png": {
-      "time": 1786996404000,
-      "uuid": "b991feac-6cec-4828-a35b-f977b74332dc"
-    },
-    "3.Sprites\\sprites\\6_mushroom.png": {
-      "time": 1787020691097.8643,
-      "uuid": "53a960bd-06ec-4aba-943d-26567f5808b9"
-    },
-    "3.Sprites\\sprites\\6_mushroom_sd.png": {
-      "time": 1787020677070.5388,
-      "uuid": "2c3739d2-76ba-40f3-a1bd-d4d059a146a2"
-    },
-    "3.Sprites\\sprites\\70_flower.png": {
-      "time": 1786996404000,
-      "uuid": "4ceb271f-68fe-4e84-a631-f00c42b448ec"
-    },
-    "3.Sprites\\sprites\\70_flower_sd.png": {
-      "time": 1786996404000,
-      "uuid": "2a20f2d9-9c71-4d8e-bcb8-ac74ab8bcc8e"
-    },
-    "3.Sprites\\sprites\\71_bread.png": {
-      "time": 1786996404000,
-      "uuid": "0e52ee5a-865d-4ee6-af70-6625ef43a217"
-    },
-    "3.Sprites\\sprites\\71_bread_sd.png": {
-      "time": 1786996404000,
-      "uuid": "6fddb2b6-1d7e-49dc-b284-92e7c298b5be"
-    },
-    "3.Sprites\\sprites\\72_roof.png": {
-      "time": 1786996404000,
-      "uuid": "c7234e22-ca10-4314-8cfa-73d12c076cfd"
-    },
-    "3.Sprites\\sprites\\73_poster.png": {
-      "time": 1786996404000,
-      "uuid": "53ea14ab-60b6-4fbe-989e-5bbc7b295fc7"
-    },
-    "3.Sprites\\sprites\\73_poster_sd.png": {
-      "time": 1786996404000,
-      "uuid": "030e40e0-38ca-4e7c-9181-feab2d07a8a9"
-    },
-    "3.Sprites\\sprites\\73_poster_top.png": {
-      "time": 1786996404000,
-      "uuid": "0a1f56ce-52f7-4f12-be5c-ccae8112a065"
-    },
-    "3.Sprites\\sprites\\74_bird.png": {
-      "time": 1786996404000,
-      "uuid": "7f7fc5b6-0c91-4ba0-b46b-435591949d15"
-    },
-    "3.Sprites\\sprites\\74_bird_sd.png": {
-      "time": 1786996404000,
-      "uuid": "01dd628c-055b-455c-a686-4ff481db416e"
-    },
-    "3.Sprites\\sprites\\74_letter.png": {
-      "time": 1786996404000,
-      "uuid": "9457aca2-d0b8-4c75-a2e3-11e9246d516b"
-    },
-    "3.Sprites\\sprites\\74_letter_sd.png": {
-      "time": 1786996404000,
-      "uuid": "a51b4146-2709-47e5-bfb5-2514380a71c1"
-    },
-    "3.Sprites\\sprites\\75_letter.png": {
-      "time": 1786996404000,
-      "uuid": "66a0a1c9-dacd-4f37-8596-c8cc823fe723"
-    },
-    "3.Sprites\\sprites\\75_letter_sd.png": {
-      "time": 1786996404000,
-      "uuid": "0a49b973-d65f-4a01-9165-8c5802c03a86"
-    },
-    "3.Sprites\\sprites\\75_mushroom.png": {
-      "time": 1786996404000,
-      "uuid": "ba2aa88b-b74e-484e-9104-960c4e6fc388"
-    },
-    "3.Sprites\\sprites\\75_mushroom_sd.png": {
-      "time": 1786996404000,
-      "uuid": "24faa653-f2b6-4801-ab45-58e83a8a38cb"
-    },
-    "3.Sprites\\sprites\\76_flower.png": {
-      "time": 1786996404000,
-      "uuid": "06fe6fcc-43c7-4f3c-abd9-6ca057fac4cd"
-    },
-    "3.Sprites\\sprites\\76_flower_sd.png": {
-      "time": 1786996452000,
-      "uuid": "83842460-88ca-4d73-8e79-d5935c7ce385"
-    },
-    "3.Sprites\\sprites\\77_flower.png": {
-      "time": 1786996452000,
-      "uuid": "5222aaf8-e82c-45ba-a898-95d0e91ae8ba"
-    },
-    "3.Sprites\\sprites\\77_flower_sd.png": {
-      "time": 1786996452000,
-      "uuid": "bbdebf41-305a-4dd5-97a9-79d4aee9ee70"
-    },
-    "3.Sprites\\sprites\\78_flower.png": {
-      "time": 1786996452000,
-      "uuid": "d13e9b38-5f3e-47df-819f-cbe5dc4b2628"
-    },
-    "3.Sprites\\sprites\\78_flower_sd.png": {
-      "time": 1786996452000,
-      "uuid": "c81dc648-6b0c-4a35-a18f-58fefc26be4a"
-    },
-    "3.Sprites\\sprites\\79_flower.png": {
-      "time": 1786996454000,
-      "uuid": "e1d45b0e-18d9-47aa-b506-39ab63e5efc0"
-    },
-    "3.Sprites\\sprites\\79_flower_sd.png": {
-      "time": 1786996454000,
-      "uuid": "cc564f29-e4d3-4b42-8fc2-e5f864948d2d"
-    },
-    "3.Sprites\\sprites\\7_mushroom.png": {
-      "time": 1787020676642.8882,
-      "uuid": "3d1ffaaf-a065-4a87-8314-61d7203a2705"
-    },
-    "3.Sprites\\sprites\\7_mushroom_sd.png": {
-      "time": 1787020675903.475,
-      "uuid": "180fea4b-45ef-4602-b853-583b6696a1ef"
-    },
-    "3.Sprites\\sprites\\80_flower.png": {
-      "time": 1786996454000,
-      "uuid": "d1ba981e-28c8-4561-b207-c5df11989d22"
-    },
-    "3.Sprites\\sprites\\80_flower_sd.png": {
-      "time": 1786996454000,
-      "uuid": "8ffb589f-0d8e-402f-9606-43d304c06979"
-    },
-    "3.Sprites\\sprites\\81_flower.png": {
-      "time": 1786996454000,
-      "uuid": "7cfe8d4c-dac1-42bb-929a-3b72ced5b1f6"
-    },
-    "3.Sprites\\sprites\\81_flower_sd.png": {
-      "time": 1786996454000,
-      "uuid": "467eb489-943d-4cfb-9e5a-bd1a5ebdc727"
-    },
-    "3.Sprites\\sprites\\82_butterfly.png": {
-      "time": 1786996454000,
-      "uuid": "36487879-d8bf-4fa3-a6c5-eefeffe91c6d"
-    },
-    "3.Sprites\\sprites\\83_butterfly.png": {
-      "time": 1786996452000,
-      "uuid": "011a6499-d95a-44f3-b42f-939bcca0a5fd"
-    },
-    "3.Sprites\\sprites\\84_nest.png": {
-      "time": 1786996452000,
-      "uuid": "1c5e21f6-ea93-4320-a9d9-e51499b58679"
-    },
-    "3.Sprites\\sprites\\84_nest_sd.png": {
-      "time": 1786996452000,
-      "uuid": "24662bb1-e3a9-4492-b04b-411a08a9eefc"
-    },
-    "3.Sprites\\sprites\\85_bird.png": {
-      "time": 1786996452000,
-      "uuid": "d2f527da-2c12-4e38-a371-0d586db926be"
-    },
-    "3.Sprites\\sprites\\86_bird.png": {
-      "time": 1786996452000,
-      "uuid": "f38ce940-a85f-4d65-a080-2ea35e415149"
-    },
-    "3.Sprites\\sprites\\8_mushroom.png": {
-      "time": 1787020691771.5012,
-      "uuid": "0d0eee42-1a28-438f-bffa-8109b50e69c7"
-    },
-    "3.Sprites\\sprites\\8_mushroom_sd.png": {
-      "time": 1787020691790.5027,
-      "uuid": "a80c9c6c-bc49-4b9a-bb71-982e2766ddda"
-    },
-    "3.Sprites\\sprites\\9_mushroom.png": {
-      "time": 1787020691743.3726,
-      "uuid": "10716816-abfb-4bcb-9733-3d0e70f231cc"
-    },
-    "3.Sprites\\sprites\\9_mushroom_sd.png": {
-      "time": 1787020691677.366,
-      "uuid": "bff06b81-5362-4cee-a56a-54b306c3859b"
-    },
-    "3.Sprites\\sprites\\base_room.png": {
-      "time": 1786996452000,
-      "uuid": "940d5472-95c6-4763-912e-1c835a872a37"
     },
     "4.Sounds\\BGM\\Fantasy Fairy Tale Music Magical ✦ Ethereal Fantasy Music ✦ 528 hz ✦ No copyright - moonangel (mp3cut.net) (1).mp3": {
       "time": 1787369055101.4387,
@@ -1919,512 +1226,11 @@
     "3.Sprites\\Chung\\TapToDecor.png.meta": {
       "time": 1789031321098.2742
     },
-    "3.Sprites\\sprites\\10_mushroom.png.meta": {
-      "time": 1789031321108.8147
-    },
     "3.Sprites\\Chung\\Logo.png.meta": {
       "time": 1789031321063.3193
     },
-    "3.Sprites\\sprites\\10_mushroom_sd.png.meta": {
-      "time": 1789031321107.8167
-    },
-    "3.Sprites\\sprites\\11_mushroom.png.meta": {
-      "time": 1789031321127.914
-    },
-    "3.Sprites\\sprites\\11_mushroom_sd.png.meta": {
-      "time": 1789031321134.8308
-    },
-    "3.Sprites\\sprites\\12_swing.png.meta": {
-      "time": 1789031321182.22
-    },
     "3.Sprites\\Chung\\WhiteBar.png.meta": {
       "time": 1789031321167.5564
-    },
-    "3.Sprites\\sprites\\13_floor.png.meta": {
-      "time": 1789031321183.216
-    },
-    "3.Sprites\\sprites\\12_swing_sd.png.meta": {
-      "time": 1789031321184.2185
-    },
-    "3.Sprites\\sprites\\13_floor_sd.png.meta": {
-      "time": 1789031321195.2664
-    },
-    "3.Sprites\\sprites\\14_floor.png.meta": {
-      "time": 1789031321206.2756
-    },
-    "3.Sprites\\sprites\\14_floor_sd.png.meta": {
-      "time": 1789031321240.215
-    },
-    "3.Sprites\\sprites\\15_room_sd.png.meta": {
-      "time": 1789031321240.723
-    },
-    "3.Sprites\\sprites\\15_room.png.meta": {
-      "time": 1789031321218.868
-    },
-    "3.Sprites\\sprites\\16_carpet.png.meta": {
-      "time": 1789031321229.1606
-    },
-    "3.Sprites\\sprites\\16_carpet_sd.png.meta": {
-      "time": 1789031321242.7454
-    },
-    "3.Sprites\\sprites\\17_lamp.png.meta": {
-      "time": 1789031321259.6523
-    },
-    "3.Sprites\\sprites\\17_lamp_sd.png.meta": {
-      "time": 1789031321268.412
-    },
-    "3.Sprites\\sprites\\18_bed.png.meta": {
-      "time": 1789031321289.775
-    },
-    "3.Sprites\\sprites\\18_bed_sd.png.meta": {
-      "time": 1789031321310.5994
-    },
-    "3.Sprites\\sprites\\19_decor.png.meta": {
-      "time": 1789031321282.5303
-    },
-    "3.Sprites\\sprites\\19_decor_sd.png.meta": {
-      "time": 1789031321297.8176
-    },
-    "3.Sprites\\sprites\\1_lake_sd.png.meta": {
-      "time": 1789031321325.674
-    },
-    "3.Sprites\\sprites\\1_lake.png.meta": {
-      "time": 1789031321322.6736
-    },
-    "3.Sprites\\sprites\\1_lake_top.png.meta": {
-      "time": 1789031321347.2454
-    },
-    "3.Sprites\\sprites\\20_closet_sd.png.meta": {
-      "time": 1789031321353.7795
-    },
-    "3.Sprites\\sprites\\20_closet.png.meta": {
-      "time": 1789031321337.2092
-    },
-    "3.Sprites\\sprites\\21_shelf.png.meta": {
-      "time": 1789031321361.3037
-    },
-    "3.Sprites\\sprites\\21_shelf_sd.png.meta": {
-      "time": 1789031321349.2493
-    },
-    "3.Sprites\\sprites\\22_mushroom.png.meta": {
-      "time": 1789031321367.3135
-    },
-    "3.Sprites\\sprites\\22_mushroom_sd.png.meta": {
-      "time": 1789031321384.8904
-    },
-    "3.Sprites\\sprites\\23_flower_sd.png.meta": {
-      "time": 1789031321378.36
-    },
-    "3.Sprites\\sprites\\23_flower.png.meta": {
-      "time": 1789031321376.359
-    },
-    "3.Sprites\\sprites\\24_wool.png.meta": {
-      "time": 1789031321403.954
-    },
-    "3.Sprites\\sprites\\24_wool_sd.png.meta": {
-      "time": 1789031321397.4258
-    },
-    "3.Sprites\\sprites\\25_char.png.meta": {
-      "time": 1789031321418.9937
-    },
-    "3.Sprites\\sprites\\25_char_sd.png.meta": {
-      "time": 1789031321503.7737
-    },
-    "3.Sprites\\sprites\\26_roof.png.meta": {
-      "time": 1789031321515.816
-    },
-    "3.Sprites\\sprites\\28_chair.png.meta": {
-      "time": 1789031321510.2837
-    },
-    "3.Sprites\\sprites\\28_chair_sd.png.meta": {
-      "time": 1789031321508.7737
-    },
-    "3.Sprites\\sprites\\29_chair.png.meta": {
-      "time": 1789031321534.8591
-    },
-    "3.Sprites\\sprites\\29_chair_sd.png.meta": {
-      "time": 1789031321541.383
-    },
-    "3.Sprites\\sprites\\2_weed.png.meta": {
-      "time": 1789031321556.449
-    },
-    "3.Sprites\\sprites\\2_weed_sd.png.meta": {
-      "time": 1789031321557.4485
-    },
-    "3.Sprites\\sprites\\30_basket.png.meta": {
-      "time": 1789031321553.4512
-    },
-    "3.Sprites\\sprites\\30_basket_top.png.meta": {
-      "time": 1789031321661.8025
-    },
-    "3.Sprites\\sprites\\30_basket_sd.png.meta": {
-      "time": 1789031321663.3088
-    },
-    "3.Sprites\\sprites\\31_vegan.png.meta": {
-      "time": 1789031321674.372
-    },
-    "3.Sprites\\sprites\\32_char.png.meta": {
-      "time": 1789031321675.3728
-    },
-    "3.Sprites\\sprites\\33_apple.png.meta": {
-      "time": 1789031321728.5935
-    },
-    "3.Sprites\\sprites\\32_char_sd.png.meta": {
-      "time": 1789031321685.4153
-    },
-    "3.Sprites\\sprites\\33_apple_sd.png.meta": {
-      "time": 1789031321690.9233
-    },
-    "3.Sprites\\sprites\\34_apple_sd.png.meta": {
-      "time": 1789031321709.4805
-    },
-    "3.Sprites\\sprites\\34_apple.png.meta": {
-      "time": 1789031321702.482
-    },
-    "3.Sprites\\sprites\\35_floor_sd.png.meta": {
-      "time": 1789031321722.0376
-    },
-    "3.Sprites\\sprites\\35_floor.png.meta": {
-      "time": 1789031321718.5205
-    },
-    "3.Sprites\\sprites\\36_room.png.meta": {
-      "time": 1789031321738.8909
-    },
-    "3.Sprites\\sprites\\37_table.png.meta": {
-      "time": 1789031321755.953
-    },
-    "3.Sprites\\sprites\\36_room_sd.png.meta": {
-      "time": 1789031321745.422
-    },
-    "3.Sprites\\sprites\\37_table_sd.png.meta": {
-      "time": 1789031321751.9446
-    },
-    "3.Sprites\\sprites\\38_soap.png.meta": {
-      "time": 1789031321762.9136
-    },
-    "3.Sprites\\sprites\\39_soap.png.meta": {
-      "time": 1789031321778.815
-    },
-    "3.Sprites\\sprites\\38_soap_sd.png.meta": {
-      "time": 1789031321770.7927
-    },
-    "3.Sprites\\sprites\\39_soap_sd.png.meta": {
-      "time": 1789031321787.3484
-    },
-    "3.Sprites\\sprites\\3_frog_sd.png.meta": {
-      "time": 1789031321792.9126
-    },
-    "3.Sprites\\sprites\\3_frog.png.meta": {
-      "time": 1789031321776.813
-    },
-    "3.Sprites\\sprites\\40_towel.png.meta": {
-      "time": 1789031321801.9575
-    },
-    "3.Sprites\\sprites\\40_towel_sd.png.meta": {
-      "time": 1789031321819.019
-    },
-    "3.Sprites\\sprites\\41_flower.png.meta": {
-      "time": 1789031321807.9656
-    },
-    "3.Sprites\\sprites\\41_flower_sd.png.meta": {
-      "time": 1789031321833.6057
-    },
-    "3.Sprites\\sprites\\42_brush.png.meta": {
-      "time": 1789031321816.0164
-    },
-    "3.Sprites\\sprites\\42_brush_sd.png.meta": {
-      "time": 1789031321833.6057
-    },
-    "3.Sprites\\sprites\\43_bathtub.png.meta": {
-      "time": 1789031321882.4758
-    },
-    "3.Sprites\\sprites\\43_bathtub_sd.png.meta": {
-      "time": 1789031321851.2144
-    },
-    "3.Sprites\\sprites\\44_shower.png.meta": {
-      "time": 1789031321854.611
-    },
-    "3.Sprites\\sprites\\44_shower_sd.png.meta": {
-      "time": 1789031321869.4197
-    },
-    "3.Sprites\\sprites\\45_towel.png.meta": {
-      "time": 1789031321861.133
-    },
-    "3.Sprites\\sprites\\46_candle.png.meta": {
-      "time": 1789031321895.0308
-    },
-    "3.Sprites\\sprites\\45_towel_sd.png.meta": {
-      "time": 1789031321902.5713
-    },
-    "3.Sprites\\sprites\\46_candle_sd.png.meta": {
-      "time": 1789031321920.7705
-    },
-    "3.Sprites\\sprites\\47_chair.png.meta": {
-      "time": 1789031321909.2183
-    },
-    "3.Sprites\\sprites\\47_chair_sd.png.meta": {
-      "time": 1789031321911.7383
-    },
-    "3.Sprites\\sprites\\48_carpet_sd.png.meta": {
-      "time": 1789031321928.301
-    },
-    "3.Sprites\\sprites\\48_carpet.png.meta": {
-      "time": 1789031321930.324
-    },
-    "3.Sprites\\sprites\\49_shoes_sd.png.meta": {
-      "time": 1789031321947.7856
-    },
-    "3.Sprites\\sprites\\49_shoes.png.meta": {
-      "time": 1789031321940.2566
-    },
-    "3.Sprites\\sprites\\4_chestnut.png.meta": {
-      "time": 1789031321954.3254
-    },
-    "3.Sprites\\sprites\\4_chestnut_sd.png.meta": {
-      "time": 1789031321976.796
-    },
-    "3.Sprites\\sprites\\50_roof.png.meta": {
-      "time": 1789031321974.7937
-    },
-    "3.Sprites\\sprites\\51_room_sd.png.meta": {
-      "time": 1789031321981.5312
-    },
-    "3.Sprites\\sprites\\52_carpet_sd.png.meta": {
-      "time": 1789031322016.0503
-    },
-    "3.Sprites\\sprites\\51_room.png.meta": {
-      "time": 1789031321998.1035
-    },
-    "3.Sprites\\sprites\\52_carpet.png.meta": {
-      "time": 1789031322004.0054
-    },
-    "3.Sprites\\sprites\\53_table.png.meta": {
-      "time": 1789031322026.5796
-    },
-    "3.Sprites\\sprites\\53_table_sd.png.meta": {
-      "time": 1789031322009.0085
-    },
-    "3.Sprites\\sprites\\54_sink.png.meta": {
-      "time": 1789031322035.116
-    },
-    "3.Sprites\\sprites\\55_water.png.meta": {
-      "time": 1789031322036.1162
-    },
-    "3.Sprites\\sprites\\54_sink_sd.png.meta": {
-      "time": 1789031322051.22
-    },
-    "3.Sprites\\sprites\\55_water_sd.png.meta": {
-      "time": 1789031322068.2754
-    },
-    "3.Sprites\\sprites\\56_knife.png.meta": {
-      "time": 1789031322061.2454
-    },
-    "3.Sprites\\sprites\\56_knife_sd.png.meta": {
-      "time": 1789031322053.2295
-    },
-    "3.Sprites\\sprites\\57_board.png.meta": {
-      "time": 1789031322066.277
-    },
-    "3.Sprites\\sprites\\57_board_sd.png.meta": {
-      "time": 1789031322075.3318
-    },
-    "3.Sprites\\sprites\\58_tomato.png.meta": {
-      "time": 1789031322080.8447
-    },
-    "3.Sprites\\sprites\\59_cabage_sd.png.meta": {
-      "time": 1789031322091.5447
-    },
-    "3.Sprites\\sprites\\59_cabage.png.meta": {
-      "time": 1789031322102.0696
-    },
-    "3.Sprites\\sprites\\58_tomato_sd.png.meta": {
-      "time": 1789031322089.0222
-    },
-    "3.Sprites\\sprites\\5_squirrel.png.meta": {
-      "time": 1789031322101.0613
-    },
-    "3.Sprites\\sprites\\5_squirrel_sd.png.meta": {
-      "time": 1789031322112.0168
-    },
-    "3.Sprites\\sprites\\60_daikon.png.meta": {
-      "time": 1789031322121.5796
-    },
-    "3.Sprites\\sprites\\60_daikon_sd.png.meta": {
-      "time": 1789031322119.0596
-    },
-    "3.Sprites\\sprites\\61_basket.png.meta": {
-      "time": 1789031322138.6333
-    },
-    "3.Sprites\\sprites\\61_basket_sd.png.meta": {
-      "time": 1789031322128.0923
-    },
-    "3.Sprites\\sprites\\62_basket.png.meta": {
-      "time": 1789031322144.1555
-    },
-    "3.Sprites\\sprites\\62_basket_sd.png.meta": {
-      "time": 1789031322150.4124
-    },
-    "3.Sprites\\sprites\\63_pumpkin.png.meta": {
-      "time": 1789031322161.5364
-    },
-    "3.Sprites\\sprites\\63_pumpkin_sd.png.meta": {
-      "time": 1789031322156.0159
-    },
-    "3.Sprites\\sprites\\64_table.png.meta": {
-      "time": 1789031322174.5889
-    },
-    "3.Sprites\\sprites\\64_table_sd.png.meta": {
-      "time": 1789031322182.6165
-    },
-    "3.Sprites\\sprites\\65_carpet.png.meta": {
-      "time": 1789031322169.0566
-    },
-    "3.Sprites\\sprites\\65_carpet_sd.png.meta": {
-      "time": 1789031322201.8203
-    },
-    "3.Sprites\\sprites\\66_chair.png.meta": {
-      "time": 1789031322190.6643
-    },
-    "3.Sprites\\sprites\\66_chair_sd.png.meta": {
-      "time": 1789031322192.6772
-    },
-    "3.Sprites\\sprites\\67_chair.png.meta": {
-      "time": 1789031322204.8315
-    },
-    "3.Sprites\\sprites\\67_chair_sd.png.meta": {
-      "time": 1789031322208.8303
-    },
-    "3.Sprites\\sprites\\69_chair.png.meta": {
-      "time": 1789031322221.9155
-    },
-    "3.Sprites\\sprites\\69_chair_sd.png.meta": {
-      "time": 1789031322214.8723
-    },
-    "3.Sprites\\sprites\\6_mushroom.png.meta": {
-      "time": 1789031322226.4314
-    },
-    "3.Sprites\\sprites\\6_mushroom_sd.png.meta": {
-      "time": 1789031322232.965
-    },
-    "3.Sprites\\sprites\\70_flower.png.meta": {
-      "time": 1789031322240.4788
-    },
-    "3.Sprites\\sprites\\71_bread.png.meta": {
-      "time": 1789031322248.0132
-    },
-    "3.Sprites\\sprites\\73_poster.png.meta": {
-      "time": 1789031322278.9126
-    },
-    "3.Sprites\\sprites\\70_flower_sd.png.meta": {
-      "time": 1789031322247.0117
-    },
-    "3.Sprites\\sprites\\73_poster_sd.png.meta": {
-      "time": 1789031322281.4355
-    },
-    "3.Sprites\\sprites\\71_bread_sd.png.meta": {
-      "time": 1789031322260.3425
-    },
-    "3.Sprites\\sprites\\72_roof.png.meta": {
-      "time": 1789031322300.5662
-    },
-    "3.Sprites\\sprites\\74_bird.png.meta": {
-      "time": 1789031322285.4478
-    },
-    "3.Sprites\\sprites\\73_poster_top.png.meta": {
-      "time": 1789031322271.9026
-    },
-    "3.Sprites\\sprites\\74_bird_sd.png.meta": {
-      "time": 1789031322309.081
-    },
-    "3.Sprites\\sprites\\74_letter.png.meta": {
-      "time": 1789031322320.6353
-    },
-    "3.Sprites\\sprites\\74_letter_sd.png.meta": {
-      "time": 1789031322316.124
-    },
-    "3.Sprites\\sprites\\75_letter.png.meta": {
-      "time": 1789031322312.6052
-    },
-    "3.Sprites\\sprites\\75_mushroom.png.meta": {
-      "time": 1789031322357.6316
-    },
-    "3.Sprites\\sprites\\75_letter_sd.png.meta": {
-      "time": 1789031322333.3003
-    },
-    "3.Sprites\\sprites\\75_mushroom_sd.png.meta": {
-      "time": 1789031322339.302
-    },
-    "3.Sprites\\sprites\\76_flower.png.meta": {
-      "time": 1789031322362.1611
-    },
-    "3.Sprites\\sprites\\76_flower_sd.png.meta": {
-      "time": 1789031322343.8284
-    },
-    "3.Sprites\\sprites\\77_flower.png.meta": {
-      "time": 1789031322378.2112
-    },
-    "3.Sprites\\sprites\\77_flower_sd.png.meta": {
-      "time": 1789031322371.6924
-    },
-    "3.Sprites\\sprites\\78_flower.png.meta": {
-      "time": 1789031322383.7422
-    },
-    "3.Sprites\\sprites\\78_flower_sd.png.meta": {
-      "time": 1789031322392.2598
-    },
-    "3.Sprites\\sprites\\79_flower.png.meta": {
-      "time": 1789031322385.746
-    },
-    "3.Sprites\\sprites\\79_flower_sd.png.meta": {
-      "time": 1789031322397.7742
-    },
-    "3.Sprites\\sprites\\7_mushroom.png.meta": {
-      "time": 1789031322410.318
-    },
-    "3.Sprites\\sprites\\80_flower.png.meta": {
-      "time": 1789031322416.1626
-    },
-    "3.Sprites\\sprites\\7_mushroom_sd.png.meta": {
-      "time": 1789031322418.1616
-    },
-    "3.Sprites\\sprites\\81_flower_sd.png.meta": {
-      "time": 1789031322435.4253
-    },
-    "3.Sprites\\sprites\\81_flower.png.meta": {
-      "time": 1789031322436.4248
-    },
-    "3.Sprites\\sprites\\80_flower_sd.png.meta": {
-      "time": 1789031322426.8958
-    },
-    "3.Sprites\\sprites\\83_butterfly.png.meta": {
-      "time": 1789031322453.0012
-    },
-    "3.Sprites\\sprites\\82_butterfly.png.meta": {
-      "time": 1789031322444.9536
-    },
-    "3.Sprites\\sprites\\85_bird.png.meta": {
-      "time": 1789031322458.5125
-    },
-    "3.Sprites\\sprites\\84_nest.png.meta": {
-      "time": 1789031322465.752
-    },
-    "3.Sprites\\sprites\\84_nest_sd.png.meta": {
-      "time": 1789031322474.5933
-    },
-    "3.Sprites\\sprites\\8_mushroom.png.meta": {
-      "time": 1789031322478.593
-    },
-    "3.Sprites\\sprites\\86_bird.png.meta": {
-      "time": 1789031322475.5928
-    },
-    "3.Sprites\\sprites\\8_mushroom_sd.png.meta": {
-      "time": 1789031322497.3196
-    },
-    "3.Sprites\\sprites\\9_mushroom.png.meta": {
-      "time": 1789031322504.8467
-    },
-    "3.Sprites\\sprites\\9_mushroom_sd.png.meta": {
-      "time": 1789031322512.3723
     },
     "7.Scripts\\MatchAsset\\GameObject_sprites_by_order.json.meta": {
       "time": 1789031322523.4253
@@ -2452,9 +1258,6 @@
     },
     "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0006.png.meta": {
       "time": 1789031322612.6062
-    },
-    "3.Sprites\\sprites\\base_room.png.meta": {
-      "time": 1789031322587.803
     },
     "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0030.png.meta": {
       "time": 1789031322619.1243
@@ -2577,677 +1380,656 @@
       "time": 1788497329278.0862,
       "uuid": "b09562b8-0d1b-4470-a7b7-43d4b7892125"
     },
-    "Prefab": {
-      "time": 1789113873693.8794,
-      "uuid": "3d05f450-d80e-4d6c-9eaa-fb277a20b68b"
+    "3.Sprites\\sprites_PLY27.meta": {
+      "time": 1789113873897.8176
     },
-    "resources\\art": {
-      "time": 1789113873697.8804,
-      "uuid": "0cf7498e-2d5a-4c83-afa8-5c9c5e4696d5"
-    },
-    "resources\\art\\sprites_PLY27": {
-      "time": 1789113874436.5554,
+    "3.Sprites\\sprites_PLY27": {
+      "time": 1789114009186.4644,
       "uuid": "4404a559-3f0a-4791-a785-4e126db07670"
     },
-    "Prefab.meta": {
-      "time": 1789113873897.8176
+    "3.Sprites\\sprites_PLY27\\2.png.meta": {
+      "time": 1789113874214.7434
     },
-    "resources\\art.meta": {
-      "time": 1789113873897.8176
-    },
-    "resources\\art\\sprites_PLY27.meta": {
-      "time": 1789113873897.8176
-    },
-    "Prefab\\Scale.prefab": {
-      "time": 1789113873950.8682,
-      "uuid": "ba36b36e-ff8d-41b8-a0b3-dd13ce0bb891"
-    },
-    "resources\\art\\sprites_PLY27\\2.png": {
+    "3.Sprites\\sprites_PLY27\\2.png": {
       "time": 1789113873697.8804,
       "uuid": "0311ed6b-538f-46bc-8526-d82fda25f4ec"
     },
-    "resources\\art\\sprites_PLY27\\BaseRoom.png": {
-      "time": 1789113873701.282,
-      "uuid": "bb27a39a-8fb4-4d80-80e6-3f5ed2a76f92"
+    "3.Sprites\\sprites_PLY27\\Bear4Place.png.meta": {
+      "time": 1789113874340.5051
     },
-    "resources\\art\\sprites_PLY27\\Bear4Place.png": {
+    "3.Sprites\\sprites_PLY27\\Bear4Place.png": {
       "time": 1789113873703.3489,
       "uuid": "8ed915e1-d254-46bd-8954-7474b0d721f5"
     },
-    "resources\\art\\sprites_PLY27\\Bear5Place.png": {
+    "3.Sprites\\sprites_PLY27\\Bear5Place.png.meta": {
+      "time": 1789113874430.5562
+    },
+    "3.Sprites\\sprites_PLY27\\Bear5Place.png": {
       "time": 1789113873704.3552,
       "uuid": "81a604ff-270e-4e90-9d03-980f26ed6bb5"
     },
-    "resources\\art\\sprites_PLY27\\Bear6Place.png": {
+    "3.Sprites\\sprites_PLY27\\Bear6Place.png.meta": {
+      "time": 1789113874330.508
+    },
+    "3.Sprites\\sprites_PLY27\\Bear6Place.png": {
       "time": 1789113873705.49,
       "uuid": "222d54aa-fca9-4f32-870d-cef3fbc304a7"
     },
-    "resources\\art\\sprites_PLY27\\bed.png": {
-      "time": 1789113873706.4956,
-      "uuid": "4dc80ef3-ebea-4660-b20d-57213200a5c8"
+    "3.Sprites\\sprites_PLY27\\books.png.meta": {
+      "time": 1789113874465.0752
     },
-    "resources\\art\\sprites_PLY27\\BG.png": {
-      "time": 1789113873707.7986,
-      "uuid": "ad2dfe62-fb97-4680-ab98-981f857b5699"
-    },
-    "resources\\art\\sprites_PLY27\\book.png": {
-      "time": 1789113873708.8057,
-      "uuid": "4f1a0104-a984-448b-97a3-7a4faa87b1dd"
-    },
-    "resources\\art\\sprites_PLY27\\books.png": {
+    "3.Sprites\\sprites_PLY27\\books.png": {
       "time": 1789113873712.3757,
       "uuid": "70af7fd7-390e-49ef-86a6-723e98e28856"
     },
-    "resources\\art\\sprites_PLY27\\cake1.png": {
+    "3.Sprites\\sprites_PLY27\\book.png.meta": {
+      "time": 1789113874446.6492
+    },
+    "3.Sprites\\sprites_PLY27\\book.png": {
+      "time": 1789113873708.8057,
+      "uuid": "4f1a0104-a984-448b-97a3-7a4faa87b1dd"
+    },
+    "3.Sprites\\sprites_PLY27\\BG.png.meta": {
+      "time": 1789113874450.0493
+    },
+    "3.Sprites\\sprites_PLY27\\BG.png": {
+      "time": 1789113873707.7986,
+      "uuid": "ad2dfe62-fb97-4680-ab98-981f857b5699"
+    },
+    "3.Sprites\\sprites_PLY27\\BaseRoom.png.meta": {
+      "time": 1789113874480.268
+    },
+    "3.Sprites\\sprites_PLY27\\BaseRoom.png": {
+      "time": 1789113873701.282,
+      "uuid": "bb27a39a-8fb4-4d80-80e6-3f5ed2a76f92"
+    },
+    "3.Sprites\\sprites_PLY27\\bed.png.meta": {
+      "time": 1789113874356.5054
+    },
+    "3.Sprites\\sprites_PLY27\\bed.png": {
+      "time": 1789113873706.4956,
+      "uuid": "4dc80ef3-ebea-4660-b20d-57213200a5c8"
+    },
+    "3.Sprites\\sprites_PLY27\\cake1.png.meta": {
+      "time": 1789113874468.0747
+    },
+    "3.Sprites\\sprites_PLY27\\cake1.png": {
       "time": 1789113873713.3806,
       "uuid": "fd4a9ba3-7071-489c-bfc5-d9ca04c59ead"
     },
-    "resources\\art\\sprites_PLY27\\candles1.png": {
+    "3.Sprites\\sprites_PLY27\\candles1.png.meta": {
+      "time": 1789113874489.268
+    },
+    "3.Sprites\\sprites_PLY27\\candles1.png": {
       "time": 1789113873715.4207,
       "uuid": "8065c53c-17e7-4201-9d9f-ed380f65cc01"
     },
-    "resources\\art\\sprites_PLY27\\candles2.png": {
+    "3.Sprites\\sprites_PLY27\\candles2.png.meta": {
+      "time": 1789113874503.3728
+    },
+    "3.Sprites\\sprites_PLY27\\candles2.png": {
       "time": 1789113873716.4612,
       "uuid": "23212d6b-cdcb-41fe-bd47-9f315edcf909"
     },
-    "resources\\art\\sprites_PLY27\\chair1.png": {
+    "3.Sprites\\sprites_PLY27\\chair1.png.meta": {
+      "time": 1789113874527.1929
+    },
+    "3.Sprites\\sprites_PLY27\\chair1.png": {
       "time": 1789113873718.5305,
       "uuid": "3ea13b6b-acee-4441-ac28-da1c5877a5f3"
     },
-    "resources\\art\\sprites_PLY27\\chair_2.png": {
+    "3.Sprites\\sprites_PLY27\\chair_2.png.meta": {
+      "time": 1789113874536.124
+    },
+    "3.Sprites\\sprites_PLY27\\chair_2.png": {
       "time": 1789113873717.4673,
       "uuid": "dcf70a66-5253-46ac-b1f0-09685aff25ec"
     },
-    "resources\\art\\sprites_PLY27\\chan-1.png": {
-      "time": 1789113873725.6646,
-      "uuid": "63c1d583-0f3e-4215-870e-fdbb06398b79"
+    "3.Sprites\\sprites_PLY27\\chocolate_box.png.meta": {
+      "time": 1789114009203.011
     },
-    "resources\\art\\sprites_PLY27\\chan_full.png": {
+    "3.Sprites\\sprites_PLY27\\chocolate_box.png": {
+      "time": 1784174483273.5547,
+      "uuid": "bad9b28d-18c3-4fea-96ed-08c11eab343f"
+    },
+    "3.Sprites\\sprites_PLY27\\chan_full.png.meta": {
+      "time": 1789113874533.0396
+    },
+    "3.Sprites\\sprites_PLY27\\chan_full.png": {
       "time": 1789113873720.6106,
       "uuid": "d7645c7d-29e6-432f-997b-6b04a40124f0"
     },
-    "resources\\art\\sprites_PLY27\\chan_shadow.png": {
+    "3.Sprites\\sprites_PLY27\\chan_shadow.png.meta": {
+      "time": 1789113874542.2324
+    },
+    "3.Sprites\\sprites_PLY27\\chan_shadow.png": {
       "time": 1789113873722.636,
       "uuid": "175f2431-bc42-413e-ab80-02d8fe45c634"
     },
-    "resources\\art\\sprites_PLY27\\chocolate_box.png": {
-      "time": 1789113873728.7776,
-      "uuid": "aa6c730e-aad8-4c81-a16c-435ddbee7f89"
+    "3.Sprites\\sprites_PLY27\\chan-1.png.meta": {
+      "time": 1789113874539.2068
     },
-    "resources\\art\\sprites_PLY27\\dem-full.png": {
+    "3.Sprites\\sprites_PLY27\\chan-1.png": {
+      "time": 1789113873725.6646,
+      "uuid": "63c1d583-0f3e-4215-870e-fdbb06398b79"
+    },
+    "3.Sprites\\sprites_PLY27\\dem-full.png.meta": {
+      "time": 1789113878517.8618
+    },
+    "3.Sprites\\sprites_PLY27\\dem-full.png": {
       "time": 1789113873732.8596,
       "uuid": "47bd3384-fa05-4c5d-97b5-bedec4a96069"
     },
-    "resources\\art\\sprites_PLY27\\dem_giuong_copy.png": {
+    "3.Sprites\\sprites_PLY27\\dem_giuong_copy.png.meta": {
+      "time": 1789113878543.414
+    },
+    "3.Sprites\\sprites_PLY27\\dem_giuong_copy.png": {
       "time": 1789113873730.7964,
       "uuid": "5e736ea4-aed5-48eb-bf3c-054923de3742"
     },
-    "resources\\art\\sprites_PLY27\\dem_giuong_copy_2.png": {
+    "3.Sprites\\sprites_PLY27\\dem_giuong_copy_2.png.meta": {
+      "time": 1789113878544.4146
+    },
+    "3.Sprites\\sprites_PLY27\\dem_giuong_copy_2.png": {
       "time": 1789113873731.8037,
       "uuid": "d504eff8-f5ac-4158-bf64-8ccaa34d2033"
     },
-    "resources\\art\\sprites_PLY27\\E.png": {
+    "3.Sprites\\sprites_PLY27\\E.png.meta": {
+      "time": 1789113878570.464
+    },
+    "3.Sprites\\sprites_PLY27\\E.png": {
       "time": 1789113873733.8677,
       "uuid": "419333d9-4f45-4dbf-a9c4-3a1d290c7275"
     },
-    "resources\\art\\sprites_PLY27\\E_sd.png": {
+    "3.Sprites\\sprites_PLY27\\E_sd.png.meta": {
+      "time": 1789113878545.9226
+    },
+    "3.Sprites\\sprites_PLY27\\E_sd.png": {
       "time": 1789113873734.9846,
       "uuid": "fa7cd96e-e667-454e-afec-ebc533bf99b3"
     },
-    "resources\\art\\sprites_PLY27\\ghe_trai_tim.png": {
+    "3.Sprites\\sprites_PLY27\\ghe_trai_tim.png.meta": {
+      "time": 1789113878553.9304
+    },
+    "3.Sprites\\sprites_PLY27\\ghe_trai_tim.png": {
       "time": 1789113873735.9902,
       "uuid": "d21d7809-61df-46c9-b376-ad3261f716a3"
     },
-    "resources\\art\\sprites_PLY27\\gift.png": {
+    "3.Sprites\\sprites_PLY27\\gift.png.meta": {
+      "time": 1789113878578.986
+    },
+    "3.Sprites\\sprites_PLY27\\gift.png": {
       "time": 1789113873735.9902,
       "uuid": "ab825b8c-8f99-4204-a893-f5d71c161a36"
     },
-    "resources\\art\\sprites_PLY27\\GlassFull.png": {
-      "time": 1789113873738.0276,
-      "uuid": "17b31e88-3c54-4c27-82a8-77d0028dbeb7"
+    "3.Sprites\\sprites_PLY27\\goi1.png.meta": {
+      "time": 1789113878582.715
     },
-    "resources\\art\\sprites_PLY27\\goi1.png": {
+    "3.Sprites\\sprites_PLY27\\goi1.png": {
       "time": 1789113873743.5354,
       "uuid": "f1430a48-0efc-4706-933b-87958db48c39"
     },
-    "resources\\art\\sprites_PLY27\\goi2_full.png": {
+    "3.Sprites\\sprites_PLY27\\goi2_full.png.meta": {
+      "time": 1789113878591.9253
+    },
+    "3.Sprites\\sprites_PLY27\\goi2_full.png": {
       "time": 1789113873744.5745,
       "uuid": "94b0cb94-5e59-4191-8fa2-438bcf53d080"
     },
-    "resources\\art\\sprites_PLY27\\goi3.png": {
+    "3.Sprites\\sprites_PLY27\\GlassFull.png.meta": {
+      "time": 1789113878599.4377
+    },
+    "3.Sprites\\sprites_PLY27\\GlassFull.png": {
+      "time": 1789113873738.0276,
+      "uuid": "17b31e88-3c54-4c27-82a8-77d0028dbeb7"
+    },
+    "3.Sprites\\sprites_PLY27\\goi3.png.meta": {
+      "time": 1789113878600.4395
+    },
+    "3.Sprites\\sprites_PLY27\\goi3.png": {
       "time": 1789113873745.581,
       "uuid": "46fc6e39-2e6b-45f0-8165-9c5d45a8d991"
     },
-    "resources\\art\\sprites_PLY27\\goi_flower.png": {
-      "time": 1789113873738.0276,
-      "uuid": "6fa4637f-0744-4803-800c-605380520705"
+    "3.Sprites\\sprites_PLY27\\goi_flower_shadow.png.meta": {
+      "time": 1789113878613.9534
     },
-    "resources\\art\\sprites_PLY27\\goi_flower_shadow.png": {
+    "3.Sprites\\sprites_PLY27\\goi_flower_shadow.png": {
       "time": 1789113873740.1914,
       "uuid": "da4cbe57-afae-4083-9df6-6913a047a62d"
     },
-    "resources\\art\\sprites_PLY27\\goi_window.png": {
+    "3.Sprites\\sprites_PLY27\\goi_flower.png.meta": {
+      "time": 1789113878610.9536
+    },
+    "3.Sprites\\sprites_PLY27\\goi_flower.png": {
+      "time": 1789113873738.0276,
+      "uuid": "6fa4637f-0744-4803-800c-605380520705"
+    },
+    "3.Sprites\\sprites_PLY27\\goi_window.png.meta": {
+      "time": 1789113878679.8901
+    },
+    "3.Sprites\\sprites_PLY27\\goi_window.png": {
       "time": 1789113873741.4382,
       "uuid": "9fcc9a81-acb4-46d2-b7de-454b47371b91"
     },
-    "resources\\art\\sprites_PLY27\\goi_window_shadow.png": {
+    "3.Sprites\\sprites_PLY27\\goi_window_shadow.png.meta": {
+      "time": 1789113878691.058
+    },
+    "3.Sprites\\sprites_PLY27\\goi_window_shadow.png": {
       "time": 1789113873742.445,
       "uuid": "ef1dd6df-3fd9-494a-9c9f-8bf509eeeed0"
     },
-    "resources\\art\\sprites_PLY27\\Group_11.png": {
+    "3.Sprites\\sprites_PLY27\\Group_11.png.meta": {
+      "time": 1789113878690.0586
+    },
+    "3.Sprites\\sprites_PLY27\\Group_11.png": {
       "time": 1789113873752.0269,
       "uuid": "53e35ec8-99fa-42a5-8c13-510162ce8d86"
     },
-    "resources\\art\\sprites_PLY27\\Group_13.png": {
+    "3.Sprites\\sprites_PLY27\\Group_13.png.meta": {
+      "time": 1789113878696.296
+    },
+    "3.Sprites\\sprites_PLY27\\Group_13.png": {
       "time": 1789113873753.0408,
       "uuid": "e502b04b-550b-4cba-87ca-621681005b1e"
     },
-    "resources\\art\\sprites_PLY27\\Group_16.png": {
+    "3.Sprites\\sprites_PLY27\\Group_16.png.meta": {
+      "time": 1789113878684.8865
+    },
+    "3.Sprites\\sprites_PLY27\\Group_16.png": {
       "time": 1789113873754.0884,
       "uuid": "90817c9c-3708-48e5-93ab-debc4fceb61a"
     },
-    "resources\\art\\sprites_PLY27\\Group_17_copy_1.png": {
+    "3.Sprites\\sprites_PLY27\\Group_17_copy_1.png.meta": {
+      "time": 1789113878757.0364
+    },
+    "3.Sprites\\sprites_PLY27\\Group_17_copy_1.png": {
       "time": 1789113873755.5984,
       "uuid": "108f6235-5e98-485a-8b2e-52c90ad6454e"
     },
-    "resources\\art\\sprites_PLY27\\Group_5_copy.png": {
-      "time": 1789113873746.8984,
-      "uuid": "783ad576-16ca-4167-991c-ed6b721502c9"
+    "3.Sprites\\sprites_PLY27\\Group_5_copy_2.png.meta": {
+      "time": 1789113878761.0503
     },
-    "resources\\art\\sprites_PLY27\\Group_5_copy_2.png": {
+    "3.Sprites\\sprites_PLY27\\Group_5_copy_2.png": {
       "time": 1789113873747.905,
       "uuid": "15199150-f3b3-49ed-a217-d54854d423a2"
     },
-    "resources\\art\\sprites_PLY27\\Group_9.png": {
+    "3.Sprites\\sprites_PLY27\\Group_5_copy.png.meta": {
+      "time": 1789113878762.5596
+    },
+    "3.Sprites\\sprites_PLY27\\Group_5_copy.png": {
+      "time": 1789113873746.8984,
+      "uuid": "783ad576-16ca-4167-991c-ed6b721502c9"
+    },
+    "3.Sprites\\sprites_PLY27\\Group_9.png.meta": {
+      "time": 1789113878771.1177
+    },
+    "3.Sprites\\sprites_PLY27\\Group_9.png": {
       "time": 1789113873749.001,
       "uuid": "48145284-ec88-477d-81b0-90ebd31ee0bb"
     },
-    "resources\\art\\sprites_PLY27\\Group_9_copy.png": {
+    "3.Sprites\\sprites_PLY27\\Group_9_copy.png.meta": {
+      "time": 1789113878807.1655
+    },
+    "3.Sprites\\sprites_PLY27\\Group_9_copy.png": {
       "time": 1789113873751.0188,
       "uuid": "b0b4eba7-c3da-44dd-b316-7f588446381b"
     },
-    "resources\\art\\sprites_PLY27\\heart_tile.png": {
-      "time": 1789113873756.1023,
-      "uuid": "78672fd4-754b-431c-9ba6-cd64553928e9"
+    "3.Sprites\\sprites_PLY27\\Hue_Saturation_2.png.meta": {
+      "time": 1789113878804.026
     },
-    "resources\\art\\sprites_PLY27\\Hue_Saturation_2.png": {
+    "3.Sprites\\sprites_PLY27\\Hue_Saturation_2.png": {
       "time": 1789113873757.6108,
       "uuid": "5e703916-a26c-4a4f-ab96-2332cc8a4f15"
     },
-    "resources\\art\\sprites_PLY27\\L.png": {
+    "3.Sprites\\sprites_PLY27\\L.png.meta": {
+      "time": 1789113878810.184
+    },
+    "3.Sprites\\sprites_PLY27\\L.png": {
       "time": 1789113873758.115,
       "uuid": "aecae65b-6801-4ad7-a71d-f3b9ed1b2f1c"
     },
-    "resources\\art\\sprites_PLY27\\lamp.png": {
+    "3.Sprites\\sprites_PLY27\\heart_tile.png.meta": {
+      "time": 1789113878818.6978
+    },
+    "3.Sprites\\sprites_PLY27\\heart_tile.png": {
+      "time": 1789113873756.1023,
+      "uuid": "78672fd4-754b-431c-9ba6-cd64553928e9"
+    },
+    "3.Sprites\\sprites_PLY27\\lamp.png.meta": {
+      "time": 1789113878857.7478
+    },
+    "3.Sprites\\sprites_PLY27\\lamp.png": {
       "time": 1789113873761.136,
       "uuid": "9707a2ab-7efa-41ea-9bd4-954c835b1195"
     },
-    "resources\\art\\sprites_PLY27\\Layer_555.png": {
-      "time": 1789113873762.244,
-      "uuid": "9ae8e61b-2bb8-435e-977c-61b8186aa7a9"
+    "3.Sprites\\sprites_PLY27\\Layer_559.png.meta": {
+      "time": 1789113878844.623
     },
-    "resources\\art\\sprites_PLY27\\Layer_559.png": {
+    "3.Sprites\\sprites_PLY27\\Layer_559.png": {
       "time": 1789113873763.2502,
       "uuid": "09044d39-ab7c-41df-ac46-9b125a21747d"
     },
-    "resources\\art\\sprites_PLY27\\Layer_566.png": {
+    "3.Sprites\\sprites_PLY27\\Layer_555.png.meta": {
+      "time": 1789113878831.2112
+    },
+    "3.Sprites\\sprites_PLY27\\Layer_555.png": {
+      "time": 1789113873762.244,
+      "uuid": "9ae8e61b-2bb8-435e-977c-61b8186aa7a9"
+    },
+    "3.Sprites\\sprites_PLY27\\Layer_566.png.meta": {
+      "time": 1789113878841.607
+    },
+    "3.Sprites\\sprites_PLY27\\Layer_566.png": {
       "time": 1789113873764.2688,
       "uuid": "135908e5-9cd2-4684-93b7-c0e981751453"
     },
-    "resources\\art\\sprites_PLY27\\Layer_569_-_Smart_Object_Group_1.png": {
+    "3.Sprites\\sprites_PLY27\\Layer_569_-_Smart_Object_Group_1.png.meta": {
+      "time": 1789113878854.6602
+    },
+    "3.Sprites\\sprites_PLY27\\Layer_569_-_Smart_Object_Group_1.png": {
       "time": 1789113873765.2737,
       "uuid": "c033a67a-b219-43d5-a251-416482f9b8c3"
     },
-    "resources\\art\\sprites_PLY27\\Layer_576.png": {
-      "time": 1789113873779.4492,
-      "uuid": "e1ddc9b0-c973-415b-b321-401709eab65f"
+    "3.Sprites\\sprites_PLY27\\Layer_577.png.meta": {
+      "time": 1789113878884.4402
     },
-    "resources\\art\\sprites_PLY27\\Layer_577.png": {
+    "3.Sprites\\sprites_PLY27\\Layer_577.png": {
       "time": 1789113873781.4692,
       "uuid": "1933d16a-867a-4d08-999a-0a9c56f028a0"
     },
-    "resources\\art\\sprites_PLY27\\Layer_580.png": {
-      "time": 1789113873820.213,
-      "uuid": "bc6f84ee-e31b-4995-a80d-217dbb32ee9d"
+    "3.Sprites\\sprites_PLY27\\Layer_576.png.meta": {
+      "time": 1789113878869.7747
     },
-    "resources\\art\\sprites_PLY27\\Layer_580_-_Smart_Object_Group.png": {
+    "3.Sprites\\sprites_PLY27\\Layer_576.png": {
+      "time": 1789113873779.4492,
+      "uuid": "e1ddc9b0-c973-415b-b321-401709eab65f"
+    },
+    "3.Sprites\\sprites_PLY27\\Layer_580_-_Smart_Object_Group.png.meta": {
+      "time": 1789113878890.9626
+    },
+    "3.Sprites\\sprites_PLY27\\Layer_580_-_Smart_Object_Group.png": {
       "time": 1789113873851.3743,
       "uuid": "13b9a22a-7c7a-43e5-b106-28b4503e82cd"
     },
-    "resources\\art\\sprites_PLY27\\Layer_583.png": {
+    "3.Sprites\\sprites_PLY27\\Layer_580.png.meta": {
+      "time": 1789113878903.474
+    },
+    "3.Sprites\\sprites_PLY27\\Layer_580.png": {
+      "time": 1789113873820.213,
+      "uuid": "bc6f84ee-e31b-4995-a80d-217dbb32ee9d"
+    },
+    "3.Sprites\\sprites_PLY27\\Layer_583.png.meta": {
+      "time": 1789113878901.4714
+    },
+    "3.Sprites\\sprites_PLY27\\Layer_583.png": {
       "time": 1789113873896.813,
       "uuid": "ee8991fc-4862-4ea0-abb1-44beab205f66"
     },
-    "resources\\art\\sprites_PLY27\\light_back.png": {
-      "time": 1789113873901.829,
-      "uuid": "f912569a-0b24-4582-927e-c71873eb70c4"
+    "3.Sprites\\sprites_PLY27\\light_front.png.meta": {
+      "time": 1789113878931.546
     },
-    "resources\\art\\sprites_PLY27\\light_front.png": {
+    "3.Sprites\\sprites_PLY27\\light_front.png": {
       "time": 1789113873904.819,
       "uuid": "6082c05e-3e4d-4d43-9eb4-f4d9ca28b9db"
     },
-    "resources\\art\\sprites_PLY27\\light_lamp1.png": {
-      "time": 1789113873905.8208,
-      "uuid": "64830ec0-9f55-46a6-b539-2bea00dfc54d"
+    "3.Sprites\\sprites_PLY27\\ly1_copy.png.meta": {
+      "time": 1789113878933.548
     },
-    "resources\\art\\sprites_PLY27\\ly1_copy.png": {
+    "3.Sprites\\sprites_PLY27\\ly1_copy.png": {
       "time": 1789113873907.1208,
       "uuid": "3bf39f04-03db-4fbe-8282-a9693e9afde7"
     },
-    "resources\\art\\sprites_PLY27\\L_sd.png": {
+    "3.Sprites\\sprites_PLY27\\L_sd.png.meta": {
+      "time": 1789113878963.7244
+    },
+    "3.Sprites\\sprites_PLY27\\L_sd.png": {
       "time": 1789113873759.1194,
       "uuid": "c6717c78-9257-44b4-8128-1726911ba4d0"
     },
-    "resources\\art\\sprites_PLY27\\may_phat_nhac_1.png": {
+    "3.Sprites\\sprites_PLY27\\light_back.png.meta": {
+      "time": 1789113878963.7244
+    },
+    "3.Sprites\\sprites_PLY27\\light_back.png": {
+      "time": 1789113873901.829,
+      "uuid": "f912569a-0b24-4582-927e-c71873eb70c4"
+    },
+    "3.Sprites\\sprites_PLY27\\light_lamp1.png.meta": {
+      "time": 1789113878969.2405
+    },
+    "3.Sprites\\sprites_PLY27\\light_lamp1.png": {
+      "time": 1789113873905.8208,
+      "uuid": "64830ec0-9f55-46a6-b539-2bea00dfc54d"
+    },
+    "3.Sprites\\sprites_PLY27\\may_phat_nhac_1.png.meta": {
+      "time": 1789113878959.2034
+    },
+    "3.Sprites\\sprites_PLY27\\may_phat_nhac_1.png": {
       "time": 1789113873913.125,
       "uuid": "805732ba-de43-4553-82b2-639b0392b9ba"
     },
-    "resources\\art\\sprites_PLY27\\minilight_on.png": {
-      "time": 1789113874275.9883,
-      "uuid": "46a8f512-3c62-4e9c-b6f4-c6d41ddd74cb"
+    "3.Sprites\\sprites_PLY27\\mini_light.png.meta": {
+      "time": 1789113878992.5735
     },
-    "resources\\art\\sprites_PLY27\\mini_light.png": {
+    "3.Sprites\\sprites_PLY27\\mini_light.png": {
       "time": 1789113873916.1248,
       "uuid": "3c7b24a8-812b-4822-a609-1ce7a358b121"
     },
-    "resources\\art\\sprites_PLY27\\mini_table.png": {
+    "3.Sprites\\sprites_PLY27\\minilight_on.png.meta": {
+      "time": 1789113878961.2046
+    },
+    "3.Sprites\\sprites_PLY27\\minilight_on.png": {
+      "time": 1789113874275.9883,
+      "uuid": "46a8f512-3c62-4e9c-b6f4-c6d41ddd74cb"
+    },
+    "3.Sprites\\sprites_PLY27\\mini_table.png.meta": {
+      "time": 1789113878990.568
+    },
+    "3.Sprites\\sprites_PLY27\\mini_table.png": {
       "time": 1789113874215.753,
       "uuid": "4a3ba973-b312-4c12-a7db-b7869386981b"
     },
-    "resources\\art\\sprites_PLY27\\O.png": {
+    "3.Sprites\\sprites_PLY27\\O.png.meta": {
+      "time": 1789113878993.569
+    },
+    "3.Sprites\\sprites_PLY27\\O.png": {
       "time": 1789113874277.9902,
       "uuid": "3fe2f5e5-10f0-4abc-9ed5-5fa2dcc9c081"
     },
-    "resources\\art\\sprites_PLY27\\O_sd.png": {
+    "3.Sprites\\sprites_PLY27\\O_sd.png.meta": {
+      "time": 1789113878996.0764
+    },
+    "3.Sprites\\sprites_PLY27\\O_sd.png": {
       "time": 1789113874279.9934,
       "uuid": "a1ffd308-3ce9-47ea-95f3-b2ce0054526f"
     },
-    "resources\\art\\sprites_PLY27\\pic2Shadow.png": {
-      "time": 1789113874280.994,
-      "uuid": "ca9a7ec7-83b0-4ddb-9471-f2addc6d129c"
+    "3.Sprites\\sprites_PLY27\\pic3Shadow.png.meta": {
+      "time": 1789113879038.6877
     },
-    "resources\\art\\sprites_PLY27\\pic3Shadow.png": {
+    "3.Sprites\\sprites_PLY27\\pic3Shadow.png": {
       "time": 1789113874281.9917,
       "uuid": "f6daa9ea-a84e-45fb-b612-51431bfadf5c"
     },
-    "resources\\art\\sprites_PLY27\\Pic4Shadow.png": {
+    "3.Sprites\\sprites_PLY27\\pic2Shadow.png.meta": {
+      "time": 1789113879000.088
+    },
+    "3.Sprites\\sprites_PLY27\\pic2Shadow.png": {
+      "time": 1789113874280.994,
+      "uuid": "ca9a7ec7-83b0-4ddb-9471-f2addc6d129c"
+    },
+    "3.Sprites\\sprites_PLY27\\Pic4Shadow.png.meta": {
+      "time": 1789113879022.1265
+    },
+    "3.Sprites\\sprites_PLY27\\Pic4Shadow.png": {
       "time": 1789113874282.9902,
       "uuid": "51bb0c7e-167b-40ce-bac8-555a768734f6"
     },
-    "resources\\art\\sprites_PLY27\\rabit.png": {
+    "3.Sprites\\sprites_PLY27\\rabit.png.meta": {
+      "time": 1789113879360.1863
+    },
+    "3.Sprites\\sprites_PLY27\\rabit.png": {
       "time": 1789113874284.9905,
       "uuid": "ff88da69-70a9-4653-8229-2e7361a55733"
     },
-    "resources\\art\\sprites_PLY27\\rem.png": {
+    "3.Sprites\\sprites_PLY27\\rem.png.meta": {
+      "time": 1789113879331.6216
+    },
+    "3.Sprites\\sprites_PLY27\\rem.png": {
       "time": 1789113874285.9905,
       "uuid": "d831036c-416e-49d4-a2d1-af469d82147a"
     },
-    "resources\\art\\sprites_PLY27\\rug.png": {
-      "time": 1789113874287.991,
-      "uuid": "4150757e-4f4d-473c-b0dc-ac82f987dd25"
+    "3.Sprites\\sprites_PLY27\\rug2.png.meta": {
+      "time": 1789113879367.2332
     },
-    "resources\\art\\sprites_PLY27\\rug2.png": {
+    "3.Sprites\\sprites_PLY27\\rug2.png": {
       "time": 1789113874328.5076,
       "uuid": "297df66e-66ac-4cd4-b6fa-7f08d8a295a8"
     },
-    "resources\\art\\sprites_PLY27\\rug__copy.png": {
+    "3.Sprites\\sprites_PLY27\\rug__copy.png.meta": {
+      "time": 1789113879110.0208
+    },
+    "3.Sprites\\sprites_PLY27\\rug__copy.png": {
       "time": 1789113874325.4993,
       "uuid": "7133b0e4-6800-4b68-a47b-353244bb9e74"
     },
-    "resources\\art\\sprites_PLY27\\san_nha1.png": {
-      "time": 1789113874332.506,
-      "uuid": "4d605646-06cd-418a-80e6-4c08b8311b53"
+    "3.Sprites\\sprites_PLY27\\shadow_candles1.png.meta": {
+      "time": 1789113879429.06
     },
-    "resources\\art\\sprites_PLY27\\san_nha2.png": {
-      "time": 1789113874334.5066,
-      "uuid": "fa40bfef-2081-4f9a-8a86-5cf2d378faf4"
-    },
-    "resources\\art\\sprites_PLY27\\shadow_candles1.png": {
+    "3.Sprites\\sprites_PLY27\\shadow_candles1.png": {
       "time": 1789113874335.5066,
       "uuid": "a256e4a1-78d3-4f2c-b725-fb6f9c059542"
     },
-    "resources\\art\\sprites_PLY27\\shadow_chair1.png": {
+    "3.Sprites\\sprites_PLY27\\rug.png.meta": {
+      "time": 1789113879109.022
+    },
+    "3.Sprites\\sprites_PLY27\\rug.png": {
+      "time": 1789113874287.991,
+      "uuid": "4150757e-4f4d-473c-b0dc-ac82f987dd25"
+    },
+    "3.Sprites\\sprites_PLY27\\san_nha2.png.meta": {
+      "time": 1789113879440.6184
+    },
+    "3.Sprites\\sprites_PLY27\\san_nha2.png": {
+      "time": 1789113874334.5066,
+      "uuid": "fa40bfef-2081-4f9a-8a86-5cf2d378faf4"
+    },
+    "3.Sprites\\sprites_PLY27\\san_nha1.png.meta": {
+      "time": 1789113879433.0781
+    },
+    "3.Sprites\\sprites_PLY27\\san_nha1.png": {
+      "time": 1789113874332.506,
+      "uuid": "4d605646-06cd-418a-80e6-4c08b8311b53"
+    },
+    "3.Sprites\\sprites_PLY27\\shadow_chair1.png.meta": {
+      "time": 1789113879438.6206
+    },
+    "3.Sprites\\sprites_PLY27\\shadow_chair1.png": {
       "time": 1789113874336.5066,
       "uuid": "1ba89609-ba1d-4291-858e-29440835bb9c"
     },
-    "resources\\art\\sprites_PLY27\\shadow_Ly1.png": {
+    "3.Sprites\\sprites_PLY27\\shadow_Ly1.png.meta": {
+      "time": 1789113879457.33
+    },
+    "3.Sprites\\sprites_PLY27\\shadow_Ly1.png": {
       "time": 1789113874338.507,
       "uuid": "dc8a88ce-382f-4701-a4e6-3706106202c5"
     },
-    "resources\\art\\sprites_PLY27\\shadow_rug2.png": {
+    "3.Sprites\\sprites_PLY27\\shadow_rug2.png.meta": {
+      "time": 1789113879492.694
+    },
+    "3.Sprites\\sprites_PLY27\\shadow_rug2.png": {
       "time": 1789113874388.515,
       "uuid": "0bcfe1a7-891c-4583-8efb-f1961e3b0a9a"
     },
-    "resources\\art\\sprites_PLY27\\shadow_table.png": {
+    "3.Sprites\\sprites_PLY27\\shadow_table.png.meta": {
+      "time": 1789113879484.1777
+    },
+    "3.Sprites\\sprites_PLY27\\shadow_table.png": {
       "time": 1789113874390.5154,
       "uuid": "768f254a-3426-499e-a891-18e22a5b1f01"
     },
-    "resources\\art\\sprites_PLY27\\slipper1.png": {
+    "3.Sprites\\sprites_PLY27\\slipper1.png.meta": {
+      "time": 1789113879537.2354
+    },
+    "3.Sprites\\sprites_PLY27\\slipper1.png": {
       "time": 1789113874395.5154,
       "uuid": "d5bd9d97-8886-4d8d-9cf4-1e3c54aeff7d"
     },
-    "resources\\art\\sprites_PLY27\\slipper1_copy.png": {
+    "3.Sprites\\sprites_PLY27\\slipper1_copy.png.meta": {
+      "time": 1789113879481.175
+    },
+    "3.Sprites\\sprites_PLY27\\slipper1_copy.png": {
       "time": 1789113874399.5164,
       "uuid": "6a0cc616-ea05-4c58-aaa8-e5e4f249f39c"
     },
-    "resources\\art\\sprites_PLY27\\Square.png": {
+    "3.Sprites\\sprites_PLY27\\Square.png.meta": {
+      "time": 1789113879487.6948
+    },
+    "3.Sprites\\sprites_PLY27\\Square.png": {
       "time": 1789113874401.5156,
       "uuid": "f3d640c6-6905-42d0-8f0d-610c0139e8eb"
     },
-    "resources\\art\\sprites_PLY27\\table.png": {
+    "3.Sprites\\sprites_PLY27\\table.png.meta": {
+      "time": 1789113879512.1448
+    },
+    "3.Sprites\\sprites_PLY27\\table.png": {
       "time": 1789113874403.0256,
       "uuid": "d117280a-74ae-4b93-b26f-40a2ed085afd"
     },
-    "resources\\art\\sprites_PLY27\\tham_trai_ban.png": {
-      "time": 1789113874405.0327,
-      "uuid": "1d4ed42a-0236-4aca-b96a-9ad714354089"
+    "3.Sprites\\sprites_PLY27\\tu.png.meta": {
+      "time": 1789113879511.1433
     },
-    "resources\\art\\sprites_PLY27\\tu.png": {
+    "3.Sprites\\sprites_PLY27\\tu.png": {
       "time": 1789113874407.0337,
       "uuid": "9f75935c-e772-49ca-a1d1-146f7009766f"
     },
-    "resources\\art\\sprites_PLY27\\tu2.png": {
+    "3.Sprites\\sprites_PLY27\\tham_trai_ban.png.meta": {
+      "time": 1789113879532.1284
+    },
+    "3.Sprites\\sprites_PLY27\\tham_trai_ban.png": {
+      "time": 1789113874405.0327,
+      "uuid": "1d4ed42a-0236-4aca-b96a-9ad714354089"
+    },
+    "3.Sprites\\sprites_PLY27\\tu2.png.meta": {
+      "time": 1789113879535.1306
+    },
+    "3.Sprites\\sprites_PLY27\\tu2.png": {
       "time": 1789113874411.042,
       "uuid": "602bf625-fddd-4df3-9a1d-891ab2bd40f4"
     },
-    "resources\\art\\sprites_PLY27\\tu2_shadow.png": {
+    "3.Sprites\\sprites_PLY27\\tu2_shadow.png.meta": {
+      "time": 1789113879541.2393
+    },
+    "3.Sprites\\sprites_PLY27\\tu2_shadow.png": {
       "time": 1789113874430.5562,
       "uuid": "4f91f0a8-075c-45cb-b9ce-eb509918b151"
     },
-    "resources\\art\\sprites_PLY27\\tu_copy.png": {
+    "3.Sprites\\sprites_PLY27\\tu_copy.png.meta": {
+      "time": 1789113879539.2358
+    },
+    "3.Sprites\\sprites_PLY27\\tu_copy.png": {
       "time": 1789113874409.0366,
       "uuid": "5edf0035-2a38-4133-8e30-02961fd0a25b"
     },
-    "resources\\art\\sprites_PLY27\\V.png": {
+    "3.Sprites\\sprites_PLY27\\V.png.meta": {
+      "time": 1789113879554.7483
+    },
+    "3.Sprites\\sprites_PLY27\\V.png": {
       "time": 1789113874433.5564,
       "uuid": "275c78eb-fef6-4dad-a1ed-4607c7353b64"
     },
-    "resources\\art\\sprites_PLY27\\vase.png": {
+    "3.Sprites\\sprites_PLY27\\vase.png.meta": {
+      "time": 1789113879557.9182
+    },
+    "3.Sprites\\sprites_PLY27\\vase.png": {
       "time": 1789113874435.554,
       "uuid": "4501e746-bd29-4304-af6a-162068c2df55"
     },
-    "resources\\art\\sprites_PLY27\\V_sd.png": {
-      "time": 1789113874434.5547,
-      "uuid": "da7d9b56-2b76-4bc8-87a4-bcae7521a309"
-    },
-    "Prefab\\Scale.prefab.meta": {
-      "time": 1789113873968.8726
-    },
-    "resources\\art\\sprites_PLY27\\Bear4Place.png.meta": {
-      "time": 1789113874340.5051
-    },
-    "resources\\art\\sprites_PLY27\\2.png.meta": {
-      "time": 1789113874214.7434
-    },
-    "resources\\art\\sprites_PLY27\\Bear6Place.png.meta": {
-      "time": 1789113874330.508
-    },
-    "resources\\art\\sprites_PLY27\\Bear5Place.png.meta": {
-      "time": 1789113874430.5562
-    },
-    "resources\\art\\sprites_PLY27\\book.png.meta": {
-      "time": 1789113874446.6492
-    },
-    "resources\\art\\sprites_PLY27\\books.png.meta": {
-      "time": 1789113874465.0752
-    },
-    "resources\\art\\sprites_PLY27\\BG.png.meta": {
-      "time": 1789113874450.0493
-    },
-    "resources\\art\\sprites_PLY27\\bed.png.meta": {
-      "time": 1789113874356.5054
-    },
-    "resources\\art\\sprites_PLY27\\cake1.png.meta": {
-      "time": 1789113874468.0747
-    },
-    "resources\\art\\sprites_PLY27\\candles1.png.meta": {
-      "time": 1789113874489.268
-    },
-    "resources\\art\\sprites_PLY27\\candles2.png.meta": {
-      "time": 1789113874503.3728
-    },
-    "resources\\art\\sprites_PLY27\\BaseRoom.png.meta": {
-      "time": 1789113874480.268
-    },
-    "resources\\art\\sprites_PLY27\\chair1.png.meta": {
-      "time": 1789113874527.1929
-    },
-    "resources\\art\\sprites_PLY27\\chair_2.png.meta": {
-      "time": 1789113874536.124
-    },
-    "resources\\art\\sprites_PLY27\\chocolate_box.png.meta": {
-      "time": 1789113878476.268
-    },
-    "resources\\art\\sprites_PLY27\\chan_full.png.meta": {
-      "time": 1789113874533.0396
-    },
-    "resources\\art\\sprites_PLY27\\chan_shadow.png.meta": {
-      "time": 1789113874542.2324
-    },
-    "resources\\art\\sprites_PLY27\\chan-1.png.meta": {
-      "time": 1789113874539.2068
-    },
-    "resources\\art\\sprites_PLY27\\dem-full.png.meta": {
-      "time": 1789113878517.8618
-    },
-    "resources\\art\\sprites_PLY27\\dem_giuong_copy.png.meta": {
-      "time": 1789113878543.414
-    },
-    "resources\\art\\sprites_PLY27\\dem_giuong_copy_2.png.meta": {
-      "time": 1789113878544.4146
-    },
-    "resources\\art\\sprites_PLY27\\E_sd.png.meta": {
-      "time": 1789113878545.9226
-    },
-    "resources\\art\\sprites_PLY27\\ghe_trai_tim.png.meta": {
-      "time": 1789113878553.9304
-    },
-    "resources\\art\\sprites_PLY27\\E.png.meta": {
-      "time": 1789113878570.464
-    },
-    "resources\\art\\sprites_PLY27\\gift.png.meta": {
-      "time": 1789113878578.986
-    },
-    "resources\\art\\sprites_PLY27\\goi1.png.meta": {
-      "time": 1789113878582.715
-    },
-    "resources\\art\\sprites_PLY27\\goi2_full.png.meta": {
-      "time": 1789113878591.9253
-    },
-    "resources\\art\\sprites_PLY27\\GlassFull.png.meta": {
-      "time": 1789113878599.4377
-    },
-    "resources\\art\\sprites_PLY27\\goi3.png.meta": {
-      "time": 1789113878600.4395
-    },
-    "resources\\art\\sprites_PLY27\\goi_flower.png.meta": {
-      "time": 1789113878610.9536
-    },
-    "resources\\art\\sprites_PLY27\\goi_flower_shadow.png.meta": {
-      "time": 1789113878613.9534
-    },
-    "resources\\art\\sprites_PLY27\\goi_window.png.meta": {
-      "time": 1789113878679.8901
-    },
-    "resources\\art\\sprites_PLY27\\Group_16.png.meta": {
-      "time": 1789113878684.8865
-    },
-    "resources\\art\\sprites_PLY27\\Group_11.png.meta": {
-      "time": 1789113878690.0586
-    },
-    "resources\\art\\sprites_PLY27\\goi_window_shadow.png.meta": {
-      "time": 1789113878691.058
-    },
-    "resources\\art\\sprites_PLY27\\Group_13.png.meta": {
-      "time": 1789113878696.296
-    },
-    "resources\\art\\sprites_PLY27\\Group_17_copy_1.png.meta": {
-      "time": 1789113878757.0364
-    },
-    "resources\\art\\sprites_PLY27\\Group_5_copy_2.png.meta": {
-      "time": 1789113878761.0503
-    },
-    "resources\\art\\sprites_PLY27\\Group_5_copy.png.meta": {
-      "time": 1789113878762.5596
-    },
-    "resources\\art\\sprites_PLY27\\Group_9.png.meta": {
-      "time": 1789113878771.1177
-    },
-    "resources\\art\\sprites_PLY27\\Hue_Saturation_2.png.meta": {
-      "time": 1789113878804.026
-    },
-    "resources\\art\\sprites_PLY27\\Group_9_copy.png.meta": {
-      "time": 1789113878807.1655
-    },
-    "resources\\art\\sprites_PLY27\\L.png.meta": {
-      "time": 1789113878810.184
-    },
-    "resources\\art\\sprites_PLY27\\heart_tile.png.meta": {
-      "time": 1789113878818.6978
-    },
-    "resources\\art\\sprites_PLY27\\Layer_555.png.meta": {
-      "time": 1789113878831.2112
-    },
-    "resources\\art\\sprites_PLY27\\Layer_566.png.meta": {
-      "time": 1789113878841.607
-    },
-    "resources\\art\\sprites_PLY27\\Layer_559.png.meta": {
-      "time": 1789113878844.623
-    },
-    "resources\\art\\sprites_PLY27\\Layer_569_-_Smart_Object_Group_1.png.meta": {
-      "time": 1789113878854.6602
-    },
-    "resources\\art\\sprites_PLY27\\lamp.png.meta": {
-      "time": 1789113878857.7478
-    },
-    "resources\\art\\sprites_PLY27\\Layer_576.png.meta": {
-      "time": 1789113878869.7747
-    },
-    "resources\\art\\sprites_PLY27\\Layer_577.png.meta": {
-      "time": 1789113878884.4402
-    },
-    "resources\\art\\sprites_PLY27\\Layer_580_-_Smart_Object_Group.png.meta": {
-      "time": 1789113878890.9626
-    },
-    "resources\\art\\sprites_PLY27\\Layer_583.png.meta": {
-      "time": 1789113878901.4714
-    },
-    "resources\\art\\sprites_PLY27\\Layer_580.png.meta": {
-      "time": 1789113878903.474
-    },
-    "resources\\art\\sprites_PLY27\\light_front.png.meta": {
-      "time": 1789113878931.546
-    },
-    "resources\\art\\sprites_PLY27\\ly1_copy.png.meta": {
-      "time": 1789113878933.548
-    },
-    "resources\\art\\sprites_PLY27\\may_phat_nhac_1.png.meta": {
-      "time": 1789113878959.2034
-    },
-    "resources\\art\\sprites_PLY27\\minilight_on.png.meta": {
-      "time": 1789113878961.2046
-    },
-    "resources\\art\\sprites_PLY27\\L_sd.png.meta": {
-      "time": 1789113878963.7244
-    },
-    "resources\\art\\sprites_PLY27\\light_back.png.meta": {
-      "time": 1789113878963.7244
-    },
-    "resources\\art\\sprites_PLY27\\light_lamp1.png.meta": {
-      "time": 1789113878969.2405
-    },
-    "resources\\art\\sprites_PLY27\\mini_table.png.meta": {
-      "time": 1789113878990.568
-    },
-    "resources\\art\\sprites_PLY27\\mini_light.png.meta": {
-      "time": 1789113878992.5735
-    },
-    "resources\\art\\sprites_PLY27\\O.png.meta": {
-      "time": 1789113878993.569
-    },
-    "resources\\art\\sprites_PLY27\\O_sd.png.meta": {
-      "time": 1789113878996.0764
-    },
-    "resources\\art\\sprites_PLY27\\pic2Shadow.png.meta": {
-      "time": 1789113879000.088
-    },
-    "resources\\art\\sprites_PLY27\\Pic4Shadow.png.meta": {
-      "time": 1789113879022.1265
-    },
-    "resources\\art\\sprites_PLY27\\pic3Shadow.png.meta": {
-      "time": 1789113879038.6877
-    },
-    "resources\\art\\sprites_PLY27\\rug.png.meta": {
-      "time": 1789113879109.022
-    },
-    "resources\\art\\sprites_PLY27\\rug__copy.png.meta": {
-      "time": 1789113879110.0208
-    },
-    "resources\\art\\sprites_PLY27\\rem.png.meta": {
-      "time": 1789113879331.6216
-    },
-    "resources\\art\\sprites_PLY27\\rabit.png.meta": {
-      "time": 1789113879360.1863
-    },
-    "resources\\art\\sprites_PLY27\\rug2.png.meta": {
-      "time": 1789113879367.2332
-    },
-    "resources\\art\\sprites_PLY27\\shadow_candles1.png.meta": {
-      "time": 1789113879429.06
-    },
-    "resources\\art\\sprites_PLY27\\san_nha1.png.meta": {
-      "time": 1789113879433.0781
-    },
-    "resources\\art\\sprites_PLY27\\shadow_chair1.png.meta": {
-      "time": 1789113879438.6206
-    },
-    "resources\\art\\sprites_PLY27\\san_nha2.png.meta": {
-      "time": 1789113879440.6184
-    },
-    "resources\\art\\sprites_PLY27\\shadow_Ly1.png.meta": {
-      "time": 1789113879457.33
-    },
-    "resources\\art\\sprites_PLY27\\slipper1_copy.png.meta": {
-      "time": 1789113879481.175
-    },
-    "resources\\art\\sprites_PLY27\\shadow_table.png.meta": {
-      "time": 1789113879484.1777
-    },
-    "resources\\art\\sprites_PLY27\\Square.png.meta": {
-      "time": 1789113879487.6948
-    },
-    "resources\\art\\sprites_PLY27\\shadow_rug2.png.meta": {
-      "time": 1789113879492.694
-    },
-    "resources\\art\\sprites_PLY27\\tu.png.meta": {
-      "time": 1789113879511.1433
-    },
-    "resources\\art\\sprites_PLY27\\table.png.meta": {
-      "time": 1789113879512.1448
-    },
-    "resources\\art\\sprites_PLY27\\tham_trai_ban.png.meta": {
-      "time": 1789113879532.1284
-    },
-    "resources\\art\\sprites_PLY27\\tu2.png.meta": {
-      "time": 1789113879535.1306
-    },
-    "resources\\art\\sprites_PLY27\\slipper1.png.meta": {
-      "time": 1789113879537.2354
-    },
-    "resources\\art\\sprites_PLY27\\tu_copy.png.meta": {
-      "time": 1789113879539.2358
-    },
-    "resources\\art\\sprites_PLY27\\tu2_shadow.png.meta": {
-      "time": 1789113879541.2393
-    },
-    "resources\\art\\sprites_PLY27\\V.png.meta": {
-      "time": 1789113879554.7483
-    },
-    "resources\\art\\sprites_PLY27\\V_sd.png.meta": {
+    "3.Sprites\\sprites_PLY27\\V_sd.png.meta": {
       "time": 1789113879555.7485
     },
-    "resources\\art\\sprites_PLY27\\vase.png.meta": {
-      "time": 1789113879557.9182
+    "3.Sprites\\sprites_PLY27\\V_sd.png": {
+      "time": 1789113874434.5547,
+      "uuid": "da7d9b56-2b76-4bc8-87a4-bcae7521a309"
     }
   },
   "missing": {}
