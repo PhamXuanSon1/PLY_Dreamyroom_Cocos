@@ -10,7 +10,7 @@
  *   - Physics.Raycast bắt layer "Download" -> dùng Button/handler tử tế
  */
 
-import { _decorator, Component, Node, Label, Sprite, EventTouch, Vec3, sys, game, Game } from 'cc';
+import { _decorator, Component, Node, Label, Sprite, EventTouch, Vec3, sys } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { ItemManager } from './ItemManager';
 import { BallFollowFill } from '../utils/BallFollowFill';
@@ -47,14 +47,11 @@ export class UIManager extends Component implements IPointerHandler {
     isGameEnded = false;
 
     // ---------------- Chơi tiếp sau End Game ----------------
-    @property({ tooltip: 'Số item được chơi thêm khi người chơi quay lại (từ store) sau End Game. 0 = tắt. Chỉ áp dụng 1 lần.' })
+    @property({ tooltip: 'Số item được chơi thêm sau End Game: chạm đầu tiên mở store rồi mở lại gameplay cho chơi thêm N item. 0 = tắt. Chỉ áp dụng 1 lần.' })
     continueItemCount = 3;
 
     /** Đã dùng lượt chơi tiếp chưa (chỉ cho 1 lần). */
     private continueUsed = false;
-
-    /** Đã bấm store sau End Game, đang chờ người chơi quay lại app. */
-    private waitingReturn = false;
 
     // ---------------- Canvas ----------------
     @property({ type: Node, tooltip: 'Canvas UI trong lúc chơi.' })
@@ -78,12 +75,10 @@ export class UIManager extends Component implements IPointerHandler {
 
     onEnable() {
         DreamyInputManager.register(this);
-        game.on(Game.EVENT_SHOW, this.onGameShow, this);
     }
 
     onDisable() {
         DreamyInputManager.unregister(this);
-        game.off(Game.EVENT_SHOW, this.onGameShow, this);
     }
 
     onDestroy() {
@@ -156,13 +151,6 @@ export class UIManager extends Component implements IPointerHandler {
     }
 
     // ======================================================== chơi tiếp sau end game
-    /** App quay lại foreground (sau khi mở store) -> cho chơi tiếp nếu còn lượt. */
-    private onGameShow(): void {
-        if (!this.waitingReturn) return;
-        this.waitingReturn = false;
-        this.resumeAfterEndGame();
-    }
-
     /**
      * Mở lại gameplay sau End Game, cho chơi thêm continueItemCount item rồi End Game lại.
      * Chỉ dùng được 1 lần; lần End Game sau chạm chỉ mở store.
@@ -195,10 +183,10 @@ export class UIManager extends Component implements IPointerHandler {
     gotoStore(): void {
         console.log("Test: goToStore");
 
-        // Còn lượt chơi tiếp -> đánh dấu chờ người chơi quay lại từ store
-        if (this.isGameEnded && !this.continueUsed && this.continueItemCount > 0) {
-            this.waitingReturn = true;
-        }
+        // Còn lượt chơi tiếp -> mở store xong thì mở lại gameplay luôn,
+        // để khi người chơi quay lại (hoặc chạm tiếp) là chơi được ngay.
+        const canContinue = this.isGameEnded && !this.continueUsed && this.continueItemCount > 0;
+        if (canContinue) this.scheduleOnce(() => this.resumeAfterEndGame(), 0);
         if (this.gameController) {
             if (this.gameController instanceof GameController) {
                 this.gameController.redirectToStore();

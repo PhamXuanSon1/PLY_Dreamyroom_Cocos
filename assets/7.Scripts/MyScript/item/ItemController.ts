@@ -280,10 +280,9 @@ export class ItemController extends Component implements IPointerHandler {
         }
     }
 
-    /** Thả trượt: Bay về vị trí ban đầu (Holder / vị trí nhấc lên) + phát âm thanh LandFail */
+    /** Thả trượt: Bay về vị trí ban đầu (Holder / vị trí nhấc lên), không phát âm thanh */
     private snapFailed(): void {
-        Ply_SoundManager.Ins?.playFx(FxType.dropOnFloor);
-
+        // Thả hụt không phát âm thanh
         this.itemMovement.snapFailedAnimation();
 
         // Thả hụt -> ẩn bóng đi, chỉ hiện lại khi cầm item lên lần sau
@@ -304,13 +303,13 @@ export class ItemController extends Component implements IPointerHandler {
             WorldScrollManager.instance.itemReturned(this);
             ItemManager.instance?.showStuckHintAgain();
         } else {
-            TweenUtil.killAll(this.node);
-            TweenUtil.moveTo(this.node, this.initialWorldPos, this.moveDuration, 'quadOut', () => {
-                this.itemGraphic.restoreOriginalLayers();
-                // về chỗ cũ trong vùng spawn -> nhấp nhô tiếp
-                if (this.idleBobBaseWorldPos) this.startIdleBobbing();
-                ItemManager.instance?.showStuckHintAgain();
-            });
+            // Không có holder / scroll: GIỮ NGUYÊN vị trí vừa thả (không bay về chỗ cũ),
+            // trả về layer gốc nhưng đưa lên trên cùng của đống item để không bị che.
+            this.itemGraphic.restoreOriginalLayers();
+            if (this.node.parent) this.node.setSiblingIndex(this.node.parent.children.length - 1);
+            // nhấp nhô tiếp tại vị trí mới
+            if (this.idleBobBaseWorldPos) this.startIdleBobbing();
+            ItemManager.instance?.showStuckHintAgain();
         }
     }
 

@@ -7,7 +7,7 @@
     "polyfills": {
       "asyncFunctions": true
     },
-    "name": "Cocos_Packingdom_PLY17_030826",
+    "name": "Cocos_Packingdom_PLY27_09112026",
     "buildPath": "project://build",
     "outputName": "web-mobile",
     "mainBundleCompressionType": "merge_dep",
@@ -31,10 +31,10 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "8-22-2026 11:41:30 build success in 25 s!",
-        "detailMessage": "playable-ads-adapter 适配完成，共耗时13秒\r",
+        "message": "9-11-2026 17:11:15 build success in 22 s!",
+        "detailMessage": "[playable-ads-builder]\rBắt đầu đóng gói playable ad cho 1 kênh -> F:\\CocosProject\\PLY_Dreamyroom_Cocos\\Cocos_Packingdom_PLY27_09112026\r",
         "options": {
-          "name": "Cocos_Packingdom_PLY17_030826",
+          "name": "Cocos_Packingdom_PLY27_09112026",
           "server": "",
           "engineModulesConfigKey": "migrationsConfig",
           "platform": "web-mobile",
@@ -93,7 +93,7 @@
             "enable": false
           }
         },
-        "time": "8-22-2026 11:41:04",
+        "time": "9-11-2026 17:10:52",
         "dirty": false
       }
     }

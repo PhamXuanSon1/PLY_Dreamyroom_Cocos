@@ -9,10 +9,6 @@
       "time": 1787285988370.1433,
       "uuid": "405d2b7b-09f2-40b3-8c2b-bd37102b1ae8"
     },
-    "3.Sprites\\Box": {
-      "time": 1787381877035.5164,
-      "uuid": "a12ae7d3-df1d-4ba8-a8e6-957d35166250"
-    },
     "3.Sprites\\Chung": {
       "time": 1789116306573.9954,
       "uuid": "9def9b2b-946d-4e03-9044-3dfbbb6ec505"
@@ -61,14 +57,6 @@
       "time": 1787381816581.8284,
       "uuid": "d1676eab-9018-4d01-a830-cd34c4dda508"
     },
-    "3.Sprites\\Box\\OpenClick": {
-      "time": 1787381877035.5164,
-      "uuid": "a13eae00-79ed-4fdd-b16c-668ee67e3f22"
-    },
-    "3.Sprites\\Box\\ReadyLoop": {
-      "time": 1787381877036.936,
-      "uuid": "40471e17-3b69-4428-b021-40e39859ec95"
-    },
     "7.Scripts\\MyScript\\box": {
       "time": 1789116662132.2856,
       "uuid": "fca59126-8703-4d6d-a4fc-0b49463ffdf6"
@@ -82,7 +70,7 @@
       "uuid": "59acbb9a-95c1-4780-9edc-f7a5cce7a121"
     },
     "7.Scripts\\MyScript\\item": {
-      "time": 1787381816573.8281,
+      "time": 1789119073114.754,
       "uuid": "bfadb7c9-2f8a-4ecc-830b-35afa8393bc8"
     },
     "7.Scripts\\MyScript\\managers": {
@@ -278,7 +266,7 @@
       "uuid": "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
     },
     "7.Scripts\\MyScript\\item\\ItemController.ts": {
-      "time": 1789117209593.5674,
+      "time": 1789119138277.838,
       "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
     },
     "7.Scripts\\MyScript\\item\\ItemGraphic.ts": {
@@ -310,7 +298,7 @@
       "uuid": "01f9a797-a3c5-4494-833e-348ebe65b0ee"
     },
     "7.Scripts\\MyScript\\managers\\UIManager.ts": {
-      "time": 1789117425692.5828,
+      "time": 1789119335047.8677,
       "uuid": "545bdd38-875f-416b-abc9-b06befd3fa89"
     },
     "7.Scripts\\MyScript\\managers\\WorldScrollManager.ts": {
@@ -346,7 +334,7 @@
       "uuid": "8ae2cf63-dfd7-4f32-bac7-8bcfde17210d"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Ply_SoundManager.ts": {
-      "time": 1787382547570.7703,
+      "time": 1789119204846.037,
       "uuid": "784b8157-3757-4d0b-a788-266a2078d644"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Ply_Types.ts": {
@@ -395,9 +383,6 @@
     "1.Animations\\handHint.meta": {
       "time": 1789031294915.6538
     },
-    "3.Sprites\\Box.meta": {
-      "time": 1789031294916.653
-    },
     "3.Sprites\\Chung.meta": {
       "time": 1789031294917.653
     },
@@ -433,12 +418,6 @@
     },
     "8.Models\\Textures.meta": {
       "time": 1789031294934.6382
-    },
-    "3.Sprites\\Box\\OpenClick.meta": {
-      "time": 1789031294936.6501
-    },
-    "3.Sprites\\Box\\ReadyLoop.meta": {
-      "time": 1789031294936.6501
     },
     "7.Scripts\\MyScript\\box.meta": {
       "time": 1789031294937.651
@@ -693,11 +672,11 @@
       "uuid": "54e1328d-b163-4b60-8f36-be68be73c75c"
     },
     "3.Sprites": {
-      "time": 1789114039154.1387,
+      "time": 1789121052553.2957,
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
-      "time": 1789116576053.4353,
+      "time": 1789118978421.2498,
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
@@ -865,7 +844,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1789118091075.798,
+      "time": 1789121425143.5437,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -907,54 +886,6 @@
     "7.Scripts\\MatchAsset\\GameObject_sprites_by_order.json": {
       "time": 1785747735810.274,
       "uuid": "da3e303c-972b-49ff-988b-c0303b29d264"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0000.png": {
-      "time": 1787256964000,
-      "uuid": "34e999f6-826e-47d0-bf88-782f0302d32f"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0001.png": {
-      "time": 1787256962000,
-      "uuid": "da8747c4-b5a4-4103-9b48-58848a8435c3"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0002.png": {
-      "time": 1787256964000,
-      "uuid": "0c8e6fbf-ee1e-41b5-b4f5-917ab417f197"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0003.png": {
-      "time": 1787256964000,
-      "uuid": "a85e6319-255a-4bbe-bd85-a2d1576ef5a5"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0004.png": {
-      "time": 1787256964000,
-      "uuid": "1045c491-50d1-4fb4-a875-1040f384e291"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0005.png": {
-      "time": 1787256964000,
-      "uuid": "91385e06-a670-49a7-80f3-934adab339d4"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0006.png": {
-      "time": 1787256964000,
-      "uuid": "2d209a1c-fb1d-4d0f-a354-0179024341b2"
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0030.png": {
-      "time": 1787256860000,
-      "uuid": "84416ebd-a39d-4f0a-a9f1-f8e4bf61596f"
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0031.png": {
-      "time": 1787256860000,
-      "uuid": "65b5dc0a-c6fe-46f8-a27f-0a7aef2bbc8a"
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0032.png": {
-      "time": 1787256860000,
-      "uuid": "27a5bba4-3fe8-4180-baf6-b740433d61ef"
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0033.png": {
-      "time": 1787256860000,
-      "uuid": "f7ab85d7-b23b-4d38-b51b-519ff8e1d85b"
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0034.png": {
-      "time": 1787256860000,
-      "uuid": "e107ca88-2df7-40e3-97d9-73328f818594"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Unity_vs_Cocos_CheatSheet.md": {
       "time": 1785902857187.3293,
@@ -1208,22 +1139,22 @@
       "time": 1789031320978.6953
     },
     "3.Sprites\\Chung\\Install.png.meta": {
-      "time": 1789031321037.681
+      "time": 1789120361790.6545
     },
     "3.Sprites\\Chung\\green_button.png.meta": {
-      "time": 1789031320998.0515
+      "time": 1789120345730.4412
     },
     "3.Sprites\\Chung\\Hand.png.meta": {
-      "time": 1789031321009.08
+      "time": 1789120361782.6064
     },
     "3.Sprites\\Chung\\TapToDecor.png.meta": {
-      "time": 1789031321098.2742
+      "time": 1789120361806.3164
     },
     "3.Sprites\\Chung\\Logo.png.meta": {
-      "time": 1789031321063.3193
+      "time": 1789120361799.8804
     },
     "3.Sprites\\Chung\\WhiteBar.png.meta": {
-      "time": 1789031321167.5564
+      "time": 1789120361821.9587
     },
     "7.Scripts\\MatchAsset\\GameObject_sprites_by_order.json.meta": {
       "time": 1789031322523.4253
@@ -1231,47 +1162,11 @@
     "4.Sounds\\BGM\\Fantasy Fairy Tale Music Magical ✦ Ethereal Fantasy Music ✦ 528 hz ✦ No copyright - moonangel (mp3cut.net) (1).mp3.meta": {
       "time": 1787369057658.0615
     },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0000.png.meta": {
-      "time": 1789031322537.3862
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0001.png.meta": {
-      "time": 1789031322540.8948
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0002.png.meta": {
-      "time": 1789031322552.0354
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0003.png.meta": {
-      "time": 1789031322549.6057
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0004.png.meta": {
-      "time": 1789031322600.3848
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0005.png.meta": {
-      "time": 1789031322598.8552
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0006.png.meta": {
-      "time": 1789031322612.6062
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0030.png.meta": {
-      "time": 1789031322619.1243
-    },
     "7.Scripts\\MyScript\\ScriptTemplate\\Unity_vs_Cocos_CheatSheet.md.meta": {
       "time": 1789031322650.2417
     },
     "8.Models\\Textures\\Cloud\\Cloud.mtl.meta": {
       "time": 1789031322648.2283
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0031.png.meta": {
-      "time": 1789031322628.6558
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0032.png.meta": {
-      "time": 1789031322651.2507
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0033.png.meta": {
-      "time": 1789031322635.189
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0034.png.meta": {
-      "time": 1789031322668.456
     },
     "8.Models\\Textures\\Cloud\\cloud1.png.meta": {
       "time": 1789031322716.325
@@ -1381,644 +1276,644 @@
       "uuid": "4404a559-3f0a-4791-a785-4e126db07670"
     },
     "3.Sprites\\sprites_PLY27\\2.png.meta": {
-      "time": 1789113874214.7434
+      "time": 1789120361828.9958
     },
     "3.Sprites\\sprites_PLY27\\2.png": {
       "time": 1789113873697.8804,
       "uuid": "0311ed6b-538f-46bc-8526-d82fda25f4ec"
     },
     "3.Sprites\\sprites_PLY27\\Bear4Place.png.meta": {
-      "time": 1789113874340.5051
+      "time": 1789120361844.8557
     },
     "3.Sprites\\sprites_PLY27\\Bear4Place.png": {
       "time": 1789113873703.3489,
       "uuid": "8ed915e1-d254-46bd-8954-7474b0d721f5"
     },
     "3.Sprites\\sprites_PLY27\\Bear5Place.png.meta": {
-      "time": 1789113874430.5562
+      "time": 1789120361852.3887
     },
     "3.Sprites\\sprites_PLY27\\Bear5Place.png": {
       "time": 1789113873704.3552,
       "uuid": "81a604ff-270e-4e90-9d03-980f26ed6bb5"
     },
     "3.Sprites\\sprites_PLY27\\Bear6Place.png.meta": {
-      "time": 1789113874330.508
+      "time": 1789120361862.0293
     },
     "3.Sprites\\sprites_PLY27\\Bear6Place.png": {
       "time": 1789113873705.49,
       "uuid": "222d54aa-fca9-4f32-870d-cef3fbc304a7"
     },
     "3.Sprites\\sprites_PLY27\\books.png.meta": {
-      "time": 1789113874465.0752
+      "time": 1789120361896.3242
     },
     "3.Sprites\\sprites_PLY27\\books.png": {
       "time": 1789113873712.3757,
       "uuid": "70af7fd7-390e-49ef-86a6-723e98e28856"
     },
     "3.Sprites\\sprites_PLY27\\book.png.meta": {
-      "time": 1789113874446.6492
+      "time": 1789120361887.7815
     },
     "3.Sprites\\sprites_PLY27\\book.png": {
       "time": 1789113873708.8057,
       "uuid": "4f1a0104-a984-448b-97a3-7a4faa87b1dd"
     },
     "3.Sprites\\sprites_PLY27\\BG.png.meta": {
-      "time": 1789113874450.0493
+      "time": 1789120361879.2695
     },
     "3.Sprites\\sprites_PLY27\\BG.png": {
       "time": 1789113873707.7986,
       "uuid": "ad2dfe62-fb97-4680-ab98-981f857b5699"
     },
     "3.Sprites\\sprites_PLY27\\BaseRoom.png.meta": {
-      "time": 1789113874480.268
+      "time": 1789120361836.7522
     },
     "3.Sprites\\sprites_PLY27\\BaseRoom.png": {
       "time": 1789113873701.282,
       "uuid": "bb27a39a-8fb4-4d80-80e6-3f5ed2a76f92"
     },
     "3.Sprites\\sprites_PLY27\\bed.png.meta": {
-      "time": 1789113874356.5054
+      "time": 1789120361869.705
     },
     "3.Sprites\\sprites_PLY27\\bed.png": {
       "time": 1789113873706.4956,
       "uuid": "4dc80ef3-ebea-4660-b20d-57213200a5c8"
     },
     "3.Sprites\\sprites_PLY27\\cake1.png.meta": {
-      "time": 1789113874468.0747
+      "time": 1789120361906.3928
     },
     "3.Sprites\\sprites_PLY27\\cake1.png": {
       "time": 1789113873713.3806,
       "uuid": "fd4a9ba3-7071-489c-bfc5-d9ca04c59ead"
     },
     "3.Sprites\\sprites_PLY27\\candles1.png.meta": {
-      "time": 1789113874489.268
+      "time": 1789120361914.2078
     },
     "3.Sprites\\sprites_PLY27\\candles1.png": {
       "time": 1789113873715.4207,
       "uuid": "8065c53c-17e7-4201-9d9f-ed380f65cc01"
     },
     "3.Sprites\\sprites_PLY27\\candles2.png.meta": {
-      "time": 1789113874503.3728
+      "time": 1789120361920.7305
     },
     "3.Sprites\\sprites_PLY27\\candles2.png": {
       "time": 1789113873716.4612,
       "uuid": "23212d6b-cdcb-41fe-bd47-9f315edcf909"
     },
     "3.Sprites\\sprites_PLY27\\chair1.png.meta": {
-      "time": 1789113874527.1929
+      "time": 1789120361935.7817
     },
     "3.Sprites\\sprites_PLY27\\chair1.png": {
       "time": 1789113873718.5305,
       "uuid": "3ea13b6b-acee-4441-ac28-da1c5877a5f3"
     },
     "3.Sprites\\sprites_PLY27\\chair_2.png.meta": {
-      "time": 1789113874536.124
+      "time": 1789120361927.7666
     },
     "3.Sprites\\sprites_PLY27\\chair_2.png": {
       "time": 1789113873717.4673,
       "uuid": "dcf70a66-5253-46ac-b1f0-09685aff25ec"
     },
     "3.Sprites\\sprites_PLY27\\chocolate_box.png.meta": {
-      "time": 1789114009203.011
+      "time": 1789120361966.1382
     },
     "3.Sprites\\sprites_PLY27\\chocolate_box.png": {
       "time": 1784174483273.5547,
       "uuid": "bad9b28d-18c3-4fea-96ed-08c11eab343f"
     },
     "3.Sprites\\sprites_PLY27\\chan_full.png.meta": {
-      "time": 1789113874533.0396
+      "time": 1789120361943.8398
     },
     "3.Sprites\\sprites_PLY27\\chan_full.png": {
       "time": 1789113873720.6106,
       "uuid": "d7645c7d-29e6-432f-997b-6b04a40124f0"
     },
     "3.Sprites\\sprites_PLY27\\chan_shadow.png.meta": {
-      "time": 1789113874542.2324
+      "time": 1789120361950.2332
     },
     "3.Sprites\\sprites_PLY27\\chan_shadow.png": {
       "time": 1789113873722.636,
       "uuid": "175f2431-bc42-413e-ab80-02d8fe45c634"
     },
     "3.Sprites\\sprites_PLY27\\chan-1.png.meta": {
-      "time": 1789113874539.2068
+      "time": 1789120361957.7793
     },
     "3.Sprites\\sprites_PLY27\\chan-1.png": {
       "time": 1789113873725.6646,
       "uuid": "63c1d583-0f3e-4215-870e-fdbb06398b79"
     },
     "3.Sprites\\sprites_PLY27\\dem-full.png.meta": {
-      "time": 1789113878517.8618
+      "time": 1789120361994.0261
     },
     "3.Sprites\\sprites_PLY27\\dem-full.png": {
       "time": 1789113873732.8596,
       "uuid": "47bd3384-fa05-4c5d-97b5-bedec4a96069"
     },
     "3.Sprites\\sprites_PLY27\\dem_giuong_copy.png.meta": {
-      "time": 1789113878543.414
+      "time": 1789120361982.385
     },
     "3.Sprites\\sprites_PLY27\\dem_giuong_copy.png": {
       "time": 1789113873730.7964,
       "uuid": "5e736ea4-aed5-48eb-bf3c-054923de3742"
     },
     "3.Sprites\\sprites_PLY27\\dem_giuong_copy_2.png.meta": {
-      "time": 1789113878544.4146
+      "time": 1789120361974.7996
     },
     "3.Sprites\\sprites_PLY27\\dem_giuong_copy_2.png": {
       "time": 1789113873731.8037,
       "uuid": "d504eff8-f5ac-4158-bf64-8ccaa34d2033"
     },
     "3.Sprites\\sprites_PLY27\\E.png.meta": {
-      "time": 1789113878570.464
+      "time": 1789120362010.057
     },
     "3.Sprites\\sprites_PLY27\\E.png": {
       "time": 1789113873733.8677,
       "uuid": "419333d9-4f45-4dbf-a9c4-3a1d290c7275"
     },
     "3.Sprites\\sprites_PLY27\\E_sd.png.meta": {
-      "time": 1789113878545.9226
+      "time": 1789120362002.5461
     },
     "3.Sprites\\sprites_PLY27\\E_sd.png": {
       "time": 1789113873734.9846,
       "uuid": "fa7cd96e-e667-454e-afec-ebc533bf99b3"
     },
     "3.Sprites\\sprites_PLY27\\ghe_trai_tim.png.meta": {
-      "time": 1789113878553.9304
+      "time": 1789120362018.9941
     },
     "3.Sprites\\sprites_PLY27\\ghe_trai_tim.png": {
       "time": 1789113873735.9902,
       "uuid": "d21d7809-61df-46c9-b376-ad3261f716a3"
     },
     "3.Sprites\\sprites_PLY27\\gift.png.meta": {
-      "time": 1789113878578.986
+      "time": 1789120362025.582
     },
     "3.Sprites\\sprites_PLY27\\gift.png": {
       "time": 1789113873735.9902,
       "uuid": "ab825b8c-8f99-4204-a893-f5d71c161a36"
     },
     "3.Sprites\\sprites_PLY27\\goi1.png.meta": {
-      "time": 1789113878582.715
+      "time": 1789120362078.9688
     },
     "3.Sprites\\sprites_PLY27\\goi1.png": {
       "time": 1789113873743.5354,
       "uuid": "f1430a48-0efc-4706-933b-87958db48c39"
     },
     "3.Sprites\\sprites_PLY27\\goi2_full.png.meta": {
-      "time": 1789113878591.9253
+      "time": 1789120362086.0608
     },
     "3.Sprites\\sprites_PLY27\\goi2_full.png": {
       "time": 1789113873744.5745,
       "uuid": "94b0cb94-5e59-4191-8fa2-438bcf53d080"
     },
     "3.Sprites\\sprites_PLY27\\GlassFull.png.meta": {
-      "time": 1789113878599.4377
+      "time": 1789120362035.1653
     },
     "3.Sprites\\sprites_PLY27\\GlassFull.png": {
       "time": 1789113873738.0276,
       "uuid": "17b31e88-3c54-4c27-82a8-77d0028dbeb7"
     },
     "3.Sprites\\sprites_PLY27\\goi3.png.meta": {
-      "time": 1789113878600.4395
+      "time": 1789120362094.3613
     },
     "3.Sprites\\sprites_PLY27\\goi3.png": {
       "time": 1789113873745.581,
       "uuid": "46fc6e39-2e6b-45f0-8165-9c5d45a8d991"
     },
     "3.Sprites\\sprites_PLY27\\goi_flower_shadow.png.meta": {
-      "time": 1789113878613.9534
+      "time": 1789120362046.6194
     },
     "3.Sprites\\sprites_PLY27\\goi_flower_shadow.png": {
       "time": 1789113873740.1914,
       "uuid": "da4cbe57-afae-4083-9df6-6913a047a62d"
     },
     "3.Sprites\\sprites_PLY27\\goi_flower.png.meta": {
-      "time": 1789113878610.9536
+      "time": 1789120362054.1497
     },
     "3.Sprites\\sprites_PLY27\\goi_flower.png": {
       "time": 1789113873738.0276,
       "uuid": "6fa4637f-0744-4803-800c-605380520705"
     },
     "3.Sprites\\sprites_PLY27\\goi_window.png.meta": {
-      "time": 1789113878679.8901
+      "time": 1789120362069.937
     },
     "3.Sprites\\sprites_PLY27\\goi_window.png": {
       "time": 1789113873741.4382,
       "uuid": "9fcc9a81-acb4-46d2-b7de-454b47371b91"
     },
     "3.Sprites\\sprites_PLY27\\goi_window_shadow.png.meta": {
-      "time": 1789113878691.058
+      "time": 1789120362062.6824
     },
     "3.Sprites\\sprites_PLY27\\goi_window_shadow.png": {
       "time": 1789113873742.445,
       "uuid": "ef1dd6df-3fd9-494a-9c9f-8bf509eeeed0"
     },
     "3.Sprites\\sprites_PLY27\\Group_11.png.meta": {
-      "time": 1789113878690.0586
+      "time": 1789120362145.5122
     },
     "3.Sprites\\sprites_PLY27\\Group_11.png": {
       "time": 1789113873752.0269,
       "uuid": "53e35ec8-99fa-42a5-8c13-510162ce8d86"
     },
     "3.Sprites\\sprites_PLY27\\Group_13.png.meta": {
-      "time": 1789113878696.296
+      "time": 1789120362185.3972
     },
     "3.Sprites\\sprites_PLY27\\Group_13.png": {
       "time": 1789113873753.0408,
       "uuid": "e502b04b-550b-4cba-87ca-621681005b1e"
     },
     "3.Sprites\\sprites_PLY27\\Group_16.png.meta": {
-      "time": 1789113878684.8865
+      "time": 1789120362224.418
     },
     "3.Sprites\\sprites_PLY27\\Group_16.png": {
       "time": 1789113873754.0884,
       "uuid": "90817c9c-3708-48e5-93ab-debc4fceb61a"
     },
     "3.Sprites\\sprites_PLY27\\Group_17_copy_1.png.meta": {
-      "time": 1789113878757.0364
+      "time": 1789120362302.1772
     },
     "3.Sprites\\sprites_PLY27\\Group_17_copy_1.png": {
       "time": 1789113873755.5984,
       "uuid": "108f6235-5e98-485a-8b2e-52c90ad6454e"
     },
     "3.Sprites\\sprites_PLY27\\Group_5_copy_2.png.meta": {
-      "time": 1789113878761.0503
+      "time": 1789120362315.8665
     },
     "3.Sprites\\sprites_PLY27\\Group_5_copy_2.png": {
       "time": 1789113873747.905,
       "uuid": "15199150-f3b3-49ed-a217-d54854d423a2"
     },
     "3.Sprites\\sprites_PLY27\\Group_5_copy.png.meta": {
-      "time": 1789113878762.5596
+      "time": 1789120362324.942
     },
     "3.Sprites\\sprites_PLY27\\Group_5_copy.png": {
       "time": 1789113873746.8984,
       "uuid": "783ad576-16ca-4167-991c-ed6b721502c9"
     },
     "3.Sprites\\sprites_PLY27\\Group_9.png.meta": {
-      "time": 1789113878771.1177
+      "time": 1789120362346.2039
     },
     "3.Sprites\\sprites_PLY27\\Group_9.png": {
       "time": 1789113873749.001,
       "uuid": "48145284-ec88-477d-81b0-90ebd31ee0bb"
     },
     "3.Sprites\\sprites_PLY27\\Group_9_copy.png.meta": {
-      "time": 1789113878807.1655
+      "time": 1789120362337.6272
     },
     "3.Sprites\\sprites_PLY27\\Group_9_copy.png": {
       "time": 1789113873751.0188,
       "uuid": "b0b4eba7-c3da-44dd-b316-7f588446381b"
     },
     "3.Sprites\\sprites_PLY27\\Hue_Saturation_2.png.meta": {
-      "time": 1789113878804.026
+      "time": 1789120362378.682
     },
     "3.Sprites\\sprites_PLY27\\Hue_Saturation_2.png": {
       "time": 1789113873757.6108,
       "uuid": "5e703916-a26c-4a4f-ab96-2332cc8a4f15"
     },
     "3.Sprites\\sprites_PLY27\\L.png.meta": {
-      "time": 1789113878810.184
+      "time": 1789120362401.16
     },
     "3.Sprites\\sprites_PLY27\\L.png": {
       "time": 1789113873758.115,
       "uuid": "aecae65b-6801-4ad7-a71d-f3b9ed1b2f1c"
     },
     "3.Sprites\\sprites_PLY27\\heart_tile.png.meta": {
-      "time": 1789113878818.6978
+      "time": 1789120362356.3127
     },
     "3.Sprites\\sprites_PLY27\\heart_tile.png": {
       "time": 1789113873756.1023,
       "uuid": "78672fd4-754b-431c-9ba6-cd64553928e9"
     },
     "3.Sprites\\sprites_PLY27\\lamp.png.meta": {
-      "time": 1789113878857.7478
+      "time": 1789120362410.7246
     },
     "3.Sprites\\sprites_PLY27\\lamp.png": {
       "time": 1789113873761.136,
       "uuid": "9707a2ab-7efa-41ea-9bd4-954c835b1195"
     },
     "3.Sprites\\sprites_PLY27\\Layer_559.png.meta": {
-      "time": 1789113878844.623
+      "time": 1789120362452.0068
     },
     "3.Sprites\\sprites_PLY27\\Layer_559.png": {
       "time": 1789113873763.2502,
       "uuid": "09044d39-ab7c-41df-ac46-9b125a21747d"
     },
     "3.Sprites\\sprites_PLY27\\Layer_555.png.meta": {
-      "time": 1789113878831.2112
+      "time": 1789120362437.1736
     },
     "3.Sprites\\sprites_PLY27\\Layer_555.png": {
       "time": 1789113873762.244,
       "uuid": "9ae8e61b-2bb8-435e-977c-61b8186aa7a9"
     },
     "3.Sprites\\sprites_PLY27\\Layer_566.png.meta": {
-      "time": 1789113878841.607
+      "time": 1789120362472.7798
     },
     "3.Sprites\\sprites_PLY27\\Layer_566.png": {
       "time": 1789113873764.2688,
       "uuid": "135908e5-9cd2-4684-93b7-c0e981751453"
     },
     "3.Sprites\\sprites_PLY27\\Layer_569_-_Smart_Object_Group_1.png.meta": {
-      "time": 1789113878854.6602
+      "time": 1789120362485.4045
     },
     "3.Sprites\\sprites_PLY27\\Layer_569_-_Smart_Object_Group_1.png": {
       "time": 1789113873765.2737,
       "uuid": "c033a67a-b219-43d5-a251-416482f9b8c3"
     },
     "3.Sprites\\sprites_PLY27\\Layer_577.png.meta": {
-      "time": 1789113878884.4402
+      "time": 1789120362506.6108
     },
     "3.Sprites\\sprites_PLY27\\Layer_577.png": {
       "time": 1789113873781.4692,
       "uuid": "1933d16a-867a-4d08-999a-0a9c56f028a0"
     },
     "3.Sprites\\sprites_PLY27\\Layer_576.png.meta": {
-      "time": 1789113878869.7747
+      "time": 1789120362496.6006
     },
     "3.Sprites\\sprites_PLY27\\Layer_576.png": {
       "time": 1789113873779.4492,
       "uuid": "e1ddc9b0-c973-415b-b321-401709eab65f"
     },
     "3.Sprites\\sprites_PLY27\\Layer_580_-_Smart_Object_Group.png.meta": {
-      "time": 1789113878890.9626
+      "time": 1789120362517.6873
     },
     "3.Sprites\\sprites_PLY27\\Layer_580_-_Smart_Object_Group.png": {
       "time": 1789113873851.3743,
       "uuid": "13b9a22a-7c7a-43e5-b106-28b4503e82cd"
     },
     "3.Sprites\\sprites_PLY27\\Layer_580.png.meta": {
-      "time": 1789113878903.474
+      "time": 1789120362528.2812
     },
     "3.Sprites\\sprites_PLY27\\Layer_580.png": {
       "time": 1789113873820.213,
       "uuid": "bc6f84ee-e31b-4995-a80d-217dbb32ee9d"
     },
     "3.Sprites\\sprites_PLY27\\Layer_583.png.meta": {
-      "time": 1789113878901.4714
+      "time": 1789120362533.8389
     },
     "3.Sprites\\sprites_PLY27\\Layer_583.png": {
       "time": 1789113873896.813,
       "uuid": "ee8991fc-4862-4ea0-abb1-44beab205f66"
     },
     "3.Sprites\\sprites_PLY27\\light_front.png.meta": {
-      "time": 1789113878931.546
+      "time": 1789120362550.1875
     },
     "3.Sprites\\sprites_PLY27\\light_front.png": {
       "time": 1789113873904.819,
       "uuid": "6082c05e-3e4d-4d43-9eb4-f4d9ca28b9db"
     },
     "3.Sprites\\sprites_PLY27\\ly1_copy.png.meta": {
-      "time": 1789113878933.548
+      "time": 1789120362569.3494
     },
     "3.Sprites\\sprites_PLY27\\ly1_copy.png": {
       "time": 1789113873907.1208,
       "uuid": "3bf39f04-03db-4fbe-8282-a9693e9afde7"
     },
     "3.Sprites\\sprites_PLY27\\L_sd.png.meta": {
-      "time": 1789113878963.7244
+      "time": 1789120362389.3396
     },
     "3.Sprites\\sprites_PLY27\\L_sd.png": {
       "time": 1789113873759.1194,
       "uuid": "c6717c78-9257-44b4-8128-1726911ba4d0"
     },
     "3.Sprites\\sprites_PLY27\\light_back.png.meta": {
-      "time": 1789113878963.7244
+      "time": 1789120362542.8982
     },
     "3.Sprites\\sprites_PLY27\\light_back.png": {
       "time": 1789113873901.829,
       "uuid": "f912569a-0b24-4582-927e-c71873eb70c4"
     },
     "3.Sprites\\sprites_PLY27\\light_lamp1.png.meta": {
-      "time": 1789113878969.2405
+      "time": 1789120362559.7878
     },
     "3.Sprites\\sprites_PLY27\\light_lamp1.png": {
       "time": 1789113873905.8208,
       "uuid": "64830ec0-9f55-46a6-b539-2bea00dfc54d"
     },
     "3.Sprites\\sprites_PLY27\\may_phat_nhac_1.png.meta": {
-      "time": 1789113878959.2034
+      "time": 1789120362577.417
     },
     "3.Sprites\\sprites_PLY27\\may_phat_nhac_1.png": {
       "time": 1789113873913.125,
       "uuid": "805732ba-de43-4553-82b2-639b0392b9ba"
     },
     "3.Sprites\\sprites_PLY27\\mini_light.png.meta": {
-      "time": 1789113878992.5735
+      "time": 1789120362583.9536
     },
     "3.Sprites\\sprites_PLY27\\mini_light.png": {
       "time": 1789113873916.1248,
       "uuid": "3c7b24a8-812b-4822-a609-1ce7a358b121"
     },
     "3.Sprites\\sprites_PLY27\\minilight_on.png.meta": {
-      "time": 1789113878961.2046
+      "time": 1789120362606.6104
     },
     "3.Sprites\\sprites_PLY27\\minilight_on.png": {
       "time": 1789113874275.9883,
       "uuid": "46a8f512-3c62-4e9c-b6f4-c6d41ddd74cb"
     },
     "3.Sprites\\sprites_PLY27\\mini_table.png.meta": {
-      "time": 1789113878990.568
+      "time": 1789120362596.5383
     },
     "3.Sprites\\sprites_PLY27\\mini_table.png": {
       "time": 1789113874215.753,
       "uuid": "4a3ba973-b312-4c12-a7db-b7869386981b"
     },
     "3.Sprites\\sprites_PLY27\\O.png.meta": {
-      "time": 1789113878993.569
+      "time": 1789120362627.688
     },
     "3.Sprites\\sprites_PLY27\\O.png": {
       "time": 1789113874277.9902,
       "uuid": "3fe2f5e5-10f0-4abc-9ed5-5fa2dcc9c081"
     },
     "3.Sprites\\sprites_PLY27\\O_sd.png.meta": {
-      "time": 1789113878996.0764
+      "time": 1789120362614.2773
     },
     "3.Sprites\\sprites_PLY27\\O_sd.png": {
       "time": 1789113874279.9934,
       "uuid": "a1ffd308-3ce9-47ea-95f3-b2ce0054526f"
     },
     "3.Sprites\\sprites_PLY27\\pic3Shadow.png.meta": {
-      "time": 1789113879038.6877
+      "time": 1789120362643.6135
     },
     "3.Sprites\\sprites_PLY27\\pic3Shadow.png": {
       "time": 1789113874281.9917,
       "uuid": "f6daa9ea-a84e-45fb-b612-51431bfadf5c"
     },
     "3.Sprites\\sprites_PLY27\\pic2Shadow.png.meta": {
-      "time": 1789113879000.088
+      "time": 1789120362634.879
     },
     "3.Sprites\\sprites_PLY27\\pic2Shadow.png": {
       "time": 1789113874280.994,
       "uuid": "ca9a7ec7-83b0-4ddb-9471-f2addc6d129c"
     },
     "3.Sprites\\sprites_PLY27\\Pic4Shadow.png.meta": {
-      "time": 1789113879022.1265
+      "time": 1789120362652.2344
     },
     "3.Sprites\\sprites_PLY27\\Pic4Shadow.png": {
       "time": 1789113874282.9902,
       "uuid": "51bb0c7e-167b-40ce-bac8-555a768734f6"
     },
     "3.Sprites\\sprites_PLY27\\rabit.png.meta": {
-      "time": 1789113879360.1863
+      "time": 1789120362660.864
     },
     "3.Sprites\\sprites_PLY27\\rabit.png": {
       "time": 1789113874284.9905,
       "uuid": "ff88da69-70a9-4653-8229-2e7361a55733"
     },
     "3.Sprites\\sprites_PLY27\\rem.png.meta": {
-      "time": 1789113879331.6216
+      "time": 1789120362673.9958
     },
     "3.Sprites\\sprites_PLY27\\rem.png": {
       "time": 1789113874285.9905,
       "uuid": "d831036c-416e-49d4-a2d1-af469d82147a"
     },
     "3.Sprites\\sprites_PLY27\\rug2.png.meta": {
-      "time": 1789113879367.2332
+      "time": 1789120362702.164
     },
     "3.Sprites\\sprites_PLY27\\rug2.png": {
       "time": 1789113874328.5076,
       "uuid": "297df66e-66ac-4cd4-b6fa-7f08d8a295a8"
     },
     "3.Sprites\\sprites_PLY27\\rug__copy.png.meta": {
-      "time": 1789113879110.0208
+      "time": 1789120362685.552
     },
     "3.Sprites\\sprites_PLY27\\rug__copy.png": {
       "time": 1789113874325.4993,
       "uuid": "7133b0e4-6800-4b68-a47b-353244bb9e74"
     },
     "3.Sprites\\sprites_PLY27\\shadow_candles1.png.meta": {
-      "time": 1789113879429.06
+      "time": 1789120362732.4949
     },
     "3.Sprites\\sprites_PLY27\\shadow_candles1.png": {
       "time": 1789113874335.5066,
       "uuid": "a256e4a1-78d3-4f2c-b725-fb6f9c059542"
     },
     "3.Sprites\\sprites_PLY27\\rug.png.meta": {
-      "time": 1789113879109.022
+      "time": 1789120362694.107
     },
     "3.Sprites\\sprites_PLY27\\rug.png": {
       "time": 1789113874287.991,
       "uuid": "4150757e-4f4d-473c-b0dc-ac82f987dd25"
     },
     "3.Sprites\\sprites_PLY27\\san_nha2.png.meta": {
-      "time": 1789113879440.6184
+      "time": 1789120362721.2063
     },
     "3.Sprites\\sprites_PLY27\\san_nha2.png": {
       "time": 1789113874334.5066,
       "uuid": "fa40bfef-2081-4f9a-8a86-5cf2d378faf4"
     },
     "3.Sprites\\sprites_PLY27\\san_nha1.png.meta": {
-      "time": 1789113879433.0781
+      "time": 1789120362711.6372
     },
     "3.Sprites\\sprites_PLY27\\san_nha1.png": {
       "time": 1789113874332.506,
       "uuid": "4d605646-06cd-418a-80e6-4c08b8311b53"
     },
     "3.Sprites\\sprites_PLY27\\shadow_chair1.png.meta": {
-      "time": 1789113879438.6206
+      "time": 1789120362745.6814
     },
     "3.Sprites\\sprites_PLY27\\shadow_chair1.png": {
       "time": 1789113874336.5066,
       "uuid": "1ba89609-ba1d-4291-858e-29440835bb9c"
     },
     "3.Sprites\\sprites_PLY27\\shadow_Ly1.png.meta": {
-      "time": 1789113879457.33
+      "time": 1789120362753.8772
     },
     "3.Sprites\\sprites_PLY27\\shadow_Ly1.png": {
       "time": 1789113874338.507,
       "uuid": "dc8a88ce-382f-4701-a4e6-3706106202c5"
     },
     "3.Sprites\\sprites_PLY27\\shadow_rug2.png.meta": {
-      "time": 1789113879492.694
+      "time": 1789120362762.9404
     },
     "3.Sprites\\sprites_PLY27\\shadow_rug2.png": {
       "time": 1789113874388.515,
       "uuid": "0bcfe1a7-891c-4583-8efb-f1961e3b0a9a"
     },
     "3.Sprites\\sprites_PLY27\\shadow_table.png.meta": {
-      "time": 1789113879484.1777
+      "time": 1789120362770.0762
     },
     "3.Sprites\\sprites_PLY27\\shadow_table.png": {
       "time": 1789113874390.5154,
       "uuid": "768f254a-3426-499e-a891-18e22a5b1f01"
     },
     "3.Sprites\\sprites_PLY27\\slipper1.png.meta": {
-      "time": 1789113879537.2354
+      "time": 1789120362803.7185
     },
     "3.Sprites\\sprites_PLY27\\slipper1.png": {
       "time": 1789113874395.5154,
       "uuid": "d5bd9d97-8886-4d8d-9cf4-1e3c54aeff7d"
     },
     "3.Sprites\\sprites_PLY27\\slipper1_copy.png.meta": {
-      "time": 1789113879481.175
+      "time": 1789120362778.08
     },
     "3.Sprites\\sprites_PLY27\\slipper1_copy.png": {
       "time": 1789113874399.5164,
       "uuid": "6a0cc616-ea05-4c58-aaa8-e5e4f249f39c"
     },
     "3.Sprites\\sprites_PLY27\\Square.png.meta": {
-      "time": 1789113879487.6948
+      "time": 1789120362813.296
     },
     "3.Sprites\\sprites_PLY27\\Square.png": {
       "time": 1789113874401.5156,
       "uuid": "f3d640c6-6905-42d0-8f0d-610c0139e8eb"
     },
     "3.Sprites\\sprites_PLY27\\table.png.meta": {
-      "time": 1789113879512.1448
+      "time": 1789120362823.1855
     },
     "3.Sprites\\sprites_PLY27\\table.png": {
       "time": 1789113874403.0256,
       "uuid": "d117280a-74ae-4b93-b26f-40a2ed085afd"
     },
     "3.Sprites\\sprites_PLY27\\tu.png.meta": {
-      "time": 1789113879511.1433
+      "time": 1789120362854.287
     },
     "3.Sprites\\sprites_PLY27\\tu.png": {
       "time": 1789113874407.0337,
       "uuid": "9f75935c-e772-49ca-a1d1-146f7009766f"
     },
     "3.Sprites\\sprites_PLY27\\tham_trai_ban.png.meta": {
-      "time": 1789113879532.1284
+      "time": 1789120362832.8352
     },
     "3.Sprites\\sprites_PLY27\\tham_trai_ban.png": {
       "time": 1789113874405.0327,
       "uuid": "1d4ed42a-0236-4aca-b96a-9ad714354089"
     },
     "3.Sprites\\sprites_PLY27\\tu2.png.meta": {
-      "time": 1789113879535.1306
+      "time": 1789120362874.916
     },
     "3.Sprites\\sprites_PLY27\\tu2.png": {
       "time": 1789113874411.042,
       "uuid": "602bf625-fddd-4df3-9a1d-891ab2bd40f4"
     },
     "3.Sprites\\sprites_PLY27\\tu2_shadow.png.meta": {
-      "time": 1789113879541.2393
+      "time": 1789120362866.5657
     },
     "3.Sprites\\sprites_PLY27\\tu2_shadow.png": {
       "time": 1789113874430.5562,
       "uuid": "4f91f0a8-075c-45cb-b9ce-eb509918b151"
     },
     "3.Sprites\\sprites_PLY27\\tu_copy.png.meta": {
-      "time": 1789113879539.2358
+      "time": 1789120362845.0364
     },
     "3.Sprites\\sprites_PLY27\\tu_copy.png": {
       "time": 1789113874409.0366,
       "uuid": "5edf0035-2a38-4133-8e30-02961fd0a25b"
     },
     "3.Sprites\\sprites_PLY27\\V.png.meta": {
-      "time": 1789113879554.7483
+      "time": 1789120362890.8372
     },
     "3.Sprites\\sprites_PLY27\\V.png": {
       "time": 1789113874433.5564,
       "uuid": "275c78eb-fef6-4dad-a1ed-4607c7353b64"
     },
     "3.Sprites\\sprites_PLY27\\vase.png.meta": {
-      "time": 1789113879557.9182
+      "time": 1789120362900.8901
     },
     "3.Sprites\\sprites_PLY27\\vase.png": {
       "time": 1789113874435.554,
       "uuid": "4501e746-bd29-4304-af6a-162068c2df55"
     },
     "3.Sprites\\sprites_PLY27\\V_sd.png.meta": {
-      "time": 1789113879555.7485
+      "time": 1789120362882.4536
     },
     "3.Sprites\\sprites_PLY27\\V_sd.png": {
       "time": 1789113874434.5547,
@@ -2039,7 +1934,7 @@
       "uuid": "23e4bfb6-5466-4b56-b914-9cf4dc99ff84"
     },
     "3.Sprites\\Chung\\TapToDecor2.png.meta": {
-      "time": 1789116306601.6814
+      "time": 1789120361814.9292
     },
     "3.Sprites\\Chung\\TapToDecor2.png": {
       "time": 1789116290143.862,
@@ -2072,6 +1967,27 @@
     "4.Sounds\\BGM\\frad - first date - frad (youtube) (mp3cut.net).mp3": {
       "time": 1789118070481.5754,
       "uuid": "aac52f80-9c91-4a17-aa46-c2c7ccf2c3bd"
+    },
+    "4.Sounds\\Window.MP3.meta": {
+      "time": 1789118747084.6624
+    },
+    "4.Sounds\\Window.MP3": {
+      "time": 1787902577856.238,
+      "uuid": "9f7ce0fb-e18d-41bd-ba3c-640d922a6740"
+    },
+    "4.Sounds\\Decor.mp3.meta": {
+      "time": 1789118900896.4285
+    },
+    "4.Sounds\\Decor.mp3": {
+      "time": 1788430192520.229,
+      "uuid": "0f7e0be9-f064-474d-b4ff-cb0ae1fac21a"
+    },
+    "4.Sounds\\Curtain Open v1.wav.meta": {
+      "time": 1789118978439.218
+    },
+    "4.Sounds\\Curtain Open v1.wav": {
+      "time": 1780470281435.0513,
+      "uuid": "336784f6-7558-4393-905c-66d765c3ab9c"
     }
   },
   "missing": {}
