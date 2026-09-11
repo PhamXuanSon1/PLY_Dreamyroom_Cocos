@@ -15,7 +15,11 @@
           "url": "db://assets/6.Scenes/PlayScene.scene",
           "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
         }
-      ]
+      ],
+      "binGroupConfig": {
+        "threshold": 16,
+        "enable": false
+      }
     },
     "taskOptionsMap": {
       "1784690720210": {

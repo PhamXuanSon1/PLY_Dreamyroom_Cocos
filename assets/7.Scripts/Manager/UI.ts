@@ -1,5 +1,4 @@
 import { _decorator, Animation, Camera, Color, Component, Director, Enum, EventTouch, Label, misc, Node, ParticleSystem2D, PhysicsSystem, size, Size, Sprite, toDegree, Tween, tween, UITransform, v2, v3, Vec2, Vec3, view, Widget } from 'cc';
-import playableHelper from '../Tool/h5-helper';
 import { PointerController } from './PointerController';
 import { Ply_SoundManager, FxType } from '../MyScript/ScriptTemplate/Ply_SoundManager';
 import { Clock } from './Clock';
@@ -45,17 +44,7 @@ export class UI extends Component {
     onLoad() {
         ui = this;
         
-        try {
-            if(window.redirectStore.toString() == "function redirectStore(){window.open(clickTag)}") {
-                this.offButtons.forEach(node => node.active = false);
-            }
-            
-            
-        } catch (error) {
-            
-        }
-    }
-
+    } 
     bindingToStore() {
         PointerController.ins.unBindingEvent();
         ipm.offBinding();
@@ -65,8 +54,6 @@ export class UI extends Component {
     openStore(...args: any) {
         console.log('openStore');  
         Ply_SoundManager.Ins?.stopAll();      
-        playableHelper.gameEnd();
-        playableHelper.redirect();
     }
 
     first: boolean = true;
@@ -339,6 +326,13 @@ export class UI extends Component {
     }
 
     start() {
+        try {
+            if(PlayableSDK.channel == "Google") {
+                this.offButtons.forEach(node => node.active = false);
+            }
+        } catch (error) {
+
+        }
     }
 
     update(dt: number) {
