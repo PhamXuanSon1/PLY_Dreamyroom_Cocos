@@ -109,8 +109,8 @@ export class ItemManager extends Component {
     /** Số lượng item đã được ghép đúng vào vị trí đích. */
     arrivedItemCount = 0;
 
-    @property({ tooltip: 'Số lượng item đầu tiên sẽ hiển thị bóng (shadow) tại vị trí đích khi kéo.' })
-    shadowItemCount = 3;
+    @property({ tooltip: 'Tự động bật "Persistent Shadow" cho N item đầu tiên trong Item List (0 = chỉ dùng các item đã tick Persistent Shadow thủ công).' })
+    shadowItemCount = 0;
 
     private currentHolder: Node | null = null;
 
@@ -151,8 +151,9 @@ export class ItemManager extends Component {
             this.currentItemIndex = this.spawnFromLast ? this.itemList.length - 1 : 0;
         }
 
-        // glue Cocos: bóng ở đích chỉ hiện lúc người chơi ĐANG KÉO item
-        // (ItemController.showTargetShadow), nên tắt hết bóng lúc mở màn.
+        // glue Cocos: N item đầu (shadowItemCount) hiện bóng ở đích ngay từ đầu và giữ
+        // bóng kể cả khi thả hụt; các item còn lại chỉ hiện bóng lúc ĐANG KÉO
+        // (ItemController.showTargetShadow).
         this.initTargetShadows();
 
         // glue Cocos: xếp item vào thanh bar (Unity không có WorldScrollManager)
@@ -166,12 +167,24 @@ export class ItemManager extends Component {
         if (ItemManager.instance === this) ItemManager.instance = null;
     }
 
-    /** glue Cocos: ẩn bóng đích của mọi item chưa được sinh ra từ hộp. */
+    /**
+     * glue Cocos: bật bóng ngay từ đầu cho item có persistentShadow (tick trong Inspector
+     * hoặc tự động cho shadowItemCount item đầu theo thứ tự chơi), ẩn bóng các item còn lại.
+     */
     initTargetShadows(): void {
-        for (const node of this.itemList) {
+        const count = this.itemList.length;
+        for (let i = 0; i < count; i++) {
+            const node = this.itemList[i];
             if (!node || !node.isValid) continue;
             const item = node.getComponent(ItemController);
-            if (item && item.targetPoint && !item.isPlaced) item.targetPoint.active = false;
+            if (!item || !item.targetPoint || item.isPlaced) continue;
+
+            // vị trí trong thứ tự chơi: spawnFromLast -> item cuối là item đầu tiên
+            const playOrder = this.spawnFromLast ? (count - 1 - i) : i;
+            if (playOrder < this.shadowItemCount) item.persistentShadow = true;
+
+            if (item.persistentShadow) item.showTargetShadow();
+            else item.targetPoint.active = false;
         }
     }
 
@@ -473,6 +486,26 @@ export class ItemManager extends Component {
             const item = slot.itemInSlot.getComponent(ItemController);
             if (this.canUseItemHint(item)) return item;
         }
-        return null;
+
+        // glue Cocos: mode spawn tất cả ra vùng (BoxController.spawnAllOnFirstClick) không dùng
+        // holder -> lấy item đang nằm TRÊN CÙNG (render sau cùng) để người chơi kéo được ngay.
+        return this.getTopmostAvailableItem();
+    }
+
+    /**
+     * Item chưa ghép, đang hiện trong scene và có sibling index cao nhất (vẽ đè lên các item khác).
+     * Dùng cho hint ở mode không có holder: chỉ vào item trên cùng để không bị item khác che.
+     */
+    getTopmostAvailableItem(): ItemController | null {
+        let best: ItemController | null = null;
+        let bestIndex = -1;
+        for (const node of this.itemList) {
+            if (!node?.isValid || !node.activeInHierarchy) continue;
+            const item = node.getComponent(ItemController);
+            if (!item || item.isPlaced || !this.canUseItemHint(item)) continue;
+            const idx = node.getSiblingIndex();
+            if (idx > bestIndex) { bestIndex = idx; best = item; }
+        }
+        return best;
     }
 }

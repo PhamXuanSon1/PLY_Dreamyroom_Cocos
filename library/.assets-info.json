@@ -14,11 +14,11 @@
       "uuid": "a12ae7d3-df1d-4ba8-a8e6-957d35166250"
     },
     "3.Sprites\\Chung": {
-      "time": 1787381877036.936,
+      "time": 1789116306573.9954,
       "uuid": "9def9b2b-946d-4e03-9044-3dfbbb6ec505"
     },
     "4.Sounds\\BGM": {
-      "time": 1787369276662.916,
+      "time": 1789118090726.031,
       "uuid": "a48afad9-cadd-4d5b-8e24-4aba907e022d"
     },
     "7.Scripts\\Gameplay": {
@@ -70,7 +70,7 @@
       "uuid": "40471e17-3b69-4428-b021-40e39859ec95"
     },
     "7.Scripts\\MyScript\\box": {
-      "time": 1787813203011.5188,
+      "time": 1789116662132.2856,
       "uuid": "fca59126-8703-4d6d-a4fc-0b49463ffdf6"
     },
     "7.Scripts\\MyScript\\core": {
@@ -254,7 +254,7 @@
       "uuid": "14a54ca0-e12a-490a-948a-754db1575003"
     },
     "7.Scripts\\MyScript\\box\\BoxController.ts": {
-      "time": 1787813203008.5747,
+      "time": 1789117819003.2915,
       "uuid": "7ced8a7d-fd09-44e8-b1af-b41522ee13b2"
     },
     "7.Scripts\\MyScript\\box\\BoxGraphic.ts": {
@@ -278,7 +278,7 @@
       "uuid": "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
     },
     "7.Scripts\\MyScript\\item\\ItemController.ts": {
-      "time": 1787382586629.5884,
+      "time": 1789117209593.5674,
       "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
     },
     "7.Scripts\\MyScript\\item\\ItemGraphic.ts": {
@@ -302,7 +302,7 @@
       "uuid": "a6ea4dda-3a5c-40cf-a6c5-7e2bba4057f1"
     },
     "7.Scripts\\MyScript\\managers\\ItemManager.ts": {
-      "time": 1787370262195.0884,
+      "time": 1789117857708.566,
       "uuid": "7443b598-ce0a-4555-8222-8eb8d76d1a1c"
     },
     "7.Scripts\\MyScript\\managers\\ProgressTrackingManager.ts": {
@@ -310,7 +310,7 @@
       "uuid": "01f9a797-a3c5-4494-833e-348ebe65b0ee"
     },
     "7.Scripts\\MyScript\\managers\\UIManager.ts": {
-      "time": 1787366057789.9666,
+      "time": 1789117425692.5828,
       "uuid": "545bdd38-875f-416b-abc9-b06befd3fa89"
     },
     "7.Scripts\\MyScript\\managers\\WorldScrollManager.ts": {
@@ -685,7 +685,7 @@
       "uuid": "91ce8cc5-cd6c-4470-a59f-ad70a442a383"
     },
     "1.Animations": {
-      "time": 1787381877034.0403,
+      "time": 1789116173369.3918,
       "uuid": "a73f4df5-79ec-41e0-a5d2-5fb1af583d4a"
     },
     "2.Fonts": {
@@ -697,7 +697,7 @@
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
-      "time": 1787381877064.0068,
+      "time": 1789116576053.4353,
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
@@ -865,7 +865,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1789114189289.8792,
+      "time": 1789118091075.798,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -891,10 +891,6 @@
     "3.Sprites\\Chung\\Logo.png": {
       "time": 1782359763211.868,
       "uuid": "089a1f34-0792-44c3-954a-8ab671aefec5"
-    },
-    "3.Sprites\\Chung\\Tap to Decor Fairy Land.png": {
-      "time": 1787305796475.7844,
-      "uuid": "2c464e2f-9a4b-435a-aa78-4931e10fa8e9"
     },
     "3.Sprites\\Chung\\TapToDecor.png": {
       "time": 1785211727765.8147,
@@ -1219,9 +1215,6 @@
     },
     "3.Sprites\\Chung\\Hand.png.meta": {
       "time": 1789031321009.08
-    },
-    "3.Sprites\\Chung\\Tap to Decor Fairy Land.png.meta": {
-      "time": 1789031321048.2148
     },
     "3.Sprites\\Chung\\TapToDecor.png.meta": {
       "time": 1789031321098.2742
@@ -2030,6 +2023,55 @@
     "3.Sprites\\sprites_PLY27\\V_sd.png": {
       "time": 1789113874434.5547,
       "uuid": "da7d9b56-2b76-4bc8-87a4-bcae7521a309"
+    },
+    "1.Animations\\TapToDecor.meta": {
+      "time": 1789116173375.4487
+    },
+    "1.Animations\\TapToDecor": {
+      "time": 1789116173375.953,
+      "uuid": "03e51cf6-9d72-4820-aa3a-05e9dd2b26d9"
+    },
+    "1.Animations\\TapToDecor\\TapToDecor.anim.meta": {
+      "time": 1789116173406.096
+    },
+    "1.Animations\\TapToDecor\\TapToDecor.anim": {
+      "time": 1789116243655.6873,
+      "uuid": "23e4bfb6-5466-4b56-b914-9cf4dc99ff84"
+    },
+    "3.Sprites\\Chung\\TapToDecor2.png.meta": {
+      "time": 1789116306601.6814
+    },
+    "3.Sprites\\Chung\\TapToDecor2.png": {
+      "time": 1789116290143.862,
+      "uuid": "779fc3a2-7435-4c9a-a568-f8b9e97cfbf8"
+    },
+    "4.Sounds\\Cute Kitty Monster Voice 02.mp3.meta": {
+      "time": 1789116576073.739
+    },
+    "4.Sounds\\Cute Kitty Monster Voice 04.mp3.meta": {
+      "time": 1789116576084.8103
+    },
+    "4.Sounds\\Cute Kitty Monster Voice 01.mp3.meta": {
+      "time": 1789116576094.3818
+    },
+    "4.Sounds\\Cute Kitty Monster Voice 02.mp3": {
+      "time": 1787902577848.3672,
+      "uuid": "b91e472b-fa91-4bd0-b254-b6fe949ac8d4"
+    },
+    "4.Sounds\\Cute Kitty Monster Voice 04.mp3": {
+      "time": 1787902577848.8835,
+      "uuid": "b9724bb5-4a5b-4799-ab6e-ce4655defa8c"
+    },
+    "4.Sounds\\Cute Kitty Monster Voice 01.mp3": {
+      "time": 1787902577847.3208,
+      "uuid": "13869f5c-eb61-43ce-8f8f-bcb87fded8bc"
+    },
+    "4.Sounds\\BGM\\frad - first date - frad (youtube) (mp3cut.net).mp3.meta": {
+      "time": 1789118090738.1333
+    },
+    "4.Sounds\\BGM\\frad - first date - frad (youtube) (mp3cut.net).mp3": {
+      "time": 1789118070481.5754,
+      "uuid": "aac52f80-9c91-4a17-aa46-c2c7ccf2c3bd"
     }
   },
   "missing": {}

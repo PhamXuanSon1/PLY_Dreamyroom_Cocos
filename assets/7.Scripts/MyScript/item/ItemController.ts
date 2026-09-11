@@ -3,7 +3,7 @@
  * Sử dụng hệ thống âm thanh từ PLY_SoundManager (sm).
  */
 
-import { _decorator, BoxCollider2D, Collider2D, Component, Enum, EventTouch, Node, ParticleSystem2D, UITransform, Vec2, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Collider2D, Component, Enum, EventTouch, Node, ParticleSystem2D, Tween, tween, UITransform, Vec2, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { ItemGraphic } from './ItemGraphic';
 import { ItemMovement } from './ItemMovement';
@@ -86,6 +86,16 @@ export class ItemController extends Component implements IPointerHandler {
     /** Đã ghép thành công vào đích hay chưa */
     isPlaced = false;
 
+    @property({ tooltip: 'Luôn hiện bóng ở đích ngay từ đầu; thả hụt / huỷ kéo KHÔNG tắt bóng, chỉ tắt khi ghép đúng.' })
+    persistentShadow = false;
+
+    // ---- Nhấp nhô khi nằm chờ trong vùng spawn (mode Box.spawnAllOnFirstClick, không có holder) ----
+    @property({ tooltip: 'Khoảng cách nhấp nhô lên xuống khi item nằm chờ trong vùng spawn (px). 0 = tắt.' })
+    idleBobDistance = 30;
+
+    @property({ tooltip: 'Thời gian 1 chu kỳ nhấp nhô (giây).' })
+    idleBobDuration = 1.5;
+
 
     itemGraphic: ItemGraphic = null!;
     itemMovement: ItemMovement = null!;
@@ -97,6 +107,10 @@ export class ItemController extends Component implements IPointerHandler {
     private moving = false;
     private itemCollider: Collider2D | null = null;
     private initialWorldPos = new Vec3();
+
+    private idleBob: Tween<Node> | null = null;
+    /** Vị trí world gốc lúc bắt đầu nhấp nhô — thả hụt sẽ bay về đây rồi nhấp nhô lại. */
+    private idleBobBaseWorldPos: Vec3 | null = null;
 
     // ======================================================== Lifecycle
     onLoad() {
@@ -132,7 +146,11 @@ export class ItemController extends Component implements IPointerHandler {
         if (UIManager.instance?.isGameEnded) return false;
         if (this.isPlaced || this.moving) return false;
 
-        this.initialWorldPos = this.node.worldPosition.clone();
+        // Đang nhấp nhô -> dừng lại và lấy vị trí gốc (không lấy vị trí giữa chừng của nhịp nhô)
+        this.stopIdleBobbing();
+        this.initialWorldPos = this.idleBobBaseWorldPos
+            ? this.idleBobBaseWorldPos.clone()
+            : this.node.worldPosition.clone();
 
         // 1. Phát âm thanh Pick từ Ply_SoundManager
         Ply_SoundManager.Ins?.playFx(FxType.PickItem);
@@ -202,19 +220,23 @@ export class ItemController extends Component implements IPointerHandler {
     }
 
     // ======================================================== Target shadow
-    /** Bật bóng ở đích khi bắt đầu kéo item. */
-    private showTargetShadow(): void {
+    /** Bật bóng ở đích khi bắt đầu kéo item (hoặc ngay từ đầu nếu persistentShadow). */
+    showTargetShadow(): void {
         const target = this.targetPoint;
         if (!target || !target.isValid || this.isPlaced) return;
+
+        // có thể được gọi từ ItemManager.start() khi node item chưa active (onLoad chưa chạy)
+        if (!this.itemGraphic) this.itemGraphic = this.getComponent(ItemGraphic) ?? this.addComponent(ItemGraphic);
 
         target.active = true;
         this.itemGraphic.handleTargetSprites(target, true);
     }
 
-    /** Tắt bóng khi thả tay mà chưa ghép được. */
+    /** Tắt bóng khi thả tay mà chưa ghép được. Bỏ qua nếu bóng là persistent. */
     private hideTargetShadow(): void {
         const target = this.targetPoint;
         if (!target || !target.isValid || this.isPlaced) return;
+        if (this.persistentShadow) return;
 
         // trả sprite về màu gốc trước rồi mới ẩn node, để lần sau bật lại sạch sẽ
         this.itemGraphic.restoreTargetSprites();
@@ -285,8 +307,39 @@ export class ItemController extends Component implements IPointerHandler {
             TweenUtil.killAll(this.node);
             TweenUtil.moveTo(this.node, this.initialWorldPos, this.moveDuration, 'quadOut', () => {
                 this.itemGraphic.restoreOriginalLayers();
+                // về chỗ cũ trong vùng spawn -> nhấp nhô tiếp
+                if (this.idleBobBaseWorldPos) this.startIdleBobbing();
                 ItemManager.instance?.showStuckHintAgain();
             });
+        }
+    }
+
+    // ======================================================== idle bobbing (không có holder)
+    /** Nhấp nhô tại chỗ, tương tự HolderSlot.startBobbingAnimation nhưng tự chạy trên item. */
+    startIdleBobbing(): void {
+        this.stopIdleBobbing();
+        if (this.idleBobDistance <= 0 || this.isPlaced || !this.node.isValid) return;
+
+        this.idleBobBaseWorldPos = this.node.worldPosition.clone();
+
+        // ⚠ Cocos trả REFERENCE cho position -> phải clone, nếu không bobbing sẽ trôi dần
+        const startPos = this.node.position.clone();
+        const upPos = new Vec3(startPos.x, startPos.y + this.idleBobDistance, startPos.z);
+        const half = this.idleBobDuration / 2;
+
+        this.idleBob = tween(this.node)
+            .repeatForever(
+                tween(this.node)
+                    .to(half, { position: upPos }, { easing: 'sineInOut' })
+                    .to(half, { position: startPos }, { easing: 'sineInOut' }),
+            )
+            .start();
+    }
+
+    stopIdleBobbing(): void {
+        if (this.idleBob) {
+            this.idleBob.stop();
+            this.idleBob = null;
         }
     }
 
@@ -294,6 +347,8 @@ export class ItemController extends Component implements IPointerHandler {
     private moveToTarget(): void {
         const target = this.targetPoint!;
         this.moving = true;
+        this.stopIdleBobbing();
+        this.idleBobBaseWorldPos = null;
 
         WorldScrollManager.instance?.itemPlaced(this);
 
