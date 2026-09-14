@@ -70,11 +70,11 @@
       "uuid": "59acbb9a-95c1-4780-9edc-f7a5cce7a121"
     },
     "7.Scripts\\MyScript\\item": {
-      "time": 1789119073114.754,
+      "time": 1789352120152.737,
       "uuid": "bfadb7c9-2f8a-4ecc-830b-35afa8393bc8"
     },
     "7.Scripts\\MyScript\\managers": {
-      "time": 1787381816574.8284,
+      "time": 1789352148491.0923,
       "uuid": "fa5ca025-9285-44c1-84f0-88241c087ac6"
     },
     "7.Scripts\\MyScript\\pipeline": {
@@ -266,7 +266,7 @@
       "uuid": "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
     },
     "7.Scripts\\MyScript\\item\\ItemController.ts": {
-      "time": 1789119138277.838,
+      "time": 1789352120139.2302,
       "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
     },
     "7.Scripts\\MyScript\\item\\ItemGraphic.ts": {
@@ -290,7 +290,7 @@
       "uuid": "a6ea4dda-3a5c-40cf-a6c5-7e2bba4057f1"
     },
     "7.Scripts\\MyScript\\managers\\ItemManager.ts": {
-      "time": 1789117857708.566,
+      "time": 1789352148473.8564,
       "uuid": "7443b598-ce0a-4555-8222-8eb8d76d1a1c"
     },
     "7.Scripts\\MyScript\\managers\\ProgressTrackingManager.ts": {
@@ -664,7 +664,7 @@
       "uuid": "91ce8cc5-cd6c-4470-a59f-ad70a442a383"
     },
     "1.Animations": {
-      "time": 1789116173369.3918,
+      "time": 1789349327136.5483,
       "uuid": "a73f4df5-79ec-41e0-a5d2-5fb1af583d4a"
     },
     "2.Fonts": {
@@ -844,7 +844,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1789121425143.5437,
+      "time": 1789352198299.9248,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -1988,6 +1988,20 @@
     "4.Sounds\\Curtain Open v1.wav": {
       "time": 1780470281435.0513,
       "uuid": "336784f6-7558-4393-905c-66d765c3ab9c"
+    },
+    "1.Animations\\InstallButton.meta": {
+      "time": 1789349327141.5496
+    },
+    "1.Animations\\InstallButton\\InstallButton.anim.meta": {
+      "time": 1789349327149.5483
+    },
+    "1.Animations\\InstallButton": {
+      "time": 1789349327137.547,
+      "uuid": "e3a20d96-de77-4946-8e6b-96e0bc8ba3db"
+    },
+    "1.Animations\\InstallButton\\InstallButton.anim": {
+      "time": 1789349369443.9,
+      "uuid": "1ea93b9a-cd0a-4abd-89aa-cc584a0eac91"
     }
   },
   "missing": {}

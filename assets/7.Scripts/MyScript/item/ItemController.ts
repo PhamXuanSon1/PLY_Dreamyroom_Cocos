@@ -108,6 +108,9 @@ export class ItemController extends Component implements IPointerHandler {
     private itemCollider: Collider2D | null = null;
     private initialWorldPos = new Vec3();
 
+    /** glue Cocos: lần cầm này item có được cấp bóng lúc kéo không — snap xong mới trừ 1 lượt. */
+    private usedDragShadow = false;
+
     private idleBob: Tween<Node> | null = null;
     /** Vị trí world gốc lúc bắt đầu nhấp nhô — thả hụt sẽ bay về đây rồi nhấp nhô lại. */
     private idleBobBaseWorldPos: Vec3 | null = null;
@@ -160,8 +163,13 @@ export class ItemController extends Component implements IPointerHandler {
         this.dragging = true;
         this.itemGraphic.bringToFront();
 
-        // 3. Hiện bóng (shadow) ở vị trí đích — chỉ hiện khi đang kéo item này
-        this.showTargetShadow();
+        // 3. Hiện bóng (shadow) ở vị trí đích — chỉ hiện khi đang kéo item này, và chỉ
+        //    khi chưa dùng hết shadowItemCount lượt (ItemManager.canShowDragShadow)
+        //    hoặc item đã tick persistentShadow.
+        this.usedDragShadow = !this.persistentShadow
+            && ItemManager.instance?.canShowDragShadow(this) !== false;
+
+        if (this.persistentShadow || this.usedDragShadow) this.showTargetShadow();
 
         // 4. Thông báo cho ItemManager
         const im = ItemManager.instance;
@@ -285,6 +293,9 @@ export class ItemController extends Component implements IPointerHandler {
         // Thả hụt không phát âm thanh
         this.itemMovement.snapFailedAnimation();
 
+        // Thả hụt KHÔNG tốn lượt bóng — lần cầm sau vẫn xin lại bình thường
+        this.usedDragShadow = false;
+
         // Thả hụt -> ẩn bóng đi, chỉ hiện lại khi cầm item lên lần sau
         this.hideTargetShadow();
 
@@ -400,6 +411,11 @@ export class ItemController extends Component implements IPointerHandler {
             this.spawnBlinkEffect(target);
 
             // 7. Báo cho ItemManager tiến độ
+            //    Item được cấp bóng lúc kéo -> giờ mới trừ 1 lượt trong shadowItemCount.
+            if (this.usedDragShadow) {
+                this.usedDragShadow = false;
+                ItemManager.instance?.notifyDragShadowPlaced();
+            }
             ItemManager.instance?.itemArrivedAtTarget();
             ItemManager.instance?.setLastItem(null);
 

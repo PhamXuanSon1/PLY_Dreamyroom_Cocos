@@ -109,10 +109,13 @@ export class ItemManager extends Component {
     /** Số lượng item đã được ghép đúng vào vị trí đích. */
     arrivedItemCount = 0;
 
-    @property({ tooltip: 'Tự động bật "Persistent Shadow" cho N item đầu tiên trong Item List (0 = chỉ dùng các item đã tick Persistent Shadow thủ công).' })
+    @property({ tooltip: 'Số item ĐẦU TIÊN được hiện bóng ở đích khi kéo. Chỉ trừ lượt khi item ghép ĐÚNG vào target — cầm lên rồi thả hụt không tốn lượt. Ghép xong đủ N item thì các item sau kéo không còn bóng. 0 = mọi item đều có bóng khi kéo. Không ảnh hưởng cờ Persistent Shadow.' })
     shadowItemCount = 0;
 
     private currentHolder: Node | null = null;
+
+    /** glue Cocos: số lượt bóng đã dùng — chỉ tăng khi item CÓ bóng snap đúng vào target. */
+    private dragShadowUsed = 0;
 
     // ---------------- Target Graphic Settings ----------------
     @property({ tooltip: 'Màu của bóng/shadow hiển thị tại vị trí đích khi kéo thả.' })
@@ -151,9 +154,9 @@ export class ItemManager extends Component {
             this.currentItemIndex = this.spawnFromLast ? this.itemList.length - 1 : 0;
         }
 
-        // glue Cocos: N item đầu (shadowItemCount) hiện bóng ở đích ngay từ đầu và giữ
-        // bóng kể cả khi thả hụt; các item còn lại chỉ hiện bóng lúc ĐANG KÉO
-        // (ItemController.showTargetShadow).
+        // glue Cocos: item tick persistentShadow hiện bóng ở đích ngay từ đầu và giữ bóng
+        // kể cả khi thả hụt; các item còn lại chỉ hiện bóng lúc ĐANG KÉO, cho tới khi
+        // đủ shadowItemCount item có bóng ghép xong (ItemController.onPointerDown).
         this.initTargetShadows();
 
         // glue Cocos: xếp item vào thanh bar (Unity không có WorldScrollManager)
@@ -168,8 +171,12 @@ export class ItemManager extends Component {
     }
 
     /**
-     * glue Cocos: bật bóng ngay từ đầu cho item có persistentShadow (tick trong Inspector
-     * hoặc tự động cho shadowItemCount item đầu theo thứ tự chơi), ẩn bóng các item còn lại.
+     * glue Cocos:
+     *   - persistentShadow (tick tay trong Inspector): bóng hiện NGAY TỪ ĐẦU và giữ mãi,
+     *     chỉ tắt khi chính item đó snap vào target.
+     *   - shadowItemCount: chỉ N item ĐẦU TIÊN ghép xong mới được hiện bóng lúc kéo
+     *     (xem canShowDragShadow / notifyDragShadowPlaced); 0 = không giới hạn.
+     * Các item không có persistentShadow thì target bị tắt lúc bắt đầu.
      */
     initTargetShadows(): void {
         const count = this.itemList.length;
@@ -179,13 +186,32 @@ export class ItemManager extends Component {
             const item = node.getComponent(ItemController);
             if (!item || !item.targetPoint || item.isPlaced) continue;
 
-            // vị trí trong thứ tự chơi: spawnFromLast -> item cuối là item đầu tiên
-            const playOrder = this.spawnFromLast ? (count - 1 - i) : i;
-            if (playOrder < this.shadowItemCount) item.persistentShadow = true;
-
             if (item.persistentShadow) item.showTargetShadow();
             else item.targetPoint.active = false;
         }
+    }
+
+    /**
+     * glue Cocos: item này có được hiện bóng ở đích LÚC ĐANG KÉO không.
+     *
+     * shadowItemCount = số item ĐẦU TIÊN được hiện bóng, tính theo item GHÉP XONG:
+     * cầm item nào lên cũng có bóng cho tới khi đủ shadowItemCount item có bóng đã
+     * snap đúng target. Cầm lên rồi thả hụt KHÔNG tốn lượt. 0 = không giới hạn.
+     */
+    canShowDragShadow(_item: ItemController): boolean {
+        if (this.shadowItemCount <= 0) return true;              // 0 = mọi item đều có bóng khi kéo
+        return this.dragShadowUsed < this.shadowItemCount;
+    }
+
+    /**
+     * glue Cocos: ItemController gọi khi một item ĐANG CÓ bóng lúc kéo snap đúng target.
+     * Đây mới là lúc trừ 1 lượt trong shadowItemCount.
+     */
+    notifyDragShadowPlaced(): void {
+        if (this.shadowItemCount <= 0) return;
+
+        this.dragShadowUsed++;
+        console.log('[ItemManager] đã dùng ' + this.dragShadowUsed + '/' + this.shadowItemCount + ' lượt bóng');
     }
 
     /** glue Cocos: SceneBuilder có thể để holderItemList rỗng -> tự dò trong scene. */

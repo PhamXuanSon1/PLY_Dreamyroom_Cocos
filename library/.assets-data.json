@@ -853,6 +853,7 @@
         "23e4bfb6-5466-4b56-b914-9cf4dc99ff84",
         "f3f026d0-2801-4bb2-9b57-96344b2d4676@f9941",
         "e493c109-ea19-429a-b842-154150079dc7@f9941",
+        "1ea93b9a-cd0a-4abd-89aa-cc584a0eac91",
         "7d8f9b89-4fd1-4c9f-a3ab-38ec7cded7ca@f9941",
         "ad2dfe62-fb97-4680-ab98-981f857b5699@f9941",
         "4d605646-06cd-418a-80e6-4c08b8311b53@f9941",
@@ -866,7 +867,6 @@
         "94b0cb94-5e59-4191-8fa2-438bcf53d080@f9941",
         "f3d640c6-6905-42d0-8f0d-610c0139e8eb@f9941",
         "135908e5-9cd2-4684-93b7-c0e981751453@f9941",
-        "ee8991fc-4862-4ea0-abb1-44beab205f66@f9941",
         "bc6f84ee-e31b-4995-a80d-217dbb32ee9d@f9941",
         "17b31e88-3c54-4c27-82a8-77d0028dbeb7@f9941",
         "dcf70a66-5253-46ac-b1f0-09685aff25ec@f9941",
@@ -885,9 +885,6 @@
         "53e35ec8-99fa-42a5-8c13-510162ce8d86@f9941",
         "09044d39-ab7c-41df-ac46-9b125a21747d@f9941",
         "9fcc9a81-acb4-46d2-b7de-454b47371b91@f9941",
-        "4f91f0a8-075c-45cb-b9ce-eb509918b151@f9941",
-        "9ae8e61b-2bb8-435e-977c-61b8186aa7a9@f9941",
-        "602bf625-fddd-4df3-9a1d-891ab2bd40f4@f9941",
         "8ed915e1-d254-46bd-8954-7474b0d721f5@f9941",
         "81a604ff-270e-4e90-9d03-980f26ed6bb5@f9941",
         "222d54aa-fca9-4f32-870d-cef3fbc304a7@f9941",
@@ -903,6 +900,9 @@
         "8065c53c-17e7-4201-9d9f-ed380f65cc01@f9941",
         "63c1d583-0f3e-4215-870e-fdbb06398b79@f9941",
         "46fc6e39-2e6b-45f0-8165-9c5d45a8d991@f9941",
+        "4f91f0a8-075c-45cb-b9ce-eb509918b151@f9941",
+        "9ae8e61b-2bb8-435e-977c-61b8186aa7a9@f9941",
+        "602bf625-fddd-4df3-9a1d-891ab2bd40f4@f9941",
         "48145284-ec88-477d-81b0-90ebd31ee0bb@f9941",
         "bad9b28d-18c3-4fea-96ed-08c11eab343f@f9941",
         "9f75935c-e772-49ca-a1d1-146f7009766f@f9941",
@@ -8350,6 +8350,18 @@
     "value": {
       "depends": []
     },
+    "versionCode": 1
+  },
+  "1ea93b9a-cd0a-4abd-89aa-cc584a0eac91": {
+    "url": "db://assets/1.Animations/InstallButton/InstallButton.anim",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 2
+  },
+  "e3a20d96-de77-4946-8e6b-96e0bc8ba3db": {
+    "url": "db://assets/1.Animations/InstallButton",
+    "value": {},
     "versionCode": 1
   }
 }
