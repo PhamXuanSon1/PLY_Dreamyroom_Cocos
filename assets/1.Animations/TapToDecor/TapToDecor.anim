@@ -62,7 +62,7 @@
   },
   {
     "__type__": "cc.animation.HierarchyPath",
-    "path": "Tap to Decor Fairy Land"
+    "path": "LilitaOne-Regular"
   },
   {
     "__type__": "cc.animation.Channel",
@@ -94,7 +94,7 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": 0.8999999761581421,
+        "value": 0.9,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -148,7 +148,7 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": 0.8999999761581421,
+        "value": 0.9,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -182,9 +182,22 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      0.5
+      0.5,
+      1
     ],
     "_values": [
+      {
+        "__type__": "cc.RealKeyframeValue",
+        "interpolationMode": 0,
+        "tangentWeightMode": 0,
+        "value": 1,
+        "rightTangent": 0,
+        "rightTangentWeight": 1,
+        "leftTangent": 0,
+        "leftTangentWeight": 1,
+        "easingMethod": 0,
+        "__editorExtras__": null
+      },
       {
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,

@@ -1,14 +1,16 @@
 {
   "mcpServers": {
     "funplay-cocos": {
-      "type": "http",
-      "url": "http://127.0.0.1:27829/"
+      "disabled": false,
+      "serverUrl": "http://127.0.0.1:27829/"
     },
     "fetch": {
+      "disabled": false,
       "command": "C:\\Users\\Admin\\.local\\bin\\uv.exe",
       "args": ["tool", "run", "mcp-server-fetch"]
     },
     "git": {
+      "disabled": false,
       "command": "C:\\Users\\Admin\\.local\\bin\\uv.exe",
       "args": [
         "tool",

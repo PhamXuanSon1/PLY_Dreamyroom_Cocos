@@ -8,7 +8,7 @@
  *   - Bỏ SetLayerRecursively (dead code bên Unity, không nơi nào gọi).
  */
 
-import { _decorator, BoxCollider2D, Component, EventTouch, Node, randomRange, UITransform, Vec2, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Component, EventTouch, Node, randomRange, UITransform, Vec2, Vec3, Enum } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { BoxGraphic } from './BoxGraphic';
 import { ItemManager } from '../managers/ItemManager';
@@ -22,6 +22,29 @@ import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
 import { TweenUtil } from '../core/TweenUtil';
 
 const { ccclass, property } = _decorator;
+
+export enum JumpEasingType {
+    backOut = 0,
+    backIn = 1,
+    backInOut = 2,
+    quadOut = 3,
+    quadIn = 4,
+    quadInOut = 5,
+    cubicOut = 6,
+    cubicIn = 7,
+    cubicInOut = 8,
+    sineOut = 9,
+    sineIn = 10,
+    sineInOut = 11,
+    bounceOut = 12,
+    bounceIn = 13,
+    bounceInOut = 14,
+    elasticOut = 15,
+    elasticIn = 16,
+    elasticInOut = 17,
+    linear = 18,
+}
+Enum(JumpEasingType);
 
 @ccclass('BoxController')
 export class BoxController extends Component implements IPointerHandler {
@@ -51,11 +74,28 @@ export class BoxController extends Component implements IPointerHandler {
     @property({ tooltip: 'Thời gian item bay từ hộp tới Holder (giây).' })
     jumpDuration = 1.0;
 
-    @property({ tooltip: 'Số nhịp nảy khi bay (mặc định 1 nhịp).' })
-    jumpCount = 1;
+    /** Số nhịp nảy khi bay (mặc định 1: bay phát lên luôn, không hiện Inspector) */
+    readonly jumpCount = 1;
 
-    @property({ tooltip: 'Kiểu gia tốc nảy (easing), vd: backOut, quadOut, sineOut.' })
-    jumpEasing = 'backOut';
+    @property({
+        type: Enum(JumpEasingType),
+        tooltip: 'Kiểu gia tốc nảy (easing).',
+    })
+    jumpEasing: JumpEasingType | string = JumpEasingType.backOut;
+
+    /** Lấy chuỗi easing tương ứng cho TweenUtil, hỗ trợ cả Enum lẫn chuỗi cũ */
+    private getEasingString(): string {
+        if (typeof this.jumpEasing === 'number') {
+            return JumpEasingType[this.jumpEasing] ?? 'backOut';
+        }
+        return this.jumpEasing || 'backOut';
+    }
+
+    @property({ tooltip: 'Độ trễ từ khi click hộp đến khi bắt đầu spawn đồ (giây). Mặc định 0.35s khớp anim mở nắp.' })
+    firstOpenSpawnDelay = 0.35;
+
+    @property({ tooltip: 'Khoảng cách giữa các lần phát sound liên tục khi item đang bay ra (giây).' })
+    burstSoundInterval = 0.08;
 
     // ========================================== SPAWN TẤT CẢ ITEM RA VÙNG
     @property({ tooltip: 'Click đầu tiên: spawn TẤT CẢ item bay ra vùng Spawn Area (thay vì từng item vào holder), sau đó hộp bay đi và ẩn.' })
@@ -65,7 +105,7 @@ export class BoxController extends Component implements IPointerHandler {
     spawnArea: Node | null = null;
 
     @property({ tooltip: 'Khoảng cách thời gian giữa 2 item bay ra (giây). 0 = bắn TẤT CẢ đồng loạt cùng lúc.' })
-    spawnInterval = 0;
+    spawnInterval = 0.25;
 
     @property({ tooltip: 'Bật: item sau chỉ bắn khi item trước ĐÃ ĐÁP XUỐNG vùng (+ Spawn Interval). Tắt: chỉ cách nhau Spawn Interval.' })
     waitPreviousLanded = false;
@@ -100,14 +140,23 @@ export class BoxController extends Component implements IPointerHandler {
         }
     }
 
+    private onSpawnSoundTick: (() => void) | null = null;
+    private onStopSoundEarlyTick: (() => void) | null = null;
+    private isSpawningSound = false;
+
     onEnable() {
         DreamyInputManager.register(this);
         this.node.on(Node.EventType.TOUCH_START, this.onDirectTouch, this);
     }
 
     onDisable() {
+        this.stopSpawningSound();
         DreamyInputManager.unregister(this);
         this.node.off(Node.EventType.TOUCH_START, this.onDirectTouch, this);
+    }
+
+    onDestroy() {
+        this.stopSpawningSound();
     }
 
     private onDirectTouch(): void {
@@ -131,6 +180,70 @@ export class BoxController extends Component implements IPointerHandler {
         if (this.isClicked || this.isClosing) return false;
         this.onClick();
         return true;
+    }
+
+    /** Phát 1 tiếng và tự động ngắt trước khi lần phát tiếp theo diễn ra 0.01s */
+    private playOneBurstSound(fx: FxType, volumeScale: number = 1): void {
+        if (this.onStopSoundEarlyTick) {
+            this.unschedule(this.onStopSoundEarlyTick);
+            this.onStopSoundEarlyTick = null;
+        }
+
+        Ply_SoundManager.Ins?.playFxCutoff(fx, volumeScale);
+
+        // Dừng âm thanh trước 0.01 giây so với lần phát tiếp theo để tránh nghẽn/lag audio buffer
+        const stopDelay = Math.max(0.005, this.burstSoundInterval - 0.01);
+        this.onStopSoundEarlyTick = () => {
+            Ply_SoundManager.Ins?.stopFxCutoff();
+            this.onStopSoundEarlyTick = null;
+        };
+        this.scheduleOnce(this.onStopSoundEarlyTick, stopDelay);
+    }
+
+    /** Bắt đầu phát sound liên tục trong suốt quá trình các item bay ra */
+    private startSpawningSound(): void {
+        this.stopSpawningSound();
+        if (this.burstSoundInterval <= 0) return;
+
+        this.isSpawningSound = true;
+        let tick = 0;
+
+        // Phát tiếng đầu tiên ngay lập tức
+        this.playOneBurstSound(FxType.ClickBox, 1.0);
+
+        this.onSpawnSoundTick = () => {
+            if (!this.isSpawningSound) return;
+            const volMod = 0.85 + (tick++ % 3) * 0.08;
+            this.playOneBurstSound(FxType.ClickBox, volMod);
+        };
+
+        this.schedule(this.onSpawnSoundTick, this.burstSoundInterval);
+    }
+
+    /** Dừng phát sound liên tục (khi item cuối cùng bắt đầu bay lên) */
+    private stopSpawningSound(): void {
+        this.isSpawningSound = false;
+        if (this.onSpawnSoundTick) {
+            this.unschedule(this.onSpawnSoundTick);
+            this.onSpawnSoundTick = null;
+        }
+        if (this.onStopSoundEarlyTick) {
+            this.unschedule(this.onStopSoundEarlyTick);
+            this.onStopSoundEarlyTick = null;
+        }
+        // Ngắt ngay lập tức âm thanh đang phát dở
+        Ply_SoundManager.Ins?.stopFxCutoff();
+    }
+
+    /**
+     * Phát 10 lần âm thanh playFxOneShot chồng lớp khi bung đồ trong mode tức thì.
+     */
+    private playSpawnBurstSound(): void {
+        Ply_SoundManager.Ins?.playBurstFx(
+            FxType.ClickBox,
+            10,
+            this.burstSoundInterval,
+        );
     }
 
     // ======================================================== logic
@@ -170,9 +283,9 @@ export class BoxController extends Component implements IPointerHandler {
             if (this.spawnAllOnFirstClick) {
                 // khoá click tiếp theo + chặn BoxManager.closeAndHide (hộp tự bay đi sau khi spawn xong)
                 this.isClosing = true;
-                TweenUtil.delayedCall(this, 1, () => this.spawnAllItems());
+                TweenUtil.delayedCall(this, this.firstOpenSpawnDelay, () => this.spawnAllItems());
             } else {
-                TweenUtil.delayedCall(this, 1, () => this.spawnItem());
+                TweenUtil.delayedCall(this, this.firstOpenSpawnDelay, () => this.spawnItem());
             }
 
             if (this.MoveAfterIntroPosOfBox) {
@@ -214,6 +327,8 @@ export class BoxController extends Component implements IPointerHandler {
             return;
         }
 
+        this.playSpawnBurstSound();
+
         currentItem.setWorldPosition(this.node.worldPosition.clone());
         currentItem.active = true;
 
@@ -248,7 +363,7 @@ export class BoxController extends Component implements IPointerHandler {
             this.jumpHeight,
             this.jumpCount,
             this.jumpDuration,
-            this.jumpEasing,
+            this.getEasingString(),
             () => {
                 if (!holderSlot) return;
                 holderSlot.setItem(currentItem);
@@ -272,20 +387,23 @@ export class BoxController extends Component implements IPointerHandler {
             return;
         }
 
-        this.boxGraphic?.playItemDispense();
-
         // Không có giãn cách -> bắn đồng loạt tất cả trong cùng 1 frame
         if (this.spawnInterval <= 0 && !this.waitPreviousLanded) {
+            this.boxGraphic?.playItemDispense();
+            this.playSpawnBurstSound();
             for (const node of items) this.launchItemToArea(node);
             TweenUtil.delayedCall(this, this.jumpDuration + this.boxExitDelay, () => this.onAllItemsLanded());
             return;
         }
 
+        // Bắn tuần tự: phát sound liên tục cho tới khi item cuối cùng bắt đầu bay lên
+        this.startSpawningSound();
         this.launchSequence(items, 0);
     }
 
     /** Mọi item đã đáp xuống: hiện hint vào item trên cùng rồi hộp bay đi. */
     private onAllItemsLanded(): void {
+        this.stopSpawningSound();
         const im = ItemManager.instance;
         if (im) im.showFirstDragHint(im.getTopmostAvailableItem());
         this.exitBox();
@@ -293,11 +411,22 @@ export class BoxController extends Component implements IPointerHandler {
 
     /** Bắn tuần tự item[index] -> chờ -> item[index+1] ... -> hết thì hộp bay đi. */
     private launchSequence(items: Node[], index: number): void {
+        if (UIManager.instance?.isGameEnded) {
+            this.stopSpawningSound();
+            return;
+        }
+
         if (index >= items.length) {
+            this.stopSpawningSound();
             // item cuối đã bắn; chờ nó đáp xuống rồi hiện hint (vào item trên cùng) và hộp bay đi
             const wait = (this.waitPreviousLanded ? 0 : this.jumpDuration) + this.boxExitDelay;
             TweenUtil.delayedCall(this, wait, () => this.onAllItemsLanded());
             return;
+        }
+
+        // Khi item cuối cùng bắt đầu bay lên -> dừng phát sound liên tục!
+        if (index === items.length - 1) {
+            this.stopSpawningSound();
         }
 
         const next = () => TweenUtil.delayedCall(this, this.spawnInterval, () => this.launchSequence(items, index + 1));
@@ -310,6 +439,11 @@ export class BoxController extends Component implements IPointerHandler {
     private launchItemToArea(node: Node, onLanded?: () => void): void {
         if (!node?.isValid) { onLanded?.(); return; }
         const im = ItemManager.instance;
+
+        // Visual dispense cho mỗi item khi bắn tuần tự
+        if (this.spawnInterval > 0 || this.waitPreviousLanded) {
+            this.boxGraphic?.playItemDispense();
+        }
 
         node.setWorldPosition(this.node.worldPosition.clone());
         node.active = true;
@@ -326,7 +460,7 @@ export class BoxController extends Component implements IPointerHandler {
         const itemScript = node.getComponent(ItemController);
 
         TweenUtil.jumpTo(
-            node, dest, this.jumpHeight, this.jumpCount, this.jumpDuration, this.jumpEasing,
+            node, dest, this.jumpHeight, this.jumpCount, this.jumpDuration, this.getEasingString(),
             () => {
                 // Không có holder -> item tự nhấp nhô tại chỗ (thay HolderSlot.startBobbingAnimation)
                 itemScript?.startIdleBobbing();

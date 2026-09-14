@@ -170,6 +170,7 @@ export class Ply_SoundManager extends Ply_Singleton {
     private queuedCount: number[] = new Array(FX_TYPE_COUNT).fill(0);
     private queueTimers: (number | null)[] = new Array(FX_TYPE_COUNT).fill(null);
     private sequenceSource: AudioSource | null = null;
+    private burstSource: AudioSource | null = null;
     private sequence: FxType[] = [];
     private sequenceIndex = 0;
     private sequenceCallback: (() => void) | null = null;
@@ -204,6 +205,57 @@ export class Ply_SoundManager extends Ply_Singleton {
         // Phat lap de tang am luong (giong xu ly trong Unity)
         for (let i = 1; i < data.repeatCount; i++) {
             source.playOneShot(data.clip, data.volume);
+        }
+    }
+
+    /**
+     * Phat am thanh hieu ung dang OneShot (khong cat dut am thanh dang phat, cho phep chong am).
+     */
+    public playFxOneShot(fxType: FxType, volumeScale: number = 1): void {
+        if (this.isMute) return;
+
+        const data = this.getSoundData(fxType);
+        if (!data || !data.clip) return;
+
+        const index = fxType as number;
+        if (!this.fxSources[index]) {
+            this.fxSources[index] = this.createAudioSource(`SoundFX_${FxType[fxType]}`);
+        }
+
+        const source = this.fxSources[index]!;
+        source.playOneShot(data.clip, data.volume * volumeScale);
+    }
+
+    /**
+     * Phat mot chum hieu ung am thanh don dap, chong lop len nhau (burst / stagger).
+     * @param fxTypes Mot hoac nhieu loai FX (neu truyen mang se luan phien phat)
+     * @param count So luong tieng phat ra
+     * @param interval Khoang cach giua cac tieng (giay, mac dinh 0.04s)
+     * @param volumeScale He so am luong (0..1)
+     */
+    public playBurstFx(
+        fxTypes: FxType | readonly FxType[],
+        count: number,
+        interval: number = 0.04,
+        volumeScale: number = 1,
+    ): void {
+        if (this.isMute || count <= 0) return;
+
+        const types = Array.isArray(fxTypes) ? fxTypes : [fxTypes];
+        if (types.length === 0) return;
+
+        for (let i = 0; i < count; i++) {
+            const delay = i * interval;
+            const chosenType = types[i % types.length];
+            const volMod = (0.85 + (i % 3) * 0.08) * volumeScale;
+
+            if (delay <= 0) {
+                this.playFxOneShot(chosenType, volMod);
+            } else {
+                this.scheduleOnce(() => {
+                    this.playFxOneShot(chosenType, volMod);
+                }, delay);
+            }
         }
     }
 
@@ -492,8 +544,42 @@ export class Ply_SoundManager extends Ply_Singleton {
         return audioNode.addComponent(AudioSource);
     }
 
+    /**
+     * Phat am thanh FX ngat tieng cu: dung ngay am thanh dang phat tren kenh nay truoc khi phat am thanh moi.
+     * Thich hop cho hieu ung burst/loop nhanh ma khong muon chong am lam on.
+     */
+    public playFxCutoff(fxType: FxType, volumeScale: number = 1): void {
+        if (this.isMute) return;
+
+        const data = this.getSoundData(fxType);
+        if (!data || !data.clip) return;
+
+        if (!this.burstSource) {
+            this.burstSource = this.createAudioSource('SoundFX_Burst_Cutoff');
+        }
+
+        if (this.burstSource.playing) {
+            this.burstSource.stop();
+        }
+
+        this.burstSource.loop = false;
+        this.burstSource.clip = data.clip;
+        this.burstSource.volume = data.volume * volumeScale;
+        this.burstSource.play();
+    }
+
+    /**
+     * Dung ngay am thanh dang phat tren kenh cutoff.
+     */
+    public stopFxCutoff(): void {
+        if (this.burstSource && this.burstSource.playing) {
+            this.burstSource.stop();
+        }
+    }
+
     onDestroy() {
         this.stopFxSequence();
+        this.stopFxCutoff();
         super.onDestroy();
         if (Ply_SoundManager.Ins === this) {
             Ply_SoundManager.Ins = null;

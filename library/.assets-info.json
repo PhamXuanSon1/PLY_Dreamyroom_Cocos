@@ -242,7 +242,7 @@
       "uuid": "14a54ca0-e12a-490a-948a-754db1575003"
     },
     "7.Scripts\\MyScript\\box\\BoxController.ts": {
-      "time": 1789117819003.2915,
+      "time": 1789356331165.089,
       "uuid": "7ced8a7d-fd09-44e8-b1af-b41522ee13b2"
     },
     "7.Scripts\\MyScript\\box\\BoxGraphic.ts": {
@@ -334,7 +334,7 @@
       "uuid": "8ae2cf63-dfd7-4f32-bac7-8bcfde17210d"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Ply_SoundManager.ts": {
-      "time": 1789119204846.037,
+      "time": 1789355936390.3706,
       "uuid": "784b8157-3757-4d0b-a788-266a2078d644"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Ply_Types.ts": {
@@ -668,7 +668,7 @@
       "uuid": "a73f4df5-79ec-41e0-a5d2-5fb1af583d4a"
     },
     "2.Fonts": {
-      "time": 1787113244705.5515,
+      "time": 1789353004511.7168,
       "uuid": "54e1328d-b163-4b60-8f36-be68be73c75c"
     },
     "3.Sprites": {
@@ -764,35 +764,35 @@
       "uuid": "58291885-390c-4610-847d-03703733bcbc"
     },
     "2.Fonts\\AntipastoPro_trial.ttf": {
-      "time": 1779160881512.2073,
+      "time": 1789327730000,
       "uuid": "463d80db-9035-4bde-a4d4-0aaf8295bba1"
     },
     "2.Fonts\\Anton.ttf": {
-      "time": 1778474126596.309,
+      "time": 1789327730000,
       "uuid": "eacf9fcb-146f-4050-a58d-ac6311afc69e"
     },
     "2.Fonts\\BodoAmat.ttf": {
-      "time": 1779702198926.1433,
+      "time": 1789327730000,
       "uuid": "462fa25b-50c5-4958-a310-d9d3e12ea0df"
     },
     "2.Fonts\\Cute-Dino.ttf": {
-      "time": 1778474126618.013,
+      "time": 1789327730000,
       "uuid": "81022c27-8b8d-46d2-b8da-a60c4a6e68b2"
     },
     "2.Fonts\\DVN-Fredoka-Bold.ttf": {
-      "time": 1778474126635.626,
+      "time": 1789327730000,
       "uuid": "ce8e121a-6659-468d-b491-d1ef0f6892c7"
     },
     "2.Fonts\\LiberationSans.ttf": {
-      "time": 1778474126671.7075,
+      "time": 1789327730000,
       "uuid": "69fa9f89-81d1-4d75-b359-29e36c05cc1c"
     },
     "2.Fonts\\sui-generis-rg_dynamic.ttf": {
-      "time": 1778474126721.547,
+      "time": 1789327730000,
       "uuid": "14c11960-5525-49c5-aef7-5f6db07e705a"
     },
     "2.Fonts\\TUV-PoetsenOne.ttf": {
-      "time": 1778474126707.2014,
+      "time": 1789327730000,
       "uuid": "42e10400-a0a1-46a7-8792-86aeaa4f0490"
     },
     "4.Sounds\\ClickBox.ogg": {
@@ -844,7 +844,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1789352198299.9248,
+      "time": 1789356485385.2402,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -1070,31 +1070,31 @@
       "time": 1789031320727.2402
     },
     "2.Fonts\\AntipastoPro_trial.ttf.meta": {
-      "time": 1779160881523.081
+      "time": 1789327730000
     },
     "2.Fonts\\Anton.ttf.meta": {
-      "time": 1778474126597.3777
+      "time": 1789327730000
     },
     "2.Fonts\\BodoAmat.ttf.meta": {
-      "time": 1779702198931.6409
+      "time": 1789327730000
     },
     "2.Fonts\\Cute-Dino.ttf.meta": {
-      "time": 1778474126623.6123
+      "time": 1789327730000
     },
     "2.Fonts\\DVN-Fredoka-Bold.ttf.meta": {
-      "time": 1778474126640.6372
+      "time": 1789327730000
     },
     "2.Fonts\\sui-generis-rg_dynamic.ttf.meta": {
-      "time": 1778474126738.7126
+      "time": 1789327730000
     },
     "2.Fonts\\LiberationSans.ttf.meta": {
-      "time": 1778474126686.3755
+      "time": 1789327730000
     },
     "4.Sounds\\ClickBox.ogg.meta": {
       "time": 1787369260738.184
     },
     "2.Fonts\\TUV-PoetsenOne.ttf.meta": {
-      "time": 1778474126709.476
+      "time": 1789327730000
     },
     "4.Sounds\\clothes-drop.mp3.meta": {
       "time": 1787369469687.2158
@@ -1930,7 +1930,7 @@
       "time": 1789116173406.096
     },
     "1.Animations\\TapToDecor\\TapToDecor.anim": {
-      "time": 1789116243655.6873,
+      "time": 1789353504617.413,
       "uuid": "23e4bfb6-5466-4b56-b914-9cf4dc99ff84"
     },
     "3.Sprites\\Chung\\TapToDecor2.png.meta": {
@@ -2002,6 +2002,13 @@
     "1.Animations\\InstallButton\\InstallButton.anim": {
       "time": 1789349369443.9,
       "uuid": "1ea93b9a-cd0a-4abd-89aa-cc584a0eac91"
+    },
+    "2.Fonts\\LilitaOne-Regular.ttf.meta": {
+      "time": 1789327730000
+    },
+    "2.Fonts\\LilitaOne-Regular.ttf": {
+      "time": 1789327730000,
+      "uuid": "43451b8a-77f6-47cc-8b77-4338c5656fd2"
     }
   },
   "missing": {}
