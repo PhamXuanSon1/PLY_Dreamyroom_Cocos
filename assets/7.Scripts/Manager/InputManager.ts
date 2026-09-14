@@ -33,7 +33,7 @@ export class InputManager extends Component {
 
     isFirtMove: boolean = true;
     onTouchStart(event: EventTouch) {
-        this.fisrtTap();
+        // fisrtTap() không gọi ở đây nữa, chỉ kích hoạt khi click vào Box lần đầu tiên
         this.bindingStart(event);
     }
 

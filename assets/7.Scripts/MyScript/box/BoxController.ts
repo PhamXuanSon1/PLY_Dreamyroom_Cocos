@@ -20,6 +20,8 @@ import { HolderSlot } from '../utils/HolderSlot';
 import { HandOfBox } from '../utils/HandOfBox';
 import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
 import { TweenUtil } from '../core/TweenUtil';
+import { ui } from '../../Manager/UI';
+import { ipm } from '../../Manager/InputManager';
 
 const { ccclass, property } = _decorator;
 
@@ -151,12 +153,14 @@ export class BoxController extends Component implements IPointerHandler {
 
     onDisable() {
         this.stopSpawningSound();
+        this.boxGraphic?.stopClickLoop();
         DreamyInputManager.unregister(this);
         this.node.off(Node.EventType.TOUCH_START, this.onDirectTouch, this);
     }
 
     onDestroy() {
         this.stopSpawningSound();
+        this.boxGraphic?.stopClickLoop();
     }
 
     private onDirectTouch(): void {
@@ -278,6 +282,9 @@ export class BoxController extends Component implements IPointerHandler {
 
         // ---- CLICK ĐẦU TIÊN ----
         if (!this.finishedTutorial) {
+            ui?.firstMove();
+            ipm?.fisrtTap();
+
             this.boxGraphic?.playFirstOpen();
 
             if (this.spawnAllOnFirstClick) {
@@ -429,6 +436,9 @@ export class BoxController extends Component implements IPointerHandler {
             this.stopSpawningSound();
         }
 
+        // Mỗi khi spawn 1 item, play lại 1 lần (đang play dở thì ngắt và play lại ngay từ đầu)
+        this.boxGraphic?.playItemDispense();
+
         const next = () => TweenUtil.delayedCall(this, this.spawnInterval, () => this.launchSequence(items, index + 1));
 
         this.launchItemToArea(items[index], this.waitPreviousLanded ? next : undefined);
@@ -439,11 +449,6 @@ export class BoxController extends Component implements IPointerHandler {
     private launchItemToArea(node: Node, onLanded?: () => void): void {
         if (!node?.isValid) { onLanded?.(); return; }
         const im = ItemManager.instance;
-
-        // Visual dispense cho mỗi item khi bắn tuần tự
-        if (this.spawnInterval > 0 || this.waitPreviousLanded) {
-            this.boxGraphic?.playItemDispense();
-        }
 
         node.setWorldPosition(this.node.worldPosition.clone());
         node.active = true;

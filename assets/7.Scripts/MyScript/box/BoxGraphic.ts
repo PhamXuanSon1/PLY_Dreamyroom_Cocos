@@ -76,13 +76,29 @@ export class BoxGraphic extends Component {
         this.boxSkeleton.addAnimation(0, this.animOpenedLoop, true, 0);
     }
 
-    /** Click nhả item (3-OPEN-click -> 3-OPEN-loop-break). */
-    playItemDispense(): void {
+    /** Click nhả item (3-OPEN-click). Đang play dở thì ngắt và play lại ngay từ đầu (mixDuration = 0). */
+    playItemDispense(loop: boolean = false): void {
         this.currentState = BoxState.CLickBox;
         this.resolveSkeletonComponent();
         if (!this.boxSkeleton) return;
-        this.boxSkeleton.setAnimation(0, this.animClick, false);
-        this.boxSkeleton.addAnimation(0, this.animOpenedLoop, true, 0);
+        if (loop) {
+            const entry = this.boxSkeleton.setAnimation(0, this.animClick, true);
+            if (entry) entry.mixDuration = 0;
+        } else {
+            const entry = this.boxSkeleton.setAnimation(0, this.animClick, false);
+            if (entry) entry.mixDuration = 0;
+            this.boxSkeleton.addAnimation(0, this.animOpenedLoop, true, 0);
+        }
+    }
+
+    /** Bắt đầu lặp liên tục anim click (3-OPEN-click) khi bung nhiều item */
+    playClickLoop(): void {
+        this.playItemDispense(true);
+    }
+
+    /** Dừng lặp anim click, chuyển về trạng thái mở chờ (3-OPEN-loop-break) */
+    stopClickLoop(): void {
+        this.playOpenedLoop();
     }
 
     /** Giữ trạng thái mở chờ tương tác tiếp (3-OPEN-loop-break). */
