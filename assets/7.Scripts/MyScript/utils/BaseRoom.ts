@@ -43,6 +43,25 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
 
     readonly inputPriority = InputPriority.Room;
 
+    /**
+     * glue Cocos: hệ số zoom hiện tại của phòng, đọc được từ NGOÀI cây Scale.
+     * Item khi nằm trong Holder / DragLayer (không còn là con cháu của Scale, xem
+     * ItemGraphic/HolderSlot) không tự ăn theo scale của phòng qua cây node được nữa,
+     * nên phải tự đọc số này rồi nhân thêm vào scale của chính nó (ItemGraphic.syncRoomZoomScale).
+     */
+    static currentZoomFactor = 1;
+
+    /** glue Cocos: node đang gắn BaseRoom (gốc cây Scale), để item kiểm tra mình đang nằm trong hay ngoài phòng. */
+    static roomNode: Node | null = null;
+
+    /** Node `n` có nằm trong cây Scale (con cháu của roomNode) không. */
+    static isInsideRoom(n: Node | null): boolean {
+        const room = BaseRoom.roomNode;
+        if (!room || !room.isValid) return false;
+        for (let p = n; p; p = p.parent) if (p === room) return true;
+        return false;
+    }
+
     private originalLocalScale = new Vec3(1, 1, 1);
     private currentScaleFactor = 1;
     private originalScaleInitialized = false;
@@ -59,6 +78,12 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
             this.currentScaleFactor = 1;
             this.originalScaleInitialized = true;
         }
+        BaseRoom.currentZoomFactor = this.currentScaleFactor;
+        BaseRoom.roomNode = this.node;
+    }
+
+    onDestroy() {
+        if (BaseRoom.roomNode === this.node) BaseRoom.roomNode = null;
     }
 
     onEnable() {
@@ -80,6 +105,8 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
             ? this.node.scale.x / this.originalLocalScale.x
             : 1;
         this.originalScaleInitialized = true;
+        BaseRoom.currentZoomFactor = this.currentScaleFactor;
+        BaseRoom.roomNode = this.node;
     }
 
     enableInteraction(): void {
@@ -144,6 +171,10 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
             this.originalLocalScale.z * this.currentScaleFactor,
         );
         this.node.setWorldPosition(this.clampPosition(this.node.worldPosition.clone()));
+
+        // glue Cocos: item ngoài cây Scale (Holder/DragLayer) tự đọc số này mỗi frame
+        // để nhân thêm vào scale của chính nó (xem ItemGraphic.syncRoomZoomScale).
+        BaseRoom.currentZoomFactor = this.currentScaleFactor;
     }
 
     // ======================================================== clamp

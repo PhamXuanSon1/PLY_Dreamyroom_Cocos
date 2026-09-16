@@ -44,7 +44,17 @@ export class UIManager extends Component implements IPointerHandler {
     @property({ tooltip: 'Số item hoàn thành để mở màn End Game.' })
     endGameCount = 12;
 
+    @property({
+        tooltip: 'Sau N giây kể từ lần CLICK ĐẦU TIÊN vào Box (không đếm từ lúc Start) mà CHƯA ghép đủ item, '
+            + 'tự ép chuyển sang chế độ End Game (giống hệt lúc thắng: chạm đâu cũng mở Store) — mặc định 60s = 1 phút. '
+            + '0 = tắt, không tự ép theo thời gian.'
+    })
+    autoEndAfterSeconds = 60;
+
     isGameEnded = false;
+
+    /** Đồng hồ autoEndAfterSeconds đã được bấm chưa (chỉ bấm 1 lần, ở click Box đầu tiên). */
+    private autoEndTimerStarted = false;
 
     // ---------------- Canvas ----------------
     @property({ type: Node, tooltip: 'Canvas UI trong lúc chơi.' })
@@ -92,6 +102,22 @@ export class UIManager extends Component implements IPointerHandler {
         // Unity: DOTween.To(() => tuSo, x => {tuSo = x; UpdateText();}, 0, 2f)
         // Đếm về 0 trong 2 giây — giữ nguyên để khớp nhịp intro.
         TweenUtil.valueTo(2, () => this.updateText(), 'linear');
+
+        // glue Cocos: đồng hồ autoEndAfterSeconds KHÔNG chạy từ đây — chỉ bắt đầu khi người chơi
+        // click vào Box lần đầu (BoxController.onClick -> startAutoEndTimer).
+    }
+
+    /**
+     * glue Cocos: playable ad — bấm đồng hồ autoEndAfterSeconds. Gọi từ BoxController khi người chơi
+     * click vào Box lần đầu; các lần gọi sau bị bỏ qua. Hết giờ mà chưa thắng thì ép ra Store,
+     * không để người chơi kẹt trong màn quá lâu.
+     */
+    startAutoEndTimer(): void {
+        if (this.autoEndTimerStarted || this.isGameEnded) return;
+        this.autoEndTimerStarted = true;
+        if (this.autoEndAfterSeconds > 0) {
+            this.scheduleOnce(() => this.forceEndGame(), this.autoEndAfterSeconds);
+        }
     }
 
     // ======================================================== input
@@ -128,19 +154,32 @@ export class UIManager extends Component implements IPointerHandler {
         const arrived = im?.arrivedItemCount ?? this.tuSo;
 
         if (this.tuSo >= this.mauSo || arrived >= this.endGameCount) {
-            this.isGameEnded = true;
-            DreamyInputManager.canInput = false;
-
-            if (this.GameUICanvas) this.GameUICanvas.active = false;
-            if (this.EndUICanvas) this.EndUICanvas.active = true;
-
-            if (im) {
-                for (const c of im.WinConfetti) if (c?.isValid) c.active = true;
-            }
-
-            // Cho phép chạm để mở store
-            DreamyInputManager.canInput = true;
+            this.activateEndGame();
         }
+    }
+
+    /** glue Cocos: hết autoEndAfterSeconds mà vẫn chưa thắng -> ép chuyển sang End Game để không kẹt màn quá lâu. */
+    private forceEndGame(): void {
+        if (this.isGameEnded) return;
+        console.log(`[UIManager] Hết ${this.autoEndAfterSeconds}s chưa ghép xong -> tự chuyển sang chế độ ra Store.`);
+        this.activateEndGame();
+    }
+
+    /** Bật chế độ End Game: ẩn UI chơi, hiện UI thắng + confetti, cho phép chạm đâu cũng ra Store. */
+    private activateEndGame(): void {
+        this.isGameEnded = true;
+        DreamyInputManager.canInput = false;
+
+        if (this.GameUICanvas) this.GameUICanvas.active = false;
+        if (this.EndUICanvas) this.EndUICanvas.active = true;
+
+        const im = ItemManager.instance;
+        if (im) {
+            for (const c of im.WinConfetti) if (c?.isValid) c.active = true;
+        }
+
+        // Cho phép chạm để mở store
+        DreamyInputManager.canInput = true;
     }
 
     gotoStore(): void {

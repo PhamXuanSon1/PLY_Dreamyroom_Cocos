@@ -107,6 +107,9 @@ export class ItemManager extends Component {
     @property({ tooltip: 'Thời gian chờ (giây) không ghép được item tiếp theo sẽ hiện Hint cố định (mặc định 5s).' })
     stuckTimeToHint = 5;
 
+    @property({ tooltip: 'Chỉ hiện Hand Hint (tay chỉ dẫn, cả Idle Hint lẫn Stuck Hint) cho N item ĐẦU TIÊN người chơi ghép xong. Ghép đủ N item thì các item sau không còn hiện hint nữa. 0 = không giới hạn, luôn hiện hint. Không ảnh hưởng Hand Intro và hint dắt tay lần đầu (showFirstDragHint) — hai cái đó luôn hiện như cũ.' })
+    hintItemCount = 0;
+
     /** Cờ báo hiệu đang ở chế độ Hint cố định 5s (chỉ tắt khi ghép xong item đó hoặc click item khác) */
     isStuckHintActive = false;
 
@@ -122,8 +125,11 @@ export class ItemManager extends Component {
     /** Số lượng item đã được ghép đúng vào vị trí đích. */
     arrivedItemCount = 0;
 
-    @property({ tooltip: 'Số lượng item đầu tiên sẽ hiển thị bóng (shadow) tại vị trí đích khi kéo.' })
-    shadowItemCount = 3;
+    @property({ tooltip: 'Số item ĐẦU TIÊN được hiện bóng ở đích khi kéo. Chỉ trừ lượt khi item ghép ĐÚNG vào target — cầm lên rồi thả hụt không tốn lượt. Ghép xong đủ N item thì các item sau kéo không còn bóng. 0 = mọi item đều có bóng khi kéo. Không ảnh hưởng cờ Persistent Shadow.' })
+    shadowItemCount = 0;
+
+    /** glue Cocos: số lượt bóng đã dùng — chỉ tăng khi item CÓ bóng snap đúng vào target. */
+    private dragShadowUsed = 0;
 
     private currentHolder: Node | null = null;
 
@@ -164,10 +170,11 @@ export class ItemManager extends Component {
             this.currentItemIndex = this.spawnFromLast ? this.itemList.length - 1 : 0;
         }
 
-        // glue Cocos: bóng ở đích chỉ hiện lúc người chơi ĐANG KÉO item
-        // (ItemController.showTargetShadow), nên tắt hết bóng lúc mở màn.
-        // Nếu showTargetsBeforeFirstClick bật thì hoãn việc này tới lúc người chơi
-        // click lần đầu tiên (xem enableFirstClickObjects).
+        // glue Cocos: item tick persistentShadow hiện bóng ở đích ngay từ đầu và giữ bóng
+        // kể cả khi thả hụt; các item còn lại chỉ hiện bóng lúc ĐANG KÉO, cho tới khi đủ
+        // shadowItemCount item có bóng ghép xong (xem canShowDragShadow/ItemController.onPointerDown).
+        // Nếu showTargetsBeforeFirstClick bật thì hoãn việc tắt Target chưa persistent tới lúc
+        // người chơi click vào Box lần đầu tiên (xem onBoxFirstClicked).
         if (!this.showTargetsBeforeFirstClick) this.initTargetShadows();
 
         // glue Cocos: xếp item vào thanh bar (Unity không có WorldScrollManager)
@@ -181,13 +188,46 @@ export class ItemManager extends Component {
         if (ItemManager.instance === this) ItemManager.instance = null;
     }
 
-    /** glue Cocos: ẩn bóng đích của mọi item chưa được sinh ra từ hộp. */
+    /**
+     * glue Cocos:
+     *   - persistentShadow (tick tay trong Inspector): bóng hiện NGAY TỪ ĐẦU và giữ mãi,
+     *     chỉ tắt khi chính item đó snap vào target.
+     *   - shadowItemCount: chỉ N item ĐẦU TIÊN ghép xong mới được hiện bóng lúc kéo
+     *     (xem canShowDragShadow / notifyDragShadowPlaced); 0 = không giới hạn.
+     * Các item không có persistentShadow thì target bị tắt lúc gọi hàm này.
+     */
     initTargetShadows(): void {
         for (const node of this.itemList) {
             if (!node || !node.isValid) continue;
             const item = node.getComponent(ItemController);
-            if (item && item.targetPoint && !item.isPlaced) item.targetPoint.active = false;
+            if (!item || !item.targetPoint || item.isPlaced) continue;
+
+            if (item.persistentShadow) item.showTargetShadow();
+            else item.targetPoint.active = false;
         }
+    }
+
+    /**
+     * glue Cocos: item này có được hiện bóng ở đích LÚC ĐANG KÉO không.
+     *
+     * shadowItemCount = số item ĐẦU TIÊN được hiện bóng, tính theo item GHÉP XONG:
+     * cầm item nào lên cũng có bóng cho tới khi đủ shadowItemCount item có bóng đã
+     * snap đúng target. Cầm lên rồi thả hụt KHÔNG tốn lượt. 0 = không giới hạn.
+     */
+    canShowDragShadow(_item: ItemController): boolean {
+        if (this.shadowItemCount <= 0) return true;              // 0 = mọi item đều có bóng khi kéo
+        return this.dragShadowUsed < this.shadowItemCount;
+    }
+
+    /**
+     * glue Cocos: ItemController gọi khi một item ĐANG CÓ bóng lúc kéo snap đúng target.
+     * Đây mới là lúc trừ 1 lượt trong shadowItemCount.
+     */
+    notifyDragShadowPlaced(): void {
+        if (this.shadowItemCount <= 0) return;
+
+        this.dragShadowUsed++;
+        console.log(`[ItemManager] đã dùng ${this.dragShadowUsed}/${this.shadowItemCount} lượt bóng`);
     }
 
     /** glue Cocos: SceneBuilder có thể để holderItemList rỗng -> tự dò trong scene. */
@@ -359,8 +399,15 @@ export class ItemManager extends Component {
         this.stuckTimer = 0;
     }
 
+    /** hintItemCount: N item ĐẦU TIÊN (theo arrivedItemCount) mới được hiện Hand Hint. 0 = không giới hạn. */
+    private canShowHandHint(): boolean {
+        return this.hintItemCount <= 0 || this.arrivedItemCount < this.hintItemCount;
+    }
+
     /** Kích hoạt trạng thái 5s không chơi được tiếp -> hiện hint cố định cho item */
     triggerStuckHint(): void {
+        if (!this.canShowHandHint()) return;
+
         let item = this.getLastItem();
         if (!this.canUseItemHint(item)) {
             item = this.getValidHintItem();
@@ -408,6 +455,8 @@ export class ItemManager extends Component {
 
     /** Unity: ShowHint */
     showHint(): void {
+        if (!this.canShowHandHint()) return;
+
         let item = this.getLastItem();
 
         // item hiện tại không hợp lệ -> tìm item khác

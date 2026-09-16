@@ -8,7 +8,7 @@
  *   - Bỏ SetLayerRecursively (dead code bên Unity, không nơi nào gọi).
  */
 
-import { _decorator, BoxCollider2D, Component, EventTouch, Node, randomRange, Vec2, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Component, EventTouch, Node, randomRange, UITransform, Vec2, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { BoxGraphic } from './BoxGraphic';
 import { ItemManager } from '../managers/ItemManager';
@@ -119,6 +119,9 @@ export class BoxController extends Component implements IPointerHandler {
             im.enableFirstClickObjects();
             im.onBoxFirstClicked();
         }
+
+        // Đồng hồ tự ép ra Store (UIManager.autoEndAfterSeconds) chỉ bắt đầu đếm từ click Box đầu tiên.
+        UIManager.instance?.startAutoEndTimer();
 
         if (this.handText) {
             this.handText.active = false;

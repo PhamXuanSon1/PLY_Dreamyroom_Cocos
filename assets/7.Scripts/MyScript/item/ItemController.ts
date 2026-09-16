@@ -86,6 +86,9 @@ export class ItemController extends Component implements IPointerHandler {
     /** Đã ghép thành công vào đích hay chưa */
     isPlaced = false;
 
+    @property({ tooltip: 'Luôn hiện bóng ở đích ngay từ đầu; thả hụt / huỷ kéo KHÔNG tắt bóng, chỉ tắt khi ghép đúng.' })
+    persistentShadow = false;
+
 
     itemGraphic: ItemGraphic = null!;
     itemMovement: ItemMovement = null!;
@@ -97,6 +100,9 @@ export class ItemController extends Component implements IPointerHandler {
     private moving = false;
     private itemCollider: Collider2D | null = null;
     private initialWorldPos = new Vec3();
+
+    /** glue Cocos: lần cầm này item có được cấp bóng lúc kéo không — snap xong mới trừ 1 lượt. */
+    private usedDragShadow = false;
 
     // ======================================================== Lifecycle
     onLoad() {
@@ -113,6 +119,17 @@ export class ItemController extends Component implements IPointerHandler {
 
     onDisable() {
         DreamyInputManager.unregister(this);
+    }
+
+    /**
+     * glue Cocos: item nằm ngoài cây Scale (Holder/DragLayer — xem ItemGraphic) không tự ăn theo
+     * zoom của phòng qua cây node, nên phải tự đồng bộ mỗi frame trong lúc còn đang hiển thị.
+     * Chỉ chạy khi node đang active (Holder/đang kéo/đang bay vào đích), tự dừng khi ghép xong
+     * (this.node.active = false trong moveToTarget()).
+     */
+    update(): void {
+        if (this.isPlaced) return;
+        this.itemGraphic?.syncRoomZoomScale();
     }
 
     /** Đồng bộ collider để Item luôn dùng Collider 2D (Box/Polygon/Circle) cho thao tác kéo-thả. */
@@ -142,8 +159,13 @@ export class ItemController extends Component implements IPointerHandler {
         this.dragging = true;
         this.itemGraphic.bringToFront();
 
-        // 3. Hiện bóng (shadow) ở vị trí đích — chỉ hiện khi đang kéo item này
-        this.showTargetShadow();
+        // 3. Hiện bóng (shadow) ở vị trí đích — chỉ hiện khi đang kéo item này, và chỉ
+        //    khi chưa dùng hết shadowItemCount lượt (ItemManager.canShowDragShadow)
+        //    hoặc item đã tick persistentShadow.
+        this.usedDragShadow = !this.persistentShadow
+            && ItemManager.instance?.canShowDragShadow(this) !== false;
+
+        if (this.persistentShadow || this.usedDragShadow) this.showTargetShadow();
 
         // 4. Thông báo cho ItemManager
         const im = ItemManager.instance;
@@ -202,19 +224,24 @@ export class ItemController extends Component implements IPointerHandler {
     }
 
     // ======================================================== Target shadow
-    /** Bật bóng ở đích khi bắt đầu kéo item. */
-    private showTargetShadow(): void {
+    /** Bật bóng ở đích khi bắt đầu kéo item (hoặc ngay từ đầu nếu persistentShadow). */
+    showTargetShadow(): void {
         const target = this.targetPoint;
         if (!target || !target.isValid || this.isPlaced) return;
+
+        // có thể được gọi từ ItemManager.start()/onBoxFirstClicked() khi node item chưa
+        // active (onLoad chưa chạy) -> itemGraphic có thể chưa được gán.
+        if (!this.itemGraphic) this.itemGraphic = this.getComponent(ItemGraphic) ?? this.addComponent(ItemGraphic);
 
         target.active = true;
         this.itemGraphic.handleTargetSprites(target, true);
     }
 
-    /** Tắt bóng khi thả tay mà chưa ghép được. */
+    /** Tắt bóng khi thả tay mà chưa ghép được. Bỏ qua nếu bóng là persistent. */
     private hideTargetShadow(): void {
         const target = this.targetPoint;
         if (!target || !target.isValid || this.isPlaced) return;
+        if (this.persistentShadow) return;
 
         // trả sprite về màu gốc trước rồi mới ẩn node, để lần sau bật lại sạch sẽ
         this.itemGraphic.restoreTargetSprites();
@@ -258,26 +285,22 @@ export class ItemController extends Component implements IPointerHandler {
         }
     }
 
-    /** Thả trượt: Bay về vị trí ban đầu (Holder / vị trí nhấc lên) + phát âm thanh LandFail */
+    /** Thả trượt: Bay về vị trí ban đầu (Holder / vị trí nhấc lên). Thả hụt không phát âm thanh. */
     private snapFailed(): void {
-        Ply_SoundManager.Ins?.playFx(FxType.dropOnFloor);
-
         this.itemMovement.snapFailedAnimation();
+
+        // Thả hụt KHÔNG tốn lượt bóng — lần cầm sau vẫn xin lại bình thường
+        this.usedDragShadow = false;
 
         // Thả hụt -> ẩn bóng đi, chỉ hiện lại khi cầm item lên lần sau
         this.hideTargetShadow();
 
         if (this.currentHolderSlot) {
-            const returnPos = this.currentHolderSlot.originPosition
-                ? this.currentHolderSlot.originPosition.worldPosition.clone()
-                : this.currentHolderSlot.node.worldPosition.clone();
-
+            // Thả hụt: GIỮ NGUYÊN vị trí vừa thả, KHÔNG bay về lại Holder.
             TweenUtil.killAll(this.node);
-            TweenUtil.moveTo(this.node, returnPos, this.moveDuration, 'quadOut', () => {
-                this.itemGraphic.restoreOriginalLayers();
-                this.currentHolderSlot?.startBobbingAnimation();
-                ItemManager.instance?.showStuckHintAgain();
-            });
+            this.itemGraphic.restoreOriginalLayers();
+            this.currentHolderSlot.startBobbingAnimation();   // nhấp nhô tiếp ngay tại vị trí vừa thả
+            ItemManager.instance?.showStuckHintAgain();
         } else if (WorldScrollManager.instance) {
             WorldScrollManager.instance.itemReturned(this);
             ItemManager.instance?.showStuckHintAgain();
@@ -346,6 +369,11 @@ export class ItemController extends Component implements IPointerHandler {
             this.spawnBlinkEffect(target);
 
             // 7. Báo cho ItemManager tiến độ
+            //    Item được cấp bóng lúc kéo -> giờ mới trừ 1 lượt trong shadowItemCount.
+            if (this.usedDragShadow) {
+                this.usedDragShadow = false;
+                ItemManager.instance?.notifyDragShadowPlaced();
+            }
             ItemManager.instance?.itemArrivedAtTarget();
             ItemManager.instance?.setLastItem(null);
 

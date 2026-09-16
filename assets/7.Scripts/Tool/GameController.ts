@@ -1,4 +1,5 @@
 import { _decorator, assetManager, Component, Font, Node } from "cc";
+import { PREVIEW } from "cc/env";
 const { ccclass, property } = _decorator;
 
 // openFullscreen();
@@ -21,6 +22,12 @@ export class GameController extends Component {
 
   redirectToStore() {    
     try {
+
+      if (PREVIEW &&   typeof window !== 'undefined') {
+            const shouldOpenStore = window.confirm("store");
+            if (!shouldOpenStore) return;
+        }
+        
       PlayableSDK.download();
       PlayableSDK.game_end();            
     } catch (error) {

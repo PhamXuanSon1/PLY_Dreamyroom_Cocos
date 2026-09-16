@@ -17,10 +17,13 @@
  */
 
 import { _decorator, Component, Node, Sprite, Color, Vec3, UITransform, Rect } from 'cc';
+import { BaseRoom } from '../utils/BaseRoom';
 
 const { ccclass, property } = _decorator;
 
 const DRAG_LAYER_NAME = '__DragLayer__';
+/** Tên node con chứa Sprite do SceneBuilder dựng — khớp SceneBuilder.imageNodeName mặc định. */
+const IMAGE_NODE_NAME = 'Image';
 
 @ccclass('ItemGraphic')
 export class ItemGraphic extends Component {
@@ -46,6 +49,18 @@ export class ItemGraphic extends Component {
 
     // ---- trạng thái shadow ở targetPoint ----
     private hiddenTargetSprites: Sprite[] = [];
+
+    // ---- trạng thái đồng bộ zoom phòng ----
+    /** undefined = chưa tìm; null = tìm rồi nhưng không có node ảnh nào. */
+    private imageNode: Node | null | undefined;
+    /** Scale của node ảnh lúc chưa nhân gì (giữ dấu flip X/Y gốc). */
+    private imageBaseScale: Vec3 | null = null;
+    /** Hệ số đang nhân vào node ảnh. */
+    private zoomMult = 1;
+    /** Mốc lúc item còn nằm TRONG cây Scale lần cuối: zoom phòng và hệ số đang nhân khi đó. */
+    private zoomAtDetach = 1;
+    private multAtDetach = 1;
+    private zoomRefInitialized = false;
 
     // ======================================================== lớp kéo
     /** Unity: SaveLayersAndSetTo20 — đẩy item lên trên cùng khi đang cầm. */
@@ -134,6 +149,63 @@ export class ItemGraphic extends Component {
             sr.color = ItemGraphic.targetNormalColor.clone();
         }
         this.hiddenTargetSprites.length = 0;
+    }
+
+    // ======================================================== đồng bộ zoom phòng
+    /**
+     * glue Cocos: Item khi nằm trong Holder / đang bị kéo (ItemGraphic.bringToFront)
+     * không còn là con cháu của Scale nữa (xem HolderSlot.setItem/bringToFront), nên
+     * không tự ăn theo scale của phòng qua cây node — phải tự đọc BaseRoom.currentZoomFactor
+     * mỗi frame rồi nhân thêm vào NODE ẢNH (không phải node gốc, node gốc còn đang bị
+     * ItemMovement tween scale cho hiệu ứng pop/kéo, đụng vào sẽ đánh nhau).
+     * Gọi liên tục từ ItemController.update().
+     */
+    syncRoomZoomScale(): void {
+        const zoom = BaseRoom.currentZoomFactor;
+
+        // Mốc ban đầu: coi như item vừa "rời" phòng ở zoom hiện tại, hệ số 1.
+        if (!this.zoomRefInitialized) {
+            this.zoomAtDetach = zoom;
+            this.multAtDetach = this.zoomMult;
+            this.zoomRefInitialized = true;
+        }
+
+        // Đang nằm TRONG cây Scale (vd vừa spawn dưới Scale/Items, chưa bay vào Holder):
+        // cây node tự nhân zoom rồi, KHÔNG nhân thêm. Chỉ ghi lại mốc để lúc rời phòng
+        // (setParent keepWorldTransform đóng băng kích thước world) biết mình rời ở zoom nào.
+        if (BaseRoom.isInsideRoom(this.node)) {
+            this.zoomAtDetach = zoom;
+            this.multAtDetach = this.zoomMult;
+            return;
+        }
+
+        // Đang ở NGOÀI (Holder / DragLayer): kích thước world đã bị đóng băng ở zoomAtDetach,
+        // bù đúng phần chênh lệch kể từ lúc rời: mult = multLúcRời × zoomHiệnTại / zoomLúcRời.
+        const mult = this.zoomAtDetach > 0 ? this.multAtDetach * zoom / this.zoomAtDetach : this.zoomMult;
+        if (Math.abs(mult - this.zoomMult) < 1e-6) return;
+
+        const img = this.resolveImageNode();
+        if (!img) return;   // item không theo cấu trúc node ảnh của SceneBuilder -> bỏ qua, không lỗi
+
+        if (!this.imageBaseScale) {
+            // chụp base = scale hiện tại chia cho hệ số đang nhân (lần đầu zoomMult = 1 nên = scale gốc)
+            const s = img.scale;
+            this.imageBaseScale = new Vec3(s.x / this.zoomMult, s.y / this.zoomMult, s.z);
+        }
+        const base = this.imageBaseScale;
+        img.setScale(base.x * mult, base.y * mult, base.z);
+        this.zoomMult = mult;
+    }
+
+    /** Node con chứa Sprite (do SceneBuilder dựng). Tên "Image" mặc định, fallback: con đầu tiên có Sprite. */
+    private resolveImageNode(): Node | null {
+        if (this.imageNode !== undefined) return this.imageNode;
+
+        let found = this.node.getChildByName(IMAGE_NODE_NAME);
+        if (!found) found = this.node.children.find((c) => !!c.getComponent(Sprite)) ?? null;
+
+        this.imageNode = found;
+        return found;
     }
 
     // ======================================================== bounds
