@@ -6333,148 +6333,42 @@
     "versionCode": 1
   },
   "4404a559-3f0a-4791-a785-4e126db07670": {
-    "url": "db://assets/resources/art/sprites_PLY27",
+    "url": "db://assets/3.Sprites/sprites_PLY27",
     "value": {},
     "versionCode": 1
   },
   "ba36b36e-ff8d-41b8-a0b3-dd13ce0bb891": {
     "url": "db://assets/Prefab/Scale.prefab",
-    "value": {
-      "depends": [
-        "ad2dfe62-fb97-4680-ab98-981f857b5699@f9941",
-        "78672fd4-754b-431c-9ba6-cd64553928e9@f9941",
-        "f3d640c6-6905-42d0-8f0d-610c0139e8eb@f9941",
-        "135908e5-9cd2-4684-93b7-c0e981751453@f9941",
-        "ca9a7ec7-83b0-4ddb-9471-f2addc6d129c@f9941",
-        "f6daa9ea-a84e-45fb-b612-51431bfadf5c@f9941",
-        "51bb0c7e-167b-40ce-bac8-555a768734f6@f9941",
-        "4d605646-06cd-418a-80e6-4c08b8311b53@f9941",
-        "fa40bfef-2081-4f9a-8a86-5cf2d378faf4@f9941",
-        "13b9a22a-7c7a-43e5-b106-28b4503e82cd@f9941",
-        "46a8f512-3c62-4e9c-b6f4-c6d41ddd74cb@f9941",
-        "3c7b24a8-812b-4822-a609-1ce7a358b121@f9941",
-        "bb27a39a-8fb4-4d80-80e6-3f5ed2a76f92@f9941",
-        "47bd3384-fa05-4c5d-97b5-bedec4a96069@f9941",
-        "d7645c7d-29e6-432f-997b-6b04a40124f0@f9941",
-        "94b0cb94-5e59-4191-8fa2-438bcf53d080@f9941",
-        "ee8991fc-4862-4ea0-abb1-44beab205f66@f9941",
-        "bc6f84ee-e31b-4995-a80d-217dbb32ee9d@f9941",
-        "17b31e88-3c54-4c27-82a8-77d0028dbeb7@f9941",
-        "1ba89609-ba1d-4291-858e-29440835bb9c@f9941",
-        "e1ddc9b0-c973-415b-b321-401709eab65f@f9941",
-        "1933d16a-867a-4d08-999a-0a9c56f028a0@f9941",
-        "3ea13b6b-acee-4441-ac28-da1c5877a5f3@f9941",
-        "dcf70a66-5253-46ac-b1f0-09685aff25ec@f9941",
-        "ff88da69-70a9-4653-8229-2e7361a55733@f9941",
-        "d117280a-74ae-4b93-b26f-40a2ed085afd@f9941",
-        "1d4ed42a-0236-4aca-b96a-9ad714354089@f9941",
-        "d831036c-416e-49d4-a2d1-af469d82147a@f9941",
-        "4150757e-4f4d-473c-b0dc-ac82f987dd25@f9941",
-        "aecae65b-6801-4ad7-a71d-f3b9ed1b2f1c@f9941",
-        "3fe2f5e5-10f0-4abc-9ed5-5fa2dcc9c081@f9941",
-        "275c78eb-fef6-4dad-a1ed-4607c7353b64@f9941",
-        "419333d9-4f45-4dbf-a9c4-3a1d290c7275@f9941",
-        "783ad576-16ca-4167-991c-ed6b721502c9@f9941",
-        "c033a67a-b219-43d5-a251-416482f9b8c3@f9941",
-        "e502b04b-550b-4cba-87ca-621681005b1e@f9941",
-        "53e35ec8-99fa-42a5-8c13-510162ce8d86@f9941",
-        "09044d39-ab7c-41df-ac46-9b125a21747d@f9941",
-        "ab825b8c-8f99-4204-a893-f5d71c161a36@f9941",
-        "9fcc9a81-acb4-46d2-b7de-454b47371b91@f9941",
-        "70af7fd7-390e-49ef-86a6-723e98e28856@f9941",
-        "4f1a0104-a984-448b-97a3-7a4faa87b1dd@f9941",
-        "4f91f0a8-075c-45cb-b9ce-eb509918b151@f9941",
-        "9ae8e61b-2bb8-435e-977c-61b8186aa7a9@f9941",
-        "602bf625-fddd-4df3-9a1d-891ab2bd40f4@f9941",
-        "8ed915e1-d254-46bd-8954-7474b0d721f5@f9941",
-        "81a604ff-270e-4e90-9d03-980f26ed6bb5@f9941",
-        "222d54aa-fca9-4f32-870d-cef3fbc304a7@f9941",
-        "297df66e-66ac-4cd4-b6fa-7f08d8a295a8@f9941",
-        "23212d6b-cdcb-41fe-bd47-9f315edcf909@f9941",
-        "90817c9c-3708-48e5-93ab-debc4fceb61a@f9941",
-        "9707a2ab-7efa-41ea-9bd4-954c835b1195@f9941",
-        "d21d7809-61df-46c9-b376-ad3261f716a3@f9941",
-        "6fa4637f-0744-4803-800c-605380520705@f9941",
-        "4a3ba973-b312-4c12-a7db-b7869386981b@f9941",
-        "4dc80ef3-ebea-4660-b20d-57213200a5c8@f9941",
-        "d504eff8-f5ac-4158-bf64-8ccaa34d2033@f9941",
-        "8065c53c-17e7-4201-9d9f-ed380f65cc01@f9941",
-        "63c1d583-0f3e-4215-870e-fdbb06398b79@f9941",
-        "46fc6e39-2e6b-45f0-8165-9c5d45a8d991@f9941",
-        "48145284-ec88-477d-81b0-90ebd31ee0bb@f9941",
-        "aa6c730e-aad8-4c81-a16c-435ddbee7f89@f9941",
-        "9f75935c-e772-49ca-a1d1-146f7009766f@f9941",
-        "4501e746-bd29-4304-af6a-162068c2df55@f9941",
-        "805732ba-de43-4553-82b2-639b0392b9ba@f9941",
-        "175f2431-bc42-413e-ab80-02d8fe45c634@f9941",
-        "768f254a-3426-499e-a891-18e22a5b1f01@f9941",
-        "7133b0e4-6800-4b68-a47b-353244bb9e74@f9941",
-        "c6717c78-9257-44b4-8128-1726911ba4d0@f9941",
-        "15199150-f3b3-49ed-a217-d54854d423a2@f9941",
-        "f912569a-0b24-4582-927e-c71873eb70c4@f9941",
-        "6082c05e-3e4d-4d43-9eb4-f4d9ca28b9db@f9941",
-        "5edf0035-2a38-4133-8e30-02961fd0a25b@f9941",
-        "ef1dd6df-3fd9-494a-9c9f-8bf509eeeed0@f9941",
-        "108f6235-5e98-485a-8b2e-52c90ad6454e@f9941",
-        "0bcfe1a7-891c-4583-8efb-f1961e3b0a9a@f9941",
-        "a1ffd308-3ce9-47ea-95f3-b2ce0054526f@f9941",
-        "da7d9b56-2b76-4bc8-87a4-bcae7521a309@f9941",
-        "fa7cd96e-e667-454e-afec-ebc533bf99b3@f9941",
-        "64830ec0-9f55-46a6-b539-2bea00dfc54d@f9941",
-        "dc8a88ce-382f-4701-a4e6-3706106202c5@f9941",
-        "3bf39f04-03db-4fbe-8282-a9693e9afde7@f9941",
-        "5e736ea4-aed5-48eb-bf3c-054923de3742@f9941",
-        "fd4a9ba3-7071-489c-bfc5-d9ca04c59ead@f9941",
-        "a256e4a1-78d3-4f2c-b725-fb6f9c059542@f9941",
-        "da4cbe57-afae-4083-9df6-6913a047a62d@f9941",
-        "b0b4eba7-c3da-44dd-b316-7f588446381b@f9941",
-        "f1430a48-0efc-4706-933b-87958db48c39@f9941",
-        "0311ed6b-538f-46bc-8526-d82fda25f4ec@f9941",
-        "5e703916-a26c-4a4f-ab96-2332cc8a4f15@f9941",
-        "6a0cc616-ea05-4c58-aaa8-e5e4f249f39c@f9941",
-        "d5bd9d97-8886-4d8d-9cf4-1e3c54aeff7d@f9941"
-      ],
-      "dependScripts": []
-    },
+    "value": {},
     "versionCode": 2
   },
   "0311ed6b-538f-46bc-8526-d82fda25f4ec": {
-    "url": "db://assets/resources/art/sprites_PLY27/2.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/2.png",
+    "value": {},
     "versionCode": 1
   },
   "bb27a39a-8fb4-4d80-80e6-3f5ed2a76f92": {
-    "url": "db://assets/resources/art/sprites_PLY27/BaseRoom.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/BaseRoom.png",
+    "value": {},
     "versionCode": 1
   },
   "8ed915e1-d254-46bd-8954-7474b0d721f5": {
-    "url": "db://assets/resources/art/sprites_PLY27/Bear4Place.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Bear4Place.png",
+    "value": {},
     "versionCode": 1
   },
   "81a604ff-270e-4e90-9d03-980f26ed6bb5": {
-    "url": "db://assets/resources/art/sprites_PLY27/Bear5Place.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Bear5Place.png",
+    "value": {},
     "versionCode": 1
   },
   "222d54aa-fca9-4f32-870d-cef3fbc304a7": {
-    "url": "db://assets/resources/art/sprites_PLY27/Bear6Place.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Bear6Place.png",
+    "value": {},
     "versionCode": 1
   },
   "8ed915e1-d254-46bd-8954-7474b0d721f5@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Bear4Place.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Bear4Place.png@6c48a",
     "value": {
       "depends": [
         "8ed915e1-d254-46bd-8954-7474b0d721f5"
@@ -6483,7 +6377,7 @@
     "versionCode": 1
   },
   "0311ed6b-538f-46bc-8526-d82fda25f4ec@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/2.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/2.png@6c48a",
     "value": {
       "depends": [
         "0311ed6b-538f-46bc-8526-d82fda25f4ec"
@@ -6492,7 +6386,7 @@
     "versionCode": 1
   },
   "81a604ff-270e-4e90-9d03-980f26ed6bb5@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Bear5Place.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Bear5Place.png@6c48a",
     "value": {
       "depends": [
         "81a604ff-270e-4e90-9d03-980f26ed6bb5"
@@ -6501,7 +6395,7 @@
     "versionCode": 1
   },
   "8ed915e1-d254-46bd-8954-7474b0d721f5@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Bear4Place.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Bear4Place.png@f9941",
     "value": {
       "depends": [
         "8ed915e1-d254-46bd-8954-7474b0d721f5@6c48a"
@@ -6510,7 +6404,7 @@
     "versionCode": 1
   },
   "0311ed6b-538f-46bc-8526-d82fda25f4ec@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/2.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/2.png@f9941",
     "value": {
       "depends": [
         "0311ed6b-538f-46bc-8526-d82fda25f4ec@6c48a"
@@ -6519,21 +6413,17 @@
     "versionCode": 1
   },
   "4dc80ef3-ebea-4660-b20d-57213200a5c8": {
-    "url": "db://assets/resources/art/sprites_PLY27/bed.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/bed.png",
+    "value": {},
     "versionCode": 1
   },
   "ad2dfe62-fb97-4680-ab98-981f857b5699": {
-    "url": "db://assets/resources/art/sprites_PLY27/BG.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/BG.png",
+    "value": {},
     "versionCode": 1
   },
   "222d54aa-fca9-4f32-870d-cef3fbc304a7@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Bear6Place.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Bear6Place.png@6c48a",
     "value": {
       "depends": [
         "222d54aa-fca9-4f32-870d-cef3fbc304a7"
@@ -6542,7 +6432,7 @@
     "versionCode": 1
   },
   "222d54aa-fca9-4f32-870d-cef3fbc304a7@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Bear6Place.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Bear6Place.png@f9941",
     "value": {
       "depends": [
         "222d54aa-fca9-4f32-870d-cef3fbc304a7@6c48a"
@@ -6551,7 +6441,7 @@
     "versionCode": 1
   },
   "81a604ff-270e-4e90-9d03-980f26ed6bb5@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Bear5Place.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Bear5Place.png@f9941",
     "value": {
       "depends": [
         "81a604ff-270e-4e90-9d03-980f26ed6bb5@6c48a"
@@ -6560,21 +6450,17 @@
     "versionCode": 1
   },
   "4f1a0104-a984-448b-97a3-7a4faa87b1dd": {
-    "url": "db://assets/resources/art/sprites_PLY27/book.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/book.png",
+    "value": {},
     "versionCode": 1
   },
   "70af7fd7-390e-49ef-86a6-723e98e28856": {
-    "url": "db://assets/resources/art/sprites_PLY27/books.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/books.png",
+    "value": {},
     "versionCode": 1
   },
   "ad2dfe62-fb97-4680-ab98-981f857b5699@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/BG.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/BG.png@6c48a",
     "value": {
       "depends": [
         "ad2dfe62-fb97-4680-ab98-981f857b5699"
@@ -6583,7 +6469,7 @@
     "versionCode": 1
   },
   "4f1a0104-a984-448b-97a3-7a4faa87b1dd@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/book.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/book.png@6c48a",
     "value": {
       "depends": [
         "4f1a0104-a984-448b-97a3-7a4faa87b1dd"
@@ -6592,7 +6478,7 @@
     "versionCode": 1
   },
   "70af7fd7-390e-49ef-86a6-723e98e28856@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/books.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/books.png@6c48a",
     "value": {
       "depends": [
         "70af7fd7-390e-49ef-86a6-723e98e28856"
@@ -6601,7 +6487,7 @@
     "versionCode": 1
   },
   "4f1a0104-a984-448b-97a3-7a4faa87b1dd@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/book.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/book.png@f9941",
     "value": {
       "depends": [
         "4f1a0104-a984-448b-97a3-7a4faa87b1dd@6c48a"
@@ -6610,14 +6496,12 @@
     "versionCode": 1
   },
   "fd4a9ba3-7071-489c-bfc5-d9ca04c59ead": {
-    "url": "db://assets/resources/art/sprites_PLY27/cake1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/cake1.png",
+    "value": {},
     "versionCode": 1
   },
   "70af7fd7-390e-49ef-86a6-723e98e28856@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/books.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/books.png@f9941",
     "value": {
       "depends": [
         "70af7fd7-390e-49ef-86a6-723e98e28856@6c48a"
@@ -6626,7 +6510,7 @@
     "versionCode": 1
   },
   "ad2dfe62-fb97-4680-ab98-981f857b5699@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/BG.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/BG.png@f9941",
     "value": {
       "depends": [
         "ad2dfe62-fb97-4680-ab98-981f857b5699@6c48a"
@@ -6635,21 +6519,17 @@
     "versionCode": 1
   },
   "8065c53c-17e7-4201-9d9f-ed380f65cc01": {
-    "url": "db://assets/resources/art/sprites_PLY27/candles1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/candles1.png",
+    "value": {},
     "versionCode": 1
   },
   "23212d6b-cdcb-41fe-bd47-9f315edcf909": {
-    "url": "db://assets/resources/art/sprites_PLY27/candles2.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/candles2.png",
+    "value": {},
     "versionCode": 1
   },
   "4dc80ef3-ebea-4660-b20d-57213200a5c8@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/bed.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/bed.png@6c48a",
     "value": {
       "depends": [
         "4dc80ef3-ebea-4660-b20d-57213200a5c8"
@@ -6658,7 +6538,7 @@
     "versionCode": 1
   },
   "bb27a39a-8fb4-4d80-80e6-3f5ed2a76f92@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/BaseRoom.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/BaseRoom.png@6c48a",
     "value": {
       "depends": [
         "bb27a39a-8fb4-4d80-80e6-3f5ed2a76f92"
@@ -6667,7 +6547,7 @@
     "versionCode": 1
   },
   "4dc80ef3-ebea-4660-b20d-57213200a5c8@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/bed.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/bed.png@f9941",
     "value": {
       "depends": [
         "4dc80ef3-ebea-4660-b20d-57213200a5c8@6c48a"
@@ -6676,14 +6556,12 @@
     "versionCode": 1
   },
   "3ea13b6b-acee-4441-ac28-da1c5877a5f3": {
-    "url": "db://assets/resources/art/sprites_PLY27/chair1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/chair1.png",
+    "value": {},
     "versionCode": 1
   },
   "fd4a9ba3-7071-489c-bfc5-d9ca04c59ead@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/cake1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/cake1.png@6c48a",
     "value": {
       "depends": [
         "fd4a9ba3-7071-489c-bfc5-d9ca04c59ead"
@@ -6692,7 +6570,7 @@
     "versionCode": 1
   },
   "fd4a9ba3-7071-489c-bfc5-d9ca04c59ead@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/cake1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/cake1.png@f9941",
     "value": {
       "depends": [
         "fd4a9ba3-7071-489c-bfc5-d9ca04c59ead@6c48a"
@@ -6701,14 +6579,12 @@
     "versionCode": 1
   },
   "dcf70a66-5253-46ac-b1f0-09685aff25ec": {
-    "url": "db://assets/resources/art/sprites_PLY27/chair_2.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/chair_2.png",
+    "value": {},
     "versionCode": 1
   },
   "23212d6b-cdcb-41fe-bd47-9f315edcf909@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/candles2.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/candles2.png@6c48a",
     "value": {
       "depends": [
         "23212d6b-cdcb-41fe-bd47-9f315edcf909"
@@ -6717,7 +6593,7 @@
     "versionCode": 1
   },
   "8065c53c-17e7-4201-9d9f-ed380f65cc01@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/candles1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/candles1.png@6c48a",
     "value": {
       "depends": [
         "8065c53c-17e7-4201-9d9f-ed380f65cc01"
@@ -6726,7 +6602,7 @@
     "versionCode": 1
   },
   "8065c53c-17e7-4201-9d9f-ed380f65cc01@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/candles1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/candles1.png@f9941",
     "value": {
       "depends": [
         "8065c53c-17e7-4201-9d9f-ed380f65cc01@6c48a"
@@ -6735,14 +6611,12 @@
     "versionCode": 1
   },
   "63c1d583-0f3e-4215-870e-fdbb06398b79": {
-    "url": "db://assets/resources/art/sprites_PLY27/chan-1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/chan-1.png",
+    "value": {},
     "versionCode": 1
   },
   "23212d6b-cdcb-41fe-bd47-9f315edcf909@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/candles2.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/candles2.png@f9941",
     "value": {
       "depends": [
         "23212d6b-cdcb-41fe-bd47-9f315edcf909@6c48a"
@@ -6751,14 +6625,12 @@
     "versionCode": 1
   },
   "d7645c7d-29e6-432f-997b-6b04a40124f0": {
-    "url": "db://assets/resources/art/sprites_PLY27/chan_full.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/chan_full.png",
+    "value": {},
     "versionCode": 1
   },
   "3ea13b6b-acee-4441-ac28-da1c5877a5f3@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/chair1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/chair1.png@6c48a",
     "value": {
       "depends": [
         "3ea13b6b-acee-4441-ac28-da1c5877a5f3"
@@ -6767,7 +6639,7 @@
     "versionCode": 1
   },
   "bb27a39a-8fb4-4d80-80e6-3f5ed2a76f92@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/BaseRoom.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/BaseRoom.png@f9941",
     "value": {
       "depends": [
         "bb27a39a-8fb4-4d80-80e6-3f5ed2a76f92@6c48a"
@@ -6776,14 +6648,12 @@
     "versionCode": 1
   },
   "175f2431-bc42-413e-ab80-02d8fe45c634": {
-    "url": "db://assets/resources/art/sprites_PLY27/chan_shadow.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/chan_shadow.png",
+    "value": {},
     "versionCode": 1
   },
   "3ea13b6b-acee-4441-ac28-da1c5877a5f3@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/chair1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/chair1.png@f9941",
     "value": {
       "depends": [
         "3ea13b6b-acee-4441-ac28-da1c5877a5f3@6c48a"
@@ -6794,10 +6664,10 @@
   "aa6c730e-aad8-4c81-a16c-435ddbee7f89": {
     "url": "db://assets/resources/art/sprites_PLY27/chocolate_box.png",
     "value": {},
-    "versionCode": 0
+    "versionCode": 1
   },
   "dcf70a66-5253-46ac-b1f0-09685aff25ec@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/chair_2.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/chair_2.png@6c48a",
     "value": {
       "depends": [
         "dcf70a66-5253-46ac-b1f0-09685aff25ec"
@@ -6806,7 +6676,7 @@
     "versionCode": 1
   },
   "dcf70a66-5253-46ac-b1f0-09685aff25ec@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/chair_2.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/chair_2.png@f9941",
     "value": {
       "depends": [
         "dcf70a66-5253-46ac-b1f0-09685aff25ec@6c48a"
@@ -6815,21 +6685,17 @@
     "versionCode": 1
   },
   "47bd3384-fa05-4c5d-97b5-bedec4a96069": {
-    "url": "db://assets/resources/art/sprites_PLY27/dem-full.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/dem-full.png",
+    "value": {},
     "versionCode": 1
   },
   "5e736ea4-aed5-48eb-bf3c-054923de3742": {
-    "url": "db://assets/resources/art/sprites_PLY27/dem_giuong_copy.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/dem_giuong_copy.png",
+    "value": {},
     "versionCode": 1
   },
   "d7645c7d-29e6-432f-997b-6b04a40124f0@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/chan_full.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/chan_full.png@6c48a",
     "value": {
       "depends": [
         "d7645c7d-29e6-432f-997b-6b04a40124f0"
@@ -6838,7 +6704,7 @@
     "versionCode": 1
   },
   "175f2431-bc42-413e-ab80-02d8fe45c634@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/chan_shadow.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/chan_shadow.png@6c48a",
     "value": {
       "depends": [
         "175f2431-bc42-413e-ab80-02d8fe45c634"
@@ -6847,7 +6713,7 @@
     "versionCode": 1
   },
   "63c1d583-0f3e-4215-870e-fdbb06398b79@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/chan-1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/chan-1.png@6c48a",
     "value": {
       "depends": [
         "63c1d583-0f3e-4215-870e-fdbb06398b79"
@@ -6856,7 +6722,7 @@
     "versionCode": 1
   },
   "d7645c7d-29e6-432f-997b-6b04a40124f0@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/chan_full.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/chan_full.png@f9941",
     "value": {
       "depends": [
         "d7645c7d-29e6-432f-997b-6b04a40124f0@6c48a"
@@ -6865,14 +6731,12 @@
     "versionCode": 1
   },
   "d504eff8-f5ac-4158-bf64-8ccaa34d2033": {
-    "url": "db://assets/resources/art/sprites_PLY27/dem_giuong_copy_2.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/dem_giuong_copy_2.png",
+    "value": {},
     "versionCode": 1
   },
   "175f2431-bc42-413e-ab80-02d8fe45c634@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/chan_shadow.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/chan_shadow.png@f9941",
     "value": {
       "depends": [
         "175f2431-bc42-413e-ab80-02d8fe45c634@6c48a"
@@ -6881,14 +6745,12 @@
     "versionCode": 1
   },
   "419333d9-4f45-4dbf-a9c4-3a1d290c7275": {
-    "url": "db://assets/resources/art/sprites_PLY27/E.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/E.png",
+    "value": {},
     "versionCode": 1
   },
   "47bd3384-fa05-4c5d-97b5-bedec4a96069@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/dem-full.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/dem-full.png@6c48a",
     "value": {
       "depends": [
         "47bd3384-fa05-4c5d-97b5-bedec4a96069"
@@ -6897,7 +6759,7 @@
     "versionCode": 1
   },
   "63c1d583-0f3e-4215-870e-fdbb06398b79@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/chan-1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/chan-1.png@f9941",
     "value": {
       "depends": [
         "63c1d583-0f3e-4215-870e-fdbb06398b79@6c48a"
@@ -6906,14 +6768,12 @@
     "versionCode": 1
   },
   "fa7cd96e-e667-454e-afec-ebc533bf99b3": {
-    "url": "db://assets/resources/art/sprites_PLY27/E_sd.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/E_sd.png",
+    "value": {},
     "versionCode": 1
   },
   "47bd3384-fa05-4c5d-97b5-bedec4a96069@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/dem-full.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/dem-full.png@f9941",
     "value": {
       "depends": [
         "47bd3384-fa05-4c5d-97b5-bedec4a96069@6c48a"
@@ -6922,14 +6782,12 @@
     "versionCode": 1
   },
   "d21d7809-61df-46c9-b376-ad3261f716a3": {
-    "url": "db://assets/resources/art/sprites_PLY27/ghe_trai_tim.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/ghe_trai_tim.png",
+    "value": {},
     "versionCode": 1
   },
   "5e736ea4-aed5-48eb-bf3c-054923de3742@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/dem_giuong_copy.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/dem_giuong_copy.png@6c48a",
     "value": {
       "depends": [
         "5e736ea4-aed5-48eb-bf3c-054923de3742"
@@ -6938,7 +6796,7 @@
     "versionCode": 1
   },
   "d504eff8-f5ac-4158-bf64-8ccaa34d2033@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/dem_giuong_copy_2.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/dem_giuong_copy_2.png@6c48a",
     "value": {
       "depends": [
         "d504eff8-f5ac-4158-bf64-8ccaa34d2033"
@@ -6947,7 +6805,7 @@
     "versionCode": 1
   },
   "419333d9-4f45-4dbf-a9c4-3a1d290c7275@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/E.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/E.png@6c48a",
     "value": {
       "depends": [
         "419333d9-4f45-4dbf-a9c4-3a1d290c7275"
@@ -6956,7 +6814,7 @@
     "versionCode": 1
   },
   "fa7cd96e-e667-454e-afec-ebc533bf99b3@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/E_sd.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/E_sd.png@6c48a",
     "value": {
       "depends": [
         "fa7cd96e-e667-454e-afec-ebc533bf99b3"
@@ -6965,7 +6823,7 @@
     "versionCode": 1
   },
   "5e736ea4-aed5-48eb-bf3c-054923de3742@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/dem_giuong_copy.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/dem_giuong_copy.png@f9941",
     "value": {
       "depends": [
         "5e736ea4-aed5-48eb-bf3c-054923de3742@6c48a"
@@ -6974,14 +6832,12 @@
     "versionCode": 1
   },
   "ab825b8c-8f99-4204-a893-f5d71c161a36": {
-    "url": "db://assets/resources/art/sprites_PLY27/gift.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/gift.png",
+    "value": {},
     "versionCode": 1
   },
   "d504eff8-f5ac-4158-bf64-8ccaa34d2033@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/dem_giuong_copy_2.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/dem_giuong_copy_2.png@f9941",
     "value": {
       "depends": [
         "d504eff8-f5ac-4158-bf64-8ccaa34d2033@6c48a"
@@ -6990,14 +6846,12 @@
     "versionCode": 1
   },
   "17b31e88-3c54-4c27-82a8-77d0028dbeb7": {
-    "url": "db://assets/resources/art/sprites_PLY27/GlassFull.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/GlassFull.png",
+    "value": {},
     "versionCode": 1
   },
   "fa7cd96e-e667-454e-afec-ebc533bf99b3@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/E_sd.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/E_sd.png@f9941",
     "value": {
       "depends": [
         "fa7cd96e-e667-454e-afec-ebc533bf99b3@6c48a"
@@ -7006,14 +6860,12 @@
     "versionCode": 1
   },
   "f1430a48-0efc-4706-933b-87958db48c39": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi1.png",
+    "value": {},
     "versionCode": 1
   },
   "d21d7809-61df-46c9-b376-ad3261f716a3@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/ghe_trai_tim.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/ghe_trai_tim.png@6c48a",
     "value": {
       "depends": [
         "d21d7809-61df-46c9-b376-ad3261f716a3"
@@ -7022,7 +6874,7 @@
     "versionCode": 1
   },
   "d21d7809-61df-46c9-b376-ad3261f716a3@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/ghe_trai_tim.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/ghe_trai_tim.png@f9941",
     "value": {
       "depends": [
         "d21d7809-61df-46c9-b376-ad3261f716a3@6c48a"
@@ -7031,14 +6883,12 @@
     "versionCode": 1
   },
   "94b0cb94-5e59-4191-8fa2-438bcf53d080": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi2_full.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi2_full.png",
+    "value": {},
     "versionCode": 1
   },
   "419333d9-4f45-4dbf-a9c4-3a1d290c7275@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/E.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/E.png@f9941",
     "value": {
       "depends": [
         "419333d9-4f45-4dbf-a9c4-3a1d290c7275@6c48a"
@@ -7047,14 +6897,12 @@
     "versionCode": 1
   },
   "46fc6e39-2e6b-45f0-8165-9c5d45a8d991": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi3.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi3.png",
+    "value": {},
     "versionCode": 1
   },
   "ab825b8c-8f99-4204-a893-f5d71c161a36@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/gift.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/gift.png@6c48a",
     "value": {
       "depends": [
         "ab825b8c-8f99-4204-a893-f5d71c161a36"
@@ -7063,7 +6911,7 @@
     "versionCode": 1
   },
   "f1430a48-0efc-4706-933b-87958db48c39@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi1.png@6c48a",
     "value": {
       "depends": [
         "f1430a48-0efc-4706-933b-87958db48c39"
@@ -7072,7 +6920,7 @@
     "versionCode": 1
   },
   "ab825b8c-8f99-4204-a893-f5d71c161a36@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/gift.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/gift.png@f9941",
     "value": {
       "depends": [
         "ab825b8c-8f99-4204-a893-f5d71c161a36@6c48a"
@@ -7081,14 +6929,12 @@
     "versionCode": 1
   },
   "6fa4637f-0744-4803-800c-605380520705": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_flower.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_flower.png",
+    "value": {},
     "versionCode": 1
   },
   "f1430a48-0efc-4706-933b-87958db48c39@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi1.png@f9941",
     "value": {
       "depends": [
         "f1430a48-0efc-4706-933b-87958db48c39@6c48a"
@@ -7097,14 +6943,12 @@
     "versionCode": 1
   },
   "da4cbe57-afae-4083-9df6-6913a047a62d": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_flower_shadow.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_flower_shadow.png",
+    "value": {},
     "versionCode": 1
   },
   "17b31e88-3c54-4c27-82a8-77d0028dbeb7@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/GlassFull.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/GlassFull.png@6c48a",
     "value": {
       "depends": [
         "17b31e88-3c54-4c27-82a8-77d0028dbeb7"
@@ -7113,7 +6957,7 @@
     "versionCode": 1
   },
   "94b0cb94-5e59-4191-8fa2-438bcf53d080@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi2_full.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi2_full.png@6c48a",
     "value": {
       "depends": [
         "94b0cb94-5e59-4191-8fa2-438bcf53d080"
@@ -7122,7 +6966,7 @@
     "versionCode": 1
   },
   "46fc6e39-2e6b-45f0-8165-9c5d45a8d991@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi3.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi3.png@6c48a",
     "value": {
       "depends": [
         "46fc6e39-2e6b-45f0-8165-9c5d45a8d991"
@@ -7131,7 +6975,7 @@
     "versionCode": 1
   },
   "94b0cb94-5e59-4191-8fa2-438bcf53d080@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi2_full.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi2_full.png@f9941",
     "value": {
       "depends": [
         "94b0cb94-5e59-4191-8fa2-438bcf53d080@6c48a"
@@ -7140,14 +6984,12 @@
     "versionCode": 1
   },
   "9fcc9a81-acb4-46d2-b7de-454b47371b91": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_window.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_window.png",
+    "value": {},
     "versionCode": 1
   },
   "17b31e88-3c54-4c27-82a8-77d0028dbeb7@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/GlassFull.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/GlassFull.png@f9941",
     "value": {
       "depends": [
         "17b31e88-3c54-4c27-82a8-77d0028dbeb7@6c48a"
@@ -7156,7 +6998,7 @@
     "versionCode": 1
   },
   "46fc6e39-2e6b-45f0-8165-9c5d45a8d991@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi3.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi3.png@f9941",
     "value": {
       "depends": [
         "46fc6e39-2e6b-45f0-8165-9c5d45a8d991@6c48a"
@@ -7165,21 +7007,17 @@
     "versionCode": 1
   },
   "ef1dd6df-3fd9-494a-9c9f-8bf509eeeed0": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_window_shadow.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_window_shadow.png",
+    "value": {},
     "versionCode": 1
   },
   "53e35ec8-99fa-42a5-8c13-510162ce8d86": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_11.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_11.png",
+    "value": {},
     "versionCode": 1
   },
   "6fa4637f-0744-4803-800c-605380520705@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_flower.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_flower.png@6c48a",
     "value": {
       "depends": [
         "6fa4637f-0744-4803-800c-605380520705"
@@ -7188,7 +7026,7 @@
     "versionCode": 1
   },
   "da4cbe57-afae-4083-9df6-6913a047a62d@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_flower_shadow.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_flower_shadow.png@6c48a",
     "value": {
       "depends": [
         "da4cbe57-afae-4083-9df6-6913a047a62d"
@@ -7197,7 +7035,7 @@
     "versionCode": 1
   },
   "6fa4637f-0744-4803-800c-605380520705@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_flower.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_flower.png@f9941",
     "value": {
       "depends": [
         "6fa4637f-0744-4803-800c-605380520705@6c48a"
@@ -7206,14 +7044,12 @@
     "versionCode": 1
   },
   "e502b04b-550b-4cba-87ca-621681005b1e": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_13.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_13.png",
+    "value": {},
     "versionCode": 1
   },
   "da4cbe57-afae-4083-9df6-6913a047a62d@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_flower_shadow.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_flower_shadow.png@f9941",
     "value": {
       "depends": [
         "da4cbe57-afae-4083-9df6-6913a047a62d@6c48a"
@@ -7222,14 +7058,12 @@
     "versionCode": 1
   },
   "90817c9c-3708-48e5-93ab-debc4fceb61a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_16.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_16.png",
+    "value": {},
     "versionCode": 1
   },
   "e502b04b-550b-4cba-87ca-621681005b1e@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_13.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_13.png@6c48a",
     "value": {
       "depends": [
         "e502b04b-550b-4cba-87ca-621681005b1e"
@@ -7238,7 +7072,7 @@
     "versionCode": 1
   },
   "90817c9c-3708-48e5-93ab-debc4fceb61a@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_16.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_16.png@6c48a",
     "value": {
       "depends": [
         "90817c9c-3708-48e5-93ab-debc4fceb61a"
@@ -7247,7 +7081,7 @@
     "versionCode": 1
   },
   "9fcc9a81-acb4-46d2-b7de-454b47371b91@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_window.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_window.png@6c48a",
     "value": {
       "depends": [
         "9fcc9a81-acb4-46d2-b7de-454b47371b91"
@@ -7256,7 +7090,7 @@
     "versionCode": 1
   },
   "53e35ec8-99fa-42a5-8c13-510162ce8d86@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_11.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_11.png@6c48a",
     "value": {
       "depends": [
         "53e35ec8-99fa-42a5-8c13-510162ce8d86"
@@ -7265,7 +7099,7 @@
     "versionCode": 1
   },
   "ef1dd6df-3fd9-494a-9c9f-8bf509eeeed0@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_window_shadow.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_window_shadow.png@6c48a",
     "value": {
       "depends": [
         "ef1dd6df-3fd9-494a-9c9f-8bf509eeeed0"
@@ -7274,7 +7108,7 @@
     "versionCode": 1
   },
   "9fcc9a81-acb4-46d2-b7de-454b47371b91@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_window.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_window.png@f9941",
     "value": {
       "depends": [
         "9fcc9a81-acb4-46d2-b7de-454b47371b91@6c48a"
@@ -7283,14 +7117,12 @@
     "versionCode": 1
   },
   "108f6235-5e98-485a-8b2e-52c90ad6454e": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_17_copy_1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_17_copy_1.png",
+    "value": {},
     "versionCode": 1
   },
   "90817c9c-3708-48e5-93ab-debc4fceb61a@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_16.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_16.png@f9941",
     "value": {
       "depends": [
         "90817c9c-3708-48e5-93ab-debc4fceb61a@6c48a"
@@ -7299,14 +7131,12 @@
     "versionCode": 1
   },
   "783ad576-16ca-4167-991c-ed6b721502c9": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_5_copy.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_5_copy.png",
+    "value": {},
     "versionCode": 1
   },
   "53e35ec8-99fa-42a5-8c13-510162ce8d86@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_11.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_11.png@f9941",
     "value": {
       "depends": [
         "53e35ec8-99fa-42a5-8c13-510162ce8d86@6c48a"
@@ -7315,7 +7145,7 @@
     "versionCode": 1
   },
   "ef1dd6df-3fd9-494a-9c9f-8bf509eeeed0@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/goi_window_shadow.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/goi_window_shadow.png@f9941",
     "value": {
       "depends": [
         "ef1dd6df-3fd9-494a-9c9f-8bf509eeeed0@6c48a"
@@ -7324,21 +7154,17 @@
     "versionCode": 1
   },
   "15199150-f3b3-49ed-a217-d54854d423a2": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_5_copy_2.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_5_copy_2.png",
+    "value": {},
     "versionCode": 1
   },
   "48145284-ec88-477d-81b0-90ebd31ee0bb": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_9.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_9.png",
+    "value": {},
     "versionCode": 1
   },
   "e502b04b-550b-4cba-87ca-621681005b1e@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_13.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_13.png@f9941",
     "value": {
       "depends": [
         "e502b04b-550b-4cba-87ca-621681005b1e@6c48a"
@@ -7347,14 +7173,12 @@
     "versionCode": 1
   },
   "b0b4eba7-c3da-44dd-b316-7f588446381b": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_9_copy.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_9_copy.png",
+    "value": {},
     "versionCode": 1
   },
   "108f6235-5e98-485a-8b2e-52c90ad6454e@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_17_copy_1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_17_copy_1.png@6c48a",
     "value": {
       "depends": [
         "108f6235-5e98-485a-8b2e-52c90ad6454e"
@@ -7363,7 +7187,7 @@
     "versionCode": 1
   },
   "783ad576-16ca-4167-991c-ed6b721502c9@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_5_copy.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_5_copy.png@6c48a",
     "value": {
       "depends": [
         "783ad576-16ca-4167-991c-ed6b721502c9"
@@ -7372,7 +7196,7 @@
     "versionCode": 1
   },
   "15199150-f3b3-49ed-a217-d54854d423a2@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_5_copy_2.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_5_copy_2.png@6c48a",
     "value": {
       "depends": [
         "15199150-f3b3-49ed-a217-d54854d423a2"
@@ -7381,7 +7205,7 @@
     "versionCode": 1
   },
   "48145284-ec88-477d-81b0-90ebd31ee0bb@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_9.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_9.png@6c48a",
     "value": {
       "depends": [
         "48145284-ec88-477d-81b0-90ebd31ee0bb"
@@ -7390,7 +7214,7 @@
     "versionCode": 1
   },
   "108f6235-5e98-485a-8b2e-52c90ad6454e@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_17_copy_1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_17_copy_1.png@f9941",
     "value": {
       "depends": [
         "108f6235-5e98-485a-8b2e-52c90ad6454e@6c48a"
@@ -7399,14 +7223,12 @@
     "versionCode": 1
   },
   "78672fd4-754b-431c-9ba6-cd64553928e9": {
-    "url": "db://assets/resources/art/sprites_PLY27/heart_tile.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/heart_tile.png",
+    "value": {},
     "versionCode": 1
   },
   "15199150-f3b3-49ed-a217-d54854d423a2@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_5_copy_2.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_5_copy_2.png@f9941",
     "value": {
       "depends": [
         "15199150-f3b3-49ed-a217-d54854d423a2@6c48a"
@@ -7415,7 +7237,7 @@
     "versionCode": 1
   },
   "783ad576-16ca-4167-991c-ed6b721502c9@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_5_copy.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_5_copy.png@f9941",
     "value": {
       "depends": [
         "783ad576-16ca-4167-991c-ed6b721502c9@6c48a"
@@ -7424,21 +7246,17 @@
     "versionCode": 1
   },
   "5e703916-a26c-4a4f-ab96-2332cc8a4f15": {
-    "url": "db://assets/resources/art/sprites_PLY27/Hue_Saturation_2.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Hue_Saturation_2.png",
+    "value": {},
     "versionCode": 1
   },
   "aecae65b-6801-4ad7-a71d-f3b9ed1b2f1c": {
-    "url": "db://assets/resources/art/sprites_PLY27/L.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/L.png",
+    "value": {},
     "versionCode": 1
   },
   "b0b4eba7-c3da-44dd-b316-7f588446381b@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_9_copy.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_9_copy.png@6c48a",
     "value": {
       "depends": [
         "b0b4eba7-c3da-44dd-b316-7f588446381b"
@@ -7447,7 +7265,7 @@
     "versionCode": 1
   },
   "48145284-ec88-477d-81b0-90ebd31ee0bb@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_9.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_9.png@f9941",
     "value": {
       "depends": [
         "48145284-ec88-477d-81b0-90ebd31ee0bb@6c48a"
@@ -7456,14 +7274,12 @@
     "versionCode": 1
   },
   "9707a2ab-7efa-41ea-9bd4-954c835b1195": {
-    "url": "db://assets/resources/art/sprites_PLY27/lamp.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/lamp.png",
+    "value": {},
     "versionCode": 1
   },
   "5e703916-a26c-4a4f-ab96-2332cc8a4f15@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Hue_Saturation_2.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Hue_Saturation_2.png@6c48a",
     "value": {
       "depends": [
         "5e703916-a26c-4a4f-ab96-2332cc8a4f15"
@@ -7472,7 +7288,7 @@
     "versionCode": 1
   },
   "aecae65b-6801-4ad7-a71d-f3b9ed1b2f1c@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/L.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/L.png@6c48a",
     "value": {
       "depends": [
         "aecae65b-6801-4ad7-a71d-f3b9ed1b2f1c"
@@ -7481,7 +7297,7 @@
     "versionCode": 1
   },
   "5e703916-a26c-4a4f-ab96-2332cc8a4f15@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Hue_Saturation_2.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Hue_Saturation_2.png@f9941",
     "value": {
       "depends": [
         "5e703916-a26c-4a4f-ab96-2332cc8a4f15@6c48a"
@@ -7490,14 +7306,12 @@
     "versionCode": 1
   },
   "9ae8e61b-2bb8-435e-977c-61b8186aa7a9": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_555.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_555.png",
+    "value": {},
     "versionCode": 1
   },
   "b0b4eba7-c3da-44dd-b316-7f588446381b@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Group_9_copy.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Group_9_copy.png@f9941",
     "value": {
       "depends": [
         "b0b4eba7-c3da-44dd-b316-7f588446381b@6c48a"
@@ -7506,14 +7320,12 @@
     "versionCode": 1
   },
   "09044d39-ab7c-41df-ac46-9b125a21747d": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_559.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_559.png",
+    "value": {},
     "versionCode": 1
   },
   "78672fd4-754b-431c-9ba6-cd64553928e9@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/heart_tile.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/heart_tile.png@6c48a",
     "value": {
       "depends": [
         "78672fd4-754b-431c-9ba6-cd64553928e9"
@@ -7522,7 +7334,7 @@
     "versionCode": 1
   },
   "aecae65b-6801-4ad7-a71d-f3b9ed1b2f1c@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/L.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/L.png@f9941",
     "value": {
       "depends": [
         "aecae65b-6801-4ad7-a71d-f3b9ed1b2f1c@6c48a"
@@ -7531,14 +7343,12 @@
     "versionCode": 1
   },
   "135908e5-9cd2-4684-93b7-c0e981751453": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_566.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_566.png",
+    "value": {},
     "versionCode": 1
   },
   "78672fd4-754b-431c-9ba6-cd64553928e9@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/heart_tile.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/heart_tile.png@f9941",
     "value": {
       "depends": [
         "78672fd4-754b-431c-9ba6-cd64553928e9@6c48a"
@@ -7547,14 +7357,12 @@
     "versionCode": 1
   },
   "c033a67a-b219-43d5-a251-416482f9b8c3": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_569_-_Smart_Object_Group_1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_569_-_Smart_Object_Group_1.png",
+    "value": {},
     "versionCode": 1
   },
   "9ae8e61b-2bb8-435e-977c-61b8186aa7a9@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_555.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_555.png@6c48a",
     "value": {
       "depends": [
         "9ae8e61b-2bb8-435e-977c-61b8186aa7a9"
@@ -7563,7 +7371,7 @@
     "versionCode": 1
   },
   "09044d39-ab7c-41df-ac46-9b125a21747d@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_559.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_559.png@6c48a",
     "value": {
       "depends": [
         "09044d39-ab7c-41df-ac46-9b125a21747d"
@@ -7572,7 +7380,7 @@
     "versionCode": 1
   },
   "9ae8e61b-2bb8-435e-977c-61b8186aa7a9@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_555.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_555.png@f9941",
     "value": {
       "depends": [
         "9ae8e61b-2bb8-435e-977c-61b8186aa7a9@6c48a"
@@ -7581,14 +7389,12 @@
     "versionCode": 1
   },
   "e1ddc9b0-c973-415b-b321-401709eab65f": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_576.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_576.png",
+    "value": {},
     "versionCode": 1
   },
   "135908e5-9cd2-4684-93b7-c0e981751453@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_566.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_566.png@6c48a",
     "value": {
       "depends": [
         "135908e5-9cd2-4684-93b7-c0e981751453"
@@ -7597,7 +7403,7 @@
     "versionCode": 1
   },
   "135908e5-9cd2-4684-93b7-c0e981751453@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_566.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_566.png@f9941",
     "value": {
       "depends": [
         "135908e5-9cd2-4684-93b7-c0e981751453@6c48a"
@@ -7606,14 +7412,12 @@
     "versionCode": 1
   },
   "1933d16a-867a-4d08-999a-0a9c56f028a0": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_577.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_577.png",
+    "value": {},
     "versionCode": 1
   },
   "c033a67a-b219-43d5-a251-416482f9b8c3@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_569_-_Smart_Object_Group_1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_569_-_Smart_Object_Group_1.png@6c48a",
     "value": {
       "depends": [
         "c033a67a-b219-43d5-a251-416482f9b8c3"
@@ -7622,7 +7426,7 @@
     "versionCode": 1
   },
   "09044d39-ab7c-41df-ac46-9b125a21747d@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_559.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_559.png@f9941",
     "value": {
       "depends": [
         "09044d39-ab7c-41df-ac46-9b125a21747d@6c48a"
@@ -7631,14 +7435,12 @@
     "versionCode": 1
   },
   "bc6f84ee-e31b-4995-a80d-217dbb32ee9d": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_580.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_580.png",
+    "value": {},
     "versionCode": 1
   },
   "9707a2ab-7efa-41ea-9bd4-954c835b1195@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/lamp.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/lamp.png@6c48a",
     "value": {
       "depends": [
         "9707a2ab-7efa-41ea-9bd4-954c835b1195"
@@ -7647,7 +7449,7 @@
     "versionCode": 1
   },
   "e1ddc9b0-c973-415b-b321-401709eab65f@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_576.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_576.png@6c48a",
     "value": {
       "depends": [
         "e1ddc9b0-c973-415b-b321-401709eab65f"
@@ -7656,7 +7458,7 @@
     "versionCode": 1
   },
   "c033a67a-b219-43d5-a251-416482f9b8c3@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_569_-_Smart_Object_Group_1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_569_-_Smart_Object_Group_1.png@f9941",
     "value": {
       "depends": [
         "c033a67a-b219-43d5-a251-416482f9b8c3@6c48a"
@@ -7665,14 +7467,12 @@
     "versionCode": 1
   },
   "13b9a22a-7c7a-43e5-b106-28b4503e82cd": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_580_-_Smart_Object_Group.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_580_-_Smart_Object_Group.png",
+    "value": {},
     "versionCode": 1
   },
   "9707a2ab-7efa-41ea-9bd4-954c835b1195@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/lamp.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/lamp.png@f9941",
     "value": {
       "depends": [
         "9707a2ab-7efa-41ea-9bd4-954c835b1195@6c48a"
@@ -7681,14 +7481,12 @@
     "versionCode": 1
   },
   "ee8991fc-4862-4ea0-abb1-44beab205f66": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_583.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_583.png",
+    "value": {},
     "versionCode": 1
   },
   "e1ddc9b0-c973-415b-b321-401709eab65f@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_576.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_576.png@f9941",
     "value": {
       "depends": [
         "e1ddc9b0-c973-415b-b321-401709eab65f@6c48a"
@@ -7697,14 +7495,12 @@
     "versionCode": 1
   },
   "f912569a-0b24-4582-927e-c71873eb70c4": {
-    "url": "db://assets/resources/art/sprites_PLY27/light_back.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/light_back.png",
+    "value": {},
     "versionCode": 1
   },
   "1933d16a-867a-4d08-999a-0a9c56f028a0@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_577.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_577.png@6c48a",
     "value": {
       "depends": [
         "1933d16a-867a-4d08-999a-0a9c56f028a0"
@@ -7713,7 +7509,7 @@
     "versionCode": 1
   },
   "1933d16a-867a-4d08-999a-0a9c56f028a0@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_577.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_577.png@f9941",
     "value": {
       "depends": [
         "1933d16a-867a-4d08-999a-0a9c56f028a0@6c48a"
@@ -7722,14 +7518,12 @@
     "versionCode": 1
   },
   "6082c05e-3e4d-4d43-9eb4-f4d9ca28b9db": {
-    "url": "db://assets/resources/art/sprites_PLY27/light_front.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/light_front.png",
+    "value": {},
     "versionCode": 1
   },
   "13b9a22a-7c7a-43e5-b106-28b4503e82cd@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_580_-_Smart_Object_Group.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_580_-_Smart_Object_Group.png@6c48a",
     "value": {
       "depends": [
         "13b9a22a-7c7a-43e5-b106-28b4503e82cd"
@@ -7738,7 +7532,7 @@
     "versionCode": 1
   },
   "bc6f84ee-e31b-4995-a80d-217dbb32ee9d@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_580.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_580.png@6c48a",
     "value": {
       "depends": [
         "bc6f84ee-e31b-4995-a80d-217dbb32ee9d"
@@ -7747,7 +7541,7 @@
     "versionCode": 1
   },
   "ee8991fc-4862-4ea0-abb1-44beab205f66@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_583.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_583.png@6c48a",
     "value": {
       "depends": [
         "ee8991fc-4862-4ea0-abb1-44beab205f66"
@@ -7756,7 +7550,7 @@
     "versionCode": 1
   },
   "13b9a22a-7c7a-43e5-b106-28b4503e82cd@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_580_-_Smart_Object_Group.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_580_-_Smart_Object_Group.png@f9941",
     "value": {
       "depends": [
         "13b9a22a-7c7a-43e5-b106-28b4503e82cd@6c48a"
@@ -7765,14 +7559,12 @@
     "versionCode": 1
   },
   "64830ec0-9f55-46a6-b539-2bea00dfc54d": {
-    "url": "db://assets/resources/art/sprites_PLY27/light_lamp1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/light_lamp1.png",
+    "value": {},
     "versionCode": 1
   },
   "ee8991fc-4862-4ea0-abb1-44beab205f66@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_583.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_583.png@f9941",
     "value": {
       "depends": [
         "ee8991fc-4862-4ea0-abb1-44beab205f66@6c48a"
@@ -7781,14 +7573,12 @@
     "versionCode": 1
   },
   "3bf39f04-03db-4fbe-8282-a9693e9afde7": {
-    "url": "db://assets/resources/art/sprites_PLY27/ly1_copy.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/ly1_copy.png",
+    "value": {},
     "versionCode": 1
   },
   "bc6f84ee-e31b-4995-a80d-217dbb32ee9d@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Layer_580.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Layer_580.png@f9941",
     "value": {
       "depends": [
         "bc6f84ee-e31b-4995-a80d-217dbb32ee9d@6c48a"
@@ -7797,14 +7587,12 @@
     "versionCode": 1
   },
   "c6717c78-9257-44b4-8128-1726911ba4d0": {
-    "url": "db://assets/resources/art/sprites_PLY27/L_sd.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/L_sd.png",
+    "value": {},
     "versionCode": 1
   },
   "f912569a-0b24-4582-927e-c71873eb70c4@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/light_back.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/light_back.png@6c48a",
     "value": {
       "depends": [
         "f912569a-0b24-4582-927e-c71873eb70c4"
@@ -7813,7 +7601,7 @@
     "versionCode": 1
   },
   "c6717c78-9257-44b4-8128-1726911ba4d0@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/L_sd.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/L_sd.png@6c48a",
     "value": {
       "depends": [
         "c6717c78-9257-44b4-8128-1726911ba4d0"
@@ -7822,7 +7610,7 @@
     "versionCode": 1
   },
   "6082c05e-3e4d-4d43-9eb4-f4d9ca28b9db@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/light_front.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/light_front.png@6c48a",
     "value": {
       "depends": [
         "6082c05e-3e4d-4d43-9eb4-f4d9ca28b9db"
@@ -7831,7 +7619,7 @@
     "versionCode": 1
   },
   "3bf39f04-03db-4fbe-8282-a9693e9afde7@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/ly1_copy.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/ly1_copy.png@6c48a",
     "value": {
       "depends": [
         "3bf39f04-03db-4fbe-8282-a9693e9afde7"
@@ -7840,7 +7628,7 @@
     "versionCode": 1
   },
   "6082c05e-3e4d-4d43-9eb4-f4d9ca28b9db@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/light_front.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/light_front.png@f9941",
     "value": {
       "depends": [
         "6082c05e-3e4d-4d43-9eb4-f4d9ca28b9db@6c48a"
@@ -7849,14 +7637,12 @@
     "versionCode": 1
   },
   "805732ba-de43-4553-82b2-639b0392b9ba": {
-    "url": "db://assets/resources/art/sprites_PLY27/may_phat_nhac_1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/may_phat_nhac_1.png",
+    "value": {},
     "versionCode": 1
   },
   "3bf39f04-03db-4fbe-8282-a9693e9afde7@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/ly1_copy.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/ly1_copy.png@f9941",
     "value": {
       "depends": [
         "3bf39f04-03db-4fbe-8282-a9693e9afde7@6c48a"
@@ -7865,14 +7651,12 @@
     "versionCode": 1
   },
   "46a8f512-3c62-4e9c-b6f4-c6d41ddd74cb": {
-    "url": "db://assets/resources/art/sprites_PLY27/minilight_on.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/minilight_on.png",
+    "value": {},
     "versionCode": 1
   },
   "805732ba-de43-4553-82b2-639b0392b9ba@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/may_phat_nhac_1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/may_phat_nhac_1.png@6c48a",
     "value": {
       "depends": [
         "805732ba-de43-4553-82b2-639b0392b9ba"
@@ -7881,7 +7665,7 @@
     "versionCode": 1
   },
   "46a8f512-3c62-4e9c-b6f4-c6d41ddd74cb@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/minilight_on.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/minilight_on.png@6c48a",
     "value": {
       "depends": [
         "46a8f512-3c62-4e9c-b6f4-c6d41ddd74cb"
@@ -7890,7 +7674,7 @@
     "versionCode": 1
   },
   "805732ba-de43-4553-82b2-639b0392b9ba@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/may_phat_nhac_1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/may_phat_nhac_1.png@f9941",
     "value": {
       "depends": [
         "805732ba-de43-4553-82b2-639b0392b9ba@6c48a"
@@ -7899,14 +7683,12 @@
     "versionCode": 1
   },
   "3c7b24a8-812b-4822-a609-1ce7a358b121": {
-    "url": "db://assets/resources/art/sprites_PLY27/mini_light.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/mini_light.png",
+    "value": {},
     "versionCode": 1
   },
   "64830ec0-9f55-46a6-b539-2bea00dfc54d@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/light_lamp1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/light_lamp1.png@6c48a",
     "value": {
       "depends": [
         "64830ec0-9f55-46a6-b539-2bea00dfc54d"
@@ -7915,7 +7697,7 @@
     "versionCode": 1
   },
   "46a8f512-3c62-4e9c-b6f4-c6d41ddd74cb@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/minilight_on.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/minilight_on.png@f9941",
     "value": {
       "depends": [
         "46a8f512-3c62-4e9c-b6f4-c6d41ddd74cb@6c48a"
@@ -7924,14 +7706,12 @@
     "versionCode": 1
   },
   "4a3ba973-b312-4c12-a7db-b7869386981b": {
-    "url": "db://assets/resources/art/sprites_PLY27/mini_table.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/mini_table.png",
+    "value": {},
     "versionCode": 1
   },
   "c6717c78-9257-44b4-8128-1726911ba4d0@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/L_sd.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/L_sd.png@f9941",
     "value": {
       "depends": [
         "c6717c78-9257-44b4-8128-1726911ba4d0@6c48a"
@@ -7940,7 +7720,7 @@
     "versionCode": 1
   },
   "f912569a-0b24-4582-927e-c71873eb70c4@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/light_back.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/light_back.png@f9941",
     "value": {
       "depends": [
         "f912569a-0b24-4582-927e-c71873eb70c4@6c48a"
@@ -7949,21 +7729,17 @@
     "versionCode": 1
   },
   "3fe2f5e5-10f0-4abc-9ed5-5fa2dcc9c081": {
-    "url": "db://assets/resources/art/sprites_PLY27/O.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/O.png",
+    "value": {},
     "versionCode": 1
   },
   "a1ffd308-3ce9-47ea-95f3-b2ce0054526f": {
-    "url": "db://assets/resources/art/sprites_PLY27/O_sd.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/O_sd.png",
+    "value": {},
     "versionCode": 1
   },
   "64830ec0-9f55-46a6-b539-2bea00dfc54d@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/light_lamp1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/light_lamp1.png@f9941",
     "value": {
       "depends": [
         "64830ec0-9f55-46a6-b539-2bea00dfc54d@6c48a"
@@ -7972,14 +7748,12 @@
     "versionCode": 1
   },
   "ca9a7ec7-83b0-4ddb-9471-f2addc6d129c": {
-    "url": "db://assets/resources/art/sprites_PLY27/pic2Shadow.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/pic2Shadow.png",
+    "value": {},
     "versionCode": 1
   },
   "4a3ba973-b312-4c12-a7db-b7869386981b@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/mini_table.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/mini_table.png@6c48a",
     "value": {
       "depends": [
         "4a3ba973-b312-4c12-a7db-b7869386981b"
@@ -7988,7 +7762,7 @@
     "versionCode": 1
   },
   "3c7b24a8-812b-4822-a609-1ce7a358b121@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/mini_light.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/mini_light.png@6c48a",
     "value": {
       "depends": [
         "3c7b24a8-812b-4822-a609-1ce7a358b121"
@@ -7997,7 +7771,7 @@
     "versionCode": 1
   },
   "3fe2f5e5-10f0-4abc-9ed5-5fa2dcc9c081@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/O.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/O.png@6c48a",
     "value": {
       "depends": [
         "3fe2f5e5-10f0-4abc-9ed5-5fa2dcc9c081"
@@ -8006,7 +7780,7 @@
     "versionCode": 1
   },
   "a1ffd308-3ce9-47ea-95f3-b2ce0054526f@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/O_sd.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/O_sd.png@6c48a",
     "value": {
       "depends": [
         "a1ffd308-3ce9-47ea-95f3-b2ce0054526f"
@@ -8015,7 +7789,7 @@
     "versionCode": 1
   },
   "4a3ba973-b312-4c12-a7db-b7869386981b@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/mini_table.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/mini_table.png@f9941",
     "value": {
       "depends": [
         "4a3ba973-b312-4c12-a7db-b7869386981b@6c48a"
@@ -8024,14 +7798,12 @@
     "versionCode": 1
   },
   "f6daa9ea-a84e-45fb-b612-51431bfadf5c": {
-    "url": "db://assets/resources/art/sprites_PLY27/pic3Shadow.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/pic3Shadow.png",
+    "value": {},
     "versionCode": 1
   },
   "3c7b24a8-812b-4822-a609-1ce7a358b121@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/mini_light.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/mini_light.png@f9941",
     "value": {
       "depends": [
         "3c7b24a8-812b-4822-a609-1ce7a358b121@6c48a"
@@ -8040,14 +7812,12 @@
     "versionCode": 1
   },
   "51bb0c7e-167b-40ce-bac8-555a768734f6": {
-    "url": "db://assets/resources/art/sprites_PLY27/Pic4Shadow.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Pic4Shadow.png",
+    "value": {},
     "versionCode": 1
   },
   "3fe2f5e5-10f0-4abc-9ed5-5fa2dcc9c081@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/O.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/O.png@f9941",
     "value": {
       "depends": [
         "3fe2f5e5-10f0-4abc-9ed5-5fa2dcc9c081@6c48a"
@@ -8056,14 +7826,12 @@
     "versionCode": 1
   },
   "ff88da69-70a9-4653-8229-2e7361a55733": {
-    "url": "db://assets/resources/art/sprites_PLY27/rabit.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/rabit.png",
+    "value": {},
     "versionCode": 1
   },
   "ca9a7ec7-83b0-4ddb-9471-f2addc6d129c@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/pic2Shadow.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/pic2Shadow.png@6c48a",
     "value": {
       "depends": [
         "ca9a7ec7-83b0-4ddb-9471-f2addc6d129c"
@@ -8072,7 +7840,7 @@
     "versionCode": 1
   },
   "a1ffd308-3ce9-47ea-95f3-b2ce0054526f@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/O_sd.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/O_sd.png@f9941",
     "value": {
       "depends": [
         "a1ffd308-3ce9-47ea-95f3-b2ce0054526f@6c48a"
@@ -8081,14 +7849,12 @@
     "versionCode": 1
   },
   "d831036c-416e-49d4-a2d1-af469d82147a": {
-    "url": "db://assets/resources/art/sprites_PLY27/rem.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/rem.png",
+    "value": {},
     "versionCode": 1
   },
   "ca9a7ec7-83b0-4ddb-9471-f2addc6d129c@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/pic2Shadow.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/pic2Shadow.png@f9941",
     "value": {
       "depends": [
         "ca9a7ec7-83b0-4ddb-9471-f2addc6d129c@6c48a"
@@ -8097,14 +7863,12 @@
     "versionCode": 1
   },
   "4150757e-4f4d-473c-b0dc-ac82f987dd25": {
-    "url": "db://assets/resources/art/sprites_PLY27/rug.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/rug.png",
+    "value": {},
     "versionCode": 1
   },
   "d831036c-416e-49d4-a2d1-af469d82147a@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/rem.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/rem.png@6c48a",
     "value": {
       "depends": [
         "d831036c-416e-49d4-a2d1-af469d82147a"
@@ -8113,7 +7877,7 @@
     "versionCode": 1
   },
   "f6daa9ea-a84e-45fb-b612-51431bfadf5c@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/pic3Shadow.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/pic3Shadow.png@6c48a",
     "value": {
       "depends": [
         "f6daa9ea-a84e-45fb-b612-51431bfadf5c"
@@ -8122,7 +7886,7 @@
     "versionCode": 1
   },
   "51bb0c7e-167b-40ce-bac8-555a768734f6@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Pic4Shadow.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Pic4Shadow.png@6c48a",
     "value": {
       "depends": [
         "51bb0c7e-167b-40ce-bac8-555a768734f6"
@@ -8131,7 +7895,7 @@
     "versionCode": 1
   },
   "51bb0c7e-167b-40ce-bac8-555a768734f6@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Pic4Shadow.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Pic4Shadow.png@f9941",
     "value": {
       "depends": [
         "51bb0c7e-167b-40ce-bac8-555a768734f6@6c48a"
@@ -8140,14 +7904,12 @@
     "versionCode": 1
   },
   "297df66e-66ac-4cd4-b6fa-7f08d8a295a8": {
-    "url": "db://assets/resources/art/sprites_PLY27/rug2.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/rug2.png",
+    "value": {},
     "versionCode": 1
   },
   "f6daa9ea-a84e-45fb-b612-51431bfadf5c@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/pic3Shadow.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/pic3Shadow.png@f9941",
     "value": {
       "depends": [
         "f6daa9ea-a84e-45fb-b612-51431bfadf5c@6c48a"
@@ -8156,14 +7918,12 @@
     "versionCode": 1
   },
   "7133b0e4-6800-4b68-a47b-353244bb9e74": {
-    "url": "db://assets/resources/art/sprites_PLY27/rug__copy.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/rug__copy.png",
+    "value": {},
     "versionCode": 1
   },
   "4150757e-4f4d-473c-b0dc-ac82f987dd25@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/rug.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/rug.png@6c48a",
     "value": {
       "depends": [
         "4150757e-4f4d-473c-b0dc-ac82f987dd25"
@@ -8172,7 +7932,7 @@
     "versionCode": 1
   },
   "7133b0e4-6800-4b68-a47b-353244bb9e74@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/rug__copy.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/rug__copy.png@6c48a",
     "value": {
       "depends": [
         "7133b0e4-6800-4b68-a47b-353244bb9e74"
@@ -8181,7 +7941,7 @@
     "versionCode": 1
   },
   "4150757e-4f4d-473c-b0dc-ac82f987dd25@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/rug.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/rug.png@f9941",
     "value": {
       "depends": [
         "4150757e-4f4d-473c-b0dc-ac82f987dd25@6c48a"
@@ -8190,14 +7950,12 @@
     "versionCode": 1
   },
   "4d605646-06cd-418a-80e6-4c08b8311b53": {
-    "url": "db://assets/resources/art/sprites_PLY27/san_nha1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/san_nha1.png",
+    "value": {},
     "versionCode": 1
   },
   "7133b0e4-6800-4b68-a47b-353244bb9e74@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/rug__copy.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/rug__copy.png@f9941",
     "value": {
       "depends": [
         "7133b0e4-6800-4b68-a47b-353244bb9e74@6c48a"
@@ -8206,14 +7964,12 @@
     "versionCode": 1
   },
   "fa40bfef-2081-4f9a-8a86-5cf2d378faf4": {
-    "url": "db://assets/resources/art/sprites_PLY27/san_nha2.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/san_nha2.png",
+    "value": {},
     "versionCode": 1
   },
   "d831036c-416e-49d4-a2d1-af469d82147a@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/rem.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/rem.png@f9941",
     "value": {
       "depends": [
         "d831036c-416e-49d4-a2d1-af469d82147a@6c48a"
@@ -8222,14 +7978,12 @@
     "versionCode": 1
   },
   "a256e4a1-78d3-4f2c-b725-fb6f9c059542": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_candles1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_candles1.png",
+    "value": {},
     "versionCode": 1
   },
   "ff88da69-70a9-4653-8229-2e7361a55733@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/rabit.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/rabit.png@6c48a",
     "value": {
       "depends": [
         "ff88da69-70a9-4653-8229-2e7361a55733"
@@ -8238,7 +7992,7 @@
     "versionCode": 1
   },
   "297df66e-66ac-4cd4-b6fa-7f08d8a295a8@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/rug2.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/rug2.png@6c48a",
     "value": {
       "depends": [
         "297df66e-66ac-4cd4-b6fa-7f08d8a295a8"
@@ -8247,7 +8001,7 @@
     "versionCode": 1
   },
   "4d605646-06cd-418a-80e6-4c08b8311b53@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/san_nha1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/san_nha1.png@6c48a",
     "value": {
       "depends": [
         "4d605646-06cd-418a-80e6-4c08b8311b53"
@@ -8256,7 +8010,7 @@
     "versionCode": 1
   },
   "ff88da69-70a9-4653-8229-2e7361a55733@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/rabit.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/rabit.png@f9941",
     "value": {
       "depends": [
         "ff88da69-70a9-4653-8229-2e7361a55733@6c48a"
@@ -8265,14 +8019,12 @@
     "versionCode": 1
   },
   "1ba89609-ba1d-4291-858e-29440835bb9c": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_chair1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_chair1.png",
+    "value": {},
     "versionCode": 1
   },
   "297df66e-66ac-4cd4-b6fa-7f08d8a295a8@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/rug2.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/rug2.png@f9941",
     "value": {
       "depends": [
         "297df66e-66ac-4cd4-b6fa-7f08d8a295a8@6c48a"
@@ -8281,14 +8033,12 @@
     "versionCode": 1
   },
   "dc8a88ce-382f-4701-a4e6-3706106202c5": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_Ly1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_Ly1.png",
+    "value": {},
     "versionCode": 1
   },
   "fa40bfef-2081-4f9a-8a86-5cf2d378faf4@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/san_nha2.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/san_nha2.png@6c48a",
     "value": {
       "depends": [
         "fa40bfef-2081-4f9a-8a86-5cf2d378faf4"
@@ -8297,7 +8047,7 @@
     "versionCode": 1
   },
   "a256e4a1-78d3-4f2c-b725-fb6f9c059542@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_candles1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_candles1.png@6c48a",
     "value": {
       "depends": [
         "a256e4a1-78d3-4f2c-b725-fb6f9c059542"
@@ -8306,7 +8056,7 @@
     "versionCode": 1
   },
   "1ba89609-ba1d-4291-858e-29440835bb9c@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_chair1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_chair1.png@6c48a",
     "value": {
       "depends": [
         "1ba89609-ba1d-4291-858e-29440835bb9c"
@@ -8315,7 +8065,7 @@
     "versionCode": 1
   },
   "a256e4a1-78d3-4f2c-b725-fb6f9c059542@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_candles1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_candles1.png@f9941",
     "value": {
       "depends": [
         "a256e4a1-78d3-4f2c-b725-fb6f9c059542@6c48a"
@@ -8324,14 +8074,12 @@
     "versionCode": 1
   },
   "0bcfe1a7-891c-4583-8efb-f1961e3b0a9a": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_rug2.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_rug2.png",
+    "value": {},
     "versionCode": 1
   },
   "4d605646-06cd-418a-80e6-4c08b8311b53@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/san_nha1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/san_nha1.png@f9941",
     "value": {
       "depends": [
         "4d605646-06cd-418a-80e6-4c08b8311b53@6c48a"
@@ -8340,14 +8088,12 @@
     "versionCode": 1
   },
   "768f254a-3426-499e-a891-18e22a5b1f01": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_table.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_table.png",
+    "value": {},
     "versionCode": 1
   },
   "1ba89609-ba1d-4291-858e-29440835bb9c@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_chair1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_chair1.png@f9941",
     "value": {
       "depends": [
         "1ba89609-ba1d-4291-858e-29440835bb9c@6c48a"
@@ -8356,7 +8102,7 @@
     "versionCode": 1
   },
   "fa40bfef-2081-4f9a-8a86-5cf2d378faf4@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/san_nha2.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/san_nha2.png@f9941",
     "value": {
       "depends": [
         "fa40bfef-2081-4f9a-8a86-5cf2d378faf4@6c48a"
@@ -8365,7 +8111,7 @@
     "versionCode": 1
   },
   "dc8a88ce-382f-4701-a4e6-3706106202c5@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_Ly1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_Ly1.png@6c48a",
     "value": {
       "depends": [
         "dc8a88ce-382f-4701-a4e6-3706106202c5"
@@ -8374,21 +8120,17 @@
     "versionCode": 1
   },
   "d5bd9d97-8886-4d8d-9cf4-1e3c54aeff7d": {
-    "url": "db://assets/resources/art/sprites_PLY27/slipper1.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/slipper1.png",
+    "value": {},
     "versionCode": 1
   },
   "6a0cc616-ea05-4c58-aaa8-e5e4f249f39c": {
-    "url": "db://assets/resources/art/sprites_PLY27/slipper1_copy.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/slipper1_copy.png",
+    "value": {},
     "versionCode": 1
   },
   "dc8a88ce-382f-4701-a4e6-3706106202c5@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_Ly1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_Ly1.png@f9941",
     "value": {
       "depends": [
         "dc8a88ce-382f-4701-a4e6-3706106202c5@6c48a"
@@ -8397,14 +8139,12 @@
     "versionCode": 1
   },
   "f3d640c6-6905-42d0-8f0d-610c0139e8eb": {
-    "url": "db://assets/resources/art/sprites_PLY27/Square.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/Square.png",
+    "value": {},
     "versionCode": 1
   },
   "6a0cc616-ea05-4c58-aaa8-e5e4f249f39c@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/slipper1_copy.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/slipper1_copy.png@6c48a",
     "value": {
       "depends": [
         "6a0cc616-ea05-4c58-aaa8-e5e4f249f39c"
@@ -8413,7 +8153,7 @@
     "versionCode": 1
   },
   "768f254a-3426-499e-a891-18e22a5b1f01@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_table.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_table.png@6c48a",
     "value": {
       "depends": [
         "768f254a-3426-499e-a891-18e22a5b1f01"
@@ -8422,7 +8162,7 @@
     "versionCode": 1
   },
   "f3d640c6-6905-42d0-8f0d-610c0139e8eb@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/Square.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Square.png@6c48a",
     "value": {
       "depends": [
         "f3d640c6-6905-42d0-8f0d-610c0139e8eb"
@@ -8431,7 +8171,7 @@
     "versionCode": 1
   },
   "6a0cc616-ea05-4c58-aaa8-e5e4f249f39c@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/slipper1_copy.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/slipper1_copy.png@f9941",
     "value": {
       "depends": [
         "6a0cc616-ea05-4c58-aaa8-e5e4f249f39c@6c48a"
@@ -8440,14 +8180,12 @@
     "versionCode": 1
   },
   "d117280a-74ae-4b93-b26f-40a2ed085afd": {
-    "url": "db://assets/resources/art/sprites_PLY27/table.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/table.png",
+    "value": {},
     "versionCode": 1
   },
   "0bcfe1a7-891c-4583-8efb-f1961e3b0a9a@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_rug2.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_rug2.png@6c48a",
     "value": {
       "depends": [
         "0bcfe1a7-891c-4583-8efb-f1961e3b0a9a"
@@ -8456,7 +8194,7 @@
     "versionCode": 1
   },
   "768f254a-3426-499e-a891-18e22a5b1f01@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_table.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_table.png@f9941",
     "value": {
       "depends": [
         "768f254a-3426-499e-a891-18e22a5b1f01@6c48a"
@@ -8465,14 +8203,12 @@
     "versionCode": 1
   },
   "1d4ed42a-0236-4aca-b96a-9ad714354089": {
-    "url": "db://assets/resources/art/sprites_PLY27/tham_trai_ban.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/tham_trai_ban.png",
+    "value": {},
     "versionCode": 1
   },
   "f3d640c6-6905-42d0-8f0d-610c0139e8eb@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/Square.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/Square.png@f9941",
     "value": {
       "depends": [
         "f3d640c6-6905-42d0-8f0d-610c0139e8eb@6c48a"
@@ -8481,14 +8217,12 @@
     "versionCode": 1
   },
   "9f75935c-e772-49ca-a1d1-146f7009766f": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu.png",
+    "value": {},
     "versionCode": 1
   },
   "0bcfe1a7-891c-4583-8efb-f1961e3b0a9a@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/shadow_rug2.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/shadow_rug2.png@f9941",
     "value": {
       "depends": [
         "0bcfe1a7-891c-4583-8efb-f1961e3b0a9a@6c48a"
@@ -8497,14 +8231,12 @@
     "versionCode": 1
   },
   "602bf625-fddd-4df3-9a1d-891ab2bd40f4": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu2.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu2.png",
+    "value": {},
     "versionCode": 1
   },
   "d117280a-74ae-4b93-b26f-40a2ed085afd@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/table.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/table.png@6c48a",
     "value": {
       "depends": [
         "d117280a-74ae-4b93-b26f-40a2ed085afd"
@@ -8513,7 +8245,7 @@
     "versionCode": 1
   },
   "9f75935c-e772-49ca-a1d1-146f7009766f@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu.png@6c48a",
     "value": {
       "depends": [
         "9f75935c-e772-49ca-a1d1-146f7009766f"
@@ -8522,7 +8254,7 @@
     "versionCode": 1
   },
   "9f75935c-e772-49ca-a1d1-146f7009766f@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu.png@f9941",
     "value": {
       "depends": [
         "9f75935c-e772-49ca-a1d1-146f7009766f@6c48a"
@@ -8531,7 +8263,7 @@
     "versionCode": 1
   },
   "d117280a-74ae-4b93-b26f-40a2ed085afd@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/table.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/table.png@f9941",
     "value": {
       "depends": [
         "d117280a-74ae-4b93-b26f-40a2ed085afd@6c48a"
@@ -8540,21 +8272,17 @@
     "versionCode": 1
   },
   "4f91f0a8-075c-45cb-b9ce-eb509918b151": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu2_shadow.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu2_shadow.png",
+    "value": {},
     "versionCode": 1
   },
   "5edf0035-2a38-4133-8e30-02961fd0a25b": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu_copy.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu_copy.png",
+    "value": {},
     "versionCode": 1
   },
   "1d4ed42a-0236-4aca-b96a-9ad714354089@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/tham_trai_ban.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/tham_trai_ban.png@6c48a",
     "value": {
       "depends": [
         "1d4ed42a-0236-4aca-b96a-9ad714354089"
@@ -8563,7 +8291,7 @@
     "versionCode": 1
   },
   "602bf625-fddd-4df3-9a1d-891ab2bd40f4@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu2.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu2.png@6c48a",
     "value": {
       "depends": [
         "602bf625-fddd-4df3-9a1d-891ab2bd40f4"
@@ -8572,7 +8300,7 @@
     "versionCode": 1
   },
   "d5bd9d97-8886-4d8d-9cf4-1e3c54aeff7d@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/slipper1.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/slipper1.png@6c48a",
     "value": {
       "depends": [
         "d5bd9d97-8886-4d8d-9cf4-1e3c54aeff7d"
@@ -8581,7 +8309,7 @@
     "versionCode": 1
   },
   "5edf0035-2a38-4133-8e30-02961fd0a25b@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu_copy.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu_copy.png@6c48a",
     "value": {
       "depends": [
         "5edf0035-2a38-4133-8e30-02961fd0a25b"
@@ -8590,7 +8318,7 @@
     "versionCode": 1
   },
   "4f91f0a8-075c-45cb-b9ce-eb509918b151@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu2_shadow.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu2_shadow.png@6c48a",
     "value": {
       "depends": [
         "4f91f0a8-075c-45cb-b9ce-eb509918b151"
@@ -8599,7 +8327,7 @@
     "versionCode": 1
   },
   "1d4ed42a-0236-4aca-b96a-9ad714354089@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/tham_trai_ban.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/tham_trai_ban.png@f9941",
     "value": {
       "depends": [
         "1d4ed42a-0236-4aca-b96a-9ad714354089@6c48a"
@@ -8608,14 +8336,12 @@
     "versionCode": 1
   },
   "275c78eb-fef6-4dad-a1ed-4607c7353b64": {
-    "url": "db://assets/resources/art/sprites_PLY27/V.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/V.png",
+    "value": {},
     "versionCode": 1
   },
   "602bf625-fddd-4df3-9a1d-891ab2bd40f4@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu2.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu2.png@f9941",
     "value": {
       "depends": [
         "602bf625-fddd-4df3-9a1d-891ab2bd40f4@6c48a"
@@ -8624,14 +8350,12 @@
     "versionCode": 1
   },
   "4501e746-bd29-4304-af6a-162068c2df55": {
-    "url": "db://assets/resources/art/sprites_PLY27/vase.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/vase.png",
+    "value": {},
     "versionCode": 1
   },
   "d5bd9d97-8886-4d8d-9cf4-1e3c54aeff7d@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/slipper1.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/slipper1.png@f9941",
     "value": {
       "depends": [
         "d5bd9d97-8886-4d8d-9cf4-1e3c54aeff7d@6c48a"
@@ -8640,14 +8364,12 @@
     "versionCode": 1
   },
   "da7d9b56-2b76-4bc8-87a4-bcae7521a309": {
-    "url": "db://assets/resources/art/sprites_PLY27/V_sd.png",
-    "value": {
-      "depends": []
-    },
+    "url": "db://assets/3.Sprites/sprites_PLY27/V_sd.png",
+    "value": {},
     "versionCode": 1
   },
   "5edf0035-2a38-4133-8e30-02961fd0a25b@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu_copy.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu_copy.png@f9941",
     "value": {
       "depends": [
         "5edf0035-2a38-4133-8e30-02961fd0a25b@6c48a"
@@ -8656,7 +8378,7 @@
     "versionCode": 1
   },
   "4f91f0a8-075c-45cb-b9ce-eb509918b151@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/tu2_shadow.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/tu2_shadow.png@f9941",
     "value": {
       "depends": [
         "4f91f0a8-075c-45cb-b9ce-eb509918b151@6c48a"
@@ -8665,7 +8387,7 @@
     "versionCode": 1
   },
   "275c78eb-fef6-4dad-a1ed-4607c7353b64@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/V.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/V.png@6c48a",
     "value": {
       "depends": [
         "275c78eb-fef6-4dad-a1ed-4607c7353b64"
@@ -8674,7 +8396,7 @@
     "versionCode": 1
   },
   "da7d9b56-2b76-4bc8-87a4-bcae7521a309@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/V_sd.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/V_sd.png@6c48a",
     "value": {
       "depends": [
         "da7d9b56-2b76-4bc8-87a4-bcae7521a309"
@@ -8683,7 +8405,7 @@
     "versionCode": 1
   },
   "4501e746-bd29-4304-af6a-162068c2df55@6c48a": {
-    "url": "db://assets/resources/art/sprites_PLY27/vase.png@6c48a",
+    "url": "db://assets/3.Sprites/sprites_PLY27/vase.png@6c48a",
     "value": {
       "depends": [
         "4501e746-bd29-4304-af6a-162068c2df55"
@@ -8692,7 +8414,7 @@
     "versionCode": 1
   },
   "275c78eb-fef6-4dad-a1ed-4607c7353b64@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/V.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/V.png@f9941",
     "value": {
       "depends": [
         "275c78eb-fef6-4dad-a1ed-4607c7353b64@6c48a"
@@ -8701,7 +8423,7 @@
     "versionCode": 1
   },
   "da7d9b56-2b76-4bc8-87a4-bcae7521a309@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/V_sd.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/V_sd.png@f9941",
     "value": {
       "depends": [
         "da7d9b56-2b76-4bc8-87a4-bcae7521a309@6c48a"
@@ -8710,12 +8432,118 @@
     "versionCode": 1
   },
   "4501e746-bd29-4304-af6a-162068c2df55@f9941": {
-    "url": "db://assets/resources/art/sprites_PLY27/vase.png@f9941",
+    "url": "db://assets/3.Sprites/sprites_PLY27/vase.png@f9941",
     "value": {
       "depends": [
         "4501e746-bd29-4304-af6a-162068c2df55@6c48a"
       ]
     },
+    "versionCode": 1
+  },
+  "bad9b28d-18c3-4fea-96ed-08c11eab343f": {
+    "url": "db://assets/3.Sprites/sprites_PLY27/chocolate_box.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "bad9b28d-18c3-4fea-96ed-08c11eab343f@6c48a": {
+    "url": "db://assets/3.Sprites/sprites_PLY27/chocolate_box.png@6c48a",
+    "value": {
+      "depends": [
+        "bad9b28d-18c3-4fea-96ed-08c11eab343f"
+      ]
+    },
+    "versionCode": 1
+  },
+  "bad9b28d-18c3-4fea-96ed-08c11eab343f@f9941": {
+    "url": "db://assets/3.Sprites/sprites_PLY27/chocolate_box.png@f9941",
+    "value": {
+      "depends": [
+        "bad9b28d-18c3-4fea-96ed-08c11eab343f@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "03e51cf6-9d72-4820-aa3a-05e9dd2b26d9": {
+    "url": "db://assets/1.Animations/TapToDecor",
+    "value": {},
+    "versionCode": 1
+  },
+  "23e4bfb6-5466-4b56-b914-9cf4dc99ff84": {
+    "url": "db://assets/1.Animations/TapToDecor/TapToDecor.anim",
+    "value": {},
+    "versionCode": 2
+  },
+  "779fc3a2-7435-4c9a-a568-f8b9e97cfbf8": {
+    "url": "db://assets/3.Sprites/Chung/TapToDecor2.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "779fc3a2-7435-4c9a-a568-f8b9e97cfbf8@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/TapToDecor2.png@6c48a",
+    "value": {
+      "depends": [
+        "779fc3a2-7435-4c9a-a568-f8b9e97cfbf8"
+      ]
+    },
+    "versionCode": 1
+  },
+  "779fc3a2-7435-4c9a-a568-f8b9e97cfbf8@f9941": {
+    "url": "db://assets/3.Sprites/Chung/TapToDecor2.png@f9941",
+    "value": {
+      "depends": [
+        "779fc3a2-7435-4c9a-a568-f8b9e97cfbf8@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b91e472b-fa91-4bd0-b254-b6fe949ac8d4": {
+    "url": "db://assets/4.Sounds/Cute Kitty Monster Voice 02.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "b9724bb5-4a5b-4799-ab6e-ce4655defa8c": {
+    "url": "db://assets/4.Sounds/Cute Kitty Monster Voice 04.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "13869f5c-eb61-43ce-8f8f-bcb87fded8bc": {
+    "url": "db://assets/4.Sounds/Cute Kitty Monster Voice 01.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "aac52f80-9c91-4a17-aa46-c2c7ccf2c3bd": {
+    "url": "db://assets/4.Sounds/BGM/frad - first date - frad (youtube) (mp3cut.net).mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "9f7ce0fb-e18d-41bd-ba3c-640d922a6740": {
+    "url": "db://assets/4.Sounds/Window.MP3",
+    "value": {},
+    "versionCode": 1
+  },
+  "0f7e0be9-f064-474d-b4ff-cb0ae1fac21a": {
+    "url": "db://assets/4.Sounds/Decor.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "336784f6-7558-4393-905c-66d765c3ab9c": {
+    "url": "db://assets/4.Sounds/Curtain Open v1.wav",
+    "value": {},
+    "versionCode": 1
+  },
+  "1ea93b9a-cd0a-4abd-89aa-cc584a0eac91": {
+    "url": "db://assets/1.Animations/InstallButton/InstallButton.anim",
+    "value": {},
+    "versionCode": 2
+  },
+  "e3a20d96-de77-4946-8e6b-96e0bc8ba3db": {
+    "url": "db://assets/1.Animations/InstallButton",
+    "value": {},
+    "versionCode": 1
+  },
+  "43451b8a-77f6-47cc-8b77-4338c5656fd2": {
+    "url": "db://assets/2.Fonts/LilitaOne-Regular.ttf",
+    "value": {},
     "versionCode": 1
   }
 }
