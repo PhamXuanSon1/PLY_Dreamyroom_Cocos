@@ -21,7 +21,7 @@
 
 import {
     _decorator, Component, Node, UITransform, Sprite, SpriteFrame, Color, Vec3,
-    JsonAsset, resources, CCClass, js, Size, sp, assetManager, Asset,
+    JsonAsset, resources, CCClass, js, Size, sp, assetManager, Asset, CCObject,
 } from 'cc';
 import { EDITOR } from 'cc/env';
 import { MaterialType } from '../item/ItemController';
@@ -82,6 +82,13 @@ export class SceneBuilder extends Component {
 
     @property({ tooltip: 'Tên node con chứa Sprite. Mỗi node ảnh được dựng thành: node cha (transform, component gameplay) → node con này (UITransform + Sprite).' })
     imageNodeName = 'Image';
+
+    @property({
+        tooltip: 'Khoá node ảnh (padlock trong Hierarchy) để click vào hình trong Scene view luôn chọn trúng node CHA '
+            + '(chỗ gắn component gameplay) thay vì chọn nhầm node ảnh con.\n'
+            + 'Vẫn chọn được node ảnh qua Hierarchy panel như bình thường, chỉ click trong Scene view mới bị chặn.',
+    })
+    lockImageNode = true;
 
     @property({ tooltip: 'Sắp xếp siblingIndex theo sortingOrder của Unity' })
     applySorting = true;
@@ -352,6 +359,10 @@ export class SceneBuilder extends Component {
         img.layer = owner.layer;
         img.setParent(owner);
         img.setPosition(0, 0, 0);
+
+        // Click trong Scene view sẽ "xuyên qua" node bị khoá và chọn trúng owner (node cha) —
+        // đúng cái người dựng scene bằng tay hay bấm nhầm khi node ảnh nằm đè lên node cha.
+        if (this.lockImageNode) img.hideFlags |= CCObject.Flags.LockedInEditor;
 
         const ut = img.addComponent(UITransform);
         ut.setContentSize(size);

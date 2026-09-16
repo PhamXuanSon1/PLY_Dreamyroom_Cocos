@@ -117,6 +117,7 @@ export class BoxController extends Component implements IPointerHandler {
         if (im) {
             if (im.handIntro) im.handIntro.active = false;
             im.enableFirstClickObjects();
+            im.onBoxFirstClicked();
         }
 
         if (this.handText) {

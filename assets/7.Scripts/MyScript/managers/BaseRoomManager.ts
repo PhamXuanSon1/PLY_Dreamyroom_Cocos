@@ -10,7 +10,7 @@ export class BaseRoomManager extends Component {
     static instance: BaseRoomManager | null = null;
 
     @property({ type: Node, tooltip: 'Node căn phòng chính.' })
-    BaseRoom: Node | null = null;
+    baseRoom: Node | null = null;
 
     @property({ type: Node, tooltip: 'Vị trí phòng lúc mới vào game (hiệu ứng intro).' })
     baseRoomStartPos: Node | null = null;
@@ -30,11 +30,11 @@ export class BaseRoomManager extends Component {
     onLoad() {
         BaseRoomManager.instance = this;
 
-        if (this.BaseRoom) {
-            this.baseRoomOriginalScale = this.BaseRoom.scale.clone();
-            this.baseRoomOriginalWorldPos = this.BaseRoom.worldPosition.clone();
+        if (this.baseRoom) {
+            this.baseRoomOriginalScale = this.baseRoom.scale.clone();
+            this.baseRoomOriginalWorldPos = this.baseRoom.worldPosition.clone();
 
-            const room = this.BaseRoom.getComponent(BaseRoom);
+            const room = this.baseRoom.getComponent(BaseRoom);
             if (room) {
                 room.initializeOriginalScale(this.baseRoomOriginalScale);
             }
@@ -45,11 +45,11 @@ export class BaseRoomManager extends Component {
                 this.baseRoomOriginalScale.y * this.startScaleMultiplier,
                 this.baseRoomOriginalScale.z * this.startScaleMultiplier,
             );
-            this.BaseRoom.setScale(startScale);
+            this.baseRoom.setScale(startScale);
 
             // 2. Đặt BaseRoom tại baseRoomStartPos nếu có
             if (this.baseRoomStartPos) {
-                this.BaseRoom.setWorldPosition(this.baseRoomStartPos.worldPosition.clone());
+                this.baseRoom.setWorldPosition(this.baseRoomStartPos.worldPosition.clone());
             }
         }
     }
@@ -60,21 +60,21 @@ export class BaseRoomManager extends Component {
 
     /** Unity: PlayIntroAnimation — Phóng to BaseRoom về scale gốc và di chuyển về baseRoomEndPos khi mở hộp. */
     playIntroAnimation(onComplete?: () => void): void {
-        if (!this.BaseRoom) {
+        if (!this.baseRoom) {
             onComplete?.();
             return;
         }
 
         // 1. Phóng to BaseRoom về lại kích thước bình thường
-        TweenUtil.scaleTo(this.BaseRoom, this.baseRoomOriginalScale, this.introDuration, 'linear');
+        TweenUtil.scaleTo(this.baseRoom, this.baseRoomOriginalScale, this.introDuration, 'linear');
 
         // 2. Di chuyển BaseRoom tới baseRoomEndPos
         const targetWorldPos = this.baseRoomEndPos
             ? this.baseRoomEndPos.worldPosition.clone()
             : this.baseRoomOriginalWorldPos.clone();
 
-        TweenUtil.moveTo(this.BaseRoom, targetWorldPos, this.introDuration, 'linear', () => {
-            const room = this.BaseRoom?.getComponent(BaseRoom);
+        TweenUtil.moveTo(this.baseRoom, targetWorldPos, this.introDuration, 'linear', () => {
+            const room = this.baseRoom?.getComponent(BaseRoom);
             if (room) {
                 room.initializeOriginalScale(this.baseRoomOriginalScale);
                 room.enableInteraction();

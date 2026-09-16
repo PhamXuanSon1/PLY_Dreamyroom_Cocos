@@ -1,0 +1,292 @@
+{
+  "meta": { "K": 100, "scene": "Level1692", "exportRoot": "Scale/Items", "distancesInPx": true, "onlyNodeLinks": true, "zeroZ": true, "exportInactive": true, "ignoreInactiveInConflicts": true, "exportedAt": "2026-09-16T14:49:53" },
+  "assetMap": {
+    "bd315bfd09c637c47912f9cb0d619828": "sprites/Ngoai_F2",
+    "da982d4cf242d48488a16a810e9ad24a": "sprites/Layer_118",
+    "3f35252384a38db47872f796da90c37e": "sprites/44_book_open",
+    "1e31494cf4c749641b414a86e2455fbe": "sprites/ghetronno",
+    "ef6a3af693f4d9b4fade82c8b719f977": "sprites/son",
+    "ae5bc53b59227124292c2dc03fdcdda5": "sprites/thamno",
+    "85695d19aa4475642a9509714928e9a0": "sprites/khunggiuong",
+    "4a5ee0d0dcc3e0c4292e85b43160dfe3": "sprites/goi2",
+    "d1b857176e17f5249a5793e0688e9dd3": "sprites/goi1",
+    "c8c38a6e6693c454fa1ccca8261a080f": "sprites/chan",
+    "c42ee4783dc2b2043a3f3e35fe70d665": "sprites/changiuong",
+    "fb1fbe2616fdd384fb4b8141e5d99c83": "sprites/gaubong",
+    "56612776bfb5ed042a6aeff659985f89": "sprites/70_sao",
+    "a87f523efb877b94099c80037c5d8866": "sprites/ghedem",
+    "fdfb14a2e8a23514fa8828aadd7174f0": "sprites/phanphu",
+    "d01f80ad21a76bf49a990ba5e8e2ab5f": "sprites/goiom",
+    "152ce5f47762881479a4007e123075c3": "sprites/bantrangdiem",
+    "c5c46a4f6b8aa664b9be98a879b28a4f": "sprites/guongtreotuong",
+    "499ba60a2d69de6448878f8380efe007": "sprites/khay",
+    "cb7ad30309f69b0498cc3b8f3fef7d6f": "sprites/mipham",
+    "28509f84111ac75418ee789622fe48a0": "sprites/hopdung1",
+    "06fd80b0104a2f84faa4787eccc008bb": "sprites/son2",
+    "ef33ee6c5ede3cf439c629e4117a1f25": "sprites/tuimakeup",
+    "41868dd3d4167a24eae78aa72b8a6c02": "sprites/den"
+  },
+  "nodes": [
+    {
+      "siblingIndex": 2,
+      "path": "Scale/Items",
+      "parentPath": null,
+      "active": true,
+      "pos": [740,5930,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/1_Ngoai_F2",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-966.5001,-5552.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Ngoai_F2", "guid": "bd315bfd09c637c47912f9cb0d619828", "ppu": 100, "nativeSize": [767,681], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 51, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Items/4_Layer 118#0",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-917,-5577,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Layer_118", "guid": "da982d4cf242d48488a16a810e9ad24a", "ppu": 100, "nativeSize": [138,146], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 54, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/Items/14_book open",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-1129,-5584.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "44_book_open", "guid": "3f35252384a38db47872f796da90c37e", "ppu": 100, "nativeSize": [120,55], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 63, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/Items/31_ghetronno",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-811.0001,-5631.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghetronno", "guid": "1e31494cf4c749641b414a86e2455fbe", "ppu": 100, "nativeSize": [86,77], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 80, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/Items/32_son",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-748.5,-5561,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "son", "guid": "ef6a3af693f4d9b4fade82c8b719f977", "ppu": 100, "nativeSize": [43,20], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 81, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Scale/Items/33_thamno",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-966.5001,-5637,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "thamno", "guid": "ae5bc53b59227124292c2dc03fdcdda5", "ppu": 100, "nativeSize": [409,234], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 82, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Scale/Items/34_khunggiuong",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-992,-5485.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khunggiuong", "guid": "85695d19aa4475642a9509714928e9a0", "ppu": 100, "nativeSize": [348,275], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 83, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Scale/Items/35_goi2",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982.5001,-5435,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "goi2", "guid": "4a5ee0d0dcc3e0c4292e85b43160dfe3", "ppu": 100, "nativeSize": [113,98], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 84, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Scale/Items/36_goi1",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-899.5001,-5472,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "goi1", "guid": "d1b857176e17f5249a5793e0688e9dd3", "ppu": 100, "nativeSize": [113,98], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 85, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Scale/Items/37_chan",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-1022,-5523.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chan", "guid": "c8c38a6e6693c454fa1ccca8261a080f", "ppu": 100, "nativeSize": [300,205], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 86, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Scale/Items/38_changiuong",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-1092.5,-5568,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "changiuong", "guid": "c42ee4783dc2b2043a3f3e35fe70d665", "ppu": 100, "nativeSize": [175,158], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 87, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Scale/Items/39_gaubong",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-1075,-5419,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gaubong", "guid": "fb1fbe2616fdd384fb4b8141e5d99c83", "ppu": 100, "nativeSize": [102,136], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 88, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Scale/Items/40_sao",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-981.5001,-5462,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "70_sao", "guid": "56612776bfb5ed042a6aeff659985f89", "ppu": 100, "nativeSize": [109,110], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 89, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Scale/Items/41_ghedem",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-1135.5,-5615,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghedem", "guid": "a87f523efb877b94099c80037c5d8866", "ppu": 100, "nativeSize": [201,136], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 90, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Scale/Items/42_phanphu",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-1189,-5558,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "phanphu", "guid": "fdfb14a2e8a23514fa8828aadd7174f0", "ppu": 100, "nativeSize": [48,57], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 91, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Scale/Items/43_goiom",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-978.0001,-5654,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "goiom", "guid": "d01f80ad21a76bf49a990ba5e8e2ab5f", "ppu": 100, "nativeSize": [110,80], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 92, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Scale/Items/44_bantrangdiem",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-735.5,-5587.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bantrangdiem", "guid": "152ce5f47762881479a4007e123075c3", "ppu": 100, "nativeSize": [191,157], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 93, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Scale/Items/45_guongtreotuong",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-712.0001,-5452.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "guongtreotuong", "guid": "c5c46a4f6b8aa664b9be98a879b28a4f", "ppu": 100, "nativeSize": [120,121], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 94, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Scale/Items/50_khay",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-775.5,-5529,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khay", "guid": "499ba60a2d69de6448878f8380efe007", "ppu": 100, "nativeSize": [55,36], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 99, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Scale/Items/51_mipham",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-788,-5499,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "mipham", "guid": "cb7ad30309f69b0498cc3b8f3fef7d6f", "ppu": 100, "nativeSize": [36,74], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 100, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Scale/Items/52_hopdung1",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-762.5001,-5502,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hopdung1", "guid": "28509f84111ac75418ee789622fe48a0", "ppu": 100, "nativeSize": [41,62], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 101, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Scale/Items/53_son2",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-765,-5516,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "son2", "guid": "06fd80b0104a2f84faa4787eccc008bb", "ppu": 100, "nativeSize": [24,42], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 102, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Scale/Items/54_tuimakeup",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-730.5,-5530,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tuimakeup", "guid": "ef33ee6c5ede3cf439c629e4117a1f25", "ppu": 100, "nativeSize": [71,50], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 103, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Scale/Items/55_den",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-813,-5485,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "den", "guid": "41868dd3d4167a24eae78aa72b8a6c02", "ppu": 100, "nativeSize": [100,208], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 104, "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Scale/Items/4_Layer 118#1",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-913,-5584,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Layer_118", "guid": "da982d4cf242d48488a16a810e9ad24a", "ppu": 100, "nativeSize": [138,146], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 5000, "flipX": false, "flipY": false }
+    }
+  ],
+  "conflicts": [
+  ]
+}

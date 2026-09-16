@@ -69,7 +69,20 @@ export class ItemManager extends Component {
     @property({ type: [Node], tooltip: 'Các object sẽ được bật lên khi người chơi click lần đầu tiên.' })
     objsToEnableOnFirstClick: Node[] = [];
 
+    @property({
+        group: { name: 'Target Visibility Before First Click', id: 'targetVisibilityBeforeFirstClick' },
+        tooltip: 'TRUE: Target (đích ghép) của MỌI item trong Item List vẫn HIỂN THỊ bình thường cho tới khi người chơi '
+            + 'click vào Box (hộp quà) lần đầu tiên — lúc đó Target của các item chưa được lấy ra khỏi hộp mới bị ẩn '
+            + 'đi. Click vào chỗ khác trên màn hình (không phải Box) KHÔNG tính.\n'
+            + 'FALSE (mặc định — đúng logic hiện tại): Ẩn ngay Target của các item chưa ghép xong ngay khi Start màn '
+            + 'chơi, không cần đợi click.'
+    })
+    showTargetsBeforeFirstClick = false;
+
     private isFirstClicked = false;
+
+    /** Guard riêng cho lần click Box đầu tiên — khác isFirstClicked (đó là "chạm bất kỳ đâu"). */
+    private hasBoxBeenClickedOnce = false;
 
     // ---------------- Status ----------------
     /** Item cuối cùng mà người chơi vừa cầm/tương tác. */
@@ -153,7 +166,9 @@ export class ItemManager extends Component {
 
         // glue Cocos: bóng ở đích chỉ hiện lúc người chơi ĐANG KÉO item
         // (ItemController.showTargetShadow), nên tắt hết bóng lúc mở màn.
-        this.initTargetShadows();
+        // Nếu showTargetsBeforeFirstClick bật thì hoãn việc này tới lúc người chơi
+        // click lần đầu tiên (xem enableFirstClickObjects).
+        if (!this.showTargetsBeforeFirstClick) this.initTargetShadows();
 
         // glue Cocos: xếp item vào thanh bar (Unity không có WorldScrollManager)
         this.scheduleOnce(() => {
@@ -200,6 +215,20 @@ export class ItemManager extends Component {
         for (const obj of this.objsToEnableOnFirstClick) {
             if (obj?.isValid) obj.active = true;
         }
+    }
+
+    /**
+     * glue Cocos: gọi RIÊNG từ BoxController khi người chơi click đúng vào Box (hộp quà) lần đầu.
+     * Khác với enableFirstClickObjects()/onAnyPointerDown — cái đó tính cả click ở bất kỳ đâu trên
+     * màn hình, còn đây chỉ tính click trúng Box.
+     */
+    onBoxFirstClicked(): void {
+        if (this.hasBoxBeenClickedOnce) return;
+        this.hasBoxBeenClickedOnce = true;
+
+        // showTargetsBeforeFirstClick=true -> Target vẫn hiện lúc Start, giờ mới đến lượt
+        // ẩn Target của các item chưa lấy ra khỏi hộp.
+        if (this.showTargetsBeforeFirstClick) this.initTargetShadows();
     }
 
     // ======================================================== Unity: Update
