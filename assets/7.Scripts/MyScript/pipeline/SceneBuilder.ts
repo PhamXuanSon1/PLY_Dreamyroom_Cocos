@@ -80,6 +80,9 @@ export class SceneBuilder extends Component {
     spriteDir = '3.Sprites/Sprites2';
 
 
+    @property({ tooltip: 'Tên node con chứa Sprite. Mỗi node ảnh được dựng thành: node cha (transform, component gameplay) → node con này (UITransform + Sprite).' })
+    imageNodeName = 'Image';
+
     @property({ tooltip: 'Sắp xếp siblingIndex theo sortingOrder của Unity' })
     applySorting = true;
 
@@ -124,7 +127,8 @@ export class SceneBuilder extends Component {
         this.clear();
         this.buildK = data.meta?.K ?? 100;
 
-        await this.loadSpriteFrames();
+        const neededKeys = new Set(data.nodes.filter((n) => n.sprite).map((n) => n.sprite!.key));
+        await this.loadSpriteFrames(neededKeys);
 
         for (const n of data.nodes) this.createNode(n);          // pass 1 — cây + sprite
         if (this.applySorting) this.sortSiblings();              // pass 1.5 — siblingIndex
@@ -160,8 +164,13 @@ export class SceneBuilder extends Component {
     }
 
     // ------------------------------------------------------------ nạp SpriteFrame
-    private loadSpriteFrames(): Promise<void> {
-        return EDITOR ? this.loadFramesFromAssetDb() : this.loadFramesFromResources();
+    private loadSpriteFrames(neededKeys: Set<string>): Promise<void> {
+        return EDITOR ? this.loadFramesFromAssetDb(neededKeys) : this.loadFramesFromResources();
+    }
+
+    /** Tra SpriteFrame theo key, không phân biệt hoa/thường ("72_cf_Sd" vẫn khớp "72_cf_sd.png"). */
+    private getFrame(key: string): SpriteFrame | undefined {
+        return this.frames.get(key.toLowerCase());
     }
 
     /** Runtime: resources bundle. */
@@ -173,7 +182,7 @@ export class SceneBuilder extends Component {
             resources.loadDir(dir, SpriteFrame, (err, assets) => {
                 if (err) { console.error('[SceneBuilder] Lỗi load sprite:', err); resolve(); return; }
                 this.frames.clear();
-                for (const sf of assets) this.frames.set(sf.name, sf);
+                for (const sf of assets) this.frames.set(sf.name.toLowerCase(), sf);
                 console.log(`[SceneBuilder] Đã load ${assets.length} SpriteFrame từ resources/${dir}`);
                 resolve();
             });
@@ -183,83 +192,103 @@ export class SceneBuilder extends Component {
     /**
      * Edit mode: hỏi asset-db của Editor.
      * `resources.loadDir` không đáng tin ở edit mode, nên phải đi đường này.
+     *
+     * ⚠ asset-db so pattern PHÂN BIỆT hoa/thường ("3.Sprites/Sprites" ≠ "3.Sprites/sprites")
+     *   dù Windows thì không → lấy toàn bộ SpriteFrame trong project một lần rồi tự lọc
+     *   theo đường dẫn đã lowercase. Key nào vẫn thiếu thì tìm theo tên file trong toàn project.
      */
-    private async loadFramesFromAssetDb(): Promise<void> {
+    private async loadFramesFromAssetDb(neededKeys: Set<string>): Promise<void> {
         this.frames.clear();
         if (!Ed?.Message?.request) {
             console.error('[SceneBuilder] Không truy cập được Editor API.');
             return;
         }
 
-        let pattern = '';
-
-        // 1. Ưu tiên lấy từ spriteFolder nếu có kéo thả vào ô
+        // 1. Thư mục ưu tiên: folder kéo thả > spriteDir
+        let dirUrl = '';
         if (this.spriteFolder) {
             const uuid = (this.spriteFolder as any)._uuid || (this.spriteFolder as any).uuid;
             if (uuid) {
                 try {
-                    const info = await Ed.Message.request('asset-db', 'query-asset-info', { uuid });
-                    if (info && (info.url || info.path)) {
-                        const url = info.url || info.path;
-                        pattern = `${url}/**/*`;
-                    }
+                    const info = await Ed.Message.request('asset-db', 'query-asset-info', uuid);
+                    if (info && (info.url || info.path)) dirUrl = info.url || info.path;
+                    else console.warn('[SceneBuilder] spriteFolder không còn tồn tại trong asset-db (uuid đổi?) — dùng spriteDir.');
                 } catch (e) {
                     console.warn('[SceneBuilder] Lỗi query-asset-info từ spriteFolder:', e);
                 }
             }
         }
-
-        // 2. Nếu không kéo folder, dùng đường dẫn text từ spriteDir
-        if (!pattern) {
-            let dir = this.getCleanSpriteDir();
-            if (dir.startsWith('db://')) {
-                pattern = `${dir}/**/*`;
-            } else if (dir.startsWith('assets/')) {
-                pattern = `db://${dir}/**/*`;
-            } else {
-                pattern = `db://assets/${dir}/**/*`;
-            }
+        if (!dirUrl) {
+            const dir = this.getCleanSpriteDir();
+            if (dir.startsWith('db://')) dirUrl = dir;
+            else if (dir.startsWith('assets/')) dirUrl = `db://${dir}`;
+            else dirUrl = `db://assets/${dir}`;
         }
+        dirUrl = dirUrl.replace(/\\/g, '/').replace(/\/+$/, '');
 
-        let infos: any[] = [];
+        // 2. Toàn bộ SpriteFrame trong project (một query duy nhất)
+        let all: any[] = [];
         try {
-            infos = await Ed.Message.request('asset-db', 'query-assets',
-                { pattern, ccType: 'cc.SpriteFrame' }) ?? [];
+            all = await Ed.Message.request('asset-db', 'query-assets',
+                { pattern: 'db://assets/**/*', ccType: 'cc.SpriteFrame' }) ?? [];
         } catch (e) {
             console.error('[SceneBuilder] query-assets lỗi:', e);
             return;
         }
+        const urlOf = (i: any): string => String(i.url ?? i.path ?? '').replace(/\\/g, '/');
+        const keyOf = (i: any): string => SceneBuilder.keyFromAssetPath(urlOf(i)).toLowerCase();
 
-        // Fallback kiểm tra trong db://assets/resources/ nếu query trực tiếp không ra kết quả
-        if (infos.length === 0 && !this.spriteFolder) {
-            let dir = this.getCleanSpriteDir();
-            if (!dir.startsWith('assets/') && !dir.startsWith('resources/')) {
-                const fallbackPattern = `db://assets/resources/${dir}/**/*`;
-                try {
-                    const fallbackInfos = await Ed.Message.request('asset-db', 'query-assets',
-                        { pattern: fallbackPattern, ccType: 'cc.SpriteFrame' }) ?? [];
-                    if (fallbackInfos.length > 0) {
-                        infos = fallbackInfos;
-                        pattern = fallbackPattern;
-                    }
-                } catch (e) {}
-            }
+        const inDirOf = (prefix: string) => {
+            const p = prefix.toLowerCase() + '/';
+            return all.filter((i) => urlOf(i).toLowerCase().startsWith(p));
+        };
+        let inDir = inDirOf(dirUrl);
+        if (inDir.length === 0 && dirUrl.startsWith('db://assets/') && !dirUrl.startsWith('db://assets/resources/')) {
+            const resUrl = dirUrl.replace('db://assets/', 'db://assets/resources/');
+            const inRes = inDirOf(resUrl);
+            if (inRes.length > 0) { inDir = inRes; dirUrl = resUrl; }
+        }
+        if (inDir.length === 0) {
+            console.warn(`[SceneBuilder] Không thấy SpriteFrame nào trong "${dirUrl}" — sẽ tìm theo tên file trong toàn project.`);
         }
 
+        // 3. Chọn asset cần load: trong thư mục trước, thiếu key nào thì tìm toàn project
+        const needed = new Set([...neededKeys].map((k) => k.toLowerCase()));
+        const picked = new Map<string, any>();            // keyLower → asset info
+        for (const info of inDir) {
+            const k = keyOf(info);
+            if (k && needed.has(k) && !picked.has(k)) picked.set(k, info);
+        }
+        const fallbackHits: string[] = [];
+        const notFound: string[] = [];
+        for (const key of neededKeys) {
+            const k = key.toLowerCase();
+            if (picked.has(k)) continue;
+            const hit = all.find((i) => keyOf(i) === k);
+            if (hit) { picked.set(k, hit); fallbackHits.push(`${key} ← ${urlOf(hit)}`); }
+            else notFound.push(key);
+        }
+        if (fallbackHits.length && this.verbose) {
+            console.warn(`[SceneBuilder] ${fallbackHits.length} sprite không nằm trong "${dirUrl}", lấy từ nơi khác:\n   ${fallbackHits.join('\n   ')}`);
+        }
+        if (notFound.length) {
+            console.warn(`[SceneBuilder] ${notFound.length} sprite không có trong project: ${notFound.join(', ')}`);
+        }
 
-        await Promise.all(infos.map((info) => new Promise<void>((resolve) => {
-            const key = SceneBuilder.keyFromAssetPath(info.url ?? info.path ?? '');
+        // 4. Load
+        await Promise.all([...picked].map(([k, info]) => new Promise<void>((resolve) => {
             assetManager.loadAny({ uuid: info.uuid }, (err: Error | null, asset: SpriteFrame) => {
-                if (!err && asset) {
-                    if (key) this.frames.set(key, asset);
-                    if (asset.name) this.frames.set(asset.name, asset);
-                    if (info.name && info.name !== 'spriteFrame') this.frames.set(info.name, asset);
+                if (err || !asset) {
+                    if (this.verbose) console.warn(`[SceneBuilder] Load lỗi ${urlOf(info)}:`, err);
+                } else {
+                    this.frames.set(k, asset);
                 }
                 resolve();
             });
         })));
 
-        console.log(`[SceneBuilder] Đã load ${this.frames.size} SpriteFrame từ asset-db (${pattern})`);
+        console.log(`[SceneBuilder] Đã load ${this.frames.size}/${needed.size} SpriteFrame cần dùng`
+            + ` (thư mục ${dirUrl}: ${inDir.length} file${fallbackHits.length ? `, +${fallbackHits.length} tìm toàn project` : ''})`);
     }
 
     /** 'db://assets/3.Sprites/Sprites2/pillow_1.png/spriteFrame' hoặc 'f:\\...\\pillow_1.png' → 'pillow_1' */
@@ -277,6 +306,14 @@ export class SceneBuilder extends Component {
 
 
     // ------------------------------------------------------------ pass 1
+    /**
+     * Mỗi node JSON → 1 node Cocos cùng tên (transform, active, component gameplay, con của nó).
+     * Nếu node có sprite thì ảnh KHÔNG nằm trên node này mà nằm trên node con `imageNodeName`:
+     *
+     *     82_cuonlen            ← nodeMap[path], pos/rot/scale, component, @node: trỏ vào đây
+     *       ├─ Image            ← UITransform + Sprite (+ flip, color, sortingOrder)
+     *       └─ <con khác từ JSON>
+     */
     private createNode(n: NodeJson): void {
         const name = n.path.substring(n.path.lastIndexOf('/') + 1);
         const node = new Node(name);
@@ -300,31 +337,41 @@ export class SceneBuilder extends Component {
         this.nodeMap.set(n.path, node);
     }
 
-    private setupSprite(node: Node, s: SpriteJson): void {
-        const ut = node.addComponent(UITransform);
-
+    /** Tạo node con `imageNodeName` mang Sprite dưới `owner`; `owner` chỉ giữ UITransform cùng cỡ để gameplay đo bounds / bắt touch. */
+    private setupSprite(owner: Node, s: SpriteJson): void {
         // ⚠ Hệ số PPU nằm ở contentSize, KHÔNG nằm ở node.scale —
         //   để node con không bị nhân theo hệ số của node cha.
         const f = this.buildK / s.ppu;
-        ut.setContentSize(new Size(s.nativeSize[0] * f, s.nativeSize[1] * f));
+        const size = new Size(s.nativeSize[0] * f, s.nativeSize[1] * f);
+
+        const ownerUt = owner.getComponent(UITransform) ?? owner.addComponent(UITransform);
+        ownerUt.setContentSize(size);
+        ownerUt.setAnchorPoint(s.pivot[0], s.pivot[1]);
+
+        const img = new Node(this.imageNodeName || 'Image');
+        img.layer = owner.layer;
+        img.setParent(owner);
+        img.setPosition(0, 0, 0);
+
+        const ut = img.addComponent(UITransform);
+        ut.setContentSize(size);
         ut.setAnchorPoint(s.pivot[0], s.pivot[1]);
 
-        const sprite = node.addComponent(Sprite);
+        const sprite = img.addComponent(Sprite);
         sprite.sizeMode = Sprite.SizeMode.CUSTOM;
         sprite.trim = false;
 
-        const sf = this.frames.get(s.key);
+        const sf = this.getFrame(s.key);
         if (sf) sprite.spriteFrame = sf;
-        else if (this.verbose) console.warn(`[SceneBuilder] Thiếu SpriteFrame "${s.key}" cho ${node.name}`);
+        else if (this.verbose) console.warn(`[SceneBuilder] Thiếu SpriteFrame "${s.key}" cho ${owner.name}`);
 
         sprite.color = new Color(s.color[0] * 255, s.color[1] * 255, s.color[2] * 255, s.color[3] * 255);
 
-        if (s.flipX || s.flipY) {
-            const sc = node.scale;
-            node.setScale(s.flipX ? -sc.x : sc.x, s.flipY ? -sc.y : sc.y, sc.z);
-        }
+        // Flip đặt ở node ảnh để không lật luôn các node con gameplay của owner.
+        if (s.flipX || s.flipY) img.setScale(s.flipX ? -1 : 1, s.flipY ? -1 : 1, 1);
 
-        this.orderOf.set(node, s.sortingOrder);
+        // sortSiblings() lấy min order đệ quy nên owner tự thừa hưởng order của ảnh.
+        this.orderOf.set(img, s.sortingOrder);
     }
 
     private setupSpine(node: Node, s: SpineJson): void {
