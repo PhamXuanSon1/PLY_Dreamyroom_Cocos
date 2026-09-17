@@ -219,6 +219,10 @@ export class BoxController extends Component implements IPointerHandler {
             () => {
                 if (!holderSlot) return;
                 holderSlot.setItem(currentItem);
+                if (im.isStoreTriggerItem(currentItem)) {
+                    UIManager.instance?.enableStoreOnAnyClick();
+                    return;
+                }
                 if (itemScript) im.showFirstDragHint(itemScript);
             },
         );

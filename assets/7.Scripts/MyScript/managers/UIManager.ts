@@ -41,9 +41,6 @@ export class UIManager extends Component implements IPointerHandler {
     @property({ tooltip: 'Mẫu số — tổng số item. Start() sẽ lấy từ ItemManager.itemList.' })
     mauSo = 12;
 
-    @property({ tooltip: 'Số item hoàn thành để mở màn End Game.' })
-    endGameCount = 12;
-
     @property({
         tooltip: 'Sau N giây kể từ lần CLICK ĐẦU TIÊN vào Box (không đếm từ lúc Start) mà CHƯA ghép đủ item, '
             + 'tự ép chuyển sang chế độ End Game (giống hệt lúc thắng: chạm đâu cũng mở Store) — mặc định 60s = 1 phút. '
@@ -150,10 +147,7 @@ export class UIManager extends Component implements IPointerHandler {
     private checkEndGame(): void {
         if (this.isGameEnded) return;
 
-        const im = ItemManager.instance;
-        const arrived = im?.arrivedItemCount ?? this.tuSo;
-
-        if (this.tuSo >= this.mauSo || arrived >= this.endGameCount) {
+        if (this.tuSo >= this.mauSo) {
             this.activateEndGame();
         }
     }
@@ -162,6 +156,11 @@ export class UIManager extends Component implements IPointerHandler {
     private forceEndGame(): void {
         if (this.isGameEnded) return;
         console.log(`[UIManager] Hết ${this.autoEndAfterSeconds}s chưa ghép xong -> tự chuyển sang chế độ ra Store.`);
+        this.activateEndGame();
+    }
+
+    /** Bật chế độ chạm bất kỳ đâu để chuyển sang Store. */
+    enableStoreOnAnyClick(): void {
         this.activateEndGame();
     }
 

@@ -79,9 +79,10 @@ export class ItemController extends Component implements IPointerHandler {
 
     @property({
         type: [Enum(MaterialType)],
-        tooltip: 'Danh sach FX phat lan luot khi ghep dung. Neu co gia tri o day, Material Type se duoc bo qua.'
+        displayName: 'Sound Type',
+        tooltip: 'Danh sach FX phat lan luot khi ghep dung. Neu co gia tri o day, Sound Type se duoc bo qua.'
     })
-    materialTypes: MaterialType[] = [];
+    soundTypes: MaterialType[] = [];
 
     /** Đã ghép thành công vào đích hay chưa */
     isPlaced = false;
@@ -343,10 +344,10 @@ export class ItemController extends Component implements IPointerHandler {
             this.getComponent(OpenItem)?.onItemPlaced();
 
             // 3. Phát âm thanh Done / LandRight từ Ply_SoundManager
-            const materialTypes = this.materialTypes.length > 0
-                ? this.materialTypes
+            const soundTypes = this.soundTypes.length > 0
+                ? this.soundTypes
                 : [this.materialType];
-            const fxTypes = materialTypes
+            const fxTypes = soundTypes
                 .filter((materialType) => materialType !== MaterialType.None)
                 .map((materialType) => this.materialTypeToFxType(materialType))
                 .filter((fxType): fxType is FxType => fxType !== null);

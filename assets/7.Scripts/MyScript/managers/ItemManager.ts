@@ -46,6 +46,9 @@ export class ItemManager extends Component {
     @property({ type: [Node], tooltip: 'Danh sách các item sẽ rớt ra từ trong hộp.' })
     itemList: Node[] = [];
 
+    @property({ type: Node, tooltip: 'Item được spawn sẽ chuyển sang Store ngay lập tức. Để trống nếu không dùng.' })
+    storeTriggerItem: Node | null = null;
+
     @property({ type: [Node], tooltip: 'Danh sách các vị trí chờ (Holder) để chứa item trước khi ghép.' })
     holderItemList: Node[] = [];
 
@@ -326,6 +329,10 @@ export class ItemManager extends Component {
             return this.itemList[indexToReturn];
         }
         return null;
+    }
+
+    isStoreTriggerItem(item: Node): boolean {
+        return this.storeTriggerItem === item;
     }
 
     /** Unity: GetCurrentHolder — holder trống đầu tiên trong holderItemList. */

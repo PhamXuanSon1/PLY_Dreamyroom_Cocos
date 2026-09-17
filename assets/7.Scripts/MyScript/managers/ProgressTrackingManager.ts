@@ -81,12 +81,10 @@ export class ProgressTrackingManager extends Component {
     }
 
     private getDynamicMaxScore(): number {
-        const ui = UIManager.instance;
-        if (ui && ui.endGameCount > 0) return ui.endGameCount;
-
         const im = ItemManager.instance;
         if (im && im.itemList && im.itemList.length > 0) return im.itemList.length;
 
+        const ui = UIManager.instance;
         if (ui && ui.mauSo > 0) return ui.mauSo;
         return this.maxScore;
     }

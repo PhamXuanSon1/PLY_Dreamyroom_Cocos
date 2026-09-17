@@ -854,7 +854,7 @@
         "f3f026d0-2801-4bb2-9b57-96344b2d4676@f9941",
         "e493c109-ea19-429a-b842-154150079dc7@f9941",
         "7d03220a-9a86-46eb-8cbe-071f12fdb4fa",
-        "7d8f9b89-4fd1-4c9f-a3ab-38ec7cded7ca@f9941",
+        "22231d1e-bb9c-4697-95a9-511b3ce4881f@f9941",
         "d9a17679-db75-4bbe-8299-b877895d115d@f9941",
         "614ccf01-f4a7-4997-a7e2-d4762928f942@f9941",
         "70c7a262-a29b-4818-bb74-56d68aeebd8a@f9941",
@@ -1041,7 +1041,7 @@
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
         "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941",
         "e1fc69b2-618c-4694-9672-0920e014cfe4",
-        "deb41301-a9a0-4e4d-aae6-86c9a29d164b",
+        "97cb1ca5-d4ae-47d5-bc33-14c1b2b53b0c",
         "bb3b63d8-6495-4588-bc26-cf7294bd51d3",
         "64ae03a6-aa86-4177-ba34-9bcf579bfe4d",
         "a88a5c3e-fe57-4d78-ba1e-73e9803bcce9",
@@ -1052,9 +1052,12 @@
         "7e184145-5d25-4a74-b051-6690fa93e9e7",
         "9d82fea5-c5e1-4838-a10e-0fbefa44356c",
         "77303dd5-d31c-4d39-a237-0b55ec90c38b",
+        "1f1fe5a1-c894-424a-8a73-90ab623eca26",
         "c08ddc88-368c-4236-8649-97d3eef4b10e",
         "7e2af722-7b11-4556-a5d6-f0bd3b4ee759",
         "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5",
+        "ba86cebe-4d38-4443-bdd2-0f3817a8a500",
+        "ace29180-3ef9-4c50-8e6e-97b8c870efd7",
         "63d1baa4-820b-4681-950c-f60679d90469"
       ],
       "dependScripts": [
@@ -22176,6 +22179,99 @@
   "2019433c-1f20-49ae-96f8-482e6bba1de3": {
     "url": "db://assets/7.Scripts/MyScript/pipeline/GridArrangeTool.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "a219473e-1d53-442c-b34f-cd7bf9669c91": {
+    "url": "db://assets/4.Sounds/BookOpen.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "bd216886-8f7b-4e55-bec9-a6b4b5f0e906": {
+    "url": "db://assets/4.Sounds/ClickBox.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "18a49140-534d-4dc1-9711-6bce5615198b": {
+    "url": "db://assets/4.Sounds/DropMetal.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "9693dcbb-6d3f-4c75-a07a-c00b72f60a12": {
+    "url": "db://assets/4.Sounds/DropOnFloor.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "95f38fca-c980-4976-815b-32ec3ebfb793": {
+    "url": "db://assets/4.Sounds/Glass.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "0021910e-4881-4c97-b223-06f0d32ff0be": {
+    "url": "db://assets/4.Sounds/PickItem.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "e89f99ee-7ce3-4ec7-af8f-7a04484c8902": {
+    "url": "db://assets/4.Sounds/SmallWood.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "1f1fe5a1-c894-424a-8a73-90ab623eca26": {
+    "url": "db://assets/4.Sounds/WaterDrop.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "ace29180-3ef9-4c50-8e6e-97b8c870efd7": {
+    "url": "db://assets/4.Sounds/Curtain Open v1.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "985c7133-edc6-4535-afd8-3b826b0667d1": {
+    "url": "db://assets/4.Sounds/Window.MP3",
+    "value": {},
+    "versionCode": 1
+  },
+  "ba86cebe-4d38-4443-bdd2-0f3817a8a500": {
+    "url": "db://assets/4.Sounds/Window.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "97cb1ca5-d4ae-47d5-bc33-14c1b2b53b0c": {
+    "url": "db://assets/4.Sounds/BGM/2026-09-17 14-40-20 (mp3cut.net).mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "22231d1e-bb9c-4697-95a9-511b3ce4881f": {
+    "url": "db://assets/3.Sprites/sprites/download (4).jpg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "22231d1e-bb9c-4697-95a9-511b3ce4881f@6c48a": {
+    "url": "db://assets/3.Sprites/sprites/download (4).jpg@6c48a",
+    "value": {
+      "depends": [
+        "22231d1e-bb9c-4697-95a9-511b3ce4881f"
+      ]
+    },
+    "versionCode": 1
+  },
+  "22231d1e-bb9c-4697-95a9-511b3ce4881f@f9941": {
+    "url": "db://assets/3.Sprites/sprites/download (4).jpg@f9941",
+    "value": {
+      "depends": [
+        "22231d1e-bb9c-4697-95a9-511b3ce4881f@6c48a"
+      ]
+    },
     "versionCode": 1
   }
 }

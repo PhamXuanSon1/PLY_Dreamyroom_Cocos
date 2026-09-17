@@ -10,11 +10,11 @@
       "uuid": "405d2b7b-09f2-40b3-8c2b-bd37102b1ae8"
     },
     "3.Sprites\\Chung": {
-      "time": 1789540959284.9158,
+      "time": 1789629187387.4045,
       "uuid": "9def9b2b-946d-4e03-9044-3dfbbb6ec505"
     },
     "4.Sounds\\BGM": {
-      "time": 1789540959162.125,
+      "time": 1789630963511.5835,
       "uuid": "a48afad9-cadd-4d5b-8e24-4aba907e022d"
     },
     "7.Scripts\\Gameplay": {
@@ -22,7 +22,7 @@
       "uuid": "fdde2a5a-55df-47ee-8fdc-efad1dea2740"
     },
     "7.Scripts\\Manager": {
-      "time": 1789540959681.6719,
+      "time": 1789629187482.4048,
       "uuid": "36da2a4a-c294-4077-a052-207d60d075b9"
     },
     "7.Scripts\\MatchAsset": {
@@ -70,15 +70,15 @@
       "uuid": "59acbb9a-95c1-4780-9edc-f7a5cce7a121"
     },
     "7.Scripts\\MyScript\\item": {
-      "time": 1789552457997.8123,
+      "time": 1789629187483.406,
       "uuid": "bfadb7c9-2f8a-4ecc-830b-35afa8393bc8"
     },
     "7.Scripts\\MyScript\\managers": {
-      "time": 1789554600295.386,
+      "time": 1789629187483.406,
       "uuid": "fa5ca025-9285-44c1-84f0-88241c087ac6"
     },
     "7.Scripts\\MyScript\\pipeline": {
-      "time": 1789617417245.1116,
+      "time": 1789629187484.405,
       "uuid": "40642cf3-a97f-4037-945f-f47cda630de9"
     },
     "7.Scripts\\MyScript\\ScriptTemplate": {
@@ -154,7 +154,7 @@
       "uuid": "3b26e7e8-6837-4317-868d-bd408af2c94e"
     },
     "7.Scripts\\Manager\\UI.ts": {
-      "time": 1789620632720.07,
+      "time": 1789629187482.4048,
       "uuid": "5e407573-3124-45d2-9050-3c44d0cf0470"
     },
     "7.Scripts\\Manager\\VFX.ts": {
@@ -242,7 +242,7 @@
       "uuid": "14a54ca0-e12a-490a-948a-754db1575003"
     },
     "7.Scripts\\MyScript\\box\\BoxController.ts": {
-      "time": 1789554602524.2493,
+      "time": 1789632851670.3518,
       "uuid": "7ced8a7d-fd09-44e8-b1af-b41522ee13b2"
     },
     "7.Scripts\\MyScript\\box\\BoxGraphic.ts": {
@@ -266,11 +266,11 @@
       "uuid": "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
     },
     "7.Scripts\\MyScript\\item\\ItemController.ts": {
-      "time": 1789620546175.258,
+      "time": 1789632871981.6765,
       "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
     },
     "7.Scripts\\MyScript\\item\\ItemGraphic.ts": {
-      "time": 1789619785129.194,
+      "time": 1789629187483.406,
       "uuid": "d558005a-8f0f-441f-95a3-dfdeb2a6e567"
     },
     "7.Scripts\\MyScript\\item\\ItemMovement.ts": {
@@ -290,15 +290,15 @@
       "uuid": "a6ea4dda-3a5c-40cf-a6c5-7e2bba4057f1"
     },
     "7.Scripts\\MyScript\\managers\\ItemManager.ts": {
-      "time": 1789620546175.258,
+      "time": 1789632402292.62,
       "uuid": "7443b598-ce0a-4555-8222-8eb8d76d1a1c"
     },
     "7.Scripts\\MyScript\\managers\\ProgressTrackingManager.ts": {
-      "time": 1787121613710.3738,
+      "time": 1789632402294.623,
       "uuid": "01f9a797-a3c5-4494-833e-348ebe65b0ee"
     },
     "7.Scripts\\MyScript\\managers\\UIManager.ts": {
-      "time": 1789554600199.79,
+      "time": 1789632599570.9622,
       "uuid": "545bdd38-875f-416b-abc9-b06befd3fa89"
     },
     "7.Scripts\\MyScript\\managers\\WorldScrollManager.ts": {
@@ -310,7 +310,7 @@
       "uuid": "17a738fe-8388-410c-be30-44ff21f69b67"
     },
     "7.Scripts\\MyScript\\pipeline\\SceneBuilder.ts": {
-      "time": 1789614190669.4949,
+      "time": 1789629187484.405,
       "uuid": "9823c617-75c7-4125-915f-7b7e2e3428d4"
     },
     "7.Scripts\\MyScript\\pipeline\\SortItemsBySizeTool.ts": {
@@ -672,11 +672,11 @@
       "uuid": "54e1328d-b163-4b60-8f36-be68be73c75c"
     },
     "3.Sprites": {
-      "time": 1789614579351.6912,
+      "time": 1789629187388.4045,
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
-      "time": 1789548329953.6597,
+      "time": 1789630202553.6843,
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
@@ -684,7 +684,7 @@
       "uuid": "3821ba58-b5b6-40b4-8da3-e8c689fca25d"
     },
     "6.Scenes": {
-      "time": 1789540959680.6711,
+      "time": 1789629187482.4048,
       "uuid": "af8a22d7-c3ba-450f-a0e3-fa6e50ffd89d"
     },
     "7.Scripts": {
@@ -795,44 +795,24 @@
       "time": 1789327730000,
       "uuid": "42e10400-a0a1-46a7-8792-86aeaa4f0490"
     },
-    "4.Sounds\\ClickBox.ogg": {
-      "time": 1783481787345.2534,
-      "uuid": "bb3b63d8-6495-4588-bc26-cf7294bd51d3"
-    },
     "4.Sounds\\Cloth.mp3": {
-      "time": 1783481787345.2534,
+      "time": 1789629187473.4072,
       "uuid": "82a6a74e-d8c0-42ec-b0d0-2e0968abe284"
     },
     "4.Sounds\\clothes-drop.mp3": {
-      "time": 1783481787346.4011,
+      "time": 1789629187478.405,
       "uuid": "63d1baa4-820b-4681-950c-f60679d90469"
     },
-    "4.Sounds\\DropMetal.ogg": {
-      "time": 1783481787352.9275,
-      "uuid": "eeb67d4d-5ff6-43d7-a04e-d6376625d1e0"
-    },
-    "4.Sounds\\Glass.ogg": {
-      "time": 1783481787354.9385,
-      "uuid": "ef70624d-667d-4e62-9349-d790b0f2050a"
-    },
     "4.Sounds\\Grass.mp3": {
-      "time": 1783481787357.337,
+      "time": 1789629187476.4055,
       "uuid": "7e2af722-7b11-4556-a5d6-f0bd3b4ee759"
     },
     "4.Sounds\\HeavyWood.mp3": {
-      "time": 1783481787357.337,
+      "time": 1789629187476.4055,
       "uuid": "a88a5c3e-fe57-4d78-ba1e-73e9803bcce9"
     },
-    "4.Sounds\\PickItem.ogg": {
-      "time": 1783481787357.337,
-      "uuid": "64ae03a6-aa86-4177-ba34-9bcf579bfe4d"
-    },
-    "4.Sounds\\SmallWood.ogg": {
-      "time": 1783481787360.849,
-      "uuid": "2566a2e9-952c-46ec-b7b5-018e69e45f93"
-    },
     "4.Sounds\\WoodenDoor Small.mp3": {
-      "time": 1787371145032.315,
+      "time": 1789629187477.4048,
       "uuid": "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5"
     },
     "5.Prefabs\\BlinkEffect.prefab": {
@@ -844,7 +824,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1789627194002.9956,
+      "time": 1789633084415.6301,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -880,7 +860,7 @@
       "uuid": "ac9175b9-91cc-46e2-a155-9115434bc1da"
     },
     "4.Sounds\\BGM\\Fantasy Fairy Tale Music Magical ✦ Ethereal Fantasy Music ✦ 528 hz ✦ No copyright - moonangel (mp3cut.net) (1).mp3": {
-      "time": 1787369055101.4387,
+      "time": 1789629187472.4048,
       "uuid": "deb41301-a9a0-4e4d-aae6-86c9a29d164b"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Unity_vs_Cocos_CheatSheet.md": {
@@ -1086,9 +1066,6 @@
     "2.Fonts\\LiberationSans.ttf.meta": {
       "time": 1789327730000
     },
-    "4.Sounds\\ClickBox.ogg.meta": {
-      "time": 1787369260738.184
-    },
     "2.Fonts\\TUV-PoetsenOne.ttf.meta": {
       "time": 1789327730000
     },
@@ -1098,26 +1075,14 @@
     "4.Sounds\\Cloth.mp3.meta": {
       "time": 1787369383448.4358
     },
-    "4.Sounds\\DropMetal.ogg.meta": {
-      "time": 1787369587970.9236
-    },
     "4.Sounds\\Grass.mp3.meta": {
       "time": 1787369625340.7224
-    },
-    "4.Sounds\\Glass.ogg.meta": {
-      "time": 1787370320240.0493
     },
     "5.Prefabs\\BlinkEffect.prefab.meta": {
       "time": 1789031320833.0293
     },
     "4.Sounds\\HeavyWood.mp3.meta": {
       "time": 1787369312378.8994
-    },
-    "4.Sounds\\PickItem.ogg.meta": {
-      "time": 1787369268789.981
-    },
-    "4.Sounds\\SmallWood.ogg.meta": {
-      "time": 1787369377967.1309
     },
     "4.Sounds\\WoodenDoor Small.mp3.meta": {
       "time": 1787371149904.9692
@@ -1135,22 +1100,22 @@
       "time": 1789031320978.6953
     },
     "3.Sprites\\Chung\\Install.png.meta": {
-      "time": 1789540959258.505
+      "time": 1789629187386.405
     },
     "3.Sprites\\Chung\\green_button.png.meta": {
-      "time": 1789540959284.9158
+      "time": 1789629187387.4045
     },
     "3.Sprites\\Chung\\Hand.png.meta": {
-      "time": 1789540959258.505
+      "time": 1789629187386.405
     },
     "3.Sprites\\Chung\\TapToDecor.png.meta": {
-      "time": 1789540959284.9158
+      "time": 1789629187387.4045
     },
     "3.Sprites\\Chung\\Logo.png.meta": {
-      "time": 1789540959282.9114
+      "time": 1789629187386.405
     },
     "3.Sprites\\Chung\\WhiteBar.png.meta": {
-      "time": 1789540959284.9158
+      "time": 1789629187387.4045
     },
     "4.Sounds\\BGM\\Fantasy Fairy Tale Music Magical ✦ Ethereal Fantasy Music ✦ 528 hz ✦ No copyright - moonangel (mp3cut.net) (1).mp3.meta": {
       "time": 1787369057658.0615
@@ -1275,51 +1240,51 @@
       "uuid": "a12ae7d3-df1d-4ba8-a8e6-957d35166250"
     },
     "3.Sprites\\Box\\OpenClick": {
-      "time": 1789540959206.4585,
+      "time": 1789629187384.4048,
       "uuid": "a13eae00-79ed-4fdd-b16c-668ee67e3f22"
     },
     "3.Sprites\\Box\\ReadyLoop": {
-      "time": 1789540959258.505,
+      "time": 1789629187385.4048,
       "uuid": "40471e17-3b69-4428-b021-40e39859ec95"
     },
     "3.Sprites\\Chung\\Tap to Decor Fairy Land.png.meta": {
-      "time": 1789540959284.9158
+      "time": 1789629187386.405
     },
     "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0000.png.meta": {
-      "time": 1789540959167.4263
+      "time": 1789629187383.4043
     },
     "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0001.png.meta": {
-      "time": 1789540959167.4263
+      "time": 1789629187383.4043
     },
     "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0002.png.meta": {
-      "time": 1789540959168.427
+      "time": 1789629187384.4048
     },
     "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0003.png.meta": {
-      "time": 1789540959206.4585
+      "time": 1789629187384.4048
     },
     "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0004.png.meta": {
-      "time": 1789540959206.4585
+      "time": 1789629187384.4048
     },
     "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0005.png.meta": {
-      "time": 1789540959206.4585
+      "time": 1789629187384.4048
     },
     "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0006.png.meta": {
-      "time": 1789540959206.4585
+      "time": 1789629187384.4048
     },
     "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0030.png.meta": {
-      "time": 1789540959207.4614
+      "time": 1789629187385.4048
     },
     "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0031.png.meta": {
-      "time": 1789540959207.4614
+      "time": 1789629187385.4048
     },
     "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0032.png.meta": {
-      "time": 1789540959257.506
+      "time": 1789629187385.4048
     },
     "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0033.png.meta": {
-      "time": 1789540959257.506
+      "time": 1789629187385.4048
     },
     "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0034.png.meta": {
-      "time": 1789540959258.505
+      "time": 1789629187385.4048
     },
     "3.Sprites\\Chung\\Tap to Decor Fairy Land.png": {
       "time": 1789540959284.9158,
@@ -1415,13 +1380,6 @@
       "time": 1789327730000,
       "uuid": "43451b8a-77f6-47cc-8b77-4338c5656fd2"
     },
-    "4.Sounds\\DropOnFloor.ogg.meta": {
-      "time": 1789548278495.1108
-    },
-    "4.Sounds\\DropOnFloor.ogg": {
-      "time": 1782283243933.4978,
-      "uuid": "7e184145-5d25-4a74-b051-6690fa93e9e7"
-    },
     "4.Sounds\\Cute Kitty Monster Voice 01.mp3.meta": {
       "time": 1789548294763.6013
     },
@@ -1429,19 +1387,12 @@
       "time": 1789548294775.658
     },
     "4.Sounds\\Cute Kitty Monster Voice 01.mp3": {
-      "time": 1782283243931.5132,
+      "time": 1789629187474.4065,
       "uuid": "9d82fea5-c5e1-4838-a10e-0fbefa44356c"
     },
     "4.Sounds\\Cute Kitty Monster Voice 02.mp3": {
-      "time": 1782283243932.4897,
+      "time": 1789629187474.4065,
       "uuid": "77303dd5-d31c-4d39-a237-0b55ec90c38b"
-    },
-    "4.Sounds\\BookOpen.ogg.meta": {
-      "time": 1789548329962.896
-    },
-    "4.Sounds\\BookOpen.ogg": {
-      "time": 1782283243927.506,
-      "uuid": "c08ddc88-368c-4236-8649-97d3eef4b10e"
     },
     "1.Animations\\TapToDecor.meta": {
       "time": 1789548547768.5334
@@ -1471,1349 +1422,1433 @@
       "time": 1789552676073.8003,
       "uuid": "7d03220a-9a86-46eb-8cbe-071f12fdb4fa"
     },
-    "7.Scripts\\MyScript\\pipeline\\FollowNode.ts.meta": {
-      "time": 1789613685461.8901
-    },
-    "7.Scripts\\MyScript\\pipeline\\FollowNode.ts": {
-      "time": 1789613681431.4497,
-      "uuid": "4f5fb12f-49c9-4c2b-bd72-f5e96090433c"
-    },
-    "3.Sprites\\Level1724_Scale.json.meta": {
-      "time": 1789614579262.5151
-    },
-    "3.Sprites\\Level1724_Scale.json": {
-      "time": 1789614505510.2478,
-      "uuid": "27f4613a-c4b3-429e-857f-7f2cb8fe76e5"
-    },
     "3.Sprites\\sprites.meta": {
-      "time": 1789614579358.4783
+      "time": 1789629187388.4045
     },
     "3.Sprites\\sprites": {
-      "time": 1789614580481.1477,
+      "time": 1789632131120.363,
       "uuid": "baf65191-d59a-44b9-b247-8a91d9f31063"
     },
-    "3.Sprites\\sprites\\58_cuaso.png.meta": {
-      "time": 1789614579489.7083
+    "7.Scripts\\MyScript\\pipeline\\FollowNode.ts.meta": {
+      "time": 1789629187484.405
     },
-    "3.Sprites\\sprites\\59_goihoa.png.meta": {
-      "time": 1789614579492.7036
+    "7.Scripts\\MyScript\\pipeline\\GridArrangeTool.ts.meta": {
+      "time": 1789629187484.405
     },
-    "3.Sprites\\sprites\\59_goihoa_Sd.png.meta": {
-      "time": 1789614579488.704
+    "7.Scripts\\MyScript\\pipeline\\FollowNode.ts": {
+      "time": 1789629187484.405,
+      "uuid": "4f5fb12f-49c9-4c2b-bd72-f5e96090433c"
     },
-    "3.Sprites\\sprites\\5_mai.png.meta": {
-      "time": 1789614579498.917
+    "7.Scripts\\MyScript\\pipeline\\GridArrangeTool.ts": {
+      "time": 1789629187484.405,
+      "uuid": "2019433c-1f20-49ae-96f8-482e6bba1de3"
     },
-    "3.Sprites\\sprites\\60_goi.png.meta": {
-      "time": 1789614579520.0598
+    "3.Sprites\\Level1724_Scale.json.meta": {
+      "time": 1789629187388.4045
     },
-    "3.Sprites\\sprites\\60_goi_sd.png.meta": {
-      "time": 1789614579514.0576
+    "4.Sounds\\BookOpen.ogg.meta": {
+      "time": 1789629187472.4048
     },
-    "3.Sprites\\sprites\\61_goi.png.meta": {
-      "time": 1789614579517.061
+    "4.Sounds\\ClickBox.ogg.meta": {
+      "time": 1789629187473.4072
     },
-    "3.Sprites\\sprites\\61_goi_sd.png.meta": {
-      "time": 1789614579522.0613
+    "4.Sounds\\DropMetal.ogg.meta": {
+      "time": 1789629187475.4055
     },
-    "3.Sprites\\sprites\\62_dem.png.meta": {
-      "time": 1789614579533.0564
+    "4.Sounds\\DropOnFloor.ogg.meta": {
+      "time": 1789629187475.4055
     },
-    "3.Sprites\\sprites\\62_dem_Sd.png.meta": {
-      "time": 1789614579546.0608
+    "4.Sounds\\Glass.ogg.meta": {
+      "time": 1789629187475.4055
     },
-    "3.Sprites\\sprites\\63_giuong.png.meta": {
-      "time": 1789614579544.0583
+    "4.Sounds\\PickItem.ogg.meta": {
+      "time": 1789629187477.4048
     },
-    "3.Sprites\\sprites\\63_giuong_cut.png.meta": {
-      "time": 1789614579550.057
-    },
-    "3.Sprites\\sprites\\63_giuong_Sd.png.meta": {
-      "time": 1789614579550.057
-    },
-    "3.Sprites\\sprites\\64_tham.png.meta": {
-      "time": 1789614579566.0571
-    },
-    "3.Sprites\\sprites\\64_tham_Sd.png.meta": {
-      "time": 1789614579568.0564
-    },
-    "3.Sprites\\sprites\\65_base.png.meta": {
-      "time": 1789614579577.0679
-    },
-    "3.Sprites\\sprites\\66_kinhvienvong.png.meta": {
-      "time": 1789614579582.0676
-    },
-    "3.Sprites\\sprites\\66_kinhvienvong_sd.png.meta": {
-      "time": 1789614579588.0688
-    },
-    "3.Sprites\\sprites\\67_cay.png.meta": {
-      "time": 1789614579599.1365
-    },
-    "3.Sprites\\sprites\\67_cay_Sd.png.meta": {
-      "time": 1789614579600.1367
-    },
-    "3.Sprites\\sprites\\69_binhhoa.png.meta": {
-      "time": 1789614579604.137
-    },
-    "3.Sprites\\sprites\\69_binhhoa_sd.png.meta": {
-      "time": 1789614579609.1387
-    },
-    "3.Sprites\\sprites\\6_thancay.png.meta": {
-      "time": 1789614579622.1355
-    },
-    "3.Sprites\\sprites\\70_ghe.png.meta": {
-      "time": 1789614579626.137
-    },
-    "3.Sprites\\sprites\\70_ghe_Sd.png.meta": {
-      "time": 1789614579625.1367
-    },
-    "3.Sprites\\sprites\\71_ghe.png.meta": {
-      "time": 1789614579633.1362
-    },
-    "3.Sprites\\sprites\\71_ghe_sd.png.meta": {
-      "time": 1789614579641.136
-    },
-    "3.Sprites\\sprites\\72_cf.png.meta": {
-      "time": 1789614579648.136
-    },
-    "3.Sprites\\sprites\\72_cf_Sd.png.meta": {
-      "time": 1789614579652.1372
-    },
-    "3.Sprites\\sprites\\73_ban.png.meta": {
-      "time": 1789614579646.1367
-    },
-    "3.Sprites\\sprites\\73_ban_sd.png.meta": {
-      "time": 1789614579662.139
-    },
-    "3.Sprites\\sprites\\74_base.png.meta": {
-      "time": 1789614579682.1362
-    },
-    "3.Sprites\\sprites\\75_lacucai.png.meta": {
-      "time": 1789614579668.137
-    },
-    "3.Sprites\\sprites\\76_thancay.png.meta": {
-      "time": 1789614579684.1367
-    },
-    "3.Sprites\\sprites\\77_maiche.png.meta": {
-      "time": 1789614579685.1382
-    },
-    "3.Sprites\\sprites\\78_benngoaicucai.png.meta": {
-      "time": 1789614579707.1423
-    },
-    "3.Sprites\\sprites\\79_coc.png.meta": {
-      "time": 1789614579696.1418
-    },
-    "3.Sprites\\sprites\\79_coc_Sd.png.meta": {
-      "time": 1789614579708.66
-    },
-    "3.Sprites\\sprites\\7_maiche.png.meta": {
-      "time": 1789614579750.6594
-    },
-    "3.Sprites\\sprites\\80_chaucay.png.meta": {
-      "time": 1789614579714.662
-    },
-    "3.Sprites\\sprites\\80_chaucay_sd.png.meta": {
-      "time": 1789614579762.6597
-    },
-    "3.Sprites\\sprites\\81_sachmo.png.meta": {
-      "time": 1789614579771.661
-    },
-    "3.Sprites\\sprites\\82_cuonlen.png.meta": {
-      "time": 1789614579775.659
-    },
-    "3.Sprites\\sprites\\82_cuonlen_sd.png.meta": {
-      "time": 1789614579778.6611
-    },
-    "3.Sprites\\sprites\\83_rolen.png.meta": {
-      "time": 1789614579782.6619
-    },
-    "3.Sprites\\sprites\\83_rolen_Sd.png.meta": {
-      "time": 1789614579791.66
-    },
-    "3.Sprites\\sprites\\84_chaucay.png.meta": {
-      "time": 1789614579794.6604
-    },
-    "3.Sprites\\sprites\\84_chaucay_Sd.png.meta": {
-      "time": 1789614579799.659
-    },
-    "3.Sprites\\sprites\\85_ghedon_.png.meta": {
-      "time": 1789614579804.6626
-    },
-    "3.Sprites\\sprites\\85_ghedon_sd.png.meta": {
-      "time": 1789614579807.66
-    },
-    "3.Sprites\\sprites\\86_ghedon.png.meta": {
-      "time": 1789614579821.6638
-    },
-    "3.Sprites\\sprites\\86_ghedon_sd.png.meta": {
-      "time": 1789614579853.9207
-    },
-    "3.Sprites\\sprites\\87_binhnuoc.png.meta": {
-      "time": 1789614579826.66
-    },
-    "3.Sprites\\sprites\\87_binhnuoc_Sd.png.meta": {
-      "time": 1789614579824.6606
-    },
-    "3.Sprites\\sprites\\88_bancurcai.png.meta": {
-      "time": 1789614579839.6606
-    },
-    "3.Sprites\\sprites\\88_bancurcai_sd.png.meta": {
-      "time": 1789614579848.2847
-    },
-    "3.Sprites\\sprites\\89_tv.png.meta": {
-      "time": 1789614579844.2761
-    },
-    "3.Sprites\\sprites\\89_tv_sd.png.meta": {
-      "time": 1789614579859.9292
-    },
-    "3.Sprites\\sprites\\8_cuasongoai.png.meta": {
-      "time": 1789614579866.9304
-    },
-    "3.Sprites\\sprites\\90_coc.png.meta": {
-      "time": 1789614579872.9287
-    },
-    "3.Sprites\\sprites\\90_coc_sd.png.meta": {
-      "time": 1789614579871.9307
-    },
-    "3.Sprites\\sprites\\91_sach.png.meta": {
-      "time": 1789614579880.9294
-    },
-    "3.Sprites\\sprites\\91_sach_sd.png.meta": {
-      "time": 1789614579886.937
-    },
-    "3.Sprites\\sprites\\92_khan.png.meta": {
-      "time": 1789614579891.9375
-    },
-    "3.Sprites\\sprites\\92_khan_sd.png.meta": {
-      "time": 1789614579892.9373
-    },
-    "3.Sprites\\sprites\\93_tui.png.meta": {
-      "time": 1789614579900.4548
-    },
-    "3.Sprites\\sprites\\93_tui_sd.png.meta": {
-      "time": 1789614579922.4585
-    },
-    "3.Sprites\\sprites\\94_tui.png.meta": {
-      "time": 1789614579907.4539
-    },
-    "3.Sprites\\sprites\\94_tui_Sd.png.meta": {
-      "time": 1789614579919.4634
-    },
-    "3.Sprites\\sprites\\95_bantivi.png.meta": {
-      "time": 1789614579915.4595
-    },
-    "3.Sprites\\sprites\\95_bantivi_cut.png.meta": {
-      "time": 1789614579930.979
-    },
-    "3.Sprites\\sprites\\95_bantivi_sd.png.meta": {
-      "time": 1789614579932.978
-    },
-    "3.Sprites\\sprites\\96_goitaymeo.png.meta": {
-      "time": 1789614579940.9783
-    },
-    "3.Sprites\\sprites\\96_goitaymeo_sd.png.meta": {
-      "time": 1789614579943.9768
-    },
-    "3.Sprites\\sprites\\97_non.png.meta": {
-      "time": 1789614579947.982
-    },
-    "3.Sprites\\sprites\\98_balo.png.meta": {
-      "time": 1789614579954.9795
-    },
-    "3.Sprites\\sprites\\99_odu.png.meta": {
-      "time": 1789614579958.9775
-    },
-    "3.Sprites\\sprites\\9_benngoaicucai.png.meta": {
-      "time": 1789614579969.98
-    },
-    "3.Sprites\\sprites\\44_tranh.png.meta": {
-      "time": 1789614579970.9756
-    },
-    "3.Sprites\\sprites\\44_tranh_Sd.png.meta": {
-      "time": 1789614579972.9768
-    },
-    "3.Sprites\\sprites\\45_Khan.png.meta": {
-      "time": 1789614579980.9785
-    },
-    "3.Sprites\\sprites\\45_Khan_sd.png.meta": {
-      "time": 1789614579984.9775
-    },
-    "3.Sprites\\sprites\\46_chongsach.png.meta": {
-      "time": 1789614579996.978
-    },
-    "3.Sprites\\sprites\\46_chongsach_Sd.png.meta": {
-      "time": 1789614579999.9805
-    },
-    "3.Sprites\\sprites\\47_Tu.png.meta": {
-      "time": 1789614580007.979
-    },
-    "3.Sprites\\sprites\\47_Tu_cut.png.meta": {
-      "time": 1789614580014.9788
-    },
-    "3.Sprites\\sprites\\47_Tu_Sd.png.meta": {
-      "time": 1789614580010.9773
-    },
-    "3.Sprites\\sprites\\48_lich.png.meta": {
-      "time": 1789614580022.9778
-    },
-    "3.Sprites\\sprites\\49_Dep.png.meta": {
-      "time": 1789614580026.9792
-    },
-    "3.Sprites\\sprites\\49_Dep_Sd.png.meta": {
-      "time": 1789614580031.9775
-    },
-    "3.Sprites\\sprites\\4_lumcay.png.meta": {
-      "time": 1789614580035.9792
-    },
-    "3.Sprites\\sprites\\50_gaubong.png.meta": {
-      "time": 1789614580041.9795
-    },
-    "3.Sprites\\sprites\\50_gaubong_Sd.png.meta": {
-      "time": 1789614580050.979
-    },
-    "3.Sprites\\sprites\\51_khan.png.meta": {
-      "time": 1789614580068.982
-    },
-    "3.Sprites\\sprites\\51_khan_sd.png.meta": {
-      "time": 1789614580056.9788
-    },
-    "3.Sprites\\sprites\\52_den.png.meta": {
-      "time": 1789614580056.9788
-    },
-    "3.Sprites\\sprites\\52_den_Sd.png.meta": {
-      "time": 1789614580069.9834
-    },
-    "3.Sprites\\sprites\\53_chan.png.meta": {
-      "time": 1789614580076.9927
-    },
-    "3.Sprites\\sprites\\53_chan_Sd.png.meta": {
-      "time": 1789614580080.9924
-    },
-    "3.Sprites\\sprites\\54_khunganh.png.meta": {
-      "time": 1789614580090.5095
-    },
-    "3.Sprites\\sprites\\54_khunganh_Sd.png.meta": {
-      "time": 1789614580102.5088
-    },
-    "3.Sprites\\sprites\\55_cay.png.meta": {
-      "time": 1789614580099.507
-    },
-    "3.Sprites\\sprites\\55_cay_Sd.png.meta": {
-      "time": 1789614580109.5098
-    },
-    "3.Sprites\\sprites\\56_ke.png.meta": {
-      "time": 1789614580113.5178
-    },
-    "3.Sprites\\sprites\\57_rem.png.meta": {
-      "time": 1789614580121.518
-    },
-    "3.Sprites\\sprites\\59_goihoa_Sd.png": {
-      "time": 1779712598002.5444,
-      "uuid": "cd2c8e1c-eb09-4478-b938-a46c0ad04d09"
-    },
-    "3.Sprites\\sprites\\58_cuaso.png": {
-      "time": 1779712598001.545,
-      "uuid": "15e6bbde-4ae1-46ca-b48b-e2fc55fd1842"
-    },
-    "3.Sprites\\sprites\\59_goihoa.png": {
-      "time": 1779712598001.545,
-      "uuid": "d15e5ace-4446-46c2-bd91-76175d996687"
-    },
-    "3.Sprites\\sprites\\5_mai.png": {
-      "time": 1779712598002.5444,
-      "uuid": "d2da4ed0-c475-4f4b-811d-57e2fd7114d3"
-    },
-    "3.Sprites\\sprites\\60_goi_sd.png": {
-      "time": 1779712598003.5454,
-      "uuid": "85474568-2503-4f65-9992-969daa7300d1"
-    },
-    "3.Sprites\\sprites\\61_goi.png": {
-      "time": 1779712598003.5454,
-      "uuid": "dae9bb24-97b3-45df-91b3-334c32d886d0"
-    },
-    "3.Sprites\\sprites\\60_goi.png": {
-      "time": 1779712598003.5454,
-      "uuid": "3bf20fde-95ce-49b6-baa3-10898b75a043"
-    },
-    "3.Sprites\\sprites\\61_goi_sd.png": {
-      "time": 1779712598004.5442,
-      "uuid": "d130d90b-3bd1-4d08-96fb-e742d044978d"
-    },
-    "3.Sprites\\sprites\\62_dem.png": {
-      "time": 1779712598004.5442,
-      "uuid": "65eb4e40-703d-4621-be62-caa17832dd29"
-    },
-    "3.Sprites\\sprites\\63_giuong.png": {
-      "time": 1779712598005.5452,
-      "uuid": "7f66509c-f004-48e0-bc22-f81d78199e01"
-    },
-    "3.Sprites\\sprites\\62_dem_Sd.png": {
-      "time": 1779712598004.5442,
-      "uuid": "2d95c5dd-4542-487a-8a1e-dae9a7e27ba7"
-    },
-    "3.Sprites\\sprites\\63_giuong_cut.png": {
-      "time": 1779712598005.5452,
-      "uuid": "a6eafff6-54ea-4bc7-bf00-24432b947460"
-    },
-    "3.Sprites\\sprites\\63_giuong_Sd.png": {
-      "time": 1779712598005.5452,
-      "uuid": "057dcd81-288c-41ab-9767-f308a7f527df"
-    },
-    "3.Sprites\\sprites\\64_tham.png": {
-      "time": 1779712598006.5442,
-      "uuid": "3ee73b48-15a4-41b3-bdc7-5b0377d3e6ce"
-    },
-    "3.Sprites\\sprites\\64_tham_Sd.png": {
-      "time": 1779712598006.5442,
-      "uuid": "8ce43907-7cd7-45bf-a732-a750031e24b0"
-    },
-    "3.Sprites\\sprites\\65_base.png": {
-      "time": 1779712597961.0361,
-      "uuid": "abb790ac-e38d-4ddf-8997-a9b7fbbdfed7"
-    },
-    "3.Sprites\\sprites\\66_kinhvienvong.png": {
-      "time": 1779712598006.5442,
-      "uuid": "cbceae54-34d8-43e6-959b-ba616f28f189"
-    },
-    "3.Sprites\\sprites\\66_kinhvienvong_sd.png": {
-      "time": 1779712598007.5442,
-      "uuid": "cde65577-2c65-4f89-9e9c-72fddc02c01a"
-    },
-    "3.Sprites\\sprites\\67_cay.png": {
-      "time": 1779712598007.5442,
-      "uuid": "1aac5c5c-950e-4967-a36a-2dd2ac9ad3b1"
-    },
-    "3.Sprites\\sprites\\67_cay_Sd.png": {
-      "time": 1779712598007.5442,
-      "uuid": "842db1ee-3a37-4164-9411-da685b194df0"
-    },
-    "3.Sprites\\sprites\\69_binhhoa.png": {
-      "time": 1779712598007.5442,
-      "uuid": "9c7af2aa-e25e-44ef-8eed-233bf96f2e5e"
-    },
-    "3.Sprites\\sprites\\69_binhhoa_sd.png": {
-      "time": 1779712598008.5447,
-      "uuid": "9129a566-635b-4693-9eb1-534059cac994"
-    },
-    "3.Sprites\\sprites\\6_thancay.png": {
-      "time": 1779712597963.0361,
-      "uuid": "30f3282b-764d-4352-980e-6f7ba7da2297"
-    },
-    "3.Sprites\\sprites\\70_ghe_Sd.png": {
-      "time": 1779712598008.5447,
-      "uuid": "d5a8ec72-28dd-4359-ace3-13d891e4a788"
-    },
-    "3.Sprites\\sprites\\70_ghe.png": {
-      "time": 1779712598008.5447,
-      "uuid": "72e76965-8e69-484a-a3f1-737e73321c95"
-    },
-    "3.Sprites\\sprites\\71_ghe.png": {
-      "time": 1779712598009.545,
-      "uuid": "4026b32d-2a25-4119-a95f-9b79876586e4"
-    },
-    "3.Sprites\\sprites\\71_ghe_sd.png": {
-      "time": 1779712598009.545,
-      "uuid": "ef79cc73-1bf2-4b98-a006-ecaf789378eb"
-    },
-    "3.Sprites\\sprites\\73_ban.png": {
-      "time": 1779712598010.545,
-      "uuid": "1c162aee-ca1d-4977-a139-6aa19d2911f6"
-    },
-    "3.Sprites\\sprites\\72_cf.png": {
-      "time": 1779712598009.545,
-      "uuid": "2daeee2d-1e4a-493c-a987-c0d2bd05e0c1"
-    },
-    "3.Sprites\\sprites\\72_cf_Sd.png": {
-      "time": 1779712598010.545,
-      "uuid": "73cacea4-2384-4c4e-9ce1-c79b09c2031a"
-    },
-    "3.Sprites\\sprites\\73_ban_sd.png": {
-      "time": 1779712598010.545,
-      "uuid": "d13b4d65-58d2-464c-9623-5cc7a00b06f5"
-    },
-    "3.Sprites\\sprites\\75_lacucai.png": {
-      "time": 1779712598011.544,
-      "uuid": "a23f6747-35da-4e31-9a08-df3675836a03"
-    },
-    "3.Sprites\\sprites\\74_base.png": {
-      "time": 1779712598011.544,
-      "uuid": "26fd7a53-56fe-4aae-9f15-39bf10c8d0cc"
-    },
-    "3.Sprites\\sprites\\76_thancay.png": {
-      "time": 1779712597964.0352,
-      "uuid": "cef6b6eb-88ec-4f1b-8a32-29a14e18f546"
-    },
-    "3.Sprites\\sprites\\77_maiche.png": {
-      "time": 1779712598012.544,
-      "uuid": "81399190-24ef-4d8e-be68-a41c22141892"
-    },
-    "3.Sprites\\sprites\\79_coc.png": {
-      "time": 1779712598023.5435,
-      "uuid": "cbe735da-27c8-47a6-a865-bb024c9c2457"
-    },
-    "3.Sprites\\sprites\\78_benngoaicucai.png": {
-      "time": 1779712598022.5437,
-      "uuid": "1bc8a8e7-2343-482e-8a4d-e531b6fb071d"
-    },
-    "3.Sprites\\sprites\\79_coc_Sd.png": {
-      "time": 1779712598023.5435,
-      "uuid": "8182e37f-03f9-4f6b-be8b-72184c2a633e"
-    },
-    "3.Sprites\\sprites\\80_chaucay.png": {
-      "time": 1779712598025.5454,
-      "uuid": "2fc1cc37-8841-46cc-a58d-33b785904e12"
-    },
-    "3.Sprites\\sprites\\7_maiche.png": {
-      "time": 1779712598024.5444,
-      "uuid": "b86ec4e8-b2cd-4240-a6e3-62e075537d19"
-    },
-    "3.Sprites\\sprites\\80_chaucay_sd.png": {
-      "time": 1779712598025.5454,
-      "uuid": "86d22ca2-ed0b-4433-a776-1063dd862559"
-    },
-    "3.Sprites\\sprites\\81_sachmo.png": {
-      "time": 1779712598025.5454,
-      "uuid": "dc4a24ba-2d0e-495f-a030-a04edc974806"
-    },
-    "3.Sprites\\sprites\\82_cuonlen.png": {
-      "time": 1779712598026.5444,
-      "uuid": "38fd5ac0-df5a-45ea-8178-d7d5025719a2"
-    },
-    "3.Sprites\\sprites\\82_cuonlen_sd.png": {
-      "time": 1779712598026.5444,
-      "uuid": "fe29ba24-df7e-4dfd-a7ca-fd785dae9d98"
-    },
-    "3.Sprites\\sprites\\83_rolen.png": {
-      "time": 1779712598027.5479,
-      "uuid": "628f8a7b-c2a0-4931-bd0d-65f039b6f49e"
-    },
-    "3.Sprites\\sprites\\83_rolen_Sd.png": {
-      "time": 1779712598027.5479,
-      "uuid": "83c2d472-b250-46f7-a31d-edc6161d23ca"
-    },
-    "3.Sprites\\sprites\\84_chaucay.png": {
-      "time": 1779712598027.5479,
-      "uuid": "37ab8bae-8857-45d4-b9b1-1da34400d9af"
-    },
-    "3.Sprites\\sprites\\84_chaucay_Sd.png": {
-      "time": 1779712598028.5447,
-      "uuid": "297603ab-ee50-4654-bae4-808b8ad77a54"
-    },
-    "3.Sprites\\sprites\\85_ghedon_.png": {
-      "time": 1779712598028.5447,
-      "uuid": "7d10f177-13bf-4599-9571-326aa1ac4365"
-    },
-    "3.Sprites\\sprites\\85_ghedon_sd.png": {
-      "time": 1779712598028.5447,
-      "uuid": "c9dba24b-c629-47aa-9a5c-669825831163"
-    },
-    "3.Sprites\\sprites\\86_ghedon.png": {
-      "time": 1779712598029.546,
-      "uuid": "6e42c30c-27b8-4eb1-9650-97e3219b8210"
-    },
-    "3.Sprites\\sprites\\87_binhnuoc_Sd.png": {
-      "time": 1779712598030.5457,
-      "uuid": "113d1bcc-438e-4c1d-8689-ffe5eb4a704b"
-    },
-    "3.Sprites\\sprites\\87_binhnuoc.png": {
-      "time": 1779712598030.5457,
-      "uuid": "6704715c-7df6-451a-b5b7-c2ee0d0b1041"
-    },
-    "3.Sprites\\sprites\\88_bancurcai.png": {
-      "time": 1779712598031.545,
-      "uuid": "99ca8fcf-23e6-4342-938d-ca19b0730b8f"
-    },
-    "3.Sprites\\sprites\\89_tv.png": {
-      "time": 1779712598032.5454,
-      "uuid": "c04ed82f-aab6-4c93-8245-37a62c106a04"
-    },
-    "3.Sprites\\sprites\\88_bancurcai_sd.png": {
-      "time": 1779712598031.545,
-      "uuid": "ee345d1c-9b7d-4727-aff8-2583047a7db0"
-    },
-    "3.Sprites\\sprites\\86_ghedon_sd.png": {
-      "time": 1779712598029.546,
-      "uuid": "6859df3e-db5b-4fca-92ce-a05d3d0130cd"
-    },
-    "3.Sprites\\sprites\\89_tv_sd.png": {
-      "time": 1779712598032.5454,
-      "uuid": "e25bde15-cbc0-473f-87e6-f9274a879c56"
-    },
-    "3.Sprites\\sprites\\8_cuasongoai.png": {
-      "time": 1779712598033.5457,
-      "uuid": "f2a85f53-43b5-47d7-baaf-2e19bcddae0c"
-    },
-    "3.Sprites\\sprites\\90_coc_sd.png": {
-      "time": 1779712598034.5447,
-      "uuid": "bab68295-a6e5-46a9-a3c9-1d13439f34fe"
-    },
-    "3.Sprites\\sprites\\90_coc.png": {
-      "time": 1779712598033.5457,
-      "uuid": "fb12ca71-8fe7-492c-8fc5-aa98beb49d52"
-    },
-    "3.Sprites\\sprites\\91_sach.png": {
-      "time": 1779712598034.5447,
-      "uuid": "2af9894a-7649-46f9-86d1-2f7849b905e3"
-    },
-    "3.Sprites\\sprites\\91_sach_sd.png": {
-      "time": 1779712598034.5447,
-      "uuid": "86547923-6368-452e-ba0b-86b4b11a0b71"
-    },
-    "3.Sprites\\sprites\\92_khan.png": {
-      "time": 1779712598035.545,
-      "uuid": "88d7739a-7669-4e35-b798-cda813043907"
-    },
-    "3.Sprites\\sprites\\92_khan_sd.png": {
-      "time": 1779712598035.545,
-      "uuid": "9b7e5759-658b-4d75-ba72-70b109b39341"
-    },
-    "3.Sprites\\sprites\\93_tui.png": {
-      "time": 1779712598036.5454,
-      "uuid": "d747c8a5-3691-4392-a6ad-02d37243743b"
-    },
-    "3.Sprites\\sprites\\94_tui.png": {
-      "time": 1779712598037.5447,
-      "uuid": "6b256d0d-87b9-43e3-ac7a-c4230d3d29e0"
-    },
-    "3.Sprites\\sprites\\95_bantivi.png": {
-      "time": 1779712598037.5447,
-      "uuid": "d5ba2473-a300-4d6e-a029-a6bce361869f"
-    },
-    "3.Sprites\\sprites\\94_tui_Sd.png": {
-      "time": 1779712598037.5447,
-      "uuid": "6c73518c-7ce8-422b-8ff1-2c752685a185"
-    },
-    "3.Sprites\\sprites\\93_tui_sd.png": {
-      "time": 1779712598036.5454,
-      "uuid": "0085c249-1bd5-4d92-8938-04d4d3c0b8a8"
-    },
-    "3.Sprites\\sprites\\95_bantivi_cut.png": {
-      "time": 1779712598039.5444,
-      "uuid": "b448373e-be86-4a37-9332-12b775bf1023"
-    },
-    "3.Sprites\\sprites\\95_bantivi_sd.png": {
-      "time": 1779712598039.5444,
-      "uuid": "7d62311b-5e98-4564-8cc9-bdf03545e1b0"
-    },
-    "3.Sprites\\sprites\\96_goitaymeo.png": {
-      "time": 1779712598039.5444,
-      "uuid": "7633c309-d3c5-4ddd-9677-ce662c9fc7bd"
-    },
-    "3.Sprites\\sprites\\96_goitaymeo_sd.png": {
-      "time": 1779712598040.5447,
-      "uuid": "01ac5f2d-f267-4dc7-9b06-197e1f8ac589"
-    },
-    "3.Sprites\\sprites\\97_non.png": {
-      "time": 1779712598040.5447,
-      "uuid": "ef8abe4d-bd98-4c92-88d2-0c127f455aba"
-    },
-    "3.Sprites\\sprites\\98_balo.png": {
-      "time": 1779712598041.5442,
-      "uuid": "9c8fec32-5073-4d44-937a-89da84ab25ff"
-    },
-    "3.Sprites\\sprites\\99_odu.png": {
-      "time": 1779712598041.5442,
-      "uuid": "83484dbc-6f4f-4e06-a994-a877c958f0bf"
-    },
-    "3.Sprites\\sprites\\9_benngoaicucai.png": {
-      "time": 1779712598043.5442,
-      "uuid": "2ed727b6-62a5-4d57-b602-4988776d9020"
-    },
-    "3.Sprites\\sprites\\44_tranh.png": {
-      "time": 1779712597992.544,
-      "uuid": "1f03dec8-b4bb-47cd-bf5a-b16e21550a93"
-    },
-    "3.Sprites\\sprites\\44_tranh_Sd.png": {
-      "time": 1779712597992.544,
-      "uuid": "56aed187-aee3-4d68-97a8-bb914c15ef9b"
-    },
-    "3.Sprites\\sprites\\45_Khan.png": {
-      "time": 1779712597992.544,
-      "uuid": "8f26e703-b23e-40f6-b535-137b16a7053f"
-    },
-    "3.Sprites\\sprites\\45_Khan_sd.png": {
-      "time": 1779712597992.544,
-      "uuid": "bfa25389-9b1c-461c-ae30-2c351a2055ea"
-    },
-    "3.Sprites\\sprites\\46_chongsach.png": {
-      "time": 1779712597993.5442,
-      "uuid": "e6db517c-bd21-4907-a1f5-dae18afaf6d5"
-    },
-    "3.Sprites\\sprites\\46_chongsach_Sd.png": {
-      "time": 1779712597993.5442,
-      "uuid": "bf063985-a340-45ea-bcdd-f19c2b1f4dc0"
-    },
-    "3.Sprites\\sprites\\47_Tu.png": {
-      "time": 1779712597993.5442,
-      "uuid": "648d2540-be96-4b32-95a2-dbd637b255ea"
-    },
-    "3.Sprites\\sprites\\47_Tu_Sd.png": {
-      "time": 1779712597994.5444,
-      "uuid": "7ff940f7-289c-48f5-8448-1caf1b8db8f8"
-    },
-    "3.Sprites\\sprites\\47_Tu_cut.png": {
-      "time": 1779712597994.5444,
-      "uuid": "3379a55e-85de-401b-a50b-a12722d64e44"
-    },
-    "3.Sprites\\sprites\\48_lich.png": {
-      "time": 1779712597994.5444,
-      "uuid": "b30f869f-b3f1-4cf3-8a79-cc806690083e"
-    },
-    "3.Sprites\\sprites\\49_Dep.png": {
-      "time": 1779712597995.5442,
-      "uuid": "d1ade73b-744c-4ee4-8f6e-f4408216642f"
-    },
-    "3.Sprites\\sprites\\49_Dep_Sd.png": {
-      "time": 1779712597995.5442,
-      "uuid": "cff50ed3-0807-4e1c-99d0-3c7195cc9b4b"
-    },
-    "3.Sprites\\sprites\\4_lumcay.png": {
-      "time": 1779712597996.545,
-      "uuid": "62e4565c-bbaf-4e86-81f3-e10a6c208904"
-    },
-    "3.Sprites\\sprites\\50_gaubong.png": {
-      "time": 1779712597996.545,
-      "uuid": "85232765-24ca-4270-8fac-a3cce48e3d27"
-    },
-    "3.Sprites\\sprites\\50_gaubong_Sd.png": {
-      "time": 1779712597996.545,
-      "uuid": "12297ba3-a39f-49d5-bfc1-b3375e3e782b"
-    },
-    "3.Sprites\\sprites\\51_khan_sd.png": {
-      "time": 1779712597997.545,
-      "uuid": "ba1739ed-8aad-4817-b5c8-604880e23814"
-    },
-    "3.Sprites\\sprites\\52_den.png": {
-      "time": 1779712597998.5442,
-      "uuid": "09d2dc83-0f93-41ca-9453-eb85ad04eeb5"
-    },
-    "3.Sprites\\sprites\\51_khan.png": {
-      "time": 1779712597997.545,
-      "uuid": "8b654312-d5de-4eca-8f13-c3d2b88beec2"
-    },
-    "3.Sprites\\sprites\\52_den_Sd.png": {
-      "time": 1779712597998.5442,
-      "uuid": "3e1cd478-c327-46b3-8766-1ab1d39aef8e"
-    },
-    "3.Sprites\\sprites\\53_chan.png": {
-      "time": 1779712597998.5442,
-      "uuid": "7acd4fca-3f73-4629-8a59-1003d197384b"
-    },
-    "3.Sprites\\sprites\\53_chan_Sd.png": {
-      "time": 1779712597998.5442,
-      "uuid": "4e99a470-6d55-413f-a049-e520598197f3"
-    },
-    "3.Sprites\\sprites\\54_khunganh.png": {
-      "time": 1779712597999.5454,
-      "uuid": "a2433f31-fab3-46ee-aaec-128516a4873c"
-    },
-    "3.Sprites\\sprites\\55_cay.png": {
-      "time": 1779712598000.5454,
-      "uuid": "3a866045-8e70-4cac-aefc-636f1951fff0"
-    },
-    "3.Sprites\\sprites\\54_khunganh_Sd.png": {
-      "time": 1779712597999.5454,
-      "uuid": "c5d17046-b116-4088-8725-423f37fef7d7"
-    },
-    "3.Sprites\\sprites\\55_cay_Sd.png": {
-      "time": 1779712598000.5454,
-      "uuid": "dbb51ed9-f0ee-49a2-b5fd-f4773f63ff31"
-    },
-    "3.Sprites\\sprites\\56_ke.png": {
-      "time": 1779712598000.5454,
-      "uuid": "4ac7e387-f546-4516-9aee-9a72672d2897"
-    },
-    "3.Sprites\\sprites\\57_rem.png": {
-      "time": 1779712598001.545,
-      "uuid": "629553e2-39ae-4fb2-864b-30ca714d114a"
+    "4.Sounds\\SmallWood.ogg.meta": {
+      "time": 1789629187477.4048
     },
     "3.Sprites\\sprites\\100_xaotreodo.png.meta": {
-      "time": 1789614580504.6726
+      "time": 1789629187389.4048
     },
     "3.Sprites\\sprites\\100_xaotreodo_sd.png.meta": {
-      "time": 1789614580507.672
+      "time": 1789629187389.4048
     },
     "3.Sprites\\sprites\\101_sofa.png.meta": {
-      "time": 1789614580517.6707
+      "time": 1789629187390.4067
     },
     "3.Sprites\\sprites\\101_sofa_sd.png.meta": {
-      "time": 1789614580506.672
+      "time": 1789629187390.4067
     },
     "3.Sprites\\sprites\\102_den.png.meta": {
-      "time": 1789614580519.6753
+      "time": 1789629187390.4067
     },
     "3.Sprites\\sprites\\103_den.png.meta": {
-      "time": 1789614580528.6829
+      "time": 1789629187391.4053
     },
     "3.Sprites\\sprites\\104_cay.png.meta": {
-      "time": 1789614580532.6826
+      "time": 1789629187391.4053
     },
     "3.Sprites\\sprites\\104_cay_sd.png.meta": {
-      "time": 1789614580531.683
+      "time": 1789629187391.4053
     },
     "3.Sprites\\sprites\\105_ghedau.png.meta": {
-      "time": 1789614580541.7349
+      "time": 1789629187392.4045
     },
     "3.Sprites\\sprites\\105_ghedau_Sd.png.meta": {
-      "time": 1789614580543.7344
+      "time": 1789629187392.4045
     },
     "3.Sprites\\sprites\\106_tham.png.meta": {
-      "time": 1789614580554.7332
+      "time": 1789629187392.4045
     },
     "3.Sprites\\sprites\\106_tham_Sd.png.meta": {
-      "time": 1789614580556.733
+      "time": 1789629187393.4055
     },
     "3.Sprites\\sprites\\107_sach.png.meta": {
-      "time": 1789614580561.7344
+      "time": 1789629187393.4055
     },
     "3.Sprites\\sprites\\107_sach_Sd.png.meta": {
-      "time": 1789614580571.7346
+      "time": 1789629187393.4055
     },
     "3.Sprites\\sprites\\108_tranh.png.meta": {
-      "time": 1789614580590.7336
+      "time": 1789629187393.4055
     },
     "3.Sprites\\sprites\\108_tranh_sd.png.meta": {
-      "time": 1789614580574.7336
+      "time": 1789629187394.4048
     },
     "3.Sprites\\sprites\\109_ke.png.meta": {
-      "time": 1789614580584.7336
+      "time": 1789629187394.4048
     },
     "3.Sprites\\sprites\\10_voisen.png.meta": {
-      "time": 1789614580582.734
+      "time": 1789629187394.4048
     },
     "3.Sprites\\sprites\\110_rem.png.meta": {
-      "time": 1789614580599.7356
+      "time": 1789629187395.4045
     },
     "3.Sprites\\sprites\\111_cuaso.png.meta": {
-      "time": 1789614580616.7634
+      "time": 1789629187395.4045
     },
     "3.Sprites\\sprites\\112_base.png.meta": {
-      "time": 1789614580615.764
+      "time": 1789629187397.4048
     },
     "3.Sprites\\sprites\\113_lumcay.png.meta": {
-      "time": 1789614580646.7659
+      "time": 1789629187400.4043
     },
     "3.Sprites\\sprites\\11_hoahong.png.meta": {
-      "time": 1789614580621.765
+      "time": 1789629187400.4043
     },
     "3.Sprites\\sprites\\11_hoahong_sd.png.meta": {
-      "time": 1789614580648.7666
+      "time": 1789629187401.4048
     },
     "3.Sprites\\sprites\\12_khan.png.meta": {
-      "time": 1789614580657.766
+      "time": 1789629187401.4048
     },
     "3.Sprites\\sprites\\12_khan_sd.png.meta": {
-      "time": 1789614580659.7688
+      "time": 1789629187402.4048
     },
     "3.Sprites\\sprites\\13_khan.png.meta": {
-      "time": 1789614580662.767
+      "time": 1789629187402.4048
     },
     "3.Sprites\\sprites\\13_khan_sd.png.meta": {
-      "time": 1789614580671.764
+      "time": 1789629187402.4048
     },
     "3.Sprites\\sprites\\14_lyruou.png.meta": {
-      "time": 1789614580673.7656
+      "time": 1789629187403.4043
     },
     "3.Sprites\\sprites\\14_lyruou_sd.png.meta": {
-      "time": 1789614580721.766
+      "time": 1789629187403.4043
     },
     "3.Sprites\\sprites\\15_chairuou.png.meta": {
-      "time": 1789614580686.7644
+      "time": 1789629187403.4043
     },
     "3.Sprites\\sprites\\15_chairuou_sd.png.meta": {
-      "time": 1789614580696.7644
+      "time": 1789629187403.4043
     },
     "3.Sprites\\sprites\\16_daybontam.png.meta": {
-      "time": 1789614580694.764
+      "time": 1789629187404.4048
     },
     "3.Sprites\\sprites\\17_hoahong.png.meta": {
-      "time": 1789614580691.7632
+      "time": 1789629187404.4048
     },
     "3.Sprites\\sprites\\17_hoahong_sd.png.meta": {
-      "time": 1789614580710.765
+      "time": 1789629187404.4048
     },
     "3.Sprites\\sprites\\18_bontam.png.meta": {
-      "time": 1789614580725.7646
+      "time": 1789629187405.4045
     },
     "3.Sprites\\sprites\\18_bontam_sd.png.meta": {
-      "time": 1789614580724.7644
+      "time": 1789629187405.4045
     },
     "3.Sprites\\sprites\\19_cua.png.meta": {
-      "time": 1789614580716.7637
+      "time": 1789629187406.4053
     },
     "3.Sprites\\sprites\\1_thang.png.meta": {
-      "time": 1789614580737.7678
+      "time": 1789629187406.4053
     },
     "3.Sprites\\sprites\\20_hoa.png.meta": {
-      "time": 1789614580739.7632
+      "time": 1789629187407.4055
     },
     "3.Sprites\\sprites\\20_hoa_sd.png.meta": {
-      "time": 1789614580742.7651
+      "time": 1789629187407.4055
     },
     "3.Sprites\\sprites\\21_ke.png.meta": {
-      "time": 1789614580752.7644
+      "time": 1789629187407.4055
     },
     "3.Sprites\\sprites\\22_guong.png.meta": {
-      "time": 1789614580755.765
+      "time": 1789629187408.4053
     },
     "3.Sprites\\sprites\\23_giayvs.png.meta": {
-      "time": 1789614580765.7625
+      "time": 1789629187408.4053
     },
     "3.Sprites\\sprites\\23_giayvs_sd.png.meta": {
-      "time": 1789614580761.7637
+      "time": 1789629187409.406
     },
     "3.Sprites\\sprites\\24_giadung.png.meta": {
-      "time": 1789614580768.7651
+      "time": 1789629187409.406
     },
     "3.Sprites\\sprites\\25_voi.png.meta": {
-      "time": 1789614580776.7627
+      "time": 1789629187409.406
     },
     "3.Sprites\\sprites\\26_ruatay.png.meta": {
-      "time": 1789614580781.768
+      "time": 1789629187409.406
     },
     "3.Sprites\\sprites\\26_ruatay_sd.png.meta": {
-      "time": 1789614580792.765
+      "time": 1789629187410.4058
     },
     "3.Sprites\\sprites\\27_banchai.png.meta": {
-      "time": 1789614580784.764
+      "time": 1789629187410.4058
     },
     "3.Sprites\\sprites\\27_banchai_sd.png.meta": {
-      "time": 1789614580809.772
+      "time": 1789629187410.4058
     },
     "3.Sprites\\sprites\\28_khan.png.meta": {
-      "time": 1789614580802.7715
+      "time": 1789629187411.4053
     },
     "3.Sprites\\sprites\\28_khan_sd.png.meta": {
-      "time": 1789614580806.7747
+      "time": 1789629187411.4053
     },
     "3.Sprites\\sprites\\29_canhcautudong.png.meta": {
-      "time": 1789614580809.772
+      "time": 1789629187412.4048
     },
     "3.Sprites\\sprites\\29_canhcautudong_2.png.meta": {
-      "time": 1789614580817.5293
+      "time": 1789629187412.4048
     },
     "3.Sprites\\sprites\\29_canhcautumo.png.meta": {
-      "time": 1789614580824.5273
+      "time": 1789629187412.4048
     },
     "3.Sprites\\sprites\\29_tu.png.meta": {
-      "time": 1789614580850.5278
+      "time": 1789629187413.4065
     },
     "3.Sprites\\sprites\\29_tu_cut.png.meta": {
-      "time": 1789614580834.5298
+      "time": 1789629187413.4065
     },
     "3.Sprites\\sprites\\29_tu_sd.png.meta": {
-      "time": 1789614580830.5286
+      "time": 1789629187414.4062
     },
     "3.Sprites\\sprites\\2_thang.png.meta": {
-      "time": 1789614580842.5276
+      "time": 1789629187414.4062
     },
     "3.Sprites\\sprites\\30_aochoangtam.png.meta": {
-      "time": 1789614580844.5325
+      "time": 1789629187415.4055
     },
     "3.Sprites\\sprites\\30_aochoangtam_Sd.png.meta": {
-      "time": 1789614580854.5295
+      "time": 1789629187415.4055
     },
     "3.Sprites\\sprites\\31_suaruamat.png.meta": {
-      "time": 1789614580859.5288
+      "time": 1789629187415.4055
     },
     "3.Sprites\\sprites\\31_suaruamat_sd.png.meta": {
-      "time": 1789614580889.5288
+      "time": 1789629187416.4058
     },
     "3.Sprites\\sprites\\32_tuamtuong.png.meta": {
-      "time": 1789614580871.5276
+      "time": 1789629187416.4058
     },
     "3.Sprites\\sprites\\32_tuamtuong_cut.png.meta": {
-      "time": 1789614580874.5308
+      "time": 1789629187416.4058
     },
     "3.Sprites\\sprites\\33_remtam.png.meta": {
-      "time": 1789614580875.5288
+      "time": 1789629187417.4065
     },
     "3.Sprites\\sprites\\34_giayvesinh.png.meta": {
-      "time": 1789614580882.5261
+      "time": 1789629187417.4065
     },
     "3.Sprites\\sprites\\35_voixit.png.meta": {
-      "time": 1789614580904.5288
+      "time": 1789629187418.4053
     },
     "3.Sprites\\sprites\\36_boncau.png.meta": {
-      "time": 1789614580895.526
+      "time": 1789629187418.4053
     },
     "3.Sprites\\sprites\\36_boncau_Sd.png.meta": {
-      "time": 1789614580897.5273
+      "time": 1789629187419.4055
     },
     "3.Sprites\\sprites\\37_base.png.meta": {
-      "time": 1789614580916.5278
+      "time": 1789629187420.406
     },
     "3.Sprites\\sprites\\38_mai.png.meta": {
-      "time": 1789614580930.5269
+      "time": 1789629187421.4048
     },
     "3.Sprites\\sprites\\39_mai.png.meta": {
-      "time": 1789614580954.5276
+      "time": 1789629187422.4048
     },
     "3.Sprites\\sprites\\3_thancay.png.meta": {
-      "time": 1789614580942.528
+      "time": 1789629187423.4065
     },
     "3.Sprites\\sprites\\40_cuasongoai.png.meta": {
-      "time": 1789614580940.5295
+      "time": 1789629187423.4065
     },
     "3.Sprites\\sprites\\41_benngoaicucai.png.meta": {
-      "time": 1789614580962.5273
+      "time": 1789629187425.4043
     },
     "3.Sprites\\sprites\\42_chaucay.png.meta": {
-      "time": 1789614580959.526
+      "time": 1789629187425.4043
     },
     "3.Sprites\\sprites\\42_chaucay_sd.png.meta": {
-      "time": 1789614580969.5278
+      "time": 1789629187425.4043
     },
     "3.Sprites\\sprites\\43_cay.png.meta": {
-      "time": 1789614580973.527
+      "time": 1789629187426.4053
     },
     "3.Sprites\\sprites\\43_cay_Sd.png.meta": {
-      "time": 1789614580974.532
+      "time": 1789629187426.4053
     },
     "3.Sprites\\sprites\\44_sach.png.meta": {
-      "time": 1789614580986.5298
+      "time": 1789629187427.405
     },
     "3.Sprites\\sprites\\44_sach_Sd.png.meta": {
-      "time": 1789614580980.525
+      "time": 1789629187427.405
+    },
+    "3.Sprites\\sprites\\44_tranh.png.meta": {
+      "time": 1789629187427.405
+    },
+    "3.Sprites\\sprites\\44_tranh_Sd.png.meta": {
+      "time": 1789629187427.405
+    },
+    "3.Sprites\\sprites\\45_Khan.png.meta": {
+      "time": 1789629187428.4053
+    },
+    "3.Sprites\\sprites\\45_Khan_sd.png.meta": {
+      "time": 1789629187428.4053
+    },
+    "3.Sprites\\sprites\\46_chongsach.png.meta": {
+      "time": 1789629187429.4053
+    },
+    "3.Sprites\\sprites\\46_chongsach_Sd.png.meta": {
+      "time": 1789629187429.4053
+    },
+    "3.Sprites\\sprites\\47_Tu.png.meta": {
+      "time": 1789629187429.4053
+    },
+    "3.Sprites\\sprites\\47_Tu_cut.png.meta": {
+      "time": 1789629187430.406
+    },
+    "3.Sprites\\sprites\\47_Tu_Sd.png.meta": {
+      "time": 1789629187429.4053
+    },
+    "3.Sprites\\sprites\\48_lich.png.meta": {
+      "time": 1789629187430.406
+    },
+    "3.Sprites\\sprites\\49_Dep.png.meta": {
+      "time": 1789629187430.406
+    },
+    "3.Sprites\\sprites\\49_Dep_Sd.png.meta": {
+      "time": 1789629187431.4053
+    },
+    "3.Sprites\\sprites\\4_lumcay.png.meta": {
+      "time": 1789629187431.4053
+    },
+    "3.Sprites\\sprites\\50_gaubong.png.meta": {
+      "time": 1789629187431.4053
+    },
+    "3.Sprites\\sprites\\50_gaubong_Sd.png.meta": {
+      "time": 1789629187432.4058
+    },
+    "3.Sprites\\sprites\\51_khan.png.meta": {
+      "time": 1789629187432.4058
+    },
+    "3.Sprites\\sprites\\51_khan_sd.png.meta": {
+      "time": 1789629187432.4058
+    },
+    "3.Sprites\\sprites\\52_den.png.meta": {
+      "time": 1789629187433.4048
+    },
+    "3.Sprites\\sprites\\52_den_Sd.png.meta": {
+      "time": 1789629187433.4048
+    },
+    "3.Sprites\\sprites\\53_chan.png.meta": {
+      "time": 1789629187433.4048
+    },
+    "3.Sprites\\sprites\\53_chan_Sd.png.meta": {
+      "time": 1789629187434.4055
+    },
+    "3.Sprites\\sprites\\54_khunganh.png.meta": {
+      "time": 1789629187434.4055
+    },
+    "3.Sprites\\sprites\\54_khunganh_Sd.png.meta": {
+      "time": 1789629187435.405
+    },
+    "3.Sprites\\sprites\\55_cay.png.meta": {
+      "time": 1789629187435.405
+    },
+    "3.Sprites\\sprites\\55_cay_Sd.png.meta": {
+      "time": 1789629187435.405
+    },
+    "3.Sprites\\sprites\\56_ke.png.meta": {
+      "time": 1789629187436.4048
+    },
+    "3.Sprites\\sprites\\57_rem.png.meta": {
+      "time": 1789629187436.4048
+    },
+    "3.Sprites\\sprites\\58_cuaso.png.meta": {
+      "time": 1789629187436.4048
+    },
+    "3.Sprites\\sprites\\59_goihoa.png.meta": {
+      "time": 1789629187437.4048
+    },
+    "3.Sprites\\sprites\\59_goihoa_Sd.png.meta": {
+      "time": 1789629187437.4048
+    },
+    "3.Sprites\\sprites\\5_mai.png.meta": {
+      "time": 1789629187438.405
+    },
+    "3.Sprites\\sprites\\60_goi.png.meta": {
+      "time": 1789629187439.4058
+    },
+    "3.Sprites\\sprites\\60_goi_sd.png.meta": {
+      "time": 1789629187439.4058
+    },
+    "3.Sprites\\sprites\\61_goi.png.meta": {
+      "time": 1789629187440.406
+    },
+    "3.Sprites\\sprites\\61_goi_sd.png.meta": {
+      "time": 1789629187440.406
+    },
+    "3.Sprites\\sprites\\62_dem.png.meta": {
+      "time": 1789629187440.406
+    },
+    "3.Sprites\\sprites\\62_dem_Sd.png.meta": {
+      "time": 1789629187441.4067
+    },
+    "3.Sprites\\sprites\\63_giuong.png.meta": {
+      "time": 1789629187441.4067
+    },
+    "3.Sprites\\sprites\\63_giuong_cut.png.meta": {
+      "time": 1789629187442.406
+    },
+    "3.Sprites\\sprites\\63_giuong_Sd.png.meta": {
+      "time": 1789629187442.406
+    },
+    "3.Sprites\\sprites\\64_tham.png.meta": {
+      "time": 1789629187442.406
+    },
+    "3.Sprites\\sprites\\64_tham_Sd.png.meta": {
+      "time": 1789629187443.406
+    },
+    "3.Sprites\\sprites\\65_base.png.meta": {
+      "time": 1789629187444.4045
+    },
+    "3.Sprites\\sprites\\66_kinhvienvong.png.meta": {
+      "time": 1789629187444.4045
+    },
+    "3.Sprites\\sprites\\66_kinhvienvong_sd.png.meta": {
+      "time": 1789629187445.4058
+    },
+    "3.Sprites\\sprites\\67_cay.png.meta": {
+      "time": 1789629187445.4058
+    },
+    "3.Sprites\\sprites\\67_cay_Sd.png.meta": {
+      "time": 1789629187445.4058
+    },
+    "3.Sprites\\sprites\\69_binhhoa.png.meta": {
+      "time": 1789629187446.4053
+    },
+    "3.Sprites\\sprites\\69_binhhoa_sd.png.meta": {
+      "time": 1789629187446.4053
+    },
+    "3.Sprites\\sprites\\6_thancay.png.meta": {
+      "time": 1789629187447.405
+    },
+    "3.Sprites\\sprites\\70_ghe.png.meta": {
+      "time": 1789629187447.405
+    },
+    "3.Sprites\\sprites\\70_ghe_Sd.png.meta": {
+      "time": 1789629187448.4055
+    },
+    "3.Sprites\\sprites\\71_ghe.png.meta": {
+      "time": 1789629187448.4055
+    },
+    "3.Sprites\\sprites\\71_ghe_sd.png.meta": {
+      "time": 1789629187448.4055
+    },
+    "3.Sprites\\sprites\\72_cf.png.meta": {
+      "time": 1789629187449.405
+    },
+    "3.Sprites\\sprites\\72_cf_Sd.png.meta": {
+      "time": 1789629187449.405
+    },
+    "3.Sprites\\sprites\\73_ban.png.meta": {
+      "time": 1789629187450.4048
+    },
+    "3.Sprites\\sprites\\73_ban_sd.png.meta": {
+      "time": 1789629187450.4048
+    },
+    "3.Sprites\\sprites\\74_base.png.meta": {
+      "time": 1789629187451.405
+    },
+    "3.Sprites\\sprites\\75_lacucai.png.meta": {
+      "time": 1789629187451.405
+    },
+    "3.Sprites\\sprites\\76_thancay.png.meta": {
+      "time": 1789629187453.4053
+    },
+    "3.Sprites\\sprites\\77_maiche.png.meta": {
+      "time": 1789629187453.4053
+    },
+    "3.Sprites\\sprites\\78_benngoaicucai.png.meta": {
+      "time": 1789629187455.405
+    },
+    "3.Sprites\\sprites\\79_coc.png.meta": {
+      "time": 1789629187455.405
+    },
+    "3.Sprites\\sprites\\79_coc_Sd.png.meta": {
+      "time": 1789629187455.405
+    },
+    "3.Sprites\\sprites\\7_maiche.png.meta": {
+      "time": 1789629187456.406
+    },
+    "3.Sprites\\sprites\\80_chaucay.png.meta": {
+      "time": 1789629187457.4055
+    },
+    "3.Sprites\\sprites\\80_chaucay_sd.png.meta": {
+      "time": 1789629187457.4055
+    },
+    "3.Sprites\\sprites\\81_sachmo.png.meta": {
+      "time": 1789629187458.4058
+    },
+    "3.Sprites\\sprites\\82_cuonlen.png.meta": {
+      "time": 1789629187458.4058
+    },
+    "3.Sprites\\sprites\\82_cuonlen_sd.png.meta": {
+      "time": 1789629187458.4058
+    },
+    "3.Sprites\\sprites\\83_rolen.png.meta": {
+      "time": 1789629187459.4055
+    },
+    "3.Sprites\\sprites\\83_rolen_Sd.png.meta": {
+      "time": 1789629187459.4055
+    },
+    "3.Sprites\\sprites\\84_chaucay.png.meta": {
+      "time": 1789629187459.4055
+    },
+    "3.Sprites\\sprites\\84_chaucay_Sd.png.meta": {
+      "time": 1789629187460.4065
+    },
+    "3.Sprites\\sprites\\85_ghedon_.png.meta": {
+      "time": 1789629187460.4065
+    },
+    "3.Sprites\\sprites\\85_ghedon_sd.png.meta": {
+      "time": 1789629187460.4065
+    },
+    "3.Sprites\\sprites\\86_ghedon.png.meta": {
+      "time": 1789629187461.4055
+    },
+    "3.Sprites\\sprites\\86_ghedon_sd.png.meta": {
+      "time": 1789629187461.4055
+    },
+    "3.Sprites\\sprites\\87_binhnuoc.png.meta": {
+      "time": 1789629187461.4055
+    },
+    "3.Sprites\\sprites\\87_binhnuoc_Sd.png.meta": {
+      "time": 1789629187462.4053
+    },
+    "3.Sprites\\sprites\\88_bancurcai.png.meta": {
+      "time": 1789629187462.4053
+    },
+    "3.Sprites\\sprites\\88_bancurcai_sd.png.meta": {
+      "time": 1789629187462.4053
+    },
+    "3.Sprites\\sprites\\89_tv.png.meta": {
+      "time": 1789629187462.4053
+    },
+    "3.Sprites\\sprites\\89_tv_sd.png.meta": {
+      "time": 1789629187463.4048
+    },
+    "3.Sprites\\sprites\\8_cuasongoai.png.meta": {
+      "time": 1789629187463.4048
+    },
+    "3.Sprites\\sprites\\90_coc.png.meta": {
+      "time": 1789629187464.4058
+    },
+    "3.Sprites\\sprites\\90_coc_sd.png.meta": {
+      "time": 1789629187464.4058
+    },
+    "3.Sprites\\sprites\\91_sach.png.meta": {
+      "time": 1789629187464.4058
+    },
+    "3.Sprites\\sprites\\91_sach_sd.png.meta": {
+      "time": 1789629187464.4058
+    },
+    "3.Sprites\\sprites\\92_khan.png.meta": {
+      "time": 1789629187465.406
+    },
+    "3.Sprites\\sprites\\92_khan_sd.png.meta": {
+      "time": 1789629187465.406
+    },
+    "3.Sprites\\sprites\\93_tui.png.meta": {
+      "time": 1789629187466.4062
+    },
+    "3.Sprites\\sprites\\93_tui_sd.png.meta": {
+      "time": 1789629187466.4062
+    },
+    "3.Sprites\\sprites\\94_tui.png.meta": {
+      "time": 1789629187466.4062
+    },
+    "3.Sprites\\sprites\\94_tui_Sd.png.meta": {
+      "time": 1789629187466.4062
+    },
+    "3.Sprites\\sprites\\95_bantivi.png.meta": {
+      "time": 1789629187467.4055
+    },
+    "3.Sprites\\sprites\\95_bantivi_cut.png.meta": {
+      "time": 1789629187467.4055
+    },
+    "3.Sprites\\sprites\\95_bantivi_sd.png.meta": {
+      "time": 1789629187467.4055
+    },
+    "3.Sprites\\sprites\\96_goitaymeo.png.meta": {
+      "time": 1789629187468.4053
+    },
+    "3.Sprites\\sprites\\96_goitaymeo_sd.png.meta": {
+      "time": 1789629187468.4053
+    },
+    "3.Sprites\\sprites\\97_non.png.meta": {
+      "time": 1789629187468.4053
+    },
+    "3.Sprites\\sprites\\98_balo.png.meta": {
+      "time": 1789629187469.4045
+    },
+    "3.Sprites\\sprites\\99_odu.png.meta": {
+      "time": 1789629187469.4045
+    },
+    "3.Sprites\\sprites\\9_benngoaicucai.png.meta": {
+      "time": 1789629187470.405
+    },
+    "3.Sprites\\Level1724_Scale.json": {
+      "time": 1789629187388.4045,
+      "uuid": "27f4613a-c4b3-429e-857f-7f2cb8fe76e5"
+    },
+    "4.Sounds\\DropOnFloor.ogg": {
+      "time": 1789629187475.4055,
+      "uuid": "7e184145-5d25-4a74-b051-6690fa93e9e7"
+    },
+    "4.Sounds\\ClickBox.ogg": {
+      "time": 1789629187473.4072,
+      "uuid": "bb3b63d8-6495-4588-bc26-cf7294bd51d3"
+    },
+    "4.Sounds\\DropMetal.ogg": {
+      "time": 1789629187474.4065,
+      "uuid": "eeb67d4d-5ff6-43d7-a04e-d6376625d1e0"
+    },
+    "4.Sounds\\BookOpen.ogg": {
+      "time": 1789629187472.4048,
+      "uuid": "c08ddc88-368c-4236-8649-97d3eef4b10e"
+    },
+    "4.Sounds\\Glass.ogg": {
+      "time": 1789629187475.4055,
+      "uuid": "ef70624d-667d-4e62-9349-d790b0f2050a"
+    },
+    "4.Sounds\\PickItem.ogg": {
+      "time": 1789629187477.4048,
+      "uuid": "64ae03a6-aa86-4177-ba34-9bcf579bfe4d"
+    },
+    "4.Sounds\\SmallWood.ogg": {
+      "time": 1789629187477.4048,
+      "uuid": "2566a2e9-952c-46ec-b7b5-018e69e45f93"
     },
     "3.Sprites\\sprites\\100_xaotreodo.png": {
-      "time": 1779712597965.0356,
+      "time": 1789629187388.4045,
       "uuid": "508aa1d9-52f5-4c56-8d32-9f0dc14af2c0"
     },
-    "3.Sprites\\sprites\\101_sofa_sd.png": {
-      "time": 1779712597966.0354,
-      "uuid": "ffdda10d-55b7-4b8e-91a3-4b7eba84c063"
-    },
     "3.Sprites\\sprites\\100_xaotreodo_sd.png": {
-      "time": 1779712597966.0354,
+      "time": 1789629187389.4048,
       "uuid": "1386cddb-644a-4653-a688-d0dff2d8d3dc"
     },
     "3.Sprites\\sprites\\101_sofa.png": {
-      "time": 1779712597966.0354,
+      "time": 1789629187389.4048,
       "uuid": "9ce4befc-4aa6-4b83-af52-d968eb83eb80"
     },
+    "3.Sprites\\sprites\\101_sofa_sd.png": {
+      "time": 1789629187390.4067,
+      "uuid": "ffdda10d-55b7-4b8e-91a3-4b7eba84c063"
+    },
     "3.Sprites\\sprites\\102_den.png": {
-      "time": 1779712597967.0356,
+      "time": 1789629187390.4067,
       "uuid": "6dfba207-6d8d-4c11-a91a-89277b16459a"
     },
     "3.Sprites\\sprites\\103_den.png": {
-      "time": 1779712597967.0356,
+      "time": 1789629187391.4053,
       "uuid": "37d912eb-9873-4024-808e-d2b211dc1ade"
     },
-    "3.Sprites\\sprites\\104_cay_sd.png": {
-      "time": 1779712597968.0354,
-      "uuid": "66419261-042e-4a8e-8181-d80242cf9b7a"
-    },
     "3.Sprites\\sprites\\104_cay.png": {
-      "time": 1779712597968.0354,
+      "time": 1789629187391.4053,
       "uuid": "343a8004-4bd0-4919-b0c1-d45628760ff4"
     },
+    "3.Sprites\\sprites\\104_cay_sd.png": {
+      "time": 1789629187391.4053,
+      "uuid": "66419261-042e-4a8e-8181-d80242cf9b7a"
+    },
     "3.Sprites\\sprites\\105_ghedau.png": {
-      "time": 1779712597969.035,
+      "time": 1789629187392.4045,
       "uuid": "3c94f88e-4a77-43e3-9c94-f5150a8119e5"
     },
     "3.Sprites\\sprites\\105_ghedau_Sd.png": {
-      "time": 1779712597969.035,
+      "time": 1789629187392.4045,
       "uuid": "917aef98-548e-48c6-91c3-916e0ce2f02b"
     },
     "3.Sprites\\sprites\\106_tham.png": {
-      "time": 1779712597969.035,
+      "time": 1789629187392.4045,
       "uuid": "17a5cdc9-67e8-424e-a3ab-32743a93c783"
     },
     "3.Sprites\\sprites\\106_tham_Sd.png": {
-      "time": 1779712597970.0396,
+      "time": 1789629187392.4045,
       "uuid": "01f34817-766e-4e5b-8019-a58618850917"
     },
     "3.Sprites\\sprites\\107_sach.png": {
-      "time": 1779712597970.0396,
+      "time": 1789629187393.4055,
       "uuid": "38e11acc-1737-4b2a-8db9-6b0dd5dd952e"
     },
     "3.Sprites\\sprites\\107_sach_Sd.png": {
-      "time": 1779712597971.0403,
+      "time": 1789629187393.4055,
       "uuid": "ae0719f5-6fff-4138-a17a-4faffdb1e610"
     },
-    "3.Sprites\\sprites\\108_tranh_sd.png": {
-      "time": 1779712597971.0403,
-      "uuid": "56a1dfe5-e98f-4569-a129-93d53e8c39b3"
-    },
-    "3.Sprites\\sprites\\10_voisen.png": {
-      "time": 1779712597972.04,
-      "uuid": "a58d8316-a138-4db1-8e0b-5d7317be4567"
-    },
-    "3.Sprites\\sprites\\109_ke.png": {
-      "time": 1779712597972.04,
-      "uuid": "6a4eff3f-8fd1-41f6-808b-0e6f5ba48c49"
-    },
     "3.Sprites\\sprites\\108_tranh.png": {
-      "time": 1779712597971.0403,
+      "time": 1789629187393.4055,
       "uuid": "b8890e94-0d12-4d19-84e5-6a7e7017299e"
     },
+    "3.Sprites\\sprites\\108_tranh_sd.png": {
+      "time": 1789629187393.4055,
+      "uuid": "56a1dfe5-e98f-4569-a129-93d53e8c39b3"
+    },
+    "3.Sprites\\sprites\\109_ke.png": {
+      "time": 1789629187394.4048,
+      "uuid": "6a4eff3f-8fd1-41f6-808b-0e6f5ba48c49"
+    },
+    "3.Sprites\\sprites\\10_voisen.png": {
+      "time": 1789629187394.4048,
+      "uuid": "a58d8316-a138-4db1-8e0b-5d7317be4567"
+    },
     "3.Sprites\\sprites\\110_rem.png": {
-      "time": 1779712597973.0386,
+      "time": 1789629187395.4045,
       "uuid": "1cce27bd-3c96-4f08-b828-1b9fc6d79472"
     },
-    "3.Sprites\\sprites\\112_base.png": {
-      "time": 1779712597950.0356,
-      "uuid": "614ccf01-f4a7-4997-a7e2-d4762928f942"
-    },
     "3.Sprites\\sprites\\111_cuaso.png": {
-      "time": 1779712597973.0386,
+      "time": 1789629187395.4045,
       "uuid": "70c7a262-a29b-4818-bb74-56d68aeebd8a"
     },
     "3.Sprites\\sprites\\11_hoahong.png": {
-      "time": 1779712597974.0383,
+      "time": 1789629187400.4043,
       "uuid": "b92373ff-79d5-44d1-9a9d-a0389f3e531d"
     },
-    "3.Sprites\\sprites\\113_lumcay.png": {
-      "time": 1779712597954.0364,
-      "uuid": "d9a17679-db75-4bbe-8299-b877895d115d"
-    },
     "3.Sprites\\sprites\\11_hoahong_sd.png": {
-      "time": 1779712597974.0383,
+      "time": 1789629187401.4048,
       "uuid": "4a803455-324c-4b77-903a-1a1ffba9967a"
     },
+    "3.Sprites\\sprites\\112_base.png": {
+      "time": 1789629187397.4048,
+      "uuid": "614ccf01-f4a7-4997-a7e2-d4762928f942"
+    },
     "3.Sprites\\sprites\\12_khan.png": {
-      "time": 1779712597974.0383,
+      "time": 1789629187401.4048,
       "uuid": "f6f1d78a-36f8-4f3c-beae-45211f387574"
     },
     "3.Sprites\\sprites\\12_khan_sd.png": {
-      "time": 1779712597974.0383,
+      "time": 1789629187401.4048,
       "uuid": "bb47a783-0a5c-49da-a745-d65eab5108e9"
     },
+    "3.Sprites\\sprites\\113_lumcay.png": {
+      "time": 1789629187400.4043,
+      "uuid": "d9a17679-db75-4bbe-8299-b877895d115d"
+    },
     "3.Sprites\\sprites\\13_khan.png": {
-      "time": 1779712597974.0383,
+      "time": 1789629187402.4048,
       "uuid": "5bfbb7bc-9184-4512-b6d8-d686aad70a5f"
     },
     "3.Sprites\\sprites\\13_khan_sd.png": {
-      "time": 1779712597975.038,
+      "time": 1789629187402.4048,
       "uuid": "40f06843-78c2-4ca5-ba93-2309f6f0dc6e"
     },
     "3.Sprites\\sprites\\14_lyruou.png": {
-      "time": 1779712597975.038,
+      "time": 1789629187402.4048,
       "uuid": "ddba5e7d-49c9-4db0-890c-27fe20efddbc"
     },
-    "3.Sprites\\sprites\\15_chairuou.png": {
-      "time": 1779712597975.038,
-      "uuid": "ac6bc128-c11d-4852-9856-18b402e32033"
-    },
-    "3.Sprites\\sprites\\17_hoahong.png": {
-      "time": 1779712597976.0376,
-      "uuid": "8660ef3b-ef95-4859-be5c-78ef79394854"
-    },
-    "3.Sprites\\sprites\\16_daybontam.png": {
-      "time": 1779712597976.0376,
-      "uuid": "2a59a236-a83b-44ff-a410-42af72ee5ec6"
-    },
-    "3.Sprites\\sprites\\15_chairuou_sd.png": {
-      "time": 1779712597976.0376,
-      "uuid": "cff98a19-e0a1-4f5c-9bea-20beb208fec4"
-    },
-    "3.Sprites\\sprites\\17_hoahong_sd.png": {
-      "time": 1779712597976.0376,
-      "uuid": "0c1c401d-9819-48b3-990a-fd9edf6ccc55"
-    },
-    "3.Sprites\\sprites\\19_cua.png": {
-      "time": 1779712597977.038,
-      "uuid": "8dd9b892-0ec5-4620-99a7-d80a1076fdf8"
-    },
     "3.Sprites\\sprites\\14_lyruou_sd.png": {
-      "time": 1779712597975.038,
+      "time": 1789629187403.4043,
       "uuid": "72a54bc3-7b5c-4db7-b06d-57cca04f4aeb"
     },
+    "3.Sprites\\sprites\\15_chairuou.png": {
+      "time": 1789629187403.4043,
+      "uuid": "ac6bc128-c11d-4852-9856-18b402e32033"
+    },
+    "3.Sprites\\sprites\\15_chairuou_sd.png": {
+      "time": 1789629187403.4043,
+      "uuid": "cff98a19-e0a1-4f5c-9bea-20beb208fec4"
+    },
+    "3.Sprites\\sprites\\16_daybontam.png": {
+      "time": 1789629187404.4048,
+      "uuid": "2a59a236-a83b-44ff-a410-42af72ee5ec6"
+    },
+    "3.Sprites\\sprites\\17_hoahong.png": {
+      "time": 1789629187404.4048,
+      "uuid": "8660ef3b-ef95-4859-be5c-78ef79394854"
+    },
+    "3.Sprites\\sprites\\17_hoahong_sd.png": {
+      "time": 1789629187404.4048,
+      "uuid": "0c1c401d-9819-48b3-990a-fd9edf6ccc55"
+    },
     "3.Sprites\\sprites\\18_bontam_sd.png": {
-      "time": 1779712597977.038,
+      "time": 1789629187405.4045,
       "uuid": "d3745180-00b0-40a4-a07f-b0d76744f8a2"
     },
     "3.Sprites\\sprites\\18_bontam.png": {
-      "time": 1779712597977.038,
+      "time": 1789629187405.4045,
       "uuid": "89599cd6-cb72-4a25-b5eb-e849b57f86c4"
     },
+    "3.Sprites\\sprites\\19_cua.png": {
+      "time": 1789629187406.4053,
+      "uuid": "8dd9b892-0ec5-4620-99a7-d80a1076fdf8"
+    },
     "3.Sprites\\sprites\\1_thang.png": {
-      "time": 1779712597978.0393,
+      "time": 1789629187406.4053,
       "uuid": "6aced2eb-4fc4-4d49-a0c2-9206bdb834d1"
     },
     "3.Sprites\\sprites\\20_hoa.png": {
-      "time": 1779712597978.0393,
+      "time": 1789629187407.4055,
       "uuid": "608ac670-1781-4d1c-87f2-fe10b06af316"
     },
-    "3.Sprites\\sprites\\20_hoa_sd.png": {
-      "time": 1779712597979.039,
-      "uuid": "e633e813-6d55-42e7-bf6b-63a6143a53c2"
-    },
     "3.Sprites\\sprites\\21_ke.png": {
-      "time": 1779712597979.039,
+      "time": 1789629187407.4055,
       "uuid": "66d138f3-f689-4a55-8abd-8fade94adc9e"
     },
+    "3.Sprites\\sprites\\20_hoa_sd.png": {
+      "time": 1789629187407.4055,
+      "uuid": "e633e813-6d55-42e7-bf6b-63a6143a53c2"
+    },
     "3.Sprites\\sprites\\22_guong.png": {
-      "time": 1779712597979.039,
+      "time": 1789629187408.4053,
       "uuid": "25e1dbd8-dcdd-4018-aa2f-4ae072b1c674"
     },
     "3.Sprites\\sprites\\23_giayvs_sd.png": {
-      "time": 1779712597980.0388,
+      "time": 1789629187408.4053,
       "uuid": "31c85b9d-be22-4f0d-877f-ec689e0a7051"
     },
     "3.Sprites\\sprites\\23_giayvs.png": {
-      "time": 1779712597980.0388,
+      "time": 1789629187408.4053,
       "uuid": "9a06ce5a-85ec-4dcd-a1dd-de68376bfe6c"
     },
     "3.Sprites\\sprites\\24_giadung.png": {
-      "time": 1779712597980.0388,
+      "time": 1789629187409.406,
       "uuid": "6f6e4f36-9bcb-4ad8-a130-443be8741a06"
     },
     "3.Sprites\\sprites\\25_voi.png": {
-      "time": 1779712597980.0388,
+      "time": 1789629187409.406,
       "uuid": "84cfb063-a59b-4034-8bfa-b9d2ace298ff"
     },
     "3.Sprites\\sprites\\26_ruatay.png": {
-      "time": 1779712597981.0388,
+      "time": 1789629187409.406,
       "uuid": "8e78625a-2892-486a-b17f-683df13c15b0"
     },
-    "3.Sprites\\sprites\\27_banchai.png": {
-      "time": 1779712597981.0388,
-      "uuid": "46612cdd-f831-4668-9959-afae3482183c"
-    },
     "3.Sprites\\sprites\\26_ruatay_sd.png": {
-      "time": 1779712597981.0388,
+      "time": 1789629187409.406,
       "uuid": "72e0349c-d7e3-447a-8744-48eacc5c2dd8"
     },
+    "3.Sprites\\sprites\\27_banchai.png": {
+      "time": 1789629187410.4058,
+      "uuid": "46612cdd-f831-4668-9959-afae3482183c"
+    },
+    "3.Sprites\\sprites\\27_banchai_sd.png": {
+      "time": 1789629187410.4058,
+      "uuid": "d6d4e706-ee8b-462e-8a86-05cef04aa8c7"
+    },
     "3.Sprites\\sprites\\28_khan.png": {
-      "time": 1779712597982.038,
+      "time": 1789629187410.4058,
       "uuid": "e056b6b0-205e-41b4-95f3-0df1c4e92e1d"
     },
     "3.Sprites\\sprites\\28_khan_sd.png": {
-      "time": 1779712597982.038,
+      "time": 1789629187411.4053,
       "uuid": "9700b530-ceed-4b49-b186-7b9663cdfe36"
     },
-    "3.Sprites\\sprites\\27_banchai_sd.png": {
-      "time": 1779712597981.0388,
-      "uuid": "d6d4e706-ee8b-462e-8a86-05cef04aa8c7"
-    },
     "3.Sprites\\sprites\\29_canhcautudong.png": {
-      "time": 1779712597983.0376,
+      "time": 1789629187411.4053,
       "uuid": "e1837ab3-819d-450a-af34-9a0cfe9131c2"
     },
     "3.Sprites\\sprites\\29_canhcautudong_2.png": {
-      "time": 1779712597983.0376,
+      "time": 1789629187412.4048,
       "uuid": "e5f5aff8-ac39-46c2-976f-9500019b3e23"
     },
     "3.Sprites\\sprites\\29_canhcautumo.png": {
-      "time": 1779712597983.0376,
+      "time": 1789629187412.4048,
       "uuid": "c68e0703-c150-407e-82df-e67b6128cc09"
     },
-    "3.Sprites\\sprites\\29_tu_sd.png": {
-      "time": 1779712597984.038,
-      "uuid": "4be39acd-5e25-4f04-ba21-daddc483a93d"
-    },
     "3.Sprites\\sprites\\29_tu_cut.png": {
-      "time": 1779712597984.038,
+      "time": 1789629187413.4065,
       "uuid": "7a03888f-b301-4cab-8acd-c3444efc5197"
     },
-    "3.Sprites\\sprites\\2_thang.png": {
-      "time": 1779712597984.5403,
-      "uuid": "ac55142e-7a4b-41ff-a18a-817827507cc3"
-    },
-    "3.Sprites\\sprites\\30_aochoangtam.png": {
-      "time": 1779712597984.5403,
-      "uuid": "9fc9eb7c-9f01-4326-968a-cc8fb0b93502"
-    },
     "3.Sprites\\sprites\\29_tu.png": {
-      "time": 1779712597983.0376,
+      "time": 1789629187413.4065,
       "uuid": "15655884-128e-41ef-bf65-c5cbd88dfb5c"
     },
-    "3.Sprites\\sprites\\30_aochoangtam_Sd.png": {
-      "time": 1779712597984.5403,
-      "uuid": "2c0efcab-d739-466f-9801-e2c77fc5c19a"
+    "3.Sprites\\sprites\\29_tu_sd.png": {
+      "time": 1789629187413.4065,
+      "uuid": "4be39acd-5e25-4f04-ba21-daddc483a93d"
+    },
+    "3.Sprites\\sprites\\30_aochoangtam.png": {
+      "time": 1789629187415.4055,
+      "uuid": "9fc9eb7c-9f01-4326-968a-cc8fb0b93502"
+    },
+    "3.Sprites\\sprites\\2_thang.png": {
+      "time": 1789629187414.4062,
+      "uuid": "ac55142e-7a4b-41ff-a18a-817827507cc3"
     },
     "3.Sprites\\sprites\\31_suaruamat.png": {
-      "time": 1779712597984.5403,
+      "time": 1789629187415.4055,
       "uuid": "6b8c9b9d-9772-4375-b0fe-bf0dcf70df40"
     },
+    "3.Sprites\\sprites\\30_aochoangtam_Sd.png": {
+      "time": 1789629187415.4055,
+      "uuid": "2c0efcab-d739-466f-9801-e2c77fc5c19a"
+    },
     "3.Sprites\\sprites\\32_tuamtuong.png": {
-      "time": 1779712597985.5427,
+      "time": 1789629187416.4058,
       "uuid": "bd027c0a-6256-4146-b228-37d8c6083706"
     },
-    "3.Sprites\\sprites\\32_tuamtuong_cut.png": {
-      "time": 1779712597985.5427,
-      "uuid": "2965302f-ad25-4db2-8c5e-437ab63b4bcb"
-    },
-    "3.Sprites\\sprites\\33_remtam.png": {
-      "time": 1779712597985.5427,
-      "uuid": "5fd1c727-4ca4-4110-bd71-2393f06965f9"
-    },
-    "3.Sprites\\sprites\\34_giayvesinh.png": {
-      "time": 1779712597986.5425,
-      "uuid": "471a5cdd-aae1-444e-bf36-fe1280e4bc57"
-    },
     "3.Sprites\\sprites\\31_suaruamat_sd.png": {
-      "time": 1779712597985.5427,
+      "time": 1789629187416.4058,
       "uuid": "434cd360-b4e8-44e5-9fc4-266454b7a5f1"
     },
+    "3.Sprites\\sprites\\33_remtam.png": {
+      "time": 1789629187417.4065,
+      "uuid": "5fd1c727-4ca4-4110-bd71-2393f06965f9"
+    },
+    "3.Sprites\\sprites\\32_tuamtuong_cut.png": {
+      "time": 1789629187416.4058,
+      "uuid": "2965302f-ad25-4db2-8c5e-437ab63b4bcb"
+    },
+    "3.Sprites\\sprites\\34_giayvesinh.png": {
+      "time": 1789629187417.4065,
+      "uuid": "471a5cdd-aae1-444e-bf36-fe1280e4bc57"
+    },
+    "3.Sprites\\sprites\\35_voixit.png": {
+      "time": 1789629187418.4053,
+      "uuid": "074ecebb-efe7-48a2-9539-6d93773961a2"
+    },
     "3.Sprites\\sprites\\36_boncau.png": {
-      "time": 1779712597986.5425,
+      "time": 1789629187418.4053,
       "uuid": "e1f93444-e8a5-4430-83aa-4521751a66ce"
     },
     "3.Sprites\\sprites\\36_boncau_Sd.png": {
-      "time": 1779712597987.5427,
+      "time": 1789629187418.4053,
       "uuid": "74212016-0422-4fba-937b-0a4cd4ca07d6"
     },
-    "3.Sprites\\sprites\\35_voixit.png": {
-      "time": 1779712597986.5425,
-      "uuid": "074ecebb-efe7-48a2-9539-6d93773961a2"
-    },
     "3.Sprites\\sprites\\37_base.png": {
-      "time": 1779712597959.036,
+      "time": 1789629187419.4055,
       "uuid": "e4e56d93-c7ea-4a00-85ab-fb4a122fcc85"
     },
     "3.Sprites\\sprites\\38_mai.png": {
-      "time": 1779712597988.5425,
+      "time": 1789629187421.4048,
       "uuid": "53037b42-f05f-4aa2-a7f8-c84dc1b2196a"
     },
     "3.Sprites\\sprites\\40_cuasongoai.png": {
-      "time": 1779712597989.543,
+      "time": 1789629187423.4065,
       "uuid": "a2482ac4-5622-46b3-abb3-216e7130d1d9"
     },
-    "3.Sprites\\sprites\\3_thancay.png": {
-      "time": 1779712597960.036,
-      "uuid": "94635a83-84a4-45a3-8365-6d809477369a"
-    },
     "3.Sprites\\sprites\\39_mai.png": {
-      "time": 1779712597988.5425,
+      "time": 1789629187422.4048,
       "uuid": "dddca926-adf0-4960-9ee2-30fda6632738"
     },
+    "3.Sprites\\sprites\\3_thancay.png": {
+      "time": 1789629187423.4065,
+      "uuid": "94635a83-84a4-45a3-8365-6d809477369a"
+    },
     "3.Sprites\\sprites\\42_chaucay.png": {
-      "time": 1779712597990.544,
+      "time": 1789629187425.4043,
       "uuid": "0d1cbced-b210-4c69-806b-7ea1311542aa"
     },
     "3.Sprites\\sprites\\41_benngoaicucai.png": {
-      "time": 1779712597990.544,
+      "time": 1789629187424.406,
       "uuid": "4736bed0-794f-434b-bc1e-4eec1845aebf"
     },
+    "3.Sprites\\sprites\\43_cay_Sd.png": {
+      "time": 1789629187426.4053,
+      "uuid": "be314b59-2ebc-445a-8e34-185a895156e0"
+    },
     "3.Sprites\\sprites\\42_chaucay_sd.png": {
-      "time": 1779712597990.544,
+      "time": 1789629187425.4043,
       "uuid": "127125b0-2b96-41cc-9c24-4954736f341b"
     },
     "3.Sprites\\sprites\\43_cay.png": {
-      "time": 1779712597990.544,
+      "time": 1789629187426.4053,
       "uuid": "e947bb6b-2974-45ff-8ed1-21f62a4e2598"
     },
-    "3.Sprites\\sprites\\43_cay_Sd.png": {
-      "time": 1779712597991.545,
-      "uuid": "be314b59-2ebc-445a-8e34-185a895156e0"
-    },
     "3.Sprites\\sprites\\44_sach_Sd.png": {
-      "time": 1779712597991.545,
+      "time": 1789629187427.405,
       "uuid": "6c31da26-9a43-4c8c-9101-5746cb94ef01"
     },
     "3.Sprites\\sprites\\44_sach.png": {
-      "time": 1779712597991.545,
+      "time": 1789629187426.4053,
       "uuid": "5019e42f-40a4-460f-a816-8f5830f71772"
     },
-    "7.Scripts\\MyScript\\pipeline\\GridArrangeTool.ts.meta": {
-      "time": 1789617417250.1184
+    "3.Sprites\\sprites\\44_tranh.png": {
+      "time": 1789629187427.405,
+      "uuid": "1f03dec8-b4bb-47cd-bf5a-b16e21550a93"
     },
-    "7.Scripts\\MyScript\\pipeline\\GridArrangeTool.ts": {
-      "time": 1789627121818.3545,
-      "uuid": "2019433c-1f20-49ae-96f8-482e6bba1de3"
+    "3.Sprites\\sprites\\44_tranh_Sd.png": {
+      "time": 1789629187427.405,
+      "uuid": "56aed187-aee3-4d68-97a8-bb914c15ef9b"
+    },
+    "3.Sprites\\sprites\\45_Khan.png": {
+      "time": 1789629187428.4053,
+      "uuid": "8f26e703-b23e-40f6-b535-137b16a7053f"
+    },
+    "3.Sprites\\sprites\\45_Khan_sd.png": {
+      "time": 1789629187428.4053,
+      "uuid": "bfa25389-9b1c-461c-ae30-2c351a2055ea"
+    },
+    "3.Sprites\\sprites\\46_chongsach.png": {
+      "time": 1789629187429.4053,
+      "uuid": "e6db517c-bd21-4907-a1f5-dae18afaf6d5"
+    },
+    "3.Sprites\\sprites\\47_Tu.png": {
+      "time": 1789629187429.4053,
+      "uuid": "648d2540-be96-4b32-95a2-dbd637b255ea"
+    },
+    "3.Sprites\\sprites\\46_chongsach_Sd.png": {
+      "time": 1789629187429.4053,
+      "uuid": "bf063985-a340-45ea-bcdd-f19c2b1f4dc0"
+    },
+    "3.Sprites\\sprites\\47_Tu_Sd.png": {
+      "time": 1789629187429.4053,
+      "uuid": "7ff940f7-289c-48f5-8448-1caf1b8db8f8"
+    },
+    "3.Sprites\\sprites\\47_Tu_cut.png": {
+      "time": 1789629187430.406,
+      "uuid": "3379a55e-85de-401b-a50b-a12722d64e44"
+    },
+    "3.Sprites\\sprites\\48_lich.png": {
+      "time": 1789629187430.406,
+      "uuid": "b30f869f-b3f1-4cf3-8a79-cc806690083e"
+    },
+    "3.Sprites\\sprites\\49_Dep.png": {
+      "time": 1789629187430.406,
+      "uuid": "d1ade73b-744c-4ee4-8f6e-f4408216642f"
+    },
+    "3.Sprites\\sprites\\49_Dep_Sd.png": {
+      "time": 1789629187431.4053,
+      "uuid": "cff50ed3-0807-4e1c-99d0-3c7195cc9b4b"
+    },
+    "3.Sprites\\sprites\\50_gaubong_Sd.png": {
+      "time": 1789629187431.4053,
+      "uuid": "12297ba3-a39f-49d5-bfc1-b3375e3e782b"
+    },
+    "3.Sprites\\sprites\\50_gaubong.png": {
+      "time": 1789629187431.4053,
+      "uuid": "85232765-24ca-4270-8fac-a3cce48e3d27"
+    },
+    "3.Sprites\\sprites\\4_lumcay.png": {
+      "time": 1789629187431.4053,
+      "uuid": "62e4565c-bbaf-4e86-81f3-e10a6c208904"
+    },
+    "3.Sprites\\sprites\\51_khan.png": {
+      "time": 1789629187432.4058,
+      "uuid": "8b654312-d5de-4eca-8f13-c3d2b88beec2"
+    },
+    "3.Sprites\\sprites\\51_khan_sd.png": {
+      "time": 1789629187432.4058,
+      "uuid": "ba1739ed-8aad-4817-b5c8-604880e23814"
+    },
+    "3.Sprites\\sprites\\52_den_Sd.png": {
+      "time": 1789629187433.4048,
+      "uuid": "3e1cd478-c327-46b3-8766-1ab1d39aef8e"
+    },
+    "3.Sprites\\sprites\\53_chan.png": {
+      "time": 1789629187433.4048,
+      "uuid": "7acd4fca-3f73-4629-8a59-1003d197384b"
+    },
+    "3.Sprites\\sprites\\52_den.png": {
+      "time": 1789629187432.4058,
+      "uuid": "09d2dc83-0f93-41ca-9453-eb85ad04eeb5"
+    },
+    "3.Sprites\\sprites\\54_khunganh_Sd.png": {
+      "time": 1789629187435.405,
+      "uuid": "c5d17046-b116-4088-8725-423f37fef7d7"
+    },
+    "3.Sprites\\sprites\\53_chan_Sd.png": {
+      "time": 1789629187434.4055,
+      "uuid": "4e99a470-6d55-413f-a049-e520598197f3"
+    },
+    "3.Sprites\\sprites\\55_cay.png": {
+      "time": 1789629187435.405,
+      "uuid": "3a866045-8e70-4cac-aefc-636f1951fff0"
+    },
+    "3.Sprites\\sprites\\54_khunganh.png": {
+      "time": 1789629187434.4055,
+      "uuid": "a2433f31-fab3-46ee-aaec-128516a4873c"
+    },
+    "3.Sprites\\sprites\\55_cay_Sd.png": {
+      "time": 1789629187435.405,
+      "uuid": "dbb51ed9-f0ee-49a2-b5fd-f4773f63ff31"
+    },
+    "3.Sprites\\sprites\\56_ke.png": {
+      "time": 1789629187435.405,
+      "uuid": "4ac7e387-f546-4516-9aee-9a72672d2897"
+    },
+    "3.Sprites\\sprites\\59_goihoa.png": {
+      "time": 1789629187437.4048,
+      "uuid": "d15e5ace-4446-46c2-bd91-76175d996687"
+    },
+    "3.Sprites\\sprites\\58_cuaso.png": {
+      "time": 1789629187436.4048,
+      "uuid": "15e6bbde-4ae1-46ca-b48b-e2fc55fd1842"
+    },
+    "3.Sprites\\sprites\\57_rem.png": {
+      "time": 1789629187436.4048,
+      "uuid": "629553e2-39ae-4fb2-864b-30ca714d114a"
+    },
+    "3.Sprites\\sprites\\59_goihoa_Sd.png": {
+      "time": 1789629187437.4048,
+      "uuid": "cd2c8e1c-eb09-4478-b938-a46c0ad04d09"
+    },
+    "3.Sprites\\sprites\\60_goi.png": {
+      "time": 1789629187438.405,
+      "uuid": "3bf20fde-95ce-49b6-baa3-10898b75a043"
+    },
+    "3.Sprites\\sprites\\60_goi_sd.png": {
+      "time": 1789629187439.4058,
+      "uuid": "85474568-2503-4f65-9992-969daa7300d1"
+    },
+    "3.Sprites\\sprites\\61_goi_sd.png": {
+      "time": 1789629187440.406,
+      "uuid": "d130d90b-3bd1-4d08-96fb-e742d044978d"
+    },
+    "3.Sprites\\sprites\\61_goi.png": {
+      "time": 1789629187439.4058,
+      "uuid": "dae9bb24-97b3-45df-91b3-334c32d886d0"
+    },
+    "3.Sprites\\sprites\\5_mai.png": {
+      "time": 1789629187438.405,
+      "uuid": "d2da4ed0-c475-4f4b-811d-57e2fd7114d3"
+    },
+    "3.Sprites\\sprites\\62_dem.png": {
+      "time": 1789629187440.406,
+      "uuid": "65eb4e40-703d-4621-be62-caa17832dd29"
+    },
+    "3.Sprites\\sprites\\62_dem_Sd.png": {
+      "time": 1789629187440.406,
+      "uuid": "2d95c5dd-4542-487a-8a1e-dae9a7e27ba7"
+    },
+    "3.Sprites\\sprites\\63_giuong.png": {
+      "time": 1789629187441.4067,
+      "uuid": "7f66509c-f004-48e0-bc22-f81d78199e01"
+    },
+    "3.Sprites\\sprites\\63_giuong_cut.png": {
+      "time": 1789629187442.406,
+      "uuid": "a6eafff6-54ea-4bc7-bf00-24432b947460"
+    },
+    "3.Sprites\\sprites\\63_giuong_Sd.png": {
+      "time": 1789629187441.4067,
+      "uuid": "057dcd81-288c-41ab-9767-f308a7f527df"
+    },
+    "3.Sprites\\sprites\\64_tham_Sd.png": {
+      "time": 1789629187442.406,
+      "uuid": "8ce43907-7cd7-45bf-a732-a750031e24b0"
+    },
+    "3.Sprites\\sprites\\64_tham.png": {
+      "time": 1789629187442.406,
+      "uuid": "3ee73b48-15a4-41b3-bdc7-5b0377d3e6ce"
+    },
+    "3.Sprites\\sprites\\66_kinhvienvong_sd.png": {
+      "time": 1789629187445.4058,
+      "uuid": "cde65577-2c65-4f89-9e9c-72fddc02c01a"
+    },
+    "3.Sprites\\sprites\\66_kinhvienvong.png": {
+      "time": 1789629187444.4045,
+      "uuid": "cbceae54-34d8-43e6-959b-ba616f28f189"
+    },
+    "3.Sprites\\sprites\\65_base.png": {
+      "time": 1789629187444.4045,
+      "uuid": "abb790ac-e38d-4ddf-8997-a9b7fbbdfed7"
+    },
+    "3.Sprites\\sprites\\67_cay_Sd.png": {
+      "time": 1789629187445.4058,
+      "uuid": "842db1ee-3a37-4164-9411-da685b194df0"
+    },
+    "3.Sprites\\sprites\\67_cay.png": {
+      "time": 1789629187445.4058,
+      "uuid": "1aac5c5c-950e-4967-a36a-2dd2ac9ad3b1"
+    },
+    "3.Sprites\\sprites\\69_binhhoa.png": {
+      "time": 1789629187445.4058,
+      "uuid": "9c7af2aa-e25e-44ef-8eed-233bf96f2e5e"
+    },
+    "3.Sprites\\sprites\\69_binhhoa_sd.png": {
+      "time": 1789629187446.4053,
+      "uuid": "9129a566-635b-4693-9eb1-534059cac994"
+    },
+    "3.Sprites\\sprites\\6_thancay.png": {
+      "time": 1789629187447.405,
+      "uuid": "30f3282b-764d-4352-980e-6f7ba7da2297"
+    },
+    "3.Sprites\\sprites\\70_ghe_Sd.png": {
+      "time": 1789629187448.4055,
+      "uuid": "d5a8ec72-28dd-4359-ace3-13d891e4a788"
+    },
+    "3.Sprites\\sprites\\71_ghe.png": {
+      "time": 1789629187448.4055,
+      "uuid": "4026b32d-2a25-4119-a95f-9b79876586e4"
+    },
+    "3.Sprites\\sprites\\71_ghe_sd.png": {
+      "time": 1789629187448.4055,
+      "uuid": "ef79cc73-1bf2-4b98-a006-ecaf789378eb"
+    },
+    "3.Sprites\\sprites\\70_ghe.png": {
+      "time": 1789629187447.405,
+      "uuid": "72e76965-8e69-484a-a3f1-737e73321c95"
+    },
+    "3.Sprites\\sprites\\72_cf.png": {
+      "time": 1789629187449.405,
+      "uuid": "2daeee2d-1e4a-493c-a987-c0d2bd05e0c1"
+    },
+    "3.Sprites\\sprites\\73_ban_sd.png": {
+      "time": 1789629187450.4048,
+      "uuid": "d13b4d65-58d2-464c-9623-5cc7a00b06f5"
+    },
+    "3.Sprites\\sprites\\72_cf_Sd.png": {
+      "time": 1789629187449.405,
+      "uuid": "73cacea4-2384-4c4e-9ce1-c79b09c2031a"
+    },
+    "3.Sprites\\sprites\\73_ban.png": {
+      "time": 1789629187450.4048,
+      "uuid": "1c162aee-ca1d-4977-a139-6aa19d2911f6"
+    },
+    "3.Sprites\\sprites\\74_base.png": {
+      "time": 1789629187451.405,
+      "uuid": "26fd7a53-56fe-4aae-9f15-39bf10c8d0cc"
+    },
+    "3.Sprites\\sprites\\75_lacucai.png": {
+      "time": 1789629187451.405,
+      "uuid": "a23f6747-35da-4e31-9a08-df3675836a03"
+    },
+    "3.Sprites\\sprites\\79_coc.png": {
+      "time": 1789629187455.405,
+      "uuid": "cbe735da-27c8-47a6-a865-bb024c9c2457"
+    },
+    "3.Sprites\\sprites\\77_maiche.png": {
+      "time": 1789629187453.4053,
+      "uuid": "81399190-24ef-4d8e-be68-a41c22141892"
+    },
+    "3.Sprites\\sprites\\78_benngoaicucai.png": {
+      "time": 1789629187454.4045,
+      "uuid": "1bc8a8e7-2343-482e-8a4d-e531b6fb071d"
+    },
+    "3.Sprites\\sprites\\76_thancay.png": {
+      "time": 1789629187453.4053,
+      "uuid": "cef6b6eb-88ec-4f1b-8a32-29a14e18f546"
+    },
+    "3.Sprites\\sprites\\79_coc_Sd.png": {
+      "time": 1789629187455.405,
+      "uuid": "8182e37f-03f9-4f6b-be8b-72184c2a633e"
+    },
+    "3.Sprites\\sprites\\7_maiche.png": {
+      "time": 1789629187456.406,
+      "uuid": "b86ec4e8-b2cd-4240-a6e3-62e075537d19"
+    },
+    "3.Sprites\\sprites\\80_chaucay.png": {
+      "time": 1789629187457.4055,
+      "uuid": "2fc1cc37-8841-46cc-a58d-33b785904e12"
+    },
+    "3.Sprites\\sprites\\80_chaucay_sd.png": {
+      "time": 1789629187457.4055,
+      "uuid": "86d22ca2-ed0b-4433-a776-1063dd862559"
+    },
+    "3.Sprites\\sprites\\81_sachmo.png": {
+      "time": 1789629187457.4055,
+      "uuid": "dc4a24ba-2d0e-495f-a030-a04edc974806"
+    },
+    "3.Sprites\\sprites\\82_cuonlen.png": {
+      "time": 1789629187458.4058,
+      "uuid": "38fd5ac0-df5a-45ea-8178-d7d5025719a2"
+    },
+    "3.Sprites\\sprites\\82_cuonlen_sd.png": {
+      "time": 1789629187458.4058,
+      "uuid": "fe29ba24-df7e-4dfd-a7ca-fd785dae9d98"
+    },
+    "3.Sprites\\sprites\\83_rolen.png": {
+      "time": 1789629187458.4058,
+      "uuid": "628f8a7b-c2a0-4931-bd0d-65f039b6f49e"
+    },
+    "3.Sprites\\sprites\\83_rolen_Sd.png": {
+      "time": 1789629187459.4055,
+      "uuid": "83c2d472-b250-46f7-a31d-edc6161d23ca"
+    },
+    "3.Sprites\\sprites\\84_chaucay.png": {
+      "time": 1789629187459.4055,
+      "uuid": "37ab8bae-8857-45d4-b9b1-1da34400d9af"
+    },
+    "3.Sprites\\sprites\\84_chaucay_Sd.png": {
+      "time": 1789629187460.4065,
+      "uuid": "297603ab-ee50-4654-bae4-808b8ad77a54"
+    },
+    "3.Sprites\\sprites\\85_ghedon_.png": {
+      "time": 1789629187460.4065,
+      "uuid": "7d10f177-13bf-4599-9571-326aa1ac4365"
+    },
+    "3.Sprites\\sprites\\85_ghedon_sd.png": {
+      "time": 1789629187460.4065,
+      "uuid": "c9dba24b-c629-47aa-9a5c-669825831163"
+    },
+    "3.Sprites\\sprites\\86_ghedon.png": {
+      "time": 1789629187460.4065,
+      "uuid": "6e42c30c-27b8-4eb1-9650-97e3219b8210"
+    },
+    "3.Sprites\\sprites\\87_binhnuoc.png": {
+      "time": 1789629187461.4055,
+      "uuid": "6704715c-7df6-451a-b5b7-c2ee0d0b1041"
+    },
+    "3.Sprites\\sprites\\86_ghedon_sd.png": {
+      "time": 1789629187461.4055,
+      "uuid": "6859df3e-db5b-4fca-92ce-a05d3d0130cd"
+    },
+    "3.Sprites\\sprites\\87_binhnuoc_Sd.png": {
+      "time": 1789629187461.4055,
+      "uuid": "113d1bcc-438e-4c1d-8689-ffe5eb4a704b"
+    },
+    "3.Sprites\\sprites\\88_bancurcai.png": {
+      "time": 1789629187462.4053,
+      "uuid": "99ca8fcf-23e6-4342-938d-ca19b0730b8f"
+    },
+    "3.Sprites\\sprites\\88_bancurcai_sd.png": {
+      "time": 1789629187462.4053,
+      "uuid": "ee345d1c-9b7d-4727-aff8-2583047a7db0"
+    },
+    "3.Sprites\\sprites\\89_tv.png": {
+      "time": 1789629187462.4053,
+      "uuid": "c04ed82f-aab6-4c93-8245-37a62c106a04"
+    },
+    "3.Sprites\\sprites\\89_tv_sd.png": {
+      "time": 1789629187463.4048,
+      "uuid": "e25bde15-cbc0-473f-87e6-f9274a879c56"
+    },
+    "3.Sprites\\sprites\\8_cuasongoai.png": {
+      "time": 1789629187463.4048,
+      "uuid": "f2a85f53-43b5-47d7-baaf-2e19bcddae0c"
+    },
+    "3.Sprites\\sprites\\90_coc.png": {
+      "time": 1789629187463.4048,
+      "uuid": "fb12ca71-8fe7-492c-8fc5-aa98beb49d52"
+    },
+    "3.Sprites\\sprites\\90_coc_sd.png": {
+      "time": 1789629187464.4058,
+      "uuid": "bab68295-a6e5-46a9-a3c9-1d13439f34fe"
+    },
+    "3.Sprites\\sprites\\91_sach_sd.png": {
+      "time": 1789629187464.4058,
+      "uuid": "86547923-6368-452e-ba0b-86b4b11a0b71"
+    },
+    "3.Sprites\\sprites\\91_sach.png": {
+      "time": 1789629187464.4058,
+      "uuid": "2af9894a-7649-46f9-86d1-2f7849b905e3"
+    },
+    "3.Sprites\\sprites\\92_khan_sd.png": {
+      "time": 1789629187465.406,
+      "uuid": "9b7e5759-658b-4d75-ba72-70b109b39341"
+    },
+    "3.Sprites\\sprites\\92_khan.png": {
+      "time": 1789629187464.4058,
+      "uuid": "88d7739a-7669-4e35-b798-cda813043907"
+    },
+    "3.Sprites\\sprites\\93_tui_sd.png": {
+      "time": 1789629187466.4062,
+      "uuid": "0085c249-1bd5-4d92-8938-04d4d3c0b8a8"
+    },
+    "3.Sprites\\sprites\\93_tui.png": {
+      "time": 1789629187465.406,
+      "uuid": "d747c8a5-3691-4392-a6ad-02d37243743b"
+    },
+    "3.Sprites\\sprites\\94_tui.png": {
+      "time": 1789629187466.4062,
+      "uuid": "6b256d0d-87b9-43e3-ac7a-c4230d3d29e0"
+    },
+    "3.Sprites\\sprites\\94_tui_Sd.png": {
+      "time": 1789629187466.4062,
+      "uuid": "6c73518c-7ce8-422b-8ff1-2c752685a185"
+    },
+    "3.Sprites\\sprites\\95_bantivi.png": {
+      "time": 1789629187467.4055,
+      "uuid": "d5ba2473-a300-4d6e-a029-a6bce361869f"
+    },
+    "3.Sprites\\sprites\\96_goitaymeo_sd.png": {
+      "time": 1789629187468.4053,
+      "uuid": "01ac5f2d-f267-4dc7-9b06-197e1f8ac589"
+    },
+    "3.Sprites\\sprites\\95_bantivi_cut.png": {
+      "time": 1789629187467.4055,
+      "uuid": "b448373e-be86-4a37-9332-12b775bf1023"
+    },
+    "3.Sprites\\sprites\\95_bantivi_sd.png": {
+      "time": 1789629187467.4055,
+      "uuid": "7d62311b-5e98-4564-8cc9-bdf03545e1b0"
+    },
+    "3.Sprites\\sprites\\96_goitaymeo.png": {
+      "time": 1789629187468.4053,
+      "uuid": "7633c309-d3c5-4ddd-9677-ce662c9fc7bd"
+    },
+    "3.Sprites\\sprites\\97_non.png": {
+      "time": 1789629187468.4053,
+      "uuid": "ef8abe4d-bd98-4c92-88d2-0c127f455aba"
+    },
+    "3.Sprites\\sprites\\99_odu.png": {
+      "time": 1789629187469.4045,
+      "uuid": "83484dbc-6f4f-4e06-a994-a877c958f0bf"
+    },
+    "3.Sprites\\sprites\\98_balo.png": {
+      "time": 1789629187468.4053,
+      "uuid": "9c8fec32-5073-4d44-937a-89da84ab25ff"
+    },
+    "3.Sprites\\sprites\\9_benngoaicucai.png": {
+      "time": 1789629187470.405,
+      "uuid": "2ed727b6-62a5-4d57-b602-4988776d9020"
+    },
+    "4.Sounds\\WaterDrop.mp3.meta": {
+      "time": 1789629741456.346
+    },
+    "4.Sounds\\WaterDrop.mp3": {
+      "time": 1782283243939.5364,
+      "uuid": "1f1fe5a1-c894-424a-8a73-90ab623eca26"
+    },
+    "4.Sounds\\Curtain Open v1.wav.meta": {
+      "time": 1789629892023.7483
+    },
+    "4.Sounds\\Curtain Open v1.wav": {
+      "time": 1780470281435.0513,
+      "uuid": "ace29180-3ef9-4c50-8e6e-97b8c870efd7"
+    },
+    "4.Sounds\\Window.mp3.meta": {
+      "time": 1789630202554.804
+    },
+    "4.Sounds\\Window.mp3": {
+      "time": 1789630202496.45,
+      "uuid": "ba86cebe-4d38-4443-bdd2-0f3817a8a500"
+    },
+    "4.Sounds\\BGM\\2026-09-17 14-40-20 (mp3cut.net).mp3.meta": {
+      "time": 1789630963528.466
+    },
+    "4.Sounds\\BGM\\2026-09-17 14-40-20 (mp3cut.net).mp3": {
+      "time": 1789630952951.21,
+      "uuid": "97cb1ca5-d4ae-47d5-bc33-14c1b2b53b0c"
+    },
+    "3.Sprites\\sprites\\download (4).jpg.meta": {
+      "time": 1789632131138.3633
+    },
+    "3.Sprites\\sprites\\download (4).jpg": {
+      "time": 1789632093746.8074,
+      "uuid": "22231d1e-bb9c-4697-95a9-511b3ce4881f"
     }
   },
   "missing": {}
