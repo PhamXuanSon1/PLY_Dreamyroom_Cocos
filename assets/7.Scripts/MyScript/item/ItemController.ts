@@ -228,6 +228,9 @@ export class ItemController extends Component implements IPointerHandler {
     showTargetShadow(): void {
         const target = this.targetPoint;
         if (!target || !target.isValid || this.isPlaced) return;
+        // Chưa ghép xong các item bắt buộc (SeatHandler.requiredItems) -> chưa hiện bóng.
+        // Với persistentShadow: ItemManager.refreshPersistentShadows() sẽ bật lại khi đủ điều kiện.
+        if (!this.canShowTargetShadow()) return;
 
         // có thể được gọi từ ItemManager.start()/onBoxFirstClicked() khi node item chưa
         // active (onLoad chưa chạy) -> itemGraphic có thể chưa được gán.
@@ -235,6 +238,12 @@ export class ItemController extends Component implements IPointerHandler {
 
         target.active = true;
         this.itemGraphic.handleTargetSprites(target, true);
+    }
+
+    /** Bóng ở đích chỉ được hiện khi SeatHandler (nếu có) đã thoả requiredItems. */
+    canShowTargetShadow(): boolean {
+        const seat = this.getComponent(SeatHandler);
+        return !seat || seat.canPlace();
     }
 
     /** Tắt bóng khi thả tay mà chưa ghép được. Bỏ qua nếu bóng là persistent. */
@@ -376,6 +385,8 @@ export class ItemController extends Component implements IPointerHandler {
             }
             ItemManager.instance?.itemArrivedAtTarget();
             ItemManager.instance?.setLastItem(null);
+            // Item này có thể là requiredItem của item khác -> bật bóng persistent vừa được mở khoá
+            ItemManager.instance?.refreshPersistentShadows();
 
             ChangeLight.notifyItemPlaced();
         });

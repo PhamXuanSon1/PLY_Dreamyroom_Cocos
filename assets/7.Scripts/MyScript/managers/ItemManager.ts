@@ -202,8 +202,22 @@ export class ItemManager extends Component {
             const item = node.getComponent(ItemController);
             if (!item || !item.targetPoint || item.isPlaced) continue;
 
-            if (item.persistentShadow) item.showTargetShadow();
+            if (item.persistentShadow && item.canShowTargetShadow()) item.showTargetShadow();
             else item.targetPoint.active = false;
+        }
+    }
+
+    /**
+     * Gọi sau mỗi lần ghép xong 1 item: item có persistentShadow nhưng lúc đầu bị
+     * SeatHandler chặn (requiredItems chưa ghép) giờ đủ điều kiện thì bật bóng.
+     */
+    refreshPersistentShadows(): void {
+        for (const node of this.itemList) {
+            if (!node || !node.isValid) continue;
+            const item = node.getComponent(ItemController);
+            if (!item || !item.persistentShadow || !item.targetPoint || item.isPlaced) continue;
+            if (item.targetPoint.active) continue;               // đã hiện rồi
+            if (item.canShowTargetShadow()) item.showTargetShadow();
         }
     }
 

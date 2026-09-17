@@ -60,14 +60,14 @@ export class UI extends Component {
     firstMove() {
         if(this.first) {
             this.first = false;
-            this.fisrtOn.forEach(node => node.active = true);
-            this.firstOff.forEach(node => node.active = false);
+            this.fisrtOn.forEach(node => { if (node) node.active = true; });
+            this.firstOff.forEach(node => { if (node) node.active = false; });
         }
     }
 
     onLose() {
         if(this.endcard.active || this.winCard.active) return;  
-        this.offEnds.forEach(button => button.active = false);
+        this.offEnds.forEach(button => { if (button) button.active = false; });
         this.offHand();
         this.endcard.active = true;
         this.bindingToStore();       
@@ -77,7 +77,7 @@ export class UI extends Component {
 
     onWin() {
         if(this.endcard.active || this.winCard.active) return; 
-        this.offEnds.forEach(button => button.active = false);
+        this.offEnds.forEach(button => { if (button) button.active = false; });
         this.offHand();
         this.winCard.active = true;
         this.bindingToStore();  
@@ -206,28 +206,36 @@ export class UI extends Component {
         if(this.width / this.height < 1.5) {
             scale = misc.clampf(scale, 0, 1.1); 
             this.portraitNodes.forEach((item) => {
+                if (!item) return;
                 item.active = true;
             });
             this.landscapeNodes.forEach((item) => {
+                if (!item) return;
                 item.active = false;
             });
             this.adaptUIs.forEach((item) => {
+                if (!item) return;
                 item.scale = v3(1, 1, 1);
             });
             this.gameplays.forEach((item) => {
+                if (!item) return;
                 item.scale = v3(1, 1, 1).multiplyScalar(scale);
             })      
         } else {
             this.portraitNodes.forEach((item) => {
+                if (!item) return;
                 item.active = false;
             });
             this.landscapeNodes.forEach((item) => {
+                if (!item) return;
                 item.active = true;
             });
             this.adaptUIs.forEach((item) => {
+                if (!item) return;
                 item.scale = v3(1, 1, 1).multiplyScalar(2);
             });
             this.gameplays.forEach((item) => {
+                if (!item) return;
                 item.scale = v3(1, 1, 1).multiplyScalar(1.1);
             })
         }
@@ -328,7 +336,7 @@ export class UI extends Component {
     start() {
         try {
             if(PlayableSDK.channel == "Google") {
-                this.offButtons.forEach(node => node.active = false);
+                this.offButtons.forEach(node => { if (node) node.active = false; });
             }
         } catch (error) {
 

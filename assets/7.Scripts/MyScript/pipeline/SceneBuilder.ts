@@ -23,6 +23,7 @@ import {
     _decorator, Component, Node, UITransform, Sprite, SpriteFrame, Color, Vec3,
     JsonAsset, resources, CCClass, js, Size, sp, assetManager, Asset, CCObject,
 } from 'cc';
+import { FollowNode } from './FollowNode';
 import { EDITOR } from 'cc/env';
 import { MaterialType } from '../item/ItemController';
 
@@ -39,7 +40,17 @@ interface SpriteJson {
     pivot: [number, number];
     color: [number, number, number, number];
     sortingOrder: number;
+    /** Giá trị sorting layer của Unity (SortingLayer.GetLayerValueFromID). Thiếu = 0. */
+    layerValue?: number;
+    /** AABB world của renderer, đã nhân K: [minX, minY, maxX, maxY]. */
+    bounds?: [number, number, number, number];
     flipX: boolean; flipY: boolean;
+}
+/** Renderer KHÔNG phải SpriteRenderer (Spine/MeshRenderer...) — chỉ cần order để xếp lớp. */
+interface RenderJson {
+    sortingOrder: number;
+    layerValue?: number;
+    bounds?: [number, number, number, number];
 }
 interface SpineJson { skeletonData: string | null; defaultAnim: string | null; skin: string | null; loop: boolean; }
 interface ComponentJson { type: string; fields: Record<string, unknown>; }
@@ -48,8 +59,22 @@ interface NodeJson {
     pos: [number, number, number];
     rot: [number, number, number];
     scale: [number, number, number];
-    sprite?: SpriteJson; spine?: SpineJson;
+    sprite?: SpriteJson; spine?: SpineJson; render?: RenderJson;
     components?: ComponentJson[];
+}
+
+type AABB = [number, number, number, number];
+
+/** 1 nhánh anh em đang được xếp: node gốc + mọi node có order trong nhánh. */
+interface Block {
+    node: Node;
+    sprites: Node[];
+    lo: number;
+    hi: number;
+    origIndex: number;
+}
+interface LayoutStats {
+    dissolved: string[]; pushed: string[]; hoisted: string[]; residual: string[]; cycles: number;
 }
 interface SceneJson {
     meta: { K: number; scene: string; exportRoot: string | null; exportInactive: boolean };
@@ -93,6 +118,24 @@ export class SceneBuilder extends Component {
     @property({ tooltip: 'Sắp xếp siblingIndex theo sortingOrder của Unity' })
     applySorting = true;
 
+    @property({
+        tooltip: 'Chỉ ép đúng thứ tự giữa các sprite THỰC SỰ chồng hình (AABB giao nhau). '
+            + 'Tắt = ép đúng thứ tự cho mọi cặp (sẽ phải tách/hoà tan nhiều node hơn).',
+    })
+    overlapOnly = true;
+
+    @property({
+        tooltip: 'Cho phép hoà tan folder (node không sprite/không component) hoặc đẩy node vào folder khác '
+            + 'khi 2 nhánh anh em có sprite xen kẽ nhau (vd sàn nhà trong Base nằm giữa các Placeholder).',
+    })
+    restructureFolders = true;
+
+    @property({
+        tooltip: 'Cho phép TÁCH sprite con ra khỏi node có sprite/component khi bắt buộc để đúng thứ tự. '
+            + 'Node tách ra được gắn FollowNode để vẫn đi theo cha cũ (transform + active).',
+    })
+    splitEntities = true;
+
     @property({ tooltip: 'In cảnh báo chi tiết ra console' })
     verbose = true;
 
@@ -114,7 +157,15 @@ export class SceneBuilder extends Component {
     /** K của lần build hiện tại — chỉ dùng để tính contentSize từ nativeSize/ppu. */
     private buildK = 100;
     private frames = new Map<string, SpriteFrame>();
+    /** Node chủ (owner) → khoá xếp lớp (layerValue*1e6 + sortingOrder). */
     private orderOf = new Map<Node, number>();
+    /** Node chủ → AABB world (từ JSON hoặc tự tính). */
+    private boundsOf = new Map<Node, AABB>();
+    /** Node là "entity": có sprite/spine/component, bị tham chiếu, hoặc inactive → KHÔNG hoà tan. */
+    private entities = new Set<Node>();
+    private pathOfNode = new Map<Node, string>();
+    /** Node ảnh (con `imageNodeName`) → node chủ. Node ảnh được xếp như 1 khối con mang sprite của chủ. */
+    private ownerOfImage = new Map<Node, Node>();
 
     start() {
         if (!EDITOR && this.buildOnStart) void this.build();
@@ -137,8 +188,9 @@ export class SceneBuilder extends Component {
         const neededKeys = new Set(data.nodes.filter((n) => n.sprite).map((n) => n.sprite!.key));
         await this.loadSpriteFrames(neededKeys);
 
-        for (const n of data.nodes) this.createNode(n);          // pass 1 — cây + sprite
-        if (this.applySorting) this.sortSiblings();              // pass 1.5 — siblingIndex
+        const referenced = SceneBuilder.collectReferencedPaths(data.nodes);
+        for (const n of data.nodes) this.createNode(n, referenced);   // pass 1 — cây + sprite
+        if (this.applySorting) this.layoutRenderOrder();              // pass 1.5 — thứ tự render
         for (const n of data.nodes) this.attachComponents(n);    // pass 2 — component + @node:
         for (const n of data.nodes) {                            // pass 3 — active
             const node = this.nodeMap.get(n.path);
@@ -168,6 +220,26 @@ export class SceneBuilder extends Component {
         this.node.removeAllChildren();
         this.nodeMap.clear();
         this.orderOf.clear();
+        this.boundsOf.clear();
+        this.entities.clear();
+        this.pathOfNode.clear();
+        this.ownerOfImage.clear();
+    }
+
+    /** Mọi path xuất hiện dưới dạng "@node:<path>" trong field component. */
+    private static collectReferencedPaths(nodes: NodeJson[]): Set<string> {
+        const out = new Set<string>();
+        const scan = (v: unknown): void => {
+            if (typeof v === 'string') { if (v.startsWith('@node:')) out.add(v.substring(6)); }
+            else if (Array.isArray(v)) v.forEach(scan);
+            else if (v && typeof v === 'object') Object.values(v as Record<string, unknown>).forEach(scan);
+        };
+        for (const n of nodes) for (const c of n.components ?? []) scan(c.fields);
+        return out;
+    }
+
+    private static orderKey(sortingOrder: number, layerValue?: number): number {
+        return (layerValue ?? 0) * 1_000_000 + sortingOrder;
     }
 
     // ------------------------------------------------------------ nạp SpriteFrame
@@ -321,9 +393,13 @@ export class SceneBuilder extends Component {
      *       ├─ Image            ← UITransform + Sprite (+ flip, color, sortingOrder)
      *       └─ <con khác từ JSON>
      */
-    private createNode(n: NodeJson): void {
+    private createNode(n: NodeJson, referenced: Set<string>): void {
         const name = n.path.substring(n.path.lastIndexOf('/') + 1);
         const node = new Node(name);
+        this.pathOfNode.set(node, n.path);
+        if (n.sprite || n.spine || n.render || n.components?.length || !n.active || referenced.has(n.path)) {
+            this.entities.add(node);
+        }
 
         // ⚠ BẮT BUỘC: new Node() cho ra layer DEFAULT, mà pipeline UI của Cocos
         //   chỉ vẽ node UI_2D -> sprite dựng bằng code sẽ KHÔNG hiện, dù Scene view
@@ -340,6 +416,10 @@ export class SceneBuilder extends Component {
 
         if (n.sprite) this.setupSprite(node, n.sprite);
         if (n.spine) this.setupSpine(node, n.spine);
+        if (n.render && !n.sprite) {
+            this.orderOf.set(node, SceneBuilder.orderKey(n.render.sortingOrder, n.render.layerValue));
+            if (n.render.bounds) this.boundsOf.set(node, n.render.bounds);
+        }
 
         this.nodeMap.set(n.path, node);
     }
@@ -381,8 +461,11 @@ export class SceneBuilder extends Component {
         // Flip đặt ở node ảnh để không lật luôn các node con gameplay của owner.
         if (s.flipX || s.flipY) img.setScale(s.flipX ? -1 : 1, s.flipY ? -1 : 1, 1);
 
-        // sortSiblings() lấy min order đệ quy nên owner tự thừa hưởng order của ảnh.
-        this.orderOf.set(img, s.sortingOrder);
+        // Khoá xếp lớp đặt trên node CHỦ (owner) — layoutRenderOrder() sắp owner, không sắp node ảnh.
+        this.orderOf.set(owner, SceneBuilder.orderKey(s.sortingOrder, s.layerValue));
+        if (s.bounds) this.boundsOf.set(owner, s.bounds);
+        this.ownerOfImage.set(img, owner);
+        this.entities.add(img);   // không bao giờ hoà tan / tách node ảnh
     }
 
     private setupSpine(node: Node, s: SpineJson): void {
@@ -395,23 +478,227 @@ export class SceneBuilder extends Component {
     }
 
     // ------------------------------------------------------------ pass 1.5
-    /** Order thấp = render trước = nằm dưới = siblingIndex nhỏ. */
-    private sortSiblings(): void {
-        const minOrder = (node: Node): number => {
-            let m = this.orderOf.get(node) ?? Number.POSITIVE_INFINITY;
-            for (const c of node.children) m = Math.min(m, minOrder(c));
-            return m;
-        };
-        const walk = (node: Node) => {
-            const kids = [...node.children];
-            if (kids.length > 1) {
-                const keyed = kids.map((c, i) => ({ c, o: minOrder(c), i }));
-                keyed.sort((a, b) => (a.o - b.o) || (a.i - b.i));   // sort ổn định
-                keyed.forEach((e, idx) => e.c.setSiblingIndex(idx));
+    /**
+     * Xếp thứ tự render cho khớp Unity.
+     *
+     * Unity: mọi sprite xếp bằng MỘT dãy sortingOrder toàn cục, không quan tâm cây.
+     * Cocos: vẽ theo thứ tự duyệt cây (cha trước con, anh trước em).
+     * → Hai nhánh anh em có dải order xen kẽ nhau (vd sàn nhà -10050 trong Base nằm giữa
+     *   các Placeholder -10200..-10000) thì KHÔNG sắp siblingIndex kiểu gì cho đúng được.
+     *
+     * Cách làm, cho từng node cha (đệ quy):
+     *   1. Mỗi con = 1 khối. Hai khối "xung đột" khi có cặp sprite chồng hình (overlapOnly)
+     *      theo cả 2 chiều order (A có sprite trên B và cũng có sprite dưới B).
+     *   2. Gỡ xung đột:
+     *      - 2 folder: hoà tan folder ít sprite hơn (con lên làm anh em).
+     *      - entity vs folder: đẩy entity VÀO folder, đệ quy sẽ xếp đúng chỗ trong đó.
+     *      - 2 entity: tách các con gây xung đột ra khỏi entity, gắn FollowNode.
+     *      - không làm được: ghi vào residual, bỏ ràng buộc cặp đó.
+     *   3. Sắp topo theo các ràng buộc còn lại; hoà ties bằng min order rồi thứ tự gốc.
+     */
+    private layoutRenderOrder(): void {
+        this.ensureBounds();
+        const stats: LayoutStats = { dissolved: [], pushed: [], hoisted: [], residual: [], cycles: 0 };
+        this.layoutChildren(this.node, stats);
+
+        const lines: string[] = [];
+        if (stats.dissolved.length) lines.push(`hoà tan ${stats.dissolved.length} folder: ${stats.dissolved.join(', ')}`);
+        if (stats.pushed.length) lines.push(`đẩy ${stats.pushed.length} node vào folder khác:\n      ${stats.pushed.join('\n      ')}`);
+        if (stats.hoisted.length) lines.push(`tách ${stats.hoisted.length} node ra khỏi cha (đã gắn FollowNode):\n      ${stats.hoisted.join('\n      ')}`);
+        if (stats.cycles) lines.push(`${stats.cycles} lần gặp vòng ràng buộc, đã xếp theo min order`);
+        console.log(`[SceneBuilder] Xếp lớp xong${lines.length ? ':\n   ' + lines.join('\n   ') : ' — không phải đổi cấu trúc.'}`);
+        if (stats.residual.length) {
+            console.warn(`[SceneBuilder] ${stats.residual.length} xung đột KHÔNG tự gỡ được (sửa sortingOrder bên Unity hoặc kéo tay):\n   ${stats.residual.join('\n   ')}`);
+        }
+    }
+
+    /** Bảo đảm mọi node có order đều có AABB: thiếu trong JSON thì tự tính từ UITransform. */
+    private ensureBounds(): void {
+        for (const owner of this.orderOf.keys()) {
+            if (this.boundsOf.has(owner)) continue;
+            const ut = owner.getComponent(UITransform);
+            if (!ut) continue;
+            const r = ut.getBoundingBoxToWorld();
+            this.boundsOf.set(owner, [r.xMin, r.yMin, r.xMax, r.yMax]);
+        }
+        // Chưa có node ảnh (JSON cũ, spine...) thì thôi; bounds thiếu = coi như không chồng hình.
+        for (const [img] of this.ownerOfImage) {
+            if (!img.isValid) this.ownerOfImage.delete(img);
+        }
+    }
+
+    private isFolder(n: Node): boolean {
+        return !this.entities.has(n) && !this.orderOf.has(n);
+    }
+
+    private collectOrdered(n: Node, out: Node[]): void {
+        if (this.orderOf.has(n)) out.push(n);
+        for (const c of n.children) this.collectOrdered(c, out);
+    }
+
+    private makeBlock(n: Node, origIndex: number): Block {
+        const sprites: Node[] = [];
+        // Cocos vẽ cha TRƯỚC con → sprite của cha phải được xếp chung hàng với các con
+        // (vd shadow con -10000 phải vẽ trước ảnh cha -9950). Node ảnh đại diện cho sprite của chủ.
+        const owner = this.ownerOfImage.get(n);
+        if (owner) sprites.push(owner); else this.collectOrdered(n, sprites);
+        let lo = Number.POSITIVE_INFINITY, hi = Number.NEGATIVE_INFINITY;
+        for (const s of sprites) { const o = this.orderOf.get(s)!; lo = Math.min(lo, o); hi = Math.max(hi, o); }
+        return { node: n, sprites, lo, hi, origIndex };
+    }
+
+    private overlaps(a: Node, b: Node): boolean {
+        if (!this.overlapOnly) return true;
+        const A = this.boundsOf.get(a), B = this.boundsOf.get(b);
+        if (!A || !B) return false;
+        return A[0] < B[2] && B[0] < A[2] && A[1] < B[3] && B[1] < A[3];
+    }
+
+    /** fwd: A có sprite phải nằm DƯỚI B; bwd: A có sprite phải nằm TRÊN B. */
+    private relation(A: Node[], B: Node[]): { fwd: boolean; bwd: boolean } {
+        let fwd = false, bwd = false;
+        for (const a of A) {
+            const oa = this.orderOf.get(a)!;
+            for (const b of B) {
+                const ob = this.orderOf.get(b)!;
+                if (oa === ob || !this.overlaps(a, b)) continue;
+                if (oa < ob) fwd = true; else bwd = true;
+                if (fwd && bwd) return { fwd, bwd };
             }
-            for (const c of node.children) walk(c);
-        };
-        walk(this.node);
+        }
+        return { fwd, bwd };
+    }
+
+    private layoutChildren(P: Node, stats: LayoutStats): void {
+        if (P.children.length === 0) return;
+        const path = (n: Node): string => this.pathOfNode.get(n) ?? n.name;
+
+        let blocks: Block[] = P.children.map((c, i) => this.makeBlock(c, i));
+        const ignored = new Set<string>();
+        const pairKey = (a: Block, b: Block): string => a.node.uuid < b.node.uuid
+            ? a.node.uuid + '|' + b.node.uuid : b.node.uuid + '|' + a.node.uuid;
+        const dissolvedFolders: Node[] = [];
+
+        for (let iter = 0; iter < 500; iter++) {
+            // 1. tìm cặp xung đột đầu tiên
+            let A: Block | null = null, B: Block | null = null;
+            outer: for (let i = 0; i < blocks.length; i++) {
+                if (!blocks[i].sprites.length) continue;
+                for (let j = i + 1; j < blocks.length; j++) {
+                    if (!blocks[j].sprites.length) continue;
+                    if (blocks[j].lo > blocks[i].hi || blocks[i].lo > blocks[j].hi) continue;   // dải không giao → không thể xung đột
+                    if (ignored.has(pairKey(blocks[i], blocks[j]))) continue;
+                    const r = this.relation(blocks[i].sprites, blocks[j].sprites);
+                    if (r.fwd && r.bwd) { A = blocks[i]; B = blocks[j]; break outer; }
+                }
+            }
+            if (!A || !B) break;
+
+            const fA = this.isFolder(A.node), fB = this.isFolder(B.node);
+
+            if (this.restructureFolders && fA && fB) {
+                // 2a. hoà tan folder ít sprite hơn
+                const F = A.sprites.length <= B.sprites.length ? A : B;
+                const kids = [...F.node.children];
+                for (const k of kids) k.setParent(P, true);
+                blocks = blocks.filter((b) => b !== F);
+                for (const k of kids) blocks.push(this.makeBlock(k, blocks.length));
+                dissolvedFolders.push(F.node);
+                stats.dissolved.push(path(F.node));
+                continue;
+            }
+            if (this.restructureFolders && (fA || fB)) {
+                // 2b. đẩy entity vào folder
+                const F = fA ? A : B, X = fA ? B : A;
+                X.node.setParent(F.node, true);
+                blocks = blocks.filter((b) => b !== X);
+                const idx = blocks.indexOf(F);
+                blocks[idx] = this.makeBlock(F.node, F.origIndex);
+                stats.pushed.push(`${path(X.node)}  →  ${path(F.node)}`);
+                continue;
+            }
+            if (this.splitEntities) {
+                // 2c. tách con gây xung đột ra khỏi entity
+                const tryHoist = (E: Block, O: Block): Node[] => {
+                    const rootSprites = this.orderOf.has(E.node) ? [E.node] : [];
+                    const rootRel = this.relation(rootSprites, O.sprites);
+                    const chosen: Node[] = [];
+                    const fallback: Node[] = [];
+                    for (const c of E.node.children) {
+                        const cs: Node[] = []; this.collectOrdered(c, cs);
+                        if (!cs.length) continue;
+                        const r = this.relation(cs, O.sprites);
+                        if (!r.fwd && !r.bwd) continue;
+                        fallback.push(c);
+                        if ((r.fwd && r.bwd) || (r.fwd && rootRel.bwd) || (r.bwd && rootRel.fwd)) chosen.push(c);
+                    }
+                    return chosen.length ? chosen : fallback;
+                };
+                const first = A.node.children.length >= B.node.children.length ? A : B;
+                const second = first === A ? B : A;
+                let E = first, hoist = tryHoist(first, second);
+                if (!hoist.length) { E = second; hoist = tryHoist(second, first); }
+                if (hoist.length) {
+                    for (const c of hoist) {
+                        const f = c.getComponent(FollowNode) ?? c.addComponent(FollowNode);
+                        f.target = E.node;
+                        f.originalParentPath = path(E.node);
+                        c.setParent(P, true);
+                        f.captureOffset();
+                        blocks.push(this.makeBlock(c, blocks.length));
+                        stats.hoisted.push(`${path(c)}  (theo ${E.node.name})`);
+                    }
+                    const idx = blocks.indexOf(E);
+                    blocks[idx] = this.makeBlock(E.node, E.origIndex);
+                    continue;
+                }
+            }
+            // 2d. bó tay → bỏ ràng buộc cặp này, báo cáo
+            ignored.add(pairKey(A, B));
+            stats.residual.push(`${path(A.node)} [${A.lo}..${A.hi}]  x  ${path(B.node)} [${B.lo}..${B.hi}]`);
+        }
+
+        // 3. sắp topo
+        const n = blocks.length;
+        const after: number[][] = Array.from({ length: n }, () => []);
+        const indeg = new Array<number>(n).fill(0);
+        for (let i = 0; i < n; i++) {
+            for (let j = i + 1; j < n; j++) {
+                const a = blocks[i], b = blocks[j];
+                if (!a.sprites.length || !b.sprites.length) continue;
+                if (b.lo > a.hi || a.lo > b.hi) {
+                    // dải không giao: thứ tự hiển nhiên theo order
+                    if (a.hi < b.lo) { after[i].push(j); indeg[j]++; } else { after[j].push(i); indeg[i]++; }
+                    continue;
+                }
+                if (ignored.has(pairKey(a, b))) continue;
+                const r = this.relation(a.sprites, b.sprites);
+                if (r.fwd && !r.bwd) { after[i].push(j); indeg[j]++; }
+                else if (r.bwd && !r.fwd) { after[j].push(i); indeg[i]++; }
+            }
+        }
+        const done = new Array<boolean>(n).fill(false);
+        const order: number[] = [];
+        const tie = (i: number, j: number): number => (blocks[i].lo - blocks[j].lo) || (blocks[i].origIndex - blocks[j].origIndex);
+        while (order.length < n) {
+            let pick = -1;
+            for (let i = 0; i < n; i++) {
+                if (done[i] || indeg[i] > 0) continue;
+                if (pick < 0 || tie(i, pick) < 0) pick = i;
+            }
+            if (pick < 0) {   // vòng ràng buộc → lấy node min order còn lại
+                stats.cycles++;
+                for (let i = 0; i < n; i++) if (!done[i] && (pick < 0 || tie(i, pick) < 0)) pick = i;
+            }
+            done[pick] = true; order.push(pick);
+            for (const j of after[pick]) indeg[j]--;
+        }
+        order.forEach((bi, si) => blocks[bi].node.setSiblingIndex(si));
+
+        for (const f of dissolvedFolders) if (f.children.length === 0) f.destroy();
+
+        // 4. đệ quy
+        for (const c of [...P.children]) this.layoutChildren(c, stats);
     }
 
     // ------------------------------------------------------------ pass 2

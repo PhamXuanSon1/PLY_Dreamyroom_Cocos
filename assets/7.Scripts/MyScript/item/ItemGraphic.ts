@@ -131,6 +131,12 @@ export class ItemGraphic extends Component {
         this.hiddenTargetSprites.length = 0;
 
         const sprites = targetPoint.getComponentsInChildren(Sprite);
+        // glue Cocos: node "<tên>_cut" (cùng cấp với "<tên>Place", cùng vị trí) là mảnh
+        // đè lên item sau khi ghép. Nó vẽ đè lên Place nên phải tô/ẩn cùng, nếu không
+        // phần bị _cut che vẫn giữ màu gốc -> bóng loang lổ.
+        const cutNode = ItemGraphic.findCutNode(targetPoint);
+        if (cutNode) sprites.push(...cutNode.getComponentsInChildren(Sprite));
+
         for (const sr of sprites) {
             this.hiddenTargetSprites.push(sr);
             if (isShadowEnabled) {
@@ -139,6 +145,15 @@ export class ItemGraphic extends Component {
                 sr.enabled = false;
             }
         }
+    }
+
+    /** Node "<tên>_cut" nằm cùng cha với targetPoint "<tên>Place" (SceneBuilder đặt tên theo quy ước này). */
+    private static findCutNode(targetPoint: Node): Node | null {
+        const parent = targetPoint.parent;
+        if (!parent) return null;
+        const base = targetPoint.name.replace(/Place$/, '');
+        const cut = parent.getChildByName(base + '_cut');
+        return cut && cut !== targetPoint ? cut : null;
     }
 
     /** Unity: RestoreTargetSprites — trả sprite ở đích về màu bình thường. */
