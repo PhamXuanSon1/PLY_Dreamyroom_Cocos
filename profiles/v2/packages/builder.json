@@ -7,7 +7,7 @@
     "polyfills": {
       "asyncFunctions": true
     },
-    "name": "Cocos_DreamyRoom_PLY42",
+    "name": "Cocos_DreamyRoom_PLY43",
     "buildPath": "project://build",
     "outputName": "web-mobile",
     "mainBundleCompressionType": "merge_dep",
@@ -31,10 +31,10 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "9-17-2026 14:11:17 build success in 21 s!",
-        "detailMessage": "[playable-ads-builder]\rBắt đầu đóng gói playable ad cho 1 kênh -> F:\\CocosProject\\PLY_Dreamyroom_Cocos\\Cocos_DreamyRoom_PLY42\r",
+        "message": "9-17-2026 16:00:55 build success in 21 s!",
+        "detailMessage": "[playable-ads-builder]\r[processFiles] 1/1\r",
         "options": {
-          "name": "Cocos_DreamyRoom_PLY42",
+          "name": "Cocos_DreamyRoom_PLY43",
           "server": "",
           "engineModulesConfigKey": "migrationsConfig",
           "platform": "web-mobile",
@@ -93,7 +93,7 @@
             "enable": false
           }
         },
-        "time": "9-17-2026 14:10:55",
+        "time": "9-17-2026 16:00:33",
         "dirty": false
       }
     }

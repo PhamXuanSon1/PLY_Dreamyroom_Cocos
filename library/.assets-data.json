@@ -746,9 +746,7 @@
   },
   "bb3b63d8-6495-4588-bc26-cf7294bd51d3": {
     "url": "db://assets/4.Sounds/ClickBox.ogg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "82a6a74e-d8c0-42ec-b0d0-2e0968abe284": {
@@ -767,16 +765,12 @@
   },
   "eeb67d4d-5ff6-43d7-a04e-d6376625d1e0": {
     "url": "db://assets/4.Sounds/DropMetal.ogg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "ef70624d-667d-4e62-9349-d790b0f2050a": {
     "url": "db://assets/4.Sounds/Glass.ogg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "7e2af722-7b11-4556-a5d6-f0bd3b4ee759": {
@@ -795,16 +789,12 @@
   },
   "64ae03a6-aa86-4177-ba34-9bcf579bfe4d": {
     "url": "db://assets/4.Sounds/PickItem.ogg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "2566a2e9-952c-46ec-b7b5-018e69e45f93": {
     "url": "db://assets/4.Sounds/SmallWood.ogg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5": {
@@ -855,134 +845,6 @@
         "e493c109-ea19-429a-b842-154150079dc7@f9941",
         "7d03220a-9a86-46eb-8cbe-071f12fdb4fa",
         "22231d1e-bb9c-4697-95a9-511b3ce4881f@f9941",
-        "d9a17679-db75-4bbe-8299-b877895d115d@f9941",
-        "614ccf01-f4a7-4997-a7e2-d4762928f942@f9941",
-        "70c7a262-a29b-4818-bb74-56d68aeebd8a@f9941",
-        "1cce27bd-3c96-4f08-b828-1b9fc6d79472@f9941",
-        "6a4eff3f-8fd1-41f6-808b-0e6f5ba48c49@f9941",
-        "56a1dfe5-e98f-4569-a129-93d53e8c39b3@f9941",
-        "b8890e94-0d12-4d19-84e5-6a7e7017299e@f9941",
-        "ae0719f5-6fff-4138-a17a-4faffdb1e610@f9941",
-        "38e11acc-1737-4b2a-8db9-6b0dd5dd952e@f9941",
-        "01f34817-766e-4e5b-8019-a58618850917@f9941",
-        "17a5cdc9-67e8-424e-a3ab-32743a93c783@f9941",
-        "917aef98-548e-48c6-91c3-916e0ce2f02b@f9941",
-        "3c94f88e-4a77-43e3-9c94-f5150a8119e5@f9941",
-        "66419261-042e-4a8e-8181-d80242cf9b7a@f9941",
-        "343a8004-4bd0-4919-b0c1-d45628760ff4@f9941",
-        "37d912eb-9873-4024-808e-d2b211dc1ade@f9941",
-        "6dfba207-6d8d-4c11-a91a-89277b16459a@f9941",
-        "ffdda10d-55b7-4b8e-91a3-4b7eba84c063@f9941",
-        "9ce4befc-4aa6-4b83-af52-d968eb83eb80@f9941",
-        "1386cddb-644a-4653-a688-d0dff2d8d3dc@f9941",
-        "508aa1d9-52f5-4c56-8d32-9f0dc14af2c0@f9941",
-        "83484dbc-6f4f-4e06-a994-a877c958f0bf@f9941",
-        "9c8fec32-5073-4d44-937a-89da84ab25ff@f9941",
-        "ef8abe4d-bd98-4c92-88d2-0c127f455aba@f9941",
-        "01ac5f2d-f267-4dc7-9b06-197e1f8ac589@f9941",
-        "7633c309-d3c5-4ddd-9677-ce662c9fc7bd@f9941",
-        "7d62311b-5e98-4564-8cc9-bdf03545e1b0@f9941",
-        "d5ba2473-a300-4d6e-a029-a6bce361869f@f9941",
-        "6c73518c-7ce8-422b-8ff1-2c752685a185@f9941",
-        "6b256d0d-87b9-43e3-ac7a-c4230d3d29e0@f9941",
-        "0085c249-1bd5-4d92-8938-04d4d3c0b8a8@f9941",
-        "d747c8a5-3691-4392-a6ad-02d37243743b@f9941",
-        "9b7e5759-658b-4d75-ba72-70b109b39341@f9941",
-        "88d7739a-7669-4e35-b798-cda813043907@f9941",
-        "b448373e-be86-4a37-9332-12b775bf1023@f9941",
-        "86547923-6368-452e-ba0b-86b4b11a0b71@f9941",
-        "2af9894a-7649-46f9-86d1-2f7849b905e3@f9941",
-        "bab68295-a6e5-46a9-a3c9-1d13439f34fe@f9941",
-        "fb12ca71-8fe7-492c-8fc5-aa98beb49d52@f9941",
-        "e25bde15-cbc0-473f-87e6-f9274a879c56@f9941",
-        "c04ed82f-aab6-4c93-8245-37a62c106a04@f9941",
-        "ee345d1c-9b7d-4727-aff8-2583047a7db0@f9941",
-        "99ca8fcf-23e6-4342-938d-ca19b0730b8f@f9941",
-        "113d1bcc-438e-4c1d-8689-ffe5eb4a704b@f9941",
-        "6704715c-7df6-451a-b5b7-c2ee0d0b1041@f9941",
-        "6859df3e-db5b-4fca-92ce-a05d3d0130cd@f9941",
-        "6e42c30c-27b8-4eb1-9650-97e3219b8210@f9941",
-        "297603ab-ee50-4654-bae4-808b8ad77a54@f9941",
-        "37ab8bae-8857-45d4-b9b1-1da34400d9af@f9941",
-        "83c2d472-b250-46f7-a31d-edc6161d23ca@f9941",
-        "628f8a7b-c2a0-4931-bd0d-65f039b6f49e@f9941",
-        "fe29ba24-df7e-4dfd-a7ca-fd785dae9d98@f9941",
-        "38fd5ac0-df5a-45ea-8178-d7d5025719a2@f9941",
-        "dc4a24ba-2d0e-495f-a030-a04edc974806@f9941",
-        "86d22ca2-ed0b-4433-a776-1063dd862559@f9941",
-        "2fc1cc37-8841-46cc-a58d-33b785904e12@f9941",
-        "8182e37f-03f9-4f6b-be8b-72184c2a633e@f9941",
-        "cbe735da-27c8-47a6-a865-bb024c9c2457@f9941",
-        "1bc8a8e7-2343-482e-8a4d-e531b6fb071d@f9941",
-        "81399190-24ef-4d8e-be68-a41c22141892@f9941",
-        "cef6b6eb-88ec-4f1b-8a32-29a14e18f546@f9941",
-        "a23f6747-35da-4e31-9a08-df3675836a03@f9941",
-        "26fd7a53-56fe-4aae-9f15-39bf10c8d0cc@f9941",
-        "d13b4d65-58d2-464c-9623-5cc7a00b06f5@f9941",
-        "1c162aee-ca1d-4977-a139-6aa19d2911f6@f9941",
-        "73cacea4-2384-4c4e-9ce1-c79b09c2031a@f9941",
-        "2daeee2d-1e4a-493c-a987-c0d2bd05e0c1@f9941",
-        "ef79cc73-1bf2-4b98-a006-ecaf789378eb@f9941",
-        "4026b32d-2a25-4119-a95f-9b79876586e4@f9941",
-        "d5a8ec72-28dd-4359-ace3-13d891e4a788@f9941",
-        "72e76965-8e69-484a-a3f1-737e73321c95@f9941",
-        "9129a566-635b-4693-9eb1-534059cac994@f9941",
-        "9c7af2aa-e25e-44ef-8eed-233bf96f2e5e@f9941",
-        "842db1ee-3a37-4164-9411-da685b194df0@f9941",
-        "1aac5c5c-950e-4967-a36a-2dd2ac9ad3b1@f9941",
-        "cde65577-2c65-4f89-9e9c-72fddc02c01a@f9941",
-        "cbceae54-34d8-43e6-959b-ba616f28f189@f9941",
-        "abb790ac-e38d-4ddf-8997-a9b7fbbdfed7@f9941",
-        "8ce43907-7cd7-45bf-a732-a750031e24b0@f9941",
-        "3ee73b48-15a4-41b3-bdc7-5b0377d3e6ce@f9941",
-        "057dcd81-288c-41ab-9767-f308a7f527df@f9941",
-        "7f66509c-f004-48e0-bc22-f81d78199e01@f9941",
-        "2d95c5dd-4542-487a-8a1e-dae9a7e27ba7@f9941",
-        "65eb4e40-703d-4621-be62-caa17832dd29@f9941",
-        "d130d90b-3bd1-4d08-96fb-e742d044978d@f9941",
-        "dae9bb24-97b3-45df-91b3-334c32d886d0@f9941",
-        "85474568-2503-4f65-9992-969daa7300d1@f9941",
-        "3bf20fde-95ce-49b6-baa3-10898b75a043@f9941",
-        "cd2c8e1c-eb09-4478-b938-a46c0ad04d09@f9941",
-        "d15e5ace-4446-46c2-bd91-76175d996687@f9941",
-        "15e6bbde-4ae1-46ca-b48b-e2fc55fd1842@f9941",
-        "629553e2-39ae-4fb2-864b-30ca714d114a@f9941",
-        "4ac7e387-f546-4516-9aee-9a72672d2897@f9941",
-        "dbb51ed9-f0ee-49a2-b5fd-f4773f63ff31@f9941",
-        "3a866045-8e70-4cac-aefc-636f1951fff0@f9941",
-        "c5d17046-b116-4088-8725-423f37fef7d7@f9941",
-        "a2433f31-fab3-46ee-aaec-128516a4873c@f9941",
-        "4e99a470-6d55-413f-a049-e520598197f3@f9941",
-        "7acd4fca-3f73-4629-8a59-1003d197384b@f9941",
-        "a6eafff6-54ea-4bc7-bf00-24432b947460@f9941",
-        "3e1cd478-c327-46b3-8766-1ab1d39aef8e@f9941",
-        "09d2dc83-0f93-41ca-9453-eb85ad04eeb5@f9941",
-        "ba1739ed-8aad-4817-b5c8-604880e23814@f9941",
-        "8b654312-d5de-4eca-8f13-c3d2b88beec2@f9941",
-        "12297ba3-a39f-49d5-bfc1-b3375e3e782b@f9941",
-        "85232765-24ca-4270-8fac-a3cce48e3d27@f9941",
-        "cff50ed3-0807-4e1c-99d0-3c7195cc9b4b@f9941",
-        "d1ade73b-744c-4ee4-8f6e-f4408216642f@f9941",
-        "b30f869f-b3f1-4cf3-8a79-cc806690083e@f9941",
-        "7ff940f7-289c-48f5-8448-1caf1b8db8f8@f9941",
-        "648d2540-be96-4b32-95a2-dbd637b255ea@f9941",
-        "bf063985-a340-45ea-bcdd-f19c2b1f4dc0@f9941",
-        "e6db517c-bd21-4907-a1f5-dae18afaf6d5@f9941",
-        "3379a55e-85de-401b-a50b-a12722d64e44@f9941",
-        "bfa25389-9b1c-461c-ae30-2c351a2055ea@f9941",
-        "8f26e703-b23e-40f6-b535-137b16a7053f@f9941",
-        "6c31da26-9a43-4c8c-9101-5746cb94ef01@f9941",
-        "5019e42f-40a4-460f-a816-8f5830f71772@f9941",
-        "56aed187-aee3-4d68-97a8-bb914c15ef9b@f9941",
-        "1f03dec8-b4bb-47cd-bf5a-b16e21550a93@f9941",
-        "be314b59-2ebc-445a-8e34-185a895156e0@f9941",
-        "e947bb6b-2974-45ff-8ed1-21f62a4e2598@f9941",
-        "127125b0-2b96-41cc-9c24-4954736f341b@f9941",
-        "0d1cbced-b210-4c69-806b-7ea1311542aa@f9941",
-        "4736bed0-794f-434b-bc1e-4eec1845aebf@f9941",
-        "a2482ac4-5622-46b3-abb3-216e7130d1d9@f9941",
-        "dddca926-adf0-4960-9ee2-30fda6632738@f9941",
-        "53037b42-f05f-4aa2-a7f8-c84dc1b2196a@f9941",
         "e4e56d93-c7ea-4a00-85ab-fb4a122fcc85@f9941",
         "74212016-0422-4fba-937b-0a4cd4ca07d6@f9941",
         "e1f93444-e8a5-4430-83aa-4521751a66ce@f9941",
@@ -1029,11 +891,6 @@
         "2ed727b6-62a5-4d57-b602-4988776d9020@f9941",
         "f2a85f53-43b5-47d7-baaf-2e19bcddae0c@f9941",
         "b86ec4e8-b2cd-4240-a6e3-62e075537d19@f9941",
-        "30f3282b-764d-4352-980e-6f7ba7da2297@f9941",
-        "d2da4ed0-c475-4f4b-811d-57e2fd7114d3@f9941",
-        "62e4565c-bbaf-4e86-81f3-e10a6c208904@f9941",
-        "94635a83-84a4-45a3-8365-6d809477369a@f9941",
-        "ac55142e-7a4b-41ff-a18a-817827507cc3@f9941",
         "6aced2eb-4fc4-4d49-a0c2-9206bdb834d1@f9941",
         "e5f5aff8-ac39-46c2-976f-9500019b3e23@f9941",
         "27f4613a-c4b3-429e-857f-7f2cb8fe76e5",
@@ -1042,22 +899,22 @@
         "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941",
         "e1fc69b2-618c-4694-9672-0920e014cfe4",
         "97cb1ca5-d4ae-47d5-bc33-14c1b2b53b0c",
-        "bb3b63d8-6495-4588-bc26-cf7294bd51d3",
-        "64ae03a6-aa86-4177-ba34-9bcf579bfe4d",
+        "02842ae9-80e4-4a46-8329-dec48c04553b",
+        "cf290993-bd80-4b5d-9467-489786c65616",
         "a88a5c3e-fe57-4d78-ba1e-73e9803bcce9",
-        "2566a2e9-952c-46ec-b7b5-018e69e45f93",
+        "363f6949-5969-4b33-85b6-42cf5b39704b",
         "82a6a74e-d8c0-42ec-b0d0-2e0968abe284",
-        "eeb67d4d-5ff6-43d7-a04e-d6376625d1e0",
-        "ef70624d-667d-4e62-9349-d790b0f2050a",
-        "7e184145-5d25-4a74-b051-6690fa93e9e7",
+        "5b757b2e-08e5-4f99-9d72-ab66651e8cb1",
+        "6a23e02d-9056-4d9a-957a-15dc635c17a1",
+        "5ae6d90a-6fb6-4eee-9b25-8cbe0af402dc",
         "9d82fea5-c5e1-4838-a10e-0fbefa44356c",
         "77303dd5-d31c-4d39-a237-0b55ec90c38b",
         "1f1fe5a1-c894-424a-8a73-90ab623eca26",
-        "c08ddc88-368c-4236-8649-97d3eef4b10e",
+        "ffb6a91e-943b-4118-9561-0c6feb8b9b45",
         "7e2af722-7b11-4556-a5d6-f0bd3b4ee759",
         "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5",
         "ba86cebe-4d38-4443-bdd2-0f3817a8a500",
-        "ace29180-3ef9-4c50-8e6e-97b8c870efd7",
+        "ff8b42ea-325d-4827-a60e-5061f68ee560",
         "63d1baa4-820b-4681-950c-f60679d90469"
       ],
       "dependScripts": [
@@ -17409,9 +17266,7 @@
   },
   "7e184145-5d25-4a74-b051-6690fa93e9e7": {
     "url": "db://assets/4.Sounds/DropOnFloor.ogg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "9d82fea5-c5e1-4838-a10e-0fbefa44356c": {
@@ -17430,9 +17285,7 @@
   },
   "c08ddc88-368c-4236-8649-97d3eef4b10e": {
     "url": "db://assets/4.Sounds/BookOpen.ogg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "9219fece-fc89-4206-bf47-92fef4bfcae2": {
@@ -22225,9 +22078,7 @@
   },
   "ace29180-3ef9-4c50-8e6e-97b8c870efd7": {
     "url": "db://assets/4.Sounds/Curtain Open v1.wav",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "985c7133-edc6-4535-afd8-3b826b0667d1": {
@@ -22271,6 +22122,62 @@
       "depends": [
         "22231d1e-bb9c-4697-95a9-511b3ce4881f@6c48a"
       ]
+    },
+    "versionCode": 1
+  },
+  "ffb6a91e-943b-4118-9561-0c6feb8b9b45": {
+    "url": "db://assets/4.Sounds/BookOpen.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "02842ae9-80e4-4a46-8329-dec48c04553b": {
+    "url": "db://assets/4.Sounds/ClickBox.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "ff8b42ea-325d-4827-a60e-5061f68ee560": {
+    "url": "db://assets/4.Sounds/Curtain Open v1.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "5b757b2e-08e5-4f99-9d72-ab66651e8cb1": {
+    "url": "db://assets/4.Sounds/DropMetal.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "5ae6d90a-6fb6-4eee-9b25-8cbe0af402dc": {
+    "url": "db://assets/4.Sounds/DropOnFloor.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "6a23e02d-9056-4d9a-957a-15dc635c17a1": {
+    "url": "db://assets/4.Sounds/Glass.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "cf290993-bd80-4b5d-9467-489786c65616": {
+    "url": "db://assets/4.Sounds/PickItem.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "363f6949-5969-4b33-85b6-42cf5b39704b": {
+    "url": "db://assets/4.Sounds/SmallWood.mp3",
+    "value": {
+      "depends": []
     },
     "versionCode": 1
   }
