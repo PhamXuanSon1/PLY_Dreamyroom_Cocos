@@ -1050,11 +1050,8 @@
         "b43dca5d-d061-4f21-923c-fd57821987dd@f9941",
         "1f8b8548-e69c-4e3e-89e7-5134e23ed185@f9941",
         "ad0ef464-01c9-43d2-bed4-7911fdd1d9ac@f9941",
-        "b1a951f5-16ad-477e-b4b6-3221ff78334d@f9941",
-        "57e082f5-0368-4146-a3ad-8b30930a1515@f9941",
-        "9cca27b0-e0e0-4cab-8f13-5694690a9011@f9941",
-        "eb118630-2331-4a03-aaa5-d9a5e5cf493f@f9941",
         "50936e81-16bc-4477-96e3-fc6977259d7e@f9941",
+        "eb118630-2331-4a03-aaa5-d9a5e5cf493f@f9941",
         "3636ffc8-6e12-425a-b916-e9fd673ec078",
         "a88d3345-f98a-41cf-9490-e39152ccb566",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
@@ -1088,6 +1085,9 @@
         "5e407573-3124-45d2-9050-3c44d0cf0470",
         "545bdd38-875f-416b-abc9-b06befd3fa89",
         "4f5fb12f-49c9-4c2b-bd72-f5e96090433c",
+        "ffc0c2df-0287-40ef-8beb-7f4381ae1550",
+        "d558005a-8f0f-441f-95a3-dfdeb2a6e567",
+        "5340f45e-f6ea-46c6-841b-0215c9469592",
         "9823c617-75c7-4125-915f-7b7e2e3428d4",
         "8a38c844-8233-4ba7-95a7-565bb74d651f",
         "7ced8a7d-fd09-44e8-b1af-b41522ee13b2",
@@ -27343,6 +27343,38 @@
     "value": {
       "depends": [
         "e472a007-131d-42dc-904b-e7398349d809@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2608befc-4418-42d4-b8a7-2aa69d85b73f": {
+    "url": "db://assets/1.Animations/FlowerSway.anim",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 2
+  },
+  "ea50afb1-9ca8-4a70-a4fe-b6d711a87962": {
+    "url": "db://assets/3.Sprites/sprites/BG.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "ea50afb1-9ca8-4a70-a4fe-b6d711a87962@6c48a": {
+    "url": "db://assets/3.Sprites/sprites/BG.png@6c48a",
+    "value": {
+      "depends": [
+        "ea50afb1-9ca8-4a70-a4fe-b6d711a87962"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ea50afb1-9ca8-4a70-a4fe-b6d711a87962@f9941": {
+    "url": "db://assets/3.Sprites/sprites/BG.png@f9941",
+    "value": {
+      "depends": [
+        "ea50afb1-9ca8-4a70-a4fe-b6d711a87962@6c48a"
       ]
     },
     "versionCode": 1

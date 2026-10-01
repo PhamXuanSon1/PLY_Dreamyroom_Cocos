@@ -664,7 +664,7 @@
       "uuid": "91ce8cc5-cd6c-4470-a59f-ad70a442a383"
     },
     "1.Animations": {
-      "time": 1789548737187.4373,
+      "time": 1790829670197.8354,
       "uuid": "a73f4df5-79ec-41e0-a5d2-5fb1af583d4a"
     },
     "2.Fonts": {
@@ -824,7 +824,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1790828225301.907,
+      "time": 1790829187468.895,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -1531,7 +1531,7 @@
       "time": 1790827540712.1357
     },
     "3.Sprites\\sprites": {
-      "time": 1790827542401.1377,
+      "time": 1790829684060.921,
       "uuid": "16a8fe95-4024-422f-9398-5c6aa06be9ee"
     },
     "3.Sprites\\sprites\\bachtuoc.png.meta": {
@@ -3066,6 +3066,20 @@
     "3.Sprites\\Chung\\fc_anhsangcuaso4.png": {
       "time": 1776244629700.3474,
       "uuid": "e472a007-131d-42dc-904b-e7398349d809"
+    },
+    "1.Animations\\FlowerSway.anim.meta": {
+      "time": 1790829670209.3523
+    },
+    "1.Animations\\FlowerSway.anim": {
+      "time": 1790830245755.899,
+      "uuid": "2608befc-4418-42d4-b8a7-2aa69d85b73f"
+    },
+    "3.Sprites\\sprites\\BG.png.meta": {
+      "time": 1790829684084.6506
+    },
+    "3.Sprites\\sprites\\BG.png": {
+      "time": 1784174432625.4932,
+      "uuid": "ea50afb1-9ca8-4a70-a4fe-b6d711a87962"
     }
   },
   "missing": {}
