@@ -41,10 +41,17 @@ export class UIManager extends Component implements IPointerHandler {
     @property({ tooltip: 'Mẫu số — tổng số item. Start() sẽ lấy từ ItemManager.itemList.' })
     mauSo = 12;
 
+    @property({ tooltip: 'Số item ghép xong thì chuyển sang End Game (chạm đâu cũng mở Store). 0 = phải ghép hết tất cả item.' })
+    itemsToEndGame = 0;
+
+    @property({ tooltip: 'Bật: hết Auto End After Seconds (tính từ click Box đầu tiên) mà chưa ghép xong thì tự ép ra Store. Tắt: không tự ép theo thời gian.' })
+    useAutoEnd = false;
+
     @property({
         tooltip: 'Sau N giây kể từ lần CLICK ĐẦU TIÊN vào Box (không đếm từ lúc Start) mà CHƯA ghép đủ item, '
             + 'tự ép chuyển sang chế độ End Game (giống hệt lúc thắng: chạm đâu cũng mở Store) — mặc định 60s = 1 phút. '
-            + '0 = tắt, không tự ép theo thời gian.'
+            + 'Chỉ có tác dụng khi bật Use Auto End.',
+        visible(this: UIManager) { return this.useAutoEnd; },
     })
     autoEndAfterSeconds = 60;
 
@@ -109,7 +116,7 @@ export class UIManager extends Component implements IPointerHandler {
     startAutoEndTimer(): void {
         if (this.autoEndTimerStarted || this.isGameEnded) return;
         this.autoEndTimerStarted = true;
-        if (this.autoEndAfterSeconds > 0) {
+        if (this.useAutoEnd && this.autoEndAfterSeconds > 0) {
             this.scheduleOnce(() => this.forceEndGame(), this.autoEndAfterSeconds);
         }
     }
@@ -144,7 +151,8 @@ export class UIManager extends Component implements IPointerHandler {
     private checkEndGame(): void {
         if (this.isGameEnded) return;
 
-        if (this.tuSo >= this.mauSo) {
+        const need = this.itemsToEndGame > 0 ? Math.min(this.itemsToEndGame, this.mauSo) : this.mauSo;
+        if (this.tuSo >= need) {
             this.activateEndGame();
         }
     }

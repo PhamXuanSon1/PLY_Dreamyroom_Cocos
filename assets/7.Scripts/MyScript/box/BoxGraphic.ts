@@ -35,6 +35,9 @@ export class BoxGraphic extends Component {
     @property({ tooltip: '2. Anim mở hộp lần đầu tiên khi click (1 lần)' })
     animFirstOpen = '2-OPEN';
 
+    @property({ tooltip: 'Tốc độ chạy anim First Open. 1 = bình thường, 2 = nhanh gấp đôi, 0.5 = chậm một nửa.', min: 0.01 })
+    firstOpenSpeed = 1;
+
     @property({ tooltip: '3. Anim mở chờ các click tiếp theo (Loop)' })
     animOpenedLoop = '3-OPEN-loop-break';
 
@@ -72,7 +75,8 @@ export class BoxGraphic extends Component {
         this.currentState = BoxState.FirstOpen;
         this.resolveSkeletonComponent();
         if (!this.boxSkeleton) return;
-        this.boxSkeleton.setAnimation(0, this.animFirstOpen, false);
+        const entry = this.boxSkeleton.setAnimation(0, this.animFirstOpen, false);
+        if (entry) entry.timeScale = this.firstOpenSpeed;
         this.boxSkeleton.addAnimation(0, this.animOpenedLoop, true, 0);
     }
 

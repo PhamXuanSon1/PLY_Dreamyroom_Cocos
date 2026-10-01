@@ -7,7 +7,7 @@
     "polyfills": {
       "asyncFunctions": true
     },
-    "name": "Cocos_DreamyRoom_PLY43",
+    "name": "Cocos_DreamyRoom_PLY36",
     "buildPath": "project://build",
     "outputName": "web-mobile",
     "mainBundleCompressionType": "merge_dep",
@@ -94,6 +94,77 @@
           }
         },
         "time": "9-17-2026 16:00:33",
+        "dirty": false
+      },
+      "1790848056084": {
+        "type": "build",
+        "id": "1790848056084",
+        "progress": 0.44545454545454544,
+        "state": "processing",
+        "stage": "build",
+        "message": "web-mobile:(onBeforeCopyBuildTemplate) in 198 ms ✓",
+        "detailMessage": "// ---- build task cocos-service：onAfterCompressSettings ----\r",
+        "options": {
+          "name": "Cocos_DreamyRoom_PLY36",
+          "server": "",
+          "engineModulesConfigKey": "migrationsConfig",
+          "platform": "web-mobile",
+          "buildPath": "project://build",
+          "debug": false,
+          "buildMode": "normal",
+          "mangleProperties": false,
+          "md5Cache": false,
+          "skipCompressTexture": false,
+          "sourceMaps": false,
+          "overwriteProjectSettings": {
+            "includeModules": {
+              "gfx-webgl2": "on",
+              "physics": "inherit-project-setting",
+              "physics-2d": "inherit-project-setting"
+            },
+            "macroConfig": {
+              "cleanupImageCache": "inherit-project-setting"
+            }
+          },
+          "nativeCodeBundleMode": "both",
+          "polyfills": {
+            "asyncFunctions": true
+          },
+          "experimentalEraseModules": false,
+          "startSceneAssetBundle": false,
+          "bundleConfigs": [],
+          "inlineEnum": true,
+          "useBuiltinServer": false,
+          "md5CacheOptions": {
+            "excludes": [],
+            "includes": [],
+            "replaceOnly": [],
+            "handleTemplateMd5Link": true
+          },
+          "mainBundleIsRemote": false,
+          "mainBundleCompressionType": "merge_dep",
+          "useSplashScreen": true,
+          "bundleCommonChunk": false,
+          "packAutoAtlas": true,
+          "startScene": "37150f18-4c52-4f26-bdc5-00b4308270f1",
+          "outputName": "web-mobile-001",
+          "taskName": "web-mobile-001",
+          "scenes": [
+            {
+              "url": "db://assets/6.Scenes/PlayScene.scene",
+              "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
+            }
+          ],
+          "wasmCompressionMode": false,
+          "binGroupConfig": {
+            "threshold": 16,
+            "enable": false
+          },
+          "packages": {},
+          "__version__": "1.3.9",
+          "logDest": "project://temp/builder/log/web-mobile10-1-2026 16-47.log"
+        },
+        "time": "10-1-2026 16:47:36",
         "dirty": false
       }
     }

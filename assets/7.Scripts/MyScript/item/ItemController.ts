@@ -55,6 +55,9 @@ export enum MaterialType {
     Rem = 26,
     ClothesDrop = 27,
     Decor = 28,
+    Sat1 = 29,
+    Sat2 = 30,
+    Computer = 31,
 }
 Enum(MaterialType);
 

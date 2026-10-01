@@ -33,10 +33,13 @@ export enum FxType {
     ComCop = 24,
     Rem = 25,
     ClothesDrop = 26,
+    Sat1 = 27,
+    Sat2 = 28,
+    Computer = 29,
 }
 Enum(FxType);
 
-const FX_TYPE_COUNT = 27;
+const FX_TYPE_COUNT = 30;
 
 /**
  * Cau hinh du lieu am thanh.
@@ -140,6 +143,15 @@ class FxAudio {
 
     @property(SoundData)
     clothesDrop: SoundData = new SoundData();
+
+    @property(SoundData)
+    sat1: SoundData = new SoundData();
+
+    @property(SoundData)
+    sat2: SoundData = new SoundData();
+
+    @property(SoundData)
+    computer: SoundData = new SoundData();
 }
 
 /**
@@ -410,6 +422,9 @@ export class Ply_SoundManager extends Ply_Singleton {
             case FxType.ComCop: return this.fxAudio.comCop;
             case FxType.Rem: return this.fxAudio.rem;
             case FxType.ClothesDrop: return this.fxAudio.clothesDrop;
+            case FxType.Sat1: return this.fxAudio.sat1;
+            case FxType.Sat2: return this.fxAudio.sat2;
+            case FxType.Computer: return this.fxAudio.computer;
             default: return null;
         }
     }

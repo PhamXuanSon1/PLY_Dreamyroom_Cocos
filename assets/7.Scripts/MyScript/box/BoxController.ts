@@ -44,6 +44,9 @@ export class BoxController extends Component implements IPointerHandler {
     @property({ tooltip: 'Đã xong lượt click tutorial mở hộp đầu tiên chưa.' })
     finishedTutorial = false;
 
+    @property({ tooltip: 'Click Box lần đầu: chờ bao nhiêu giây (tính từ lúc click) thì item đầu tiên bay ra. 0 = bay ra ngay.', min: 0 })
+    firstItemDelay = 1;
+
     // ========================================== THÔNG SỐ NHẢY ITEM (DOJUMP)
     @property({ tooltip: 'Độ cao cực đại của đường bay Parabol (pixel).' })
     jumpHeight = 150;
@@ -140,7 +143,8 @@ export class BoxController extends Component implements IPointerHandler {
         if (!this.finishedTutorial) {
             this.boxGraphic?.playFirstOpen();
 
-            TweenUtil.delayedCall(this, 1, () => this.spawnItem());
+            if (this.firstItemDelay > 0) TweenUtil.delayedCall(this, this.firstItemDelay, () => this.spawnItem());
+            else this.spawnItem();
 
             if (this.MoveAfterIntroPosOfBox) {
                 TweenUtil.moveTo(this.node, this.MoveAfterIntroPosOfBox.worldPosition, this.moveAfterIntroDuration, 'linear');

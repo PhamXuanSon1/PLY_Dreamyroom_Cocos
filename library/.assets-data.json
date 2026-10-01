@@ -838,13 +838,14 @@
         "58291885-390c-4610-847d-03703733bcbc",
         "09a52473-597d-4bac-b4f4-3e83d63d8c5e",
         "089a1f34-0792-44c3-954a-8ab671aefec5@f9941",
+        "43451b8a-77f6-47cc-8b77-4338c5656fd2",
         "ac9175b9-91cc-46e2-a155-9115434bc1da@f9941",
         "f3f026d0-2801-4bb2-9b57-96344b2d4676@f9941",
         "e493c109-ea19-429a-b842-154150079dc7@f9941",
         "7d03220a-9a86-46eb-8cbe-071f12fdb4fa",
-        "43451b8a-77f6-47cc-8b77-4338c5656fd2",
         "c62401c6-fc30-4167-b273-07de9fe78de3",
-        "ea50afb1-9ca8-4a70-a4fe-b6d711a87962@f9941",
+        "c1e78636-c2f1-4238-9b1d-d004c501de8d@f9941",
+        "1dd801c2-123d-4c47-9705-daf7ea7720ba@f9941",
         "a35a3bf1-726d-4d7e-9a2a-71334ee79d97@f9941",
         "d69f93a0-4909-49a7-b481-e2c5de201f88@f9941",
         "58123430-9205-426c-a69d-d24490efea37@f9941",
@@ -1036,13 +1037,11 @@
         "50936e81-16bc-4477-96e3-fc6977259d7e@f9941",
         "eb118630-2331-4a03-aaa5-d9a5e5cf493f@f9941",
         "85312b50-a475-4439-b95a-3f9586523f6d@f9941",
-        "3636ffc8-6e12-425a-b916-e9fd673ec078",
         "a88d3345-f98a-41cf-9490-e39152ccb566",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
         "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941",
-        "27f4613a-c4b3-429e-857f-7f2cb8fe76e5",
         "e1fc69b2-618c-4694-9672-0920e014cfe4",
-        "97cb1ca5-d4ae-47d5-bc33-14c1b2b53b0c",
+        "20f60589-d35c-4248-8b6b-9f230f3337e2",
         "02842ae9-80e4-4a46-8329-dec48c04553b",
         "cf290993-bd80-4b5d-9467-489786c65616",
         "a88a5c3e-fe57-4d78-ba1e-73e9803bcce9",
@@ -1052,14 +1051,17 @@
         "6a23e02d-9056-4d9a-957a-15dc635c17a1",
         "5ae6d90a-6fb6-4eee-9b25-8cbe0af402dc",
         "9d82fea5-c5e1-4838-a10e-0fbefa44356c",
-        "77303dd5-d31c-4d39-a237-0b55ec90c38b",
+        "c7c83e84-73b0-4437-a9fb-6ba887578fad",
         "1f1fe5a1-c894-424a-8a73-90ab623eca26",
         "ffb6a91e-943b-4118-9561-0c6feb8b9b45",
         "7e2af722-7b11-4556-a5d6-f0bd3b4ee759",
         "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5",
         "ba86cebe-4d38-4443-bdd2-0f3817a8a500",
         "ff8b42ea-325d-4827-a60e-5061f68ee560",
-        "63d1baa4-820b-4681-950c-f60679d90469"
+        "63d1baa4-820b-4681-950c-f60679d90469",
+        "4d9fa55f-8729-40e1-a387-a7ca9cbc2a1e",
+        "e21c2e91-e007-4bb4-82e7-fa885a0b7f66",
+        "36f9559d-0317-42ef-8986-bb3db27ef31c"
       ],
       "dependScripts": [
         "14a54ca0-e12a-490a-948a-754db1575003",
@@ -1072,6 +1074,7 @@
         "ffc0c2df-0287-40ef-8beb-7f4381ae1550",
         "d558005a-8f0f-441f-95a3-dfdeb2a6e567",
         "5340f45e-f6ea-46c6-841b-0215c9469592",
+        "c785373b-9232-4d90-a7b8-dd120081b0eb",
         "9823c617-75c7-4125-915f-7b7e2e3428d4",
         "8a38c844-8233-4ba7-95a7-565bb74d651f",
         "7ced8a7d-fd09-44e8-b1af-b41522ee13b2",
@@ -21955,9 +21958,7 @@
   },
   "3636ffc8-6e12-425a-b916-e9fd673ec078": {
     "url": "db://assets/3.Sprites/Level1279_Scale_Ply36.json",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "16a8fe95-4024-422f-9398-5c6aa06be9ee": {
@@ -27307,9 +27308,7 @@
   },
   "e472a007-131d-42dc-904b-e7398349d809": {
     "url": "db://assets/3.Sprites/Chung/fc_anhsangcuaso4.png",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "e472a007-131d-42dc-904b-e7398349d809@6c48a": {
@@ -27407,6 +27406,106 @@
       "depends": [
         "a51fc4ae-2e0a-4aa3-9f71-5c1dcbe16da4@6c48a"
       ]
+    },
+    "versionCode": 1
+  },
+  "20f60589-d35c-4248-8b6b-9f230f3337e2": {
+    "url": "db://assets/4.Sounds/BGM/snaptikvn_7474234972652555538 (mp3cut.net).mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "1dd801c2-123d-4c47-9705-daf7ea7720ba": {
+    "url": "db://assets/3.Sprites/Chung/photo_2026-10-01_16-09-18.jpg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "1dd801c2-123d-4c47-9705-daf7ea7720ba@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/photo_2026-10-01_16-09-18.jpg@6c48a",
+    "value": {
+      "depends": [
+        "1dd801c2-123d-4c47-9705-daf7ea7720ba"
+      ]
+    },
+    "versionCode": 1
+  },
+  "1dd801c2-123d-4c47-9705-daf7ea7720ba@f9941": {
+    "url": "db://assets/3.Sprites/Chung/photo_2026-10-01_16-09-18.jpg@f9941",
+    "value": {
+      "depends": [
+        "1dd801c2-123d-4c47-9705-daf7ea7720ba@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "fccba576-43fe-4e8e-a344-536bd4bda55b": {
+    "url": "db://assets/4.Sounds/OBJECT_METAL_SHELL_Storage_Place_Table_Soft_03.wav",
+    "value": {},
+    "versionCode": 1
+  },
+  "6d338218-d596-4ba5-ad9d-801928ab6367": {
+    "url": "db://assets/4.Sounds/MetalObjectSetDown_BW.9258.wav",
+    "value": {},
+    "versionCode": 1
+  },
+  "4d9fa55f-8729-40e1-a387-a7ca9cbc2a1e": {
+    "url": "db://assets/4.Sounds/MetalObjectSetDown_BW.9258.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "e21c2e91-e007-4bb4-82e7-fa885a0b7f66": {
+    "url": "db://assets/4.Sounds/OBJECT_METAL_SHELL_Storage_Place_Table_Soft_03.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "c1e78636-c2f1-4238-9b1d-d004c501de8d": {
+    "url": "db://assets/3.Sprites/Chung/flower-icon-free-vector (1).png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "c1e78636-c2f1-4238-9b1d-d004c501de8d@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/flower-icon-free-vector (1).png@6c48a",
+    "value": {
+      "depends": [
+        "c1e78636-c2f1-4238-9b1d-d004c501de8d"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c1e78636-c2f1-4238-9b1d-d004c501de8d@f9941": {
+    "url": "db://assets/3.Sprites/Chung/flower-icon-free-vector (1).png@f9941",
+    "value": {
+      "depends": [
+        "c1e78636-c2f1-4238-9b1d-d004c501de8d@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "36f9559d-0317-42ef-8986-bb3db27ef31c": {
+    "url": "db://assets/4.Sounds/1001.MP3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f2b60d2e-97c4-4614-8c1e-67179a6868f9": {
+    "url": "db://assets/4.Sounds/1001(1).MP3",
+    "value": {},
+    "versionCode": 1
+  },
+  "c7c83e84-73b0-4437-a9fb-6ba887578fad": {
+    "url": "db://assets/4.Sounds/1001(2).MP3",
+    "value": {
+      "depends": []
     },
     "versionCode": 1
   }

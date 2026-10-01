@@ -7,7 +7,7 @@
       },
       "buildPath": "project://build",
       "outputName": "web-mobile",
-      "name": "Cocos_DreamyRoom_PLY43",
+      "name": "Cocos_DreamyRoom_PLY36",
       "mainBundleCompressionType": "merge_dep",
       "platform": "web-mobile",
       "scenes": [
@@ -66,6 +66,12 @@
         "__version__": "1.0.1"
       },
       "1787297348777": {
+        "useWebGPU": false,
+        "orientation": "auto",
+        "embedWebDebugger": false,
+        "__version__": "1.0.1"
+      },
+      "1790848056084": {
         "useWebGPU": false,
         "orientation": "auto",
         "embedWebDebugger": false,
