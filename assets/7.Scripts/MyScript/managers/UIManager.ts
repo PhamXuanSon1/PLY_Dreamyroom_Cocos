@@ -60,9 +60,6 @@ export class UIManager extends Component implements IPointerHandler {
     @property({ type: Node, tooltip: 'Canvas màn hình thắng.' })
     EndUICanvas: Node | null = null;
 
-    @property({ tooltip: 'URL store mở khi bấm CTA. Thay cho Playable.InstallFullGame().' })
-    storeUrl = '';
-
     @property({ type: Node, tooltip: 'Node hoặc Component GameController để gọi redirectToStore().' })
     gameController: Node | GameController | null = null;
 
@@ -182,28 +179,14 @@ export class UIManager extends Component implements IPointerHandler {
     }
 
     gotoStore(): void {
-        console.log("Test: goToStore");
-        if (this.gameController) {
-            if (this.gameController instanceof GameController) {
-                this.gameController.redirectToStore();
+        // game controller . redirectToStore
+        if (this.gameController instanceof Node) {
+            const gc = this.gameController.getComponent(GameController);
+            if (gc) {
+                gc.redirectToStore();
                 return;
-            } else if (this.gameController instanceof Node) {
-                const gc = this.gameController.getComponent(GameController);
-                if (gc) {
-                    gc.redirectToStore();
-                    return;
-                }
-            } else if ((this.gameController as any).redirectToStore) {
-                (this.gameController as any).redirectToStore();
-                return;
-            }
-        }
-
-        const gc = this.node.scene?.getComponentInChildren(GameController);
-        if (gc) {
-            gc.redirectToStore();
-        } else {
-            console.warn("[UIManager] Không tìm thấy GameController để redirectToStore!");
+            }   
         }
     }
 }
+

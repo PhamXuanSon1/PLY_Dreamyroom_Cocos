@@ -31,10 +31,34 @@ export class FollowNode extends Component {
     @property({ visible: false }) private offset: Mat4 = new Mat4();
     @property({ visible: false }) private hasOffset = false;
 
+    /**
+     * Ẩn renderer dù target đang active — dùng khi target chỉ đang hiện dạng BÓNG lúc kéo item
+     * (ItemController.showTargetShadow); snap xong mới bỏ ẩn. Không serialize.
+     */
+    suppressed = false;
+
+    private static readonly all = new Set<FollowNode>();
+
     private static readonly tmpM = new Mat4();
     private static readonly tmpP = new Vec3();
     private static readonly tmpR = new Quat();
     private static readonly tmpS = new Vec3();
+
+    /** Bật/tắt suppressed cho mọi FollowNode có target là `root` hoặc con cháu của `root`. */
+    static setSuppressedFor(root: Node, value: boolean): void {
+        for (const f of FollowNode.all) {
+            const t = f.target;
+            if (t && t.isValid && (t === root || t.isChildOf(root))) f.suppressed = value;
+        }
+    }
+
+    onLoad(): void {
+        FollowNode.all.add(this);
+    }
+
+    onDestroy(): void {
+        FollowNode.all.delete(this);
+    }
 
     /** Gọi ngay sau khi setParent để chụp offset hiện tại so với target. */
     captureOffset(): void {
@@ -56,7 +80,7 @@ export class FollowNode extends Component {
         this.node.setWorldScale(FollowNode.tmpS);
 
         if (this.followActive) {
-            const on = t.activeInHierarchy;
+            const on = t.activeInHierarchy && !this.suppressed;
             for (const r of this.node.getComponentsInChildren(UIRenderer)) {
                 if (r.enabled !== on) r.enabled = on;
             }

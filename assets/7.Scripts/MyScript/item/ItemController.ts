@@ -20,6 +20,7 @@ import { ObjectPool, PoolType } from '../core/ObjectPool';
 import { BlinkEffect } from '../effects/BlinkEffect';
 import { TweenUtil } from '../core/TweenUtil';
 import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
+import { FollowNode } from '../pipeline/FollowNode';
 
 const { ccclass, property } = _decorator;
 
@@ -239,6 +240,8 @@ export class ItemController extends Component implements IPointerHandler {
 
         target.active = true;
         this.itemGraphic.handleTargetSprites(target, true);
+        // Node tách ra theo target (FollowNode, vd cuaso_top) không được hiện khi target chỉ là bóng
+        FollowNode.setSuppressedFor(target, true);
     }
 
     /** Bóng ở đích chỉ được hiện khi SeatHandler (nếu có) đã thoả requiredItems. */
@@ -256,6 +259,7 @@ export class ItemController extends Component implements IPointerHandler {
         // trả sprite về màu gốc trước rồi mới ẩn node, để lần sau bật lại sạch sẽ
         this.itemGraphic.restoreTargetSprites();
         target.active = false;
+        FollowNode.setSuppressedFor(target, false);
     }
 
     // ======================================================== Snap Logic
@@ -336,6 +340,8 @@ export class ItemController extends Component implements IPointerHandler {
             for (const child of target.children) {
                 child.active = true;
             }
+            // Ghép xong -> node FollowNode theo target mới được hiện
+            FollowNode.setSuppressedFor(target, false);
 
             this.isPlaced = true;
 

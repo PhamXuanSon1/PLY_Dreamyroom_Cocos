@@ -70,7 +70,7 @@
       "uuid": "59acbb9a-95c1-4780-9edc-f7a5cce7a121"
     },
     "7.Scripts\\MyScript\\item": {
-      "time": 1789629187483.406,
+      "time": 1790842512145.6973,
       "uuid": "bfadb7c9-2f8a-4ecc-830b-35afa8393bc8"
     },
     "7.Scripts\\MyScript\\managers": {
@@ -78,7 +78,7 @@
       "uuid": "fa5ca025-9285-44c1-84f0-88241c087ac6"
     },
     "7.Scripts\\MyScript\\pipeline": {
-      "time": 1789629187484.405,
+      "time": 1790841737591.772,
       "uuid": "40642cf3-a97f-4037-945f-f47cda630de9"
     },
     "7.Scripts\\MyScript\\ScriptTemplate": {
@@ -238,7 +238,7 @@
       "uuid": "c25f6f45-44ae-4d48-bb54-8921501f3f24"
     },
     "7.Scripts\\Tool\\GameController.ts": {
-      "time": 1789553852652.5864,
+      "time": 1790842266739.4795,
       "uuid": "14a54ca0-e12a-490a-948a-754db1575003"
     },
     "7.Scripts\\MyScript\\box\\BoxController.ts": {
@@ -266,11 +266,11 @@
       "uuid": "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
     },
     "7.Scripts\\MyScript\\item\\ItemController.ts": {
-      "time": 1789632871981.6765,
+      "time": 1790842708910.3008,
       "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
     },
     "7.Scripts\\MyScript\\item\\ItemGraphic.ts": {
-      "time": 1789629187483.406,
+      "time": 1790842714211.4956,
       "uuid": "d558005a-8f0f-441f-95a3-dfdeb2a6e567"
     },
     "7.Scripts\\MyScript\\item\\ItemMovement.ts": {
@@ -298,7 +298,7 @@
       "uuid": "01f9a797-a3c5-4494-833e-348ebe65b0ee"
     },
     "7.Scripts\\MyScript\\managers\\UIManager.ts": {
-      "time": 1789632599570.9622,
+      "time": 1790843194326.5798,
       "uuid": "545bdd38-875f-416b-abc9-b06befd3fa89"
     },
     "7.Scripts\\MyScript\\managers\\WorldScrollManager.ts": {
@@ -680,7 +680,7 @@
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
-      "time": 1790828408877.6604,
+      "time": 1790832433211.762,
       "uuid": "3821ba58-b5b6-40b4-8da3-e8c689fca25d"
     },
     "6.Scenes": {
@@ -824,7 +824,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1790829187468.895,
+      "time": 1790842977659.1023,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -1429,7 +1429,7 @@
       "time": 1789629187484.405
     },
     "7.Scripts\\MyScript\\pipeline\\FollowNode.ts": {
-      "time": 1789629187484.405,
+      "time": 1790842708909.2986,
       "uuid": "4f5fb12f-49c9-4c2b-bd72-f5e96090433c"
     },
     "7.Scripts\\MyScript\\pipeline\\GridArrangeTool.ts": {
@@ -1531,7 +1531,7 @@
       "time": 1790827540712.1357
     },
     "3.Sprites\\sprites": {
-      "time": 1790829684060.921,
+      "time": 1790842494589.9858,
       "uuid": "16a8fe95-4024-422f-9398-5c6aa06be9ee"
     },
     "3.Sprites\\sprites\\bachtuoc.png.meta": {
@@ -3040,7 +3040,7 @@
       "uuid": "af58a056-0e13-4b47-8a37-27f66660104a"
     },
     "UnityParticles\\Particle_System\\textures\\53_fire_fx.png.meta": {
-      "time": 1790828352638.091
+      "time": 1790839137647.7493
     },
     "UnityParticles\\Particle_System\\textures\\53_fire_fx.png": {
       "time": 1776244629690.4932,
@@ -3052,13 +3052,6 @@
     "UnityParticles\\Particle_System\\materials\\lightfx_0.mtl": {
       "time": 1790828352625.665,
       "uuid": "ec2a040f-1f04-452d-b90f-a53a1ab0d1a8"
-    },
-    "5.Prefabs\\Particle_System.prefab.meta": {
-      "time": 1790828408891.2856
-    },
-    "5.Prefabs\\Particle_System.prefab": {
-      "time": 1790828408889.7695,
-      "uuid": "e455b93a-f1b2-4e22-a4df-750c0f71b8ef"
     },
     "3.Sprites\\Chung\\fc_anhsangcuaso4.png.meta": {
       "time": 1790828695322.222
@@ -3080,6 +3073,20 @@
     "3.Sprites\\sprites\\BG.png": {
       "time": 1784174432625.4932,
       "uuid": "ea50afb1-9ca8-4a70-a4fe-b6d711a87962"
+    },
+    "5.Prefabs\\LightFx.prefab.meta": {
+      "time": 1790832433240.757
+    },
+    "5.Prefabs\\LightFx.prefab": {
+      "time": 1790839476412.3066,
+      "uuid": "e455b93a-f1b2-4e22-a4df-750c0f71b8ef"
+    },
+    "3.Sprites\\sprites\\cuaso_light2.png.meta": {
+      "time": 1790840892759.1257
+    },
+    "3.Sprites\\sprites\\cuaso_light2.png": {
+      "time": 1790841214387.6372,
+      "uuid": "a51fc4ae-2e0a-4aa3-9f71-5c1dcbe16da4"
     }
   },
   "missing": {}
