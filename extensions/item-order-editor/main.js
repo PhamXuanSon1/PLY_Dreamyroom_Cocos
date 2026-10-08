@@ -1,8 +1,8 @@
 'use strict';
 /**
  * Editor entry point: đọc cây node con của 1 node cha (tên, active, contentSize,
- * thumbnail sprite) và ghi lại thứ tự siblingIndex qua message `scene`
- * `move-array-element` (có undo, tự đánh dấu scene dirty).
+ * thumbnail sprite, SeatHandler.requiredItems) và ghi lại thứ tự siblingIndex qua message
+ * `scene` `move-array-element` (có undo, tự đánh dấu scene dirty) + ghi SeatHandler.
  */
 
 const PKG = 'item-order-editor';
@@ -35,6 +35,18 @@ const ITEM_COMPONENT = 'ItemController';
 
 function isItem(dump) {
     return !!findComp(dump, ITEM_COMPONENT);
+}
+
+/** Item bắt buộc phải ghép trước: SeatHandler.requiredItems (uuid). */
+const SEAT_COMPONENT = 'SeatHandler';
+
+function seatRequires(dump) {
+    const seat = findComp(dump, SEAT_COMPONENT);
+    const list = compProp(seat, 'requiredItems');
+    if (!Array.isArray(list)) {
+        return [];
+    }
+    return list.map((e) => { const v = dumpValue(e); return (v && v.uuid) || ''; }).filter(Boolean);
 }
 
 async function queryNode(uuid) {
@@ -214,6 +226,8 @@ exports.methods = {
                 width: Number(size.width) || 0,
                 height: Number(size.height) || 0,
                 thumb: await thumbnailOf(sfUuid),
+                hasSeat: !!findComp(dump, SEAT_COMPONENT),
+                requires: seatRequires(dump),
             });
         }
         const list = await readItemList();
@@ -269,6 +283,55 @@ exports.methods = {
         log('applied order for "' + tree.name + '": ' + moves + ' move(s), itemList: ' + itemList.message
             + '. Nhấn Ctrl+S để lưu scene.');
         return { ok: true, moves, order: wanted, itemList };
+    },
+
+    /**
+     * Ghi SeatHandler.requiredItems: `seats` = { itemUuid: [requiredUuid...] } (chỉ item đã đổi).
+     * List rỗng -> gỡ component SeatHandler; chưa có component -> thêm.
+     */
+    async applySeats(seats) {
+        let set = 0;
+        let removed = 0;
+        for (const uuid of Object.keys(seats || {})) {
+            const required = (seats[uuid] || []).filter((u) => u && u !== uuid);
+            let dump = await queryNode(uuid);
+            if (!dump) {
+                continue;
+            }
+            let seat = findComp(dump, SEAT_COMPONENT);
+            if (!required.length) {
+                if (seat) {
+                    await Editor.Message.request('scene', 'remove-component', { uuid: dumpValue(seat.value.uuid) });
+                    removed++;
+                }
+                continue;
+            }
+            if (!seat) {
+                await Editor.Message.request('scene', 'create-component', { uuid, component: SEAT_COMPONENT });
+                dump = await queryNode(uuid);
+            }
+            const index = (dump.__comps__ || []).findIndex((c) => c && c.type === SEAT_COMPONENT);
+            if (index < 0) {
+                continue;
+            }
+            await Editor.Message.request('scene', 'set-property', {
+                uuid,
+                path: '__comps__.' + index + '.requiredItems',
+                dump: {
+                    type: 'cc.Node',
+                    isArray: true,
+                    value: required.map((u) => ({ type: 'cc.Node', value: { uuid: u } })),
+                },
+            });
+            set++;
+        }
+        try {
+            await Editor.Message.request('scene', 'snapshot');
+        } catch (e) {
+            /* editor cũ không có snapshot */
+        }
+        log('SeatHandler: ghi ' + set + ' item, gỡ ' + removed + ' component. Nhấn Ctrl+S để lưu scene.');
+        return { ok: true, set, removed };
     },
 };
 

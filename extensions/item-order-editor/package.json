@@ -28,7 +28,8 @@
       "open-panel": { "methods": ["openPanel"] },
       "get-selected-node": { "methods": ["getSelectedNode"] },
       "load-children": { "methods": ["loadChildren"] },
-      "apply-order": { "methods": ["applyOrder"] }
+      "apply-order": { "methods": ["applyOrder"] },
+      "apply-seats": { "methods": ["applySeats"] }
     }
   }
 }

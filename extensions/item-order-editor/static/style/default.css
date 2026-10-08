@@ -199,3 +199,43 @@ header h2 {
     text-align: center;
     color: var(--color-normal-contrast-weakest, #888);
 }
+
+/* ---- seat mode ---- */
+
+.board.seat-mode .cell {
+    cursor: pointer;
+}
+
+.cell.seat-target {
+    border-color: #4a90d9;
+    box-shadow: 0 0 0 2px #4a90d9 inset;
+}
+
+.cell.seat-req {
+    border-color: #f0ad4e;
+    box-shadow: 0 0 0 2px #f0ad4e inset;
+}
+
+.cell .badge {
+    flex-shrink: 0;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+.cell .badge.lock {
+    background: #3d5a80;
+    color: #e0ecff;
+}
+
+.cell .badge.lock.warn {
+    background: #a33;
+    color: #fff;
+}
+
+.cell .badge.req {
+    background: #f0ad4e;
+    color: #222;
+}

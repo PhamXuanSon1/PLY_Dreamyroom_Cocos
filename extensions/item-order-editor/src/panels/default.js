@@ -16,6 +16,8 @@ exports.$ = {
     perColumn: '#perColumn',
     save: '#save',
     sortByList: '#sortByList',
+    seatMode: '#seatMode',
+    seatClear: '#seatClear',
     status: '#status',
     board: '#board',
 };
@@ -52,6 +54,11 @@ const state = {
     drag: null,         // { col, row }
     dirty: false,
     itemListOrder: null, // uuid theo ItemManager.itemList (thứ tự spawn) lúc load
+    mode: 'order',      // 'order' = sắp thứ tự | 'seat' = điền SeatHandler.requiredItems
+    seatTarget: null,   // uuid item đang sửa requiredItems (chế độ seat)
+    requires: {},       // uuid -> [uuid item bắt buộc ghép trước]
+    seatDirty: new Set(), // uuid item đã đổi requiredItems, chưa Save
+    names: {},          // uuid -> tên (để hiện tooltip)
 };
 
 exports.methods = {
@@ -116,6 +123,16 @@ exports.methods = {
         state.picked = null;
         state.dirty = false;
         state.itemListOrder = res.itemListOrder || null;
+        state.requires = {};
+        state.names = {};
+        res.items.forEach((it) => {
+            state.requires[it.uuid] = (it.requires || []).slice();
+            state.names[it.uuid] = it.name;
+        });
+        state.seatDirty = new Set();
+        if (state.seatTarget && !state.requires[state.seatTarget]) {
+            state.seatTarget = null;
+        }
         this.$.parentName.textContent = res.parent.name + '  (' + res.items.length + ' items'
             + (res.skipped ? ', bỏ qua ' + res.skipped + ' node không phải item' : '') + ')';
         savePrefs({ parentUuid: res.parent.uuid, perColumn: this.perColumn() });
@@ -174,11 +191,82 @@ exports.methods = {
             this.showStatus((res && res.error) || 'Ghi thất bại.', 'error');
             return;
         }
+        let seatMsg = '';
+        if (state.seatDirty.size) {
+            const seats = {};
+            state.seatDirty.forEach((u) => { seats[u] = state.requires[u] || []; });
+            const sr = await Editor.Message.request(PKG, 'apply-seats', seats)
+                .catch((e) => ({ ok: false, error: String(e) }));
+            seatMsg = sr && sr.ok
+                ? ' SeatHandler: ghi ' + sr.set + ' item' + (sr.removed ? ', gỡ ' + sr.removed : '') + '.'
+                : ' SeatHandler LỖI: ' + ((sr && sr.error) || '?') + '.';
+        }
         await this.load(state.parent.uuid);
         const list = res.itemList || {};
         this.showStatus('Đã sắp xếp lại ' + uuids.length + ' node (' + res.moves + ' lần di chuyển). '
-            + 'ItemManager.itemList: ' + (list.message || '?') + '. Nhấn Ctrl+S trong editor để lưu scene.',
-            list.ok === false || list.missing ? 'error' : 'ok');
+            + 'ItemManager.itemList: ' + (list.message || '?') + '.' + seatMsg + ' Nhấn Ctrl+S trong editor để lưu scene.',
+            list.ok === false || list.missing || seatMsg.includes('LỖI') ? 'error' : 'ok');
+    },
+
+    // ------------------------------------------------------------ seat mode
+
+    toggleSeatMode() {
+        state.mode = state.mode === 'seat' ? 'order' : 'seat';
+        state.picked = null;
+        state.seatTarget = null;
+        if (state.mode === 'order') {
+            this.hideStatus();
+        }
+        this.render();
+    },
+
+    /** Chế độ seat: click item -> chọn item để sửa / thêm-bỏ item bắt buộc. */
+    seatClick(item) {
+        const target = state.seatTarget;
+        if (!target || item.uuid === target) {
+            // chọn item để sửa (click lại item đang sửa = xong)
+            state.seatTarget = target === item.uuid ? null : item.uuid;
+            this.render();
+            return;
+        }
+        const req = state.requires[target] || (state.requires[target] = []);
+        const i = req.indexOf(item.uuid);
+        if (i >= 0) {
+            req.splice(i, 1);
+        } else {
+            if ((state.requires[item.uuid] || []).includes(target)) {
+                this.showStatus('"' + item.name + '" đang cần "' + state.names[target]
+                    + '" -> chọn ngược lại sẽ thành vòng lặp, không item nào ghép được.', 'error');
+                return;
+            }
+            req.push(item.uuid);
+        }
+        state.seatDirty.add(target);
+        state.dirty = true;
+        this.render();
+    },
+
+    seatClearTarget() {
+        const target = state.seatTarget;
+        if (!target || !(state.requires[target] || []).length) {
+            return;
+        }
+        state.requires[target] = [];
+        state.seatDirty.add(target);
+        state.dirty = true;
+        this.render();
+    },
+
+    seatStatus() {
+        const target = state.seatTarget;
+        if (!target) {
+            this.showStatus('Seat mode: click 1 item để chọn item cần khoá (item đó chỉ vào khay / ghép được khi các item bắt buộc đã ghép xong).');
+            return;
+        }
+        const req = state.requires[target] || [];
+        this.showStatus('Đang sửa "' + state.names[target] + '" — cần ghép trước: '
+            + (req.length ? req.map((u) => state.names[u] || u).join(', ') : '(chưa có)')
+            + '. Click item khác để thêm/bỏ, click lại "' + state.names[target] + '" để xong.');
     },
 
     // ------------------------------------------------------------ mutations
@@ -284,7 +372,15 @@ exports.methods = {
         });
 
         this.$.save.disabled = false;
-        this.$.save.textContent = state.dirty ? 'Save *' : 'Save';
+        this.$.save.textContent = state.dirty || state.seatDirty.size ? 'Save *' : 'Save';
+        const seat = state.mode === 'seat';
+        board.classList.toggle('seat-mode', seat);
+        this.$.seatMode.textContent = seat ? 'Seat mode: ON' : 'Seat mode';
+        this.$.seatMode.setAttribute('type', seat ? 'primary' : 'default');
+        this.$.seatClear.classList.toggle('hidden', !seat || !state.seatTarget);
+        if (seat) {
+            this.seatStatus();
+        }
     },
 
     renderCell(item, pos, flatIndex) {
@@ -299,8 +395,18 @@ exports.methods = {
         if (state.picked && state.picked.col === pos.col && state.picked.row === pos.row) {
             el.classList.add('picked');
         }
-        el.draggable = true;
-        el.title = item.name + '\n' + item.width + ' x ' + item.height + (item.active ? '' : '\n(inactive)');
+        const seat = state.mode === 'seat';
+        const requires = state.requires[item.uuid] || [];
+        if (seat && state.seatTarget === item.uuid) {
+            el.classList.add('seat-target');
+        }
+        const isReq = seat && !!state.seatTarget && (state.requires[state.seatTarget] || []).includes(item.uuid);
+        if (isReq) {
+            el.classList.add('seat-req');
+        }
+        el.draggable = !seat;
+        el.title = item.name + '\n' + item.width + ' x ' + item.height + (item.active ? '' : '\n(inactive)')
+            + (requires.length ? '\nCần ghép trước: ' + requires.map((u) => state.names[u] || u).join(', ') : '');
 
         const thumb = item.thumb
             ? '<img class="thumb" src="' + escapeHtml(fileUrl(item.thumb)) + '" onerror="this.classList.add(\'empty\');this.removeAttribute(\'src\')">'
@@ -311,10 +417,15 @@ exports.methods = {
             + '<span class="info">'
             + '<span class="name">' + escapeHtml(item.name) + '</span>'
             + '<span class="size">' + Math.round(item.width) + '×' + Math.round(item.height) + '</span>'
-            + '</span>';
+            + '</span>'
+            + this.seatBadge(requires, isReq);
 
-        // ---- click: chọn 2 ô để swap
+        // ---- click: seat mode -> sửa requiredItems; order mode -> chọn 2 ô để swap
         el.addEventListener('click', () => {
+            if (state.mode === 'seat') {
+                this.seatClick(item);
+                return;
+            }
             if (!state.picked) {
                 state.picked = pos;
                 this.render();
@@ -330,6 +441,10 @@ exports.methods = {
 
         // ---- drag & drop
         el.addEventListener('dragstart', (e) => {
+            if (state.mode === 'seat') {
+                e.preventDefault();
+                return;
+            }
             state.drag = pos;
             el.classList.add('dragging');
             e.dataTransfer.effectAllowed = 'move';
@@ -370,6 +485,24 @@ exports.methods = {
 
         return el;
     },
+
+    /** Badge: "cần" khi đang được chọn làm item bắt buộc; 🔒n = số item bắt buộc (⚠ nếu có item không nằm trong itemList). */
+    seatBadge(requires, isReq) {
+        let html = '';
+        if (isReq) {
+            html += '<span class="badge req">cần</span>';
+        }
+        if (requires.length) {
+            const list = state.itemListOrder;
+            const missing = list ? requires.filter((u) => !list.includes(u)) : [];
+            const tip = 'Cần ghép trước: ' + requires.map((u) => state.names[u] || u).join(', ')
+                + (missing.length ? '\n⚠ Không có trong itemList: ' + missing.map((u) => state.names[u] || u).join(', ')
+                    + ' -> khay có thể kẹt' : '');
+            html += '<span class="badge lock' + (missing.length ? ' warn' : '') + '" title="' + escapeHtml(tip) + '">'
+                + (missing.length ? '⚠' : '🔒') + requires.length + '</span>';
+        }
+        return html;
+    },
 };
 
 exports.ready = async function () {
@@ -382,6 +515,8 @@ exports.ready = async function () {
     this.$.reload.addEventListener('confirm', () => this.load());
     this.$.save.addEventListener('confirm', this.save.bind(this));
     this.$.sortByList.addEventListener('confirm', this.sortByItemList.bind(this));
+    this.$.seatMode.addEventListener('confirm', this.toggleSeatMode.bind(this));
+    this.$.seatClear.addEventListener('confirm', this.seatClearTarget.bind(this));
     this.$.perColumn.addEventListener('change', () => {
         savePrefs({ parentUuid: state.parent && state.parent.uuid, perColumn: this.perColumn() });
         if (state.parent) {

@@ -110,6 +110,13 @@ export class ItemController extends Component implements IPointerHandler {
     /** glue Cocos: lần cầm này item có được cấp bóng lúc kéo không — snap xong mới trừ 1 lượt. */
     private usedDragShadow = false;
 
+    /** Tổng thời gian (giây) đã kéo item này mà chưa ghép được, cộng dồn qua các lần kéo. */
+    private dragTimeTotal = 0;
+    /** Đã kéo quá ItemManager.dragShadowDelay -> từ giờ item này luôn có bóng khi kéo. */
+    private lateShadowUnlocked = false;
+    /** Lần kéo hiện tại đang hiện bóng chưa (để không bật lại mỗi frame). */
+    private shadowShownThisDrag = false;
+
     // ======================================================== Lifecycle
     onLoad() {
         this.itemGraphic = this.getComponent(ItemGraphic) ?? this.addComponent(ItemGraphic);
@@ -133,11 +140,37 @@ export class ItemController extends Component implements IPointerHandler {
      * Chỉ chạy khi node đang active (Holder/đang kéo/đang bay vào đích), tự dừng khi ghép xong
      * (this.node.active = false trong moveToTarget()).
      */
-    update(): void {
+    update(dt: number): void {
         if (this.isPlaced) return;
+        this.tickLateShadow(dt);
         // Khay (ItemTray) tự lo scale: trong ô = vừa khít ô, lúc cầm = kích thước thật trong phòng
         if (ItemTray.instance) return;
         this.itemGraphic?.syncRoomZoomScale();
+    }
+
+    /**
+     * Item không được cấp bóng (hết lượt shadowItemCount): cộng dồn thời gian kéo, quá
+     * ItemManager.dragShadowDelay giây mà chưa ghép được thì mở khoá bóng cho riêng item này.
+     */
+    private tickLateShadow(dt: number): void {
+        if (!this.dragging || this.shadowShownThisDrag) return;
+        const im = ItemManager.instance;
+        const delay = im?.dragShadowDelay ?? 0;
+        if (delay <= 0) return;
+
+        // Chỉ item nhỏ (contentSize < N×N) mới được hiện bóng muộn
+        const maxSize = im?.dragShadowMaxSize ?? 0;
+        if (maxSize > 0) {
+            const ut = this.getComponent(UITransform);
+            if (ut && (ut.width >= maxSize || ut.height >= maxSize)) return;
+        }
+
+        this.dragTimeTotal += dt;
+        if (this.dragTimeTotal < delay) return;
+
+        this.lateShadowUnlocked = true;
+        this.shadowShownThisDrag = true;
+        this.showTargetShadow();
     }
 
     /** Đồng bộ collider để Item luôn dùng Collider 2D (Box/Polygon/Circle) cho thao tác kéo-thả. */
@@ -176,7 +209,8 @@ export class ItemController extends Component implements IPointerHandler {
         this.usedDragShadow = !this.persistentShadow
             && ItemManager.instance?.canShowDragShadow(this) !== false;
 
-        if (this.persistentShadow || this.usedDragShadow) this.showTargetShadow();
+        this.shadowShownThisDrag = this.persistentShadow || this.usedDragShadow || this.lateShadowUnlocked;
+        if (this.shadowShownThisDrag) this.showTargetShadow();
 
         // 4. Thông báo cho ItemManager
         const im = ItemManager.instance;

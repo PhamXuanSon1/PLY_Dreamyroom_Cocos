@@ -2,11 +2,12 @@
  * ItemTray — khay 5 ô vuông ở dưới màn hình, thay cho Box (hộp quà).
  *
  * Luồng:
- *   - Vào game: lấy lần lượt item từ ItemManager.itemList (getCurrentItem) đặt vào từng ô,
- *     thu nhỏ vừa khít ô vuông.
+ *   - Vào game: lấy lần lượt item từ ItemManager.itemList đặt vào từng ô, thu nhỏ vừa khít ô.
+ *     Item có SeatHandler mà requiredItems chưa ghép xong thì BỎ QUA (giữ chỗ trong hàng chờ),
+ *     lấy item kế tiếp; ghép xong item bắt buộc thì nó mới được vào ô.
  *   - Cầm item lên: phóng về đúng kích thước trong phòng (khớp bóng ở đích).
  *   - Thả hụt: bay về lại ô của nó.
- *   - Ghép đúng: ô vừa trống được lấp bằng item tiếp theo trong itemList.
+ *   - Ghép đúng: lấp mọi ô trống bằng item hợp lệ tiếp theo trong itemList.
  *
  * Ô = node con có HolderSlot (kéo thả/đổi vị trí tự do trong Hierarchy).
  * Khi node này active thì Box không còn dùng nữa (tắt node Box trong scene).
@@ -14,6 +15,7 @@
 
 import { _decorator, Component, Node, Vec3, UITransform } from 'cc';
 import { HolderSlot } from '../utils/HolderSlot';
+import { SeatHandler } from '../utils/SeatHandler';
 import { ItemController } from '../item/ItemController';
 import { ItemManager } from './ItemManager';
 import { UIManager } from './UIManager';
@@ -59,6 +61,8 @@ export class ItemTray extends Component {
     slider: Node | null = null;
 
     private slots: HolderSlot[] = [];
+    /** Item chưa vào khay, theo thứ tự itemList (đã đảo nếu spawnFromLast). null = chưa dựng. */
+    private queue: Node[] | null = null;
     private roomInfo = new Map<ItemController, RoomInfo>();
     private autoEndStarted = false;
 
@@ -116,6 +120,7 @@ export class ItemTray extends Component {
             const item = this.fillSlot(slot, i * this.fillStagger);
             if (!first) first = item;
         });
+        this.warnIfStuck();
         const firstItem = first as ItemController | null;
         if (firstItem) {
             this.scheduleOnce(() => ItemManager.instance?.showFirstDragHint(firstItem),
@@ -123,13 +128,13 @@ export class ItemTray extends Component {
         }
     }
 
-    /** Lấy item kế tiếp trong itemList bỏ vào `slot`. Trả về null nếu hết item. */
+    /** Lấy item hợp lệ kế tiếp bỏ vào `slot`. Trả về null nếu không có item nào vào được. */
     private fillSlot(slot: HolderSlot, delay = 0): ItemController | null {
         const im = ItemManager.instance;
         if (!im || !slot.isEmpty) return null;
 
-        const node = im.getCurrentItem();
-        if (!node || !node.isValid) return null;
+        const node = this.takeNext();
+        if (!node) return null;
         const item = node.getComponent(ItemController);
         if (!item) return null;
 
@@ -252,11 +257,55 @@ export class ItemTray extends Component {
         return true;
     }
 
-    /** Item ghép xong và đã rời ô -> lấp item mới vào ô đó. */
+    /**
+     * Item ghép xong và đã rời ô -> lấp item mới. Lấp MỌI ô trống chứ không chỉ ô vừa trống:
+     * item vừa ghép có thể là requiredItem của item đang bị chặn, ô nào trước đó bỏ trống
+     * vì hết item hợp lệ thì giờ có thể lấp được.
+     */
     onSlotFreed(slot: HolderSlot): void {
         if (this.slots.indexOf(slot) < 0) return;
-        TweenUtil.delayedCall(this, this.refillDelay, () => {
-            if (slot.isValid && slot.isEmpty) this.fillSlot(slot);
+        TweenUtil.delayedCall(this, this.refillDelay, () => this.fillEmptySlots());
+    }
+
+    private fillEmptySlots(): void {
+        let i = 0;
+        for (const s of this.slots) {
+            if (s.isValid && s.isEmpty) this.fillSlot(s, (i++) * this.fillStagger);
+        }
+        this.warnIfStuck();
+    }
+
+    // ======================================================== hàng chờ
+    private buildQueue(): Node[] {
+        const im = ItemManager.instance;
+        const list = (im?.itemList ?? []).filter((n) => {
+            const item = n && n.isValid ? n.getComponent(ItemController) : null;
+            return !!item && !item.isPlaced;
         });
+        if (im?.spawnFromLast) list.reverse();
+        return list;
+    }
+
+    /** Item được vào ô khi không có SeatHandler, hoặc mọi requiredItems đã ghép xong. */
+    private static canEnter(node: Node): boolean {
+        const seat = node.getComponent(SeatHandler);
+        return !seat || seat.canPlace();
+    }
+
+    /** Rút item hợp lệ đầu tiên khỏi hàng chờ; item bị chặn giữ nguyên vị trí để lần sau xét lại. */
+    private takeNext(): Node | null {
+        if (!this.queue) this.queue = this.buildQueue();
+        const i = this.queue.findIndex((n) => n.isValid && ItemTray.canEnter(n));
+        if (i < 0) return null;
+        return this.queue.splice(i, 1)[0];
+    }
+
+    /** Khay rỗng hoàn toàn mà hàng chờ toàn item bị chặn -> báo để sửa dữ liệu (requiredItem không có trong itemList?). */
+    private warnIfStuck(): void {
+        if (!this.queue || this.queue.length === 0) return;
+        if (this.slots.some((s) => !s.isEmpty)) return;
+        console.warn('[ItemTray] Khay trống nhưng mọi item còn lại đều bị SeatHandler chặn: '
+            + this.queue.map((n) => n.name).join(', ')
+            + ' — kiểm tra requiredItems có nằm trong ItemManager.itemList không.');
     }
 }

@@ -131,6 +131,12 @@ export class ItemManager extends Component {
     @property({ tooltip: 'Số item ĐẦU TIÊN được hiện bóng ở đích khi kéo. Chỉ trừ lượt khi item ghép ĐÚNG vào target — cầm lên rồi thả hụt không tốn lượt. Ghép xong đủ N item thì các item sau kéo không còn bóng. 0 = mọi item đều có bóng khi kéo. Không ảnh hưởng cờ Persistent Shadow.' })
     shadowItemCount = 0;
 
+    @property({ tooltip: 'Item KHÔNG còn bóng (đã hết lượt Shadow Item Count): người chơi kéo item đó cộng dồn quá N giây mà vẫn chưa ghép được thì hiện bóng cho riêng item đó (hiện ngay nếu đang kéo, và mọi lần kéo sau). Không trừ lượt Shadow Item Count. 0 = tắt.', min: 0 })
+    dragShadowDelay = 5;
+
+    @property({ tooltip: 'Chỉ áp dụng Drag Shadow Delay cho item NHỎ: contentSize (UITransform của item) có cả rộng lẫn cao < N px. Item to hơn không bao giờ hiện bóng muộn. 0 = áp dụng cho mọi item.', min: 0, visible(this: ItemManager) { return this.dragShadowDelay > 0; } })
+    dragShadowMaxSize = 300;
+
     /** glue Cocos: số lượt bóng đã dùng — chỉ tăng khi item CÓ bóng snap đúng vào target. */
     private dragShadowUsed = 0;
 
@@ -301,10 +307,11 @@ export class ItemManager extends Component {
             }
         }
 
-        // 2. Đếm thời gian không chơi được tiếp (Stuck 5s)
+        // 2. Đếm thời gian không chơi được tiếp (Stuck 5s) — vẫn đếm lúc đang kéo,
+        //    nhưng chỉ bật hint khi đã thả tay (đang kéo mà hiện tay là sai)
         if (!this.isStuckHintActive) {
             this.stuckTimer += dt;
-            if (this.stuckTimer >= this.stuckTimeToHint) {
+            if (this.stuckTimer >= this.stuckTimeToHint && !this.isDragging) {
                 this.triggerStuckHint();
             }
         }
@@ -506,6 +513,11 @@ export class ItemManager extends Component {
     showFirstDragHint(item: ItemController | null): void {
         if (this.showedFirstDragHint) return;
         if (!item || !item.targetPoint) return;
+        // Người chơi đã tự cầm item (đang kéo / đã từng chạm) -> không cần dắt tay nữa
+        if (this.isDragging || this.lastInteractedItem) {
+            this.showedFirstDragHint = true;
+            return;
+        }
 
         this.showedFirstDragHint = true;
         this.runHintTween(item);
@@ -518,6 +530,8 @@ export class ItemManager extends Component {
     private runHintTween(item: ItemController): void {
         const hand = this.handHint;
         if (!hand) return;
+        // Đang kéo item thì không bao giờ hiện tay
+        if (this.isDragging) return;
 
         this.killHintTween();
         hand.setWorldPosition(item.node.worldPosition.clone());

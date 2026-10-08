@@ -70,11 +70,11 @@
       "uuid": "59acbb9a-95c1-4780-9edc-f7a5cce7a121"
     },
     "7.Scripts\\MyScript\\item": {
-      "time": 1791450381392.8193,
+      "time": 1791455332369.7122,
       "uuid": "bfadb7c9-2f8a-4ecc-830b-35afa8393bc8"
     },
     "7.Scripts\\MyScript\\managers": {
-      "time": 1791450914605.9512,
+      "time": 1791455332104.14,
       "uuid": "fa5ca025-9285-44c1-84f0-88241c087ac6"
     },
     "7.Scripts\\MyScript\\pipeline": {
@@ -266,7 +266,7 @@
       "uuid": "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
     },
     "7.Scripts\\MyScript\\item\\ItemController.ts": {
-      "time": 1791450381374.3035,
+      "time": 1791455332325.1443,
       "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
     },
     "7.Scripts\\MyScript\\item\\ItemGraphic.ts": {
@@ -290,7 +290,7 @@
       "uuid": "a6ea4dda-3a5c-40cf-a6c5-7e2bba4057f1"
     },
     "7.Scripts\\MyScript\\managers\\ItemManager.ts": {
-      "time": 1789632402292.62,
+      "time": 1791455680690.6794,
       "uuid": "7443b598-ce0a-4555-8222-8eb8d76d1a1c"
     },
     "7.Scripts\\MyScript\\managers\\ProgressTrackingManager.ts": {
@@ -676,7 +676,7 @@
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
-      "time": 1791451827034.0852,
+      "time": 1791455080813.8638,
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
@@ -824,7 +824,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1791453370795.312,
+      "time": 1791455720804.0183,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -2665,7 +2665,7 @@
       "time": 1791449863891.8357
     },
     "7.Scripts\\MyScript\\managers\\ItemTray.ts": {
-      "time": 1791450914529.801,
+      "time": 1791454347203.2861,
       "uuid": "b268b080-2426-4a8b-9762-5002fd69e858"
     },
     "4.Sounds\\GoldChest.MP3.meta": {
@@ -2758,6 +2758,20 @@
     "4.Sounds\\BGM\\2026-10-08 11-58-36 (mp3cut.net).mp3": {
       "time": 1791435631312.4993,
       "uuid": "e1026b44-dbc1-46fb-b40b-daeda274d764"
+    },
+    "4.Sounds\\fire-sound.ogg.meta": {
+      "time": 1791455080825.6372
+    },
+    "4.Sounds\\fire-torch-whoosh-3-190299.ogg.meta": {
+      "time": 1791455080843.3423
+    },
+    "4.Sounds\\fire-sound.ogg": {
+      "time": 1791455049810.088,
+      "uuid": "f9a94c32-c203-4edb-bb55-83cac553f2f2"
+    },
+    "4.Sounds\\fire-torch-whoosh-3-190299.ogg": {
+      "time": 1791455044576.7512,
+      "uuid": "864333b0-bbd4-49f6-a2fe-8f3a2b317291"
     }
   },
   "missing": {}
