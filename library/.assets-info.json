@@ -664,7 +664,7 @@
       "uuid": "91ce8cc5-cd6c-4470-a59f-ad70a442a383"
     },
     "1.Animations": {
-      "time": 1790829670197.8354,
+      "time": 1791429805352.8218,
       "uuid": "a73f4df5-79ec-41e0-a5d2-5fb1af583d4a"
     },
     "2.Fonts": {
@@ -680,7 +680,7 @@
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
-      "time": 1790832433211.762,
+      "time": 1791429805360.0188,
       "uuid": "3821ba58-b5b6-40b4-8da3-e8c689fca25d"
     },
     "6.Scenes": {
@@ -688,7 +688,7 @@
       "uuid": "af8a22d7-c3ba-450f-a0e3-fa6e50ffd89d"
     },
     "7.Scripts": {
-      "time": 1787381877065.0068,
+      "time": 1791429887394.6355,
       "uuid": "45b30301-342b-44bf-87d3-0965d3e28fda"
     },
     "8.Models": {
@@ -824,7 +824,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1790848058424.6829,
+      "time": 1791429958802.7993,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -971,7 +971,7 @@
       "time": 1789031320619.3438
     },
     "1.Animations.meta": {
-      "time": 1789031320619.3438
+      "time": 1791429805350.776
     },
     "2.Fonts.meta": {
       "time": 1789031320619.3438
@@ -983,7 +983,7 @@
       "time": 1789031320620.3484
     },
     "5.Prefabs.meta": {
-      "time": 1789031320621.354
+      "time": 1791429805358.9912
     },
     "6.Scenes.meta": {
       "time": 1789031320622.355
@@ -3122,6 +3122,62 @@
     "4.Sounds\\1001(2).MP3": {
       "time": 1790847857910.881,
       "uuid": "c7c83e84-73b0-4437-a9fb-6ba887578fad"
+    },
+    "1.Animations\\Gameplay": {
+      "time": 1791429805356.94,
+      "uuid": "4db1ee9a-c7fd-4d6e-8f25-9569b15f4ea5"
+    },
+    "1.Animations\\Gameplay.meta": {
+      "time": 1791429805352.8218
+    },
+    "8.Assets": {
+      "time": 1791429805362.0876,
+      "uuid": "5ef5907c-1316-4c1c-a51c-24bf1dff2276"
+    },
+    "5.Prefabs\\Ghost.prefab": {
+      "time": 1791429805360.0188,
+      "uuid": "ccd2fef3-2fc1-4c92-9c02-489353fd68c6"
+    },
+    "8.Assets\\127. Spooky Pizza": {
+      "time": 1791429805363.11,
+      "uuid": "0628b4cf-591a-437a-ba8a-128bdc37ddf6"
+    },
+    "1.Animations\\Gameplay\\GhostFly.anim": {
+      "time": 1791429805356.94,
+      "uuid": "13414093-8e16-489c-be7d-d8323ef1bd55"
+    },
+    "8.Assets\\127. Spooky Pizza\\Ghost.png": {
+      "time": 1791429805363.11,
+      "uuid": "506b636a-1e30-4b20-a984-4bd58863a15b"
+    },
+    "8.Assets.meta": {
+      "time": 1791429805361.0522
+    },
+    "8.Assets\\127. Spooky Pizza.meta": {
+      "time": 1791429805362.0876
+    },
+    "5.Prefabs\\Ghost.prefab.meta": {
+      "time": 1791429805360.0188
+    },
+    "1.Animations\\Gameplay\\GhostFly.anim.meta": {
+      "time": 1791429805357.9653
+    },
+    "8.Assets\\127. Spooky Pizza\\Ghost.png.meta": {
+      "time": 1791429805363.11
+    },
+    "7.Scripts\\Utils": {
+      "time": 1791429887401.9807,
+      "uuid": "2a85486d-eb51-4b6b-b8a9-36c6434b4a19"
+    },
+    "7.Scripts\\Utils\\RandomAnimationDelay.ts": {
+      "time": 1791429887398.8298,
+      "uuid": "3e350ee7-348e-442d-8b5b-50552648091c"
+    },
+    "7.Scripts\\Utils.meta": {
+      "time": 1791429887395.6392
+    },
+    "7.Scripts\\Utils\\RandomAnimationDelay.ts.meta": {
+      "time": 1791429887401.9807
     }
   },
   "missing": {}

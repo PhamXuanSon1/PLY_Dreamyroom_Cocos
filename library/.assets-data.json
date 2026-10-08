@@ -846,6 +846,7 @@
         "c62401c6-fc30-4167-b273-07de9fe78de3",
         "c1e78636-c2f1-4238-9b1d-d004c501de8d@f9941",
         "1dd801c2-123d-4c47-9705-daf7ea7720ba@f9941",
+        "ccd2fef3-2fc1-4c92-9c02-489353fd68c6",
         "a35a3bf1-726d-4d7e-9a2a-71334ee79d97@f9941",
         "d69f93a0-4909-49a7-b481-e2c5de201f88@f9941",
         "58123430-9205-426c-a69d-d24490efea37@f9941",
@@ -1070,6 +1071,8 @@
         "88586b58-8700-4cc8-a5e4-35b7c54d0649",
         "5e407573-3124-45d2-9050-3c44d0cf0470",
         "545bdd38-875f-416b-abc9-b06befd3fa89",
+        "3e350ee7-348e-442d-8b5b-50552648091c",
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
         "4f5fb12f-49c9-4c2b-bd72-f5e96090433c",
         "ffc0c2df-0287-40ef-8beb-7f4381ae1550",
         "d558005a-8f0f-441f-95a3-dfdeb2a6e567",
@@ -27507,6 +27510,74 @@
     "value": {
       "depends": []
     },
+    "versionCode": 1
+  },
+  "4db1ee9a-c7fd-4d6e-8f25-9569b15f4ea5": {
+    "url": "db://assets/1.Animations/Gameplay",
+    "value": {},
+    "versionCode": 1
+  },
+  "5ef5907c-1316-4c1c-a51c-24bf1dff2276": {
+    "url": "db://assets/8.Assets",
+    "value": {},
+    "versionCode": 1
+  },
+  "ccd2fef3-2fc1-4c92-9c02-489353fd68c6": {
+    "url": "db://assets/5.Prefabs/Ghost.prefab",
+    "value": {
+      "depends": [
+        "506b636a-1e30-4b20-a984-4bd58863a15b@f9941",
+        "13414093-8e16-489c-be7d-d8323ef1bd55"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "0628b4cf-591a-437a-ba8a-128bdc37ddf6": {
+    "url": "db://assets/8.Assets/127. Spooky Pizza",
+    "value": {},
+    "versionCode": 1
+  },
+  "13414093-8e16-489c-be7d-d8323ef1bd55": {
+    "url": "db://assets/1.Animations/Gameplay/GhostFly.anim",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 2
+  },
+  "506b636a-1e30-4b20-a984-4bd58863a15b": {
+    "url": "db://assets/8.Assets/127. Spooky Pizza/Ghost.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "506b636a-1e30-4b20-a984-4bd58863a15b@6c48a": {
+    "url": "db://assets/8.Assets/127. Spooky Pizza/Ghost.png@6c48a",
+    "value": {
+      "depends": [
+        "506b636a-1e30-4b20-a984-4bd58863a15b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "506b636a-1e30-4b20-a984-4bd58863a15b@f9941": {
+    "url": "db://assets/8.Assets/127. Spooky Pizza/Ghost.png@f9941",
+    "value": {
+      "depends": [
+        "506b636a-1e30-4b20-a984-4bd58863a15b@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2a85486d-eb51-4b6b-b8a9-36c6434b4a19": {
+    "url": "db://assets/7.Scripts/Utils",
+    "value": {},
+    "versionCode": 1
+  },
+  "3e350ee7-348e-442d-8b5b-50552648091c": {
+    "url": "db://assets/7.Scripts/Utils/RandomAnimationDelay.ts",
+    "value": {},
     "versionCode": 1
   }
 }
