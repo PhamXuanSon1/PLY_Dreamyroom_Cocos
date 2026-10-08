@@ -236,7 +236,7 @@ export class ItemGraphic extends Component {
         for (const ut of uts) {
             const b = ut.getBoundingBoxToWorld();
             if (b.width <= 0 && b.height <= 0) continue;
-            box = box ? box.union(box, b) : b.clone();
+            box = box ? Rect.union(box, box, b) : b.clone();
         }
         return box;
     }

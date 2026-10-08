@@ -21,6 +21,7 @@ import { BlinkEffect } from '../effects/BlinkEffect';
 import { TweenUtil } from '../core/TweenUtil';
 import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
 import { FollowNode } from '../pipeline/FollowNode';
+import { ItemTray } from '../managers/ItemTray';
 
 const { ccclass, property } = _decorator;
 
@@ -134,6 +135,8 @@ export class ItemController extends Component implements IPointerHandler {
      */
     update(): void {
         if (this.isPlaced) return;
+        // Khay (ItemTray) tự lo scale: trong ô = vừa khít ô, lúc cầm = kích thước thật trong phòng
+        if (ItemTray.instance) return;
         this.itemGraphic?.syncRoomZoomScale();
     }
 
@@ -156,11 +159,14 @@ export class ItemController extends Component implements IPointerHandler {
 
         this.initialWorldPos = this.node.worldPosition.clone();
 
+        // Item trong khay: đổi NGAY về scale thật trong phòng (= target), không tween phóng to
+        const inTray = ItemTray.instance?.onItemPicked(this) ?? false;
+
         // 1. Phát âm thanh Pick từ Ply_SoundManager
         Ply_SoundManager.Ins?.playFx(FxType.PickItem);
 
         // 2. Animation & đưa lên lớp kéo trên cùng
-        this.itemMovement.startDragAnimation();
+        this.itemMovement.startDragAnimation(!inTray);
         this.dragging = true;
         this.itemGraphic.bringToFront();
 
@@ -304,10 +310,17 @@ export class ItemController extends Component implements IPointerHandler {
 
     /** Thả trượt: Bay về vị trí ban đầu (Holder / vị trí nhấc lên). Thả hụt không phát âm thanh. */
     private snapFailed(): void {
-        this.itemMovement.snapFailedAnimation();
-
         // Thả hụt KHÔNG tốn lượt bóng — lần cầm sau vẫn xin lại bình thường
         this.usedDragShadow = false;
+
+        // Item trong khay -> bay về lại ô của nó
+        if (ItemTray.instance?.returnItem(this)) {
+            this.hideTargetShadow();
+            ItemManager.instance?.showStuckHintAgain();
+            return;
+        }
+
+        this.itemMovement.snapFailedAnimation();
 
         // Thả hụt -> ẩn bóng đi, chỉ hiện lại khi cầm item lên lần sau
         this.hideTargetShadow();
@@ -369,8 +382,11 @@ export class ItemController extends Component implements IPointerHandler {
 
             // 4. Giải phóng slot nếu nằm trong thanh bar
             if (this.currentHolderSlot) {
-                this.currentHolderSlot.clearSlot();
+                const freed = this.currentHolderSlot;
+                freed.clearSlot();
                 this.currentHolderSlot = null;
+                // Khay: ô vừa trống -> lấp item tiếp theo
+                ItemTray.instance?.onSlotFreed(freed);
             }
 
             this.itemGraphic.restoreOriginalLayers();
@@ -428,9 +444,11 @@ export class ItemController extends Component implements IPointerHandler {
         fxNode.setPosition(Vec3.ZERO);
         fxNode.active = true;
 
-        // 3. Reset ParticleSystem2D để kích hoạt phát hạt
-        const ps = fxNode.getComponentInChildren(ParticleSystem2D);
-        if (ps) {
+        // 3. Reset ParticleSystem2D để kích hoạt phát hạt.
+        //    GROUPED: hạt gắn theo emitter -> pan/zoom BaseRoom thì FX đi theo đồ đã snap
+        //    (prefab để FREE = hạt nằm ở world space, kéo phòng thì FX đứng im).
+        for (const ps of fxNode.getComponentsInChildren(ParticleSystem2D)) {
+            ps.positionType = ParticleSystem2D.PositionType.GROUPED;
             ps.resetSystem();
         }
 

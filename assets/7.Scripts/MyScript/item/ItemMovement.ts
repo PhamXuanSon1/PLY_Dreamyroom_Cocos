@@ -87,16 +87,19 @@ export class ItemMovement extends Component {
         this.originalRotation = this.node.eulerAngles.clone();
     }
 
-    /** Unity: StartDragAnimation */
-    startDragAnimation(): void {
+    /**
+     * Unity: StartDragAnimation
+     * @param scaleUp false = giữ nguyên scale hiện tại (item khay đã tự set đúng scale target).
+     */
+    startDragAnimation(scaleUp = true): void {
         Tween.stopAllByTarget(this.node);
-        this.isScaling = true;
+        this.isScaling = scaleUp;
 
         // Phòng trường hợp originalScale vẫn còn [0,0,0] (bị JSON ghi đè, hoặc item
         // được click ngay khi vừa bay ra khỏi hộp) — nếu không item sẽ scale về 0.
         if (ItemMovement.isZeroScale(this.originalScale)) this.captureOriginal();
 
-        if (ItemMovement.enableDragScale) {
+        if (scaleUp && ItemMovement.enableDragScale) {
             const target = new Vec3(
                 this.originalScale.x * ItemMovement.dragScaleAmount,
                 this.originalScale.y * ItemMovement.dragScaleAmount,

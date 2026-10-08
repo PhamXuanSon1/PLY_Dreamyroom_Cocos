@@ -1,6 +1,6 @@
 /**
  * BaseRoom — port từ Assets/_GAME/Script/Utils/BaseRoom.cs (Unity)
- * Pan 1 ngón (chỉ trục X) + pinch zoom 2 ngón + mouse wheel cho desktop.
+ * Pan 1 ngón (trục X, tuỳ chọn thêm trục Y) + pinch zoom 2 ngón + mouse wheel cho desktop.
  *
  * KHÁC bản Unity:
  *   - Không poll Input; pan đi qua InputManager ở mức ưu tiên Room (thấp nhất),
@@ -25,6 +25,15 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
 
     @property({ type: Node, tooltip: 'Giới hạn trái khi kéo màn.' })
     leftLimitPos: Node | null = null;
+
+    @property({ tooltip: 'Cho phép kéo phòng lên/xuống (trục Y), không chỉ trái/phải.' })
+    enableVerticalPan = true;
+
+    @property({ type: Node, tooltip: 'Giới hạn trên khi kéo màn (vị trí Y cao nhất của phòng).', visible(this: BaseRoom) { return this.enableVerticalPan; } })
+    topLimitPos: Node | null = null;
+
+    @property({ type: Node, tooltip: 'Giới hạn dưới khi kéo màn (vị trí Y thấp nhất của phòng).', visible(this: BaseRoom) { return this.enableVerticalPan; } })
+    bottomLimitPos: Node | null = null;
 
     @property({ tooltip: 'Tốc độ pinch zoom trên mobile.' })
     mobileZoomSpeed = 0.005;
@@ -133,9 +142,10 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
         if (!this.dragging) return;
 
         const diffX = worldPos.x - this.dragStartWorld.x;
+        const diffY = this.enableVerticalPan ? worldPos.y - this.dragStartWorld.y : 0;
         const target = new Vec3(
             this.roomStartPosition.x + diffX * this.panSpeed,
-            this.roomStartPosition.y,
+            this.roomStartPosition.y + diffY * this.panSpeed,
             this.roomStartPosition.z,
         );
         this.node.setWorldPosition(this.clampPosition(target));
@@ -178,18 +188,22 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     }
 
     // ======================================================== clamp
-    /** Unity: ClampPosition — chỉ kẹp trục X. */
+    /** Unity: ClampPosition — kẹp trục X (left/right), và trục Y (top/bottom) nếu bật enableVerticalPan. */
     private clampPosition(position: Vec3): Vec3 {
-        const left = this.leftLimitPos?.worldPosition.x;
-        const right = this.rightLimitPos?.worldPosition.x;
-
-        if (left !== undefined && right !== undefined) {
-            position.x = math.clamp(position.x, Math.min(left, right), Math.max(left, right));
-        } else if (left !== undefined) {
-            position.x = Math.max(position.x, left);
-        } else if (right !== undefined) {
-            position.x = Math.min(position.x, right);
+        position.x = BaseRoom.clampAxis(position.x,
+            this.leftLimitPos?.worldPosition.x, this.rightLimitPos?.worldPosition.x);
+        if (this.enableVerticalPan) {
+            position.y = BaseRoom.clampAxis(position.y,
+                this.bottomLimitPos?.worldPosition.y, this.topLimitPos?.worldPosition.y);
         }
         return position;
+    }
+
+    /** Kẹp v trong [a, b] (không cần biết a/b cái nào nhỏ hơn); thiếu 1 đầu thì chỉ kẹp đầu còn lại. */
+    private static clampAxis(v: number, a: number | undefined, b: number | undefined): number {
+        if (a !== undefined && b !== undefined) return math.clamp(v, Math.min(a, b), Math.max(a, b));
+        if (a !== undefined) return Math.max(v, a);
+        if (b !== undefined) return Math.min(v, b);
+        return v;
     }
 }

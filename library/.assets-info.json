@@ -10,7 +10,7 @@
       "uuid": "405d2b7b-09f2-40b3-8c2b-bd37102b1ae8"
     },
     "3.Sprites\\Chung": {
-      "time": 1790846687450.1892,
+      "time": 1791449863326.0356,
       "uuid": "9def9b2b-946d-4e03-9044-3dfbbb6ec505"
     },
     "4.Sounds\\BGM": {
@@ -70,11 +70,11 @@
       "uuid": "59acbb9a-95c1-4780-9edc-f7a5cce7a121"
     },
     "7.Scripts\\MyScript\\item": {
-      "time": 1790842512145.6973,
+      "time": 1791450381392.8193,
       "uuid": "bfadb7c9-2f8a-4ecc-830b-35afa8393bc8"
     },
     "7.Scripts\\MyScript\\managers": {
-      "time": 1791447583414.2446,
+      "time": 1791450914605.9512,
       "uuid": "fa5ca025-9285-44c1-84f0-88241c087ac6"
     },
     "7.Scripts\\MyScript\\pipeline": {
@@ -266,15 +266,15 @@
       "uuid": "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
     },
     "7.Scripts\\MyScript\\item\\ItemController.ts": {
-      "time": 1790846672996.4656,
+      "time": 1791450381374.3035,
       "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
     },
     "7.Scripts\\MyScript\\item\\ItemGraphic.ts": {
-      "time": 1790842714211.4956,
+      "time": 1791449968267.8914,
       "uuid": "d558005a-8f0f-441f-95a3-dfdeb2a6e567"
     },
     "7.Scripts\\MyScript\\item\\ItemMovement.ts": {
-      "time": 1787304492753.3103,
+      "time": 1791450368784.6306,
       "uuid": "5340f45e-f6ea-46c6-841b-0215c9469592"
     },
     "7.Scripts\\MyScript\\item\\OpenItem.ts": {
@@ -282,7 +282,7 @@
       "uuid": "d19dc367-6f7d-42be-b55b-721063ea1aef"
     },
     "7.Scripts\\MyScript\\managers\\BaseRoomManager.ts": {
-      "time": 1791447583365.3826,
+      "time": 1791448233899.2522,
       "uuid": "d9861e9b-d60a-4605-8e0f-c42436b51e4c"
     },
     "7.Scripts\\MyScript\\managers\\BoxManager.ts": {
@@ -350,7 +350,7 @@
       "uuid": "2806f393-6824-43fa-90a8-04490eca4ae5"
     },
     "7.Scripts\\MyScript\\utils\\BaseRoom.ts": {
-      "time": 1789552470599.7058,
+      "time": 1791450612556.8767,
       "uuid": "74320d90-14e8-4824-bbef-19d9fc3367d1"
     },
     "7.Scripts\\MyScript\\utils\\ChangeLight.ts": {
@@ -824,7 +824,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1791447489819.4934,
+      "time": 1791450627106.136,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -2653,6 +2653,20 @@
     "3.Sprites\\sprites\\Win.png": {
       "time": 1788755222935.9885,
       "uuid": "1d601d7b-2476-4570-8f7d-0416ce7a1f9a"
+    },
+    "3.Sprites\\Chung\\SlotBG.png.meta": {
+      "time": 1791450200704.9338
+    },
+    "3.Sprites\\Chung\\SlotBG.png": {
+      "time": 1791449758553.7598,
+      "uuid": "c864c38b-855f-4fe5-a80b-f3905e999ecb"
+    },
+    "7.Scripts\\MyScript\\managers\\ItemTray.ts.meta": {
+      "time": 1791449863891.8357
+    },
+    "7.Scripts\\MyScript\\managers\\ItemTray.ts": {
+      "time": 1791450914529.801,
+      "uuid": "b268b080-2426-4a8b-9762-5002fd69e858"
     }
   },
   "missing": {}
