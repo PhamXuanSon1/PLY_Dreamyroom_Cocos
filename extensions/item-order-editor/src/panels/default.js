@@ -15,6 +15,7 @@ exports.$ = {
     reload: '#reload',
     perColumn: '#perColumn',
     save: '#save',
+    sortByList: '#sortByList',
     status: '#status',
     board: '#board',
 };
@@ -50,6 +51,7 @@ const state = {
     picked: null,       // { col, row } — ô đang chọn để swap
     drag: null,         // { col, row }
     dirty: false,
+    itemListOrder: null, // uuid theo ItemManager.itemList (thứ tự spawn) lúc load
 };
 
 exports.methods = {
@@ -113,10 +115,48 @@ exports.methods = {
         state.columns = this.splitColumns(res.items);
         state.picked = null;
         state.dirty = false;
-        this.$.parentName.textContent = res.parent.name + '  (' + res.items.length + ' items)';
+        state.itemListOrder = res.itemListOrder || null;
+        this.$.parentName.textContent = res.parent.name + '  (' + res.items.length + ' items'
+            + (res.skipped ? ', bỏ qua ' + res.skipped + ' node không phải item' : '') + ')';
         savePrefs({ parentUuid: res.parent.uuid, perColumn: this.perColumn() });
-        this.hideStatus();
+        if (!state.itemListOrder) {
+            this.showStatus('Không tìm thấy ItemManager.itemList trong scene — Save chỉ đổi Hierarchy.', 'error');
+        } else if (!this.matchesItemList()) {
+            this.showStatus('Thứ tự Hierarchy đang KHÁC ItemManager.itemList (thứ tự spawn). '
+                + 'Bấm "Xếp theo itemList" để lấy thứ tự spawn hiện tại trước khi chỉnh, nếu không Save sẽ ghi đè itemList.', 'error');
+        } else {
+            this.hideStatus();
+        }
         this.render();
+    },
+
+    /** Thứ tự item trong panel có trùng thứ tự tương đối trong itemList không. */
+    matchesItemList() {
+        const list = state.itemListOrder || [];
+        const inList = this.flatten().map((it) => it.uuid).filter((u) => list.includes(u));
+        return inList.every((u, i) => i === 0 || list.indexOf(inList[i - 1]) < list.indexOf(u));
+    },
+
+    /** Sắp panel theo itemList; item không có trong list xuống cuối (giữ thứ tự cũ). */
+    sortByItemList() {
+        const list = state.itemListOrder;
+        if (!state.parent || !list) {
+            this.showStatus('Chưa đọc được ItemManager.itemList.', 'error');
+            return;
+        }
+        const rank = (it) => {
+            const i = list.indexOf(it.uuid);
+            return i < 0 ? Number.MAX_SAFE_INTEGER : i;
+        };
+        const items = this.flatten().map((it, i) => ({ it, i }))
+            .sort((a, b) => rank(a.it) - rank(b.it) || a.i - b.i)
+            .map((x) => x.it);
+        state.columns = this.splitColumns(items);
+        state.picked = null;
+        const missing = items.filter((it) => !list.includes(it.uuid)).length;
+        this.showStatus('Đã xếp theo itemList' + (missing ? ' (' + missing + ' item không có trong list, để cuối)' : '')
+            + '. Bấm Save để ghi thứ tự này vào Hierarchy.', missing ? 'error' : 'ok');
+        this.markDirty();
     },
 
     async save() {
@@ -134,9 +174,11 @@ exports.methods = {
             this.showStatus((res && res.error) || 'Ghi thất bại.', 'error');
             return;
         }
-        state.dirty = false;
-        this.showStatus('Đã sắp xếp lại ' + uuids.length + ' node (' + res.moves + ' lần di chuyển). Nhấn Ctrl+S trong editor để lưu scene.', 'ok');
         await this.load(state.parent.uuid);
+        const list = res.itemList || {};
+        this.showStatus('Đã sắp xếp lại ' + uuids.length + ' node (' + res.moves + ' lần di chuyển). '
+            + 'ItemManager.itemList: ' + (list.message || '?') + '. Nhấn Ctrl+S trong editor để lưu scene.',
+            list.ok === false || list.missing ? 'error' : 'ok');
     },
 
     // ------------------------------------------------------------ mutations
@@ -188,28 +230,6 @@ exports.methods = {
         this.markDirty();
     },
 
-    shiftInColumn(pos, delta) {
-        const col = state.columns[pos.col];
-        const to = pos.row + delta;
-        if (to < 0 || to >= col.length) {
-            return;
-        }
-        this.swap(pos, { col: pos.col, row: to });
-    },
-
-    shiftColumn(pos, delta) {
-        const toCol = pos.col + delta;
-        if (toCol < 0) {
-            return;
-        }
-        if (toCol >= state.columns.length) {
-            // sang cột mới bên phải -> thành phần tử cuối
-            this.move(pos, { col: state.columns.length, row: 0 });
-            return;
-        }
-        this.move(pos, { col: toCol, row: pos.row });
-    },
-
     // ------------------------------------------------------------ render
 
     render() {
@@ -220,7 +240,7 @@ exports.methods = {
             return;
         }
         if (!state.columns.length) {
-            board.innerHTML = '<div class="empty-board">"' + escapeHtml(state.parent.name) + '" không có node con.</div>';
+            board.innerHTML = '<div class="empty-board">"' + escapeHtml(state.parent.name) + '" không có node con nào có ItemController.</div>';
             return;
         }
 
@@ -237,7 +257,7 @@ exports.methods = {
             colEl.appendChild(cells);
 
             items.forEach((item, r) => {
-                cells.appendChild(this.renderCell(item, { col: c, row: r }, flatIndex++, items.length));
+                cells.appendChild(this.renderCell(item, { col: c, row: r }, flatIndex++));
             });
 
             // Thả vào khoảng trống cuối cột
@@ -267,7 +287,7 @@ exports.methods = {
         this.$.save.textContent = state.dirty ? 'Save *' : 'Save';
     },
 
-    renderCell(item, pos, flatIndex, colLen) {
+    renderCell(item, pos, flatIndex) {
         const el = document.createElement('div');
         el.className = 'cell';
         if (flatIndex === 0) {
@@ -288,20 +308,13 @@ exports.methods = {
 
         el.innerHTML = '<span class="idx">' + (flatIndex + 1) + '</span>'
             + thumb
+            + '<span class="info">'
             + '<span class="name">' + escapeHtml(item.name) + '</span>'
             + '<span class="size">' + Math.round(item.width) + '×' + Math.round(item.height) + '</span>'
-            + '<span class="btns">'
-            + '<button data-act="up" title="Lên"' + (pos.row === 0 ? ' disabled' : '') + '>&#9650;</button>'
-            + '<button data-act="down" title="Xuống"' + (pos.row >= colLen - 1 ? ' disabled' : '') + '>&#9660;</button>'
-            + '<button data-act="left" title="Sang cột trái"' + (pos.col === 0 ? ' disabled' : '') + '>&#9666;</button>'
-            + '<button data-act="right" title="Sang cột phải">&#9656;</button>'
             + '</span>';
 
         // ---- click: chọn 2 ô để swap
-        el.addEventListener('click', (e) => {
-            if (e.target.closest('button')) {
-                return;
-            }
+        el.addEventListener('click', () => {
             if (!state.picked) {
                 state.picked = pos;
                 this.render();
@@ -313,19 +326,6 @@ exports.methods = {
                 return;
             }
             this.swap(state.picked, pos);
-        });
-
-        // ---- buttons
-        el.querySelectorAll('button').forEach((btn) => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                switch (btn.dataset.act) {
-                    case 'up': this.shiftInColumn(pos, -1); break;
-                    case 'down': this.shiftInColumn(pos, 1); break;
-                    case 'left': this.shiftColumn(pos, -1); break;
-                    case 'right': this.shiftColumn(pos, 1); break;
-                }
-            });
         });
 
         // ---- drag & drop
@@ -381,6 +381,7 @@ exports.ready = async function () {
     this.$.useSelected.addEventListener('confirm', this.loadFromSelection.bind(this));
     this.$.reload.addEventListener('confirm', () => this.load());
     this.$.save.addEventListener('confirm', this.save.bind(this));
+    this.$.sortByList.addEventListener('confirm', this.sortByItemList.bind(this));
     this.$.perColumn.addEventListener('change', () => {
         savePrefs({ parentUuid: state.parent && state.parent.uuid, perColumn: this.perColumn() });
         if (state.parent) {

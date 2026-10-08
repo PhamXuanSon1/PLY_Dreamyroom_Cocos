@@ -30,6 +30,16 @@ export class BaseRoomManager extends Component {
     onLoad() {
         BaseRoomManager.instance = this;
 
+        // glue Cocos: quên kéo baseRoom thì playIntroAnimation không bao giờ gọi
+        // enableInteraction() -> BaseRoom không pan/zoom được. Tự dò trong scene.
+        if (!this.baseRoom) {
+            const room = this.node.scene?.getComponentInChildren(BaseRoom);
+            if (room) {
+                this.baseRoom = room.node;
+                console.warn(`[BaseRoomManager] baseRoom chưa gán, tự dùng "${room.node.name}"`);
+            }
+        }
+
         if (this.baseRoom) {
             this.baseRoomOriginalScale = this.baseRoom.scale.clone();
             this.baseRoomOriginalWorldPos = this.baseRoom.worldPosition.clone();

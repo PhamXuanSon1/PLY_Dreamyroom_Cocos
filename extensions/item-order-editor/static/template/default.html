@@ -6,11 +6,12 @@
             <span class="grow"></span>
             <ui-button id="useSelected" tooltip="Lấy node đang chọn trong Hierarchy làm node cha">Load selected node</ui-button>
             <ui-button id="reload" tooltip="Đọc lại thứ tự hiện tại từ scene">&#8635;</ui-button>
+            <ui-button id="sortByList" tooltip="Xếp panel theo thứ tự ItemManager.itemList hiện tại (thứ tự spawn)">Xếp theo itemList</ui-button>
             <label class="hint">Rows / column</label>
             <ui-num-input id="perColumn" min="1" step="1" preci="0" value="7" style="width:64px"></ui-num-input>
-            <ui-button id="save" type="primary" tooltip="Ghi thứ tự vào scene (siblingIndex)">Save</ui-button>
+            <ui-button id="save" type="primary" tooltip="Ghi thứ tự vào Hierarchy (siblingIndex) và ItemManager.itemList">Save</ui-button>
         </div>
-        <span class="hint">Row 1 là node đầu tiên (siblingIndex 0). Kéo ô để đổi chỗ / chuyển cột; click 2 ô để swap; ▲▼ đổi trong cột, ◂▸ chuyển cột. Thứ tự cuối = cột 1 từ trên xuống, rồi cột 2, ...</span>
+        <span class="hint">Chỉ hiện node có ItemController (Shadow, FX... giữ nguyên vị trí). Ô 1 = item đứng đầu trong Hierarchy. Kéo ô để đổi chỗ / chuyển cột; click 2 ô để swap. Thứ tự cuối = cột 1 từ trên xuống, rồi cột 2, ... Save ghi cả Hierarchy lẫn ItemManager.itemList (thứ tự spawn).</span>
     </header>
 
     <div id="status" class="status hidden"></div>

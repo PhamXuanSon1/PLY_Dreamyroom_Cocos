@@ -30,6 +30,13 @@ function compProp(comp, key) {
     return dumpValue(value[key]);
 }
 
+/** Node là item (spawn ra từ hộp) khi có component ItemController. */
+const ITEM_COMPONENT = 'ItemController';
+
+function isItem(dump) {
+    return !!findComp(dump, ITEM_COMPONENT);
+}
+
 async function queryNode(uuid) {
     try {
         return await Editor.Message.request('scene', 'query-node', uuid);
@@ -87,6 +94,81 @@ async function findSpriteFrame(treeNode, depth) {
     return '';
 }
 
+// ---------------------------------------------------------------- ItemManager.itemList
+
+const MANAGER_COMPONENT = 'ItemManager';
+
+/** Node đầu tiên trong scene có component ItemManager (từ query-node-tree). */
+function findManagerNode(treeNode) {
+    if ((treeNode.components || []).some((c) => c.type === MANAGER_COMPONENT)) {
+        return treeNode;
+    }
+    for (const child of treeNode.children || []) {
+        const found = findManagerNode(child);
+        if (found) {
+            return found;
+        }
+    }
+    return null;
+}
+
+/** { managerUuid, index (vị trí component), uuids } của ItemManager.itemList, hoặc null. */
+async function readItemList() {
+    const root = await queryTree();
+    const managerNode = root && findManagerNode(root);
+    if (!managerNode) {
+        return null;
+    }
+    const dump = await queryNode(managerNode.uuid);
+    const comps = (dump && dump.__comps__) || [];
+    const index = comps.findIndex((c) => c && c.type === MANAGER_COMPONENT);
+    const listDump = index >= 0 && comps[index].value && comps[index].value.itemList;
+    if (!listDump || !Array.isArray(listDump.value)) {
+        return null;
+    }
+    const uuids = listDump.value.map((e) => (e && e.value && e.value.uuid) || '');
+    return { managerUuid: managerNode.uuid, index, uuids };
+}
+
+/**
+ * Sắp lại ItemManager.itemList theo `ordered` (uuid item theo thứ tự panel).
+ * Chỉ đổi chỗ các phần tử có trong panel; phần tử khác (item ở node cha khác,
+ * ô null) giữ nguyên vị trí -> không thêm/bớt item nào khỏi list.
+ */
+async function syncItemList(ordered) {
+    const list = await readItemList();
+    if (!list) {
+        return { ok: false, message: 'không tìm thấy ' + MANAGER_COMPONENT + '.itemList trong scene' };
+    }
+    const { managerUuid, index } = list;
+    const current = list.uuids;
+    const inList = ordered.filter((u) => current.includes(u));
+    const queue = inList.slice();
+    const next = current.map((u) => (inList.includes(u) ? queue.shift() : u));
+    const missing = ordered.length - inList.length;
+
+    if (next.every((u, i) => u === current[i])) {
+        return { ok: true, changed: false, missing, message: 'đã đúng thứ tự' };
+    }
+
+    await Editor.Message.request('scene', 'set-property', {
+        uuid: managerUuid,
+        path: '__comps__.' + index + '.itemList',
+        dump: {
+            type: 'cc.Node',
+            isArray: true,
+            value: next.map((u) => ({ type: 'cc.Node', value: u ? { uuid: u } : null })),
+        },
+    });
+    return {
+        ok: true,
+        changed: true,
+        missing,
+        message: 'đã sắp lại ' + inList.length + ' phần tử'
+            + (missing ? ' (' + missing + ' item không có trong list)' : ''),
+    };
+}
+
 // ---------------------------------------------------------------- methods
 
 exports.methods = {
@@ -115,8 +197,13 @@ exports.methods = {
             return { ok: false, error: 'Không tìm thấy node ' + parentUuid + ' trong scene đang mở.' };
         }
         const items = [];
+        let skipped = 0;
         for (const child of tree.children || []) {
             const dump = await queryNode(child.uuid);
+            if (!isItem(dump)) {
+                skipped++;
+                continue;
+            }
             const ut = findComp(dump, 'cc.UITransform');
             const size = compProp(ut, 'contentSize') || {};
             const sfUuid = await findSpriteFrame(child, 2);
@@ -129,7 +216,14 @@ exports.methods = {
                 thumb: await thumbnailOf(sfUuid),
             });
         }
-        return { ok: true, parent: { uuid: tree.uuid, name: tree.name }, items };
+        const list = await readItemList();
+        return {
+            ok: true,
+            parent: { uuid: tree.uuid, name: tree.name },
+            items,
+            skipped,
+            itemListOrder: list ? list.uuids : null,
+        };
     },
 
     /**
@@ -142,13 +236,11 @@ exports.methods = {
             return { ok: false, error: 'Không tìm thấy node cha trong scene.' };
         }
         const current = (tree.children || []).map((c) => c.uuid);
-        const wanted = uuids.filter((u) => current.includes(u));
-        // Node có trong scene nhưng không có trong panel (mới thêm) -> giữ ở cuối
-        for (const u of current) {
-            if (!wanted.includes(u)) {
-                wanted.push(u);
-            }
-        }
+        const ordered = uuids.filter((u) => current.includes(u));
+        // Chỉ thay các slot đang là item trong panel; node không phải item (FX, ...)
+        // và item mới thêm sau khi load giữ nguyên siblingIndex hiện tại.
+        const queue = ordered.slice();
+        const wanted = current.map((u) => (ordered.includes(u) ? queue.shift() : u));
 
         let moves = 0;
         for (let target = 0; target < wanted.length; target++) {
@@ -167,13 +259,16 @@ exports.methods = {
             moves++;
         }
 
+        const itemList = await syncItemList(ordered);
+
         try {
             await Editor.Message.request('scene', 'snapshot');
         } catch (e) {
             /* editor cũ không có snapshot */
         }
-        log('applied order for "' + tree.name + '": ' + moves + ' move(s). Nhấn Ctrl+S để lưu scene.');
-        return { ok: true, moves, order: wanted };
+        log('applied order for "' + tree.name + '": ' + moves + ' move(s), itemList: ' + itemList.message
+            + '. Nhấn Ctrl+S để lưu scene.');
+        return { ok: true, moves, order: wanted, itemList };
     },
 };
 
