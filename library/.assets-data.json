@@ -840,6 +840,10 @@
         "089a1f34-0792-44c3-954a-8ab671aefec5@f9941",
         "43451b8a-77f6-47cc-8b77-4338c5656fd2",
         "ac9175b9-91cc-46e2-a155-9115434bc1da@f9941",
+        "f810c089-7e6f-4b2e-a816-3f61c1e75c4d",
+        "71c86fe2-bde9-434f-ac65-a05233ba9f36@f9941",
+        "49cad4b1-07c6-4ef9-bfae-d7f5db99a410@f9941",
+        "cbcfe9d6-0aee-4ea3-9fd9-e7af30be7c56@f9941",
         "f3f026d0-2801-4bb2-9b57-96344b2d4676@f9941",
         "e493c109-ea19-429a-b842-154150079dc7@f9941",
         "7d03220a-9a86-46eb-8cbe-071f12fdb4fa",
@@ -921,7 +925,6 @@
         "7e8a022c-3736-4b61-b4cd-0a50a26def8e@f9941",
         "1313c4f0-065b-43d0-8038-4227454dec8f",
         "a7d11e60-6745-4ae6-9034-d0c040f01931@f9941",
-        "fb191235-a2cb-4e27-9345-f5668867163c@f9941",
         "51b2da60-3570-45bd-94e0-7c949eaa50f5@f9941",
         "d540c75f-ef0a-4b37-841b-3602f05a0f2b@f9941",
         "95eebea8-7dcc-4ef6-b1a0-9e6c10113053@f9941",
@@ -930,8 +933,8 @@
         "5b274c0e-b0c6-44a6-b625-38c10bc9f47f@f9941",
         "1a95b5cc-f843-4e53-b58a-22e2973851be@f9941",
         "fb263c43-0c32-4065-b41e-b2d4d0aa4bf2@f9941",
-        "f810c089-7e6f-4b2e-a816-3f61c1e75c4d",
         "88a279ee-11b8-440b-9881-aaea4a9d421a@f9941",
+        "fb191235-a2cb-4e27-9345-f5668867163c@f9941",
         "959ba879-7221-45f2-b353-fabd7b86c78c@f9941",
         "3b2193ae-6098-4a17-8228-aa1cb1266fb9@f9941",
         "540bdc1e-c19a-4559-b5ef-5f31cec73dc7@f9941",
@@ -968,7 +971,7 @@
         "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941",
         "c864c38b-855f-4fe5-a80b-f3905e999ecb@f9941",
         "e1fc69b2-618c-4694-9672-0920e014cfe4",
-        "20f60589-d35c-4248-8b6b-9f230f3337e2",
+        "e1026b44-dbc1-46fb-b40b-daeda274d764",
         "02842ae9-80e4-4a46-8329-dec48c04553b",
         "cf290993-bd80-4b5d-9467-489786c65616",
         "a88a5c3e-fe57-4d78-ba1e-73e9803bcce9",
@@ -978,11 +981,13 @@
         "6a23e02d-9056-4d9a-957a-15dc635c17a1",
         "5ae6d90a-6fb6-4eee-9b25-8cbe0af402dc",
         "9d82fea5-c5e1-4838-a10e-0fbefa44356c",
-        "c7c83e84-73b0-4437-a9fb-6ba887578fad",
+        "8423f611-cd67-47c9-8908-b1e0cdfe4aaa",
         "1f1fe5a1-c894-424a-8a73-90ab623eca26",
         "ffb6a91e-943b-4118-9561-0c6feb8b9b45",
+        "f57f7e9d-1391-4171-86c0-c31424707fe5",
         "7e2af722-7b11-4556-a5d6-f0bd3b4ee759",
         "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5",
+        "c53be69e-99c0-47d9-9c5a-4b103f98a370",
         "ba86cebe-4d38-4443-bdd2-0f3817a8a500",
         "ff8b42ea-325d-4827-a60e-5061f68ee560",
         "63d1baa4-820b-4681-950c-f60679d90469",
@@ -997,6 +1002,9 @@
         "88586b58-8700-4cc8-a5e4-35b7c54d0649",
         "5e407573-3124-45d2-9050-3c44d0cf0470",
         "545bdd38-875f-416b-abc9-b06befd3fa89",
+        "2806f393-6824-43fa-90a8-04490eca4ae5",
+        "e37f36fd-c4ca-48c0-9c4e-e6ea23836cdf",
+        "1cde5b79-aa84-4c0e-bea7-573d1201407d",
         "4f5fb12f-49c9-4c2b-bd72-f5e96090433c",
         "ffc0c2df-0287-40ef-8beb-7f4381ae1550",
         "d558005a-8f0f-441f-95a3-dfdeb2a6e567",
@@ -47936,6 +47944,202 @@
   "b268b080-2426-4a8b-9762-5002fd69e858": {
     "url": "db://assets/7.Scripts/MyScript/managers/ItemTray.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "c53be69e-99c0-47d9-9c5a-4b103f98a370": {
+    "url": "db://assets/4.Sounds/GoldChest.MP3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f57f7e9d-1391-4171-86c0-c31424707fe5": {
+    "url": "db://assets/4.Sounds/Rock.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "8423f611-cd67-47c9-8908-b1e0cdfe4aaa": {
+    "url": "db://assets/4.Sounds/ghostLaugh.ogg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "5f69fc78-6873-48d6-9e6e-ebf0f506af6a": {
+    "url": "db://assets/3.Sprites/Chung/red2_ribbon.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "5f69fc78-6873-48d6-9e6e-ebf0f506af6a@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/red2_ribbon.png@6c48a",
+    "value": {
+      "depends": [
+        "5f69fc78-6873-48d6-9e6e-ebf0f506af6a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "5f69fc78-6873-48d6-9e6e-ebf0f506af6a@f9941": {
+    "url": "db://assets/3.Sprites/Chung/red2_ribbon.png@f9941",
+    "value": {
+      "depends": [
+        "5f69fc78-6873-48d6-9e6e-ebf0f506af6a@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "3a2088ea-6a0c-444f-80d2-79b46de2b546": {
+    "url": "db://assets/3.Sprites/Chung/fx_shine.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "3a2088ea-6a0c-444f-80d2-79b46de2b546@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/fx_shine.png@6c48a",
+    "value": {
+      "depends": [
+        "3a2088ea-6a0c-444f-80d2-79b46de2b546"
+      ]
+    },
+    "versionCode": 1
+  },
+  "3a2088ea-6a0c-444f-80d2-79b46de2b546@f9941": {
+    "url": "db://assets/3.Sprites/Chung/fx_shine.png@f9941",
+    "value": {
+      "depends": [
+        "3a2088ea-6a0c-444f-80d2-79b46de2b546@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "49cad4b1-07c6-4ef9-bfae-d7f5db99a410": {
+    "url": "db://assets/3.Sprites/WinCard/ShineRays.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "71c86fe2-bde9-434f-ac65-a05233ba9f36": {
+    "url": "db://assets/3.Sprites/WinCard/White.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "cbcfe9d6-0aee-4ea3-9fd9-e7af30be7c56": {
+    "url": "db://assets/3.Sprites/WinCard/WinRibbon.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d166ac61-b767-4f22-8088-9820735a74ec": {
+    "url": "db://assets/3.Sprites/WinCard",
+    "value": {},
+    "versionCode": 1
+  },
+  "71c86fe2-bde9-434f-ac65-a05233ba9f36@6c48a": {
+    "url": "db://assets/3.Sprites/WinCard/White.png@6c48a",
+    "value": {
+      "depends": [
+        "71c86fe2-bde9-434f-ac65-a05233ba9f36"
+      ]
+    },
+    "versionCode": 1
+  },
+  "cbcfe9d6-0aee-4ea3-9fd9-e7af30be7c56@6c48a": {
+    "url": "db://assets/3.Sprites/WinCard/WinRibbon.png@6c48a",
+    "value": {
+      "depends": [
+        "cbcfe9d6-0aee-4ea3-9fd9-e7af30be7c56"
+      ]
+    },
+    "versionCode": 1
+  },
+  "49cad4b1-07c6-4ef9-bfae-d7f5db99a410@6c48a": {
+    "url": "db://assets/3.Sprites/WinCard/ShineRays.png@6c48a",
+    "value": {
+      "depends": [
+        "49cad4b1-07c6-4ef9-bfae-d7f5db99a410"
+      ]
+    },
+    "versionCode": 1
+  },
+  "71c86fe2-bde9-434f-ac65-a05233ba9f36@f9941": {
+    "url": "db://assets/3.Sprites/WinCard/White.png@f9941",
+    "value": {
+      "depends": [
+        "71c86fe2-bde9-434f-ac65-a05233ba9f36@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "cbcfe9d6-0aee-4ea3-9fd9-e7af30be7c56@f9941": {
+    "url": "db://assets/3.Sprites/WinCard/WinRibbon.png@f9941",
+    "value": {
+      "depends": [
+        "cbcfe9d6-0aee-4ea3-9fd9-e7af30be7c56@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "49cad4b1-07c6-4ef9-bfae-d7f5db99a410@f9941": {
+    "url": "db://assets/3.Sprites/WinCard/ShineRays.png@f9941",
+    "value": {
+      "depends": [
+        "49cad4b1-07c6-4ef9-bfae-d7f5db99a410@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "1cde5b79-aa84-4c0e-bea7-573d1201407d": {
+    "url": "db://assets/7.Scripts/MyScript/ui/WinCard.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "a0c2e1bf-4cbe-44ea-af9c-a5cd770df56f": {
+    "url": "db://assets/7.Scripts/MyScript/ui",
+    "value": {},
+    "versionCode": 1
+  },
+  "e37f36fd-c4ca-48c0-9c4e-e6ea23836cdf": {
+    "url": "db://assets/7.Scripts/Utils/ArcText.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "b7cbafad-b9b2-4e20-9bee-753c7f3d15fe": {
+    "url": "db://assets/3.Sprites/Chung/GhostIcon.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "b7cbafad-b9b2-4e20-9bee-753c7f3d15fe@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/GhostIcon.png@6c48a",
+    "value": {
+      "depends": [
+        "b7cbafad-b9b2-4e20-9bee-753c7f3d15fe"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b7cbafad-b9b2-4e20-9bee-753c7f3d15fe@f9941": {
+    "url": "db://assets/3.Sprites/Chung/GhostIcon.png@f9941",
+    "value": {
+      "depends": [
+        "b7cbafad-b9b2-4e20-9bee-753c7f3d15fe@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e1026b44-dbc1-46fb-b40b-daeda274d764": {
+    "url": "db://assets/4.Sounds/BGM/2026-10-08 11-58-36 (mp3cut.net).mp3",
+    "value": {
+      "depends": []
+    },
     "versionCode": 1
   }
 }

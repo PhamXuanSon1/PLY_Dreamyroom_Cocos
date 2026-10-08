@@ -10,11 +10,11 @@
       "uuid": "405d2b7b-09f2-40b3-8c2b-bd37102b1ae8"
     },
     "3.Sprites\\Chung": {
-      "time": 1791449863326.0356,
+      "time": 1791453337697.246,
       "uuid": "9def9b2b-946d-4e03-9044-3dfbbb6ec505"
     },
     "4.Sounds\\BGM": {
-      "time": 1790844684167.9846,
+      "time": 1791453359969.9546,
       "uuid": "a48afad9-cadd-4d5b-8e24-4aba907e022d"
     },
     "7.Scripts\\Gameplay": {
@@ -34,7 +34,7 @@
       "uuid": "730e5853-b0e5-4309-8d24-6ed9de7c5a65"
     },
     "7.Scripts\\MyScript": {
-      "time": 1787381816576.8284,
+      "time": 1791452607169.7634,
       "uuid": "21bda643-bcfe-44b2-9d8b-30b191cd4022"
     },
     "7.Scripts\\Pool": {
@@ -672,11 +672,11 @@
       "uuid": "54e1328d-b163-4b60-8f36-be68be73c75c"
     },
     "3.Sprites": {
-      "time": 1791445224792.4517,
+      "time": 1791452606544.6843,
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
-      "time": 1790847867224.309,
+      "time": 1791451827034.0852,
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
@@ -824,7 +824,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1791450627106.136,
+      "time": 1791453370795.312,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
@@ -1103,7 +1103,7 @@
       "time": 1789634601905.1526
     },
     "3.Sprites\\Chung\\green_button.png.meta": {
-      "time": 1789634601884.9507
+      "time": 1791452607765.68
     },
     "3.Sprites\\Chung\\Hand.png.meta": {
       "time": 1789634601895.5342
@@ -1563,7 +1563,7 @@
       "time": 1791429805363.11
     },
     "7.Scripts\\Utils": {
-      "time": 1791444995934.7466,
+      "time": 1791452894479.3691,
       "uuid": "2a85486d-eb51-4b6b-b8a9-36c6434b4a19"
     },
     "7.Scripts\\Utils\\RandomAnimationDelay.ts": {
@@ -2655,10 +2655,10 @@
       "uuid": "1d601d7b-2476-4570-8f7d-0416ce7a1f9a"
     },
     "3.Sprites\\Chung\\SlotBG.png.meta": {
-      "time": 1791450200704.9338
+      "time": 1791451123009.8691
     },
     "3.Sprites\\Chung\\SlotBG.png": {
-      "time": 1791449758553.7598,
+      "time": 1791451172241.6304,
       "uuid": "c864c38b-855f-4fe5-a80b-f3905e999ecb"
     },
     "7.Scripts\\MyScript\\managers\\ItemTray.ts.meta": {
@@ -2667,6 +2667,97 @@
     "7.Scripts\\MyScript\\managers\\ItemTray.ts": {
       "time": 1791450914529.801,
       "uuid": "b268b080-2426-4a8b-9762-5002fd69e858"
+    },
+    "4.Sounds\\GoldChest.MP3.meta": {
+      "time": 1791451384935.736
+    },
+    "4.Sounds\\GoldChest.MP3": {
+      "time": 1782283243935.0127,
+      "uuid": "c53be69e-99c0-47d9-9c5a-4b103f98a370"
+    },
+    "4.Sounds\\Rock.mp3.meta": {
+      "time": 1789461483776.8286
+    },
+    "4.Sounds\\Rock.mp3": {
+      "time": 1789461467086.2214,
+      "uuid": "f57f7e9d-1391-4171-86c0-c31424707fe5"
+    },
+    "4.Sounds\\ghostLaugh.ogg.meta": {
+      "time": 1791451827046.5542
+    },
+    "4.Sounds\\ghostLaugh.ogg": {
+      "time": 1788755223080.1848,
+      "uuid": "8423f611-cd67-47c9-8908-b1e0cdfe4aaa"
+    },
+    "3.Sprites\\Chung\\red2_ribbon.png.meta": {
+      "time": 1791176437374.1074
+    },
+    "3.Sprites\\Chung\\red2_ribbon.png": {
+      "time": 1788424400000,
+      "uuid": "5f69fc78-6873-48d6-9e6e-ebf0f506af6a"
+    },
+    "3.Sprites\\Chung\\fx_shine.png.meta": {
+      "time": 1791171188721.4343
+    },
+    "3.Sprites\\Chung\\fx_shine.png": {
+      "time": 1787305686000,
+      "uuid": "3a2088ea-6a0c-444f-80d2-79b46de2b546"
+    },
+    "3.Sprites\\WinCard.meta": {
+      "time": 1791452606554.3372
+    },
+    "3.Sprites\\WinCard\\ShineRays.png.meta": {
+      "time": 1791452606582.041
+    },
+    "3.Sprites\\WinCard\\White.png.meta": {
+      "time": 1791452606565.8545
+    },
+    "3.Sprites\\WinCard\\WinRibbon.png.meta": {
+      "time": 1791452606569.3826
+    },
+    "3.Sprites\\WinCard": {
+      "time": 1791452606547.203,
+      "uuid": "d166ac61-b767-4f22-8088-9820735a74ec"
+    },
+    "3.Sprites\\WinCard\\White.png": {
+      "time": 1791452571715.7383,
+      "uuid": "71c86fe2-bde9-434f-ac65-a05233ba9f36"
+    },
+    "3.Sprites\\WinCard\\WinRibbon.png": {
+      "time": 1791452570788.505,
+      "uuid": "cbcfe9d6-0aee-4ea3-9fd9-e7af30be7c56"
+    },
+    "3.Sprites\\WinCard\\ShineRays.png": {
+      "time": 1791452571715.7383,
+      "uuid": "49cad4b1-07c6-4ef9-bfae-d7f5db99a410"
+    },
+    "7.Scripts\\MyScript\\ui.meta": {
+      "time": 1791452607175.7642
+    },
+    "7.Scripts\\MyScript\\ui\\WinCard.ts.meta": {
+      "time": 1791452607182.281
+    },
+    "7.Scripts\\MyScript\\ui": {
+      "time": 1791452607169.7634,
+      "uuid": "a0c2e1bf-4cbe-44ea-af9c-a5cd770df56f"
+    },
+    "7.Scripts\\MyScript\\ui\\WinCard.ts": {
+      "time": 1791452590862.3733,
+      "uuid": "1cde5b79-aa84-4c0e-bea7-573d1201407d"
+    },
+    "7.Scripts\\Utils\\ArcText.ts.meta": {
+      "time": 1791177741827.1768
+    },
+    "7.Scripts\\Utils\\ArcText.ts": {
+      "time": 1791177733445.1208,
+      "uuid": "e37f36fd-c4ca-48c0-9c4e-e6ea23836cdf"
+    },
+    "4.Sounds\\BGM\\2026-10-08 11-58-36 (mp3cut.net).mp3.meta": {
+      "time": 1791453359983.4558
+    },
+    "4.Sounds\\BGM\\2026-10-08 11-58-36 (mp3cut.net).mp3": {
+      "time": 1791435631312.4993,
+      "uuid": "e1026b44-dbc1-46fb-b40b-daeda274d764"
     }
   },
   "missing": {}
