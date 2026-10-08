@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "2082ba0d-d471-4b12-a459-2cead2cb9cfa",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "2082ba0d-d471-4b12-a459-2cead2cb9cfa@6c48a",
+      "displayName": "heater-flamelight2",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "2082ba0d-d471-4b12-a459-2cead2cb9cfa",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "2082ba0d-d471-4b12-a459-2cead2cb9cfa@f9941",
+      "displayName": "heater-flamelight2",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 60,
+        "trimY": 60,
+        "width": 184,
+        "height": 234,
+        "rawWidth": 304,
+        "rawHeight": 354,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -92,
+            -117,
+            0,
+            92,
+            -117,
+            0,
+            -92,
+            117,
+            0,
+            92,
+            117,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            60,
+            294,
+            244,
+            294,
+            60,
+            60,
+            244,
+            60
+          ],
+          "nuv": [
+            0.19736842105263158,
+            0.1694915254237288,
+            0.8026315789473685,
+            0.1694915254237288,
+            0.19736842105263158,
+            0.8305084745762712,
+            0.8026315789473685,
+            0.8305084745762712
+          ],
+          "minPos": [
+            -92,
+            -117,
+            0
+          ],
+          "maxPos": [
+            92,
+            117,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "2082ba0d-d471-4b12-a459-2cead2cb9cfa@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "2082ba0d-d471-4b12-a459-2cead2cb9cfa@6c48a"
+  }
+}

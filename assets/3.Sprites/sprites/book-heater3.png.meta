@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "b754b8cf-588e-4912-9f64-fd28a02dd42c",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "b754b8cf-588e-4912-9f64-fd28a02dd42c@6c48a",
+      "displayName": "book-heater3",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "b754b8cf-588e-4912-9f64-fd28a02dd42c",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "b754b8cf-588e-4912-9f64-fd28a02dd42c@f9941",
+      "displayName": "book-heater3",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 60,
+        "trimY": 60,
+        "width": 132,
+        "height": 118,
+        "rawWidth": 252,
+        "rawHeight": 238,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -66,
+            -59,
+            0,
+            66,
+            -59,
+            0,
+            -66,
+            59,
+            0,
+            66,
+            59,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            60,
+            178,
+            192,
+            178,
+            60,
+            60,
+            192,
+            60
+          ],
+          "nuv": [
+            0.23809523809523808,
+            0.25210084033613445,
+            0.7619047619047619,
+            0.25210084033613445,
+            0.23809523809523808,
+            0.7478991596638656,
+            0.7619047619047619,
+            0.7478991596638656
+          ],
+          "minPos": [
+            -66,
+            -59,
+            0
+          ],
+          "maxPos": [
+            66,
+            59,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "b754b8cf-588e-4912-9f64-fd28a02dd42c@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "b754b8cf-588e-4912-9f64-fd28a02dd42c@6c48a"
+  }
+}

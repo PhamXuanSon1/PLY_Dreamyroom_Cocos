@@ -87,6 +87,18 @@
       ],
       "0.Spines\\box-ingame.json": [
         "0.Spines\\box-ingame.atlas.txt"
+      ],
+      "0.Spines\\Ghosts\\char1\\char1.json": [
+        "0.Spines\\Ghosts\\char1\\char1.atlas.txt"
+      ],
+      "0.Spines\\Ghosts\\char2\\char2.json": [
+        "0.Spines\\Ghosts\\char2\\char2.atlas.txt"
+      ],
+      "0.Spines\\Ghosts\\char3\\char3.json": [
+        "0.Spines\\Ghosts\\char3\\char3.atlas.txt"
+      ],
+      "0.Spines\\Ghosts\\char4\\char4.json": [
+        "0.Spines\\Ghosts\\char4\\char4.atlas.txt"
       ]
     },
     "uuid": {
@@ -125,6 +137,22 @@
       ],
       "UnityParticles\\Particle_System\\materials\\lightfx_0.mtl": [
         "d1346436-ac96-4271-b863-1f4fdead95b0"
+      ],
+      "0.Spines\\Ghosts\\char1\\char1.json": [
+        "cb221cc7-350a-4623-a514-4a3a2418e572@6c48a",
+        "52ac535d-8bc9-4ba1-8423-f29a0725beda@6c48a"
+      ],
+      "0.Spines\\Ghosts\\char2\\char2.json": [
+        "a63545ef-d10e-4cc7-915a-782031118788@6c48a",
+        "6f92ab7b-f947-47bb-b693-3a5c162e218e@6c48a"
+      ],
+      "0.Spines\\Ghosts\\char3\\char3.json": [
+        "86436d93-1b74-47a5-b625-554e546a6c9a@6c48a",
+        "a4d32630-7c09-4fc0-ae88-da45bf7ba0af@6c48a"
+      ],
+      "0.Spines\\Ghosts\\char4\\char4.json": [
+        "32af86fe-4ba8-4935-8e67-c0003388dc2c@6c48a",
+        "c1cee28d-c4f7-42ac-9d25-cadeb6192f12@6c48a"
       ]
     }
   },

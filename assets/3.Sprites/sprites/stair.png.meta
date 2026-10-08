@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "aaf71de0-f841-4540-9187-a3701c1e63b8",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "aaf71de0-f841-4540-9187-a3701c1e63b8@6c48a",
+      "displayName": "stair",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "aaf71de0-f841-4540-9187-a3701c1e63b8",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "aaf71de0-f841-4540-9187-a3701c1e63b8@f9941",
+      "displayName": "stair",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 60,
+        "trimY": 60,
+        "width": 321,
+        "height": 639,
+        "rawWidth": 441,
+        "rawHeight": 759,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -160.5,
+            -319.5,
+            0,
+            160.5,
+            -319.5,
+            0,
+            -160.5,
+            319.5,
+            0,
+            160.5,
+            319.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            60,
+            699,
+            381,
+            699,
+            60,
+            60,
+            381,
+            60
+          ],
+          "nuv": [
+            0.1360544217687075,
+            0.07905138339920949,
+            0.8639455782312925,
+            0.07905138339920949,
+            0.1360544217687075,
+            0.9209486166007905,
+            0.8639455782312925,
+            0.9209486166007905
+          ],
+          "minPos": [
+            -160.5,
+            -319.5,
+            0
+          ],
+          "maxPos": [
+            160.5,
+            319.5,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "aaf71de0-f841-4540-9187-a3701c1e63b8@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "aaf71de0-f841-4540-9187-a3701c1e63b8@6c48a"
+  }
+}
