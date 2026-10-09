@@ -989,6 +989,7 @@
         "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5",
         "c53be69e-99c0-47d9-9c5a-4b103f98a370",
         "ba86cebe-4d38-4443-bdd2-0f3817a8a500",
+        "cd3ca3e6-864c-425f-8995-3c4dca508ba2",
         "ff8b42ea-325d-4827-a60e-5061f68ee560",
         "63d1baa4-820b-4681-950c-f60679d90469",
         "864333b0-bbd4-49f6-a2fe-8f3a2b317291",
@@ -48155,6 +48156,18 @@
     "value": {
       "depends": []
     },
+    "versionCode": 1
+  },
+  "cd3ca3e6-864c-425f-8995-3c4dca508ba2": {
+    "url": "db://assets/4.Sounds/Dramatic Piano Sound Effect - Brooklynn The Cartoon Girl.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "3d6f15b3-bd40-4bb5-bf3a-5e0e0bd78c30": {
+    "url": "db://assets/7.Scripts/MyScript/effects/FireFlicker.ts",
+    "value": {},
     "versionCode": 1
   }
 }
