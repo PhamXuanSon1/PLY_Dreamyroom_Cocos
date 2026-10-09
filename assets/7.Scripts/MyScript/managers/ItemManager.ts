@@ -107,6 +107,10 @@ export class ItemManager extends Component {
 
     private stuckTimer = 0;
 
+    /** Thả hụt item đang có stuck hint -> chờ stuckTimeToHint giây (tính từ lúc thả tay) rồi mới hiện lại tay. */
+    private stuckReshowPending = false;
+    private stuckReshowTimer = 0;
+
     @property({ tooltip: 'Thời gian chờ (giây) không ghép được item tiếp theo sẽ hiện Hint cố định (mặc định 5s).' })
     stuckTimeToHint = 5;
 
@@ -298,6 +302,13 @@ export class ItemManager extends Component {
     update(dt: number) {
         if (UIManager.instance?.isGameEnded) return;
 
+        // Đang kéo: mọi bộ đếm hint đứng ở 0 -> tay chỉ hiện sau N giây TÍNH TỪ LÚC THẢ TAY
+        if (this.isDragging) {
+            this.idleTimer = 0;
+            this.stuckTimer = 0;
+            this.stuckReshowTimer = 0;
+        }
+
         // 1. Đếm thời gian không tương tác (Idle 3s)
         if (!this.isDragging) {
             this.idleTimer += dt;
@@ -307,12 +318,22 @@ export class ItemManager extends Component {
             }
         }
 
-        // 2. Đếm thời gian không chơi được tiếp (Stuck 5s) — vẫn đếm lúc đang kéo,
-        //    nhưng chỉ bật hint khi đã thả tay (đang kéo mà hiện tay là sai)
-        if (!this.isStuckHintActive) {
+        // 2. Đếm thời gian không chơi được tiếp (Stuck 5s) — chỉ đếm khi KHÔNG kéo
+        if (!this.isStuckHintActive && !this.isDragging) {
             this.stuckTimer += dt;
-            if (this.stuckTimer >= this.stuckTimeToHint && !this.isDragging) {
+            if (this.stuckTimer >= this.stuckTimeToHint) {
                 this.triggerStuckHint();
+            }
+        }
+
+        // 3. Thả hụt item đang stuck -> đủ stuckTimeToHint giây sau khi thả tay mới hiện lại tay
+        if (this.stuckReshowPending && !this.isDragging) {
+            this.stuckReshowTimer += dt;
+            if (this.stuckReshowTimer >= this.stuckTimeToHint) {
+                this.stuckReshowPending = false;
+                if (this.isStuckHintActive && this.stuckTargetItem?.isValid && !this.stuckTargetItem.isPlaced) {
+                    this.runHintTween(this.stuckTargetItem);
+                }
             }
         }
 
@@ -457,6 +478,7 @@ export class ItemManager extends Component {
     /** Huỷ trạng thái 5s stuck khi người chơi click sang item khác -> chuyển về logic 3s không tương tác */
     cancelStuckHint(): void {
         this.isStuckHintActive = false;
+        this.stuckReshowPending = false;
         this.stuckTargetItem = null;
         this.stuckTimer = 0;
         this.idleTimer = 0;
@@ -468,12 +490,15 @@ export class ItemManager extends Component {
     showStuckHintAgain(): void {
         if (!this.isStuckHintActive || !this.stuckTargetItem || !this.stuckTargetItem.isValid) return;
         if (this.stuckTargetItem.isPlaced) return;
-        this.runHintTween(this.stuckTargetItem);
+        // Không hiện ngay lúc thả tay: chờ stuckTimeToHint giây (xem update, bước 3)
+        this.stuckReshowPending = true;
+        this.stuckReshowTimer = 0;
     }
 
     /** Hoàn thành ghép item -> tắt hint và reset toàn bộ bộ đếm về trạng thái bình thường */
     onItemCompleted(): void {
         this.isStuckHintActive = false;
+        this.stuckReshowPending = false;
         this.stuckTargetItem = null;
         this.stuckTimer = 0;
         this.idleTimer = 0;
