@@ -44,6 +44,14 @@ export class UIManager extends Component implements IPointerHandler {
     @property({ tooltip: 'Số item ghép xong thì chuyển sang End Game (chạm đâu cũng mở Store). 0 = phải ghép hết tất cả item.' })
     itemsToEndGame = 0;
 
+    @property({
+        tooltip: 'Kết thúc vì đã ghép đủ Items To End Game (ít hơn tổng số item): có hiện End Card (WinCard) không. '
+            + 'TẮT (mặc định): chỉ chuyển sang chạm đâu cũng mở Store, không hiện End Card. '
+            + 'Ghép HẾT mọi item thì End Card luôn hiện.',
+        visible(this: UIManager) { return this.itemsToEndGame > 0; },
+    })
+    showEndCardOnItemsToEndGame = false;
+
     @property({ tooltip: 'Bật: hết Auto End After Seconds (tính từ click Box đầu tiên) mà chưa ghép xong thì tự ép ra Store. Tắt: không tự ép theo thời gian.' })
     useAutoEnd = false;
 
@@ -151,10 +159,39 @@ export class UIManager extends Component implements IPointerHandler {
     private checkEndGame(): void {
         if (this.isGameEnded) return;
 
-        const need = this.itemsToEndGame > 0 ? Math.min(this.itemsToEndGame, this.mauSo) : this.mauSo;
-        if (this.tuSo >= need) {
-            this.activateEndGame();
+        // itemsToEndGame = 0 (ghép hết): chỉ thắng khi MỌI item trong itemList đã isPlaced,
+        // không dựa vào bộ đếm tuSo (lệch đếm cũng không ra Store sớm).
+        if (this.itemsToEndGame <= 0) {
+            const left = this.unplacedItems();
+            if (left === null) {
+                if (this.tuSo >= this.mauSo) this.activateEndGame();
+            } else if (left.length === 0) {
+                this.activateEndGame();
+            }
+            return;
         }
+
+        const need = Math.min(this.itemsToEndGame, this.mauSo);
+        if (this.tuSo >= need) {
+            // Đủ N item: End Card chỉ hiện khi đã ghép HẾT, hoặc bật showEndCardOnItemsToEndGame
+            const left = this.unplacedItems();
+            const allPlaced = left ? left.length === 0 : this.tuSo >= this.mauSo;
+            this.activateEndGame(allPlaced || this.showEndCardOnItemsToEndGame);
+        }
+    }
+
+    /** Tên các item trong ItemManager.itemList chưa ghép xong; null nếu không có ItemManager. */
+    private unplacedItems(): string[] | null {
+        const im = ItemManager.instance;
+        if (!im || im.itemList.length === 0) return null;
+        const left: string[] = [];
+        for (const n of im.itemList) {
+            if (!n || !n.isValid) continue;
+            // lấy theo tên class để không import ItemController (tránh vòng import)
+            const item = n.getComponent('ItemController') as { isPlaced?: boolean } | null;
+            if (item && !item.isPlaced) left.push(n.name);
+        }
+        return left;
     }
 
     /** glue Cocos: hết autoEndAfterSeconds mà vẫn chưa thắng -> ép chuyển sang End Game để không kẹt màn quá lâu. */
@@ -169,13 +206,22 @@ export class UIManager extends Component implements IPointerHandler {
         this.activateEndGame();
     }
 
-    /** Bật chế độ End Game: ẩn UI chơi, hiện UI thắng + confetti, cho phép chạm đâu cũng ra Store. */
-    private activateEndGame(): void {
+    /**
+     * Bật chế độ End Game: cho phép chạm đâu cũng ra Store + confetti.
+     * showEndCard = true: ẩn UI chơi, hiện End Card (EndUICanvas). false: giữ nguyên màn chơi.
+     */
+    private activateEndGame(showEndCard = true): void {
+        const left = this.unplacedItems();
+        console.log(`[UIManager] End game: tuSo=${this.tuSo}/${this.mauSo}, itemsToEndGame=${this.itemsToEndGame}`
+            + `, endCard=${showEndCard}`
+            + (left ? `, item chưa ghép: ${left.length}${left.length ? ' (' + left.join(', ') + ')' : ''}` : ''));
         this.isGameEnded = true;
         DreamyInputManager.canInput = false;
 
-        if (this.GameUICanvas) this.GameUICanvas.active = false;
-        if (this.EndUICanvas) this.EndUICanvas.active = true;
+        if (showEndCard) {
+            if (this.GameUICanvas) this.GameUICanvas.active = false;
+            if (this.EndUICanvas) this.EndUICanvas.active = true;
+        }
 
         const im = ItemManager.instance;
         if (im) {
