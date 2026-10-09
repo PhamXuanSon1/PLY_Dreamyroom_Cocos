@@ -981,7 +981,7 @@
         "6a23e02d-9056-4d9a-957a-15dc635c17a1",
         "5ae6d90a-6fb6-4eee-9b25-8cbe0af402dc",
         "9d82fea5-c5e1-4838-a10e-0fbefa44356c",
-        "8423f611-cd67-47c9-8908-b1e0cdfe4aaa",
+        "19952116-2aff-467c-8e8d-639d626e34f6",
         "1f1fe5a1-c894-424a-8a73-90ab623eca26",
         "ffb6a91e-943b-4118-9561-0c6feb8b9b45",
         "f57f7e9d-1391-4171-86c0-c31424707fe5",
@@ -992,8 +992,8 @@
         "cd3ca3e6-864c-425f-8995-3c4dca508ba2",
         "ff8b42ea-325d-4827-a60e-5061f68ee560",
         "63d1baa4-820b-4681-950c-f60679d90469",
-        "864333b0-bbd4-49f6-a2fe-8f3a2b317291",
-        "f9a94c32-c203-4edb-bb55-83cac553f2f2",
+        "07552585-a19c-492a-a9ae-14c3a110023d",
+        "2ae0277d-48f7-46ac-beec-f99b32a91a7a",
         "36f9559d-0317-42ef-8986-bb3db27ef31c"
       ],
       "dependScripts": [
@@ -47964,9 +47964,7 @@
   },
   "8423f611-cd67-47c9-8908-b1e0cdfe4aaa": {
     "url": "db://assets/4.Sounds/ghostLaugh.ogg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "5f69fc78-6873-48d6-9e6e-ebf0f506af6a": {
@@ -48146,16 +48144,12 @@
   },
   "f9a94c32-c203-4edb-bb55-83cac553f2f2": {
     "url": "db://assets/4.Sounds/fire-sound.ogg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "864333b0-bbd4-49f6-a2fe-8f3a2b317291": {
     "url": "db://assets/4.Sounds/fire-torch-whoosh-3-190299.ogg",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "cd3ca3e6-864c-425f-8995-3c4dca508ba2": {
@@ -48168,6 +48162,27 @@
   "3d6f15b3-bd40-4bb5-bf3a-5e0e0bd78c30": {
     "url": "db://assets/7.Scripts/MyScript/effects/FireFlicker.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "2ae0277d-48f7-46ac-beec-f99b32a91a7a": {
+    "url": "db://assets/4.Sounds/fire-sound.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "07552585-a19c-492a-a9ae-14c3a110023d": {
+    "url": "db://assets/4.Sounds/fire-torch-whoosh-3-190299.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "19952116-2aff-467c-8e8d-639d626e34f6": {
+    "url": "db://assets/4.Sounds/ghostLaugh.mp3",
+    "value": {
+      "depends": []
+    },
     "versionCode": 1
   }
 }
