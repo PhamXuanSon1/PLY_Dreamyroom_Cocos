@@ -443,7 +443,7 @@ export class ItemController extends Component implements IPointerHandler {
                 this.usedDragShadow = false;
                 ItemManager.instance?.notifyDragShadowPlaced();
             }
-            ItemManager.instance?.itemArrivedAtTarget();
+            ItemManager.instance?.itemArrivedAtTarget(this);
             ItemManager.instance?.setLastItem(null);
             // Item này có thể là requiredItem của item khác -> bật bóng persistent vừa được mở khoá
             ItemManager.instance?.refreshPersistentShadows();

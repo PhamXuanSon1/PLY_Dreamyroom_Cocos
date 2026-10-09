@@ -422,8 +422,18 @@ export class ItemManager extends Component {
         return this.lastInteractedItem;
     }
 
+    /** Item đã được tính vào tiến độ — chặn đếm 2 lần cho cùng 1 item. */
+    private arrivedItems = new Set<ItemController>();
+
     /** Unity: ItemArrivedAtTarget */
-    itemArrivedAtTarget(): void {
+    itemArrivedAtTarget(item?: ItemController): void {
+        if (item) {
+            if (this.arrivedItems.has(item)) {
+                console.warn(`[ItemManager] "${item.node.name}" báo ghép xong lần 2 -> bỏ qua, không cộng tiến độ`);
+                return;
+            }
+            this.arrivedItems.add(item);
+        }
         this.arrivedItemCount++;
         this.onItemCompleted();
 
