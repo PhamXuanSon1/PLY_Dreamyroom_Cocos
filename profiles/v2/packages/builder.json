@@ -7,7 +7,7 @@
     "polyfills": {
       "asyncFunctions": true
     },
-    "name": "Cocos_DreamyRoom_PLY36",
+    "name": "Cocos_DreamyRoom_PLY26",
     "buildPath": "project://build",
     "outputName": "web-mobile",
     "mainBundleCompressionType": "merge_dep",
@@ -31,10 +31,10 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "10-1-2026 17:03:22 build success in 1 min 9 s!",
-        "detailMessage": "[playable-ads-builder]\r[buildHtml] 6/8\r",
+        "message": "10-9-2026 10:01:40 build success in 20 s!",
+        "detailMessage": "Asset DB is resume!\r",
         "options": {
-          "name": "Cocos_DreamyRoom_PLY36",
+          "name": "Cocos_DreamyRoom_PLY26",
           "server": "",
           "engineModulesConfigKey": "migrationsConfig",
           "platform": "web-mobile",
@@ -93,7 +93,7 @@
             "enable": false
           }
         },
-        "time": "10-1-2026 17:02:13",
+        "time": "10-9-2026 10:01:20",
         "dirty": false
       }
     }
