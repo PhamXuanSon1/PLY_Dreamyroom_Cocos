@@ -154,6 +154,14 @@ class FxAudio {
     computer: SoundData = new SoundData();
 }
 
+/** 1 sequence FX dang phat (playFxSequence). */
+interface FxSequenceRun {
+    source: AudioSource;
+    list: FxType[];
+    index: number;
+    callback: (() => void) | null;
+}
+
 /**
  * Quan ly am thanh duoc chuyen tu Unity Ply_SoundManager.
  * 
@@ -177,10 +185,10 @@ export class Ply_SoundManager extends Ply_Singleton {
     private fxSources: (AudioSource | null)[] = new Array(FX_TYPE_COUNT).fill(null);
     private queuedCount: number[] = new Array(FX_TYPE_COUNT).fill(0);
     private queueTimers: (number | null)[] = new Array(FX_TYPE_COUNT).fill(null);
-    private sequenceSource: AudioSource | null = null;
-    private sequence: FxType[] = [];
-    private sequenceIndex = 0;
-    private sequenceCallback: (() => void) | null = null;
+    /** Các sequence đang phát — mỗi sequence 1 AudioSource riêng nên phát chồng lên nhau được. */
+    private sequences: FxSequenceRun[] = [];
+    /** AudioSource rảnh để dùng lại cho sequence sau. */
+    private idleSequenceSources: AudioSource[] = [];
 
     private isMute: boolean = false;
 
@@ -217,62 +225,68 @@ export class Ply_SoundManager extends Ply_Singleton {
 
     /**
      * Phat cac FX theo thu tu. FX sau chi bat dau khi FX truoc da phat xong.
-     * Goi lai ham nay se huy sequence dang phat va thay bang sequence moi.
+     * Moi lan goi chay 1 sequence rieng (AudioSource rieng) -> KHONG cat sequence dang phat
+     * cua item truoc, cac sequence phat chong len nhau.
      */
     public playFxSequence(fxTypes: readonly FxType[]): void {
-        this.stopFxSequence();
         if (this.isMute) return;
 
-        this.sequence = fxTypes.filter((fxType) => {
-            const data = this.getSoundData(fxType);
-            return !!data?.clip;
-        });
-        this.sequenceIndex = 0;
-        this.playNextFxInSequence();
+        const list = fxTypes.filter((fxType) => !!this.getSoundData(fxType)?.clip);
+        if (list.length === 0) return;
+
+        const run: FxSequenceRun = {
+            source: this.idleSequenceSources.pop() ?? this.createAudioSource('SoundFX_Sequence'),
+            list,
+            index: 0,
+            callback: null,
+        };
+        this.sequences.push(run);
+        this.playNextFxInSequence(run);
     }
 
-    private playNextFxInSequence(): void {
-        if (this.isMute || this.sequenceIndex >= this.sequence.length) {
-            this.stopFxSequence();
+    private playNextFxInSequence(run: FxSequenceRun): void {
+        if (this.isMute || run.index >= run.list.length) {
+            this.finishSequence(run);
             return;
         }
 
-        const fxType = this.sequence[this.sequenceIndex++];
-        const data = this.getSoundData(fxType);
+        const data = this.getSoundData(run.list[run.index++]);
         if (!data?.clip) {
-            this.playNextFxInSequence();
+            this.playNextFxInSequence(run);
             return;
         }
 
-        if (!this.sequenceSource) {
-            this.sequenceSource = this.createAudioSource('SoundFX_Sequence');
-        }
-
-        this.sequenceSource.loop = false;
-        this.sequenceSource.clip = data.clip;
-        this.sequenceSource.volume = data.volume;
-        this.sequenceSource.play();
+        run.source.loop = false;
+        run.source.clip = data.clip;
+        run.source.volume = data.volume;
+        run.source.play();
 
         const callback = () => {
-            if (!this.sequenceSource?.playing) {
+            if (!run.source.playing) {
                 this.unschedule(callback);
-                if (this.sequenceCallback === callback) this.sequenceCallback = null;
-                this.playNextFxInSequence();
+                run.callback = null;
+                this.playNextFxInSequence(run);
             }
         };
-        this.sequenceCallback = callback;
+        run.callback = callback;
         this.schedule(callback, 0.016);
     }
 
-    /** Dung sequence FX dang phat. */
-    public stopFxSequence(): void {
-        if (this.sequenceCallback) {
-            this.unschedule(this.sequenceCallback);
-            this.sequenceCallback = null;
+    /** Sequence phat xong / bi dung: tra AudioSource ve pool. */
+    private finishSequence(run: FxSequenceRun): void {
+        if (run.callback) {
+            this.unschedule(run.callback);
+            run.callback = null;
         }
-        this.sequenceSource?.stop();
-        this.sequence = [];
-        this.sequenceIndex = 0;
+        run.source.stop();
+        const i = this.sequences.indexOf(run);
+        if (i >= 0) this.sequences.splice(i, 1);
+        if (this.idleSequenceSources.indexOf(run.source) < 0) this.idleSequenceSources.push(run.source);
+    }
+
+    /** Dung TAT CA sequence FX dang phat (mute / destroy). */
+    public stopFxSequence(): void {
+        for (const run of this.sequences.slice()) this.finishSequence(run);
     }
 
     /**

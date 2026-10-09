@@ -410,7 +410,7 @@ export class ItemController extends Component implements IPointerHandler {
             if (fxTypes.length > 0) {
                 Ply_SoundManager.Ins?.playFxSequence(fxTypes);
             } else {
-                Ply_SoundManager.Ins?.playFx(FxType.HeavyWood);
+                Ply_SoundManager.Ins?.playFxSequence([FxType.HeavyWood]);
             }
 
 
