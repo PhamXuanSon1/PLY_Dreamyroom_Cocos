@@ -547,6 +547,8 @@ export class ItemManager extends Component {
     /** Unity: ShowFirstDragHint */
     showFirstDragHint(item: ItemController | null): void {
         if (this.showedFirstDragHint) return;
+        // Item bị SeatHandler chặn (chưa snap được) -> dắt tay item khác chơi được
+        if (!this.canUseItemHint(item)) item = this.getValidHintItem();
         if (!item || !item.targetPoint) return;
         // Người chơi đã tự cầm item (đang kéo / đã từng chạm) -> không cần dắt tay nữa
         if (this.isDragging || this.lastInteractedItem) {

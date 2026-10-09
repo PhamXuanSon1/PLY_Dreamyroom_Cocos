@@ -3,8 +3,9 @@
  *
  * Luồng:
  *   - Vào game: lấy lần lượt item từ ItemManager.itemList đặt vào từng ô, thu nhỏ vừa khít ô.
- *     Item có SeatHandler mà requiredItems chưa ghép xong thì BỎ QUA (giữ chỗ trong hàng chờ),
- *     lấy item kế tiếp; ghép xong item bắt buộc thì nó mới được vào ô.
+ *     Ưu tiên item ghép được ngay; item có SeatHandler mà requiredItems chưa ghép xong thì để
+ *     sau (giữ chỗ trong hàng chờ). Hết item ghép được ngay mà vẫn còn ô trống thì VẪN đưa item
+ *     bị chặn vào ô — nó chỉ không snap được (ItemController.checkSnap) cho tới khi ghép xong item bắt buộc.
  *   - Cầm item lên: phóng về đúng kích thước trong phòng (khớp bóng ở đích).
  *   - Thả hụt: bay về lại ô của nó.
  *   - Ghép đúng: lấp mọi ô trống bằng item hợp lệ tiếp theo trong itemList.
@@ -122,7 +123,6 @@ export class ItemTray extends Component {
             const item = this.fillSlot(slot, i * this.fillStagger);
             if (!first) first = item;
         });
-        this.warnIfStuck();
         const firstItem = first as ItemController | null;
         if (firstItem) {
             this.scheduleOnce(() => ItemManager.instance?.showFirstDragHint(firstItem),
@@ -306,7 +306,6 @@ export class ItemTray extends Component {
         for (const s of this.slots) {
             if (s.isValid && s.isEmpty) this.fillSlot(s, (i++) * this.fillStagger);
         }
-        this.warnIfStuck();
     }
 
     // ======================================================== hàng chờ
@@ -326,20 +325,35 @@ export class ItemTray extends Component {
         return !seat || seat.canPlace();
     }
 
-    /** Rút item hợp lệ đầu tiên khỏi hàng chờ; item bị chặn giữ nguyên vị trí để lần sau xét lại. */
+    /**
+     * Rút item kế tiếp khỏi hàng chờ: ưu tiên item ghép được ngay (item bị chặn giữ chỗ để xét lại).
+     * Không còn item nào ghép được ngay -> vẫn lấy item bị chặn đầu tiên để ô không bị trống.
+     */
     private takeNext(): Node | null {
         if (!this.queue) this.queue = this.buildQueue();
-        const i = this.queue.findIndex((n) => n.isValid && ItemTray.canEnter(n));
-        if (i < 0) return null;
+        this.queue = this.queue.filter((n) => n.isValid);
+        if (this.queue.length === 0) return null;
+
+        let i = this.queue.findIndex((n) => ItemTray.canEnter(n));
+        if (i < 0) {
+            i = 0;
+            this.warnIfUnreachable(this.queue[0]);
+        }
         return this.queue.splice(i, 1)[0];
     }
 
-    /** Khay rỗng hoàn toàn mà hàng chờ toàn item bị chặn -> báo để sửa dữ liệu (requiredItem không có trong itemList?). */
-    private warnIfStuck(): void {
-        if (!this.queue || this.queue.length === 0) return;
-        if (this.slots.some((s) => !s.isEmpty)) return;
-        console.warn('[ItemTray] Khay trống nhưng mọi item còn lại đều bị SeatHandler chặn: '
-            + this.queue.map((n) => n.name).join(', ')
-            + ' — kiểm tra requiredItems có nằm trong ItemManager.itemList không.');
+    /** Item bị chặn mà requiredItem không có trong itemList (và chưa ghép) -> không bao giờ snap được. */
+    private warnIfUnreachable(node: Node): void {
+        const seat = node.getComponent(SeatHandler);
+        const list = ItemManager.instance?.itemList ?? [];
+        const missing = (seat?.requiredItems ?? []).filter((r) => {
+            if (!r || !r.isValid) return false;
+            const item = r.getComponent(ItemController);
+            return !!item && !item.isPlaced && list.indexOf(r) < 0;
+        });
+        if (missing.length) {
+            console.warn(`[ItemTray] "${node.name}" cần ghép trước: ${missing.map((r) => r.name).join(', ')}`
+                + ' — nhưng item đó KHÔNG có trong ItemManager.itemList -> "' + node.name + '" sẽ không bao giờ snap được.');
+        }
     }
 }

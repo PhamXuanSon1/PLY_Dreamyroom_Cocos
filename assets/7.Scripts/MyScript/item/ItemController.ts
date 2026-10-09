@@ -154,6 +154,8 @@ export class ItemController extends Component implements IPointerHandler {
      */
     private tickLateShadow(dt: number): void {
         if (!this.dragging || this.shadowShownThisDrag) return;
+        // Item đang bị SeatHandler chặn (chưa ghép item bắt buộc) -> không đếm, không mở bóng
+        if (!this.canShowTargetShadow()) return;
         const im = ItemManager.instance;
         const delay = im?.dragShadowDelay ?? 0;
         if (delay <= 0) return;
@@ -206,7 +208,9 @@ export class ItemController extends Component implements IPointerHandler {
         // 3. Hiện bóng (shadow) ở vị trí đích — chỉ hiện khi đang kéo item này, và chỉ
         //    khi chưa dùng hết shadowItemCount lượt (ItemManager.canShowDragShadow)
         //    hoặc item đã tick persistentShadow.
+        // Item đang bị SeatHandler chặn không snap được -> không cấp (và không giữ) lượt bóng
         this.usedDragShadow = !this.persistentShadow
+            && this.canShowTargetShadow()
             && ItemManager.instance?.canShowDragShadow(this) !== false;
 
         this.shadowShownThisDrag = this.persistentShadow || this.usedDragShadow || this.lateShadowUnlocked;
