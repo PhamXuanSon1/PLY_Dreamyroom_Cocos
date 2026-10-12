@@ -1,17 +1,49 @@
 {
   "version": "1.0.1",
   "map": {
+    "UnityParticles": {
+      "time": 1790828352515.5198,
+      "uuid": "d96f422c-af62-42b3-82d3-5c38fa9de206"
+    },
+    "0.Spines\\Ghosts": {
+      "time": 1791444920850.4001,
+      "uuid": "777296b3-f307-47f0-ba6d-9520e9008657"
+    },
     "1.Animations\\BlinkEffect": {
       "time": 1787366370147.3716,
       "uuid": "a1e746e5-1f59-4fa9-bd7c-9cd7fb9d26f6"
+    },
+    "1.Animations\\Gameplay": {
+      "time": 1791429805356.94,
+      "uuid": "4db1ee9a-c7fd-4d6e-8f25-9569b15f4ea5"
     },
     "1.Animations\\handHint": {
       "time": 1787285988370.1433,
       "uuid": "405d2b7b-09f2-40b3-8c2b-bd37102b1ae8"
     },
+    "1.Animations\\Install": {
+      "time": 1789548737194.2563,
+      "uuid": "eab92d9e-b8c6-4324-9e3b-45e7286f7c96"
+    },
+    "1.Animations\\TapToDecor": {
+      "time": 1789548547769.5354,
+      "uuid": "9219fece-fc89-4206-bf47-92fef4bfcae2"
+    },
+    "3.Sprites\\Box": {
+      "time": 1791444848726.9473,
+      "uuid": "a12ae7d3-df1d-4ba8-a8e6-957d35166250"
+    },
+    "3.Sprites\\Captures": {
+      "time": 1789543501772.6848,
+      "uuid": "cd5cb729-eb3d-4740-9984-ae0a52366814"
+    },
     "3.Sprites\\Chung": {
       "time": 1791453337697.246,
       "uuid": "9def9b2b-946d-4e03-9044-3dfbbb6ec505"
+    },
+    "3.Sprites\\WinCard": {
+      "time": 1791452606547.203,
+      "uuid": "d166ac61-b767-4f22-8088-9820735a74ec"
     },
     "4.Sounds\\BGM": {
       "time": 1791453359969.9546,
@@ -45,6 +77,10 @@
       "time": 1789113332352.9487,
       "uuid": "4ee28933-deb0-4266-8f3b-25071b1a6ef8"
     },
+    "7.Scripts\\Utils": {
+      "time": 1791452894479.3691,
+      "uuid": "2a85486d-eb51-4b6b-b8a9-36c6434b4a19"
+    },
     "8.Models\\Materials": {
       "time": 1787296497568.078,
       "uuid": "27af36f9-2355-4eda-ad30-fd0b878d5e0c"
@@ -56,6 +92,34 @@
     "8.Models\\Textures": {
       "time": 1787381816581.8284,
       "uuid": "d1676eab-9018-4d01-a830-cd34c4dda508"
+    },
+    "UnityParticles\\Particle_System": {
+      "time": 1790828352574.74,
+      "uuid": "5c58212e-2651-4f2f-a3b2-0835cf7725f6"
+    },
+    "0.Spines\\Ghosts\\char1": {
+      "time": 1791444990698.5942,
+      "uuid": "cc0b418f-86e3-4fc1-a05f-b7feee907573"
+    },
+    "0.Spines\\Ghosts\\char2": {
+      "time": 1791444990710.262,
+      "uuid": "ee0c84ba-d087-49ae-a3ee-0cc6aa9cdc01"
+    },
+    "0.Spines\\Ghosts\\char3": {
+      "time": 1791444990720.3352,
+      "uuid": "3937fa59-7955-48e2-b2b7-496cb74a7bee"
+    },
+    "0.Spines\\Ghosts\\char4": {
+      "time": 1791444990731.9163,
+      "uuid": "591229da-5767-4c7b-b70a-2e87becdc6bc"
+    },
+    "3.Sprites\\Box\\OpenClick": {
+      "time": 1791444848726.5972,
+      "uuid": "a13eae00-79ed-4fdd-b16c-668ee67e3f22"
+    },
+    "3.Sprites\\Box\\ReadyLoop": {
+      "time": 1791444848731.0583,
+      "uuid": "40471e17-3b69-4428-b021-40e39859ec95"
     },
     "7.Scripts\\MyScript\\box": {
       "time": 1790846137513.4019,
@@ -78,12 +142,16 @@
       "uuid": "fa5ca025-9285-44c1-84f0-88241c087ac6"
     },
     "7.Scripts\\MyScript\\pipeline": {
-      "time": 1791444852728.9097,
+      "time": 1791800571989.2358,
       "uuid": "40642cf3-a97f-4037-945f-f47cda630de9"
     },
     "7.Scripts\\MyScript\\ScriptTemplate": {
       "time": 1789540959682.6743,
       "uuid": "5f4a68e3-8d28-4a95-8c2e-5098ed59bdc8"
+    },
+    "7.Scripts\\MyScript\\ui": {
+      "time": 1791452607169.7634,
+      "uuid": "a0c2e1bf-4cbe-44ea-af9c-a5cd770df56f"
     },
     "7.Scripts\\MyScript\\utils": {
       "time": 1789552470979.2947,
@@ -100,6 +168,14 @@
     "8.Models\\Textures\\Wind": {
       "time": 1787381816583.8276,
       "uuid": "a921a744-a7ec-4b32-8271-4b04f8d89b93"
+    },
+    "UnityParticles\\Particle_System\\materials": {
+      "time": 1790828352625.665,
+      "uuid": "af58a056-0e13-4b47-8a37-27f66660104a"
+    },
+    "UnityParticles\\Particle_System\\textures": {
+      "time": 1790828352590.2903,
+      "uuid": "a0b06987-c957-40d9-ad39-3991c04b512d"
     },
     "8.Models\\Shaders\\builtin-spine.effect": {
       "time": 1789031294962.5918,
@@ -241,6 +317,22 @@
       "time": 1790842266739.4795,
       "uuid": "14a54ca0-e12a-490a-948a-754db1575003"
     },
+    "7.Scripts\\Tool\\PlayableSDK.d.ts": {
+      "time": 1788497329278.0862,
+      "uuid": "b09562b8-0d1b-4470-a7b7-43d4b7892125"
+    },
+    "7.Scripts\\Utils\\ArcText.ts": {
+      "time": 1791177733445.1208,
+      "uuid": "e37f36fd-c4ca-48c0-9c4e-e6ea23836cdf"
+    },
+    "7.Scripts\\Utils\\RandomAnimationDelay.ts": {
+      "time": 1791429887398.8298,
+      "uuid": "3e350ee7-348e-442d-8b5b-50552648091c"
+    },
+    "7.Scripts\\Utils\\SpineFollowSprite.ts": {
+      "time": 1791444995914.687,
+      "uuid": "a67b6921-a62c-42ff-972e-fbff2f501453"
+    },
     "7.Scripts\\MyScript\\box\\BoxController.ts": {
       "time": 1790846137500.5483,
       "uuid": "7ced8a7d-fd09-44e8-b1af-b41522ee13b2"
@@ -293,6 +385,10 @@
       "time": 1791513390481.9695,
       "uuid": "7443b598-ce0a-4555-8222-8eb8d76d1a1c"
     },
+    "7.Scripts\\MyScript\\managers\\ItemTray.ts": {
+      "time": 1791513150744.0027,
+      "uuid": "b268b080-2426-4a8b-9762-5002fd69e858"
+    },
     "7.Scripts\\MyScript\\managers\\ProgressTrackingManager.ts": {
       "time": 1789632402294.623,
       "uuid": "01f9a797-a3c5-4494-833e-348ebe65b0ee"
@@ -309,12 +405,36 @@
       "time": 1787123250019.4058,
       "uuid": "17a738fe-8388-410c-be30-44ff21f69b67"
     },
+    "7.Scripts\\MyScript\\pipeline\\BringTargetsToTopTool.ts": {
+      "time": 1789546098659.813,
+      "uuid": "f3928306-f53b-4edd-9a35-270061ed1ad5"
+    },
+    "7.Scripts\\MyScript\\pipeline\\CaptureNodeTool.ts": {
+      "time": 1789542774195.4373,
+      "uuid": "f0198f78-4f09-4308-bbae-851c9369a489"
+    },
+    "7.Scripts\\MyScript\\pipeline\\FollowNode.ts": {
+      "time": 1790842708909.2986,
+      "uuid": "4f5fb12f-49c9-4c2b-bd72-f5e96090433c"
+    },
+    "7.Scripts\\MyScript\\pipeline\\GoToTargetTool.ts": {
+      "time": 1789543588843.417,
+      "uuid": "75179a24-92e6-43d2-8bf9-e53df105226e"
+    },
+    "7.Scripts\\MyScript\\pipeline\\GridArrangeTool.ts": {
+      "time": 1789629187484.405,
+      "uuid": "2019433c-1f20-49ae-96f8-482e6bba1de3"
+    },
+    "7.Scripts\\MyScript\\pipeline\\LockImageNodesTool.ts": {
+      "time": 1789547086565.3447,
+      "uuid": "8d976d68-8e93-4723-afa8-9d5ca6843614"
+    },
     "7.Scripts\\MyScript\\pipeline\\SceneBuilder.ts": {
       "time": 1791444852728.9097,
       "uuid": "9823c617-75c7-4125-915f-7b7e2e3428d4"
     },
     "7.Scripts\\MyScript\\pipeline\\SortItemsBySizeTool.ts": {
-      "time": 1787304208354.3809,
+      "time": 1791800571936.4668,
       "uuid": "f639f692-0a25-4a1a-8020-59856aaff465"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\ComponentCache.ts": {
@@ -344,6 +464,10 @@
     "7.Scripts\\MyScript\\ScriptTemplate\\Yielders.ts": {
       "time": 1785895756760.3625,
       "uuid": "7c1dfaed-d5c2-42ba-885e-3ebfe53891f8"
+    },
+    "7.Scripts\\MyScript\\ui\\WinCard.ts": {
+      "time": 1791452590862.3733,
+      "uuid": "1cde5b79-aa84-4c0e-bea7-573d1201407d"
     },
     "7.Scripts\\MyScript\\utils\\BallFollowFill.ts": {
       "time": 1786934963885.4,
@@ -377,14 +501,38 @@
       "time": 1786934963914.7063,
       "uuid": "94cd5a39-7dcf-49f7-91f2-4a2d89b906b9"
     },
+    "UnityParticles.meta": {
+      "time": 1790828352448.6245
+    },
+    "0.Spines\\Ghosts.meta": {
+      "time": 1791444920842.378
+    },
     "1.Animations\\BlinkEffect.meta": {
       "time": 1789031294897.5354
+    },
+    "1.Animations\\Gameplay.meta": {
+      "time": 1791429805352.8218
     },
     "1.Animations\\handHint.meta": {
       "time": 1789031294915.6538
     },
+    "1.Animations\\Install.meta": {
+      "time": 1789548737193.7493
+    },
+    "1.Animations\\TapToDecor.meta": {
+      "time": 1789548547768.5334
+    },
+    "3.Sprites\\Box.meta": {
+      "time": 1791444848712.315
+    },
+    "3.Sprites\\Captures.meta": {
+      "time": 1789543458954.0127
+    },
     "3.Sprites\\Chung.meta": {
       "time": 1789031294917.653
+    },
+    "3.Sprites\\WinCard.meta": {
+      "time": 1791452606554.3372
     },
     "4.Sounds\\BGM.meta": {
       "time": 1789031294918.6548
@@ -410,6 +558,9 @@
     "7.Scripts\\Tool.meta": {
       "time": 1789031294932.1187
     },
+    "7.Scripts\\Utils.meta": {
+      "time": 1791429887395.6392
+    },
     "8.Models\\Materials.meta": {
       "time": 1789031294933.128
     },
@@ -418,6 +569,27 @@
     },
     "8.Models\\Textures.meta": {
       "time": 1789031294934.6382
+    },
+    "UnityParticles\\Particle_System.meta": {
+      "time": 1790828352521.035
+    },
+    "0.Spines\\Ghosts\\char1.meta": {
+      "time": 1791444920849.3943
+    },
+    "0.Spines\\Ghosts\\char2.meta": {
+      "time": 1791444920849.3943
+    },
+    "0.Spines\\Ghosts\\char3.meta": {
+      "time": 1791444920850.4001
+    },
+    "0.Spines\\Ghosts\\char4.meta": {
+      "time": 1791444920850.4001
+    },
+    "3.Sprites\\Box\\OpenClick.meta": {
+      "time": 1791444848712.315
+    },
+    "3.Sprites\\Box\\ReadyLoop.meta": {
+      "time": 1791444848726.9473
     },
     "7.Scripts\\MyScript\\box.meta": {
       "time": 1789031294937.651
@@ -440,6 +612,9 @@
     "7.Scripts\\MyScript\\ScriptTemplate.meta": {
       "time": 1789031294945.7932
     },
+    "7.Scripts\\MyScript\\ui.meta": {
+      "time": 1791452607175.7642
+    },
     "7.Scripts\\MyScript\\utils.meta": {
       "time": 1789031294947.105
     },
@@ -452,25 +627,28 @@
     "8.Models\\Textures\\Wind.meta": {
       "time": 1789031294952.0793
     },
+    "UnityParticles\\Particle_System\\materials.meta": {
+      "time": 1790828352581.5425
+    },
+    "UnityParticles\\Particle_System\\textures.meta": {
+      "time": 1790828352566.3347
+    },
     "8.Models\\Shaders\\builtin-sprite.effect.meta": {
       "time": 1789031295120.8884
     },
     "8.Models\\Shaders\\builtin-spine.effect.meta": {
       "time": 1789031295121.8918
     },
-    "8.Models\\Shaders\\Place.effect.meta": {
-      "time": 1789031295126.5444
+    "8.Models\\Shaders\\Gradient.effect.meta": {
+      "time": 1789031295122.891
     },
     "8.Models\\Shaders\\Outline.effect.meta": {
       "time": 1789031295124.2317
     },
-    "8.Models\\Shaders\\Gradient.effect.meta": {
-      "time": 1789031295122.891
+    "8.Models\\Shaders\\Place.effect.meta": {
+      "time": 1789031295126.5444
     },
     "7.Scripts\\Manager\\AssetsManagerCustom.ts.meta": {
-      "time": 1789031295164.4292
-    },
-    "8.Models\\Shaders\\SpriteFolder.effect.meta": {
       "time": 1789031295164.4292
     },
     "7.Scripts\\Manager\\Clock.ts.meta": {
@@ -481,6 +659,9 @@
     },
     "7.Scripts\\Manager\\Joystick.ts.meta": {
       "time": 1789031295170.4158
+    },
+    "8.Models\\Shaders\\SpriteFolder.effect.meta": {
+      "time": 1789031295164.4292
     },
     "7.Scripts\\Manager\\MainCamera.ts.meta": {
       "time": 1789031295178.6902
@@ -548,6 +729,9 @@
     "7.Scripts\\Pool\\PoolManager.ts.meta": {
       "time": 1789031295266.1953
     },
+    "7.Scripts\\Tool\\PlayableSDK.d.ts.meta": {
+      "time": 1788496541140.532
+    },
     "7.Scripts\\Pool\\PoolMember.ts.meta": {
       "time": 1789031295269.806
     },
@@ -556,6 +740,15 @@
     },
     "7.Scripts\\Tool\\GameController.ts.meta": {
       "time": 1786681275839.8037
+    },
+    "7.Scripts\\Utils\\ArcText.ts.meta": {
+      "time": 1791177741827.1768
+    },
+    "7.Scripts\\Utils\\RandomAnimationDelay.ts.meta": {
+      "time": 1791429887401.9807
+    },
+    "7.Scripts\\Utils\\SpineFollowSprite.ts.meta": {
+      "time": 1791444989971.0647
     },
     "7.Scripts\\MyScript\\box\\BoxController.ts.meta": {
       "time": 1789031295288.3872
@@ -596,6 +789,9 @@
     "7.Scripts\\MyScript\\managers\\ItemManager.ts.meta": {
       "time": 1789031295344.5461
     },
+    "7.Scripts\\MyScript\\managers\\ItemTray.ts.meta": {
+      "time": 1791449863891.8357
+    },
     "7.Scripts\\MyScript\\managers\\ProgressTrackingManager.ts.meta": {
       "time": 1789031295344.5461
     },
@@ -607,6 +803,24 @@
     },
     "7.Scripts\\MyScript\\pipeline\\AutoAssignByNameTool.ts.meta": {
       "time": 1789031295360.494
+    },
+    "7.Scripts\\MyScript\\pipeline\\BringTargetsToTopTool.ts.meta": {
+      "time": 1789546104986.201
+    },
+    "7.Scripts\\MyScript\\pipeline\\CaptureNodeTool.ts.meta": {
+      "time": 1789542468324.0454
+    },
+    "7.Scripts\\MyScript\\pipeline\\FollowNode.ts.meta": {
+      "time": 1789629187484.405
+    },
+    "7.Scripts\\MyScript\\pipeline\\GoToTargetTool.ts.meta": {
+      "time": 1789543596257.4329
+    },
+    "7.Scripts\\MyScript\\pipeline\\GridArrangeTool.ts.meta": {
+      "time": 1789629187484.405
+    },
+    "7.Scripts\\MyScript\\pipeline\\LockImageNodesTool.ts.meta": {
+      "time": 1789547093669.8696
     },
     "7.Scripts\\MyScript\\pipeline\\SceneBuilder.ts.meta": {
       "time": 1789031295361.9602
@@ -634,6 +848,9 @@
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Yielders.ts.meta": {
       "time": 1789031295392.9387
+    },
+    "7.Scripts\\MyScript\\ui\\WinCard.ts.meta": {
+      "time": 1791452607182.281
     },
     "7.Scripts\\MyScript\\utils\\BallFollowFill.ts.meta": {
       "time": 1789031295401.4197
@@ -672,7 +889,7 @@
       "uuid": "54e1328d-b163-4b60-8f36-be68be73c75c"
     },
     "3.Sprites": {
-      "time": 1791452606544.6843,
+      "time": 1791800082669.0264,
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
@@ -691,6 +908,10 @@
       "time": 1791429887394.6355,
       "uuid": "45b30301-342b-44bf-87d3-0965d3e28fda"
     },
+    "8.Assets": {
+      "time": 1791429805362.0876,
+      "uuid": "5ef5907c-1316-4c1c-a51c-24bf1dff2276"
+    },
     "8.Models": {
       "time": 1787381816579.8274,
       "uuid": "d0f73519-d793-480e-a18c-3b4b09abfb5a"
@@ -698,6 +919,18 @@
     "9.Asset": {
       "time": 1787295882322.5188,
       "uuid": "2cc855f1-2b70-40a2-a575-fafad4b09f35"
+    },
+    "0.Spines\\box-ingame.atlas.txt": {
+      "time": 1787127548780.7395,
+      "uuid": "bbef0538-1321-41ba-9a28-c33966eacb72"
+    },
+    "0.Spines\\box-ingame.json": {
+      "time": 1787127548450.8716,
+      "uuid": "a88d3345-f98a-41cf-9490-e39152ccb566"
+    },
+    "0.Spines\\box-ingame.png": {
+      "time": 1787127548779.7415,
+      "uuid": "570e07bf-52e6-4351-84db-e35692c95cdd"
     },
     "1.Animations\\Arrow.anim": {
       "time": 1778474126261.423,
@@ -718,6 +951,10 @@
     "1.Animations\\Flicker.anim": {
       "time": 1778474126326.0337,
       "uuid": "32fc1bd8-2230-48ff-a628-4b0218859ab1"
+    },
+    "1.Animations\\FlowerSway.anim": {
+      "time": 1790830245755.899,
+      "uuid": "2608befc-4418-42d4-b8a7-2aa69d85b73f"
     },
     "1.Animations\\Hand.anim": {
       "time": 1778474126338.3125,
@@ -787,6 +1024,10 @@
       "time": 1789327730000,
       "uuid": "69fa9f89-81d1-4d75-b359-29e36c05cc1c"
     },
+    "2.Fonts\\LilitaOne-Regular.ttf": {
+      "time": 1789327730000,
+      "uuid": "43451b8a-77f6-47cc-8b77-4338c5656fd2"
+    },
     "2.Fonts\\sui-generis-rg_dynamic.ttf": {
       "time": 1789327730000,
       "uuid": "14c11960-5525-49c5-aef7-5f6db07e705a"
@@ -794,6 +1035,22 @@
     "2.Fonts\\TUV-PoetsenOne.ttf": {
       "time": 1789327730000,
       "uuid": "42e10400-a0a1-46a7-8792-86aeaa4f0490"
+    },
+    "4.Sounds\\1001(2).MP3": {
+      "time": 1790847857910.881,
+      "uuid": "c7c83e84-73b0-4437-a9fb-6ba887578fad"
+    },
+    "4.Sounds\\1001.MP3": {
+      "time": 1790846757306.3723,
+      "uuid": "36f9559d-0317-42ef-8986-bb3db27ef31c"
+    },
+    "4.Sounds\\BookOpen.mp3": {
+      "time": 1789634733266.0095,
+      "uuid": "ffb6a91e-943b-4118-9561-0c6feb8b9b45"
+    },
+    "4.Sounds\\ClickBox.mp3": {
+      "time": 1789634733325.6624,
+      "uuid": "02842ae9-80e4-4a46-8329-dec48c04553b"
     },
     "4.Sounds\\Cloth.mp3": {
       "time": 1789634733390.756,
@@ -803,6 +1060,50 @@
       "time": 1789634733505.447,
       "uuid": "63d1baa4-820b-4681-950c-f60679d90469"
     },
+    "4.Sounds\\Curtain Open v1.mp3": {
+      "time": 1789634733614.587,
+      "uuid": "ff8b42ea-325d-4827-a60e-5061f68ee560"
+    },
+    "4.Sounds\\Cute Kitty Monster Voice 01.mp3": {
+      "time": 1789634733698.1401,
+      "uuid": "9d82fea5-c5e1-4838-a10e-0fbefa44356c"
+    },
+    "4.Sounds\\Cute Kitty Monster Voice 02.mp3": {
+      "time": 1789634733775.6604,
+      "uuid": "77303dd5-d31c-4d39-a237-0b55ec90c38b"
+    },
+    "4.Sounds\\Dramatic Piano Sound Effect - Brooklynn The Cartoon Girl.mp3": {
+      "time": 1791511817438.7422,
+      "uuid": "cd3ca3e6-864c-425f-8995-3c4dca508ba2"
+    },
+    "4.Sounds\\DropMetal.mp3": {
+      "time": 1789634733841.2507,
+      "uuid": "5b757b2e-08e5-4f99-9d72-ab66651e8cb1"
+    },
+    "4.Sounds\\DropOnFloor.mp3": {
+      "time": 1789634733902.8367,
+      "uuid": "5ae6d90a-6fb6-4eee-9b25-8cbe0af402dc"
+    },
+    "4.Sounds\\fire-sound.mp3": {
+      "time": 1791514651288.839,
+      "uuid": "2ae0277d-48f7-46ac-beec-f99b32a91a7a"
+    },
+    "4.Sounds\\fire-torch-whoosh-3-190299.mp3": {
+      "time": 1791514651359.1418,
+      "uuid": "07552585-a19c-492a-a9ae-14c3a110023d"
+    },
+    "4.Sounds\\ghostLaugh.mp3": {
+      "time": 1791514651552.2688,
+      "uuid": "19952116-2aff-467c-8e8d-639d626e34f6"
+    },
+    "4.Sounds\\Glass.mp3": {
+      "time": 1789634733982.6528,
+      "uuid": "6a23e02d-9056-4d9a-957a-15dc635c17a1"
+    },
+    "4.Sounds\\GoldChest.MP3": {
+      "time": 1782283243935.0127,
+      "uuid": "c53be69e-99c0-47d9-9c5a-4b103f98a370"
+    },
     "4.Sounds\\Grass.mp3": {
       "time": 1789634734051.561,
       "uuid": "7e2af722-7b11-4556-a5d6-f0bd3b4ee759"
@@ -810,6 +1111,34 @@
     "4.Sounds\\HeavyWood.mp3": {
       "time": 1789634734124.8296,
       "uuid": "a88a5c3e-fe57-4d78-ba1e-73e9803bcce9"
+    },
+    "4.Sounds\\MetalObjectSetDown_BW.9258.mp3": {
+      "time": 1790846454737.4656,
+      "uuid": "4d9fa55f-8729-40e1-a387-a7ca9cbc2a1e"
+    },
+    "4.Sounds\\OBJECT_METAL_SHELL_Storage_Place_Table_Soft_03.mp3": {
+      "time": 1790846454668.839,
+      "uuid": "e21c2e91-e007-4bb4-82e7-fa885a0b7f66"
+    },
+    "4.Sounds\\PickItem.mp3": {
+      "time": 1789634734183.8005,
+      "uuid": "cf290993-bd80-4b5d-9467-489786c65616"
+    },
+    "4.Sounds\\Rock.mp3": {
+      "time": 1789461467086.2214,
+      "uuid": "f57f7e9d-1391-4171-86c0-c31424707fe5"
+    },
+    "4.Sounds\\SmallWood.mp3": {
+      "time": 1789634734238.2656,
+      "uuid": "363f6949-5969-4b33-85b6-42cf5b39704b"
+    },
+    "4.Sounds\\WaterDrop.mp3": {
+      "time": 1789634734324.088,
+      "uuid": "1f1fe5a1-c894-424a-8a73-90ab623eca26"
+    },
+    "4.Sounds\\Window.mp3": {
+      "time": 1789634734383.042,
+      "uuid": "ba86cebe-4d38-4443-bdd2-0f3817a8a500"
     },
     "4.Sounds\\WoodenDoor Small.mp3": {
       "time": 1789634734511.4463,
@@ -819,21 +1148,57 @@
       "time": 1789031320813.7722,
       "uuid": "e1fc69b2-618c-4694-9672-0920e014cfe4"
     },
+    "5.Prefabs\\Ghost.prefab": {
+      "time": 1791429805360.0188,
+      "uuid": "ccd2fef3-2fc1-4c92-9c02-489353fd68c6"
+    },
+    "5.Prefabs\\LightFx.prefab": {
+      "time": 1790839476412.3066,
+      "uuid": "e455b93a-f1b2-4e22-a4df-750c0f71b8ef"
+    },
+    "5.Prefabs\\Slider.prefab": {
+      "time": 1790825145562.735,
+      "uuid": "e1637dc2-4f7f-442d-ad5d-edd8061fea31"
+    },
     "5.Prefabs\\Star.prefab": {
       "time": 1789031320825.7866,
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1791514853927.3738,
+      "time": 1791800900654.7053,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
+    },
+    "8.Assets\\127. Spooky Pizza": {
+      "time": 1791429805363.11,
+      "uuid": "0628b4cf-591a-437a-ba8a-128bdc37ddf6"
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim": {
       "time": 1785828025943.977,
       "uuid": "a0c0ad6a-fcc6-4de4-8048-f3fe74d1ab72"
     },
+    "1.Animations\\Gameplay\\GhostFly.anim": {
+      "time": 1791429805356.94,
+      "uuid": "13414093-8e16-489c-be7d-d8323ef1bd55"
+    },
     "1.Animations\\handHint\\handClick.anim": {
       "time": 1787286173821.6926,
       "uuid": "6f3ccacc-901d-4e21-bbd2-55d4524b15cc"
+    },
+    "1.Animations\\Install\\Install.anim": {
+      "time": 1789552676073.8003,
+      "uuid": "7d03220a-9a86-46eb-8cbe-071f12fdb4fa"
+    },
+    "1.Animations\\TapToDecor\\TapToDecor.anim": {
+      "time": 1789550368613.9895,
+      "uuid": "c62401c6-fc30-4167-b273-07de9fe78de3"
+    },
+    "3.Sprites\\Chung\\flower-icon-free-vector (1).png": {
+      "time": 1790846652096.3013,
+      "uuid": "c1e78636-c2f1-4238-9b1d-d004c501de8d"
+    },
+    "3.Sprites\\Chung\\fx_shine.png": {
+      "time": 1787305686000,
+      "uuid": "3a2088ea-6a0c-444f-80d2-79b46de2b546"
     },
     "3.Sprites\\Chung\\green_button.png": {
       "time": 1782359763208.6504,
@@ -851,6 +1216,22 @@
       "time": 1782359763211.868,
       "uuid": "089a1f34-0792-44c3-954a-8ab671aefec5"
     },
+    "3.Sprites\\Chung\\photo_2026-10-01_16-09-18.jpg": {
+      "time": 1790845761374.2146,
+      "uuid": "1dd801c2-123d-4c47-9705-daf7ea7720ba"
+    },
+    "3.Sprites\\Chung\\red2_ribbon.png": {
+      "time": 1788424400000,
+      "uuid": "5f69fc78-6873-48d6-9e6e-ebf0f506af6a"
+    },
+    "3.Sprites\\Chung\\SlotBG.png": {
+      "time": 1791451172241.6304,
+      "uuid": "c864c38b-855f-4fe5-a80b-f3905e999ecb"
+    },
+    "3.Sprites\\Chung\\Tap to Decor Fairy Land.png": {
+      "time": 1789540959284.9158,
+      "uuid": "2c464e2f-9a4b-435a-aa78-4931e10fa8e9"
+    },
     "3.Sprites\\Chung\\TapToDecor.png": {
       "time": 1785211727765.8147,
       "uuid": "ee247a59-6f6a-4b1f-a0d4-938507f99290"
@@ -859,9 +1240,133 @@
       "time": 1782359763203.632,
       "uuid": "ac9175b9-91cc-46e2-a155-9115434bc1da"
     },
+    "3.Sprites\\WinCard\\ShineRays.png": {
+      "time": 1791452571715.7383,
+      "uuid": "49cad4b1-07c6-4ef9-bfae-d7f5db99a410"
+    },
+    "3.Sprites\\WinCard\\White.png": {
+      "time": 1791452571715.7383,
+      "uuid": "71c86fe2-bde9-434f-ac65-a05233ba9f36"
+    },
+    "3.Sprites\\WinCard\\WinRibbon.png": {
+      "time": 1791452570788.505,
+      "uuid": "cbcfe9d6-0aee-4ea3-9fd9-e7af30be7c56"
+    },
+    "4.Sounds\\BGM\\2026-09-17 14-40-20 (mp3cut.net).mp3": {
+      "time": 1789634732039.425,
+      "uuid": "97cb1ca5-d4ae-47d5-bc33-14c1b2b53b0c"
+    },
+    "4.Sounds\\BGM\\2026-10-08 11-58-36 (mp3cut.net).mp3": {
+      "time": 1791435631312.4993,
+      "uuid": "e1026b44-dbc1-46fb-b40b-daeda274d764"
+    },
     "4.Sounds\\BGM\\Fantasy Fairy Tale Music Magical ✦ Ethereal Fantasy Music ✦ 528 hz ✦ No copyright - moonangel (mp3cut.net) (1).mp3": {
       "time": 1789634733054.785,
       "uuid": "deb41301-a9a0-4e4d-aae6-86c9a29d164b"
+    },
+    "4.Sounds\\BGM\\snaptikvn_7474234972652555538 (mp3cut.net).mp3": {
+      "time": 1790844657049.6926,
+      "uuid": "20f60589-d35c-4248-8b6b-9f230f3337e2"
+    },
+    "8.Assets\\127. Spooky Pizza\\Ghost.png": {
+      "time": 1791429805363.11,
+      "uuid": "506b636a-1e30-4b20-a984-4bd58863a15b"
+    },
+    "0.Spines\\Ghosts\\char1\\char1.atlas.txt": {
+      "time": 1791444989921.979,
+      "uuid": "8cce5cdf-84a9-48f0-b8cd-6c3cf1e5c733"
+    },
+    "0.Spines\\Ghosts\\char1\\char1.json": {
+      "time": 1791444989912.31,
+      "uuid": "2d01e85f-a4ff-4467-b7ed-6ffc412775c1"
+    },
+    "0.Spines\\Ghosts\\char1\\char1.png": {
+      "time": 1791444989921.979,
+      "uuid": "52ac535d-8bc9-4ba1-8423-f29a0725beda"
+    },
+    "0.Spines\\Ghosts\\char2\\char2.atlas.txt": {
+      "time": 1791444989923.1233,
+      "uuid": "2c6df8fe-893a-4fe7-8e30-b36760d2de25"
+    },
+    "0.Spines\\Ghosts\\char2\\char2.json": {
+      "time": 1791444989923.1233,
+      "uuid": "1313c4f0-065b-43d0-8038-4227454dec8f"
+    },
+    "0.Spines\\Ghosts\\char2\\char2.png": {
+      "time": 1791444989924.243,
+      "uuid": "6f92ab7b-f947-47bb-b693-3a5c162e218e"
+    },
+    "0.Spines\\Ghosts\\char3\\char3.atlas.txt": {
+      "time": 1791444989947.4695,
+      "uuid": "99bbc408-0fd3-46bd-ba3c-43c1562d5015"
+    },
+    "0.Spines\\Ghosts\\char3\\char3.json": {
+      "time": 1791444989931.815,
+      "uuid": "0c51e6f4-ee3d-4322-a2ce-709eab50e946"
+    },
+    "0.Spines\\Ghosts\\char3\\char3.png": {
+      "time": 1791444989949.027,
+      "uuid": "a4d32630-7c09-4fc0-ae88-da45bf7ba0af"
+    },
+    "0.Spines\\Ghosts\\char4\\char4.atlas.txt": {
+      "time": 1791444989963.5186,
+      "uuid": "3819c36b-9cb2-4b57-94c1-c228e9e3f916"
+    },
+    "0.Spines\\Ghosts\\char4\\char4.json": {
+      "time": 1791444989955.9817,
+      "uuid": "f810c089-7e6f-4b2e-a816-3f61c1e75c4d"
+    },
+    "0.Spines\\Ghosts\\char4\\char4.png": {
+      "time": 1791444989964.5186,
+      "uuid": "c1cee28d-c4f7-42ac-9d25-cadeb6192f12"
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0000.png": {
+      "time": 1791444848712.315,
+      "uuid": "34e999f6-826e-47d0-bf88-782f0302d32f"
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0001.png": {
+      "time": 1791444848712.315,
+      "uuid": "da8747c4-b5a4-4103-9b48-58848a8435c3"
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0002.png": {
+      "time": 1791444848714.5835,
+      "uuid": "0c8e6fbf-ee1e-41b5-b4f5-917ab417f197"
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0003.png": {
+      "time": 1791444848724.1233,
+      "uuid": "a85e6319-255a-4bbe-bd85-a2d1576ef5a5"
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0004.png": {
+      "time": 1791444848724.1233,
+      "uuid": "1045c491-50d1-4fb4-a875-1040f384e291"
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0005.png": {
+      "time": 1791444848724.1233,
+      "uuid": "91385e06-a670-49a7-80f3-934adab339d4"
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0006.png": {
+      "time": 1791444848725.9397,
+      "uuid": "2d209a1c-fb1d-4d0f-a354-0179024341b2"
+    },
+    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0030.png": {
+      "time": 1791444848726.9473,
+      "uuid": "84416ebd-a39d-4f0a-a9f1-f8e4bf61596f"
+    },
+    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0031.png": {
+      "time": 1791444848727.9458,
+      "uuid": "65b5dc0a-c6fe-46f8-a27f-0a7aef2bbc8a"
+    },
+    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0032.png": {
+      "time": 1791444848729.0496,
+      "uuid": "27a5bba4-3fe8-4180-baf6-b740433d61ef"
+    },
+    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0033.png": {
+      "time": 1791444848730.059,
+      "uuid": "f7ab85d7-b23b-4d38-b51b-519ff8e1d85b"
+    },
+    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0034.png": {
+      "time": 1791444848730.059,
+      "uuid": "e107ca88-2df7-40e3-97d9-73328f818594"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Unity_vs_Cocos_CheatSheet.md": {
       "time": 1785902857187.3293,
@@ -967,6 +1472,14 @@
       "time": 1778474132006.722,
       "uuid": "8021b5ab-eed6-472b-b132-ba4bf5fbabf2"
     },
+    "UnityParticles\\Particle_System\\materials\\lightfx_0.mtl": {
+      "time": 1790828352625.665,
+      "uuid": "ec2a040f-1f04-452d-b90f-a53a1ab0d1a8"
+    },
+    "UnityParticles\\Particle_System\\textures\\53_fire_fx.png": {
+      "time": 1776244629690.4932,
+      "uuid": "85312b50-a475-4439-b95a-3f9586523f6d"
+    },
     "0.Spines.meta": {
       "time": 1789031320619.3438
     },
@@ -991,29 +1504,35 @@
     "7.Scripts.meta": {
       "time": 1789031320623.3547
     },
+    "8.Assets.meta": {
+      "time": 1791429805361.0522
+    },
     "8.Models.meta": {
       "time": 1789031320624.3542
     },
     "9.Asset.meta": {
       "time": 1789031320624.3542
     },
+    "0.Spines\\box-ingame.atlas.txt.meta": {
+      "time": 1789031507606.1143
+    },
+    "0.Spines\\box-ingame.json.meta": {
+      "time": 1789031507629.8035
+    },
     "1.Animations\\Arrow.anim.meta": {
       "time": 1789031320665.498
-    },
-    "1.Animations\\Box.anim.meta": {
-      "time": 1789031320673.037
     },
     "1.Animations\\Box-001.anim.meta": {
       "time": 1789031320667.5151
     },
-    "1.Animations\\Flicker.anim.meta": {
-      "time": 1789031320666.5054
+    "1.Animations\\Box.anim.meta": {
+      "time": 1789031320673.037
     },
     "1.Animations\\Fail.anim.meta": {
       "time": 1789031320668.5166
     },
-    "1.Animations\\OffHightlight.anim.meta": {
-      "time": 1789031320685.9016
+    "1.Animations\\Flicker.anim.meta": {
+      "time": 1789031320666.5054
     },
     "1.Animations\\Hand.anim.meta": {
       "time": 1789031320691.412
@@ -1021,14 +1540,23 @@
     "1.Animations\\Hightlight.anim.meta": {
       "time": 1789031320688.899
     },
-    "1.Animations\\Scale.anim.meta": {
-      "time": 1789031320691.412
+    "0.Spines\\box-ingame.png.meta": {
+      "time": 1789031507650.317
+    },
+    "1.Animations\\OffHightlight.anim.meta": {
+      "time": 1789031320685.9016
+    },
+    "1.Animations\\Slot.anim.meta": {
+      "time": 1789031320705.6885
+    },
+    "1.Animations\\FlowerSway.anim.meta": {
+      "time": 1790829670209.3523
     },
     "1.Animations\\Place.anim.meta": {
       "time": 1789031320687.899
     },
-    "1.Animations\\Slot.anim.meta": {
-      "time": 1789031320705.6885
+    "1.Animations\\Scale.anim.meta": {
+      "time": 1789031320691.412
     },
     "1.Animations\\Star.anim.meta": {
       "time": 1789031320705.6885
@@ -1051,10 +1579,13 @@
     "2.Fonts\\Anton.ttf.meta": {
       "time": 1789327730000
     },
+    "2.Fonts\\Cute-Dino.ttf.meta": {
+      "time": 1789327730000
+    },
     "2.Fonts\\BodoAmat.ttf.meta": {
       "time": 1789327730000
     },
-    "2.Fonts\\Cute-Dino.ttf.meta": {
+    "2.Fonts\\LiberationSans.ttf.meta": {
       "time": 1789327730000
     },
     "2.Fonts\\DVN-Fredoka-Bold.ttf.meta": {
@@ -1063,11 +1594,23 @@
     "2.Fonts\\sui-generis-rg_dynamic.ttf.meta": {
       "time": 1789327730000
     },
-    "2.Fonts\\LiberationSans.ttf.meta": {
-      "time": 1789327730000
-    },
     "2.Fonts\\TUV-PoetsenOne.ttf.meta": {
       "time": 1789327730000
+    },
+    "4.Sounds\\1001(2).MP3.meta": {
+      "time": 1790847864516.5193
+    },
+    "4.Sounds\\BookOpen.mp3.meta": {
+      "time": 1789634734671.0784
+    },
+    "2.Fonts\\LilitaOne-Regular.ttf.meta": {
+      "time": 1789327730000
+    },
+    "4.Sounds\\1001.MP3.meta": {
+      "time": 1790846774050.1233
+    },
+    "4.Sounds\\ClickBox.mp3.meta": {
+      "time": 1789634734670.0708
     },
     "4.Sounds\\clothes-drop.mp3.meta": {
       "time": 1787369469687.2158
@@ -1075,32 +1618,104 @@
     "4.Sounds\\Cloth.mp3.meta": {
       "time": 1787369383448.4358
     },
+    "4.Sounds\\Curtain Open v1.mp3.meta": {
+      "time": 1789634734673.5964
+    },
+    "4.Sounds\\Cute Kitty Monster Voice 02.mp3.meta": {
+      "time": 1789548294775.658
+    },
+    "4.Sounds\\DropMetal.mp3.meta": {
+      "time": 1789634734681.6675
+    },
+    "4.Sounds\\Cute Kitty Monster Voice 01.mp3.meta": {
+      "time": 1789548294763.6013
+    },
+    "4.Sounds\\Dramatic Piano Sound Effect - Brooklynn The Cartoon Girl.mp3.meta": {
+      "time": 1791511839324.3994
+    },
+    "4.Sounds\\ghostLaugh.mp3.meta": {
+      "time": 1791514651585.514
+    },
+    "4.Sounds\\fire-torch-whoosh-3-190299.mp3.meta": {
+      "time": 1791514651582.5154
+    },
+    "4.Sounds\\fire-sound.mp3.meta": {
+      "time": 1791514651583.5176
+    },
+    "4.Sounds\\Glass.mp3.meta": {
+      "time": 1789634734685.495
+    },
+    "4.Sounds\\DropOnFloor.mp3.meta": {
+      "time": 1789634734668.913
+    },
+    "4.Sounds\\GoldChest.MP3.meta": {
+      "time": 1791451384935.736
+    },
     "4.Sounds\\Grass.mp3.meta": {
       "time": 1787369625340.7224
     },
-    "5.Prefabs\\BlinkEffect.prefab.meta": {
-      "time": 1789031320833.0293
+    "4.Sounds\\PickItem.mp3.meta": {
+      "time": 1789634734690.0342
+    },
+    "4.Sounds\\OBJECT_METAL_SHELL_Storage_Place_Table_Soft_03.mp3.meta": {
+      "time": 1790846454765.4053
+    },
+    "4.Sounds\\MetalObjectSetDown_BW.9258.mp3.meta": {
+      "time": 1790846454766.4111
+    },
+    "4.Sounds\\SmallWood.mp3.meta": {
+      "time": 1789634734685.495
+    },
+    "4.Sounds\\WaterDrop.mp3.meta": {
+      "time": 1789629741456.346
     },
     "4.Sounds\\HeavyWood.mp3.meta": {
       "time": 1787369312378.8994
     },
+    "4.Sounds\\Window.mp3.meta": {
+      "time": 1789630202554.804
+    },
     "4.Sounds\\WoodenDoor Small.mp3.meta": {
       "time": 1787371149904.9692
     },
-    "5.Prefabs\\Star.prefab.meta": {
-      "time": 1789031320839.0288
+    "5.Prefabs\\BlinkEffect.prefab.meta": {
+      "time": 1789031320833.0293
     },
-    "6.Scenes\\PlayScene.scene.meta": {
-      "time": 1789031320844.5466
+    "5.Prefabs\\LightFx.prefab.meta": {
+      "time": 1790832433240.757
+    },
+    "4.Sounds\\Rock.mp3.meta": {
+      "time": 1789461483776.8286
+    },
+    "8.Assets\\127. Spooky Pizza.meta": {
+      "time": 1791429805362.0876
+    },
+    "5.Prefabs\\Slider.prefab.meta": {
+      "time": 1790825145563.7366
     },
     "1.Animations\\BlinkEffect\\BlinkEffect.anim.meta": {
       "time": 1789031320923.5676
     },
+    "6.Scenes\\PlayScene.scene.meta": {
+      "time": 1789031320844.5466
+    },
+    "5.Prefabs\\Star.prefab.meta": {
+      "time": 1789031320839.0288
+    },
+    "1.Animations\\Gameplay\\GhostFly.anim.meta": {
+      "time": 1791429805357.9653
+    },
+    "5.Prefabs\\Ghost.prefab.meta": {
+      "time": 1791429805360.0188
+    },
     "1.Animations\\handHint\\handClick.anim.meta": {
       "time": 1789031320978.6953
     },
-    "3.Sprites\\Chung\\Install.png.meta": {
-      "time": 1789634601905.1526
+    "1.Animations\\Install\\Install.anim.meta": {
+      "time": 1789548737220.9097
+    },
+    "1.Animations\\TapToDecor\\TapToDecor.anim.meta": {
+      "time": 1789548547799.8354
     },
     "3.Sprites\\Chung\\green_button.png.meta": {
       "time": 1791452607765.68
@@ -1108,38 +1723,152 @@
     "3.Sprites\\Chung\\Hand.png.meta": {
       "time": 1789634601895.5342
     },
-    "3.Sprites\\Chung\\TapToDecor.png.meta": {
-      "time": 1789634601933.6553
+    "3.Sprites\\Chung\\flower-icon-free-vector (1).png.meta": {
+      "time": 1790846687482.4482
+    },
+    "3.Sprites\\Chung\\fx_shine.png.meta": {
+      "time": 1791171188721.4343
+    },
+    "3.Sprites\\Chung\\Install.png.meta": {
+      "time": 1789634601905.1526
+    },
+    "3.Sprites\\Chung\\photo_2026-10-01_16-09-18.jpg.meta": {
+      "time": 1790845770852.695
+    },
+    "3.Sprites\\Chung\\red2_ribbon.png.meta": {
+      "time": 1791176437374.1074
     },
     "3.Sprites\\Chung\\Logo.png.meta": {
       "time": 1789634601914.8154
     },
+    "3.Sprites\\Chung\\SlotBG.png.meta": {
+      "time": 1791451123009.8691
+    },
+    "3.Sprites\\Chung\\Tap to Decor Fairy Land.png.meta": {
+      "time": 1789634601923.8892
+    },
+    "3.Sprites\\Chung\\TapToDecor.png.meta": {
+      "time": 1789634601933.6553
+    },
     "3.Sprites\\Chung\\WhiteBar.png.meta": {
       "time": 1789634601941.7578
+    },
+    "3.Sprites\\WinCard\\White.png.meta": {
+      "time": 1791452606565.8545
+    },
+    "4.Sounds\\BGM\\2026-09-17 14-40-20 (mp3cut.net).mp3.meta": {
+      "time": 1789630963528.466
+    },
+    "3.Sprites\\WinCard\\WinRibbon.png.meta": {
+      "time": 1791452606569.3826
+    },
+    "3.Sprites\\WinCard\\ShineRays.png.meta": {
+      "time": 1791452606582.041
     },
     "4.Sounds\\BGM\\Fantasy Fairy Tale Music Magical ✦ Ethereal Fantasy Music ✦ 528 hz ✦ No copyright - moonangel (mp3cut.net) (1).mp3.meta": {
       "time": 1787369057658.0615
     },
-    "7.Scripts\\MyScript\\ScriptTemplate\\Unity_vs_Cocos_CheatSheet.md.meta": {
-      "time": 1789031322650.2417
+    "0.Spines\\Ghosts\\char1\\char1.atlas.txt.meta": {
+      "time": 1791444989923.1233
+    },
+    "4.Sounds\\BGM\\2026-10-08 11-58-36 (mp3cut.net).mp3.meta": {
+      "time": 1791453359983.4558
+    },
+    "0.Spines\\Ghosts\\char1\\char1.json.meta": {
+      "time": 1791444989923.1233
+    },
+    "0.Spines\\Ghosts\\char2\\char2.atlas.txt.meta": {
+      "time": 1791444989924.243
+    },
+    "0.Spines\\Ghosts\\char1\\char1.png.meta": {
+      "time": 1791444990779.6187
+    },
+    "8.Assets\\127. Spooky Pizza\\Ghost.png.meta": {
+      "time": 1791429805363.11
+    },
+    "4.Sounds\\BGM\\snaptikvn_7474234972652555538 (mp3cut.net).mp3.meta": {
+      "time": 1790844684183.3174
+    },
+    "0.Spines\\Ghosts\\char3\\char3.atlas.txt.meta": {
+      "time": 1791444989949.027
+    },
+    "0.Spines\\Ghosts\\char2\\char2.json.meta": {
+      "time": 1791444989924.243
+    },
+    "0.Spines\\Ghosts\\char3\\char3.json.meta": {
+      "time": 1791444989949.027
+    },
+    "0.Spines\\Ghosts\\char4\\char4.atlas.txt.meta": {
+      "time": 1791444989965.5203
+    },
+    "0.Spines\\Ghosts\\char2\\char2.png.meta": {
+      "time": 1791444990788.7563
+    },
+    "0.Spines\\Ghosts\\char4\\char4.json.meta": {
+      "time": 1791444989965.5203
+    },
+    "0.Spines\\Ghosts\\char4\\char4.png.meta": {
+      "time": 1791444990819.7444
+    },
+    "0.Spines\\Ghosts\\char3\\char3.png.meta": {
+      "time": 1791444990803.4265
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0000.png.meta": {
+      "time": 1791444848712.315
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0001.png.meta": {
+      "time": 1791444848714.0706
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0002.png.meta": {
+      "time": 1791444848714.5835
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0004.png.meta": {
+      "time": 1791444848724.1233
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0003.png.meta": {
+      "time": 1791444848724.1233
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0006.png.meta": {
+      "time": 1791444848726.5972
+    },
+    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0005.png.meta": {
+      "time": 1791444848725.9397
+    },
+    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0030.png.meta": {
+      "time": 1791444848726.9473
+    },
+    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0031.png.meta": {
+      "time": 1791444848727.9458
     },
     "8.Models\\Textures\\Cloud\\Cloud.mtl.meta": {
       "time": 1789031322648.2283
     },
+    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0033.png.meta": {
+      "time": 1791444848730.059
+    },
+    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0032.png.meta": {
+      "time": 1791444848729.0496
+    },
+    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0034.png.meta": {
+      "time": 1791444848731.0583
+    },
+    "7.Scripts\\MyScript\\ScriptTemplate\\Unity_vs_Cocos_CheatSheet.md.meta": {
+      "time": 1789031322650.2417
+    },
     "8.Models\\Textures\\Cloud\\cloud1.png.meta": {
       "time": 1789031322716.325
-    },
-    "8.Models\\Textures\\Cloud\\cloud2.png.meta": {
-      "time": 1789031322701.283
     },
     "8.Models\\Textures\\Cloud\\cloud4.png.meta": {
       "time": 1789031322697.6526
     },
-    "8.Models\\Textures\\Cloud\\cloud3.png.meta": {
-      "time": 1789031322700.2754
+    "8.Models\\Textures\\Cloud\\cloud2.png.meta": {
+      "time": 1789031322701.283
     },
     "8.Models\\Textures\\Cloud\\cloud_2x2_hardshadow.png.meta": {
       "time": 1789031322758.077
+    },
+    "8.Models\\Textures\\Cloud\\cloud3.png.meta": {
+      "time": 1789031322700.2754
     },
     "8.Models\\Textures\\Merge\\Star.mtl.meta": {
       "time": 1789031322829.2732
@@ -1150,17 +1879,17 @@
     "8.Models\\Textures\\Merge\\sparkle3.png.meta": {
       "time": 1789031322779.4614
     },
-    "8.Models\\Textures\\Merge\\Star.png.meta": {
-      "time": 1789031322858.2063
-    },
     "8.Models\\Textures\\Merge\\ring.png.meta": {
       "time": 1789031322830.271
     },
-    "8.Models\\Textures\\Wind\\l1.png.meta": {
-      "time": 1789031322862.264
+    "8.Models\\Textures\\Merge\\Star.png.meta": {
+      "time": 1789031322858.2063
     },
     "8.Models\\Textures\\Merge\\glow1.png.meta": {
       "time": 1789031322845.509
+    },
+    "8.Models\\Textures\\Wind\\l1.png.meta": {
+      "time": 1789031322862.264
     },
     "8.Models\\Textures\\Wind\\leaves-001.mtl.meta": {
       "time": 1789031322903.6262
@@ -1174,17 +1903,14 @@
     "8.Models\\Textures\\Wind\\l2.png.meta": {
       "time": 1789031322863.2742
     },
-    "8.Models\\Textures\\Wind\\l3.png.meta": {
-      "time": 1789031322876.5205
+    "8.Models\\Textures\\Wind\\leaves.mtl.meta": {
+      "time": 1789031322927.8604
     },
     "8.Models\\Textures\\Wind\\Smoke.mtl.meta": {
       "time": 1789031322926.5205
     },
-    "8.Models\\Textures\\Wind\\leaves.mtl.meta": {
-      "time": 1789031322927.8604
-    },
-    "8.Models\\Textures\\Wind\\Leaf 2.png.meta": {
-      "time": 1789031322927.8604
+    "8.Models\\Textures\\Wind\\l3.png.meta": {
+      "time": 1789031322876.5205
     },
     "8.Models\\Textures\\Wind\\trail.mtl.meta": {
       "time": 1789031322963.217
@@ -1192,1593 +1918,1336 @@
     "8.Models\\Textures\\Wind\\leaf_3x3.png.meta": {
       "time": 1789031322940.519
     },
+    "UnityParticles\\Particle_System\\materials\\lightfx_0.mtl.meta": {
+      "time": 1790828352636.0273
+    },
+    "8.Models\\Textures\\Wind\\Leaf 2.png.meta": {
+      "time": 1789031322927.8604
+    },
     "8.Models\\Textures\\Wind\\trail.png.meta": {
       "time": 1789031322951.6824
     },
     "8.Models\\Textures\\Wind\\smoke_dusty.png.meta": {
       "time": 1789031322970.6445
     },
-    "0.Spines\\box-ingame.atlas.txt.meta": {
-      "time": 1789031507606.1143
-    },
-    "0.Spines\\box-ingame.json.meta": {
-      "time": 1789031507629.8035
-    },
-    "0.Spines\\box-ingame.png.meta": {
-      "time": 1789031507650.317
-    },
-    "0.Spines\\box-ingame.atlas.txt": {
-      "time": 1787127548780.7395,
-      "uuid": "bbef0538-1321-41ba-9a28-c33966eacb72"
-    },
-    "0.Spines\\box-ingame.json": {
-      "time": 1787127548450.8716,
-      "uuid": "a88d3345-f98a-41cf-9490-e39152ccb566"
-    },
-    "0.Spines\\box-ingame.png": {
-      "time": 1787127548779.7415,
-      "uuid": "570e07bf-52e6-4351-84db-e35692c95cdd"
-    },
-    "7.Scripts\\Tool\\PlayableSDK.d.ts.meta": {
-      "time": 1788496541140.532
-    },
-    "7.Scripts\\Tool\\PlayableSDK.d.ts": {
-      "time": 1788497329278.0862,
-      "uuid": "b09562b8-0d1b-4470-a7b7-43d4b7892125"
-    },
-    "3.Sprites\\Chung\\Tap to Decor Fairy Land.png.meta": {
-      "time": 1789634601923.8892
-    },
-    "3.Sprites\\Chung\\Tap to Decor Fairy Land.png": {
-      "time": 1789540959284.9158,
-      "uuid": "2c464e2f-9a4b-435a-aa78-4931e10fa8e9"
-    },
-    "7.Scripts\\MyScript\\pipeline\\CaptureNodeTool.ts.meta": {
-      "time": 1789542468324.0454
-    },
-    "7.Scripts\\MyScript\\pipeline\\CaptureNodeTool.ts": {
-      "time": 1789542774195.4373,
-      "uuid": "f0198f78-4f09-4308-bbae-851c9369a489"
-    },
-    "3.Sprites\\Captures.meta": {
-      "time": 1789543458954.0127
-    },
-    "3.Sprites\\Captures": {
-      "time": 1789543501772.6848,
-      "uuid": "cd5cb729-eb3d-4740-9984-ae0a52366814"
-    },
-    "7.Scripts\\MyScript\\pipeline\\GoToTargetTool.ts.meta": {
-      "time": 1789543596257.4329
-    },
-    "7.Scripts\\MyScript\\pipeline\\GoToTargetTool.ts": {
-      "time": 1789543588843.417,
-      "uuid": "75179a24-92e6-43d2-8bf9-e53df105226e"
-    },
-    "7.Scripts\\MyScript\\pipeline\\BringTargetsToTopTool.ts.meta": {
-      "time": 1789546104986.201
-    },
-    "7.Scripts\\MyScript\\pipeline\\BringTargetsToTopTool.ts": {
-      "time": 1789546098659.813,
-      "uuid": "f3928306-f53b-4edd-9a35-270061ed1ad5"
-    },
-    "7.Scripts\\MyScript\\pipeline\\LockImageNodesTool.ts.meta": {
-      "time": 1789547093669.8696
-    },
-    "7.Scripts\\MyScript\\pipeline\\LockImageNodesTool.ts": {
-      "time": 1789547086565.3447,
-      "uuid": "8d976d68-8e93-4723-afa8-9d5ca6843614"
-    },
-    "2.Fonts\\LilitaOne-Regular.ttf.meta": {
-      "time": 1789327730000
-    },
-    "2.Fonts\\LilitaOne-Regular.ttf": {
-      "time": 1789327730000,
-      "uuid": "43451b8a-77f6-47cc-8b77-4338c5656fd2"
-    },
-    "4.Sounds\\Cute Kitty Monster Voice 01.mp3.meta": {
-      "time": 1789548294763.6013
-    },
-    "4.Sounds\\Cute Kitty Monster Voice 02.mp3.meta": {
-      "time": 1789548294775.658
-    },
-    "4.Sounds\\Cute Kitty Monster Voice 01.mp3": {
-      "time": 1789634733698.1401,
-      "uuid": "9d82fea5-c5e1-4838-a10e-0fbefa44356c"
-    },
-    "4.Sounds\\Cute Kitty Monster Voice 02.mp3": {
-      "time": 1789634733775.6604,
-      "uuid": "77303dd5-d31c-4d39-a237-0b55ec90c38b"
-    },
-    "1.Animations\\TapToDecor.meta": {
-      "time": 1789548547768.5334
-    },
-    "1.Animations\\TapToDecor": {
-      "time": 1789548547769.5354,
-      "uuid": "9219fece-fc89-4206-bf47-92fef4bfcae2"
-    },
-    "1.Animations\\TapToDecor\\TapToDecor.anim.meta": {
-      "time": 1789548547799.8354
-    },
-    "1.Animations\\TapToDecor\\TapToDecor.anim": {
-      "time": 1789550368613.9895,
-      "uuid": "c62401c6-fc30-4167-b273-07de9fe78de3"
-    },
-    "1.Animations\\Install.meta": {
-      "time": 1789548737193.7493
-    },
-    "1.Animations\\Install": {
-      "time": 1789548737194.2563,
-      "uuid": "eab92d9e-b8c6-4324-9e3b-45e7286f7c96"
-    },
-    "1.Animations\\Install\\Install.anim.meta": {
-      "time": 1789548737220.9097
-    },
-    "1.Animations\\Install\\Install.anim": {
-      "time": 1789552676073.8003,
-      "uuid": "7d03220a-9a86-46eb-8cbe-071f12fdb4fa"
-    },
-    "7.Scripts\\MyScript\\pipeline\\FollowNode.ts.meta": {
-      "time": 1789629187484.405
-    },
-    "7.Scripts\\MyScript\\pipeline\\GridArrangeTool.ts.meta": {
-      "time": 1789629187484.405
-    },
-    "7.Scripts\\MyScript\\pipeline\\FollowNode.ts": {
-      "time": 1790842708909.2986,
-      "uuid": "4f5fb12f-49c9-4c2b-bd72-f5e96090433c"
-    },
-    "7.Scripts\\MyScript\\pipeline\\GridArrangeTool.ts": {
-      "time": 1789629187484.405,
-      "uuid": "2019433c-1f20-49ae-96f8-482e6bba1de3"
-    },
-    "4.Sounds\\WaterDrop.mp3.meta": {
-      "time": 1789629741456.346
-    },
-    "4.Sounds\\WaterDrop.mp3": {
-      "time": 1789634734324.088,
-      "uuid": "1f1fe5a1-c894-424a-8a73-90ab623eca26"
-    },
-    "4.Sounds\\Window.mp3.meta": {
-      "time": 1789630202554.804
-    },
-    "4.Sounds\\Window.mp3": {
-      "time": 1789634734383.042,
-      "uuid": "ba86cebe-4d38-4443-bdd2-0f3817a8a500"
-    },
-    "4.Sounds\\BGM\\2026-09-17 14-40-20 (mp3cut.net).mp3.meta": {
-      "time": 1789630963528.466
-    },
-    "4.Sounds\\BGM\\2026-09-17 14-40-20 (mp3cut.net).mp3": {
-      "time": 1789634732039.425,
-      "uuid": "97cb1ca5-d4ae-47d5-bc33-14c1b2b53b0c"
-    },
-    "4.Sounds\\BookOpen.mp3.meta": {
-      "time": 1789634734671.0784
-    },
-    "4.Sounds\\ClickBox.mp3.meta": {
-      "time": 1789634734670.0708
-    },
-    "4.Sounds\\Curtain Open v1.mp3.meta": {
-      "time": 1789634734673.5964
-    },
-    "4.Sounds\\DropMetal.mp3.meta": {
-      "time": 1789634734681.6675
-    },
-    "4.Sounds\\DropOnFloor.mp3.meta": {
-      "time": 1789634734668.913
-    },
-    "4.Sounds\\Glass.mp3.meta": {
-      "time": 1789634734685.495
-    },
-    "4.Sounds\\PickItem.mp3.meta": {
-      "time": 1789634734690.0342
-    },
-    "4.Sounds\\SmallWood.mp3.meta": {
-      "time": 1789634734685.495
-    },
-    "4.Sounds\\DropOnFloor.mp3": {
-      "time": 1789634733902.8367,
-      "uuid": "5ae6d90a-6fb6-4eee-9b25-8cbe0af402dc"
-    },
-    "4.Sounds\\ClickBox.mp3": {
-      "time": 1789634733325.6624,
-      "uuid": "02842ae9-80e4-4a46-8329-dec48c04553b"
-    },
-    "4.Sounds\\BookOpen.mp3": {
-      "time": 1789634733266.0095,
-      "uuid": "ffb6a91e-943b-4118-9561-0c6feb8b9b45"
-    },
-    "4.Sounds\\Curtain Open v1.mp3": {
-      "time": 1789634733614.587,
-      "uuid": "ff8b42ea-325d-4827-a60e-5061f68ee560"
-    },
-    "4.Sounds\\DropMetal.mp3": {
-      "time": 1789634733841.2507,
-      "uuid": "5b757b2e-08e5-4f99-9d72-ab66651e8cb1"
-    },
-    "4.Sounds\\Glass.mp3": {
-      "time": 1789634733982.6528,
-      "uuid": "6a23e02d-9056-4d9a-957a-15dc635c17a1"
-    },
-    "4.Sounds\\SmallWood.mp3": {
-      "time": 1789634734238.2656,
-      "uuid": "363f6949-5969-4b33-85b6-42cf5b39704b"
-    },
-    "4.Sounds\\PickItem.mp3": {
-      "time": 1789634734183.8005,
-      "uuid": "cf290993-bd80-4b5d-9467-489786c65616"
-    },
-    "5.Prefabs\\Slider.prefab.meta": {
-      "time": 1790825145563.7366
-    },
-    "5.Prefabs\\Slider.prefab": {
-      "time": 1790825145562.735,
-      "uuid": "e1637dc2-4f7f-442d-ad5d-edd8061fea31"
-    },
-    "UnityParticles.meta": {
-      "time": 1790828352448.6245
-    },
-    "UnityParticles": {
-      "time": 1790828352515.5198,
-      "uuid": "d96f422c-af62-42b3-82d3-5c38fa9de206"
-    },
-    "UnityParticles\\Particle_System.meta": {
-      "time": 1790828352521.035
-    },
-    "UnityParticles\\Particle_System": {
-      "time": 1790828352574.74,
-      "uuid": "5c58212e-2651-4f2f-a3b2-0835cf7725f6"
-    },
-    "UnityParticles\\Particle_System\\textures.meta": {
-      "time": 1790828352566.3347
-    },
-    "UnityParticles\\Particle_System\\textures": {
-      "time": 1790828352590.2903,
-      "uuid": "a0b06987-c957-40d9-ad39-3991c04b512d"
-    },
-    "UnityParticles\\Particle_System\\materials.meta": {
-      "time": 1790828352581.5425
-    },
-    "UnityParticles\\Particle_System\\materials": {
-      "time": 1790828352625.665,
-      "uuid": "af58a056-0e13-4b47-8a37-27f66660104a"
-    },
     "UnityParticles\\Particle_System\\textures\\53_fire_fx.png.meta": {
       "time": 1790839137647.7493
     },
-    "UnityParticles\\Particle_System\\textures\\53_fire_fx.png": {
-      "time": 1776244629690.4932,
-      "uuid": "85312b50-a475-4439-b95a-3f9586523f6d"
-    },
-    "UnityParticles\\Particle_System\\materials\\lightfx_0.mtl.meta": {
-      "time": 1790828352636.0273
-    },
-    "UnityParticles\\Particle_System\\materials\\lightfx_0.mtl": {
-      "time": 1790828352625.665,
-      "uuid": "ec2a040f-1f04-452d-b90f-a53a1ab0d1a8"
-    },
-    "1.Animations\\FlowerSway.anim.meta": {
-      "time": 1790829670209.3523
-    },
-    "1.Animations\\FlowerSway.anim": {
-      "time": 1790830245755.899,
-      "uuid": "2608befc-4418-42d4-b8a7-2aa69d85b73f"
-    },
-    "5.Prefabs\\LightFx.prefab.meta": {
-      "time": 1790832433240.757
-    },
-    "5.Prefabs\\LightFx.prefab": {
-      "time": 1790839476412.3066,
-      "uuid": "e455b93a-f1b2-4e22-a4df-750c0f71b8ef"
-    },
-    "4.Sounds\\BGM\\snaptikvn_7474234972652555538 (mp3cut.net).mp3.meta": {
-      "time": 1790844684183.3174
-    },
-    "4.Sounds\\BGM\\snaptikvn_7474234972652555538 (mp3cut.net).mp3": {
-      "time": 1790844657049.6926,
-      "uuid": "20f60589-d35c-4248-8b6b-9f230f3337e2"
-    },
-    "3.Sprites\\Chung\\photo_2026-10-01_16-09-18.jpg.meta": {
-      "time": 1790845770852.695
-    },
-    "3.Sprites\\Chung\\photo_2026-10-01_16-09-18.jpg": {
-      "time": 1790845761374.2146,
-      "uuid": "1dd801c2-123d-4c47-9705-daf7ea7720ba"
-    },
-    "4.Sounds\\MetalObjectSetDown_BW.9258.mp3.meta": {
-      "time": 1790846454766.4111
-    },
-    "4.Sounds\\OBJECT_METAL_SHELL_Storage_Place_Table_Soft_03.mp3.meta": {
-      "time": 1790846454765.4053
-    },
-    "4.Sounds\\OBJECT_METAL_SHELL_Storage_Place_Table_Soft_03.mp3": {
-      "time": 1790846454668.839,
-      "uuid": "e21c2e91-e007-4bb4-82e7-fa885a0b7f66"
-    },
-    "4.Sounds\\MetalObjectSetDown_BW.9258.mp3": {
-      "time": 1790846454737.4656,
-      "uuid": "4d9fa55f-8729-40e1-a387-a7ca9cbc2a1e"
-    },
-    "3.Sprites\\Chung\\flower-icon-free-vector (1).png.meta": {
-      "time": 1790846687482.4482
-    },
-    "3.Sprites\\Chung\\flower-icon-free-vector (1).png": {
-      "time": 1790846652096.3013,
-      "uuid": "c1e78636-c2f1-4238-9b1d-d004c501de8d"
-    },
-    "4.Sounds\\1001.MP3.meta": {
-      "time": 1790846774050.1233
-    },
-    "4.Sounds\\1001.MP3": {
-      "time": 1790846757306.3723,
-      "uuid": "36f9559d-0317-42ef-8986-bb3db27ef31c"
-    },
-    "4.Sounds\\1001(2).MP3.meta": {
-      "time": 1790847864516.5193
-    },
-    "4.Sounds\\1001(2).MP3": {
-      "time": 1790847857910.881,
-      "uuid": "c7c83e84-73b0-4437-a9fb-6ba887578fad"
-    },
-    "1.Animations\\Gameplay": {
-      "time": 1791429805356.94,
-      "uuid": "4db1ee9a-c7fd-4d6e-8f25-9569b15f4ea5"
-    },
-    "1.Animations\\Gameplay.meta": {
-      "time": 1791429805352.8218
-    },
-    "8.Assets": {
-      "time": 1791429805362.0876,
-      "uuid": "5ef5907c-1316-4c1c-a51c-24bf1dff2276"
-    },
-    "5.Prefabs\\Ghost.prefab": {
-      "time": 1791429805360.0188,
-      "uuid": "ccd2fef3-2fc1-4c92-9c02-489353fd68c6"
-    },
-    "8.Assets\\127. Spooky Pizza": {
-      "time": 1791429805363.11,
-      "uuid": "0628b4cf-591a-437a-ba8a-128bdc37ddf6"
-    },
-    "1.Animations\\Gameplay\\GhostFly.anim": {
-      "time": 1791429805356.94,
-      "uuid": "13414093-8e16-489c-be7d-d8323ef1bd55"
-    },
-    "8.Assets\\127. Spooky Pizza\\Ghost.png": {
-      "time": 1791429805363.11,
-      "uuid": "506b636a-1e30-4b20-a984-4bd58863a15b"
-    },
-    "8.Assets.meta": {
-      "time": 1791429805361.0522
-    },
-    "8.Assets\\127. Spooky Pizza.meta": {
-      "time": 1791429805362.0876
-    },
-    "5.Prefabs\\Ghost.prefab.meta": {
-      "time": 1791429805360.0188
-    },
-    "1.Animations\\Gameplay\\GhostFly.anim.meta": {
-      "time": 1791429805357.9653
-    },
-    "8.Assets\\127. Spooky Pizza\\Ghost.png.meta": {
-      "time": 1791429805363.11
-    },
-    "7.Scripts\\Utils": {
-      "time": 1791452894479.3691,
-      "uuid": "2a85486d-eb51-4b6b-b8a9-36c6434b4a19"
-    },
-    "7.Scripts\\Utils\\RandomAnimationDelay.ts": {
-      "time": 1791429887398.8298,
-      "uuid": "3e350ee7-348e-442d-8b5b-50552648091c"
-    },
-    "7.Scripts\\Utils.meta": {
-      "time": 1791429887395.6392
-    },
-    "7.Scripts\\Utils\\RandomAnimationDelay.ts.meta": {
-      "time": 1791429887401.9807
-    },
-    "0.Spines\\Ghosts.meta": {
-      "time": 1791444920842.378
-    },
-    "0.Spines\\Ghosts\\char1.meta": {
-      "time": 1791444920849.3943
-    },
-    "0.Spines\\Ghosts\\char2.meta": {
-      "time": 1791444920849.3943
-    },
-    "0.Spines\\Ghosts\\char3.meta": {
-      "time": 1791444920850.4001
-    },
-    "0.Spines\\Ghosts\\char4.meta": {
-      "time": 1791444920850.4001
-    },
-    "0.Spines\\Ghosts": {
-      "time": 1791444920850.4001,
-      "uuid": "777296b3-f307-47f0-ba6d-9520e9008657"
-    },
-    "0.Spines\\Ghosts\\char1": {
-      "time": 1791444990698.5942,
-      "uuid": "cc0b418f-86e3-4fc1-a05f-b7feee907573"
-    },
-    "0.Spines\\Ghosts\\char2": {
-      "time": 1791444990710.262,
-      "uuid": "ee0c84ba-d087-49ae-a3ee-0cc6aa9cdc01"
-    },
-    "0.Spines\\Ghosts\\char3": {
-      "time": 1791444990720.3352,
-      "uuid": "3937fa59-7955-48e2-b2b7-496cb74a7bee"
-    },
-    "0.Spines\\Ghosts\\char4": {
-      "time": 1791444990731.9163,
-      "uuid": "591229da-5767-4c7b-b70a-2e87becdc6bc"
-    },
-    "3.Sprites\\Box.meta": {
-      "time": 1791444848712.315
-    },
-    "3.Sprites\\Box\\OpenClick.meta": {
-      "time": 1791444848712.315
-    },
-    "3.Sprites\\Box\\ReadyLoop.meta": {
-      "time": 1791444848726.9473
-    },
-    "3.Sprites\\Box": {
-      "time": 1791444848726.9473,
-      "uuid": "a12ae7d3-df1d-4ba8-a8e6-957d35166250"
-    },
-    "3.Sprites\\Box\\OpenClick": {
-      "time": 1791444848726.5972,
-      "uuid": "a13eae00-79ed-4fdd-b16c-668ee67e3f22"
-    },
-    "3.Sprites\\Box\\ReadyLoop": {
-      "time": 1791444848731.0583,
-      "uuid": "40471e17-3b69-4428-b021-40e39859ec95"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0000.png.meta": {
-      "time": 1791444848712.315
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0001.png.meta": {
-      "time": 1791444848714.0706
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0002.png.meta": {
-      "time": 1791444848714.5835
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0003.png.meta": {
-      "time": 1791444848724.1233
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0004.png.meta": {
-      "time": 1791444848724.1233
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0005.png.meta": {
-      "time": 1791444848725.9397
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0006.png.meta": {
-      "time": 1791444848726.5972
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0030.png.meta": {
-      "time": 1791444848726.9473
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0031.png.meta": {
-      "time": 1791444848727.9458
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0032.png.meta": {
-      "time": 1791444848729.0496
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0033.png.meta": {
-      "time": 1791444848730.059
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0034.png.meta": {
-      "time": 1791444848731.0583
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0000.png": {
-      "time": 1791444848712.315,
-      "uuid": "34e999f6-826e-47d0-bf88-782f0302d32f"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0002.png": {
-      "time": 1791444848714.5835,
-      "uuid": "0c8e6fbf-ee1e-41b5-b4f5-917ab417f197"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0001.png": {
-      "time": 1791444848712.315,
-      "uuid": "da8747c4-b5a4-4103-9b48-58848a8435c3"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0003.png": {
-      "time": 1791444848724.1233,
-      "uuid": "a85e6319-255a-4bbe-bd85-a2d1576ef5a5"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0004.png": {
-      "time": 1791444848724.1233,
-      "uuid": "1045c491-50d1-4fb4-a875-1040f384e291"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0005.png": {
-      "time": 1791444848724.1233,
-      "uuid": "91385e06-a670-49a7-80f3-934adab339d4"
-    },
-    "3.Sprites\\Box\\OpenClick\\frame_3-OPEN-click_0006.png": {
-      "time": 1791444848725.9397,
-      "uuid": "2d209a1c-fb1d-4d0f-a354-0179024341b2"
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0030.png": {
-      "time": 1791444848726.9473,
-      "uuid": "84416ebd-a39d-4f0a-a9f1-f8e4bf61596f"
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0031.png": {
-      "time": 1791444848727.9458,
-      "uuid": "65b5dc0a-c6fe-46f8-a27f-0a7aef2bbc8a"
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0032.png": {
-      "time": 1791444848729.0496,
-      "uuid": "27a5bba4-3fe8-4180-baf6-b740433d61ef"
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0033.png": {
-      "time": 1791444848730.059,
-      "uuid": "f7ab85d7-b23b-4d38-b51b-519ff8e1d85b"
-    },
-    "3.Sprites\\Box\\ReadyLoop\\frame_1-ready-Loop_0034.png": {
-      "time": 1791444848730.059,
-      "uuid": "e107ca88-2df7-40e3-97d9-73328f818594"
-    },
-    "0.Spines\\Ghosts\\char1\\char1.atlas.txt.meta": {
-      "time": 1791444989923.1233
-    },
-    "0.Spines\\Ghosts\\char1\\char1.json.meta": {
-      "time": 1791444989923.1233
-    },
-    "0.Spines\\Ghosts\\char1\\char1.png.meta": {
-      "time": 1791444990779.6187
-    },
-    "0.Spines\\Ghosts\\char2\\char2.atlas.txt.meta": {
-      "time": 1791444989924.243
-    },
-    "0.Spines\\Ghosts\\char2\\char2.json.meta": {
-      "time": 1791444989924.243
-    },
-    "0.Spines\\Ghosts\\char2\\char2.png.meta": {
-      "time": 1791444990788.7563
-    },
-    "0.Spines\\Ghosts\\char3\\char3.atlas.txt.meta": {
-      "time": 1791444989949.027
-    },
-    "0.Spines\\Ghosts\\char3\\char3.json.meta": {
-      "time": 1791444989949.027
-    },
-    "0.Spines\\Ghosts\\char3\\char3.png.meta": {
-      "time": 1791444990803.4265
-    },
-    "0.Spines\\Ghosts\\char4\\char4.atlas.txt.meta": {
-      "time": 1791444989965.5203
-    },
-    "0.Spines\\Ghosts\\char4\\char4.json.meta": {
-      "time": 1791444989965.5203
-    },
-    "0.Spines\\Ghosts\\char4\\char4.png.meta": {
-      "time": 1791444990819.7444
-    },
-    "0.Spines\\Ghosts\\char1\\char1.atlas.txt": {
-      "time": 1791444989921.979,
-      "uuid": "8cce5cdf-84a9-48f0-b8cd-6c3cf1e5c733"
-    },
-    "0.Spines\\Ghosts\\char2\\char2.atlas.txt": {
-      "time": 1791444989923.1233,
-      "uuid": "2c6df8fe-893a-4fe7-8e30-b36760d2de25"
-    },
-    "0.Spines\\Ghosts\\char3\\char3.atlas.txt": {
-      "time": 1791444989947.4695,
-      "uuid": "99bbc408-0fd3-46bd-ba3c-43c1562d5015"
-    },
-    "0.Spines\\Ghosts\\char1\\char1.png": {
-      "time": 1791444989921.979,
-      "uuid": "52ac535d-8bc9-4ba1-8423-f29a0725beda"
-    },
-    "0.Spines\\Ghosts\\char3\\char3.json": {
-      "time": 1791444989931.815,
-      "uuid": "0c51e6f4-ee3d-4322-a2ce-709eab50e946"
-    },
-    "0.Spines\\Ghosts\\char2\\char2.json": {
-      "time": 1791444989923.1233,
-      "uuid": "1313c4f0-065b-43d0-8038-4227454dec8f"
-    },
-    "0.Spines\\Ghosts\\char2\\char2.png": {
-      "time": 1791444989924.243,
-      "uuid": "6f92ab7b-f947-47bb-b693-3a5c162e218e"
-    },
-    "0.Spines\\Ghosts\\char1\\char1.json": {
-      "time": 1791444989912.31,
-      "uuid": "2d01e85f-a4ff-4467-b7ed-6ffc412775c1"
-    },
-    "0.Spines\\Ghosts\\char4\\char4.atlas.txt": {
-      "time": 1791444989963.5186,
-      "uuid": "3819c36b-9cb2-4b57-94c1-c228e9e3f916"
-    },
-    "0.Spines\\Ghosts\\char3\\char3.png": {
-      "time": 1791444989949.027,
-      "uuid": "a4d32630-7c09-4fc0-ae88-da45bf7ba0af"
-    },
-    "0.Spines\\Ghosts\\char4\\char4.json": {
-      "time": 1791444989955.9817,
-      "uuid": "f810c089-7e6f-4b2e-a816-3f61c1e75c4d"
-    },
-    "0.Spines\\Ghosts\\char4\\char4.png": {
-      "time": 1791444989964.5186,
-      "uuid": "c1cee28d-c4f7-42ac-9d25-cadeb6192f12"
-    },
-    "7.Scripts\\Utils\\SpineFollowSprite.ts.meta": {
-      "time": 1791444989971.0647
-    },
-    "7.Scripts\\Utils\\SpineFollowSprite.ts": {
-      "time": 1791444995914.687,
-      "uuid": "a67b6921-a62c-42ff-972e-fbff2f501453"
-    },
     "3.Sprites\\sprites.meta": {
-      "time": 1791445224798.0332
+      "time": 1791799262090.116
     },
     "3.Sprites\\sprites": {
-      "time": 1791445225574.4204,
-      "uuid": "21f02601-08de-4d8f-bbdc-ede2c8024e94"
+      "time": 1791799263272.0735,
+      "uuid": "71d968c9-ea23-49e3-8312-d4ab08fa7436"
     },
-    "3.Sprites\\sprites\\chair3.png.meta": {
-      "time": 1791445224915.2246
+    "3.Sprites\\sprites\\goi3_shadow.png.meta": {
+      "time": 1791799262197.9937
     },
-    "3.Sprites\\sprites\\chair3_sd.png.meta": {
-      "time": 1791445224914.2139
+    "3.Sprites\\sprites\\guongquantai.png.meta": {
+      "time": 1791799262201.994
     },
-    "3.Sprites\\sprites\\char1.png.meta": {
-      "time": 1791445224916.711
+    "3.Sprites\\sprites\\guongquantai_shadow.png.meta": {
+      "time": 1791799262192.2717
     },
-    "3.Sprites\\sprites\\char2.png.meta": {
-      "time": 1791445224919.8179
+    "3.Sprites\\sprites\\hopkeo.png.meta": {
+      "time": 1791799262194.994
     },
-    "3.Sprites\\sprites\\char3.png.meta": {
-      "time": 1791445224927.489
+    "3.Sprites\\sprites\\hopkeo_cut.png.meta": {
+      "time": 1791799262213.0017
     },
-    "3.Sprites\\sprites\\char4.png.meta": {
-      "time": 1791445224941.4849
+    "3.Sprites\\sprites\\hopkeo_shadow.png.meta": {
+      "time": 1791799262218.0059
     },
-    "3.Sprites\\sprites\\clock.png.meta": {
-      "time": 1791445224949.3203
+    "3.Sprites\\sprites\\kebingo.png.meta": {
+      "time": 1791799262227.5247
     },
-    "3.Sprites\\sprites\\clock_sd.png.meta": {
-      "time": 1791445224946.324
+    "3.Sprites\\sprites\\keo1.png.meta": {
+      "time": 1791799262229.5227
     },
-    "3.Sprites\\sprites\\decor-book.png.meta": {
-      "time": 1791445224961.4045
+    "3.Sprites\\sprites\\keo2.png.meta": {
+      "time": 1791799262235.531
     },
-    "3.Sprites\\sprites\\decor-book_sd.png.meta": {
-      "time": 1791445224958.872
+    "3.Sprites\\sprites\\khanvattrenghe.png.meta": {
+      "time": 1791799262243.5305
     },
-    "3.Sprites\\sprites\\decor1.png.meta": {
-      "time": 1791445224969.982
+    "3.Sprites\\sprites\\khanvattrenghe_shadow.png.meta": {
+      "time": 1791799262241.5332
     },
-    "3.Sprites\\sprites\\decor1_sd.png.meta": {
-      "time": 1791445224979.0054
+    "3.Sprites\\sprites\\khoithuoc.png.meta": {
+      "time": 1791799262254.0527
     },
-    "3.Sprites\\sprites\\decor2.png.meta": {
-      "time": 1791445224976.4976
+    "3.Sprites\\sprites\\khoithuoc_fx.png.meta": {
+      "time": 1791799262259.0515
     },
-    "3.Sprites\\sprites\\decor2_sd.png.meta": {
-      "time": 1791445224990.0493
+    "3.Sprites\\sprites\\khunganh.png.meta": {
+      "time": 1791799262262.9165
     },
-    "3.Sprites\\sprites\\decor3.png.meta": {
-      "time": 1791445224993.9346
+    "3.Sprites\\sprites\\khunganh_shadow.png.meta": {
+      "time": 1791799262263.917
     },
-    "3.Sprites\\sprites\\decor3_sd.png.meta": {
-      "time": 1791445224998.237
+    "3.Sprites\\sprites\\lancancauthang1.png.meta": {
+      "time": 1791799262281.9158
     },
-    "3.Sprites\\sprites\\decor4.png.meta": {
-      "time": 1791445225006.7537
+    "3.Sprites\\sprites\\lancancauthang1_shadow.png.meta": {
+      "time": 1791799262288.4248
     },
-    "3.Sprites\\sprites\\decor4_sd.png.meta": {
-      "time": 1791445225012.811
+    "3.Sprites\\sprites\\lancancauthang2.png.meta": {
+      "time": 1791799262298.4226
     },
-    "3.Sprites\\sprites\\decor5.png.meta": {
-      "time": 1791445225021.3245
+    "3.Sprites\\sprites\\lancancauthang2_shadow.png.meta": {
+      "time": 1791799262312.4224
     },
-    "3.Sprites\\sprites\\decor5_sd.png.meta": {
-      "time": 1791445225017.3271
+    "3.Sprites\\sprites\\lothuoc2.png.meta": {
+      "time": 1791799262296.4204
     },
-    "3.Sprites\\sprites\\doll.png.meta": {
-      "time": 1791445225031.1467
+    "3.Sprites\\sprites\\lothuoc2_fx.png.meta": {
+      "time": 1791799262314.4211
     },
-    "3.Sprites\\sprites\\fence.png.meta": {
-      "time": 1791445225037.008
+    "3.Sprites\\sprites\\lothuoc3.png.meta": {
+      "time": 1791799262317.423
     },
-    "3.Sprites\\sprites\\floor2-wall.png.meta": {
-      "time": 1791445225046.4846
+    "3.Sprites\\sprites\\lothuoc4.png.meta": {
+      "time": 1791799262329.4324
     },
-    "3.Sprites\\sprites\\floor2_1.png.meta": {
-      "time": 1791445225052.5046
+    "3.Sprites\\sprites\\lothuoc4_fx.png.meta": {
+      "time": 1791799262326.4329
     },
-    "3.Sprites\\sprites\\grave1.png.meta": {
-      "time": 1791445225054.5198
+    "3.Sprites\\sprites\\lothuoc5.png.meta": {
+      "time": 1791799262336.9443
     },
-    "3.Sprites\\sprites\\grave2.png.meta": {
-      "time": 1791445225084.0266
+    "3.Sprites\\sprites\\lothuoc5_fx.png.meta": {
+      "time": 1791799262338.2979
     },
-    "3.Sprites\\sprites\\hand.png.meta": {
-      "time": 1791445225099.4954
+    "3.Sprites\\sprites\\lothuoctrengia1.png.meta": {
+      "time": 1791799262344.5784
     },
-    "3.Sprites\\sprites\\heater-flame.png.meta": {
-      "time": 1791445225099.4954
+    "3.Sprites\\sprites\\lothuoctrengia1_fx.png.meta": {
+      "time": 1791799262355.4846
     },
-    "3.Sprites\\sprites\\heater-flamelight1.png.meta": {
-      "time": 1791445225110.5967
+    "3.Sprites\\sprites\\lothuoctrengia2.png.meta": {
+      "time": 1791799262379.5076
     },
-    "3.Sprites\\sprites\\heater-flamelight2.png.meta": {
-      "time": 1791445225112.5789
+    "3.Sprites\\sprites\\lothuoctrengia2_fx.png.meta": {
+      "time": 1791799262372.484
     },
-    "3.Sprites\\sprites\\heater-flamelight3.png.meta": {
-      "time": 1791445225120.7776
+    "3.Sprites\\sprites\\lothuoctrengia3.png.meta": {
+      "time": 1791799262362.4844
     },
-    "3.Sprites\\sprites\\heater1.png.meta": {
-      "time": 1791445225126.786
+    "3.Sprites\\sprites\\lothuoctrengia3_fx.png.meta": {
+      "time": 1791799262377.4941
     },
-    "3.Sprites\\sprites\\heater2.png.meta": {
-      "time": 1791445225126.786
+    "3.Sprites\\sprites\\lothuoctrenmai1.png.meta": {
+      "time": 1791799262389.494
     },
-    "3.Sprites\\sprites\\heater3.png.meta": {
-      "time": 1791445225136.871
+    "3.Sprites\\sprites\\lothuoctrenmai1_fx.png.meta": {
+      "time": 1791799262393.011
     },
-    "3.Sprites\\sprites\\heater4.png.meta": {
-      "time": 1791445225142.5176
+    "3.Sprites\\sprites\\lothuoc_shadow-1.png.meta": {
+      "time": 1791799262397.02
     },
-    "3.Sprites\\sprites\\heater4_sd.png.meta": {
-      "time": 1791445225148.0334
+    "3.Sprites\\sprites\\lothuoc_shadow.png.meta": {
+      "time": 1791799262414.0232
     },
-    "3.Sprites\\sprites\\lamp-holder1.png.meta": {
-      "time": 1791445225160.4038
+    "3.Sprites\\sprites\\lothuoc_shadow_copy.png.meta": {
+      "time": 1791799262401.0203
     },
-    "3.Sprites\\sprites\\lamp-holder2.png.meta": {
-      "time": 1791445225163.4165
+    "3.Sprites\\sprites\\lothuoc_shadow_copy_2.png.meta": {
+      "time": 1791799262411.0203
     },
-    "3.Sprites\\sprites\\lamp-light1.png.meta": {
-      "time": 1791445225162.41
+    "3.Sprites\\sprites\\lothuoc_shadow_copy_3.png.meta": {
+      "time": 1791799262422.021
     },
-    "3.Sprites\\sprites\\lamp-light2.png.meta": {
-      "time": 1791445225171.4482
+    "3.Sprites\\sprites\\lothuoc_shadow_copy_4.png.meta": {
+      "time": 1791799262426.021
     },
-    "3.Sprites\\sprites\\lamp.png.meta": {
-      "time": 1791445225181.4763
+    "3.Sprites\\sprites\\macquanao_cut.png.meta": {
+      "time": 1791799262429.0205
     },
-    "3.Sprites\\sprites\\lancan1-b.png.meta": {
-      "time": 1791445225187.8574
+    "3.Sprites\\sprites\\maiphuthuy.png.meta": {
+      "time": 1791799262508.1511
     },
-    "3.Sprites\\sprites\\lancan1.png.meta": {
-      "time": 1791445225191.3784
+    "3.Sprites\\sprites\\maiphuthuy_cut1.png.meta": {
+      "time": 1791799262505.6306
     },
-    "3.Sprites\\sprites\\lancan2-b.png.meta": {
-      "time": 1791445225194.8953
+    "3.Sprites\\sprites\\maiphuthuy_cut2.png.meta": {
+      "time": 1791799262445.0288
     },
-    "3.Sprites\\sprites\\lancan2.png.meta": {
-      "time": 1791445225209.878
+    "3.Sprites\\sprites\\mattronglo.png.meta": {
+      "time": 1791799262448.029
     },
-    "3.Sprites\\sprites\\light-mirror.png.meta": {
-      "time": 1791445225211.8865
+    "3.Sprites\\sprites\\mattronglo_fx.png.meta": {
+      "time": 1791799262457.9934
     },
-    "3.Sprites\\sprites\\light-pic1.png.meta": {
-      "time": 1791445225212.8716
+    "3.Sprites\\sprites\\mattronglo_shadow.png.meta": {
+      "time": 1791799262511.5156
     },
-    "3.Sprites\\sprites\\light-pic2.png.meta": {
-      "time": 1791445225215.8843
+    "3.Sprites\\sprites\\meokhuaythuoc.png.meta": {
+      "time": 1791799262523.2166
     },
-    "3.Sprites\\sprites\\light-pic3.png.meta": {
-      "time": 1791445225224.4573
+    "3.Sprites\\sprites\\meokhuaythuoc_shadow.png.meta": {
+      "time": 1791799262525.218
     },
-    "3.Sprites\\sprites\\mirror.png.meta": {
-      "time": 1791445225238.5305
+    "3.Sprites\\sprites\\meoma.png.meta": {
+      "time": 1791799262535.851
     },
-    "3.Sprites\\sprites\\moon.png.meta": {
-      "time": 1791445225253.4973
+    "3.Sprites\\sprites\\meoma_shadow.png.meta": {
+      "time": 1791799262537.217
     },
-    "3.Sprites\\sprites\\piano-shadow.png.meta": {
-      "time": 1791445225234.5054
+    "3.Sprites\\sprites\\meotactuong.png.meta": {
+      "time": 1791799262541.2954
     },
-    "3.Sprites\\sprites\\piano.png.meta": {
-      "time": 1791445225252.4988
+    "3.Sprites\\sprites\\muphuthuytreotuong.png.meta": {
+      "time": 1791799262553.372
     },
-    "3.Sprites\\sprites\\pic1.png.meta": {
-      "time": 1791445225253.4973
+    "3.Sprites\\sprites\\muphuthuytreotuong_shadow.png.meta": {
+      "time": 1791799262550.37
     },
-    "3.Sprites\\sprites\\pic2.png.meta": {
-      "time": 1791445225268.2932
+    "3.Sprites\\sprites\\nen.png.meta": {
+      "time": 1791799262560.3933
     },
-    "3.Sprites\\sprites\\pic3.png.meta": {
-      "time": 1791445225269.8215
+    "3.Sprites\\sprites\\nentrongmombingo.png.meta": {
+      "time": 1791799262557.3948
     },
-    "3.Sprites\\sprites\\plant.png.meta": {
-      "time": 1791445225279.3447
+    "3.Sprites\\sprites\\nentrongmombingo_fx.png.meta": {
+      "time": 1791799262570.6648
     },
-    "3.Sprites\\sprites\\plant2.png.meta": {
-      "time": 1791445225284.864
+    "3.Sprites\\sprites\\nen_fx.png.meta": {
+      "time": 1791799262577.6648
     },
-    "3.Sprites\\sprites\\plant4.png.meta": {
-      "time": 1791445225295.1338
+    "3.Sprites\\sprites\\nen_shadow.png.meta": {
+      "time": 1791799262574.6667
     },
-    "3.Sprites\\sprites\\plant4_sd.png.meta": {
-      "time": 1791445225301.7625
+    "3.Sprites\\sprites\\nen_shadow_copy.png.meta": {
+      "time": 1791799262585.901
     },
-    "3.Sprites\\sprites\\pool.png.meta": {
-      "time": 1791445225312.4211
+    "3.Sprites\\sprites\\nen_shadow_copy_2.png.meta": {
+      "time": 1791799262594.1277
     },
-    "3.Sprites\\sprites\\rem.png.meta": {
-      "time": 1791445225320.9314
+    "3.Sprites\\sprites\\poster.png.meta": {
+      "time": 1791799262602.0764
     },
-    "3.Sprites\\sprites\\rock1.png.meta": {
-      "time": 1791445225319.462
+    "3.Sprites\\sprites\\poster_shadow.png.meta": {
+      "time": 1791799262590.6
     },
-    "3.Sprites\\sprites\\rock1_sd.png.meta": {
-      "time": 1791445225325.4646
+    "3.Sprites\\sprites\\sachnghieng1.png.meta": {
+      "time": 1791799262605.0764
     },
-    "3.Sprites\\sprites\\rock2.png.meta": {
-      "time": 1791445225339.0977
+    "3.Sprites\\sprites\\sachnghieng1_shadow.png.meta": {
+      "time": 1791799262613.7214
     },
-    "3.Sprites\\sprites\\rock2_sd.png.meta": {
-      "time": 1791445225342.0984
+    "3.Sprites\\sprites\\sachnghieng2.png.meta": {
+      "time": 1791799262621.8765
     },
-    "3.Sprites\\sprites\\rock3.png.meta": {
-      "time": 1791445225349.0015
+    "3.Sprites\\sprites\\sachnghieng2_shadow.png.meta": {
+      "time": 1791799262609.3545
     },
-    "3.Sprites\\sprites\\rock3_sd.png.meta": {
-      "time": 1791445225339.0977
+    "3.Sprites\\sprites\\sachtrenke.png.meta": {
+      "time": 1791799262630.2327
     },
-    "3.Sprites\\sprites\\rock4.png.meta": {
-      "time": 1791445225357.0034
+    "3.Sprites\\sprites\\sachtrenke_shadow.png.meta": {
+      "time": 1791799262624.8877
     },
-    "3.Sprites\\sprites\\rock4_sd.png.meta": {
-      "time": 1791445225373.601
+    "3.Sprites\\sprites\\sanduoi.png.meta": {
+      "time": 1791799262649.0417
     },
-    "3.Sprites\\sprites\\rock5.png.meta": {
-      "time": 1791445225368.5964
+    "3.Sprites\\sprites\\santren.png.meta": {
+      "time": 1791799262703.6672
     },
-    "3.Sprites\\sprites\\rock5_sd.png.meta": {
-      "time": 1791445225378.1145
+    "3.Sprites\\sprites\\taydanhpiano.png.meta": {
+      "time": 1791799262704.678
     },
-    "3.Sprites\\sprites\\rock6.png.meta": {
-      "time": 1791445225382.1155
+    "3.Sprites\\sprites\\taydanhpiano_shadow.png.meta": {
+      "time": 1791799262641.322
     },
-    "3.Sprites\\sprites\\rock6_sd.png.meta": {
-      "time": 1791445225392.6711
+    "3.Sprites\\sprites\\thambingo.png.meta": {
+      "time": 1791799262714.1812
     },
-    "3.Sprites\\sprites\\roof1.png.meta": {
-      "time": 1791445225403.1323
+    "3.Sprites\\sprites\\thambingo_shadow.png.meta": {
+      "time": 1791799262724.6306
     },
-    "3.Sprites\\sprites\\roof2.png.meta": {
-      "time": 1791445225406.6382
+    "3.Sprites\\sprites\\thamduoibando.png.meta": {
+      "time": 1791799262728.4456
     },
-    "3.Sprites\\sprites\\shelf1.png.meta": {
-      "time": 1791445225409.4143
+    "3.Sprites\\sprites\\thamduoibando_shadow.png.meta": {
+      "time": 1791799262738.4717
     },
-    "3.Sprites\\sprites\\shelf2.png.meta": {
-      "time": 1791445225412.9365
+    "3.Sprites\\sprites\\thamtonhen.png.meta": {
+      "time": 1791799262744.023
     },
-    "3.Sprites\\sprites\\shelf3.png.meta": {
-      "time": 1791445225426.9507
+    "3.Sprites\\sprites\\thamtonhen_shadow.png.meta": {
+      "time": 1791799262746.0237
     },
-    "3.Sprites\\sprites\\shelf3_sd.png.meta": {
-      "time": 1791445225428.9717
+    "3.Sprites\\sprites\\thaoduockho.png.meta": {
+      "time": 1791799262753.1936
     },
-    "3.Sprites\\sprites\\stair.png.meta": {
-      "time": 1791445225438.4902
+    "3.Sprites\\sprites\\thaoduockho_copy.png.meta": {
+      "time": 1791799262758.576
     },
-    "3.Sprites\\sprites\\stair_P1.png.meta": {
-      "time": 1791445225437.4895
+    "3.Sprites\\sprites\\thaoduockho_copy_2.png.meta": {
+      "time": 1791799262761.3496
     },
-    "3.Sprites\\sprites\\star-pattern.png.meta": {
-      "time": 1791445225452.034
+    "3.Sprites\\sprites\\thaoduockho_copy_3.png.meta": {
+      "time": 1791799262773.139
     },
-    "3.Sprites\\sprites\\table-shadow.png.meta": {
-      "time": 1791445225453.0334
+    "3.Sprites\\sprites\\tucanhgiuong.png.meta": {
+      "time": 1791799262779.8147
     },
-    "3.Sprites\\sprites\\table.png.meta": {
-      "time": 1791445225457.07
+    "3.Sprites\\sprites\\tucanhgiuong_shadow.png.meta": {
+      "time": 1791799262778.779
     },
-    "3.Sprites\\sprites\\tham-f2.png.meta": {
-      "time": 1791445225474.6528
+    "3.Sprites\\sprites\\tuquanao.png.meta": {
+      "time": 1791799262797.632
     },
-    "3.Sprites\\sprites\\tham.png.meta": {
-      "time": 1791445225472.6528
+    "3.Sprites\\sprites\\tuquanao_shadow.png.meta": {
+      "time": 1791799262783.8008
     },
-    "3.Sprites\\sprites\\tree.png.meta": {
-      "time": 1791445225517.4832
+    "3.Sprites\\sprites\\tu_quan_ao_full.png.meta": {
+      "time": 1791799262874.2517
     },
-    "3.Sprites\\sprites\\tree_sd.png.meta": {
-      "time": 1791445225520.0012
+    "3.Sprites\\sprites\\vodan.png.meta": {
+      "time": 1791799262872.2537
     },
-    "3.Sprites\\sprites\\wall.png.meta": {
-      "time": 1791445225522.0442
+    "3.Sprites\\sprites\\vodan_shadow.png.meta": {
+      "time": 1791799262804.6206
     },
-    "3.Sprites\\sprites\\wall2-a.png.meta": {
-      "time": 1791445225523.0452
+    "3.Sprites\\sprites\\xuongdaumeo.png.meta": {
+      "time": 1791799262880.2542
     },
-    "3.Sprites\\sprites\\wall2-a_1.png.meta": {
-      "time": 1791445225539.374
+    "3.Sprites\\sprites\\xuongdaumeo_shadow.png.meta": {
+      "time": 1791799262882.255
     },
-    "3.Sprites\\sprites\\win2.png.meta": {
-      "time": 1791445225541.8887
+    "3.Sprites\\sprites\\guongquantai_shadow.png": {
+      "time": 1788754636002.3616,
+      "uuid": "2a2dd18a-992c-4315-bc5a-aa5583d9e02d"
     },
-    "3.Sprites\\sprites\\wine.png.meta": {
-      "time": 1791445225551.504
+    "3.Sprites\\sprites\\hopkeo.png": {
+      "time": 1788754636004.9758,
+      "uuid": "3deb5b21-b600-4910-8fe2-5f0b8c28a175"
     },
-    "3.Sprites\\sprites\\chair3_sd.png": {
-      "time": 1788755222955.4478,
-      "uuid": "7f0ac0c5-1977-4f2a-b758-2d269443c8bc"
+    "3.Sprites\\sprites\\goi3_shadow.png": {
+      "time": 1788754635999.554,
+      "uuid": "0dbf0c94-86ba-4c10-956c-98addcdff84e"
     },
-    "3.Sprites\\sprites\\chair3.png": {
-      "time": 1788755222956.9707,
-      "uuid": "7d834a5a-1063-472f-8cff-76ae87bc0266"
+    "3.Sprites\\sprites\\guongquantai.png": {
+      "time": 1788754636001.3545,
+      "uuid": "f13e24cf-a5a5-42c2-a2c6-f2dced7373a0"
     },
-    "3.Sprites\\sprites\\char1.png": {
-      "time": 1788755222958.0317,
-      "uuid": "8a3663c3-7f35-44c5-8619-242f3bbceaa4"
+    "3.Sprites\\sprites\\hopkeo_cut.png": {
+      "time": 1788754636005.976,
+      "uuid": "99c9fa22-ae3c-4b85-88aa-589dda3f6a46"
     },
-    "3.Sprites\\sprites\\char2.png": {
-      "time": 1788755222959.7856,
-      "uuid": "c147ac3e-a76c-4a6c-acfa-d1da6c27fff8"
+    "3.Sprites\\sprites\\hopkeo_shadow.png": {
+      "time": 1788754636006.977,
+      "uuid": "0cf9eb43-4e76-4efd-86c7-aaece34dcb0e"
     },
-    "3.Sprites\\sprites\\char3.png": {
-      "time": 1788755222960.7854,
-      "uuid": "5eb8b941-4356-4cf9-a3f5-0eda694f1a75"
+    "3.Sprites\\sprites\\kebingo.png": {
+      "time": 1788754636007.978,
+      "uuid": "08caceeb-eb40-4bee-ae4f-61f24e18d049"
     },
-    "3.Sprites\\sprites\\char4.png": {
-      "time": 1788755222961.7852,
-      "uuid": "954b29cd-0a44-4962-8a2e-cbdbb315be68"
+    "3.Sprites\\sprites\\keo1.png": {
+      "time": 1788754636008.4834,
+      "uuid": "6116ba85-6c36-4d8c-8b74-cf7a22951472"
     },
-    "3.Sprites\\sprites\\clock_sd.png": {
-      "time": 1788755222963.1323,
-      "uuid": "e905bfc1-16c3-4ec1-bda0-f445cee48639"
+    "3.Sprites\\sprites\\keo2.png": {
+      "time": 1788754636009.4905,
+      "uuid": "3170735e-2ee7-485c-a1b1-4bf1ce700a04"
     },
-    "3.Sprites\\sprites\\clock.png": {
-      "time": 1788755222964.1375,
-      "uuid": "1a0e4ffb-309a-45c0-a2f8-25889b32f757"
+    "3.Sprites\\sprites\\khanvattrenghe_shadow.png": {
+      "time": 1788754636011.387,
+      "uuid": "cf72e63c-b799-4a9b-8ff8-a0cadb99ace4"
     },
-    "3.Sprites\\sprites\\decor-book_sd.png": {
-      "time": 1788755222965.1375,
-      "uuid": "8ee380f6-57a2-41e1-9fa8-0e4022a2d834"
+    "3.Sprites\\sprites\\khanvattrenghe.png": {
+      "time": 1788754636009.4905,
+      "uuid": "ce749e42-c48d-4300-99e2-cb24d046e42d"
     },
-    "3.Sprites\\sprites\\decor-book.png": {
-      "time": 1788755222966.2126,
-      "uuid": "52f643cf-90bd-4671-bd36-7d18bf8d359f"
+    "3.Sprites\\sprites\\khoithuoc.png": {
+      "time": 1788754636012.39,
+      "uuid": "00405b9d-08cb-44c7-aa66-ce89c49bf6fa"
     },
-    "3.Sprites\\sprites\\decor1.png": {
-      "time": 1788755222967.7295,
-      "uuid": "f1f2087a-4c08-40c2-aedd-3de08fd145cf"
+    "3.Sprites\\sprites\\khoithuoc_fx.png": {
+      "time": 1788754636012.8972,
+      "uuid": "2281dd5e-fae9-4205-9db7-96f366c8f55a"
     },
-    "3.Sprites\\sprites\\decor2.png": {
-      "time": 1788755222969.7297,
-      "uuid": "af5fe85b-674e-4ef1-af06-fd49455ab518"
+    "3.Sprites\\sprites\\khunganh.png": {
+      "time": 1788754636013.9072,
+      "uuid": "770d42f9-c136-4c0a-a762-60e9f6daaa2d"
     },
-    "3.Sprites\\sprites\\decor1_sd.png": {
-      "time": 1788755222966.7239,
-      "uuid": "4ab42135-1c73-4dfe-8aaf-814b974d750c"
+    "3.Sprites\\sprites\\khunganh_shadow.png": {
+      "time": 1788754636015.341,
+      "uuid": "779c115f-4248-4713-ac99-243044e2f2b8"
     },
-    "3.Sprites\\sprites\\decor2_sd.png": {
-      "time": 1788755222968.7285,
-      "uuid": "e0c0fc0a-845e-439d-841a-9d2dfe5ee189"
+    "3.Sprites\\sprites\\lancancauthang1.png": {
+      "time": 1788754636016.3433,
+      "uuid": "765c5daf-b433-4ca2-a79f-831a98f0a4f6"
     },
-    "3.Sprites\\sprites\\decor3.png": {
-      "time": 1788755222971.7317,
-      "uuid": "8e3913e4-3171-4b83-a0a7-a27b0f31251e"
+    "3.Sprites\\sprites\\lancancauthang1_shadow.png": {
+      "time": 1788754636017.8516,
+      "uuid": "a3392725-eb78-494e-8b67-d5f4e647473c"
     },
-    "3.Sprites\\sprites\\decor3_sd.png": {
-      "time": 1788755222970.7297,
-      "uuid": "312834fc-1b8d-4af6-a129-0edc01216467"
+    "3.Sprites\\sprites\\lothuoc2.png": {
+      "time": 1788754636021.6885,
+      "uuid": "3cd0a00e-1b30-43f4-883d-f47805f9467d"
     },
-    "3.Sprites\\sprites\\decor4.png": {
-      "time": 1788755222973.754,
-      "uuid": "2275e231-4aa1-40dd-ac31-8ebb09db4fe4"
+    "3.Sprites\\sprites\\lancancauthang2.png": {
+      "time": 1788754636019.1694,
+      "uuid": "9289fe9c-4d9b-4c6e-b11a-ff9e9cc33d6c"
     },
-    "3.Sprites\\sprites\\decor4_sd.png": {
-      "time": 1788755222972.7468,
-      "uuid": "9b7839d2-5e30-40a3-9b7a-ea38b72099b9"
+    "3.Sprites\\sprites\\lancancauthang2_shadow.png": {
+      "time": 1788754636020.6797,
+      "uuid": "ec41fbcf-2f30-409c-8d0a-a7e06bbec04e"
     },
-    "3.Sprites\\sprites\\decor5_sd.png": {
-      "time": 1788755222974.9922,
-      "uuid": "c7318dec-a284-4366-916d-45b7ed70c5f4"
+    "3.Sprites\\sprites\\lothuoc2_fx.png": {
+      "time": 1788754636022.6892,
+      "uuid": "30e15ac1-aa18-484f-9b96-a91ce927d63a"
     },
-    "3.Sprites\\sprites\\decor5.png": {
-      "time": 1788755222976.5178,
-      "uuid": "bc2be2d9-854e-4a46-a4ba-29b882d036cb"
+    "3.Sprites\\sprites\\lothuoc3.png": {
+      "time": 1788754636022.6892,
+      "uuid": "3a74c5d7-3b90-4621-a58b-3456a35b0c10"
     },
-    "3.Sprites\\sprites\\doll.png": {
-      "time": 1788755222976.5178,
-      "uuid": "27896d38-c4d9-451d-9159-8f0b71ac8f0e"
+    "3.Sprites\\sprites\\lothuoc4_fx.png": {
+      "time": 1788754636024.9785,
+      "uuid": "6aefb514-8833-4a55-89f7-170dabcf2653"
     },
-    "3.Sprites\\sprites\\fence.png": {
-      "time": 1788755222981.1426,
-      "uuid": "07d5c0b1-b446-4444-be1d-dbb11babe5f2"
+    "3.Sprites\\sprites\\lothuoc4.png": {
+      "time": 1788754636023.9785,
+      "uuid": "56d68068-a1e5-450d-a792-1f3bbc73b6f3"
     },
-    "3.Sprites\\sprites\\floor2-wall.png": {
-      "time": 1788755222984.6704,
-      "uuid": "0f3dec45-b3f4-44a9-88e7-3d97d231e399"
+    "3.Sprites\\sprites\\lothuoc5.png": {
+      "time": 1788754636026.3171,
+      "uuid": "cc9ee97d-8beb-455f-a16b-2cc4867f18df"
     },
-    "3.Sprites\\sprites\\floor2_1.png": {
-      "time": 1788755222982.6562,
-      "uuid": "2a80f78e-a949-4ec6-9bd1-f6a3550f509a"
+    "3.Sprites\\sprites\\lothuoc5_fx.png": {
+      "time": 1788754636026.3171,
+      "uuid": "631954fe-ec62-4bd0-a4d5-0d4dd71b5134"
     },
-    "3.Sprites\\sprites\\grave1.png": {
-      "time": 1788755222985.6826,
-      "uuid": "606e7e74-ea5f-4a58-9972-062d35284aed"
+    "3.Sprites\\sprites\\lothuoctrengia1.png": {
+      "time": 1788754636033.1504,
+      "uuid": "3955783b-0960-46e6-afa3-caa6de884a99"
     },
-    "3.Sprites\\sprites\\grave2.png": {
-      "time": 1788755222990.4324,
-      "uuid": "d40c49a6-f6f6-40cf-acb1-8e0b5c66a2c8"
+    "3.Sprites\\sprites\\lothuoctrengia1_fx.png": {
+      "time": 1788754636034.1477,
+      "uuid": "c48c3468-fff7-45fb-96cb-4a1ab452bc6a"
     },
-    "3.Sprites\\sprites\\hand.png": {
-      "time": 1788755222991.367,
-      "uuid": "88a279ee-11b8-440b-9881-aaea4a9d421a"
+    "3.Sprites\\sprites\\lothuoctrengia3.png": {
+      "time": 1788754636037.9368,
+      "uuid": "d1bc0254-47ce-4620-86a8-6601505ae50d"
     },
-    "3.Sprites\\sprites\\heater-flame.png": {
-      "time": 1788755222992.638,
-      "uuid": "03963828-f442-4466-b56b-ab0ef6db98cd"
+    "3.Sprites\\sprites\\lothuoctrengia2_fx.png": {
+      "time": 1788754636036.9272,
+      "uuid": "782df351-fdd7-4cae-b874-b1c31bd6d40f"
     },
-    "3.Sprites\\sprites\\heater-flamelight1.png": {
-      "time": 1788755222994.6702,
-      "uuid": "1c9d8227-49de-49f0-b047-75c096104148"
+    "3.Sprites\\sprites\\lothuoctrengia3_fx.png": {
+      "time": 1788754636038.308,
+      "uuid": "d82a377f-acd9-42b0-9b48-278e14a50461"
     },
-    "3.Sprites\\sprites\\heater-flamelight2.png": {
-      "time": 1788755222995.7021,
-      "uuid": "2082ba0d-d471-4b12-a459-2cead2cb9cfa"
+    "3.Sprites\\sprites\\lothuoctrengia2.png": {
+      "time": 1788754636035.4177,
+      "uuid": "1b48e9f7-73b8-43aa-8718-3b955834a98c"
     },
-    "3.Sprites\\sprites\\heater-flamelight3.png": {
-      "time": 1788755222995.7021,
-      "uuid": "ed262905-f1a6-419c-87a2-f47b58067abc"
+    "3.Sprites\\sprites\\lothuoctrenmai1.png": {
+      "time": 1788754636039.3086,
+      "uuid": "897fde54-eaca-4e9f-8193-b56acda0b0e8"
     },
-    "3.Sprites\\sprites\\heater1.png": {
-      "time": 1788755222995.7021,
-      "uuid": "ef194366-7540-45e8-b759-19de3ad38da0"
+    "3.Sprites\\sprites\\lothuoctrenmai1_fx.png": {
+      "time": 1788754636040.3079,
+      "uuid": "e36eb42b-8416-4163-8ec9-347df43ba9c0"
     },
-    "3.Sprites\\sprites\\heater2.png": {
-      "time": 1788755222995.7021,
-      "uuid": "62a24be3-f24c-406d-b5a2-b75260fabc4e"
+    "3.Sprites\\sprites\\lothuoc_shadow-1.png": {
+      "time": 1788754636030.3506,
+      "uuid": "2ae2d80d-37ad-42b7-89f9-deca0aff0e18"
     },
-    "3.Sprites\\sprites\\heater3.png": {
-      "time": 1788755222995.7021,
-      "uuid": "3e353ffd-4cf7-4abe-9a67-643c55692f1b"
+    "3.Sprites\\sprites\\lothuoc_shadow_copy.png": {
+      "time": 1788754636030.3506,
+      "uuid": "d96c773a-afb0-4aa8-a76a-c7e0eed6c456"
     },
-    "3.Sprites\\sprites\\heater4.png": {
-      "time": 1788755223000.0552,
-      "uuid": "8aa7579f-5e7e-43fa-ab27-da9ca5b25086"
+    "3.Sprites\\sprites\\lothuoc_shadow_copy_2.png": {
+      "time": 1788754636027.323,
+      "uuid": "df3ff4f2-4381-4c3b-876b-4ffbd7de523d"
     },
-    "3.Sprites\\sprites\\heater4_sd.png": {
-      "time": 1788755223000.0552,
-      "uuid": "949fad25-29c6-40b0-a930-809c5ab86774"
+    "3.Sprites\\sprites\\lothuoc_shadow.png": {
+      "time": 1788754636032.142,
+      "uuid": "614f8290-7ed5-44f6-9d36-cd81d5b884eb"
     },
-    "3.Sprites\\sprites\\lamp-holder1.png": {
-      "time": 1788755223002.5686,
-      "uuid": "5b274c0e-b0c6-44a6-b625-38c10bc9f47f"
+    "3.Sprites\\sprites\\lothuoc_shadow_copy_3.png": {
+      "time": 1788754636028.8362,
+      "uuid": "f1b19714-6b88-4dc1-8e3a-715e13943f29"
     },
-    "3.Sprites\\sprites\\lamp-light1.png": {
-      "time": 1788755223004.5835,
-      "uuid": "1da583ca-61cc-4025-baa9-820636757d95"
+    "3.Sprites\\sprites\\lothuoc_shadow_copy_4.png": {
+      "time": 1788754636028.8362,
+      "uuid": "094c449f-1f0a-43cc-93a8-204fa04a5e77"
     },
-    "3.Sprites\\sprites\\lamp-holder2.png": {
-      "time": 1788755223002.5686,
-      "uuid": "482b22d8-c242-4853-90e9-c19ba39c6e9a"
+    "3.Sprites\\sprites\\macquanao_cut.png": {
+      "time": 1788754636041.8362,
+      "uuid": "0e1038a3-8d8e-4825-82ef-b9ed8b2fc2d0"
     },
-    "3.Sprites\\sprites\\lamp-light2.png": {
-      "time": 1788755223005.5974,
-      "uuid": "dc467b4c-eb49-4917-af52-da7079059bab"
+    "3.Sprites\\sprites\\maiphuthuy_cut2.png": {
+      "time": 1788754636054.914,
+      "uuid": "7b9efb9e-0f7c-4454-b69a-e601eb211e37"
     },
-    "3.Sprites\\sprites\\lamp.png": {
-      "time": 1788755223005.5974,
-      "uuid": "1a95b5cc-f843-4e53-b58a-22e2973851be"
+    "3.Sprites\\sprites\\mattronglo.png": {
+      "time": 1788754636054.914,
+      "uuid": "e738f9b9-5583-4fd4-b8e1-b961428e6681"
     },
-    "3.Sprites\\sprites\\lancan1-b.png": {
-      "time": 1788755223008.1318,
-      "uuid": "eddae483-3005-4a21-a4ba-0ab48855b0dd"
+    "3.Sprites\\sprites\\mattronglo_fx.png": {
+      "time": 1788754636056.42,
+      "uuid": "8e33d1d7-21e5-4683-82b6-4cc4357f76d1"
     },
-    "3.Sprites\\sprites\\lancan1.png": {
-      "time": 1788755223009.4067,
-      "uuid": "2f561f07-12d8-4616-ba70-8e83a02154c9"
+    "3.Sprites\\sprites\\maiphuthuy_cut1.png": {
+      "time": 1788754636053.913,
+      "uuid": "624b930a-dab8-45af-b996-3495ea565c0d"
     },
-    "3.Sprites\\sprites\\lancan2-b.png": {
-      "time": 1788755223009.4067,
-      "uuid": "9080384d-6f3b-474f-8cad-1cffec401719"
+    "3.Sprites\\sprites\\maiphuthuy.png": {
+      "time": 1788754636048.7375,
+      "uuid": "0afa4014-f31d-46f6-a6d1-397d90e23fe8"
     },
-    "3.Sprites\\sprites\\lancan2.png": {
-      "time": 1788755223012.4126,
-      "uuid": "a7d11e60-6745-4ae6-9034-d0c040f01931"
+    "3.Sprites\\sprites\\mattronglo_shadow.png": {
+      "time": 1788754636056.7456,
+      "uuid": "56ccb004-48c8-4e4a-be94-6551650ac271"
     },
-    "3.Sprites\\sprites\\light-mirror.png": {
-      "time": 1788755223014.4172,
-      "uuid": "7d742416-b06a-47b3-ac81-520b91e02e2e"
+    "3.Sprites\\sprites\\meokhuaythuoc.png": {
+      "time": 1788754636058.7446,
+      "uuid": "053d0a13-fea9-42dc-8df6-01d14c3f7a61"
     },
-    "3.Sprites\\sprites\\light-pic1.png": {
-      "time": 1788755223014.4172,
-      "uuid": "d08bae31-2a69-4af7-91ef-cd604b031325"
+    "3.Sprites\\sprites\\meokhuaythuoc_shadow.png": {
+      "time": 1788754636058.7446,
+      "uuid": "26171fe4-26c0-4da0-87d1-27dbcb876a21"
     },
-    "3.Sprites\\sprites\\light-pic2.png": {
-      "time": 1788755223015.6318,
-      "uuid": "4f781c33-bc97-44dc-aa2f-8ae852306681"
+    "3.Sprites\\sprites\\meoma.png": {
+      "time": 1788754636060.5796,
+      "uuid": "ce0814f5-effd-4f1c-b961-133c0fb027c8"
     },
-    "3.Sprites\\sprites\\light-pic3.png": {
-      "time": 1788755223016.6404,
-      "uuid": "8069965d-eb69-4827-b924-5a04dacac452"
+    "3.Sprites\\sprites\\meoma_shadow.png": {
+      "time": 1788754636061.087,
+      "uuid": "3e4dcd59-a404-43f7-8d2b-3d7045e90ec6"
     },
-    "3.Sprites\\sprites\\piano-shadow.png": {
-      "time": 1788755223022.1611,
-      "uuid": "dcc5b2e2-9f6b-4bb5-8bab-a5ffe8d10e14"
+    "3.Sprites\\sprites\\meotactuong.png": {
+      "time": 1788754636063.0938,
+      "uuid": "d9480ec5-8573-4664-9769-f3860a32217c"
     },
-    "3.Sprites\\sprites\\mirror.png": {
-      "time": 1788755223017.641,
-      "uuid": "880ee884-36c2-422d-9316-12416a42935b"
+    "3.Sprites\\sprites\\muphuthuytreotuong_shadow.png": {
+      "time": 1788754636065.3574,
+      "uuid": "eeabcc01-0751-4769-a8b6-82309f20eb0a"
     },
-    "3.Sprites\\sprites\\piano.png": {
-      "time": 1788755223023.5537,
-      "uuid": "3fba55e7-277f-411f-ada4-6f5bb03b9f69"
+    "3.Sprites\\sprites\\muphuthuytreotuong.png": {
+      "time": 1788754636064.0935,
+      "uuid": "b318a039-ff70-4949-8ce7-898953a1b99f"
     },
-    "3.Sprites\\sprites\\moon.png": {
-      "time": 1788755222913.9585,
-      "uuid": "e762eedc-72a0-4820-9b58-5cbbb78266db"
+    "3.Sprites\\sprites\\nentrongmombingo.png": {
+      "time": 1788754636073.1816,
+      "uuid": "3bcf876d-d735-4d6f-939d-caa552713974"
     },
-    "3.Sprites\\sprites\\pic1.png": {
-      "time": 1788755223024.059,
-      "uuid": "1f86b4a8-8999-4a59-8c16-fc0aed9b83b1"
+    "3.Sprites\\sprites\\nen.png": {
+      "time": 1788754636070.1787,
+      "uuid": "f026baad-34bd-4b95-ab39-5bc72ea146a7"
     },
-    "3.Sprites\\sprites\\pic2.png": {
-      "time": 1788755223025.5774,
-      "uuid": "1c758ffb-0472-4349-a259-dbc691792f45"
+    "3.Sprites\\sprites\\nentrongmombingo_fx.png": {
+      "time": 1788754636074.1843,
+      "uuid": "dea81a72-4f6d-4424-9070-6075dccc3b51"
     },
-    "3.Sprites\\sprites\\pic3.png": {
-      "time": 1788755223027.259,
-      "uuid": "f78eab3f-53d6-43c1-881c-10b83f1865e7"
+    "3.Sprites\\sprites\\nen_shadow.png": {
+      "time": 1788754636073.1816,
+      "uuid": "21019a84-3044-4e3c-971a-f03764daa8ee"
     },
-    "3.Sprites\\sprites\\plant.png": {
-      "time": 1788755223028.766,
-      "uuid": "a6392d92-957b-4372-ab53-73387c421c0a"
+    "3.Sprites\\sprites\\nen_fx.png": {
+      "time": 1788754636070.684,
+      "uuid": "c1dbefde-e049-4f88-8c74-3d2075c24ba6"
     },
-    "3.Sprites\\sprites\\plant2.png": {
-      "time": 1788755223031.7441,
-      "uuid": "7f4dd576-9199-4609-b53b-86938dc8812e"
+    "3.Sprites\\sprites\\nen_shadow_copy.png": {
+      "time": 1788754636072.18,
+      "uuid": "2a423bf1-c316-41ad-bc58-310e3073e546"
     },
-    "3.Sprites\\sprites\\plant4.png": {
-      "time": 1788755223035.2686,
-      "uuid": "8b0f7454-cdd2-482e-82d2-a971efaf90e4"
+    "3.Sprites\\sprites\\poster_shadow.png": {
+      "time": 1788754636076.998,
+      "uuid": "f1025ede-a2cc-4547-bdba-fcd4863e0fd7"
     },
-    "3.Sprites\\sprites\\plant4_sd.png": {
-      "time": 1788755223033.7563,
-      "uuid": "156283b1-98cc-48d0-8ef7-00b405eecf06"
+    "3.Sprites\\sprites\\nen_shadow_copy_2.png": {
+      "time": 1788754636071.691,
+      "uuid": "0fe1f7bf-6645-40b8-8b72-7d414d30e257"
     },
-    "3.Sprites\\sprites\\pool.png": {
-      "time": 1788755223038.3782,
-      "uuid": "07071cd6-1b2a-40e6-8339-c1a9dadfb6f8"
+    "3.Sprites\\sprites\\poster.png": {
+      "time": 1788754636075.9978,
+      "uuid": "4f84d671-352d-4ee3-a2d1-e9629d52e659"
     },
-    "3.Sprites\\sprites\\rock1.png": {
-      "time": 1788755223041.3567,
-      "uuid": "a807d38d-28ce-4908-9457-b3bf2abf99c0"
+    "3.Sprites\\sprites\\sachnghieng1.png": {
+      "time": 1788754636077.9995,
+      "uuid": "a0997c09-7312-481f-b305-37686af40050"
     },
-    "3.Sprites\\sprites\\rem.png": {
-      "time": 1788755223038.3782,
-      "uuid": "ba75ad70-d7df-4ab8-899c-8b3d5a3f3c21"
+    "3.Sprites\\sprites\\sachnghieng2_shadow.png": {
+      "time": 1788754636080.308,
+      "uuid": "6d72a3c7-7b7d-4406-ae33-71d3b805479b"
     },
-    "3.Sprites\\sprites\\rock1_sd.png": {
-      "time": 1788755223038.3782,
-      "uuid": "d5db8d60-e578-4633-b5eb-871de8c00751"
+    "3.Sprites\\sprites\\sachnghieng1_shadow.png": {
+      "time": 1788754636077.9995,
+      "uuid": "f45d7d63-18ed-463d-932d-99b6b1712bce"
     },
-    "3.Sprites\\sprites\\rock2.png": {
-      "time": 1788755223043.5645,
-      "uuid": "22f53ed0-0e07-438c-b4a3-8756b123bddf"
+    "3.Sprites\\sprites\\sachnghieng2.png": {
+      "time": 1788754636078.997,
+      "uuid": "f78bb595-24ba-4494-b22a-9c0897736e4c"
     },
-    "3.Sprites\\sprites\\rock3_sd.png": {
-      "time": 1788755223043.5645,
-      "uuid": "99324ad0-b5ac-4973-94c6-f52b323e4d65"
+    "3.Sprites\\sprites\\sachtrenke_shadow.png": {
+      "time": 1788754636081.3145,
+      "uuid": "49dfa273-c91d-4c60-b635-f1512b3e05cd"
     },
-    "3.Sprites\\sprites\\rock2_sd.png": {
-      "time": 1788755223042.5476,
-      "uuid": "6d9f6947-d053-40cf-9a85-0b27a0c8230c"
+    "3.Sprites\\sprites\\sachtrenke.png": {
+      "time": 1788754636081.3145,
+      "uuid": "bcce776e-cd66-4918-9134-f902391f7bd0"
     },
-    "3.Sprites\\sprites\\rock3.png": {
-      "time": 1788755223045.075,
-      "uuid": "6a02d8cc-248b-42b8-a191-171c3f0098f9"
+    "3.Sprites\\sprites\\taydanhpiano_shadow.png": {
+      "time": 1788754636088.4258,
+      "uuid": "787f93bb-5df1-423b-8060-4d9b2e49524e"
     },
-    "3.Sprites\\sprites\\rock4.png": {
-      "time": 1788755223047.5862,
-      "uuid": "5f4bd94d-bddc-42fe-b04b-d2b0edc0c481"
+    "3.Sprites\\sprites\\sanduoi.png": {
+      "time": 1788754636083.3142,
+      "uuid": "8832a7e3-0f08-462f-a4f5-0c019372f04b"
     },
-    "3.Sprites\\sprites\\rock5.png": {
-      "time": 1788755223049.5908,
-      "uuid": "a04c2bdb-c8a6-44f6-a729-5cda60cdf16e"
+    "3.Sprites\\sprites\\santren.png": {
+      "time": 1788754636086.118,
+      "uuid": "d12e6572-b163-4ae2-8be3-19eb8450c2d5"
     },
-    "3.Sprites\\sprites\\rock4_sd.png": {
-      "time": 1788755223046.0813,
-      "uuid": "70726efe-1fc5-4eda-bed5-1c9d4e6bccdd"
+    "3.Sprites\\sprites\\taydanhpiano.png": {
+      "time": 1788754636087.4263,
+      "uuid": "735f1593-1b8f-4c57-9735-d546bca2cff1"
     },
-    "3.Sprites\\sprites\\rock5_sd.png": {
-      "time": 1788755223048.5918,
-      "uuid": "ee54e19e-6f06-4f47-8ed0-c628f76a7366"
+    "3.Sprites\\sprites\\thambingo.png": {
+      "time": 1788754636088.4258,
+      "uuid": "2d1abec5-4746-47f1-a8e7-eb987fd2d385"
     },
-    "3.Sprites\\sprites\\rock6.png": {
-      "time": 1788755223051.0947,
-      "uuid": "ca8eb939-20a4-49f2-9c66-a8223776cdf7"
+    "3.Sprites\\sprites\\thambingo_shadow.png": {
+      "time": 1788754636089.9326,
+      "uuid": "6f74642f-ca6d-4a60-aab8-3d12950eaf9a"
     },
-    "3.Sprites\\sprites\\rock6_sd.png": {
-      "time": 1788755223049.5908,
-      "uuid": "44ffbf01-0c5e-4f1d-a773-4ff816a039fc"
+    "3.Sprites\\sprites\\thamduoibando.png": {
+      "time": 1788754636090.9382,
+      "uuid": "da589c23-a5a5-4f28-bbbc-9207fc4896ef"
     },
-    "3.Sprites\\sprites\\roof1.png": {
-      "time": 1788755223053.1187,
-      "uuid": "fb263c43-0c32-4065-b41e-b2d4d0aa4bf2"
+    "3.Sprites\\sprites\\thamduoibando_shadow.png": {
+      "time": 1788754636092.2126,
+      "uuid": "ff2c3fba-6c47-4654-b7c9-318cb4356f47"
     },
-    "3.Sprites\\sprites\\roof2.png": {
-      "time": 1788755223053.1187,
-      "uuid": "d540c75f-ef0a-4b37-841b-3602f05a0f2b"
+    "3.Sprites\\sprites\\thamtonhen.png": {
+      "time": 1788754636093.2134,
+      "uuid": "4c4f93c3-3306-40db-800c-4cb14c3282bd"
     },
-    "3.Sprites\\sprites\\shelf1.png": {
-      "time": 1788755223055.634,
-      "uuid": "33b3460d-d6a8-4882-911b-4942827a4ee2"
+    "3.Sprites\\sprites\\thamtonhen_shadow.png": {
+      "time": 1788754636093.2134,
+      "uuid": "9ac986bf-003b-4646-967d-3949f9700474"
     },
-    "3.Sprites\\sprites\\shelf2.png": {
-      "time": 1788755223057.138,
-      "uuid": "e1fd4199-c7b8-4b97-a2c3-414b9014b7f7"
+    "3.Sprites\\sprites\\thaoduockho.png": {
+      "time": 1788754636098.025,
+      "uuid": "4649a3bf-3fd5-467c-8bb1-d02c2d99f3f2"
     },
-    "3.Sprites\\sprites\\shelf3.png": {
-      "time": 1788755223058.4265,
-      "uuid": "e3f25cb7-a7bb-4475-934d-4ba019dc7fa0"
+    "3.Sprites\\sprites\\thaoduockho_copy.png": {
+      "time": 1788754636097.0242,
+      "uuid": "91519219-e3fe-4177-9b77-f0273d3c9adb"
     },
-    "3.Sprites\\sprites\\shelf3_sd.png": {
-      "time": 1788755223058.4265,
-      "uuid": "3b2193ae-6098-4a17-8228-aa1cb1266fb9"
+    "3.Sprites\\sprites\\thaoduockho_copy_2.png": {
+      "time": 1788754636095.0244,
+      "uuid": "76685601-906e-432b-afde-ef814ee8892a"
     },
-    "3.Sprites\\sprites\\stair_P1.png": {
-      "time": 1788755223060.933,
-      "uuid": "c02dce3e-88fb-475c-a1d6-1f3b4cced4f3"
+    "3.Sprites\\sprites\\thaoduockho_copy_3.png": {
+      "time": 1788754636096.0251,
+      "uuid": "b57b89f1-b7b9-46da-b5a2-6a4dcdc310b7"
     },
-    "3.Sprites\\sprites\\stair.png": {
-      "time": 1788755223062.96,
-      "uuid": "aaf71de0-f841-4540-9187-a3701c1e63b8"
+    "3.Sprites\\sprites\\tucanhgiuong_shadow.png": {
+      "time": 1788754636100.6997,
+      "uuid": "f82ebf32-dc32-426e-8f8b-afc6d22dea70"
     },
-    "3.Sprites\\sprites\\star-pattern.png": {
-      "time": 1788755222913.9585,
-      "uuid": "4f62e31a-ca01-444c-886f-49009083c02a"
+    "3.Sprites\\sprites\\tucanhgiuong.png": {
+      "time": 1788754636099.695,
+      "uuid": "9e9cf9ca-2d5c-4cab-a3bb-b7ba52668eb0"
     },
-    "3.Sprites\\sprites\\table-shadow.png": {
-      "time": 1788755223062.96,
-      "uuid": "1f087c00-ed0d-4a2f-81eb-ea50ba525278"
+    "3.Sprites\\sprites\\tuquanao_shadow.png": {
+      "time": 1788754636102.0623,
+      "uuid": "89f35792-7e38-41b8-9b55-908c054bfa4a"
     },
-    "3.Sprites\\sprites\\table.png": {
-      "time": 1788755223064.473,
-      "uuid": "24f64dc4-99e3-4bfe-8dea-003202a5190c"
+    "3.Sprites\\sprites\\tuquanao.png": {
+      "time": 1788754636102.0623,
+      "uuid": "530d46c4-191e-407b-8e28-87d54ae8dd81"
     },
-    "3.Sprites\\sprites\\tham.png": {
-      "time": 1788755223066.4844,
-      "uuid": "fd06b0e3-b98f-404e-9e03-d44e4f5843ba"
+    "3.Sprites\\sprites\\vodan_shadow.png": {
+      "time": 1788754636104.57,
+      "uuid": "e85e6a26-d0ec-4f05-aee1-35a2ded54b8b"
     },
-    "3.Sprites\\sprites\\tham-f2.png": {
-      "time": 1788755223064.473,
-      "uuid": "6ac542bb-f3c4-4acc-b4e8-a3892ac46baa"
+    "3.Sprites\\sprites\\vodan.png": {
+      "time": 1788754636103.0654,
+      "uuid": "6eb8a8ed-b3c6-478c-adc3-4a0c4c0738b9"
     },
-    "3.Sprites\\sprites\\tree.png": {
-      "time": 1788755223071.477,
-      "uuid": "c9c5db9d-2750-4d39-bfaf-b2c6b25b68d0"
+    "3.Sprites\\sprites\\tu_quan_ao_full.png": {
+      "time": 1788754636098.025,
+      "uuid": "2f7b8f80-66ec-4df4-8c15-e8ce00571406"
     },
-    "3.Sprites\\sprites\\tree_sd.png": {
-      "time": 1788755223066.4844,
-      "uuid": "c0819b7b-79f7-49a3-ae8b-6f5b40cfddf1"
+    "3.Sprites\\sprites\\xuongdaumeo.png": {
+      "time": 1788754636105.9163,
+      "uuid": "36937966-6bd8-4470-bd04-1acdc29dd760"
     },
-    "3.Sprites\\sprites\\wall.png": {
-      "time": 1788755223072.9868,
-      "uuid": "8e55308a-91a3-4bf3-9009-f30bb3db51e5"
+    "3.Sprites\\sprites\\xuongdaumeo_shadow.png": {
+      "time": 1788754636106.9163,
+      "uuid": "415e8f95-6355-4e25-8f5d-0210b5aec6fe"
     },
-    "3.Sprites\\sprites\\wall2-a.png": {
-      "time": 1788755223074.9702,
-      "uuid": "02355a66-5b8a-4313-b1e8-679b5ff874e4"
+    "3.Sprites\\sprites\\aochoang_cut.png.meta": {
+      "time": 1791799263306.0696
     },
-    "3.Sprites\\sprites\\wall2-a_1.png": {
-      "time": 1788755223074.519,
-      "uuid": "846237c1-2955-4ae8-91d3-e58872682227"
+    "3.Sprites\\sprites\\aogile_cut.png.meta": {
+      "time": 1791799263289.0698
     },
-    "3.Sprites\\sprites\\win2.png": {
-      "time": 1788755223076.4773,
-      "uuid": "60f9d4d2-a5c8-4c0d-9609-4ea92b134a36"
+    "3.Sprites\\sprites\\aophong_cut.png.meta": {
+      "time": 1791799263291.069
     },
-    "3.Sprites\\sprites\\wine.png": {
-      "time": 1788755223076.4773,
-      "uuid": "6d9445fa-6f60-4e3b-a134-19a01cf798e5"
+    "3.Sprites\\sprites\\ban.png.meta": {
+      "time": 1791799263309.0698
     },
-    "3.Sprites\\sprites\\1_shadow_1.png.meta": {
-      "time": 1791445225600.742
+    "3.Sprites\\sprites\\bandosao.png.meta": {
+      "time": 1791799263311.069
     },
-    "3.Sprites\\sprites\\ban2-vai.png.meta": {
-      "time": 1791445225601.7444
+    "3.Sprites\\sprites\\bandosao_shadow.png.meta": {
+      "time": 1791799263313.073
     },
-    "3.Sprites\\sprites\\ban2.png.meta": {
-      "time": 1791445225612.7788
+    "3.Sprites\\sprites\\bantrickortreat.png.meta": {
+      "time": 1791799263325.0706
     },
-    "3.Sprites\\sprites\\base-wall-s.png.meta": {
-      "time": 1791445225606.7793
+    "3.Sprites\\sprites\\bantrickortreat_shadow.png.meta": {
+      "time": 1791799263331.074
     },
-    "3.Sprites\\sprites\\base-wall.png.meta": {
-      "time": 1791445225619.8137
+    "3.Sprites\\sprites\\ban_shadow.png.meta": {
+      "time": 1791799263340.078
     },
-    "3.Sprites\\sprites\\Base.png.meta": {
-      "time": 1791445225713.736
+    "3.Sprites\\sprites\\base.png.meta": {
+      "time": 1791799263410.276
     },
-    "3.Sprites\\sprites\\BG-shadow.png.meta": {
-      "time": 1791445225730.8542
+    "3.Sprites\\sprites\\base_cut_chongchong.png.meta": {
+      "time": 1791799263342.5913
     },
-    "3.Sprites\\sprites\\bg-spooky_(2).png.meta": {
-      "time": 1791445225641.903
+    "3.Sprites\\sprites\\BG.png.meta": {
+      "time": 1791799263348.484
     },
-    "3.Sprites\\sprites\\book-heater1.png.meta": {
-      "time": 1791445225707.5598
+    "3.Sprites\\sprites\\BG_fx1.png.meta": {
+      "time": 1791799263361.3938
     },
-    "3.Sprites\\sprites\\book-heater1_sd.png.meta": {
-      "time": 1791445225639.9036
+    "3.Sprites\\sprites\\BG_fx2.png.meta": {
+      "time": 1791799263412.2778
     },
-    "3.Sprites\\sprites\\book-heater2.png.meta": {
-      "time": 1791445225747.4524
+    "3.Sprites\\sprites\\BG_mattrang.png.meta": {
+      "time": 1791799263428.2773
     },
-    "3.Sprites\\sprites\\book-heater2_sd.png.meta": {
-      "time": 1791445225745.4497
+    "3.Sprites\\sprites\\BG_stars.png.meta": {
+      "time": 1791799263487.7942
     },
-    "3.Sprites\\sprites\\book-heater3.png.meta": {
-      "time": 1791445225748.4534
+    "3.Sprites\\sprites\\bingodai.png.meta": {
+      "time": 1791799263427.276
     },
-    "3.Sprites\\sprites\\book-heater3_sd.png.meta": {
-      "time": 1791445225750.455
+    "3.Sprites\\sprites\\bingodai_shadow.png.meta": {
+      "time": 1791799263432.277
     },
-    "3.Sprites\\sprites\\book-table.png.meta": {
-      "time": 1791445225757.9702
+    "3.Sprites\\sprites\\bingotactuong.png.meta": {
+      "time": 1791799263447.2783
     },
-    "3.Sprites\\sprites\\book-table_sd.png.meta": {
-      "time": 1791445225764.9966
+    "3.Sprites\\sprites\\bingotactuong_shadow.png.meta": {
+      "time": 1791799263501.8047
     },
-    "3.Sprites\\sprites\\candle1.png.meta": {
-      "time": 1791445225772.9944
+    "3.Sprites\\sprites\\bingotonhat.png.meta": {
+      "time": 1791799263505.7998
     },
-    "3.Sprites\\sprites\\candle2.png.meta": {
-      "time": 1791445225768.9956
+    "3.Sprites\\sprites\\bingotonhat_shadow.png.meta": {
+      "time": 1791799263508.361
     },
-    "3.Sprites\\sprites\\candle22.png.meta": {
-      "time": 1791445225781.1252
+    "3.Sprites\\sprites\\bingotrentu.png.meta": {
+      "time": 1791799263519.37
     },
-    "3.Sprites\\sprites\\candle3.png.meta": {
-      "time": 1791445225783.637
+    "3.Sprites\\sprites\\bingotrentu_shadow.png.meta": {
+      "time": 1791799263522.3704
     },
-    "3.Sprites\\sprites\\chair-pillpw.png.meta": {
-      "time": 1791445225830.9019
+    "3.Sprites\\sprites\\binhthuoc.png.meta": {
+      "time": 1791799263528.3818
     },
-    "3.Sprites\\sprites\\chair.png.meta": {
-      "time": 1791445225823.5127
+    "3.Sprites\\sprites\\binhthuoc_cut.png.meta": {
+      "time": 1791799263537.3762
     },
-    "3.Sprites\\sprites\\chair2.png.meta": {
-      "time": 1791445225832.9097
+    "3.Sprites\\sprites\\binhthuoc_shadow.png.meta": {
+      "time": 1791799263529.3787
     },
-    "3.Sprites\\sprites\\chair2_sd.png.meta": {
-      "time": 1791445225838.5608
+    "3.Sprites\\sprites\\butlong.png.meta": {
+      "time": 1791799263544.9067
     },
-    "3.Sprites\\sprites\\Level653_Scale.json.meta": {
-      "time": 1791445225818.8022
+    "3.Sprites\\sprites\\butlong_shadow.png.meta": {
+      "time": 1791799263541.3782
     },
-    "3.Sprites\\sprites\\Win.png.meta": {
-      "time": 1791445225849.6985
+    "3.Sprites\\sprites\\cauthang.png.meta": {
+      "time": 1791799263564.5232
     },
-    "3.Sprites\\sprites\\1_shadow_1.png": {
-      "time": 1788755222933.451,
-      "uuid": "540bdc1e-c19a-4559-b5ef-5f31cec73dc7"
+    "3.Sprites\\sprites\\cauthang_shadow.png.meta": {
+      "time": 1791799263566.5215
     },
-    "3.Sprites\\sprites\\ban2-vai.png": {
-      "time": 1788755222937.5122,
-      "uuid": "0a13f177-cdd2-45b6-9592-eff88b4974ce"
+    "3.Sprites\\sprites\\chan.png.meta": {
+      "time": 1791799263574.521
     },
-    "3.Sprites\\sprites\\base-wall-s.png": {
-      "time": 1788755222909.309,
-      "uuid": "959ba879-7221-45f2-b353-fabd7b86c78c"
+    "3.Sprites\\sprites\\chan_shadow.png.meta": {
+      "time": 1791799263573.5217
     },
-    "3.Sprites\\sprites\\ban2.png": {
-      "time": 1788755222937.5122,
-      "uuid": "7add2509-df62-43a0-a29b-6ddd0fc6bbc6"
+    "3.Sprites\\sprites\\choi.png.meta": {
+      "time": 1791799263578.523
     },
-    "3.Sprites\\sprites\\base-wall.png": {
-      "time": 1788755222909.309,
-      "uuid": "361055f8-0d73-4019-b544-a0c2a1df03a5"
+    "3.Sprites\\sprites\\choi_shadow.png.meta": {
+      "time": 1791799263592.5283
     },
-    "3.Sprites\\sprites\\book-heater1_sd.png": {
-      "time": 1788755222937.5122,
-      "uuid": "c0c1f195-bc3e-4a75-809f-66e699ec4032"
+    "3.Sprites\\sprites\\chongchong.png.meta": {
+      "time": 1791799263595.5305
     },
-    "3.Sprites\\sprites\\bg-spooky_(2).png": {
-      "time": 1788755222909.309,
-      "uuid": "e107c487-9dc9-4517-845a-e3547dfefa0b"
+    "3.Sprites\\sprites\\chongchong_shadow.png.meta": {
+      "time": 1791799263591.5286
     },
-    "3.Sprites\\sprites\\book-heater1.png": {
-      "time": 1788755222937.5122,
-      "uuid": "256698e3-18b0-4d41-ad97-f0baf3f88052"
+    "3.Sprites\\sprites\\chum.png.meta": {
+      "time": 1791799263601.4912
     },
-    "3.Sprites\\sprites\\Base.png": {
-      "time": 1788755222907.9658,
-      "uuid": "1206b6ca-d8ff-4677-b627-b0fac3493958"
+    "3.Sprites\\sprites\\chum_shadow.png.meta": {
+      "time": 1791799263604.4937
     },
-    "3.Sprites\\sprites\\BG-shadow.png": {
-      "time": 1788755222901.5703,
-      "uuid": "e3f14439-7a60-41cb-8cdc-333628c43d8a"
+    "3.Sprites\\sprites\\cuasotrenchop.png.meta": {
+      "time": 1791799263622.8577
     },
-    "3.Sprites\\sprites\\book-heater2_sd.png": {
-      "time": 1788755222941.37,
-      "uuid": "5891e732-4aaa-4db2-bf30-a1e9094741b7"
+    "3.Sprites\\sprites\\cuasotrenchop_shadow.png.meta": {
+      "time": 1791799263616.4917
     },
-    "3.Sprites\\sprites\\book-heater2.png": {
-      "time": 1788755222942.6577,
-      "uuid": "57ce6e40-1677-4377-a8e3-4edbf8ba3973"
+    "3.Sprites\\sprites\\cuasotron.png.meta": {
+      "time": 1791799263627.855
     },
-    "3.Sprites\\sprites\\book-heater3.png": {
-      "time": 1788755222943.1729,
-      "uuid": "b754b8cf-588e-4912-9f64-fd28a02dd42c"
+    "3.Sprites\\sprites\\cuasotron_shadow.png.meta": {
+      "time": 1791799263621.8494
     },
-    "3.Sprites\\sprites\\book-heater3_sd.png": {
-      "time": 1788755222943.1729,
-      "uuid": "21ab871c-2180-422b-8778-21a635781bd5"
+    "3.Sprites\\sprites\\cuatu_dong1.png.meta": {
+      "time": 1791799263636.8577
     },
-    "3.Sprites\\sprites\\book-table.png": {
-      "time": 1788755222946.8728,
-      "uuid": "93aba334-ad26-4c1f-9e78-59dea16bf41d"
+    "3.Sprites\\sprites\\cuatu_dong2.png.meta": {
+      "time": 1791799263640.8557
     },
-    "3.Sprites\\sprites\\book-table_sd.png": {
-      "time": 1788755222945.8586,
-      "uuid": "87df1e88-678c-4475-9821-2f2b06d15e92"
+    "3.Sprites\\sprites\\cuatu_mo1.png.meta": {
+      "time": 1791799263643.857
     },
-    "3.Sprites\\sprites\\candle2.png": {
-      "time": 1788755222947.8845,
-      "uuid": "02d44c99-dd8a-4ee2-ade0-2c9cfa4414de"
+    "3.Sprites\\sprites\\cuatu_mo2.png.meta": {
+      "time": 1791799263644.8586
     },
-    "3.Sprites\\sprites\\candle1.png": {
-      "time": 1788755222947.8845,
-      "uuid": "fb191235-a2cb-4e27-9345-f5668867163c"
+    "3.Sprites\\sprites\\danpiano.png.meta": {
+      "time": 1791799263655.8655
     },
-    "3.Sprites\\sprites\\candle22.png": {
-      "time": 1788755222947.8845,
-      "uuid": "51b2da60-3570-45bd-94e0-7c949eaa50f5"
+    "3.Sprites\\sprites\\danpiano_shadow.png.meta": {
+      "time": 1791799263656.8691
     },
-    "3.Sprites\\sprites\\candle3.png": {
-      "time": 1788755222947.8845,
-      "uuid": "95eebea8-7dcc-4ef6-b1a0-9e6c10113053"
+    "3.Sprites\\sprites\\dayleo_cut.png.meta": {
+      "time": 1791799263741.2693
     },
-    "3.Sprites\\sprites\\Level653_Scale.json": {
-      "time": 1791445190272.272,
-      "uuid": "5e9d7689-4ff1-4725-ba08-9543696889cc"
+    "3.Sprites\\sprites\\dayleo_full.png.meta": {
+      "time": 1791799263742.7754
     },
-    "3.Sprites\\sprites\\chair.png": {
-      "time": 1788755222952.9333,
-      "uuid": "c3baab78-c2d5-446a-8c13-bc50405c4a5b"
+    "3.Sprites\\sprites\\dayleo_shadow.png.meta": {
+      "time": 1791799263744.3613
     },
-    "3.Sprites\\sprites\\chair-pillpw.png": {
-      "time": 1788755222947.8845,
-      "uuid": "7e8a022c-3736-4b61-b4cd-0a50a26def8e"
+    "3.Sprites\\sprites\\denconma.png.meta": {
+      "time": 1791799263681.1624
     },
-    "3.Sprites\\sprites\\chair2.png": {
-      "time": 1788755222952.9333,
-      "uuid": "0742bd4c-d35f-4ef1-88b0-b28ca54d9c71"
+    "3.Sprites\\sprites\\denconma_shadow.png.meta": {
+      "time": 1791799263683.165
     },
-    "3.Sprites\\sprites\\chair2_sd.png": {
-      "time": 1788755222952.9333,
-      "uuid": "f98ff459-e4af-4f69-9c0b-d53eb47697ff"
+    "3.Sprites\\sprites\\dentreonocnha.png.meta": {
+      "time": 1791799263760.6494
     },
-    "3.Sprites\\sprites\\Win.png": {
-      "time": 1788755222935.9885,
-      "uuid": "1d601d7b-2476-4570-8f7d-0416ce7a1f9a"
+    "3.Sprites\\sprites\\doito.png.meta": {
+      "time": 1791799263757.647
     },
-    "3.Sprites\\Chung\\SlotBG.png.meta": {
-      "time": 1791451123009.8691
+    "3.Sprites\\sprites\\doito_shadow.png.meta": {
+      "time": 1791799263762.6482
     },
-    "3.Sprites\\Chung\\SlotBG.png": {
-      "time": 1791451172241.6304,
-      "uuid": "c864c38b-855f-4fe5-a80b-f3905e999ecb"
+    "3.Sprites\\sprites\\donghocondoi.png.meta": {
+      "time": 1791799263772.648
     },
-    "7.Scripts\\MyScript\\managers\\ItemTray.ts.meta": {
-      "time": 1791449863891.8357
+    "3.Sprites\\sprites\\donghocondoi_cut.png.meta": {
+      "time": 1791799263771.6477
     },
-    "7.Scripts\\MyScript\\managers\\ItemTray.ts": {
-      "time": 1791513150744.0027,
-      "uuid": "b268b080-2426-4a8b-9762-5002fd69e858"
+    "3.Sprites\\sprites\\donghocondoi_shadow.png.meta": {
+      "time": 1791799263780.6467
     },
-    "4.Sounds\\GoldChest.MP3.meta": {
-      "time": 1791451384935.736
+    "3.Sprites\\sprites\\dungcutrenban.png.meta": {
+      "time": 1791799263796.656
     },
-    "4.Sounds\\GoldChest.MP3": {
-      "time": 1782283243935.0127,
-      "uuid": "c53be69e-99c0-47d9-9c5a-4b103f98a370"
+    "3.Sprites\\sprites\\dungcutrenban_shadow.png.meta": {
+      "time": 1791799263800.5056
     },
-    "4.Sounds\\Rock.mp3.meta": {
-      "time": 1789461483776.8286
+    "3.Sprites\\sprites\\Ellipse_1_copy_2_shadow.png.meta": {
+      "time": 1791799263790.657
     },
-    "4.Sounds\\Rock.mp3": {
-      "time": 1789461467086.2214,
-      "uuid": "f57f7e9d-1391-4171-86c0-c31424707fe5"
+    "3.Sprites\\sprites\\gagiuong.png.meta": {
+      "time": 1791799263803.5154
     },
-    "3.Sprites\\Chung\\red2_ribbon.png.meta": {
-      "time": 1791176437374.1074
+    "3.Sprites\\sprites\\gagiuong_shadow.png.meta": {
+      "time": 1791799263806.518
     },
-    "3.Sprites\\Chung\\red2_ribbon.png": {
-      "time": 1788424400000,
-      "uuid": "5f69fc78-6873-48d6-9e6e-ebf0f506af6a"
+    "3.Sprites\\sprites\\ghedanpiano.png.meta": {
+      "time": 1791799263817.5154
     },
-    "3.Sprites\\Chung\\fx_shine.png.meta": {
-      "time": 1791171188721.4343
+    "3.Sprites\\sprites\\ghedanpiano_shadow.png.meta": {
+      "time": 1791799263814.514
     },
-    "3.Sprites\\Chung\\fx_shine.png": {
-      "time": 1787305686000,
-      "uuid": "3a2088ea-6a0c-444f-80d2-79b46de2b546"
+    "3.Sprites\\sprites\\ghesofa.png.meta": {
+      "time": 1791799263829.5132
     },
-    "3.Sprites\\WinCard.meta": {
-      "time": 1791452606554.3372
+    "3.Sprites\\sprites\\ghesofa_cut_khan.png.meta": {
+      "time": 1791799263824.5142
     },
-    "3.Sprites\\WinCard\\ShineRays.png.meta": {
-      "time": 1791452606582.041
+    "3.Sprites\\sprites\\ghesofa_shadow.png.meta": {
+      "time": 1791799263831.5132
     },
-    "3.Sprites\\WinCard\\White.png.meta": {
-      "time": 1791452606565.8545
+    "3.Sprites\\sprites\\giadethuoc.png.meta": {
+      "time": 1791799263840.514
     },
-    "3.Sprites\\WinCard\\WinRibbon.png.meta": {
-      "time": 1791452606569.3826
+    "3.Sprites\\sprites\\giadethuoc_cut.png.meta": {
+      "time": 1791799263842.5122
     },
-    "3.Sprites\\WinCard": {
-      "time": 1791452606547.203,
-      "uuid": "d166ac61-b767-4f22-8088-9820735a74ec"
+    "3.Sprites\\sprites\\giadethuoc_shadow.png.meta": {
+      "time": 1791799263850.5715
     },
-    "3.Sprites\\WinCard\\White.png": {
-      "time": 1791452571715.7383,
-      "uuid": "71c86fe2-bde9-434f-ac65-a05233ba9f36"
+    "3.Sprites\\sprites\\giasachamtuong.png.meta": {
+      "time": 1791799263854.5781
     },
-    "3.Sprites\\WinCard\\WinRibbon.png": {
-      "time": 1791452570788.505,
-      "uuid": "cbcfe9d6-0aee-4ea3-9fd9-e7af30be7c56"
+    "3.Sprites\\sprites\\giasachamtuong_cut.png.meta": {
+      "time": 1791799263858.9233
     },
-    "3.Sprites\\WinCard\\ShineRays.png": {
-      "time": 1791452571715.7383,
-      "uuid": "49cad4b1-07c6-4ef9-bfae-d7f5db99a410"
+    "3.Sprites\\sprites\\giaytrenke.png.meta": {
+      "time": 1791799263870.4456
     },
-    "7.Scripts\\MyScript\\ui.meta": {
-      "time": 1791452607175.7642
+    "3.Sprites\\sprites\\giaytrenke_shadow.png.meta": {
+      "time": 1791799263867.9321
     },
-    "7.Scripts\\MyScript\\ui\\WinCard.ts.meta": {
-      "time": 1791452607182.281
+    "3.Sprites\\sprites\\giokeobingo.png.meta": {
+      "time": 1791799263886.3738
     },
-    "7.Scripts\\MyScript\\ui": {
-      "time": 1791452607169.7634,
-      "uuid": "a0c2e1bf-4cbe-44ea-af9c-a5cd770df56f"
+    "3.Sprites\\sprites\\giokeobingo_cut.png.meta": {
+      "time": 1791799263877.373
     },
-    "7.Scripts\\MyScript\\ui\\WinCard.ts": {
-      "time": 1791452590862.3733,
-      "uuid": "1cde5b79-aa84-4c0e-bea7-573d1201407d"
+    "3.Sprites\\sprites\\giokeobingo_shadow.png.meta": {
+      "time": 1791799263879.372
     },
-    "7.Scripts\\Utils\\ArcText.ts.meta": {
-      "time": 1791177741827.1768
+    "3.Sprites\\sprites\\giuong.png.meta": {
+      "time": 1791799263894.3738
     },
-    "7.Scripts\\Utils\\ArcText.ts": {
-      "time": 1791177733445.1208,
-      "uuid": "e37f36fd-c4ca-48c0-9c4e-e6ea23836cdf"
+    "3.Sprites\\sprites\\giuong_cut.png.meta": {
+      "time": 1791799263897.3738
     },
-    "4.Sounds\\BGM\\2026-10-08 11-58-36 (mp3cut.net).mp3.meta": {
-      "time": 1791453359983.4558
+    "3.Sprites\\sprites\\giuong_shadow.png.meta": {
+      "time": 1791799263909.3728
     },
-    "4.Sounds\\BGM\\2026-10-08 11-58-36 (mp3cut.net).mp3": {
-      "time": 1791435631312.4993,
-      "uuid": "e1026b44-dbc1-46fb-b40b-daeda274d764"
+    "3.Sprites\\sprites\\goi1.png.meta": {
+      "time": 1791799263911.3743
     },
-    "4.Sounds\\Dramatic Piano Sound Effect - Brooklynn The Cartoon Girl.mp3.meta": {
-      "time": 1791511839324.3994
+    "3.Sprites\\sprites\\goi1_shadow.png.meta": {
+      "time": 1791799263914.3726
     },
-    "4.Sounds\\Dramatic Piano Sound Effect - Brooklynn The Cartoon Girl.mp3": {
-      "time": 1791511817438.7422,
-      "uuid": "cd3ca3e6-864c-425f-8995-3c4dca508ba2"
+    "3.Sprites\\sprites\\goi2.png.meta": {
+      "time": 1791799263926.374
     },
-    "4.Sounds\\fire-sound.mp3.meta": {
-      "time": 1791514651583.5176
+    "3.Sprites\\sprites\\goi2_shadow.png.meta": {
+      "time": 1791799263924.3748
     },
-    "4.Sounds\\fire-torch-whoosh-3-190299.mp3.meta": {
-      "time": 1791514651582.5154
+    "3.Sprites\\sprites\\goi3.png.meta": {
+      "time": 1791799263934.3823
     },
-    "4.Sounds\\ghostLaugh.mp3.meta": {
-      "time": 1791514651585.514
+    "3.Sprites\\sprites\\Layer_1.png.meta": {
+      "time": 1791799263937.3828
     },
-    "4.Sounds\\fire-torch-whoosh-3-190299.mp3": {
-      "time": 1791514651359.1418,
-      "uuid": "07552585-a19c-492a-a9ae-14c3a110023d"
+    "3.Sprites\\sprites\\Layer_2.png.meta": {
+      "time": 1791799263938.3848
     },
-    "4.Sounds\\fire-sound.mp3": {
-      "time": 1791514651288.839,
-      "uuid": "2ae0277d-48f7-46ac-beec-f99b32a91a7a"
+    "3.Sprites\\sprites\\Layer_3.png.meta": {
+      "time": 1791799263984.6843
     },
-    "4.Sounds\\ghostLaugh.mp3": {
-      "time": 1791514651552.2688,
-      "uuid": "19952116-2aff-467c-8e8d-639d626e34f6"
+    "3.Sprites\\sprites\\Layer_4.png.meta": {
+      "time": 1791799264031.3022
+    },
+    "3.Sprites\\sprites\\Layer_409_copy.png.meta": {
+      "time": 1791799264052.3037
+    },
+    "3.Sprites\\sprites\\Layer_410.png.meta": {
+      "time": 1791799264037.302
+    },
+    "3.Sprites\\sprites\\Level1197_Level_319.json.meta": {
+      "time": 1791799263981.6833
+    },
+    "3.Sprites\\sprites\\aogile_cut.png": {
+      "time": 1788754635916.4807,
+      "uuid": "f37e7ddb-02bb-4ff3-a82c-d1f9593ae969"
+    },
+    "3.Sprites\\sprites\\aophong_cut.png": {
+      "time": 1788754635918.7263,
+      "uuid": "1c74d759-4b81-41bc-bc77-e1ff54d6eee1"
+    },
+    "3.Sprites\\sprites\\aochoang_cut.png": {
+      "time": 1788754635915.48,
+      "uuid": "d39850cd-39c9-4ca5-ba06-c8459c164c85"
+    },
+    "3.Sprites\\sprites\\ban.png": {
+      "time": 1788754635920.0684,
+      "uuid": "8faa7dc1-204d-4d37-a83c-397a0c53c96c"
+    },
+    "3.Sprites\\sprites\\bandosao.png": {
+      "time": 1788754635922.0789,
+      "uuid": "38971bf3-9535-4ceb-935e-39026f50fad5"
+    },
+    "3.Sprites\\sprites\\bandosao_shadow.png": {
+      "time": 1788754635923.503,
+      "uuid": "90990f6c-ddf0-4ef0-94dc-c631d2b237a0"
+    },
+    "3.Sprites\\sprites\\bantrickortreat.png": {
+      "time": 1788754635924.5044,
+      "uuid": "a9ba1e1d-21b0-4cd0-b7f2-10453b2fca7d"
+    },
+    "3.Sprites\\sprites\\bantrickortreat_shadow.png": {
+      "time": 1788754635924.5044,
+      "uuid": "1221b6e2-d3a4-4c57-a009-6dcc544332e0"
+    },
+    "3.Sprites\\sprites\\ban_shadow.png": {
+      "time": 1788754635921.073,
+      "uuid": "a537b610-afda-41f4-aba5-2be924f52c08"
+    },
+    "3.Sprites\\sprites\\base_cut_chongchong.png": {
+      "time": 1788754635929.246,
+      "uuid": "6e3ba672-f0ae-410a-b8f9-82f3e9425308"
+    },
+    "3.Sprites\\sprites\\BG.png": {
+      "time": 1788754635900.1892,
+      "uuid": "1a2289b1-f7a7-47d9-8e3f-a1716be7aa52"
+    },
+    "3.Sprites\\sprites\\BG_fx1.png": {
+      "time": 1788754635902.1257,
+      "uuid": "7b6cf613-5c91-46b8-a9af-b2f8e7b029d7"
+    },
+    "3.Sprites\\sprites\\base.png": {
+      "time": 1788754635928.2468,
+      "uuid": "1ab47748-1b21-4471-a381-60c5f92956ee"
+    },
+    "3.Sprites\\sprites\\BG_fx2.png": {
+      "time": 1788754635904.6428,
+      "uuid": "b02c8e26-6b39-41ed-a1cd-74e8efc0f91a"
+    },
+    "3.Sprites\\sprites\\bingodai.png": {
+      "time": 1788754635929.246,
+      "uuid": "e84ef722-c20f-4153-897c-52fe57347e11"
+    },
+    "3.Sprites\\sprites\\BG_mattrang.png": {
+      "time": 1788754635905.6401,
+      "uuid": "36cdaa15-b6c1-423d-bca5-78b307f66c7c"
+    },
+    "3.Sprites\\sprites\\bingodai_shadow.png": {
+      "time": 1788754635930.764,
+      "uuid": "6f1b6f3b-cbf2-4c4e-a0f8-00705e264c87"
+    },
+    "3.Sprites\\sprites\\bingotactuong.png": {
+      "time": 1788754635931.993,
+      "uuid": "2298bbf4-4fd5-49c3-9b76-62050b237245"
+    },
+    "3.Sprites\\sprites\\BG_stars.png": {
+      "time": 1788754635908.9106,
+      "uuid": "89a1b848-4fb7-4d94-9149-4a1c371f384f"
+    },
+    "3.Sprites\\sprites\\bingotactuong_shadow.png": {
+      "time": 1788754635932.993,
+      "uuid": "2fc55101-7314-4501-a0f3-780e2cfce4f6"
+    },
+    "3.Sprites\\sprites\\bingotonhat.png": {
+      "time": 1788754635934.1177,
+      "uuid": "f6fa120c-2642-4dc4-b3cd-3e266641cf9b"
+    },
+    "3.Sprites\\sprites\\bingotonhat_shadow.png": {
+      "time": 1788754635934.1177,
+      "uuid": "9e8a2b33-0740-46d1-a58a-ea36eb5a868b"
+    },
+    "3.Sprites\\sprites\\bingotrentu.png": {
+      "time": 1788754635935.884,
+      "uuid": "f70695d6-7508-4482-8264-d0be7e02ad51"
+    },
+    "3.Sprites\\sprites\\bingotrentu_shadow.png": {
+      "time": 1788754635936.8914,
+      "uuid": "4446e3ed-26d2-4161-81e5-310abe26cda6"
+    },
+    "3.Sprites\\sprites\\binhthuoc.png": {
+      "time": 1788754635937.8904,
+      "uuid": "ca4efbed-6346-4fb0-b3e9-c9e65d660df2"
+    },
+    "3.Sprites\\sprites\\binhthuoc_shadow.png": {
+      "time": 1788754635939.1382,
+      "uuid": "4bb4fbd7-ec62-4250-b94a-03cde88434ac"
+    },
+    "3.Sprites\\sprites\\binhthuoc_cut.png": {
+      "time": 1788754635937.8904,
+      "uuid": "c58c3515-8c9c-4f07-b713-2f060d3db335"
+    },
+    "3.Sprites\\sprites\\butlong_shadow.png": {
+      "time": 1788754635940.646,
+      "uuid": "1abfdd27-5192-4a6f-9b0d-f26e78689bfb"
+    },
+    "3.Sprites\\sprites\\butlong.png": {
+      "time": 1788754635939.1382,
+      "uuid": "1842af11-3810-4edc-b123-27820782fa3c"
+    },
+    "3.Sprites\\sprites\\cauthang.png": {
+      "time": 1788754635941.6526,
+      "uuid": "1c7f86c4-10ed-4fbf-931c-e16406377b01"
+    },
+    "3.Sprites\\sprites\\cauthang_shadow.png": {
+      "time": 1788754635942.6523,
+      "uuid": "0dc2499b-ecea-4e5d-a73f-0375170a0c4a"
+    },
+    "3.Sprites\\sprites\\chan_shadow.png": {
+      "time": 1788754635945.5432,
+      "uuid": "3d00f8ed-6798-44e1-bf79-d08785f2feee"
+    },
+    "3.Sprites\\sprites\\chan.png": {
+      "time": 1788754635943.7324,
+      "uuid": "f918293e-d32b-4b5f-a715-cb09712309b1"
+    },
+    "3.Sprites\\sprites\\choi.png": {
+      "time": 1788754635946.5437,
+      "uuid": "0ea24265-3136-409e-8a75-25968e5e2861"
+    },
+    "3.Sprites\\sprites\\chongchong_shadow.png": {
+      "time": 1788754635949.872,
+      "uuid": "474a2ac7-6b2d-41fc-97c1-a4d1ec17e17c"
+    },
+    "3.Sprites\\sprites\\choi_shadow.png": {
+      "time": 1788754635947.545,
+      "uuid": "ebcc5f67-e2bb-4df4-b92d-1209728afd45"
+    },
+    "3.Sprites\\sprites\\chongchong.png": {
+      "time": 1788754635948.867,
+      "uuid": "b96e8c81-aa7c-4891-8730-0273d2c897d1"
+    },
+    "3.Sprites\\sprites\\chum.png": {
+      "time": 1788754635950.8774,
+      "uuid": "e64a256c-3324-4a23-8e40-f7ecec9a32b0"
+    },
+    "3.Sprites\\sprites\\chum_shadow.png": {
+      "time": 1788754635950.8774,
+      "uuid": "e4b48409-8219-4860-80ce-6fafd205b75a"
+    },
+    "3.Sprites\\sprites\\cuasotrenchop_shadow.png": {
+      "time": 1788754635953.279,
+      "uuid": "5c8f9bfb-827c-42f1-9ef5-82b7f2c0755e"
+    },
+    "3.Sprites\\sprites\\cuasotron_shadow.png": {
+      "time": 1788754635955.7932,
+      "uuid": "f708c2d2-90ed-4dfb-aac2-3953c1ae5ac2"
+    },
+    "3.Sprites\\sprites\\cuasotrenchop.png": {
+      "time": 1788754635953.279,
+      "uuid": "c3dde7b3-233e-4e32-abca-264058d76a62"
+    },
+    "3.Sprites\\sprites\\cuasotron.png": {
+      "time": 1788754635954.7852,
+      "uuid": "82a74724-40a8-4abd-8082-a3629d43de22"
+    },
+    "3.Sprites\\sprites\\cuatu_dong1.png": {
+      "time": 1788754635956.7913,
+      "uuid": "90c3364c-52c6-43e1-bba0-9c3c3750a38d"
+    },
+    "3.Sprites\\sprites\\cuatu_dong2.png": {
+      "time": 1788754635957.124,
+      "uuid": "741fc703-4699-4405-b20b-e61796fb1d21"
+    },
+    "3.Sprites\\sprites\\cuatu_mo1.png": {
+      "time": 1788754635958.1252,
+      "uuid": "6e873a62-f3fc-4b88-9471-7cbb2b4dd5c2"
+    },
+    "3.Sprites\\sprites\\cuatu_mo2.png": {
+      "time": 1788754635958.1252,
+      "uuid": "0869c028-db29-420a-9cf4-0518a437b69a"
+    },
+    "3.Sprites\\sprites\\danpiano.png": {
+      "time": 1788754635960.6377,
+      "uuid": "4624b309-4dd1-4a8e-a399-83acfe324442"
+    },
+    "3.Sprites\\sprites\\danpiano_shadow.png": {
+      "time": 1788754635960.6377,
+      "uuid": "dc99ecc0-5583-43a3-9670-cf4abda8f40a"
+    },
+    "3.Sprites\\sprites\\denconma.png": {
+      "time": 1788754635969.065,
+      "uuid": "9e549ddd-e356-405d-98c2-fac81d7ab7a6"
+    },
+    "3.Sprites\\sprites\\denconma_shadow.png": {
+      "time": 1788754635970.0715,
+      "uuid": "ac9cdd8e-90c4-4103-a5ab-391e9963aee1"
+    },
+    "3.Sprites\\sprites\\dayleo_cut.png": {
+      "time": 1788754635964.4346,
+      "uuid": "c924a43f-aa4f-45a7-9c53-3d26ac369717"
+    },
+    "3.Sprites\\sprites\\dayleo_full.png": {
+      "time": 1788754635966.7173,
+      "uuid": "a10e0f80-d5e5-48de-b33a-5df0c8993e5d"
+    },
+    "3.Sprites\\sprites\\dayleo_shadow.png": {
+      "time": 1788754635968.0583,
+      "uuid": "5db07341-ee88-4916-8358-c7ff619aeeeb"
+    },
+    "3.Sprites\\sprites\\doito.png": {
+      "time": 1788754635972.575,
+      "uuid": "253e64d9-c501-48b6-98b6-62ded60c29e4"
+    },
+    "3.Sprites\\sprites\\dentreonocnha.png": {
+      "time": 1788754635971.0706,
+      "uuid": "a30a3006-1c98-4062-9f62-bd952bfbde6a"
+    },
+    "3.Sprites\\sprites\\doito_shadow.png": {
+      "time": 1788754635972.575,
+      "uuid": "b0089189-5462-4a84-a709-39d4df930fb2"
+    },
+    "3.Sprites\\sprites\\donghocondoi_cut.png": {
+      "time": 1788754635975.3582,
+      "uuid": "8d885e97-eb9e-4259-bd94-6e69a53d72d6"
+    },
+    "3.Sprites\\sprites\\donghocondoi.png": {
+      "time": 1788754635974.0808,
+      "uuid": "b20e9dd7-b55d-4d51-8c27-7c87878d8402"
+    },
+    "3.Sprites\\sprites\\donghocondoi_shadow.png": {
+      "time": 1788754635976.3582,
+      "uuid": "6d7e0556-cb2a-4638-9c5d-c532360379e0"
+    },
+    "3.Sprites\\sprites\\Ellipse_1_copy_2_shadow.png": {
+      "time": 1788754635910.1199,
+      "uuid": "025ac7e2-52e1-44d2-a792-acf1d8d2f53f"
+    },
+    "3.Sprites\\sprites\\dungcutrenban.png": {
+      "time": 1788754635976.3582,
+      "uuid": "5befcc57-af90-4559-8495-cc44816d48c1"
+    },
+    "3.Sprites\\sprites\\dungcutrenban_shadow.png": {
+      "time": 1788754635977.3584,
+      "uuid": "c24faa7d-e953-4d75-80af-527a33574c54"
+    },
+    "3.Sprites\\sprites\\gagiuong.png": {
+      "time": 1788754635979.1099,
+      "uuid": "e3ba1f3c-569b-457d-b54e-b14aecd95d37"
+    },
+    "3.Sprites\\sprites\\gagiuong_shadow.png": {
+      "time": 1788754635979.1099,
+      "uuid": "6a4beabb-4c82-4835-9e4a-8d664cca9d1a"
+    },
+    "3.Sprites\\sprites\\ghedanpiano_shadow.png": {
+      "time": 1788754635980.115,
+      "uuid": "8e71444a-e1a3-49b4-90c7-0161f0424a0d"
+    },
+    "3.Sprites\\sprites\\ghedanpiano.png": {
+      "time": 1788754635980.115,
+      "uuid": "b73a47aa-3a7c-417e-9605-c649fb13fa66"
+    },
+    "3.Sprites\\sprites\\ghesofa_cut_khan.png": {
+      "time": 1788754635982.9824,
+      "uuid": "6044feb4-542a-4e34-abb2-388b07347349"
+    },
+    "3.Sprites\\sprites\\ghesofa.png": {
+      "time": 1788754635981.9802,
+      "uuid": "c20df509-7ac9-4b43-9454-be24a39a9a54"
+    },
+    "3.Sprites\\sprites\\ghesofa_shadow.png": {
+      "time": 1788754635983.9822,
+      "uuid": "55297fe3-f91f-48c8-bee1-cb8e270b0567"
+    },
+    "3.Sprites\\sprites\\giadethuoc.png": {
+      "time": 1788754635983.9822,
+      "uuid": "85f918c4-18b2-4f3e-a86d-4c9242409258"
+    },
+    "3.Sprites\\sprites\\giadethuoc_cut.png": {
+      "time": 1788754635985.0156,
+      "uuid": "dac4083c-55b8-45f1-8008-44da2c783e88"
+    },
+    "3.Sprites\\sprites\\giadethuoc_shadow.png": {
+      "time": 1788754635986.2976,
+      "uuid": "09b4b41b-5271-4734-934f-1685a2ff7a31"
+    },
+    "3.Sprites\\sprites\\giasachamtuong.png": {
+      "time": 1788754635987.2976,
+      "uuid": "74cbdc4c-56b5-4156-85f9-bd99ad44e0f4"
+    },
+    "3.Sprites\\sprites\\giasachamtuong_cut.png": {
+      "time": 1788754635987.2976,
+      "uuid": "1102b828-f639-41df-bf0e-46d26ae2efad"
+    },
+    "3.Sprites\\sprites\\giaytrenke_shadow.png": {
+      "time": 1788754635988.8015,
+      "uuid": "f8bcea8b-ceb5-4aaf-bb93-a4631a8535fa"
+    },
+    "3.Sprites\\sprites\\giaytrenke.png": {
+      "time": 1788754635988.8015,
+      "uuid": "07f63ea1-e06c-4926-8db1-7945fb75510d"
+    },
+    "3.Sprites\\sprites\\giokeobingo_cut.png": {
+      "time": 1788754635991.5798,
+      "uuid": "4263b49c-28ef-4109-ab83-bebe7be998e1"
+    },
+    "3.Sprites\\sprites\\giokeobingo_shadow.png": {
+      "time": 1788754635991.5798,
+      "uuid": "ff6392c5-5352-437d-b29d-aa260c8fb0ef"
+    },
+    "3.Sprites\\sprites\\giokeobingo.png": {
+      "time": 1788754635990.0745,
+      "uuid": "d8d81f3b-74f7-4be6-bcc3-8cdb95a3a877"
+    },
+    "3.Sprites\\sprites\\giuong.png": {
+      "time": 1788754635993.5852,
+      "uuid": "19a40837-1755-43b7-977e-7862d5772ea4"
+    },
+    "3.Sprites\\sprites\\giuong_cut.png": {
+      "time": 1788754635994.796,
+      "uuid": "f1a018e9-77d7-42b0-8a33-5667abfd2c10"
+    },
+    "3.Sprites\\sprites\\giuong_shadow.png": {
+      "time": 1788754635994.796,
+      "uuid": "0e218fff-6d8f-4761-b44a-9d29c4c7063a"
+    },
+    "3.Sprites\\sprites\\goi1.png": {
+      "time": 1788754635995.7961,
+      "uuid": "b072522c-c077-4ede-ac32-f39b511e3ae1"
+    },
+    "3.Sprites\\sprites\\goi1_shadow.png": {
+      "time": 1788754635997.0432,
+      "uuid": "27853a26-3874-4c7d-8c95-3df26d8a7bf5"
+    },
+    "3.Sprites\\sprites\\goi2_shadow.png": {
+      "time": 1788754635998.5483,
+      "uuid": "63564c1a-04e2-40a3-a382-48ca2d6c5c0b"
+    },
+    "3.Sprites\\sprites\\goi2.png": {
+      "time": 1788754635997.0432,
+      "uuid": "d644c759-390e-450c-9940-0ea902c9ae85"
+    },
+    "3.Sprites\\sprites\\goi3.png": {
+      "time": 1788754635999.554,
+      "uuid": "54e35644-1147-444e-8ffd-beab7335f59d"
+    },
+    "3.Sprites\\sprites\\Layer_1.png": {
+      "time": 1788754636066.8687,
+      "uuid": "2eccd24f-8f49-4d28-b7b5-6e47ccd08d65"
+    },
+    "3.Sprites\\sprites\\Layer_2.png": {
+      "time": 1788754636066.8687,
+      "uuid": "de3c98a2-b79c-4312-98da-3caa92def37c"
+    },
+    "3.Sprites\\sprites\\Level1197_Level_319.json": {
+      "time": 1791796991242.4744,
+      "uuid": "0b25842c-9678-4177-83ba-66724ff62a17"
+    },
+    "3.Sprites\\sprites\\Layer_3.png": {
+      "time": 1788754636068.1763,
+      "uuid": "95e1661d-4e05-4774-9704-f6a6059296ed"
+    },
+    "3.Sprites\\sprites\\Layer_4.png": {
+      "time": 1788754636069.1794,
+      "uuid": "c2ff22de-b781-418d-a619-6c3892d054a1"
+    },
+    "3.Sprites\\sprites\\Layer_410.png": {
+      "time": 1788754635913.475,
+      "uuid": "44909b5b-ed40-41c1-98b6-803d567c70dd"
+    },
+    "3.Sprites\\sprites\\Layer_409_copy.png": {
+      "time": 1788754635912.9707,
+      "uuid": "26ee694b-e482-4812-a9d5-59e0115076e2"
     }
   },
   "missing": {}
