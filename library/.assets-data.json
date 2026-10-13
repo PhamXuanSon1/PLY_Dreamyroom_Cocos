@@ -1369,6 +1369,7 @@
         "5ae6d90a-6fb6-4eee-9b25-8cbe0af402dc",
         "9d82fea5-c5e1-4838-a10e-0fbefa44356c",
         "19952116-2aff-467c-8e8d-639d626e34f6",
+        "50581b71-a165-4c62-82cc-a7888f89f51a",
         "1f1fe5a1-c894-424a-8a73-90ab623eca26",
         "ffb6a91e-943b-4118-9561-0c6feb8b9b45",
         "f57f7e9d-1391-4171-86c0-c31424707fe5",
@@ -1382,7 +1383,10 @@
         "07552585-a19c-492a-a9ae-14c3a110023d",
         "2ae0277d-48f7-46ac-beec-f99b32a91a7a",
         "36f9559d-0317-42ef-8986-bb3db27ef31c",
-        "ba5a5f5f-f85e-4d0d-a8d6-86008c030965"
+        "c32d3e3b-e812-4c5b-af3d-5459c878942e",
+        "45989b1b-6e08-45e6-8b05-9f325d8fe915",
+        "1489e820-bcb8-404e-8efb-b974246f0460",
+        "052af2d4-26fa-4b12-98e2-0afa312f50ad"
       ],
       "dependScripts": [
         "14a54ca0-e12a-490a-948a-754db1575003",
@@ -11198,14 +11202,64 @@
   },
   "ba5a5f5f-f85e-4d0d-a8d6-86008c030965": {
     "url": "db://assets/4.Sounds/tieng_cuoi_qua_bi_ngo_halloween-www_tiengdong_com.mp3",
-    "value": {
-      "depends": []
-    },
+    "value": {},
     "versionCode": 1
   },
   "6f1908e9-a325-464e-9298-8eb053700de3": {
     "url": "db://assets/7.Scripts/MyScript/effects/IdleBounce.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "45989b1b-6e08-45e6-8b05-9f325d8fe915": {
+    "url": "db://assets/4.Sounds/BroomSweep.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "080a6cf4-8970-4589-836e-4cd342d20efe": {
+    "url": "db://assets/4.Sounds/GhostScare.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "c0e1907f-663e-4df1-9f7d-67eca20f77b6": {
+    "url": "db://assets/4.Sounds/boilwithbobble.ogg",
+    "value": {},
+    "versionCode": 1
+  },
+  "1eaf2ecc-2faa-4f51-aaf5-db7d8677d388": {
+    "url": "db://assets/4.Sounds/Cat meow 2.ogg",
+    "value": {},
+    "versionCode": 1
+  },
+  "1489e820-bcb8-404e-8efb-b974246f0460": {
+    "url": "db://assets/4.Sounds/boilwithbobble.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "50581b71-a165-4c62-82cc-a7888f89f51a": {
+    "url": "db://assets/4.Sounds/Cat meow 2.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "c32d3e3b-e812-4c5b-af3d-5459c878942e": {
+    "url": "db://assets/4.Sounds/tieng_cuoi_qua_bi_ngo_halloween-www_tiengdong_com (mp3cut.net).mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "052af2d4-26fa-4b12-98e2-0afa312f50ad": {
+    "url": "db://assets/4.Sounds/ma.mp3",
+    "value": {
+      "depends": []
+    },
     "versionCode": 1
   }
 }

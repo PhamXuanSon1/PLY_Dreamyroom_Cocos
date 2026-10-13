@@ -40,10 +40,13 @@ export enum FxType {
     Piano = 31,
     Ghost = 32,
     Pumpkin = 33,
+    BroomSweep = 34,
+    BoilingPot = 35,
+    GhostScare = 36,
 }
 Enum(FxType);
 
-const FX_TYPE_COUNT = 34;
+const FX_TYPE_COUNT = 37;
 
 /**
  * Cau hinh du lieu am thanh.
@@ -168,6 +171,15 @@ class FxAudio {
 
     @property(SoundData)
     pumpkin: SoundData = new SoundData();
+
+    @property(SoundData)
+    broomSweep: SoundData = new SoundData();
+
+    @property(SoundData)
+    boilingPot: SoundData = new SoundData();
+
+    @property(SoundData)
+    ghostScare: SoundData = new SoundData();
 }
 
 /** 1 sequence FX dang phat (playFxSequence). */
@@ -459,6 +471,9 @@ export class Ply_SoundManager extends Ply_Singleton {
             case FxType.Piano: return this.fxAudio.piano;
             case FxType.Ghost: return this.fxAudio.ghost;
             case FxType.Pumpkin: return this.fxAudio.pumpkin;
+            case FxType.BroomSweep: return this.fxAudio.broomSweep;
+            case FxType.BoilingPot: return this.fxAudio.boilingPot;
+            case FxType.GhostScare: return this.fxAudio.ghostScare;
             default: return null;
         }
     }
