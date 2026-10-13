@@ -28,11 +28,11 @@
       "1787297348777": {
         "type": "build",
         "id": "1787297348777",
-        "progress": 0.17272727272727273,
-        "state": "processing",
+        "progress": 1,
+        "state": "success",
         "stage": "build",
-        "message": "Build project script start...",
-        "detailMessage": "[buildScriptCommand][[Build.Script.Rollup]] Circular dependency: file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts -> file:///F:/CocosProject/PLY_Dreamyroom_Cocos/a...",
+        "message": "10-13-2026 15:11:13 build success in 20 s!",
+        "detailMessage": "[playable-ads-builder]\r[processFiles] 1/1\r",
         "options": {
           "name": "Cocos_DreamyRoom_PLY44",
           "server": "",
