@@ -1386,7 +1386,7 @@
         "c32d3e3b-e812-4c5b-af3d-5459c878942e",
         "45989b1b-6e08-45e6-8b05-9f325d8fe915",
         "1489e820-bcb8-404e-8efb-b974246f0460",
-        "052af2d4-26fa-4b12-98e2-0afa312f50ad"
+        "8c4ac2a9-ef56-4e70-8c05-c72cae2a5bd6"
       ],
       "dependScripts": [
         "14a54ca0-e12a-490a-948a-754db1575003",
@@ -11257,6 +11257,18 @@
   },
   "052af2d4-26fa-4b12-98e2-0afa312f50ad": {
     "url": "db://assets/4.Sounds/ma.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "356580ef-01e4-4ca4-b40c-9bcb8c4ba256": {
+    "url": "db://assets/4.Sounds/Ghost Spirit.wav",
+    "value": {},
+    "versionCode": 1
+  },
+  "8c4ac2a9-ef56-4e70-8c05-c72cae2a5bd6": {
+    "url": "db://assets/4.Sounds/Ghost Spirit.mp3",
     "value": {
       "depends": []
     },
