@@ -3,7 +3,7 @@
  * Sử dụng hệ thống âm thanh từ PLY_SoundManager (sm).
  */
 
-import { _decorator, BoxCollider2D, Collider2D, Component, Enum, EventTouch, Node, ParticleSystem2D, UITransform, Vec2, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Collider2D, Component, Enum, EventTouch, Node, ParticleSystem2D, sp, UITransform, Vec2, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { ItemGraphic } from './ItemGraphic';
 import { ItemMovement } from './ItemMovement';
@@ -59,6 +59,10 @@ export enum MaterialType {
     Sat1 = 29,
     Sat2 = 30,
     Computer = 31,
+    Rock = 32,
+    Piano = 33,
+    Ghost = 34,
+    Pumpkin = 35,
 }
 Enum(MaterialType);
 
@@ -95,6 +99,12 @@ export class ItemController extends Component implements IPointerHandler {
     @property({ tooltip: 'Luôn hiện bóng ở đích ngay từ đầu; thả hụt / huỷ kéo KHÔNG tắt bóng, chỉ tắt khi ghép đúng.' })
     persistentShadow = false;
 
+    // ---- Bật/tắt node khi ghép xong ----
+    @property({ type: [Node], tooltip: 'Các node sẽ được BẬT khi item ghép đúng vào đích.' })
+    activeOnPlaced: Node[] = [];
+
+    @property({ type: [Node], tooltip: 'Các node sẽ bị TẮT khi item ghép đúng vào đích.' })
+    deactiveOnPlaced: Node[] = [];
 
     itemGraphic: ItemGraphic = null!;
     itemMovement: ItemMovement = null!;
@@ -286,6 +296,8 @@ export class ItemController extends Component implements IPointerHandler {
         if (!this.itemGraphic) this.itemGraphic = this.getComponent(ItemGraphic) ?? this.addComponent(ItemGraphic);
 
         target.active = true;
+        // Đích có spine: lúc kéo chỉ hiện Image dạng bóng, spine chưa bật
+        this.setTargetSpineMode(target, false);
         this.itemGraphic.handleTargetSprites(target, true);
         // Node tách ra theo target (FollowNode, vd cuaso_top) không được hiện khi target chỉ là bóng
         FollowNode.setSuppressedFor(target, true);
@@ -394,6 +406,8 @@ export class ItemController extends Component implements IPointerHandler {
             for (const child of target.children) {
                 child.active = true;
             }
+            // Đích có spine: tắt Image, bật spine
+            this.setTargetSpineMode(target, true);
             // Ghép xong -> node FollowNode theo target mới được hiện
             FollowNode.setSuppressedFor(target, false);
 
@@ -401,6 +415,8 @@ export class ItemController extends Component implements IPointerHandler {
 
             // 2. Kích hoạt spine hoặc trigger phụ
             this.getComponent(TurnOnSpine)?.activateSpine();
+            for (const n of this.deactiveOnPlaced) if (n && n.isValid) n.active = false;
+            for (const n of this.activeOnPlaced) if (n && n.isValid) n.active = true;
             this.getComponent(OpenItem)?.onItemPlaced();
 
             // 3. Phát âm thanh Done / LandRight từ Ply_SoundManager
@@ -456,6 +472,18 @@ export class ItemController extends Component implements IPointerHandler {
         });
     }
 
+    /**
+     * Đích có node spine (sp.Skeleton) bên trong: spineOn = false -> hiện Image, tắt spine (lúc bóng);
+     * spineOn = true -> tắt Image, bật spine (ghép xong). Đích không có spine thì không làm gì.
+     */
+    private setTargetSpineMode(target: Node, spineOn: boolean): void {
+        const skeletons = target.getComponentsInChildren(sp.Skeleton);
+        if (skeletons.length === 0) return;
+        for (const sk of skeletons) sk.node.active = spineOn;
+        const img = target.getChildByName('Image');
+        if (img) img.active = !spineOn;
+    }
+
     private materialTypeToFxType(materialType: MaterialType): FxType | null {
         const soundName = MaterialType[materialType];
         const fxType = FxType[soundName as keyof typeof FxType]
@@ -477,10 +505,11 @@ export class ItemController extends Component implements IPointerHandler {
 
         if (!fxNode) return;
 
-        // 2. Cho nó là con của targetNode và đặt tại tâm
+        // 2. Cho nó là con của targetNode, đặt tại tâm khung item và rải sao vừa contentSize
         fxNode.setParent(target, false);
-        fxNode.setPosition(Vec3.ZERO);
         fxNode.active = true;
+        const blink = fxNode.getComponent(BlinkEffect) ?? fxNode.addComponent(BlinkEffect);
+        blink.fitToNode(target);
 
         // 3. Reset ParticleSystem2D để kích hoạt phát hạt.
         //    GROUPED: hạt gắn theo emitter -> pan/zoom BaseRoom thì FX đi theo đồ đã snap
@@ -491,7 +520,6 @@ export class ItemController extends Component implements IPointerHandler {
         }
 
         // 4. Bật deSpawnByTime tự thu hồi về pool sau thời gian định sẵn (2s)
-        const blink = fxNode.getComponent(BlinkEffect) ?? fxNode.addComponent(BlinkEffect);
         blink.deSpawnByTime(2);
     }
 }

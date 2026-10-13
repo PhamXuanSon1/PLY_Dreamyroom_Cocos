@@ -25,6 +25,7 @@
 import { _decorator, Component, Node, Color, Vec3, Tween } from 'cc';
 import { ItemController } from '../item/ItemController';
 import { ItemGraphic } from '../item/ItemGraphic';
+import { ItemMovement } from '../item/ItemMovement';
 import { HolderSlot } from '../utils/HolderSlot';
 import { SeatHandler } from '../utils/SeatHandler';
 import { TweenUtil } from '../core/TweenUtil';
@@ -60,6 +61,10 @@ export class ItemManager extends Component {
 
     @property({ tooltip: 'Lượng scale tăng lên khi lấy ra khỏi hộp (mặc định 1.2).' })
     popScaleAmount = 1.2;
+
+    @property({ tooltip: 'Vào game: thu scale mọi item chưa ghép về 0 (ẩn), lấy ra từ hộp mới phóng to lên. '
+        + 'Tránh lộ item nằm chờ ngoài phòng khi màn hình ngang/rộng.' })
+    hideItemsOnStart = true;
 
     // ---------------- Item Drag Settings ----------------
     @property({ tooltip: 'Có cho phép tăng scale của item khi đang kéo không?' })
@@ -178,6 +183,8 @@ export class ItemManager extends Component {
     start() {
         this.ensureHolders();
 
+        if (this.hideItemsOnStart) this.hideItemsAtStart();
+
         if (this.itemList.length > 0) {
             // Bắt đầu với item cuối cùng hoặc item đầu tiên trong danh sách
             this.currentItemIndex = this.spawnFromLast ? this.itemList.length - 1 : 0;
@@ -199,6 +206,21 @@ export class ItemManager extends Component {
 
     onDestroy() {
         if (ItemManager.instance === this) ItemManager.instance = null;
+    }
+
+    /**
+     * Thu scale item chưa ghép về 0. Chụp scale gốc (ItemMovement.captureOriginal) TRƯỚC
+     * khi setScale(0) — kéo/thả hụt sau này tween về originalScale, chụp nhầm 0 là item biến mất.
+     * BoxController.spawnItem tự tween scale 0 -> popScale khi lấy item ra khỏi hộp.
+     */
+    private hideItemsAtStart(): void {
+        for (const node of this.itemList) {
+            if (!node || !node.isValid) continue;
+            const item = node.getComponent(ItemController);
+            if (item?.isPlaced) continue;
+            node.getComponent(ItemMovement)?.captureOriginal();
+            node.setScale(0, 0, 0);
+        }
     }
 
     /**

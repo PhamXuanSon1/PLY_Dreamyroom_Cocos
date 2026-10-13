@@ -51,6 +51,8 @@ export class ItemMovement extends Component {
     originalRotation: Vec3 = new Vec3(0, 0, 0);
 
     private isScaling = false;
+    /** originalScale đã được chụp từ scale THẬT của node (không phải giá trị serialize). */
+    private scaleCaptured = false;
 
     onLoad() {
         this.captureOriginal();
@@ -78,6 +80,9 @@ export class ItemMovement extends Component {
         const s = this.node.scale;
         if (!ItemMovement.isZeroScale(s)) {
             this.originalScale = s.clone();
+            this.scaleCaptured = true;
+        } else if (this.scaleCaptured && !ItemMovement.isZeroScale(this.originalScale)) {
+            // đã chụp đúng từ trước (vd ItemManager.hideItemsAtStart) -> giữ nguyên
         } else {
             const list = this.getComponent(ItemGraphic)?.listScale;
             this.originalScale = (list && !ItemMovement.isZeroScale(list))
