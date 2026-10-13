@@ -97,7 +97,11 @@ async function findSpriteFrame(treeNode, depth) {
     if (depth <= 0) {
         return '';
     }
-    for (const child of treeNode.children || []) {
+    // Ưu tiên node ảnh chính "Image"; node bóng ("xxx_sd" / "...shadow") xét sau cùng,
+    // nếu không thumbnail sẽ lấy nhầm ảnh bóng (con _sd thường đứng trước Image).
+    const rank = (c) => (c.name === 'Image' ? 0 : /(_sd|shadow)$/i.test(c.name) ? 2 : 1);
+    const children = (treeNode.children || []).slice().sort((a, b) => rank(a) - rank(b));
+    for (const child of children) {
         const found = await findSpriteFrame(child, depth - 1);
         if (found) {
             return found;
