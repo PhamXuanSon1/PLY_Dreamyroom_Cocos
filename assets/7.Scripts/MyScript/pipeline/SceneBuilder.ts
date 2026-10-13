@@ -132,7 +132,8 @@ export class SceneBuilder extends Component {
 
     @property({
         tooltip: 'Cho phép TÁCH sprite con ra khỏi node có sprite/component khi bắt buộc để đúng thứ tự. '
-            + 'Node tách ra được gắn FollowNode để vẫn đi theo cha cũ (transform + active).',
+            + 'Node tách ra được gắn FollowNode và cất trong folder "Follow" dưới cha cũ; '
+            + 'lúc chạy tự chuyển ra đúng chỗ xếp lớp và vẫn đi theo cha cũ (transform + active).',
     })
     splitEntities = true;
 
@@ -152,6 +153,13 @@ export class SceneBuilder extends Component {
     get clearBuilt(): boolean { return false; }
     set clearBuilt(v: boolean) { if (v) this.clear(); }
 
+    @property({
+        tooltip: 'Gộp các node đã tách (FollowNode) về lại ITEM kéo thả (node có ItemController). '
+            + 'Item bị kéo vào khay / ẩn đi khi ghép nên không tách con ra khỏi item được. Xong nhớ Ctrl+S.',
+    })
+    get mergeFollowIntoItems(): boolean { return false; }
+    set mergeFollowIntoItems(v: boolean) { if (v) this.mergeFollowNodesIntoItems(); }
+
     /** path → Node, dùng cho pass 2 và cho code gameplay tra cứu */
     readonly nodeMap = new Map<string, Node>();
     /** K của lần build hiện tại — chỉ dùng để tính contentSize từ nativeSize/ppu. */
@@ -166,6 +174,12 @@ export class SceneBuilder extends Component {
     private pathOfNode = new Map<Node, string>();
     /** Node ảnh (con `imageNodeName`) → node chủ. Node ảnh được xếp như 1 khối con mang sprite của chủ. */
     private ownerOfImage = new Map<Node, Node>();
+    /** Node có ItemController (item kéo thả) — KHÔNG được tách con ra khỏi nó. */
+    private itemNodes = new Set<Node>();
+    /** Node đã tách ra khỏi entity (gắn FollowNode) trong lần xếp lớp hiện tại. */
+    private hoistedNodes: Node[] = [];
+    private static readonly FOLLOW_FOLDER = 'Follow';
+    private static readonly ITEM_COMPONENT = 'ItemController';
 
     start() {
         if (!EDITOR && this.buildOnStart) void this.build();
@@ -224,6 +238,7 @@ export class SceneBuilder extends Component {
         this.entities.clear();
         this.pathOfNode.clear();
         this.ownerOfImage.clear();
+        this.itemNodes.clear();
     }
 
     /** Mọi path xuất hiện dưới dạng "@node:<path>" trong field component. */
@@ -400,6 +415,9 @@ export class SceneBuilder extends Component {
         if (n.sprite || n.spine || n.render || n.components?.length || !n.active || referenced.has(n.path)) {
             this.entities.add(node);
         }
+        if (n.components?.some((c) => c.type === SceneBuilder.ITEM_COMPONENT)) {
+            this.itemNodes.add(node);
+        }
 
         // ⚠ BẮT BUỘC: new Node() cho ra layer DEFAULT, mà pipeline UI của Cocos
         //   chỉ vẽ node UI_2D -> sprite dựng bằng code sẽ KHÔNG hiện, dù Scene view
@@ -499,7 +517,9 @@ export class SceneBuilder extends Component {
     private layoutRenderOrder(): void {
         this.ensureBounds();
         const stats: LayoutStats = { dissolved: [], pushed: [], hoisted: [], residual: [], cycles: 0 };
+        this.hoistedNodes = [];
         this.layoutChildren(this.node, stats);
+        this.parkHoistedNodes();
 
         const lines: string[] = [];
         if (stats.dissolved.length) lines.push(`hoà tan ${stats.dissolved.length} folder: ${stats.dissolved.join(', ')}`);
@@ -509,6 +529,66 @@ export class SceneBuilder extends Component {
         console.log(`[SceneBuilder] Xếp lớp xong${lines.length ? ':\n   ' + lines.join('\n   ') : ' — không phải đổi cấu trúc.'}`);
         if (stats.residual.length) {
             console.warn(`[SceneBuilder] ${stats.residual.length} xung đột KHÔNG tự gỡ được (sửa sortingOrder bên Unity hoặc kéo tay):\n   ${stats.residual.join('\n   ')}`);
+        }
+    }
+
+    /**
+     * Sau khi xếp lớp xong: ghi lại chỗ đúng (renderParent + renderBefore + rank) của từng node
+     * đã tách, rồi cất node vào folder `Follow` dưới chính target. Lúc chạy FollowNode.start()
+     * tự chuyển node về lại chỗ đó.
+     */
+    private parkHoistedNodes(): void {
+        const hoisted = this.hoistedNodes.filter((c) => c.isValid && c.getComponent(FollowNode)?.target?.isValid);
+        const set = new Set(hoisted);
+
+        // chụp vị trí cho TẤT CẢ trước khi rút node nào ra, để sibling index không bị xô lệch
+        for (const c of hoisted) {
+            const f = c.getComponent(FollowNode)!;
+            const P = c.parent!;
+            const kids = P.children;
+            const i = kids.indexOf(c);
+            let before: Node | null = null;
+            for (let j = i + 1; j < kids.length; j++) if (!set.has(kids[j])) { before = kids[j]; break; }
+            f.renderParent = P;
+            f.renderBefore = before;
+            f.renderRank = i;
+        }
+
+        for (const c of hoisted) {
+            const f = c.getComponent(FollowNode)!;
+            const target = f.target!;
+            let folder = target.getChildByName(SceneBuilder.FOLLOW_FOLDER);
+            if (!folder) {
+                folder = new Node(SceneBuilder.FOLLOW_FOLDER);
+                folder.layer = target.layer;
+                folder.setParent(target);
+            }
+            c.setParent(folder, true);
+            f.captureOffset();
+        }
+    }
+
+    /** Nút mergeFollowIntoItems: trả node đã tách về làm con trực tiếp của item nó đi theo. */
+    private mergeFollowNodesIntoItems(): void {
+        const merged: string[] = [];
+        for (const f of this.node.getComponentsInChildren(FollowNode)) {
+            const t = f.target;
+            const item = f.node;
+            if (!t || !t.isValid || !t.getComponent(SceneBuilder.ITEM_COMPONENT)) continue;
+            const oldParent = item.parent;
+            item.setParent(t, true);
+            // bóng (_sd) vẽ DƯỚI ảnh item -> đứng đầu; còn lại (_cut, _fx...) vẽ đè -> cuối
+            if (/_sd(\b|_)/i.test(item.name)) item.setSiblingIndex(0);
+            f.destroy();
+            merged.push(`${item.name}  →  ${t.name}`);
+            if (oldParent && oldParent.isValid && oldParent !== t
+                && oldParent.name === SceneBuilder.FOLLOW_FOLDER && oldParent.children.length === 0) {
+                oldParent.destroy();
+            }
+        }
+        console.log(`[SceneBuilder] Gộp ${merged.length} node về item${merged.length ? ':\n   ' + merged.join('\n   ') : '.'}`);
+        if (EDITOR) {
+            try { Ed?.Message?.send('scene', 'snapshot'); } catch { /* để Ctrl+Z được */ }
         }
     }
 
@@ -636,8 +716,10 @@ export class SceneBuilder extends Component {
                 };
                 const first = A.node.children.length >= B.node.children.length ? A : B;
                 const second = first === A ? B : A;
-                let E = first, hoist = tryHoist(first, second);
-                if (!hoist.length) { E = second; hoist = tryHoist(second, first); }
+                // Item kéo thả bị chuyển vào khay rồi ẩn khi ghép -> con tách ra không đi theo được
+                const canSplit = (b: Block): boolean => !this.itemNodes.has(b.node);
+                let E = first, hoist = canSplit(first) ? tryHoist(first, second) : [];
+                if (!hoist.length && canSplit(second)) { E = second; hoist = tryHoist(second, first); }
                 if (hoist.length) {
                     for (const c of hoist) {
                         const f = c.getComponent(FollowNode) ?? c.addComponent(FollowNode);
@@ -647,6 +729,7 @@ export class SceneBuilder extends Component {
                         f.captureOffset();
                         blocks.push(this.makeBlock(c, blocks.length));
                         stats.hoisted.push(`${path(c)}  (theo ${E.node.name})`);
+                        this.hoistedNodes.push(c);
                     }
                     const idx = blocks.indexOf(E);
                     blocks[idx] = this.makeBlock(E.node, E.origIndex);
