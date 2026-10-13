@@ -7,7 +7,7 @@
     "polyfills": {
       "asyncFunctions": true
     },
-    "name": "Cocos_DreamyRoom_PLY26",
+    "name": "Cocos_DreamyRoom_PLY44",
     "buildPath": "project://build",
     "outputName": "web-mobile",
     "mainBundleCompressionType": "merge_dep",
@@ -28,13 +28,13 @@
       "1787297348777": {
         "type": "build",
         "id": "1787297348777",
-        "progress": 1,
-        "state": "success",
+        "progress": 0.17272727272727273,
+        "state": "processing",
         "stage": "build",
-        "message": "10-9-2026 10:01:40 build success in 20 s!",
-        "detailMessage": "Asset DB is resume!\r",
+        "message": "Build project script start...",
+        "detailMessage": "[buildScriptCommand][[Build.Script.Rollup]] Circular dependency: file:///F:/CocosProject/PLY_Dreamyroom_Cocos/assets/7.Scripts/Manager/InputManager.ts -> file:///F:/CocosProject/PLY_Dreamyroom_Cocos/a...",
         "options": {
-          "name": "Cocos_DreamyRoom_PLY26",
+          "name": "Cocos_DreamyRoom_PLY44",
           "server": "",
           "engineModulesConfigKey": "migrationsConfig",
           "platform": "web-mobile",
@@ -93,7 +93,7 @@
             "enable": false
           }
         },
-        "time": "10-9-2026 10:01:20",
+        "time": "10-13-2026 15:10:52",
         "dirty": false
       }
     }
