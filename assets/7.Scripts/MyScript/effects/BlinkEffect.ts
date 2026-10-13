@@ -33,7 +33,14 @@ export class BlinkEffect extends Ply_GameUnit {
     @property({ tooltip: 'Số hạt phát mỗi giây: tối đa (item rất to).' })
     maxEmissionRate = 25;
 
+    @property({
+        tooltip: 'Scale của FX khi gắn làm con của đích (nhân với scale gốc của prefab). '
+            + 'Prefab được chỉnh lúc phòng còn scale 0.42 (Scale 0.7 × Level 0.6); phòng giờ scale 1 nên bù 0.42 để sao giữ cỡ cũ.',
+    })
+    scaleInTarget = 0.42;
+
     private base = new Map<ParticleSystem2D, PsBase>();
+    private baseScale: Vec3 | null = null;
 
     /**
      * Fit vùng phát sao vào khung `w × h` (đơn vị local của node cha FX), tâm tại `center`.
@@ -84,6 +91,11 @@ export class BlinkEffect extends Ply_GameUnit {
 
     /** Fit theo UITransform của `target` (FX phải đang là con của target). */
     fitToNode(target: Node): void {
+        // scale tuyệt đối (FX lấy lại từ pool không bị nhân dồn)
+        if (!this.baseScale) this.baseScale = this.node.scale.clone();
+        const k = this.scaleInTarget;
+        this.node.setScale(this.baseScale.x * k, this.baseScale.y * k, this.baseScale.z);
+
         const ut = target.getComponent(UITransform)
             ?? target.getChildByName('Image')?.getComponent(UITransform);
         if (!ut) { this.node.setPosition(Vec3.ZERO); return; }
