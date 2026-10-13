@@ -36,10 +36,14 @@ export enum FxType {
     Sat1 = 27,
     Sat2 = 28,
     Computer = 29,
+    Rock = 30,
+    Piano = 31,
+    Ghost = 32,
+    Pumpkin = 33,
 }
 Enum(FxType);
 
-const FX_TYPE_COUNT = 30;
+const FX_TYPE_COUNT = 34;
 
 /**
  * Cau hinh du lieu am thanh.
@@ -152,6 +156,18 @@ class FxAudio {
 
     @property(SoundData)
     computer: SoundData = new SoundData();
+
+    @property(SoundData)
+    rock: SoundData = new SoundData();
+
+    @property(SoundData)
+    piano: SoundData = new SoundData();
+
+    @property(SoundData)
+    ghost: SoundData = new SoundData();
+
+    @property(SoundData)
+    pumpkin: SoundData = new SoundData();
 }
 
 /** 1 sequence FX dang phat (playFxSequence). */
@@ -439,6 +455,10 @@ export class Ply_SoundManager extends Ply_Singleton {
             case FxType.Sat1: return this.fxAudio.sat1;
             case FxType.Sat2: return this.fxAudio.sat2;
             case FxType.Computer: return this.fxAudio.computer;
+            case FxType.Rock: return this.fxAudio.rock;
+            case FxType.Piano: return this.fxAudio.piano;
+            case FxType.Ghost: return this.fxAudio.ghost;
+            case FxType.Pumpkin: return this.fxAudio.pumpkin;
             default: return null;
         }
     }

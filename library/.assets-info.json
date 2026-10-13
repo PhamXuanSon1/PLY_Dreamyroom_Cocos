@@ -130,11 +130,11 @@
       "uuid": "e924d60d-ed6c-42e1-888e-d7fd3fbf4fbf"
     },
     "7.Scripts\\MyScript\\effects": {
-      "time": 1791512099224.5525,
+      "time": 1791866827164.6057,
       "uuid": "59acbb9a-95c1-4780-9edc-f7a5cce7a121"
     },
     "7.Scripts\\MyScript\\item": {
-      "time": 1791455332369.7122,
+      "time": 1791866731583.223,
       "uuid": "bfadb7c9-2f8a-4ecc-830b-35afa8393bc8"
     },
     "7.Scripts\\MyScript\\managers": {
@@ -142,7 +142,7 @@
       "uuid": "fa5ca025-9285-44c1-84f0-88241c087ac6"
     },
     "7.Scripts\\MyScript\\pipeline": {
-      "time": 1791800571989.2358,
+      "time": 1791860807896.484,
       "uuid": "40642cf3-a97f-4037-945f-f47cda630de9"
     },
     "7.Scripts\\MyScript\\ScriptTemplate": {
@@ -154,7 +154,7 @@
       "uuid": "a0c2e1bf-4cbe-44ea-af9c-a5cd770df56f"
     },
     "7.Scripts\\MyScript\\utils": {
-      "time": 1789552470979.2947,
+      "time": 1791866827306.5674,
       "uuid": "daed1a92-a434-43ad-9ff1-f408e238e1af"
     },
     "8.Models\\Textures\\Cloud": {
@@ -354,11 +354,11 @@
       "uuid": "8ba73e11-7d12-47a7-b3bb-9d9117358e1a"
     },
     "7.Scripts\\MyScript\\effects\\BlinkEffect.ts": {
-      "time": 1787367742427.953,
+      "time": 1791860325863.5898,
       "uuid": "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
     },
     "7.Scripts\\MyScript\\item\\ItemController.ts": {
-      "time": 1791513390480.9697,
+      "time": 1791865928613.669,
       "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
     },
     "7.Scripts\\MyScript\\item\\ItemGraphic.ts": {
@@ -366,7 +366,7 @@
       "uuid": "d558005a-8f0f-441f-95a3-dfdeb2a6e567"
     },
     "7.Scripts\\MyScript\\item\\ItemMovement.ts": {
-      "time": 1791450368784.6306,
+      "time": 1791866738117.0142,
       "uuid": "5340f45e-f6ea-46c6-841b-0215c9469592"
     },
     "7.Scripts\\MyScript\\item\\OpenItem.ts": {
@@ -382,7 +382,7 @@
       "uuid": "a6ea4dda-3a5c-40cf-a6c5-7e2bba4057f1"
     },
     "7.Scripts\\MyScript\\managers\\ItemManager.ts": {
-      "time": 1791513390481.9695,
+      "time": 1791866719639.1106,
       "uuid": "7443b598-ce0a-4555-8222-8eb8d76d1a1c"
     },
     "7.Scripts\\MyScript\\managers\\ItemTray.ts": {
@@ -414,7 +414,7 @@
       "uuid": "f0198f78-4f09-4308-bbae-851c9369a489"
     },
     "7.Scripts\\MyScript\\pipeline\\FollowNode.ts": {
-      "time": 1790842708909.2986,
+      "time": 1791854867148.022,
       "uuid": "4f5fb12f-49c9-4c2b-bd72-f5e96090433c"
     },
     "7.Scripts\\MyScript\\pipeline\\GoToTargetTool.ts": {
@@ -430,7 +430,7 @@
       "uuid": "8d976d68-8e93-4723-afa8-9d5ca6843614"
     },
     "7.Scripts\\MyScript\\pipeline\\SceneBuilder.ts": {
-      "time": 1791444852728.9097,
+      "time": 1791860806951.1316,
       "uuid": "9823c617-75c7-4125-915f-7b7e2e3428d4"
     },
     "7.Scripts\\MyScript\\pipeline\\SortItemsBySizeTool.ts": {
@@ -454,7 +454,7 @@
       "uuid": "8ae2cf63-dfd7-4f32-bac7-8bcfde17210d"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Ply_SoundManager.ts": {
-      "time": 1791510758656.9158,
+      "time": 1791865928613.669,
       "uuid": "784b8157-3757-4d0b-a788-266a2078d644"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Ply_Types.ts": {
@@ -470,7 +470,7 @@
       "uuid": "1cde5b79-aa84-4c0e-bea7-573d1201407d"
     },
     "7.Scripts\\MyScript\\utils\\BallFollowFill.ts": {
-      "time": 1786934963885.4,
+      "time": 1791866827863.522,
       "uuid": "2806f393-6824-43fa-90a8-04490eca4ae5"
     },
     "7.Scripts\\MyScript\\utils\\BaseRoom.ts": {
@@ -877,7 +877,7 @@
       "time": 1789031295425.515
     },
     "0.Spines": {
-      "time": 1791444920842.378,
+      "time": 1791856428362.096,
       "uuid": "91ce8cc5-cd6c-4470-a59f-ad70a442a383"
     },
     "1.Animations": {
@@ -893,7 +893,7 @@
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
-      "time": 1791514651565.507,
+      "time": 1791865909009.5894,
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
@@ -1165,7 +1165,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1791800900654.7053,
+      "time": 1791874223678.3389,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "8.Assets\\127. Spooky Pizza": {
@@ -1937,7 +1937,7 @@
       "time": 1791799262090.116
     },
     "3.Sprites\\sprites": {
-      "time": 1791799263272.0735,
+      "time": 1791859712845.6267,
       "uuid": "71d968c9-ea23-49e3-8312-d4ab08fa7436"
     },
     "3.Sprites\\sprites\\goi3_shadow.png.meta": {
@@ -2617,9 +2617,6 @@
     "3.Sprites\\sprites\\base_cut_chongchong.png.meta": {
       "time": 1791799263342.5913
     },
-    "3.Sprites\\sprites\\BG.png.meta": {
-      "time": 1791799263348.484
-    },
     "3.Sprites\\sprites\\BG_fx1.png.meta": {
       "time": 1791799263361.3938
     },
@@ -2908,10 +2905,6 @@
     "3.Sprites\\sprites\\base_cut_chongchong.png": {
       "time": 1788754635929.246,
       "uuid": "6e3ba672-f0ae-410a-b8f9-82f3e9425308"
-    },
-    "3.Sprites\\sprites\\BG.png": {
-      "time": 1788754635900.1892,
-      "uuid": "1a2289b1-f7a7-47d9-8e3f-a1716be7aa52"
     },
     "3.Sprites\\sprites\\BG_fx1.png": {
       "time": 1788754635902.1257,
@@ -3248,6 +3241,146 @@
     "3.Sprites\\sprites\\Layer_409_copy.png": {
       "time": 1788754635912.9707,
       "uuid": "26ee694b-e482-4812-a9d5-59e0115076e2"
+    },
+    "0.Spines\\Ply44.meta": {
+      "time": 1791856428363.601
+    },
+    "0.Spines\\Ply44": {
+      "time": 1791856483702.1047,
+      "uuid": "50441584-5d88-4d62-81c1-abf9af40ccfd"
+    },
+    "0.Spines\\Ply44\\Char1.meta": {
+      "time": 1791856451434.624
+    },
+    "0.Spines\\Ply44\\Char1": {
+      "time": 1791856454795.061,
+      "uuid": "e475bf35-de32-4f45-96c8-3ac67456f6a2"
+    },
+    "0.Spines\\Ply44\\Char1\\Char1.atlas.txt.meta": {
+      "time": 1791856435955.315
+    },
+    "0.Spines\\Ply44\\Char1\\Char1.atlas.txt": {
+      "time": 1791856390962.6995,
+      "uuid": "bcfe0c81-b580-422b-956e-e106ff1007aa"
+    },
+    "0.Spines\\Ply44\\Char1\\Char1.json.meta": {
+      "time": 1791856435953.255
+    },
+    "0.Spines\\Ply44\\Char1\\Char1.json": {
+      "time": 1791856390816.673,
+      "uuid": "fbc442fc-18de-40f3-8006-e0fc429ccf94"
+    },
+    "0.Spines\\Ply44\\Char1\\Char1.png.meta": {
+      "time": 1791856435976.566
+    },
+    "0.Spines\\Ply44\\Char1\\Char1.png": {
+      "time": 1791856390962.6995,
+      "uuid": "4b2c74af-a2d9-492c-8230-c28375985fb3"
+    },
+    "0.Spines\\Ply44\\char 2.meta": {
+      "time": 1791856468888.7346
+    },
+    "0.Spines\\Ply44\\char 2": {
+      "time": 1791856757951.4595,
+      "uuid": "4289f362-b8d6-45e4-9606-f91b054f62fd"
+    },
+    "0.Spines\\Ply44\\den.meta": {
+      "time": 1791856475856.9226
+    },
+    "0.Spines\\Ply44\\den": {
+      "time": 1791856939459.8074,
+      "uuid": "0423372b-ff08-4909-9932-29e6166af48b"
+    },
+    "0.Spines\\Ply44\\ma.meta": {
+      "time": 1791856483703.63
+    },
+    "0.Spines\\Ply44\\ma": {
+      "time": 1791857138929.9717,
+      "uuid": "2e5f290d-60fd-44ba-a170-42d2faf8421d"
+    },
+    "0.Spines\\Ply44\\char 2\\Char2.json.meta": {
+      "time": 1791856757961.4346
+    },
+    "0.Spines\\Ply44\\char 2\\Char2.png.meta": {
+      "time": 1791856757975.4324
+    },
+    "0.Spines\\Ply44\\char 2\\Char2.atlas.txt.meta": {
+      "time": 1791856757977.4333
+    },
+    "0.Spines\\Ply44\\char 2\\Char2.json": {
+      "time": 1791856729180.0708,
+      "uuid": "c15f7e51-af2c-4233-be22-3a1ffa40fa4c"
+    },
+    "0.Spines\\Ply44\\char 2\\Char2.png": {
+      "time": 1791856729257.2493,
+      "uuid": "f80f8228-7e7a-4b22-a4b7-e9af19150f16"
+    },
+    "0.Spines\\Ply44\\char 2\\Char2.atlas.txt": {
+      "time": 1791856729258.25,
+      "uuid": "447a8bbe-f0d8-49a6-8600-ab618a18a06a"
+    },
+    "0.Spines\\Ply44\\den\\Den.atlas.txt.meta": {
+      "time": 1791856939467.277
+    },
+    "0.Spines\\Ply44\\den\\Den.json.meta": {
+      "time": 1791856939475.6855
+    },
+    "0.Spines\\Ply44\\den\\Den.png.meta": {
+      "time": 1791856939492.978
+    },
+    "0.Spines\\Ply44\\den\\Den.atlas.txt": {
+      "time": 1791856913374.584,
+      "uuid": "9c654a99-9ee1-4a67-9ab9-76c8c61a1362"
+    },
+    "0.Spines\\Ply44\\den\\Den.json": {
+      "time": 1791856913302.402,
+      "uuid": "3f5272ee-5cb6-4c9c-8552-25554d4f3dfe"
+    },
+    "0.Spines\\Ply44\\den\\Den.png": {
+      "time": 1791856913373.5828,
+      "uuid": "8ab698c7-3707-4379-a89a-997b2429d638"
+    },
+    "0.Spines\\Ply44\\ma\\Ma.atlas.txt.meta": {
+      "time": 1791857138936.7747
+    },
+    "0.Spines\\Ply44\\ma\\Ma.png.meta": {
+      "time": 1791857138958.4524
+    },
+    "0.Spines\\Ply44\\ma\\Ma.json.meta": {
+      "time": 1791857138970.615
+    },
+    "0.Spines\\Ply44\\ma\\Ma.atlas.txt": {
+      "time": 1791857123103.0364,
+      "uuid": "8dd6fde1-96a6-47f9-8a5c-64c563310dda"
+    },
+    "0.Spines\\Ply44\\ma\\Ma.png": {
+      "time": 1791857123103.0364,
+      "uuid": "174a4d52-cdeb-40c4-b97d-b32b4c776a0a"
+    },
+    "0.Spines\\Ply44\\ma\\Ma.json": {
+      "time": 1791857123017.3318,
+      "uuid": "5b10e4bf-1677-4db0-b52a-a190be0964c3"
+    },
+    "3.Sprites\\sprites\\BG.png.meta": {
+      "time": 1791859712859.1858
+    },
+    "3.Sprites\\sprites\\BG.png": {
+      "time": 1788754635900.1892,
+      "uuid": "7e465f9b-d630-4a30-ba54-3cfa8371f26a"
+    },
+    "4.Sounds\\tieng_cuoi_qua_bi_ngo_halloween-www_tiengdong_com.mp3.meta": {
+      "time": 1791865909027.5554
+    },
+    "4.Sounds\\tieng_cuoi_qua_bi_ngo_halloween-www_tiengdong_com.mp3": {
+      "time": 1791865898214.5889,
+      "uuid": "ba5a5f5f-f85e-4d0d-a8d6-86008c030965"
+    },
+    "7.Scripts\\MyScript\\effects\\IdleBounce.ts.meta": {
+      "time": 1791866671844.4421
+    },
+    "7.Scripts\\MyScript\\effects\\IdleBounce.ts": {
+      "time": 1791866827069.135,
+      "uuid": "6f1908e9-a325-464e-9298-8eb053700de3"
     }
   },
   "missing": {}
