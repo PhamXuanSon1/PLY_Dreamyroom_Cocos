@@ -109,6 +109,13 @@ export class ItemController extends Component implements IPointerHandler {
     @property({ type: [Node], tooltip: 'Các node sẽ bị TẮT khi item ghép đúng vào đích.' })
     deactiveOnPlaced: Node[] = [];
 
+    @property({
+        type: [Node],
+        tooltip: 'Bóng đổ của item (node con). Ẩn lúc nằm holder / đang kéo; ghép xong mới hiện, '
+            + 'chuyển sang làm con của đích (item bị ẩn sau khi ghép). Để trống = tự lấy node con có tên chứa "_sd" / "shadow".',
+    })
+    dropShadows: Node[] = [];
+
     itemGraphic: ItemGraphic = null!;
     itemMovement: ItemMovement = null!;
     currentHolderSlot: HolderSlot | null = null;
@@ -135,6 +142,35 @@ export class ItemController extends Component implements IPointerHandler {
         this.itemGraphic = this.getComponent(ItemGraphic) ?? this.addComponent(ItemGraphic);
         this.itemMovement = this.getComponent(ItemMovement) ?? this.addComponent(ItemMovement);
         this.setupCollider();
+        this.initDropShadows();
+    }
+
+    /** Tự dò bóng đổ (nếu chưa gán tay) rồi ẩn đi — chỉ hiện sau khi ghép (placeDropShadows). */
+    private initDropShadows(): void {
+        if (this.dropShadows.length === 0) {
+            this.dropShadows = this.node.children.filter((c) => /(_sd(\b|_)|shadow)/i.test(c.name));
+        }
+        for (const s of this.dropShadows) if (s && s.isValid) s.active = false;
+    }
+
+    /**
+     * Ghép xong: chuyển bóng sang làm con của đích (đứng đầu = vẽ dưới hình đích) và bật lên.
+     * Lúc này item đã cùng cha + vị trí + góc với đích (matchItemSortingOrderToTarget), chỉ khác
+     * scale (item có thể đang phóng to lúc kéo) -> quy đổi theo scale gốc của item / scale đích.
+     */
+    private placeDropShadows(target: Node): void {
+        const orig = this.itemMovement?.originalScale;
+        const kx = (orig?.x ?? 1) / (target.scale.x || 1);
+        const ky = (orig?.y ?? 1) / (target.scale.y || 1);
+        for (const s of this.dropShadows) {
+            if (!s || !s.isValid) continue;
+            const p = s.position.clone(), sc = s.scale.clone();
+            s.setParent(target, false);
+            s.setPosition(p.x * kx, p.y * ky, p.z);
+            s.setScale(sc.x * kx, sc.y * ky, sc.z);
+            s.setSiblingIndex(0);
+            s.active = true;
+        }
     }
 
     onEnable() {
@@ -450,6 +486,7 @@ export class ItemController extends Component implements IPointerHandler {
             this.itemGraphic.matchItemSortingOrderToTarget(target);
             this.node.setWorldRotation(target.worldRotation);
             this.itemGraphic.restoreTargetSprites();
+            this.placeDropShadows(target);
 
             this.moving = false;
             DreamyInputManager.unregister(this);
