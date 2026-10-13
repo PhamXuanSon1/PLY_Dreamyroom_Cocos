@@ -2,6 +2,7 @@
 
 import { _decorator, Component, Node, Vec3, math } from 'cc';
 import { TweenUtil } from '../core/TweenUtil';
+import { IdleBounce } from '../effects/IdleBounce';
 
 const { ccclass, property } = _decorator;
 
@@ -18,6 +19,8 @@ export class BallFollowFill extends Component {
     rightPoint: Node | null = null;
 
     isIntroMoving = true;
+
+    private lastTuSo = 0;
 
     /**
      * Tổng số item. UIManager gán trong start().
@@ -61,5 +64,9 @@ export class BallFollowFill extends Component {
         const targetX = math.lerp(this.leftPoint.worldPosition.x, this.rightPoint.worldPosition.x, t);
         const p = this.ballIcon.worldPosition;
         this.ballIcon.setWorldPosition(targetX, p.y, p.z);
+
+        // icon có hiệu ứng (IdleBounce) thì nảy 1 cái khi tiến độ tăng
+        if (tuSo > this.lastTuSo) this.ballIcon.getComponent(IdleBounce)?.punch();
+        this.lastTuSo = tuSo;
     }
 }
