@@ -14,7 +14,8 @@
  * Chỉ hỗ trợ ItemManager.spawnFromLast = false.
  */
 
-import { _decorator, Component, Node, Vec3, UIOpacity } from 'cc';
+import { _decorator, Component, Node, Vec3, UIOpacity, AudioClip, AudioSource } from 'cc';
+import { Ply_SoundManager } from '../ScriptTemplate/Ply_SoundManager';
 import { ItemManager } from './ItemManager';
 import { BoxManager } from './BoxManager';
 import { ItemController } from '../item/ItemController';
@@ -62,6 +63,13 @@ export class MapPhaseManager extends Component {
 
     @property({ tooltip: 'Easing khi rơi (tên easing của cc.tween, vd bounceOut, backOut, quadOut).' })
     fallEasing = 'bounceOut';
+
+    // ---------------- âm thanh ----------------
+    @property({ type: AudioClip, tooltip: 'Phát 1 lần khi ghép xong hết item của 1 lượt (vd hết map 1 -> sang map 2). Để trống = không phát.' })
+    phaseCompleteSound: AudioClip | null = null;
+
+    @property({ tooltip: 'Âm lượng phaseCompleteSound.', range: [0, 1, 0.05], slide: true })
+    phaseCompleteVolume = 1;
 
     // ---------------- hộp ----------------
     @property({ type: Vec3, tooltip: 'Hộp bay đi theo vector này (world, tính từ chỗ đang đứng) khi rớt hết item của lượt.' })
@@ -165,9 +173,17 @@ export class MapPhaseManager extends Component {
 
         this.transitioning = true;
         this.setPlayerInputBlocked(true);
+        this.playPhaseCompleteSound();
         this.scheduleOnce(() => this.dropAfterItems(this.phaseIndex, () => {
             this.scheduleOnce(() => this.returnBox(), this.delayBeforeBoxReturn);
         }), this.delayBeforeAfter);
+    }
+
+    private playPhaseCompleteSound(): void {
+        if (!this.phaseCompleteSound || Ply_SoundManager.Ins?.isMuted) return;
+        const src = this.getComponent(AudioSource) ?? this.addComponent(AudioSource);
+        src.playOnAwake = false;
+        src.playOneShot(this.phaseCompleteSound, this.phaseCompleteVolume);
     }
 
     /** Lần lượt hiện đích của các món afterComplete: rơi từ trên xuống + hiện dần. */

@@ -229,6 +229,11 @@ export class Ply_SoundManager extends Ply_Singleton {
      * Phat am thanh hieu ung ngay lap tuc.
      * Neu dang phat, no se phat lai tu dau.
      */
+    /** Đang tắt tiếng FX (script khác tự phát AudioClip thì kiểm tra cờ này). */
+    public get isMuted(): boolean {
+        return this.isMute;
+    }
+
     public playFx(fxType: FxType) {
         if (this.isMute) return;
 
