@@ -126,6 +126,15 @@ async function buildLevel(args) {
 
     const itemsParent = map.get(args.paths.items) || commonParent(itemNodes);
     const holdersParent = commonParent(holderNodes);
+
+    // BaseRoom bắt chạm (kéo phòng) theo contentSize của node -> phủ đúng cả map vừa dựng
+    const BaseRoom = cls('BaseRoom');
+    if (BaseRoom && root.getComponent(BaseRoom) && args.roomSize) {
+        const ut = root.getComponent(cc.UITransform) || root.addComponent(cc.UITransform);
+        ut.setContentSize(args.roomSize.width, args.roomSize.height);
+        ut.setAnchorPoint(args.roomSize.anchorX ?? 0.5, args.roomSize.anchorY ?? 0.5);
+        log.push(`Vùng kéo phòng (contentSize "${root.name}") = ${Math.round(args.roomSize.width)}×${Math.round(args.roomSize.height)}`);
+    }
     const linked = [];
 
     // ---- ItemManager: danh sách item rớt ra từ hộp (UIManager.mauSo tự lấy theo độ dài list)
@@ -137,12 +146,13 @@ async function buildLevel(args) {
 
     // ---- các tool pipeline (nếu có trong scene)
     for (const t of compsInScene('AutoAssignByNameTool')) {
+        const naming = args.naming || { prefix: 'Holder_', suffix: '' };
         t.itemParent = itemsParent;
         t.targetParent = levelRoot;
-        t.prefix = 'Holder_';
-        t.suffix = '';
+        t.prefix = naming.prefix;
+        t.suffix = naming.suffix;
         t.recursive = true;
-        linked.push('AutoAssignByNameTool (Items ↔ Holder_*)');
+        linked.push(`AutoAssignByNameTool (Items ↔ ${naming.prefix}*${naming.suffix})`);
     }
     for (const t of compsInScene('SortItemsBySizeTool')) { t.parentNode = itemsParent; linked.push('SortItemsBySizeTool'); }
     for (const t of compsInScene('GridArrangeTool')) { t.parentNode = itemsParent; linked.push('GridArrangeTool'); }

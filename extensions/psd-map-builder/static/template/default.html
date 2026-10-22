@@ -2,9 +2,9 @@
     <header>
         <div class="row">
             <h2>PSD Map Builder</h2>
-            <input id="psdPath" class="grow" type="text" placeholder="File .psd hoặc folder level (chứa .psd + manifest.json + build-plan)" spellcheck="false">
+            <input id="psdPath" class="grow" type="text" placeholder="File .psd, folder export Unity (Level*.json + sprites/) hoặc folder level PSD" spellcheck="false">
             <ui-button id="pickPsd">Chọn PSD…</ui-button>
-            <ui-button id="pickFolder" tooltip="Folder level từ pipeline Unity: có .psd, manifest.json, build-plan-unity.json, Asset_*/Textures. Tự chọn sẵn item, gắn bóng/cut, thứ tự rớt theo waves, chain -> SeatHandler.">Mở folder level…</ui-button>
+            <ui-button id="pickFolder" tooltip="Bản export Unity (vd F:/CocosExport/PLy50: Level*.json + sprites/) — giữ nguyên cách xếp map của Unity, chỉ chọn item chơi được. Cũng nhận folder level PSD (.psd + manifest.json + build-plan).">Mở folder…</ui-button>
             <ui-button id="scan" type="primary" tooltip="Đọc PSD, xuất từng layer ra PNG vào cache (temp/). PSD không đổi thì lần sau đọc từ cache.">Quét</ui-button>
         </div>
 
@@ -25,7 +25,7 @@
                     <option value="bottomUp">PSD dưới → trên</option>
                     <option value="topDown">PSD trên → dưới</option>
                     <option value="picked">Theo thứ tự chọn</option>
-                    <option value="plan">Theo build-plan (waves)</option>
+                    <option value="plan">Theo plan / Unity</option>
                 </select>
             </label>
             <label id="folderTexWrap" class="hidden" title="Dùng PNG đã thu nhỏ trong Asset_*/Textures của folder (nhẹ hơn cho playable). Tắt = ảnh full từ PSD."><input id="useFolderTex" type="checkbox"> Ảnh thu nhỏ của folder</label>

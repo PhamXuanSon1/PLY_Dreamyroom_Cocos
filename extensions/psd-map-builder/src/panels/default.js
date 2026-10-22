@@ -210,6 +210,7 @@ exports.methods = {
         if (!input) { this.showStatus('Chưa chọn file PSD hoặc folder level.', 'error'); return; }
         let isDir = false;
         try { isDir = fs.statSync(input).isDirectory(); } catch (e) { /* main báo lỗi không thấy file */ }
+        if (/\.json$/i.test(input)) isDir = true;   // file JSON export Unity đi chung đường folder
         this.persist();
         this.setBusy(true);
         this.setProgress(0, 0, 'Đang đọc PSD (lần đầu có thể mất ~15s)...');
@@ -249,7 +250,9 @@ exports.methods = {
             // khớp item theo tên (PSD sửa thêm/bớt layer thì id đổi), trùng tên thì lấy order gần nhất
             const lost = [];
             for (const it of saved.items || []) {
-                const cands = manifest.layers.filter((l) => l.name === it.name && !l.empty);
+                let cands = manifest.layers.filter((l) => l.name === it.name && !l.empty);
+                // bản lưu cũ của export Unity ghi tên item thay vì tên đích "XPlace"
+                if (!cands.length) cands = manifest.layers.filter((l) => l.name === `${it.name}Place` && !l.empty);
                 if (!cands.length) { lost.push(it.name); continue; }
                 cands.sort((a, b) => Math.abs(a.order - it.order) - Math.abs(b.order - it.order));
                 this.setItem(cands[0].id, true);
@@ -271,13 +274,17 @@ exports.methods = {
                 + ` từ lần tạo trước (${saved.savedAt || ''}).`
                 + (lost.length ? `\n⚠ Không còn layer: ${lost.join(', ')}` : '');
         } else {
-            const level = state.plan && state.plan.level ? `Level_${state.plan.level}` : defaultLevelName(manifest.psd.name);
+            const lv = state.plan && state.plan.level ? String(state.plan.level) : '';
+            const level = lv ? (/^\d+$/.test(lv) ? `Level_${lv}` : sanitizeKey(lv)) : defaultLevelName(manifest.psd.name);
             this.$.levelName.value = level;
             this.$.outUrl.value = `db://assets/3.Sprites/${level}`;
             if (state.plan) {
                 this.loadPlanSelection(false);
-                restored = `Đã chọn sẵn theo build-plan: ${state.items.size} item, ${state.overrides.size} bóng/cut, thứ tự rớt theo waves.`
-                    + ' Bỏ chọn những item không muốn cho chơi rồi bấm Tạo map.';
+                restored = (this.isExportMode()
+                    ? `Bản export Unity: giữ nguyên cách xếp map, chọn sẵn ${state.items.size} item như trong Unity (thứ tự rớt theo Items).`
+                        + ' Click đồ vật để thêm / bỏ item — đích bị bỏ thành đồ trang trí tĩnh. Rồi bấm Tạo map.'
+                    : `Đã chọn sẵn theo build-plan: ${state.items.size} item, ${state.overrides.size} bóng/cut, thứ tự rớt theo waves.`
+                        + ' Bỏ chọn những item không muốn cho chơi rồi bấm Tạo map.');
             } else {
                 // group tên "Items" trong PSD -> chọn sẵn
                 for (const l of manifest.layers) {
@@ -302,11 +309,22 @@ exports.methods = {
             if (!state.chainOf.has(a)) state.chainOf.set(a, []);
             state.chainOf.get(a).push(b);
         }
-        this.$.folderTexWrap.classList.toggle('hidden', !plan);
+        const exportMode = !!(plan && plan.mode === 'export');
+        this.$.folderTexWrap.classList.toggle('hidden', !plan || exportMode);
         this.$.planSelect.classList.toggle('hidden', !plan);
+        // export Unity: bóng/cut đã nằm đúng cây node, scale gốc lấy theo Unity -> khoá các tuỳ chọn kiểu PSD
+        this.$.list.classList.toggle('exportMode', exportMode);
+        for (const k of ['attach', 'scale']) {
+            if (exportMode) this.$[k].setAttribute('disabled', '');
+            else this.$[k].removeAttribute('disabled');
+        }
         const opt = this.$.order.querySelector('option[value="plan"]');
         opt.disabled = !plan;
         if (!plan && this.$.order.value === 'plan') this.$.order.value = 'bottomUp';
+    },
+
+    isExportMode() {
+        return !!(state.plan && state.plan.mode === 'export');
     },
 
     /** Chọn item + gắn bóng/cut đúng như build-plan, thứ tự rớt theo waves. */
@@ -331,9 +349,11 @@ exports.methods = {
         state.links = new Map();
         state.childrenOf = new Map();
         if (!m) return;
+        // export Unity: bóng/cut gắn theo cây node của Unity (plan.links), gắn tay đè lên trên
+        const base = this.isExportMode() ? state.plan.links : [];
         state.links = linkAttachments(m.layers.filter((l) => !l.empty), {
-            auto: this.$.attach.checked,
-            overrides: [...state.overrides],
+            auto: this.$.attach.checked && !this.isExportMode(),
+            overrides: [...base, ...state.overrides],
         });
         for (const [id, link] of state.links) {
             if (!state.childrenOf.has(link.ownerId)) state.childrenOf.set(link.ownerId, []);
@@ -452,7 +472,7 @@ exports.methods = {
         for (const l of m.layers) {
             if (!l.prev) continue;
             const img = document.createElement('img');
-            img.src = `${fileUrl(path.join(m.cacheDir, 'prev', `${l.key}.png`))}?v=${stamp}`;
+            img.src = `${fileUrl(path.join(m.cacheDir, 'prev', `${l.prevKey || l.key}.png`))}?v=${stamp}`;
             img.style.left = `${l.prev.x}px`;
             img.style.top = `${l.prev.y}px`;
             img.style.width = `${l.prev.w}px`;

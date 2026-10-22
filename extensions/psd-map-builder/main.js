@@ -3,8 +3,10 @@
  * PSD Map Builder — entry của Editor (browser process).
  *
  *   scan       : chạy src/psd-worker.js (tiến trình con) -> PNG + thumbnail + manifest trong temp/
- *   scanFolder : như scan nhưng nhận "folder level" (PSD + manifest.json + build-plan + Textures),
- *                trả thêm plan (item gợi ý, bóng/cut, chain, waves, ảnh thu nhỏ) — xem src/level-folder.js
+ *   scanFolder : nhận folder (hoặc file .json):
+ *                - bản export Unity (JSON SceneBuilder + sprites/) -> giữ nguyên cách xếp map của Unity,
+ *                  chỉ chọn item chơi được (src/export-worker.js, src/export-json.js)
+ *                - folder level PSD (PSD + manifest.json + build-plan + Textures) — xem src/level-folder.js
  *   createMap  : chép PNG layer dùng tới vào thư mục asset, ghi <Level>.json (schema SceneBuilder)
  *                + <Level>.psdmap.json (lựa chọn item, để mở lại sửa tiếp), refresh asset-db,
  *                rồi gọi scene.js dựng node + nối ItemManager / tool pipeline.
@@ -16,6 +18,7 @@ const crypto = require('crypto');
 const { fork } = require('child_process');
 const { buildSceneJson } = require('./src/scene-json');
 const { detectFolder, buildPlan } = require('./src/level-folder');
+const { buildExportJson } = require('./src/export-json');
 
 const PKG = 'psd-map-builder';
 const SELECTION_EXT = '.psdmap.json';
@@ -48,10 +51,10 @@ function sceneScript(method, ...args) {
 
 // ---------------------------------------------------------------- scan
 
-function runWorker(psdPath, cacheDir) {
+function runWorker(psdPath, cacheDir, script = 'psd-worker.js') {
     return new Promise((resolve, reject) => {
         if (scanning) { try { scanning.kill(); } catch (e) { /* đã thoát */ } }
-        const child = fork(path.join(__dirname, 'src', 'psd-worker.js'), [psdPath, cacheDir], {
+        const child = fork(path.join(__dirname, 'src', script), [psdPath, cacheDir], {
             env: { ...process.env, ELECTRON_RUN_AS_NODE: '1' },
             execArgv: ['--max-old-space-size=8192'],
             stdio: ['ignore', 'ignore', 'pipe', 'ipc'],
@@ -111,9 +114,46 @@ async function scan(psdPath) {
     }
 }
 
+/** File .json là bản export Unity (schema SceneBuilder) khi có meta.exportRoot + nodes. */
+function isUnityExport(file) {
+    try {
+        const head = fs.readFileSync(file, 'utf8');
+        const d = JSON.parse(head);
+        return !!(d && d.meta && Array.isArray(d.nodes) && d.meta.K);
+    } catch (e) { return false; }
+}
+
+/** Folder (hoặc file) -> đường dẫn JSON export Unity, hoặc '' nếu không phải. */
+function detectExport(input) {
+    try {
+        const st = fs.statSync(input);
+        if (st.isFile()) return /\.json$/i.test(input) && isUnityExport(input) ? input : '';
+        if (!fs.existsSync(path.join(input, 'sprites'))) return '';
+        const json = fs.readdirSync(input).filter((f) => /\.json$/i.test(f)).map((f) => path.join(input, f));
+        return json.find(isUnityExport) || '';
+    } catch (e) { return ''; }
+}
+
+async function scanExport(jsonPath) {
+    try {
+        const t = Date.now();
+        const res = await runWorker(jsonPath, cacheDirOf(jsonPath), 'export-worker.js');
+        const m = res.manifest;
+        log(`Export ${path.basename(jsonPath)}: ${m.layers.length} layer, ${m.plan.items.length} item Unity (${res.cached ? 'cache' : `${Date.now() - t}ms`})`);
+        return {
+            ok: true, manifest: m, cached: !!res.cached, saved: findSavedSelections(jsonPath),
+            plan: m.plan, folder: { dir: path.dirname(jsonPath), psdPath: jsonPath, mode: 'export' },
+        };
+    } catch (e) {
+        return { ok: false, error: e.message };
+    }
+}
+
 async function scanFolder(dir) {
+    const exportJson = detectExport(dir);
+    if (exportJson) return scanExport(exportJson);
     const info = detectFolder(dir);
-    if (!info) return { ok: false, error: `Folder không có file .psd: ${dir}` };
+    if (!info) return { ok: false, error: `Folder không phải bản export Unity (.json + sprites/) cũng không có file .psd: ${dir}` };
     const res = await scan(info.psdPath);
     if (!res.ok) return res;
     const plan = buildPlan(info, res.manifest);
@@ -186,7 +226,7 @@ async function createMap(payload) {
         // Folder level + "ảnh thu nhỏ": layer có ảnh trong folder dùng ảnh đó, đặt theo bbox của manifest
         // (contentSize vẫn = kích thước PSD, Sprite CUSTOM tự kéo giãn ảnh nhỏ cho vừa).
         let folderTex = {};
-        if (payload.folder && payload.folder.useTextures) {
+        if (payload.folder && payload.folder.useTextures && manifest.mode !== 'export') {
             const plan = (() => { try { return JSON.parse(fs.readFileSync(path.join(cacheDir, 'plan.json'), 'utf8')); } catch (e) { return null; } })();
             if (!plan) throw new Error('Chưa quét folder level (bấm Quét lại).');
             folderTex = plan.textures || {};
@@ -201,7 +241,10 @@ async function createMap(payload) {
         progress({ phase: 'export', text: 'Sinh JSON...' });
         const links = Array.isArray(payload.links) ? payload.links : [];
         const chains = Array.isArray(payload.chains) ? payload.chains : [];
-        const built = buildSceneJson(manifest, { items: payload.items, links, chains }, { ...opts, levelName });
+        const isExport = manifest.mode === 'export';
+        const built = isExport
+            ? buildExportJson(manifest, JSON.parse(fs.readFileSync(manifest.export.json, 'utf8')), { items: payload.items })
+            : buildSceneJson(manifest, { items: payload.items, links, chains }, { ...opts, levelName });
 
         // 1. ảnh
         const outDir = urlToPath(outUrl);
@@ -210,7 +253,8 @@ async function createMap(payload) {
         built.usedKeys.forEach((key, i) => {
             const tex = folderTex[keyToId.get(key)];
             if (tex) fromFolder++;
-            const src = tex ? tex.file : path.join(cacheDir, 'png', `${key}.png`);
+            const src = isExport ? path.join(manifest.export.spritesDir, `${key}.png`)
+                : tex ? tex.file : path.join(cacheDir, 'png', `${key}.png`);
             const dst = path.join(outDir, `${key}.png`);
             if (i % 20 === 0) progress({ phase: 'export', done: i, total: built.usedKeys.length, text: key });
             if (!sameFile(src, dst)) { fs.copyFileSync(src, dst); copied++; }
@@ -227,7 +271,9 @@ async function createMap(payload) {
             psdPath,
             levelName,
             outUrl,
-            items: built.items.map((it) => ({ name: it.name, order: byId.get(it.layerId).order })),
+            // tên LAYER được chọn (export Unity: đích "XPlace", không phải tên node item)
+            items: built.items.filter((it) => byId.has(it.layerId))
+                .map((it) => ({ name: byId.get(it.layerId).name, order: byId.get(it.layerId).order })),
             // gắn / gỡ tay layer phụ (owner null = gỡ ra thành layer độc lập), lưu theo tên để PSD sửa vẫn khớp
             links: links.filter(([c]) => byId.has(c)).map(([c, o]) => ({
                 child: byId.get(c).name,
@@ -263,6 +309,16 @@ async function createMap(payload) {
             spriteDir: outUrl.replace(/^db:\/\/assets\//, ''),
             items: built.items,
             paths: built.paths,
+            // node phòng: contentSize phủ cả map = vùng bấm để kéo phòng (không dùng collider)
+            roomSize: isExport
+                ? {   // bounds export đã là toạ độ world (gồm scale gốc Unity); map không nhất thiết căn giữa
+                    width: manifest.psd.width, height: manifest.psd.height,
+                    anchorX: -manifest.export.origin[0] / manifest.psd.width,
+                    anchorY: 1 - manifest.export.origin[1] / manifest.psd.height,
+                }
+                : { width: manifest.psd.width * (opts.scale || 1), height: manifest.psd.height * (opts.scale || 1) },
+            // tên đích để AutoAssignByNameTool khớp: Unity "XPlace", PSD "Holder_X"
+            naming: isExport ? { prefix: '', suffix: 'Place' } : { prefix: 'Holder_', suffix: '' },
         });
         if (!res || !res.ok) throw new Error((res && res.error) || 'Dựng scene lỗi (xem Console).');
         report.push(`Dựng ${res.builtNodes} node dưới ${res.root}`);
@@ -295,7 +351,7 @@ async function pickPsd() {
 }
 
 async function pickFolder() {
-    const r = await Editor.Dialog.select({ title: 'Chọn folder level (chứa .psd, manifest.json, build-plan…)', type: 'directory' });
+    const r = await Editor.Dialog.select({ title: 'Chọn folder: bản export Unity (.json + sprites/) hoặc folder level PSD', type: 'directory' });
     return (r && !r.canceled && r.filePaths && r.filePaths[0]) || '';
 }
 
