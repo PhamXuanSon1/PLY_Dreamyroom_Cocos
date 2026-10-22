@@ -3,7 +3,8 @@
  *
  *   Lượt 1: hộp chỉ rớt item của phases[0].items. Rớt hết -> hộp bay đi (boxExitOffset) và tắt.
  *   Ghép xong mọi item lượt 1 -> các món trong phases[0].afterComplete lần lượt hiện từ trên rơi
- *   xuống (cách nhau afterInterval giây) -> hộp bật lại, bay về chỗ cũ, bật tay chỉ.
+ *   xuống (cách nhau afterInterval giây) -> phòng chuyển sang khung nhìn lượt mới (moveRoom, nếu bật)
+ *   -> hộp bật lại, bay về chỗ cũ, bật tay chỉ.
  *   Người chơi click hộp như thường -> rớt item lượt 2 ... Lượt cuối hết item -> hộp đóng như cũ.
  *
  * ItemManager.itemList được dựng lại = item mọi lượt nối nhau (thanh tiến độ = tổng, chỉ thắng
@@ -18,6 +19,7 @@ import { _decorator, Component, Node, Vec3, UIOpacity, AudioClip, AudioSource } 
 import { Ply_SoundManager } from '../ScriptTemplate/Ply_SoundManager';
 import { ItemManager } from './ItemManager';
 import { BoxManager } from './BoxManager';
+import { BaseRoomManager } from './BaseRoomManager';
 import { ItemController } from '../item/ItemController';
 import { BoxController } from '../box/BoxController';
 import { BaseRoom } from '../utils/BaseRoom';
@@ -33,6 +35,28 @@ export class MapPhase {
 
     @property({ type: Node, tooltip: 'Node cha chứa các món tự rơi xuống khi ghép xong lượt này (vd ItemAfterCompleteMap1). Để trống nếu không có.' })
     afterComplete: Node | null = null;
+
+    // ---- khung nhìn phòng khi BẮT ĐẦU lượt này (lượt đầu dùng intro của BaseRoomManager, bỏ qua) ----
+    @property({ tooltip: 'Di chuyển / scale phòng (BaseRoom) khi chuyển lượt. Đặt ở lượt sắp bắt đầu hoặc lượt vừa xong đều được (ưu tiên lượt sắp bắt đầu).' })
+    moveRoom = false;
+
+    @property({ type: Node, tooltip: 'Phòng bay tới vị trí (world) của node này. Trống = giữ vị trí.', visible(this: MapPhase) { return this.moveRoom; } })
+    roomPos: Node | null = null;
+
+    @property({ tooltip: 'Scale phòng = scale ban đầu × hệ số này (1 = như ban đầu).', min: 0.01, visible(this: MapPhase) { return this.moveRoom; } })
+    roomScaleMultiplier = 1;
+
+    @property({ type: Node, tooltip: 'Giới hạn kéo phòng mới (trái). Trống = giữ giới hạn cũ.', visible(this: MapPhase) { return this.moveRoom; } })
+    leftLimit: Node | null = null;
+
+    @property({ type: Node, tooltip: 'Giới hạn kéo phòng mới (phải). Trống = giữ giới hạn cũ.', visible(this: MapPhase) { return this.moveRoom; } })
+    rightLimit: Node | null = null;
+
+    @property({ type: Node, tooltip: 'Giới hạn kéo phòng mới (trên). Trống = giữ giới hạn cũ.', visible(this: MapPhase) { return this.moveRoom; } })
+    topLimit: Node | null = null;
+
+    @property({ type: Node, tooltip: 'Giới hạn kéo phòng mới (dưới). Trống = giữ giới hạn cũ.', visible(this: MapPhase) { return this.moveRoom; } })
+    bottomLimit: Node | null = null;
 }
 
 interface AfterEntry {
@@ -86,6 +110,13 @@ export class MapPhaseManager extends Component {
 
     @property({ tooltip: 'Chờ bao lâu (giây) sau khi món cuối rơi xong thì hộp bay về.', min: 0 })
     delayBeforeBoxReturn = 0.5;
+
+    // ---------------- phòng ----------------
+    @property({ tooltip: 'Thời gian phòng di chuyển / đổi scale sang khung nhìn lượt mới (giây).', min: 0.01 })
+    roomMoveDuration = 1;
+
+    @property({ tooltip: 'Easing khi phòng di chuyển sang lượt mới.' })
+    roomMoveEasing = 'sineInOut';
 
     /** Item của từng lượt (đã lọc node có ItemController). */
     private phaseItems: Node[][] = [];
@@ -174,9 +205,31 @@ export class MapPhaseManager extends Component {
         this.transitioning = true;
         this.setPlayerInputBlocked(true);
         this.playPhaseCompleteSound();
-        this.scheduleOnce(() => this.dropAfterItems(this.phaseIndex, () => {
+        // món afterComplete rơi xong -> phòng chuyển sang khung nhìn lượt mới -> hộp bay về
+        this.scheduleOnce(() => this.dropAfterItems(this.phaseIndex, () => this.moveRoomTo(this.phaseIndex + 1, () => {
             this.scheduleOnce(() => this.returnBox(), this.delayBeforeBoxReturn);
-        }), this.delayBeforeAfter);
+        })), this.delayBeforeAfter);
+    }
+
+    /**
+     * Đưa phòng sang khung nhìn của lượt `phase`, rồi gọi onDone.
+     * Lấy cấu hình moveRoom của lượt `phase`; lượt đó không bật thì dùng của lượt vừa xong
+     * (phase - 1) — đặt ở lượt nào cũng chạy.
+     */
+    private moveRoomTo(phase: number, onDone: () => void): void {
+        const next = this.phases[phase], prev = this.phases[phase - 1];
+        const p = next && next.moveRoom ? next : prev && prev.moveRoom ? prev : null;
+        const brm = BaseRoomManager.instance;
+        if (!p || !brm) { onDone(); return; }
+
+        const room = brm.baseRoom?.getComponent(BaseRoom);
+        if (room) {
+            if (p.leftLimit) room.leftLimitPos = p.leftLimit;
+            if (p.rightLimit) room.rightLimitPos = p.rightLimit;
+            if (p.topLimit) room.topLimitPos = p.topLimit;
+            if (p.bottomLimit) room.bottomLimitPos = p.bottomLimit;
+        }
+        brm.moveToPhase(p.roomPos, p.roomScaleMultiplier, this.roomMoveDuration, this.roomMoveEasing, onDone);
     }
 
     private playPhaseCompleteSound(): void {

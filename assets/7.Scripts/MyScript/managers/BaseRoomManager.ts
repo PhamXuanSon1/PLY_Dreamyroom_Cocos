@@ -74,6 +74,30 @@ export class BaseRoomManager extends Component {
         if (BaseRoomManager.instance === this) BaseRoomManager.instance = null;
     }
 
+    /**
+     * MapPhaseManager gọi khi sang lượt mới: phòng bay tới `pos` (world, null = đứng yên) và
+     * scale = scale gốc × `scaleMultiplier`. Xong thì scale mới thành mốc cho pinch/zoom
+     * (min/maxScaleMultiplier tính theo scale này). Không tự bật lại kéo phòng.
+     */
+    moveToPhase(pos: Node | null, scaleMultiplier: number, duration: number, easing = 'sineInOut', onComplete?: () => void): void {
+        const roomNode = this.baseRoom;
+        if (!roomNode) { onComplete?.(); return; }
+
+        const s = this.baseRoomOriginalScale;
+        const m = scaleMultiplier > 0 ? scaleMultiplier : 1;
+        const targetScale = new Vec3(s.x * m, s.y * m, s.z * m);
+        TweenUtil.killAll(roomNode);
+
+        let pending = pos ? 2 : 1;
+        const done = () => {
+            if (--pending > 0) return;
+            roomNode.getComponent(BaseRoom)?.initializeOriginalScale(targetScale);
+            onComplete?.();
+        };
+        TweenUtil.scaleTo(roomNode, targetScale, duration, easing, done);
+        if (pos) TweenUtil.moveTo(roomNode, pos.worldPosition.clone(), duration, easing, done);
+    }
+
     /** Unity: PlayIntroAnimation — Phóng to BaseRoom về scale gốc và di chuyển về baseRoomEndPos khi mở hộp. */
     playIntroAnimation(onComplete?: () => void): void {
         if (!this.baseRoom) {
