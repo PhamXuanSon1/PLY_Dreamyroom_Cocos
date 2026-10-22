@@ -168,7 +168,8 @@ async function createMap(payload) {
         const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
         progress({ phase: 'export', text: 'Sinh JSON...' });
-        const built = buildSceneJson(manifest, { items: payload.items }, { ...opts, levelName });
+        const links = Array.isArray(payload.links) ? payload.links : [];
+        const built = buildSceneJson(manifest, { items: payload.items, links }, { ...opts, levelName });
 
         // 1. ảnh
         const outDir = urlToPath(outUrl);
@@ -193,6 +194,13 @@ async function createMap(payload) {
             levelName,
             outUrl,
             items: built.items.map((it) => ({ name: it.name, order: byId.get(it.layerId).order })),
+            // gắn / gỡ tay layer phụ (owner null = gỡ ra thành layer độc lập), lưu theo tên để PSD sửa vẫn khớp
+            links: links.filter(([c]) => byId.has(c)).map(([c, o]) => ({
+                child: byId.get(c).name,
+                childOrder: byId.get(c).order,
+                owner: o >= 0 && byId.has(o) ? byId.get(o).name : null,
+                ownerOrder: o >= 0 && byId.has(o) ? byId.get(o).order : -1,
+            })),
             options: opts,
             savedAt: new Date().toISOString(),
         };

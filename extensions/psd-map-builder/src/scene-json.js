@@ -30,7 +30,7 @@ function buildSceneJson(manifest, selection, options) {
 
     const usable = manifest.layers.filter((l) => !l.empty && !(skipHidden && l.hidden));
     const byId = new Map(usable.map((l) => [l.id, l]));
-    const links = attach ? linkAttachments(usable) : new Map();
+    const links = linkAttachments(usable, { auto: attach, overrides: selection.links });
 
     // item hợp lệ: tồn tại, không phải layer phụ của layer khác
     const itemIds = (selection.items || []).filter((id) => byId.has(id) && !links.has(id));

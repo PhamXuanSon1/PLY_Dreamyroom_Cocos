@@ -16,7 +16,7 @@ const ag = require('ag-psd');
 const { PNG } = require('pngjs');
 const { sanitizeKey } = require('./naming');
 
-const MANIFEST_VERSION = 3;
+const MANIFEST_VERSION = 4;
 const THUMB_SIZE = 72;
 /** Cạnh dài nhất của ảnh xem trước cả map trong panel. */
 const PREVIEW_SIZE = 1600;
@@ -158,6 +158,10 @@ function main() {
     const P = Math.min(1, PREVIEW_SIZE / Math.max(psd.width, psd.height));
     const PW = Math.max(1, Math.round(psd.width * P)), PH = Math.max(1, Math.round(psd.height * P));
     const hit = new Uint16Array(PW * PH);
+    // alpha.bin: alpha của từng ảnh preview nối liền nhau (prev.a = offset) -> panel liệt kê
+    // được MỌI layer chồng tại 1 điểm, kể cả layer bị che bên dưới.
+    const alphaChunks = [];
+    let alphaSize = 0;
     fs.mkdirSync(path.join(cacheDir, 'prev'), { recursive: true });
     const writePreview = (png, left, top, key, id, hidden) => {
         const x0 = Math.round(left * P), y0 = Math.round(top * P);
@@ -165,6 +169,11 @@ function main() {
         const h = Math.max(1, Math.round((top + png.height) * P) - y0);
         const small = resize(png, w, h);
         fs.writeFileSync(path.join(cacheDir, 'prev', `${key}.png`), PNG.sync.write(small, { filterType: 0 }));
+        const alpha = Buffer.alloc(w * h);
+        for (let i = 0; i < w * h; i++) alpha[i] = small.data[i * 4 + 3];
+        const a = alphaSize;
+        alphaChunks.push(alpha);
+        alphaSize += alpha.length;
         for (let y = 0; y < h; y++) {
             const gy = y0 + y;
             if (gy < 0 || gy >= PH) continue;
@@ -174,7 +183,7 @@ function main() {
                 if (!hidden && small.data[(y * w + x) * 4 + 3] >= HIT_ALPHA) hit[gy * PW + gx] = id + 1;
             }
         }
-        return { x: x0, y: y0, w, h };
+        return { x: x0, y: y0, w, h, a };
     };
 
     const flat = flatten(psd.children, '', false, []);
@@ -229,10 +238,11 @@ function main() {
     });
 
     fs.writeFileSync(path.join(cacheDir, 'hitmap.bin'), Buffer.from(hit.buffer));
+    fs.writeFileSync(path.join(cacheDir, 'alpha.bin'), Buffer.concat(alphaChunks, alphaSize));
 
     const manifest = {
         version: MANIFEST_VERSION,
-        preview: { width: PW, height: PH, scale: P },
+        preview: { width: PW, height: PH, scale: P, hitAlpha: HIT_ALPHA },
         psd: {
             path: psdPath,
             name: path.basename(psdPath, path.extname(psdPath)),

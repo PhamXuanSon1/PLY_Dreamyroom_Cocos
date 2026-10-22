@@ -39,11 +39,12 @@
                 <span id="zoomLabel" class="hint"></span>
                 <label title="Làm mờ mọi thứ không phải item để nhìn rõ item đã chọn"><input id="dim" type="checkbox"> Làm mờ phòng</label>
                 <span class="grow"></span>
-                <span class="hint">Click đồ vật để chọn / bỏ item · Lăn chuột: zoom · Kéo: di chuyển</span>
+                <span class="hint">Click: chọn / bỏ item · <b>Chuột phải: chọn lớp bị che bên dưới</b> · Lăn chuột: zoom · Kéo: di chuyển</span>
             </div>
             <div id="stage">
                 <div id="world"></div>
                 <div id="tip" class="tip hidden"></div>
+                <div id="pick" class="pick hidden"></div>
                 <div id="stageEmpty" class="empty">Chọn file PSD rồi bấm <b>Quét</b>.<br>Sau đó click vào đồ vật trên bản đồ (hoặc tick ở danh sách bên phải) để biến nó thành <b>item chơi được</b>.<br>Thứ không chọn là phòng / trang trí.</div>
             </div>
         </section>
@@ -70,7 +71,7 @@
         <div id="progress" class="progress hidden"><div id="bar" class="barFill"></div><span id="progressText"></span></div>
         <div id="status" class="status hidden"></div>
         <div class="row">
-            <span class="hint">Double-click dòng để zoom tới layer · Shift+click chọn khoảng · Sắp lại thứ tự rớt bằng Tool → Item Order Editor</span>
+            <span class="hint">🔗 trên dòng: gắn layer vào layer cha (vd tu_cut → tu_sach_to) · ✕ trên nhãn: gỡ ra · Double-click dòng: zoom tới layer · Shift+click: chọn khoảng</span>
             <span class="grow"></span>
             <ui-button id="exportOnly" tooltip="Chỉ chép PNG + ghi JSON vào thư mục ảnh, không đụng scene">Chỉ xuất ảnh + JSON</ui-button>
             <ui-button id="create" type="primary" tooltip="Xuất ảnh + JSON, SceneBuilder dựng node dưới node gốc, gán ItemManager.itemList và các tool pipeline">Tạo map</ui-button>

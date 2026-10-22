@@ -31,6 +31,7 @@ exports.$ = {
     stage: '#stage',
     world: '#world',
     tip: '#tip',
+    pick: '#pick',
     stageEmpty: '#stageEmpty',
     filter: '#filter',
     show: '#show',
@@ -81,6 +82,8 @@ const state = {
     childrenOf: new Map(),  // ownerId -> [{ id, role }]
     items: new Set(),       // layerId đang là item
     picked: [],             // thứ tự chọn
+    overrides: new Map(),   // gắn / gỡ tay: layerId phụ -> layerId chính (-1 = gỡ thành layer độc lập)
+    linkFrom: -1,           // đang chọn layer cha cho layer này (chế độ 🔗), -1 = không
     lastClicked: -1,
     rows: [],               // layer chính đang hiện trên list, theo thứ tự
     roots: [],
@@ -88,6 +91,8 @@ const state = {
     // bản đồ xem trước
     imgs: new Map(),        // layerId -> <img>
     hit: null,              // Uint16Array, id+1 của layer trên cùng tại mỗi pixel preview
+    alpha: null,            // Buffer, alpha preview của từng layer (layer.prev.a = offset)
+    pickAt: null,           // { x, y } điểm mở menu lớp chồng, null = đang đóng
     view: { x: 0, y: 0, z: 1 },
     autoFit: true,
     hoverId: -1,
@@ -206,6 +211,8 @@ exports.methods = {
         state.byId = new Map(manifest.layers.map((l) => [l.id, l]));
         state.items.clear();
         state.picked = [];
+        state.overrides = new Map();
+        state.linkFrom = -1;
         state.lastClicked = -1;
 
         let restored = '';
@@ -225,7 +232,21 @@ exports.methods = {
                 cands.sort((a, b) => Math.abs(a.order - it.order) - Math.abs(b.order - it.order));
                 this.setItem(cands[0].id, true);
             }
-            restored = `Đã khôi phục ${state.items.size} item từ lần tạo trước (${saved.savedAt || ''}).`
+            const nearest = (name, order) => {
+                const cands = manifest.layers.filter((l) => l.name === name && !l.empty);
+                cands.sort((a, b) => Math.abs(a.order - order) - Math.abs(b.order - order));
+                return cands[0];
+            };
+            for (const ln of saved.links || []) {
+                const child = nearest(ln.child, ln.childOrder);
+                if (!child) continue;
+                const owner = ln.owner === null ? null : nearest(ln.owner, ln.ownerOrder);
+                if (ln.owner !== null && !owner) continue;
+                state.overrides.set(child.id, owner ? owner.id : -1);
+            }
+            restored = `Đã khôi phục ${state.items.size} item`
+                + (state.overrides.size ? `, ${state.overrides.size} liên kết gắn tay` : '')
+                + ` từ lần tạo trước (${saved.savedAt || ''}).`
                 + (lost.length ? `\n⚠ Không còn layer: ${lost.join(', ')}` : '');
         } else {
             const level = defaultLevelName(manifest.psd.name);
@@ -247,13 +268,57 @@ exports.methods = {
         state.links = new Map();
         state.childrenOf = new Map();
         if (!m) return;
-        if (this.$.attach.checked) state.links = linkAttachments(m.layers.filter((l) => !l.empty));
+        state.links = linkAttachments(m.layers.filter((l) => !l.empty), {
+            auto: this.$.attach.checked,
+            overrides: [...state.overrides],
+        });
         for (const [id, link] of state.links) {
             if (!state.childrenOf.has(link.ownerId)) state.childrenOf.set(link.ownerId, []);
-            state.childrenOf.get(link.ownerId).push({ id, role: link.role });
+            state.childrenOf.get(link.ownerId).push({ id, role: link.role, how: link.how });
         }
         // layer phụ không được là item
         for (const id of [...state.items]) if (state.links.has(id)) this.setItem(id, false);
+    },
+
+    // ------------------------------------------------------------ gắn / gỡ tay layer phụ
+
+    /** Bắt đầu chọn layer cha cho `id` (nút 🔗). */
+    startLink(id) {
+        this.closePick();
+        state.linkFrom = id;
+        this.$.stage.classList.add('linking');
+        const l = state.byId.get(id);
+        this.showStatus(`🔗 Chọn layer CHA cho «${l.name}»: click lên bản đồ (chuột phải để chọn lớp bị che) hoặc click dòng trong danh sách. Esc để huỷ.`, 'ok');
+        this.renderList();
+    },
+
+    cancelLink() {
+        if (state.linkFrom < 0) return;
+        state.linkFrom = -1;
+        this.$.stage.classList.remove('linking');
+        this.showStatus('Đã huỷ gắn layer.', '');
+        this.renderList();
+    },
+
+    /** Kết thúc chế độ 🔗: gắn layer đang chọn vào ownerId. */
+    finishLink(ownerId) {
+        const from = state.linkFrom;
+        state.linkFrom = -1;
+        this.$.stage.classList.remove('linking');
+        if (from < 0) return;
+        const owner = this.ownerOf(ownerId);
+        if (owner < 0 || owner === from) { this.showStatus('Đã huỷ gắn layer.', ''); this.refresh(); return; }
+        this.setOverride(from, owner);
+        this.showStatus(`Đã gắn «${state.byId.get(from).name}» vào «${state.byId.get(owner).name}» — nó sẽ đi theo layer này khi làm item.`, 'ok');
+        this.revealRow(owner);
+    },
+
+    /** ownerId -1 = gỡ ra thành layer độc lập; undefined = bỏ gắn tay, quay về tự gắn theo tên. */
+    setOverride(childId, ownerId) {
+        if (ownerId === undefined) state.overrides.delete(childId);
+        else state.overrides.set(childId, ownerId);
+        this.relink();
+        this.refresh();
     },
 
     isSkipped(l) {
@@ -339,6 +404,12 @@ exports.methods = {
         } catch (e) {
             state.hit = null;
         }
+        try {
+            state.alpha = fs.readFileSync(path.join(m.cacheDir, 'alpha.bin'));
+        } catch (e) {
+            state.alpha = null;
+        }
+        this.closePick();
         state.autoFit = true;
         this.fit();
     },
@@ -414,6 +485,112 @@ exports.methods = {
         return this.isSkipped(state.byId.get(owner)) ? -1 : owner;
     },
 
+    /** Toạ độ pixel preview dưới con trỏ, hoặc null nếu ra ngoài canvas. */
+    toWorld(clientX, clientY) {
+        const m = state.manifest;
+        if (!m || !m.preview) return null;
+        const r = this.$.stage.getBoundingClientRect();
+        const v = state.view;
+        const x = Math.floor((clientX - r.left - v.x) / v.z);
+        const y = Math.floor((clientY - r.top - v.y) / v.z);
+        return x < 0 || y < 0 || x >= m.preview.width || y >= m.preview.height ? null : { x, y };
+    },
+
+    /**
+     * Mọi layer chính có hình tại điểm (x, y) của preview, từ trên xuống — kể cả layer bị che.
+     * Layer phụ (bóng/fx) quy về layer chính; layer đang bị bỏ qua (ẩn/trống) không tính.
+     */
+    stackAt(x, y) {
+        const m = state.manifest;
+        const A = state.alpha;
+        if (!m || !A) return [];
+        const minA = m.preview.hitAlpha || 40;
+        const out = [];
+        const seen = new Set();
+        for (let i = m.layers.length - 1; i >= 0; i--) {
+            const l = m.layers[i];
+            const p = l.prev;
+            if (!p || p.a === undefined || this.isSkipped(l)) continue;
+            const u = x - p.x, v = y - p.y;
+            if (u < 0 || v < 0 || u >= p.w || v >= p.h) continue;
+            if (A[p.a + v * p.w + u] < minA) continue;
+            const owner = this.ownerOf(l.id);
+            if (seen.has(owner) || this.isSkipped(state.byId.get(owner))) continue;
+            seen.add(owner);
+            out.push(owner);
+        }
+        return out;
+    },
+
+    openPick(clientX, clientY) {
+        const pt = this.toWorld(clientX, clientY);
+        const stack = pt ? this.stackAt(pt.x, pt.y) : [];
+        if (!stack.length) { this.closePick(); return; }
+        state.pickAt = pt;
+        this.setHover(-1);
+        this.renderPick();
+        const pick = this.$.pick;
+        const r = this.$.stage.getBoundingClientRect();
+        pick.classList.remove('hidden');
+        const x = Math.min(clientX - r.left + 8, r.width - pick.offsetWidth - 6);
+        const y = Math.min(clientY - r.top + 8, r.height - pick.offsetHeight - 6);
+        pick.style.left = `${Math.max(6, x)}px`;
+        pick.style.top = `${Math.max(6, y)}px`;
+    },
+
+    renderPick() {
+        if (!state.pickAt) return;
+        const m = state.manifest;
+        const stack = this.stackAt(state.pickAt.x, state.pickAt.y);
+        const order = this.itemOrder();
+        const stamp = m.psd.mtimeMs | 0;
+        const old = this.$.pick.querySelector('.rows');
+        const top = old ? old.scrollTop : 0;
+        this.$.pick.innerHTML = `<div class="head">${stack.length} lớp tại điểm này (trên → dưới) · rê chuột để xem, click để chọn</div>
+            <div class="rows">${stack.map((id, i) => {
+                const l = state.byId.get(id);
+                const n = order.indexOf(id);
+                return `<div class="prow ${n >= 0 ? 'item' : ''}" data-id="${id}">
+                    <span class="depth">${i + 1}</span>
+                    <input type="checkbox" ${n >= 0 ? 'checked' : ''}>
+                    <img class="thumb" src="${fileUrl(path.join(m.cacheDir, 'thumb', `${l.key}.png`))}?v=${stamp}">
+                    <span class="name">${esc(l.name)}</span>
+                    <span class="itemNo">${n >= 0 ? `#${n + 1}` : ''}</span>
+                </div>`;
+            }).join('')}</div>`;
+        const rows = this.$.pick.querySelector('.rows');
+        if (rows) rows.scrollTop = top;
+    },
+
+    closePick() {
+        if (!state.pickAt && this.$.pick.classList.contains('hidden')) return;
+        state.pickAt = null;
+        this.$.pick.classList.add('hidden');
+        this.$.world.classList.remove('peek');
+        this.setHover(-1);
+    },
+
+    onPickOver(e) {
+        const row = e.target.closest('.prow');
+        const id = row ? Number(row.dataset.id) : -1;
+        this.$.world.classList.toggle('peek', id >= 0);
+        if (id !== state.hoverId) {
+            state.hoverId = id;
+            this.updateStage();
+        }
+    },
+
+    onPickClick(e) {
+        const row = e.target.closest('.prow');
+        if (!row) return;
+        const id = Number(row.dataset.id);
+        if (state.linkFrom >= 0) { this.closePick(); this.finishLink(id); return; }
+        if (!this.toggleItem(id)) return;
+        this.refresh();
+        this.renderPick();
+        this.revealRow(id);
+    },
+
     setHover(id, clientX, clientY) {
         const tip = this.$.tip;
         if (id !== state.hoverId) {
@@ -426,7 +603,10 @@ exports.methods = {
         if (id < 0 || clientX === undefined) { tip.classList.add('hidden'); return; }
         const l = state.byId.get(id);
         const n = this.itemOrder().indexOf(id);
-        tip.innerHTML = `${esc(l.name)} ${n >= 0 ? `<b>· item #${n + 1}</b>` : '<span style="opacity:.7">· click để chọn</span>'}`;
+        const pt = this.toWorld(clientX, clientY);
+        const depth = pt ? this.stackAt(pt.x, pt.y).length : 0;
+        tip.innerHTML = `${esc(l.name)} ${n >= 0 ? `<b>· item #${n + 1}</b>` : '<span style="opacity:.7">· click để chọn</span>'}`
+            + (depth > 1 ? `<span style="opacity:.7"> · chuột phải: ${depth} lớp</span>` : '');
         const r = this.$.stage.getBoundingClientRect();
         tip.style.left = `${Math.min(clientX - r.left + 14, r.width - tip.offsetWidth - 4)}px`;
         tip.style.top = `${Math.max(4, clientY - r.top - 28)}px`;
@@ -434,6 +614,11 @@ exports.methods = {
     },
 
     onStagePointerDown(e) {
+        if (state.pickAt) {
+            // click ra ngoài menu chỉ để đóng menu, không chọn item
+            this.closePick();
+            if (e.button === 0) { state.drag = null; this._swallowUp = true; return; }
+        }
         if (e.button !== 0 && e.button !== 1) return;
         try { this.$.stage.setPointerCapture(e.pointerId); } catch (err) { /* pointer giả lập */ }
         state.drag = { x: e.clientX, y: e.clientY, vx: state.view.x, vy: state.view.y, moved: false, button: e.button };
@@ -465,11 +650,13 @@ exports.methods = {
     },
 
     onStagePointerUp(e) {
+        if (this._swallowUp) { this._swallowUp = false; return; }
         const d = state.drag;
         state.drag = null;
         this.$.stage.classList.remove('panning');
         if (!d || d.moved || d.button !== 0) return;
         const id = this.hitTest(e.clientX, e.clientY);
+        if (state.linkFrom >= 0) { this.finishLink(id); return; }
         if (id < 0 || !this.toggleItem(id)) return;
         this.refresh();
         this.setHover(id, e.clientX, e.clientY);
@@ -478,6 +665,7 @@ exports.methods = {
 
     onStageWheel(e) {
         e.preventDefault();
+        this.closePick();
         const r = this.$.stage.getBoundingClientRect();
         this.zoomAt(e.clientX - r.left, e.clientY - r.top, Math.exp(-e.deltaY * 0.0015));
     },
@@ -527,10 +715,15 @@ exports.methods = {
             if (l.id === state.hoverId) cls.push('hov');
 
             const badges = [];
-            const kids = state.childrenOf.get(l.id) || [];
-            if (kids.length) {
-                const names = kids.map((k) => `${ROLE_LABEL[k.role]}: ${state.byId.get(k.id).name}`).join('\n');
-                badges.push(`<span class="badge child" title="${esc(names)}">+${[...new Set(kids.map((k) => ROLE_LABEL[k.role]))].join(', ')}</span>`);
+            if (l.id === state.linkFrom) cls.push('linkSrc');
+            for (const k of state.childrenOf.get(l.id) || []) {
+                const kl = state.byId.get(k.id);
+                const how = { name: 'tự gắn theo tên', prefix: 'tự gắn theo tiền tố tên + chồng hình', manual: 'gắn tay' }[k.how] || '';
+                badges.push(`<span class="badge child kid ${k.how === 'manual' ? 'manual' : ''}" title="${esc(`${ROLE_LABEL[k.role]}: ${kl.name} (${how})\nBấm ✕ để gỡ ra thành layer riêng`)}">`
+                    + `${esc(kl.name)}<b class="x" data-kid="${k.id}">✕</b></span>`);
+            }
+            if (state.overrides.get(l.id) === -1) {
+                badges.push('<span class="badge unlinked" data-unlink="1" title="Đã gỡ khỏi layer cha — bấm để trả về tự gắn theo tên">đã gỡ ↺</span>');
             }
             if (l.hidden) badges.push('<span class="badge">ẩn</span>');
             if ((l.opacity ?? 1) < 1) badges.push(`<span class="badge">${Math.round(l.opacity * 100)}%</span>`);
@@ -544,6 +737,7 @@ exports.methods = {
                     <span class="meta"><span>${l.width}×${l.height}</span>${badges.join('')}</span>
                 </div>
                 <span class="itemNo">${isItem ? `#${indexOf.get(l.id)}` : ''}</span>
+                <span class="act link" title="Gắn layer này vào layer khác (nó là 1 phần của layer đó: mảng che, bóng, fx…)">🔗</span>
             </div>`;
         }).join('');
 
@@ -568,7 +762,13 @@ exports.methods = {
         if (!rowEl) return;
         const index = Number(rowEl.dataset.row);
         const l = state.rows[index];
-        if (!l || this.isSkipped(l)) return;
+        if (!l) return;
+        const x = event.target.closest('.x');
+        if (x) { this.setOverride(Number(x.dataset.kid), -1); return; }
+        if (event.target.closest('[data-unlink]')) { this.setOverride(l.id, undefined); return; }
+        if (event.target.closest('.act.link')) { this.startLink(l.id); return; }
+        if (state.linkFrom >= 0) { this.finishLink(l.id); return; }
+        if (this.isSkipped(l)) return;
         const on = !state.items.has(l.id);
 
         if (event.shiftKey && state.lastClicked >= 0) {
@@ -633,6 +833,7 @@ exports.methods = {
                 levelName: this.$.levelName.value.trim(),
                 rootUuid,
                 items,
+                links: [...state.overrides],
                 options: { ...opts, buildScene },
             });
             const text = [...(res.report || []), ...(res.ok ? [] : [`✖ ${res.error}`])].join('\n');
@@ -688,6 +889,21 @@ exports.ready = async function () {
     stage.addEventListener('pointerup', (e) => this.onStagePointerUp(e));
     stage.addEventListener('pointerleave', () => { if (!state.drag) this.setHover(-1); });
     stage.addEventListener('wheel', (e) => this.onStageWheel(e), { passive: false });
+    stage.addEventListener('contextmenu', (e) => { e.preventDefault(); this.openPick(e.clientX, e.clientY); });
+    // menu lớp chồng nằm trong stage: chặn sự kiện để không kích kéo / chọn bên dưới
+    const pick = this.$.pick;
+    for (const t of ['pointerdown', 'pointerup', 'pointermove', 'wheel', 'contextmenu']) {
+        pick.addEventListener(t, (e) => { e.stopPropagation(); if (t === 'contextmenu') e.preventDefault(); });
+    }
+    pick.addEventListener('mouseover', (e) => this.onPickOver(e));
+    pick.addEventListener('mouseleave', () => { this.$.world.classList.remove('peek'); state.hoverId = -1; this.updateStage(); });
+    pick.addEventListener('click', (e) => this.onPickClick(e));
+    this._onKey = (e) => {
+        if (e.key !== 'Escape') return;
+        if (state.pickAt) this.closePick();
+        else this.cancelLink();
+    };
+    document.addEventListener('keydown', this._onKey);
     this._resizeObs = new ResizeObserver(() => { if (state.autoFit) this.fit(); });
     this._resizeObs.observe(stage);
 
@@ -697,4 +913,5 @@ exports.ready = async function () {
 
 exports.close = function () {
     if (this._resizeObs) this._resizeObs.disconnect();
+    if (this._onKey) document.removeEventListener('keydown', this._onKey);
 };

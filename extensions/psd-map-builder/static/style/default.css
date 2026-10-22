@@ -146,6 +146,11 @@ input[type="checkbox"] {
     cursor: grabbing;
 }
 
+#stage.linking {
+    cursor: crosshair;
+    box-shadow: inset 0 0 0 2px #2d8ce6;
+}
+
 #world {
     position: absolute;
     left: 0;
@@ -176,12 +181,17 @@ input[type="checkbox"] {
     pointer-events: none;
 }
 
-#world.dim .shade {
+#world.dim .shade, #world.peek .shade {
     display: block;
 }
 
 #world.dim img.sel, #world.dim img.selKid, #world.dim img.hov {
     z-index: 2;
+}
+
+/* đang rê chuột trong menu lớp chồng: layer được trỏ hiện xuyên qua mọi lớp che */
+#world.peek img.hov {
+    z-index: 3;
 }
 
 /* --g: độ dày viền theo px màn hình, panel bù theo zoom (applyView) */
@@ -211,6 +221,59 @@ input[type="checkbox"] {
 
 .tip b {
     color: #7dff9c;
+}
+
+/* ------------------------------------------------------------ menu lớp chồng (chuột phải) */
+
+.pick {
+    position: absolute;
+    z-index: 4;
+    width: 260px;
+    max-height: 70%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-normal-border, #555);
+    border-radius: 5px;
+    background: var(--color-normal-fill, #262626);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+    cursor: default;
+}
+
+.pick .head {
+    padding: 6px 9px;
+    border-bottom: 1px solid var(--color-normal-border-weaker, #333);
+    color: var(--color-normal-contrast-weak, #aaa);
+    font-size: 11px;
+}
+
+.pick .rows {
+    overflow-y: auto;
+}
+
+.pick .prow {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.pick .prow:hover {
+    background: rgba(255, 213, 79, 0.16);
+}
+
+.pick .prow.item {
+    box-shadow: inset 3px 0 0 #4caf50;
+}
+
+.pick .prow .name {
+    flex: 1;
+}
+
+.pick .prow .depth {
+    color: var(--color-normal-contrast-weakest, #777);
+    font-size: 10px;
+    min-width: 14px;
 }
 
 .empty {
@@ -340,6 +403,52 @@ input[type="checkbox"] {
 .badge.child {
     background: rgba(45, 140, 230, 0.2);
     color: #90caf9;
+}
+
+.kid .x {
+    margin-left: 4px;
+    padding: 0 2px;
+    font-weight: normal;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.kid .x:hover {
+    opacity: 1;
+    color: #ef9a9a;
+}
+
+.badge.child.manual {
+    background: rgba(171, 71, 188, 0.25);
+    color: #e1bee7;
+}
+
+.badge.unlinked {
+    background: rgba(255, 152, 0, 0.18);
+    color: #ffcc80;
+    cursor: pointer;
+}
+
+.act {
+    flex: none;
+    padding: 1px 4px;
+    border-radius: 3px;
+    opacity: 0;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.layer:hover .act, .layer.linkSrc .act {
+    opacity: 0.75;
+}
+
+.act:hover {
+    opacity: 1 !important;
+    background: rgba(45, 140, 230, 0.3);
+}
+
+.layer.linkSrc {
+    box-shadow: inset 0 0 0 2px #2d8ce6;
 }
 
 .itemNo {
