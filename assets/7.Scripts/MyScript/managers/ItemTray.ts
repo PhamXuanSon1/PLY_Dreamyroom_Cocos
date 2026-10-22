@@ -14,7 +14,7 @@
  * Khi node này active thì Box không còn dùng nữa (tắt node Box trong scene).
  */
 
-import { _decorator, Component, Node, Vec3, UITransform } from 'cc';
+import { _decorator, Component, Node, Vec3, Vec2, Size, UITransform, BoxCollider2D } from 'cc';
 import { HolderSlot } from '../utils/HolderSlot';
 import { SeatHandler } from '../utils/SeatHandler';
 import { ItemController } from '../item/ItemController';
@@ -65,8 +65,8 @@ export class ItemTray extends Component {
     /** Item chưa vào khay, theo thứ tự itemList (đã đảo nếu spawnFromLast). null = chưa dựng. */
     private queue: Node[] | null = null;
     private roomInfo = new Map<ItemController, RoomInfo>();
-    /** Item đang nằm trong ô -> node ô làm vùng bấm (xem hitAreaOf). */
-    private slotHitArea = new Map<ItemController, Node>();
+    /** BoxCollider2D gốc của item (size/offset) — trả lại khi cầm item ra khỏi ô. */
+    private colliderInfo = new Map<ItemController, { size: Size; offset: Vec2 }>();
     private autoEndStarted = false;
 
     // ======================================================== lifecycle
@@ -154,7 +154,7 @@ export class ItemTray extends Component {
         node.setScale(0, 0, 0);
 
         const fit = this.fitScale(item, slot);
-        this.useSlotHitArea(item, slot);
+        this.applySlotCollider(item, slot, fit);
         if (delay > 0) TweenUtil.delayedCall(this, delay, () => TweenUtil.scaleTo(node, fit, 0.35, 'backOut'));
         else TweenUtil.scaleTo(node, fit, 0.35, 'backOut');
 
@@ -203,23 +203,33 @@ export class ItemTray extends Component {
         return new Vec3(info.localScale.x * Math.abs(p.x), info.localScale.y * Math.abs(p.y), 1);
     }
 
-    // ======================================================== vùng bấm trong ô
+    // ======================================================== collider trong ô
     /**
-     * Vùng bấm của item (ItemController.hitTest): đang nằm trong ô thì = contentSize của ô
-     * (bấm chỗ nào trong ô cũng cầm được), null = dùng contentSize của chính item.
+     * Item nằm trong ô: BoxCollider2D phủ đúng contentSize của ô (bấm chỗ nào trong ô cũng cầm được).
+     * Collider tính theo toạ độ local của item nên chia cho scale item trong ô (`fit`).
      */
-    hitAreaOf(item: ItemController): Node | null {
-        return this.slotHitArea.get(item) ?? null;
+    private applySlotCollider(item: ItemController, slot: HolderSlot, fit: Vec3): void {
+        const box = item.getComponent(BoxCollider2D);
+        const ut = slot.getComponent(UITransform);
+        if (!box || !ut) return;   // collider không phải Box (Polygon/Circle) -> giữ nguyên
+        if (!this.colliderInfo.has(item)) {
+            this.colliderInfo.set(item, { size: box.size.clone(), offset: box.offset.clone() });
+        }
+        const sx = Math.abs(fit.x) || 1;
+        const sy = Math.abs(fit.y) || 1;
+        box.size = new Size(ut.width / sx, ut.height / sy);
+        box.offset = new Vec2(0, 0);
+        box.apply();
     }
 
-    /** Item nằm trong ô: bấm cả ô là cầm được. */
-    private useSlotHitArea(item: ItemController, slot: HolderSlot): void {
-        this.slotHitArea.set(item, slot.node);
-    }
-
-    /** Cầm item ra khỏi ô: quay về vùng bấm = contentSize của item. */
-    private clearSlotHitArea(item: ItemController): void {
-        this.slotHitArea.delete(item);
+    /** Cầm item ra khỏi ô: trả BoxCollider2D về như cũ (snap / phòng dùng collider gốc). */
+    private restoreCollider(item: ItemController): void {
+        const info = this.colliderInfo.get(item);
+        const box = item.getComponent(BoxCollider2D);
+        if (!info || !box) return;
+        box.size = info.size.clone();
+        box.offset = info.offset.clone();
+        box.apply();
     }
 
     // ======================================================== hook từ ItemController
@@ -247,7 +257,7 @@ export class ItemTray extends Component {
             mv.originalScale = dragScale.clone();
             mv.originalRotation = info.euler.clone();
         }
-        this.clearSlotHitArea(item);
+        this.restoreCollider(item);
         return true;
     }
 
@@ -274,7 +284,7 @@ export class ItemTray extends Component {
             node.setPosition(Vec3.ZERO);
             node.setScale(fit);
             node.eulerAngles = info.euler;
-            this.useSlotHitArea(item, slot);
+            this.applySlotCollider(item, slot, fit);
         });
         TweenUtil.scaleTo(node, flyScale, this.returnDuration, 'quadOut');
         TweenUtil.rotateTo(node, info.euler, this.returnDuration, 'quadOut');

@@ -12,7 +12,7 @@
  * Xem COCOS_MIGRATION_PLAN.md mục 5.2.
  */
 
-import { _decorator, Component, Node, input, Input, EventTouch, Vec3, Vec2, UITransform, Layers } from 'cc';
+import { _decorator, Component, Node, input, Input, EventTouch, Vec3, Vec2, UITransform, Layers, Collider2D } from 'cc';
 import { EDITOR } from 'cc/env';
 import { ItemGraphic } from '../item/ItemGraphic';
 import { ItemManager } from '../managers/ItemManager';
@@ -274,29 +274,18 @@ export class DreamyInputManager extends Component {
         return new Vec3(p.x, p.y, 0);
     }
 
-    /**
-     * Thay cho Physics.RaycastAll — hit-test theo contentSize (UITransform) của node.
-     * Không dùng Collider2D: vùng bấm = đúng khung contentSize, chỉnh trực tiếp trong Inspector.
-     */
-    static hitTestNode(node: Node, worldPos: Vec3): boolean {
+    /** Thay cho Physics.RaycastAll — hit-test bằng Collider2D (BoxCollider2D, CircleCollider2D, PolygonCollider2D...) trên Node */
+    static hitTestCollider(node: Node, worldPos: Vec3): boolean {
         if (!node || !DreamyInputManager.isNodeInteractable(node)) return false;
-        return DreamyInputManager.containsWorldPoint(node, worldPos);
+        const collider = node.getComponent(Collider2D);
+        if (!collider || !collider.worldAABB) return false;
+        return collider.worldAABB.contains(new Vec2(worldPos.x, worldPos.y));
     }
 
-    /**
-     * Điểm world có nằm trong khung contentSize của CHÍNH node không (tính anchor, scale, xoay).
-     * Khác getBoundingBoxToWorld(): không gộp node con (bóng _sd, Follow...) vào vùng bấm.
-     */
-    static containsWorldPoint(node: Node, worldPos: Vec3): boolean {
-        const ut = node?.getComponent(UITransform);
-        if (!ut || ut.width <= 0 || ut.height <= 0) return false;
-        const p = ut.convertToNodeSpaceAR(worldPos, DreamyInputManager._localTmp);
-        const x0 = -ut.width * ut.anchorX;
-        const y0 = -ut.height * ut.anchorY;
-        return p.x >= x0 && p.x <= x0 + ut.width && p.y >= y0 && p.y <= y0 + ut.height;
+    /** Tương thích ngược: chuyển hướng về hitTestCollider */
+    static hitTestNode(node: Node, worldPos: Vec3): boolean {
+        return DreamyInputManager.hitTestCollider(node, worldPos);
     }
-
-    private static readonly _localTmp = new Vec3();
 
     /**
      * So thứ tự render. > 0 nghĩa là `a` nằm TRÊN `b`.
