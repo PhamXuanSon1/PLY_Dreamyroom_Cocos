@@ -122,11 +122,21 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
         this.interactionEnabled = true;
     }
 
+    /** Tạm khoá kéo / zoom phòng (MapPhaseManager khi các món đang rơi). */
+    disableInteraction(): void {
+        this.interactionEnabled = false;
+        this.dragging = false;
+    }
+
+    get isInteractionEnabled(): boolean {
+        return this.interactionEnabled;
+    }
+
     // ======================================================== pan
     hitTest(worldPos: Vec3): boolean {
         if (UIManager.instance?.isGameEnded) return false;
         if (!this.interactionEnabled) return false;
-        return DreamyInputManager.hitTestNode(this.node, worldPos);
+        return DreamyInputManager.hitTestCollider(this.node, worldPos);
     }
 
     onPointerDown(worldPos: Vec3, _ev: EventTouch): boolean {

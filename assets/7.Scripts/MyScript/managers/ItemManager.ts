@@ -40,6 +40,18 @@ export class ItemManager extends Component {
 
     static instance: ItemManager | null = null;
 
+    /** Phát trên node ItemManager mỗi lần 1 item ghép xong (tham số: ItemController | undefined). */
+    static readonly EVENT_ITEM_ARRIVED = 'item-arrived';
+
+    /**
+     * Số item ĐẦU TIÊN trong itemList hộp được phép rớt (MapPhaseManager mở dần theo lượt).
+     * < 0 = cả danh sách. Chỉ áp dụng khi spawnFromLast = false.
+     */
+    spawnLimit = -1;
+
+    /** MapPhaseManager bật trong lúc chuyển lượt: không hiện Idle / Stuck / First-drag hint. */
+    private hintsBlocked = false;
+
     // ---------------- Elements ----------------
     @property({ tooltip: 'Lấy item từ cuối danh sách (từ dưới lên trên).' })
     spawnFromLast = false;
@@ -324,6 +336,15 @@ export class ItemManager extends Component {
     update(dt: number) {
         if (UIManager.instance?.isGameEnded) return;
 
+        // Đang chuyển lượt (MapPhaseManager): không đếm hint, chỉ kiểm tra hết item
+        if (this.hintsBlocked) {
+            this.idleTimer = 0;
+            this.stuckTimer = 0;
+            this.stuckReshowTimer = 0;
+            this.checkSpawnExhausted();
+            return;
+        }
+
         // Đang kéo: mọi bộ đếm hint đứng ở 0 -> tay chỉ hiện sau N giây TÍNH TỪ LÚC THẢ TAY
         if (this.isDragging) {
             this.idleTimer = 0;
@@ -359,17 +380,41 @@ export class ItemManager extends Component {
             }
         }
 
-        // Đổi state của box nếu list = 0
+        this.checkSpawnExhausted();
+    }
+
+    /** Hộp rớt hết item được phép (cả list, hoặc tới spawnLimit) -> báo BoxManager. */
+    private checkSpawnExhausted(): void {
         const isListEmpty = this.spawnFromLast
             ? (this.currentItemIndex < 0)
-            : (this.currentItemIndex >= this.itemList.length);
+            : (this.currentItemIndex >= this.spawnEnd);
         if (isListEmpty) BoxManager.instance?.handleEmptyItems();
+    }
+
+    /** Chỉ số (không gồm) item cuối hộp được phép rớt — xem spawnLimit. */
+    private get spawnEnd(): number {
+        return this.spawnLimit < 0 ? this.itemList.length : Math.min(this.spawnLimit, this.itemList.length);
+    }
+
+    /** Bật/tắt toàn bộ hint (tay chỉ) — MapPhaseManager khoá trong lúc chuyển lượt. */
+    setHintsBlocked(blocked: boolean): void {
+        this.hintsBlocked = blocked;
+        if (blocked) {
+            this.isStuckHintActive = false;
+            this.stuckReshowPending = false;
+            this.stuckTargetItem = null;
+            this.hideHint();
+            if (this.handIntro) this.handIntro.active = false;
+        }
+        this.resetIdleTimer();
+        this.resetStuckTimer();
     }
 
     // ======================================================== item / holder
     /** Unity: GetCurrentItem — lấy item ở vị trí currentItemIndex trong itemList. */
     getCurrentItem(): Node | null {
-        if (this.currentItemIndex >= 0 && this.currentItemIndex < this.itemList.length) {
+        const end = this.spawnFromLast ? this.itemList.length : this.spawnEnd;
+        if (this.currentItemIndex >= 0 && this.currentItemIndex < end) {
             const indexToReturn = this.currentItemIndex;
 
             // cập nhật index cho lần lấy tiếp theo
@@ -466,6 +511,7 @@ export class ItemManager extends Component {
         }
 
         console.log(`[ItemManager] arrivedItemCount = ${this.arrivedItemCount}`);
+        this.node.emit(ItemManager.EVENT_ITEM_ARRIVED, item);
     }
 
     // ======================================================== hint

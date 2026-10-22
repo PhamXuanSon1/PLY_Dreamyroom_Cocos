@@ -8,7 +8,7 @@
  *   - Bỏ SetLayerRecursively (dead code bên Unity, không nơi nào gọi).
  */
 
-import { _decorator, Component, EventTouch, Node, randomRange, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Component, EventTouch, Node, randomRange, UITransform, Vec2, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { BoxGraphic } from './BoxGraphic';
 import { ItemManager } from '../managers/ItemManager';
@@ -90,7 +90,12 @@ export class BoxController extends Component implements IPointerHandler {
     hitTest(worldPos: Vec3): boolean {
         if (UIManager.instance?.isGameEnded) return false;
         if (this.isClicked || this.isClosing) return false;
-        return DreamyInputManager.hitTestNode(this.node, worldPos);
+        if (DreamyInputManager.hitTestCollider(this.node, worldPos)) return true;
+        const ut = this.getComponent(UITransform);
+        if (ut && ut.getBoundingBoxToWorld().contains(new Vec2(worldPos.x, worldPos.y))) {
+            return true;
+        }
+        return false;
     }
 
     onPointerDown(_worldPos: Vec3, _ev: EventTouch): boolean {
@@ -225,6 +230,43 @@ export class BoxController extends Component implements IPointerHandler {
                 if (itemScript) im.showFirstDragHint(itemScript);
             },
         );
+    }
+
+    // ======================================================== chuyển lượt (MapPhaseManager)
+    /** Chỗ hộp đứng lúc bay đi — bay về đúng chỗ này. */
+    private homeWorldPos: Vec3 | null = null;
+    private exitWorldPos: Vec3 | null = null;
+
+    /** Hết item của lượt: khoá click, đóng hộp và bay theo `offset` (world), xong thì tắt node. */
+    flyAway(offset: Vec3, duration: number, easing = 'backIn', onDone?: () => void): void {
+        this.isClicked = true;
+        this.isClosing = true;
+        TweenUtil.killAll(this.node);
+        this.unscheduleAllCallbacks();   // huỷ spawnItem đang hẹn giờ (firstItemDelay)
+        this.homeWorldPos = this.node.worldPosition.clone();
+        this.exitWorldPos = this.homeWorldPos.clone().add(offset);
+        this.boxGraphic?.playClosing();
+        TweenUtil.moveTo(this.node, this.exitWorldPos, duration, easing, () => {
+            this.node.active = false;
+            onDone?.();
+        });
+    }
+
+    /** Lượt mới: bật hộp ở chỗ đã bay ra, bay về chỗ cũ, mở hộp và bật lại tay chỉ; xong mới cho click. */
+    flyBack(duration: number, easing = 'backOut', onDone?: () => void): void {
+        const home = this.homeWorldPos ?? this.node.worldPosition.clone();
+        TweenUtil.killAll(this.node);
+        this.node.active = true;
+        if (this.exitWorldPos) this.node.setWorldPosition(this.exitWorldPos);
+        this.boxGraphic?.playReady();
+        TweenUtil.moveTo(this.node, home, duration, easing, () => {
+            this.boxGraphic?.playFirstOpen();
+            this.isClicked = false;
+            this.isClosing = false;
+            if (this.handOfBox) this.handOfBox.node.active = true;
+            if (this.handText) this.handText.active = true;
+            onDone?.();
+        });
     }
 
     /** Khóa tương tác, chạy hiệu ứng đóng và ẩn Box sau thời gian giữ nguyên gameplay cũ. */

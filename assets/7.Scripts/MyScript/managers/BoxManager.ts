@@ -10,6 +10,12 @@ export class BoxManager extends Component {
 
     static instance: BoxManager | null = null;
 
+    /**
+     * MapPhaseManager gắn vào: hộp hết item của lượt hiện tại mà còn lượt sau -> trả true
+     * (hộp bay đi, chờ lượt sau) thay vì đóng hẳn. Không gắn = như cũ.
+     */
+    static emptyItemsInterceptor: ((box: BoxController) => boolean) | null = null;
+
     @property({ type: Node, tooltip: 'Object chiếc hộp trong scene.' })
     box: Node | null = null;
 
@@ -31,6 +37,7 @@ export class BoxManager extends Component {
     /** ItemManager báo hết item; Manager chỉ điều phối, Controller xử lý Box. */
     handleEmptyItems(): void {
         if (this.isBoxHandled || !this.boxController) return;
+        if (BoxManager.emptyItemsInterceptor?.(this.boxController)) return;
         this.isBoxHandled = true;
         this.boxController.closeAndHide();
     }
