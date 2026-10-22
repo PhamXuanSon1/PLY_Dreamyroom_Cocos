@@ -3,6 +3,8 @@
  * PSD Map Builder — entry của Editor (browser process).
  *
  *   scan       : chạy src/psd-worker.js (tiến trình con) -> PNG + thumbnail + manifest trong temp/
+ *   scanFolder : như scan nhưng nhận "folder level" (PSD + manifest.json + build-plan + Textures),
+ *                trả thêm plan (item gợi ý, bóng/cut, chain, waves, ảnh thu nhỏ) — xem src/level-folder.js
  *   createMap  : chép PNG layer dùng tới vào thư mục asset, ghi <Level>.json (schema SceneBuilder)
  *                + <Level>.psdmap.json (lựa chọn item, để mở lại sửa tiếp), refresh asset-db,
  *                rồi gọi scene.js dựng node + nối ItemManager / tool pipeline.
@@ -13,6 +15,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { fork } = require('child_process');
 const { buildSceneJson } = require('./src/scene-json');
+const { detectFolder, buildPlan } = require('./src/level-folder');
 
 const PKG = 'psd-map-builder';
 const SELECTION_EXT = '.psdmap.json';
@@ -108,6 +111,17 @@ async function scan(psdPath) {
     }
 }
 
+async function scanFolder(dir) {
+    const info = detectFolder(dir);
+    if (!info) return { ok: false, error: `Folder không có file .psd: ${dir}` };
+    const res = await scan(info.psdPath);
+    if (!res.ok) return res;
+    const plan = buildPlan(info, res.manifest);
+    fs.writeFileSync(path.join(cacheDirOf(info.psdPath), 'plan.json'), JSON.stringify(plan));
+    log(`Folder ${path.basename(dir)}: ${plan.items.length} item gợi ý, ${plan.links.length} bóng/cut, ${plan.chains.length} chain, ${plan.stats.textures} ảnh`);
+    return { ...res, plan, folder: info };
+}
+
 function cancelScan() {
     if (scanning) { scanning.kill(); scanning = null; return true; }
     return false;
@@ -153,7 +167,9 @@ async function ensureSpriteFrameType(urls) {
 }
 
 /**
- * payload: { psdPath, outUrl, levelName, rootUuid, items: [layerId], options: { scale, skipHidden, attachToItems, autoSave, buildScene } }
+ * payload: { psdPath, outUrl, levelName, rootUuid, items: [layerId], links: [[child, owner]],
+ *            chains: [[item, requiredItem]], folder: { dir, useTextures } | null,
+ *            options: { scale, skipHidden, attachToItems, autoSave, buildScene } }
  */
 async function createMap(payload) {
     const report = [];
@@ -167,22 +183,40 @@ async function createMap(payload) {
         if (!fs.existsSync(manifestPath)) throw new Error('Chưa quét PSD (bấm Quét trước).');
         const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
+        // Folder level + "ảnh thu nhỏ": layer có ảnh trong folder dùng ảnh đó, đặt theo bbox của manifest
+        // (contentSize vẫn = kích thước PSD, Sprite CUSTOM tự kéo giãn ảnh nhỏ cho vừa).
+        let folderTex = {};
+        if (payload.folder && payload.folder.useTextures) {
+            const plan = (() => { try { return JSON.parse(fs.readFileSync(path.join(cacheDir, 'plan.json'), 'utf8')); } catch (e) { return null; } })();
+            if (!plan) throw new Error('Chưa quét folder level (bấm Quét lại).');
+            folderTex = plan.textures || {};
+            for (const l of manifest.layers) {
+                const t = folderTex[l.id];
+                if (t && fs.existsSync(t.file)) Object.assign(l, { left: t.left, top: t.top, width: t.width, height: t.height });
+                else delete folderTex[l.id];
+            }
+        }
+        const keyToId = new Map(manifest.layers.filter((l) => l.key).map((l) => [l.key, l.id]));
+
         progress({ phase: 'export', text: 'Sinh JSON...' });
         const links = Array.isArray(payload.links) ? payload.links : [];
-        const built = buildSceneJson(manifest, { items: payload.items, links }, { ...opts, levelName });
+        const chains = Array.isArray(payload.chains) ? payload.chains : [];
+        const built = buildSceneJson(manifest, { items: payload.items, links, chains }, { ...opts, levelName });
 
         // 1. ảnh
         const outDir = urlToPath(outUrl);
         fs.mkdirSync(outDir, { recursive: true });
-        let copied = 0, metas = 0;
+        let copied = 0, metas = 0, fromFolder = 0;
         built.usedKeys.forEach((key, i) => {
-            const src = path.join(cacheDir, 'png', `${key}.png`);
+            const tex = folderTex[keyToId.get(key)];
+            if (tex) fromFolder++;
+            const src = tex ? tex.file : path.join(cacheDir, 'png', `${key}.png`);
             const dst = path.join(outDir, `${key}.png`);
             if (i % 20 === 0) progress({ phase: 'export', done: i, total: built.usedKeys.length, text: key });
             if (!sameFile(src, dst)) { fs.copyFileSync(src, dst); copied++; }
             if (writeSpriteMeta(dst)) metas++;
         });
-        report.push(`Ảnh: ${built.usedKeys.length} layer (${copied} file mới/đổi) -> ${outUrl}`);
+        report.push(`Ảnh: ${built.usedKeys.length} layer (${copied} file mới/đổi${fromFolder ? `, ${fromFolder} ảnh thu nhỏ từ folder` : ''}) -> ${outUrl}`);
 
         // 2. JSON scene + lựa chọn
         const jsonFile = path.join(outDir, `${levelName}.json`);
@@ -202,10 +236,11 @@ async function createMap(payload) {
                 ownerOrder: o >= 0 && byId.has(o) ? byId.get(o).order : -1,
             })),
             options: opts,
+            folder: payload.folder ? payload.folder.dir : undefined,
             savedAt: new Date().toISOString(),
         };
         fs.writeFileSync(path.join(outDir, `${levelName}${SELECTION_EXT}`), JSON.stringify(selection, null, 2));
-        report.push(`JSON: ${levelName}.json (${built.json.nodes.length} node, ${built.items.length} item)`);
+        report.push(`JSON: ${levelName}.json (${built.json.nodes.length} node, ${built.items.length} item${built.seats ? `, ${built.seats} item có SeatHandler` : ''})`);
 
         // 3. import
         progress({ phase: 'import', text: 'Đang import vào asset-db...' });
@@ -259,6 +294,11 @@ async function pickPsd() {
     return (r && !r.canceled && r.filePaths && r.filePaths[0]) || '';
 }
 
+async function pickFolder() {
+    const r = await Editor.Dialog.select({ title: 'Chọn folder level (chứa .psd, manifest.json, build-plan…)', type: 'directory' });
+    return (r && !r.canceled && r.filePaths && r.filePaths[0]) || '';
+}
+
 async function listRoots() {
     try { return await sceneScript('listRoots'); } catch (e) { return { ok: false, roots: [], error: e.message }; }
 }
@@ -272,7 +312,9 @@ async function selectedRoot() {
 exports.methods = {
     openPanel() { Editor.Panel.open(PKG); },
     pickPsd,
+    pickFolder,
     scan,
+    scanFolder,
     cancelScan,
     createMap,
     listRoots,

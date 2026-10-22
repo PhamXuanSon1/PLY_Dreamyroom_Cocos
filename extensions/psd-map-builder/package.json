@@ -27,6 +27,8 @@
     "messages": {
       "open-panel": { "methods": ["openPanel"] },
       "pick-psd": { "methods": ["pickPsd"] },
+      "pick-folder": { "methods": ["pickFolder"] },
+      "scan-folder": { "methods": ["scanFolder"] },
       "scan": { "methods": ["scan"] },
       "cancel-scan": { "methods": ["cancelScan"] },
       "create-map": { "methods": ["createMap"] },

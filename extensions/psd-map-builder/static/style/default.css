@@ -423,6 +423,11 @@ input[type="checkbox"] {
     color: #e1bee7;
 }
 
+.badge.chain {
+    background: rgba(0, 150, 136, 0.22);
+    color: #80cbc4;
+}
+
 .badge.unlinked {
     background: rgba(255, 152, 0, 0.18);
     color: #ffcc80;

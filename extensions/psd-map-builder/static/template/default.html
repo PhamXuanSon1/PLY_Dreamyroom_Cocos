@@ -2,8 +2,9 @@
     <header>
         <div class="row">
             <h2>PSD Map Builder</h2>
-            <input id="psdPath" class="grow" type="text" placeholder="Đường dẫn file .psd" spellcheck="false">
+            <input id="psdPath" class="grow" type="text" placeholder="File .psd hoặc folder level (chứa .psd + manifest.json + build-plan)" spellcheck="false">
             <ui-button id="pickPsd">Chọn PSD…</ui-button>
+            <ui-button id="pickFolder" tooltip="Folder level từ pipeline Unity: có .psd, manifest.json, build-plan-unity.json, Asset_*/Textures. Tự chọn sẵn item, gắn bóng/cut, thứ tự rớt theo waves, chain -> SeatHandler.">Mở folder level…</ui-button>
             <ui-button id="scan" type="primary" tooltip="Đọc PSD, xuất từng layer ra PNG vào cache (temp/). PSD không đổi thì lần sau đọc từ cache.">Quét</ui-button>
         </div>
 
@@ -24,8 +25,10 @@
                     <option value="bottomUp">PSD dưới → trên</option>
                     <option value="topDown">PSD trên → dưới</option>
                     <option value="picked">Theo thứ tự chọn</option>
+                    <option value="plan">Theo build-plan (waves)</option>
                 </select>
             </label>
+            <label id="folderTexWrap" class="hidden" title="Dùng PNG đã thu nhỏ trong Asset_*/Textures của folder (nhẹ hơn cho playable). Tắt = ảnh full từ PSD."><input id="useFolderTex" type="checkbox"> Ảnh thu nhỏ của folder</label>
             <label title="Tự Ctrl+S sau khi dựng"><input id="autoSave" type="checkbox"> Tự lưu scene</label>
             <span class="grow"></span>
             <span id="cacheInfo" class="hint"></span>
@@ -60,6 +63,7 @@
             </div>
             <div class="row">
                 <span id="count" class="count grow"></span>
+                <ui-button id="planSelect" class="hidden" tooltip="Chọn lại đúng danh sách item, bóng/cut và thứ tự rớt trong build-plan của folder">Theo plan</ui-button>
                 <ui-button id="checkVisible" tooltip="Chọn làm item mọi layer đang hiện trong danh sách (theo bộ lọc)">Chọn hết</ui-button>
                 <ui-button id="uncheckAll" tooltip="Bỏ chọn toàn bộ item">Bỏ hết</ui-button>
             </div>

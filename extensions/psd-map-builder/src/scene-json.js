@@ -10,6 +10,7 @@
  *       ├─ <item>_fx / _top / _cut / front_<item>   (hiện khi ghép xong)
  *     Items/<item>             item kéo thả: ItemController.targetPoint -> Holder_<item>
  *       └─ <item>_sd           bóng đổ (ItemController tự dò theo tên "_sd")
+ *     (+ SeatHandler.requiredItems khi selection.chains bắt item phải ghép sau item khác)
  *
  * Item dùng layerValue 1 nên luôn vẽ trên phòng và không xen thứ tự với Holders
  * -> SceneBuilder không phải hoà tan / tách folder Items.
@@ -125,6 +126,19 @@ function buildSceneJson(manifest, selection, options) {
         items.push({ layerId: id, name: l.name, item, holder });
     });
 
+    // chain: item chỉ ghép được khi item kia đã ghép (vd kẹo nằm trong thùng) — cả 2 phải là item
+    const itemPathOf = new Map(items.map((it) => [it.layerId, it.item]));
+    const required = new Map();
+    for (const [a, b] of selection.chains || []) {
+        if (!itemPathOf.has(a) || !itemPathOf.has(b) || a === b) continue;
+        if (!required.has(a)) required.set(a, []);
+        required.get(a).push(`@node:${itemPathOf.get(b)}`);
+    }
+    for (const [id, refs] of required) {
+        const node = nodes.find((n) => n.path === itemPathOf.get(id));
+        node.components.push({ type: 'SeatHandler', fields: { requiredItems: refs } });
+    }
+
     const json = {
         meta: {
             K,
@@ -141,7 +155,7 @@ function buildSceneJson(manifest, selection, options) {
         conflicts: [],
     };
     const usedKeys = [...new Set(nodes.filter((n) => n.sprite).map((n) => n.sprite.key))];
-    return { json, items, paths: { root: L, base: basePath, holders: holdersPath, items: itemsPath }, usedKeys };
+    return { json, items, seats: required.size, paths: { root: L, base: basePath, holders: holdersPath, items: itemsPath }, usedKeys };
 }
 
 module.exports = { buildSceneJson };

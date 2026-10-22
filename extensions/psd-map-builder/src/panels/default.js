@@ -14,6 +14,10 @@ exports.$ = {
     cacheInfo: '#cacheInfo',
     psdPath: '#psdPath',
     pickPsd: '#pickPsd',
+    pickFolder: '#pickFolder',
+    folderTexWrap: '#folderTexWrap',
+    useFolderTex: '#useFolderTex',
+    planSelect: '#planSelect',
     scan: '#scan',
     levelName: '#levelName',
     outUrl: '#outUrl',
@@ -47,7 +51,7 @@ exports.$ = {
     create: '#create',
 };
 
-const DEFAULT_PREFS = { psdPath: '', scale: 0.6, skipHidden: true, attach: true, order: 'bottomUp', autoSave: false, dim: false };
+const DEFAULT_PREFS = { psdPath: '', scale: 0.6, skipHidden: true, attach: true, order: 'bottomUp', autoSave: false, dim: false, useFolderTex: true };
 
 function loadPrefs() {
     try { return { ...DEFAULT_PREFS, ...JSON.parse(localStorage.getItem(PKG) || '{}') }; } catch (e) { return { ...DEFAULT_PREFS }; }
@@ -84,6 +88,9 @@ const state = {
     picked: [],             // thứ tự chọn
     overrides: new Map(),   // gắn / gỡ tay: layerId phụ -> layerId chính (-1 = gỡ thành layer độc lập)
     linkFrom: -1,           // đang chọn layer cha cho layer này (chế độ 🔗), -1 = không
+    plan: null,             // folder level: { folder, level, items, links, chains, textures, warnings }
+    planIndex: new Map(),   // layerId -> vị trí trong waves của plan
+    chainOf: new Map(),     // itemId -> [itemId phải ghép trước] (SeatHandler)
     lastClicked: -1,
     rows: [],               // layer chính đang hiện trên list, theo thứ tự
     roots: [],
@@ -128,7 +135,7 @@ exports.methods = {
 
     setBusy(b) {
         state.busy = b;
-        for (const k of ['scan', 'create', 'exportOnly', 'pickPsd']) {
+        for (const k of ['scan', 'create', 'exportOnly', 'pickPsd', 'pickFolder']) {
             if (b) this.$[k].setAttribute('disabled', '');
             else this.$[k].removeAttribute('disabled');
         }
@@ -151,6 +158,7 @@ exports.methods = {
         savePrefs({
             psdPath: this.$.psdPath.value.trim(), scale: o.scale, skipHidden: o.skipHidden,
             attach: o.attachToItems, order: o.order, autoSave: o.autoSave, dim: this.$.dim.checked,
+            useFolderTex: this.$.useFolderTex.checked,
         });
     },
 
@@ -167,7 +175,7 @@ exports.methods = {
     renderRoots(selectUuid) {
         const sel = this.$.root;
         sel.innerHTML = state.roots.length
-            ? state.roots.map((r) => `<option value="${esc(r.uuid)}">${esc(r.name)}${r.isRoom ? ' (phòng)' : ''} — ${r.childCount} con — ${esc(r.path)}</option>`).join('')
+            ? state.roots.map((r) => `<option value="${esc(r.uuid)}">${esc(r.name)}${r.isRoom ? ' (phòng)' : ''}${r.hasBuilder === false ? ' (sẽ thêm SceneBuilder)' : ''} — ${r.childCount} con — ${esc(r.path)}</option>`).join('')
             : '<option value="">(không có node SceneBuilder — chọn node rồi bấm "Node đang chọn")</option>';
         if (selectUuid && state.roots.some((r) => r.uuid === selectUuid)) sel.value = selectUuid;
     },
@@ -189,17 +197,31 @@ exports.methods = {
         await this.scan();
     },
 
+    async pickFolder() {
+        const p = await Editor.Message.request(PKG, 'pick-folder');
+        if (!p) return;
+        this.$.psdPath.value = p;
+        this.persist();
+        await this.scan();
+    },
+
     async scan() {
-        const psdPath = this.$.psdPath.value.trim();
-        if (!psdPath) { this.showStatus('Chưa chọn file PSD.', 'error'); return; }
+        const input = this.$.psdPath.value.trim();
+        if (!input) { this.showStatus('Chưa chọn file PSD hoặc folder level.', 'error'); return; }
+        let isDir = false;
+        try { isDir = fs.statSync(input).isDirectory(); } catch (e) { /* main báo lỗi không thấy file */ }
         this.persist();
         this.setBusy(true);
         this.setProgress(0, 0, 'Đang đọc PSD (lần đầu có thể mất ~15s)...');
         try {
-            const res = await Editor.Message.request(PKG, 'scan', psdPath);
+            const res = await Editor.Message.request(PKG, isDir ? 'scan-folder' : 'scan', input);
             if (!res.ok) { this.showStatus(res.error, 'error'); return; }
+            state.psdPath = isDir ? res.folder.psdPath : input;
+            this.setPlan(res.plan || null);
             this.applyManifest(res.manifest, res.saved && res.saved[0]);
-            this.$.cacheInfo.textContent = `${res.manifest.psd.width}×${res.manifest.psd.height} · ${res.manifest.layers.length} layer${res.cached ? ' · từ cache' : ''}`;
+            const p = state.plan;
+            this.$.cacheInfo.textContent = `${res.manifest.psd.width}×${res.manifest.psd.height} · ${res.manifest.layers.length} layer${res.cached ? ' · từ cache' : ''}`
+                + (p ? ` · plan: ${p.items.length} item, ${p.chains.length} chain, ${p.stats.textures} ảnh` : '');
         } finally {
             this.hideProgress();
             this.setBusy(false);
@@ -249,18 +271,59 @@ exports.methods = {
                 + ` từ lần tạo trước (${saved.savedAt || ''}).`
                 + (lost.length ? `\n⚠ Không còn layer: ${lost.join(', ')}` : '');
         } else {
-            const level = defaultLevelName(manifest.psd.name);
+            const level = state.plan && state.plan.level ? `Level_${state.plan.level}` : defaultLevelName(manifest.psd.name);
             this.$.levelName.value = level;
             this.$.outUrl.value = `db://assets/3.Sprites/${level}`;
-            // group tên "Items" trong PSD -> chọn sẵn
-            for (const l of manifest.layers) {
-                if (!l.empty && /(^|\/)items?$/i.test(l.group)) this.setItem(l.id, true);
+            if (state.plan) {
+                this.loadPlanSelection(false);
+                restored = `Đã chọn sẵn theo build-plan: ${state.items.size} item, ${state.overrides.size} bóng/cut, thứ tự rớt theo waves.`
+                    + ' Bỏ chọn những item không muốn cho chơi rồi bấm Tạo map.';
+            } else {
+                // group tên "Items" trong PSD -> chọn sẵn
+                for (const l of manifest.layers) {
+                    if (!l.empty && /(^|\/)items?$/i.test(l.group)) this.setItem(l.id, true);
+                }
             }
         }
+        if (state.plan && state.plan.warnings.length) restored += `\n⚠ ${state.plan.warnings.join('\n⚠ ')}`;
         this.relink();
         this.buildStage();
         this.refresh();
         this.showStatus(restored || 'Click vào đồ vật trên bản đồ (hoặc tick ở danh sách) để chọn item chơi được, rồi bấm Tạo map.', restored ? 'ok' : '');
+    },
+
+    // ------------------------------------------------------------ folder level (build-plan)
+
+    setPlan(plan) {
+        state.plan = plan;
+        state.planIndex = new Map((plan ? plan.items : []).map((id, i) => [id, i]));
+        state.chainOf = new Map();
+        for (const [a, b] of (plan && plan.chains) || []) {
+            if (!state.chainOf.has(a)) state.chainOf.set(a, []);
+            state.chainOf.get(a).push(b);
+        }
+        this.$.folderTexWrap.classList.toggle('hidden', !plan);
+        this.$.planSelect.classList.toggle('hidden', !plan);
+        const opt = this.$.order.querySelector('option[value="plan"]');
+        opt.disabled = !plan;
+        if (!plan && this.$.order.value === 'plan') this.$.order.value = 'bottomUp';
+    },
+
+    /** Chọn item + gắn bóng/cut đúng như build-plan, thứ tự rớt theo waves. */
+    loadPlanSelection(render = true) {
+        const plan = state.plan;
+        if (!plan) return;
+        state.items.clear();
+        state.picked = [];
+        state.overrides = new Map(plan.links);
+        for (const id of plan.items) this.setItem(id, true);
+        this.$.order.value = 'plan';
+        // relink ngay để bỏ layer plan coi là item nhưng thật ra là layer phụ (vd candy3_ad = bóng của candy3)
+        this.relink();
+        if (!render) return;
+        this.relink();
+        this.refresh();
+        this.showStatus(`Đã chọn lại theo build-plan: ${state.items.size} item.`, 'ok');
     },
 
     relink() {
@@ -352,6 +415,11 @@ exports.methods = {
         if (!m) return [];
         const mode = this.$.order.value;
         if (mode === 'picked') return state.picked.filter((id) => state.items.has(id));
+        if (mode === 'plan' && state.plan) {
+            // item ngoài plan xếp cuối, theo thứ tự PSD
+            const rank = (id) => (state.planIndex.has(id) ? state.planIndex.get(id) : 1e6 + state.byId.get(id).order);
+            return [...state.items].sort((a, b) => rank(a) - rank(b));
+        }
         const ids = [...state.items].sort((a, b) => state.byId.get(a).order - state.byId.get(b).order);
         return mode === 'topDown' ? ids.reverse() : ids;
     },
@@ -722,6 +790,13 @@ exports.methods = {
                 badges.push(`<span class="badge child kid ${k.how === 'manual' ? 'manual' : ''}" title="${esc(`${ROLE_LABEL[k.role]}: ${kl.name} (${how})\nBấm ✕ để gỡ ra thành layer riêng`)}">`
                     + `${esc(kl.name)}<b class="x" data-kid="${k.id}">✕</b></span>`);
             }
+            for (const req of state.chainOf.get(l.id) || []) {
+                const rl = state.byId.get(req);
+                const ok = !isItem || state.items.has(req);
+                badges.push(`<span class="badge ${ok ? 'chain' : 'warn'}" title="${esc(ok
+                    ? `Chỉ ghép được sau khi ghép xong «${rl.name}» (SeatHandler.requiredItems)`
+                    : `«${rl.name}» chưa là item nên ràng buộc này sẽ bị bỏ qua`)}">sau ${esc(rl.name)}</span>`);
+            }
             if (state.overrides.get(l.id) === -1) {
                 badges.push('<span class="badge unlinked" data-unlink="1" title="Đã gỡ khỏi layer cha — bấm để trả về tự gắn theo tên">đã gỡ ↺</span>');
             }
@@ -828,12 +903,14 @@ exports.methods = {
         try {
             const opts = this.readOptions();
             const res = await Editor.Message.request(PKG, 'create-map', {
-                psdPath: this.$.psdPath.value.trim(),
+                psdPath: state.psdPath || this.$.psdPath.value.trim(),
                 outUrl: this.$.outUrl.value.trim(),
                 levelName: this.$.levelName.value.trim(),
                 rootUuid,
                 items,
                 links: [...state.overrides],
+                chains: state.plan ? state.plan.chains : [],
+                folder: state.plan ? { dir: state.plan.folder, useTextures: this.$.useFolderTex.checked } : null,
                 options: { ...opts, buildScene },
             });
             const text = [...(res.report || []), ...(res.ok ? [] : [`✖ ${res.error}`])].join('\n');
@@ -857,8 +934,13 @@ exports.ready = async function () {
     this.$.order.value = p.order;
     this.$.autoSave.checked = p.autoSave;
     this.$.dim.checked = p.dim;
+    this.$.useFolderTex.checked = p.useFolderTex;
+    this.setPlan(null);
 
     this.$.pickPsd.addEventListener('confirm', () => this.pickPsd());
+    this.$.pickFolder.addEventListener('confirm', () => this.pickFolder());
+    this.$.planSelect.addEventListener('confirm', () => this.loadPlanSelection());
+    this.$.useFolderTex.addEventListener('change', () => this.persist());
     this.$.scan.addEventListener('confirm', () => this.scan());
     this.$.psdPath.addEventListener('keydown', (e) => { if (e.key === 'Enter') this.scan(); });
     this.$.useSelected.addEventListener('confirm', () => this.useSelected());

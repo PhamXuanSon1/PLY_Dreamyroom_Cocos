@@ -54,21 +54,30 @@ function snapshot() {
     try { Editor.Message.send('scene', 'snapshot'); } catch (e) { /* chỉ để Ctrl+Z được */ }
 }
 
-/** Các node có SceneBuilder trong scene — ứng viên làm gốc dựng map. */
+/**
+ * Ứng viên làm gốc dựng map: node có SceneBuilder, cộng node phòng (BaseRoom) dù chưa có
+ * SceneBuilder (buildLevel tự thêm) — phòng đứng đầu để không lỡ dựng nhầm vào node khác.
+ */
 function listRoots() {
     const SB = cls('SceneBuilder');
     const scene = cc.director.getScene();
     if (!SB || !scene) return { ok: false, roots: [], error: 'Không tìm thấy class SceneBuilder (script chưa compile?)' };
     const BaseRoom = cls('BaseRoom');
-    const roots = scene.getComponentsInChildren(SB).map((sb) => ({
-        uuid: sb.node.uuid,
-        name: sb.node.name,
-        path: pathOf(sb.node),
-        childCount: sb.node.children.length,
-        isRoom: !!(BaseRoom && sb.node.getComponent(BaseRoom)),
-        spriteDir: sb.spriteDir,
-        jsonUuid: sb.sceneJson ? sb.sceneJson._uuid : '',
-    }));
+    const nodes = new Set(scene.getComponentsInChildren(SB).map((c) => c.node));
+    if (BaseRoom) for (const c of scene.getComponentsInChildren(BaseRoom)) nodes.add(c.node);
+    const roots = [...nodes].map((n) => {
+        const sb = n.getComponent(SB);
+        return {
+            uuid: n.uuid,
+            name: n.name,
+            path: pathOf(n),
+            childCount: n.children.length,
+            isRoom: !!(BaseRoom && n.getComponent(BaseRoom)),
+            hasBuilder: !!sb,
+            spriteDir: sb ? sb.spriteDir : '',
+            jsonUuid: sb && sb.sceneJson ? sb.sceneJson._uuid : '',
+        };
+    });
     roots.sort((a, b) => Number(b.isRoom) - Number(a.isRoom));
     return { ok: true, roots };
 }
