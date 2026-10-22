@@ -126,7 +126,7 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     hitTest(worldPos: Vec3): boolean {
         if (UIManager.instance?.isGameEnded) return false;
         if (!this.interactionEnabled) return false;
-        return DreamyInputManager.hitTestCollider(this.node, worldPos);
+        return DreamyInputManager.hitTestNode(this.node, worldPos);
     }
 
     onPointerDown(worldPos: Vec3, _ev: EventTouch): boolean {

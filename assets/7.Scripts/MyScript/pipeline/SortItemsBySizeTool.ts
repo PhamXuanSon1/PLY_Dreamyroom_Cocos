@@ -3,17 +3,16 @@
  *
  * Cocos không có EditorWindow, nên tool là component chạy trong Editor:
  * gắn vào 1 node bất kỳ -> kéo node cha vào ô `parentNode` -> tick nút -> Ctrl+S.
- * Tool sắp xếp siblingIndex của các node con theo DIỆN TÍCH collider.
+ * Tool sắp xếp siblingIndex của các node con theo DIỆN TÍCH contentSize.
  *
- * Kích thước đo theo thứ tự ưu tiên (giống Collider.bounds bên Unity):
- *   1. Collider2D trên node con (Box / Circle / Polygon), gộp cả collider ở cháu.
- *   2. Không có collider -> UITransform (contentSize).
+ * Kích thước đo theo thứ tự ưu tiên (không dùng Collider2D nữa):
+ *   1. contentSize (UITransform) của chính node con — cũng là vùng bấm của item.
+ *   2. Node con không có kích thước -> gộp contentSize các node cháu.
  *   3. Không có gì -> size = 0, bị đẩy xuống cuối kèm cảnh báo.
  * Luôn nhân với world scale để so đúng kích thước hiển thị.
  */
 
-import { _decorator, Component, Node, Collider2D, BoxCollider2D, CircleCollider2D,
-         PolygonCollider2D, UITransform, Vec3, Rect } from 'cc';
+import { _decorator, Component, Node, UITransform, Vec3, Rect } from 'cc';
 import { EDITOR } from 'cc/env';
 
 const { ccclass, property, executeInEditMode, menu } = _decorator;
@@ -128,13 +127,12 @@ export class SortItemsBySizeTool extends Component {
     private measure(node: Node): { w: number; h: number } {
         let box: Rect | null = null;
 
-        for (const col of node.getComponentsInChildren(Collider2D)) {
-            const r = this.colliderRect(col);
-            if (!r) continue;
-            box = box ? Rect.union(box, box, r) : r;
+        const own = node.getComponent(UITransform);
+        if (own && own.width > 0 && own.height > 0) {
+            box = new Rect(-own.width * own.anchorX, -own.height * own.anchorY, own.width, own.height);
         }
 
-        // Không có collider -> đo bằng UITransform
+        // Node không có kích thước -> gộp contentSize các node cháu
         if (!box) {
             for (const ut of node.getComponentsInChildren(UITransform)) {
                 const size = ut.contentSize;
@@ -150,32 +148,6 @@ export class SortItemsBySizeTool extends Component {
         const s = new Vec3();
         node.getWorldScale(s);
         return { w: box.width * Math.abs(s.x), h: box.height * Math.abs(s.y) };
-    }
-
-    /** Rect (theo hệ toạ độ của node chứa collider) của 1 Collider2D. */
-    private colliderRect(col: Collider2D): Rect | null {
-        if (col instanceof BoxCollider2D) {
-            return new Rect(col.offset.x - col.size.width / 2, col.offset.y - col.size.height / 2,
-                            col.size.width, col.size.height);
-        }
-
-        if (col instanceof CircleCollider2D) {
-            const d = col.radius * 2;
-            return new Rect(col.offset.x - col.radius, col.offset.y - col.radius, d, d);
-        }
-
-        if (col instanceof PolygonCollider2D) {
-            const pts = col.points;
-            if (!pts || pts.length === 0) return null;
-            let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-            for (const p of pts) {
-                minX = Math.min(minX, p.x); maxX = Math.max(maxX, p.x);
-                minY = Math.min(minY, p.y); maxY = Math.max(maxY, p.y);
-            }
-            return new Rect(minX + col.offset.x, minY + col.offset.y, maxX - minX, maxY - minY);
-        }
-
-        return null;
     }
 
     private saveSnapshot(): void {

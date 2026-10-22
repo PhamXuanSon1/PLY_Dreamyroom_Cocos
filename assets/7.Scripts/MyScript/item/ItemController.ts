@@ -3,7 +3,7 @@
  * Sử dụng hệ thống âm thanh từ PLY_SoundManager (sm).
  */
 
-import { _decorator, BoxCollider2D, Collider2D, Component, Enum, EventTouch, Node, ParticleSystem2D, sp, UITransform, Vec2, Vec3 } from 'cc';
+import { _decorator, Component, Enum, EventTouch, Node, ParticleSystem2D, sp, UITransform, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { ItemGraphic } from './ItemGraphic';
 import { ItemMovement } from './ItemMovement';
@@ -124,7 +124,6 @@ export class ItemController extends Component implements IPointerHandler {
 
     private dragging = false;
     private moving = false;
-    private itemCollider: Collider2D | null = null;
     private initialWorldPos = new Vec3();
 
     /** glue Cocos: lần cầm này item có được cấp bóng lúc kéo không — snap xong mới trừ 1 lượt. */
@@ -141,7 +140,6 @@ export class ItemController extends Component implements IPointerHandler {
     onLoad() {
         this.itemGraphic = this.getComponent(ItemGraphic) ?? this.addComponent(ItemGraphic);
         this.itemMovement = this.getComponent(ItemMovement) ?? this.addComponent(ItemMovement);
-        this.setupCollider();
         this.initDropShadows();
     }
 
@@ -224,16 +222,14 @@ export class ItemController extends Component implements IPointerHandler {
         this.showTargetShadow();
     }
 
-    /** Đồng bộ collider để Item luôn dùng Collider 2D (Box/Polygon/Circle) cho thao tác kéo-thả. */
-    private setupCollider(): void {
-        this.itemCollider = this.getComponent(Collider2D) ?? this.addComponent(BoxCollider2D);
-    }
-
     // ======================================================== Input & HitTest
+    /** Vùng bấm = contentSize của item; nằm trong ô khay thì = contentSize của ô (bấm chỗ nào trong ô cũng cầm được). */
     hitTest(worldPos: Vec3): boolean {
         if (UIManager.instance?.isGameEnded) return false;
         if (this.isPlaced || this.moving || !this.node.activeInHierarchy) return false;
-        return DreamyInputManager.hitTestCollider(this.node, worldPos);
+        const area = ItemTray.instance?.hitAreaOf(this);
+        if (area && area.isValid) return DreamyInputManager.containsWorldPoint(area, worldPos);
+        return DreamyInputManager.hitTestNode(this.node, worldPos);
     }
 
     /** Bắt đầu nhấc item lên (Pick) */
@@ -368,13 +364,8 @@ export class ItemController extends Component implements IPointerHandler {
             return;
         }
 
-        const targetCollider = this.targetPoint.getComponent(Collider2D);
-        let isSnapped = false;
-
-        if (targetCollider && targetCollider.worldAABB) {
-            const itemPos2D = new Vec2(this.node.worldPosition.x, this.node.worldPosition.y);
-            isSnapped = targetCollider.worldAABB.contains(itemPos2D);
-        }
+        // Tâm item rơi vào khung contentSize của đích -> ghép
+        let isSnapped = DreamyInputManager.containsWorldPoint(this.targetPoint, this.node.worldPosition);
 
         if (!isSnapped) {
             const distance = Vec3.distance(this.node.worldPosition, this.targetPoint.worldPosition);

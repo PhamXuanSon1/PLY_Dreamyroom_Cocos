@@ -8,7 +8,7 @@
  *   - Bỏ SetLayerRecursively (dead code bên Unity, không nơi nào gọi).
  */
 
-import { _decorator, BoxCollider2D, Component, EventTouch, Node, randomRange, UITransform, Vec2, Vec3 } from 'cc';
+import { _decorator, Component, EventTouch, Node, randomRange, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { BoxGraphic } from './BoxGraphic';
 import { ItemManager } from '../managers/ItemManager';
@@ -90,12 +90,7 @@ export class BoxController extends Component implements IPointerHandler {
     hitTest(worldPos: Vec3): boolean {
         if (UIManager.instance?.isGameEnded) return false;
         if (this.isClicked || this.isClosing) return false;
-        if (DreamyInputManager.hitTestCollider(this.node, worldPos)) return true;
-        const ut = this.getComponent(UITransform);
-        if (ut && ut.getBoundingBoxToWorld().contains(new Vec2(worldPos.x, worldPos.y))) {
-            return true;
-        }
-        return false;
+        return DreamyInputManager.hitTestNode(this.node, worldPos);
     }
 
     onPointerDown(_worldPos: Vec3, _ev: EventTouch): boolean {
