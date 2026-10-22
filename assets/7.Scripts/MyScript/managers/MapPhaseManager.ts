@@ -3,8 +3,8 @@
  *
  *   Lượt 1: hộp chỉ rớt item của phases[0].items. Rớt hết -> hộp bay đi (boxExitOffset) và tắt.
  *   Ghép xong mọi item lượt 1 -> các món trong phases[0].afterComplete lần lượt hiện từ trên rơi
- *   xuống (cách nhau afterInterval giây) -> phòng chuyển sang khung nhìn lượt mới (moveRoom, nếu bật)
- *   -> hộp bật lại, bay về chỗ cũ, bật tay chỉ.
+ *   xuống (cách nhau afterInterval giây) -> phòng chuyển sang khung nhìn lượt mới (moveRoom, nếu bật),
+ *   cùng lúc hộp bật lại, bay về chỗ cũ, bật tay chỉ.
  *   Người chơi click hộp như thường -> rớt item lượt 2 ... Lượt cuối hết item -> hộp đóng như cũ.
  *
  * ItemManager.itemList được dựng lại = item mọi lượt nối nhau (thanh tiến độ = tổng, chỉ thắng
@@ -95,6 +95,9 @@ export class MapPhaseManager extends Component {
     @property({ tooltip: 'Âm lượng phaseCompleteSound.', range: [0, 1, 0.05], slide: true })
     phaseCompleteVolume = 1;
 
+    @property({ tooltip: 'Phát phaseCompleteSound sau N giây kể từ lúc ghép xong item cuối của lượt (0 = phát ngay).', min: 0 })
+    phaseCompleteSoundDelay = 0;
+
     // ---------------- hộp ----------------
     @property({ type: Vec3, tooltip: 'Hộp bay đi theo vector này (world, tính từ chỗ đang đứng) khi rớt hết item của lượt.' })
     boxExitOffset = new Vec3(0, -700, 0);
@@ -108,7 +111,7 @@ export class MapPhaseManager extends Component {
     @property({ tooltip: 'Easing khi hộp bay về.' })
     boxReturnEasing = 'backOut';
 
-    @property({ tooltip: 'Chờ bao lâu (giây) sau khi món cuối rơi xong thì hộp bay về.', min: 0 })
+    @property({ tooltip: 'Chờ bao lâu (giây) sau khi món cuối rơi xong thì phòng chuyển khung + hộp bay về (cùng lúc).', min: 0 })
     delayBeforeBoxReturn = 0.5;
 
     // ---------------- phòng ----------------
@@ -204,11 +207,25 @@ export class MapPhaseManager extends Component {
 
         this.transitioning = true;
         this.setPlayerInputBlocked(true);
-        this.playPhaseCompleteSound();
-        // món afterComplete rơi xong -> phòng chuyển sang khung nhìn lượt mới -> hộp bay về
-        this.scheduleOnce(() => this.dropAfterItems(this.phaseIndex, () => this.moveRoomTo(this.phaseIndex + 1, () => {
-            this.scheduleOnce(() => this.returnBox(), this.delayBeforeBoxReturn);
-        })), this.delayBeforeAfter);
+        if (this.phaseCompleteSoundDelay > 0) this.scheduleOnce(() => this.playPhaseCompleteSound(), this.phaseCompleteSoundDelay);
+        else this.playPhaseCompleteSound();
+        // món afterComplete rơi xong -> (delayBeforeBoxReturn) -> phòng chuyển sang khung nhìn lượt mới
+        // CÙNG LÚC hộp bật lại + bay về; cả hai xong mới mở khoá thao tác
+        this.scheduleOnce(() => this.dropAfterItems(this.phaseIndex, () => {
+            this.scheduleOnce(() => this.startNextPhase(), this.delayBeforeBoxReturn);
+        }), this.delayBeforeAfter);
+    }
+
+    private startNextPhase(): void {
+        let pending = 2;
+        const done = () => {
+            if (--pending > 0) return;
+            this.boxAway = false;
+            this.transitioning = false;
+            this.setPlayerInputBlocked(false);
+        };
+        this.moveRoomTo(this.phaseIndex + 1, done);
+        this.returnBox(done);
     }
 
     /**
@@ -267,19 +284,14 @@ export class MapPhaseManager extends Component {
     }
 
     /** Hộp bật lại, bay về chỗ cũ; mở lượt tiếp theo cho hộp rớt. */
-    private returnBox(): void {
+    private returnBox(onDone: () => void): void {
         const im = this.itemManager;
         this.phaseIndex++;
         if (im) im.spawnLimit += this.phaseItems[this.phaseIndex].length;
 
         const box = BoxManager.instance?.box?.getComponent(BoxController) ?? null;
-        const finish = () => {
-            this.boxAway = false;
-            this.transitioning = false;
-            this.setPlayerInputBlocked(false);
-        };
-        if (box) box.flyBack(this.boxFlyDuration, this.boxReturnEasing, finish);
-        else finish();
+        if (box) box.flyBack(this.boxFlyDuration, this.boxReturnEasing, onDone);
+        else onDone();
     }
 
     // ======================================================== chặn thao tác lúc chuyển lượt

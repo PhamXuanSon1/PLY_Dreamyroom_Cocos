@@ -7,7 +7,7 @@
     "polyfills": {
       "asyncFunctions": true
     },
-    "name": "Cocos_DreamyRoom_PLY44",
+    "name": "Cocos_DreamyRoom_PLY50",
     "buildPath": "project://build",
     "outputName": "web-mobile",
     "mainBundleCompressionType": "merge_dep",
@@ -31,10 +31,10 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "10-13-2026 15:14:00 build success in 22 s!",
-        "detailMessage": "[playable-ads-builder]\r[buildHtml] 5/7\r",
+        "message": "10-22-2026 17:34:57 build success in 23 s!",
+        "detailMessage": "[playable-ads-builder]\r[generateZip] 1/1\r",
         "options": {
-          "name": "Cocos_DreamyRoom_PLY44",
+          "name": "Cocos_DreamyRoom_PLY50",
           "server": "",
           "engineModulesConfigKey": "migrationsConfig",
           "platform": "web-mobile",
@@ -93,7 +93,7 @@
             "enable": false
           }
         },
-        "time": "10-13-2026 15:13:38",
+        "time": "10-22-2026 17:34:34",
         "dirty": false
       }
     }
