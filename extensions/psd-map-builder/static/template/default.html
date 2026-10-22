@@ -1,0 +1,79 @@
+<div id="app">
+    <header>
+        <div class="row">
+            <h2>PSD Map Builder</h2>
+            <input id="psdPath" class="grow" type="text" placeholder="Đường dẫn file .psd" spellcheck="false">
+            <ui-button id="pickPsd">Chọn PSD…</ui-button>
+            <ui-button id="scan" type="primary" tooltip="Đọc PSD, xuất từng layer ra PNG vào cache (temp/). PSD không đổi thì lần sau đọc từ cache.">Quét</ui-button>
+        </div>
+
+        <div class="row wrap">
+            <label class="field">Level <input id="levelName" type="text" style="width:120px" spellcheck="false"></label>
+            <label class="field grow" title="Thư mục asset chứa PNG + JSON của map">Thư mục ảnh <input id="outUrl" class="grow" type="text" spellcheck="false"></label>
+            <label class="field grow" title="Node có SceneBuilder (vd Scale) — toàn bộ node con cũ của nó sẽ bị xoá khi dựng lại">Node gốc <select id="root" class="grow"></select></label>
+            <ui-button id="useSelected" tooltip="Dùng node đang chọn trong Hierarchy làm gốc (tự thêm SceneBuilder nếu chưa có)">Node đang chọn</ui-button>
+            <ui-button id="reloadRoots" tooltip="Dò lại các node có SceneBuilder trong scene">&#8635;</ui-button>
+        </div>
+
+        <div class="row wrap options">
+            <label class="field" title="Scale node gốc của level (1 = 1px PSD là 1 đơn vị)">Scale <input id="scale" type="number" min="0.05" step="0.05" style="width:60px"></label>
+            <label title="Layer đang ẩn trong PSD không được xuất"><input id="skipHidden" type="checkbox"> Bỏ layer ẩn</label>
+            <label title="Layer tên <item>_sd / _fx / _top / _cut / front_<item> đi theo item: bóng nằm trong item, fx/mảng che nằm trong đích"><input id="attach" type="checkbox"> Gắn _sd/_fx/_top vào item</label>
+            <label class="field" title="Thứ tự item trong ItemManager.itemList (thứ tự rớt ra khỏi hộp)">Thứ tự rớt
+                <select id="order">
+                    <option value="bottomUp">PSD dưới → trên</option>
+                    <option value="topDown">PSD trên → dưới</option>
+                    <option value="picked">Theo thứ tự chọn</option>
+                </select>
+            </label>
+            <label title="Tự Ctrl+S sau khi dựng"><input id="autoSave" type="checkbox"> Tự lưu scene</label>
+            <span class="grow"></span>
+            <span id="cacheInfo" class="hint"></span>
+        </div>
+    </header>
+
+    <div id="main">
+        <section id="stageWrap">
+            <div class="row bar">
+                <ui-button id="fit" tooltip="Thu phóng vừa khung">Vừa khung</ui-button>
+                <span id="zoomLabel" class="hint"></span>
+                <label title="Làm mờ mọi thứ không phải item để nhìn rõ item đã chọn"><input id="dim" type="checkbox"> Làm mờ phòng</label>
+                <span class="grow"></span>
+                <span class="hint">Click đồ vật để chọn / bỏ item · Lăn chuột: zoom · Kéo: di chuyển</span>
+            </div>
+            <div id="stage">
+                <div id="world"></div>
+                <div id="tip" class="tip hidden"></div>
+                <div id="stageEmpty" class="empty">Chọn file PSD rồi bấm <b>Quét</b>.<br>Sau đó click vào đồ vật trên bản đồ (hoặc tick ở danh sách bên phải) để biến nó thành <b>item chơi được</b>.<br>Thứ không chọn là phòng / trang trí.</div>
+            </div>
+        </section>
+
+        <aside id="side">
+            <div class="row">
+                <input id="filter" class="grow" type="search" placeholder="Lọc theo tên / group…" spellcheck="false">
+                <select id="show">
+                    <option value="all">Tất cả</option>
+                    <option value="items">Item</option>
+                    <option value="rest">Chưa chọn</option>
+                </select>
+            </div>
+            <div class="row">
+                <span id="count" class="count grow"></span>
+                <ui-button id="checkVisible" tooltip="Chọn làm item mọi layer đang hiện trong danh sách (theo bộ lọc)">Chọn hết</ui-button>
+                <ui-button id="uncheckAll" tooltip="Bỏ chọn toàn bộ item">Bỏ hết</ui-button>
+            </div>
+            <div id="list" class="list"></div>
+        </aside>
+    </div>
+
+    <footer>
+        <div id="progress" class="progress hidden"><div id="bar" class="barFill"></div><span id="progressText"></span></div>
+        <div id="status" class="status hidden"></div>
+        <div class="row">
+            <span class="hint">Double-click dòng để zoom tới layer · Shift+click chọn khoảng · Sắp lại thứ tự rớt bằng Tool → Item Order Editor</span>
+            <span class="grow"></span>
+            <ui-button id="exportOnly" tooltip="Chỉ chép PNG + ghi JSON vào thư mục ảnh, không đụng scene">Chỉ xuất ảnh + JSON</ui-button>
+            <ui-button id="create" type="primary" tooltip="Xuất ảnh + JSON, SceneBuilder dựng node dưới node gốc, gán ItemManager.itemList và các tool pipeline">Tạo map</ui-button>
+        </div>
+    </footer>
+</div>

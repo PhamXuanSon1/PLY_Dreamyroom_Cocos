@@ -1,0 +1,45 @@
+{
+  "package_version": 2,
+  "name": "psd-map-builder",
+  "version": "1.0.0",
+  "description": "Tạo map (level) từ file PSD: xuất layer ra PNG, chọn layer nào là item chơi được, dựng node qua SceneBuilder rồi nối ItemManager + các tool pipeline.",
+  "author": "PLY",
+  "editor": ">=3.7.0",
+  "main": "./main.js",
+  "panels": {
+    "default": {
+      "title": "PSD Map Builder",
+      "type": "dockable",
+      "main": "./src/panels/default.js",
+      "size": {
+        "min-width": 640,
+        "min-height": 480,
+        "width": 900,
+        "height": 860
+      }
+    }
+  },
+  "contributions": {
+    "menu": [
+      { "path": "Tool", "label": "PSD Map Builder", "message": "open-panel" },
+      { "path": "i18n:menu.panel/PSD Map Builder", "label": "Open Panel", "message": "open-panel" }
+    ],
+    "messages": {
+      "open-panel": { "methods": ["openPanel"] },
+      "pick-psd": { "methods": ["pickPsd"] },
+      "scan": { "methods": ["scan"] },
+      "cancel-scan": { "methods": ["cancelScan"] },
+      "create-map": { "methods": ["createMap"] },
+      "list-roots": { "methods": ["listRoots"] },
+      "selected-root": { "methods": ["selectedRoot"] },
+      "progress": { "methods": ["default.onProgress"] }
+    },
+    "scene": {
+      "script": "./scene.js"
+    }
+  },
+  "dependencies": {
+    "ag-psd": "^22.0.2",
+    "pngjs": "^7.0.0"
+  }
+}
