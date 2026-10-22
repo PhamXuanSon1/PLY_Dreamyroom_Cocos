@@ -252,7 +252,7 @@ export class BoxController extends Component implements IPointerHandler {
         });
     }
 
-    /** Lượt mới: bật hộp ở chỗ đã bay ra, bay về chỗ cũ, mở hộp và bật lại tay chỉ; xong mới cho click. */
+    /** Lượt mới: bật hộp ở chỗ đã bay ra, bay về chỗ cũ, mở hộp và bật lại tay chỉ (không bật TapToDecor/handText); xong mới cho click. */
     flyBack(duration: number, easing = 'backOut', onDone?: () => void): void {
         const home = this.homeWorldPos ?? this.node.worldPosition.clone();
         TweenUtil.killAll(this.node);
@@ -264,7 +264,6 @@ export class BoxController extends Component implements IPointerHandler {
             this.isClicked = false;
             this.isClosing = false;
             if (this.handOfBox) this.handOfBox.node.active = true;
-            if (this.handText) this.handText.active = true;
             onDone?.();
         });
     }
