@@ -16,7 +16,7 @@
  * Xem COCOS_MIGRATION_PLAN.md mục 5.1.
  */
 
-import { _decorator, Component, Node, Sprite, Color, Vec3, UITransform, Rect } from 'cc';
+import { _decorator, Component, Node, Sprite, Color, Vec3, UITransform, Rect, Sorting2D, UIRenderer } from 'cc';
 import { BaseRoom } from '../utils/BaseRoom';
 
 const { ccclass, property } = _decorator;
@@ -119,6 +119,30 @@ export class ItemGraphic extends Component {
         this.node.setSiblingIndex(targetPoint.getSiblingIndex() + 1);
         this.savedParent = null;
         this.savedIndex = -1;
+    }
+
+    // ======================================================== Sorting2D (SceneBuilder.useSorting2D)
+    /**
+     * Bật/tắt mọi Sorting2D trong nhánh `root`.
+     * Tắt = renderer về order mặc định 0 -> vẽ theo thứ tự cây, đè lên map (map dồn xuống order âm):
+     * dùng khi item chưa ghép (rớt từ hộp, nằm khay, đang kéo). Ghép xong bật lại = order Unity.
+     */
+    static setMapSorting(root: Node, on: boolean): void {
+        if (!Sorting2D) return;   // module Sorting 2D không bật -> không có gì để làm
+        for (const s of root.getComponentsInChildren(Sorting2D)) s.enabled = on;
+    }
+
+    /** Đích có tự vẽ gì không (sprite/spine...). Holder rỗng (HPlaceHolder bên Unity) = không. */
+    static hasVisual(target: Node): boolean {
+        return target.getComponentsInChildren(UIRenderer).length > 0;
+    }
+
+    /** Bỏ hệ số zoom đang nhân vào node ảnh (syncRoomZoomScale) — dùng khi item về lại cây phòng để ở luôn đó. */
+    resetZoomScale(): void {
+        const img = this.resolveImageNode();
+        if (img && this.imageBaseScale) img.setScale(this.imageBaseScale);
+        this.zoomMult = 1;
+        this.zoomRefInitialized = false;
     }
 
     // ======================================================== shadow ở đích

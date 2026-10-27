@@ -1,0 +1,3420 @@
+{
+  "meta": { "K": 100, "scene": "Level931", "exportRoot": "Ply52_Level931/Baseroom_Ply52_Level931", "distancesInPx": true, "onlyNodeLinks": true, "zeroZ": true, "exportInactive": true, "ignoreInactiveInConflicts": true, "exportedAt": "2026-10-27T15:18:26" },
+  "assetMap": {
+    "afde96d51c683374785f886f6f8bcace": "sprites/1+floor_1",
+    "5e28b7f3d095b6448849599b712dbac7": "sprites/9_door_frame",
+    "735eedc353a0f554ba7063fb33321411": "sprites/9_door_frame_shadow",
+    "94f87b99e24d6f349bbf2bfbe93f141d": "sprites/6_skirting_2",
+    "6491a288eeee71f418b0c2359fe03fc7": "sprites/6_skirting_2_shadow",
+    "67d819dc68c4c4f439027109c36cf36c": "sprites/7_skirting_3",
+    "1a1656ddaf2ff814b9af255cd7eaed5d": "sprites/7_skirting_3_shadow",
+    "3955f78b4bbe6f04abd861261fc0dde7": "sprites/11_desk",
+    "e8915201359f549438a1c8822b956a22": "sprites/11_desk_shadow",
+    "ee9237ae52468fb4fbd733838bc1848c": "sprites/2_carpet_1",
+    "526abdc2f61684046b1f5136481e0302": "sprites/2_carpet_1_shadow",
+    "5c9e9ce07949b1e438d880e39ff3fbf4": "sprites/15_door_sign",
+    "31c531b8963bb10488aca9793514ed1b": "sprites/15_door_sign_shadow",
+    "61bbbd51555794044b035919c4e6ebec": "sprites/wall_lamp_1",
+    "4cef72dff47104349b7d33c63beac3ec": "sprites/fx_light",
+    "a1bc166072a26fa49be52cbdee204b73": "sprites/Layer_7_copy_shadow",
+    "9a55ef9702f4a324aadedf7795471638": "sprites/12_tablelamp",
+    "3eef5d6ba7242ee478a34b53984c1fd8": "sprites/Layer_410_copy_9",
+    "9544aa6128020974ea32d9e560ae081a": "sprites/12_tablelamp_Sd",
+    "ee2eb2446bb384045b4ae8ed0b26e575": "sprites/13_telephone",
+    "a3f45bd01606e054592c6599e5fb0b1c": "sprites/13_telephone_shadow",
+    "008e097bb946bcd469e297734b16d49f": "sprites/4_skirting_1",
+    "cbd484ebf3214a14185b02391b385d64": "sprites/4_skirting_1_shadow",
+    "11cfcb94e1816844aa048823b043d39b": "sprites/3_long_carpet",
+    "dc7da127684af3743b683881b602431f": "sprites/3_long_carpet__shadow",
+    "aa196f75bfd92e04dbe6e35d5ac0fde7": "sprites/14_portrait",
+    "a854efe7454b90e4b807456d64c9ed80": "sprites/14_portrait_shadow",
+    "49fb1c31e4464f34d9372c169c39e67b": "sprites/8_main_door",
+    "9732155e1f83036459a7174f5e89960f": "sprites/8_main_door_shadow",
+    "47140a9cf891b0348a6bc2fce068e849": "sprites/5_room_door",
+    "6881ebf0622ee8d4e8f1c7b68b2960f4": "sprites/5_room_door_shadow",
+    "26ac9a932f7deea4995ac26658e61357": "sprites/16_floor_2",
+    "873b1a0503d91e84e82986a71657e41a": "sprites/56_city_map",
+    "1a85167d4f8327e4fa55df6824652c1c": "sprites/56_city_map_shadow",
+    "d635dc06fb087cd4cbc5554b48db65b4": "sprites/62_sofa",
+    "f2a84cfbbf34acb46be9f9b48d516b36": "sprites/62_sofa_shadow",
+    "a329da9f7a667d04a990af0004ad8a82": "sprites/46_book_of_45_2",
+    "4b13f9ebfbb973745a393fe77a92f87e": "sprites/46_book_of_45_2_shadow",
+    "83db4068bad23e14d877388a9ada6df0": "sprites/64_violin",
+    "ec058b60d92a78146bfccc68dca0acd7": "sprites/64_violin_shadow",
+    "3b730f9abf0b6e84893142ef7e1c169c": "sprites/25_bookstack_1",
+    "839832b0803b2af4392032c9db101293": "sprites/25_bookstack_1_shadow",
+    "4a2a66ccd1c939e42a287f9fd3c57a78": "sprites/37_microscope",
+    "554198b705a32d4478cc8786fd0d4cee": "sprites/37_microscope_shadow",
+    "1d9fba418e8992041b57f2144252da1f": "sprites/32_table",
+    "499b22969e40cb34e861f447e59b788e": "sprites/32_table_shadow",
+    "1ecda5d02d51d5d41af8f7da89507bcc": "sprites/55_cigar_box",
+    "019872875958c5841b46975363ce1446": "sprites/55_cigar_box_shadow",
+    "7cd0d403e7790d54d86db96fd12527ee": "sprites/53_chair_1",
+    "92d081ff1656baa43874ab144957e36d": "sprites/53_chair_1_shadow",
+    "3f019d7102e3606458030ec2cffc55f9": "sprites/24_curtain_hanger",
+    "14ca9eb52fe72c6409760f5f1d46a5bc": "sprites/42_mirrior",
+    "bbc5b138796fbaf4ab31dfc47a258e7c": "sprites/42_mirrior_shadow",
+    "f67f45645099d8c49bfd2adc6859a608": "sprites/21_curtain_left",
+    "240c9dadd7299b3488661aeb08c5f49d": "sprites/38_fire_place",
+    "8b50478ad68762241b1c194f6d9a1003": "sprites/38_fire_place_shadow",
+    "7ff4f39fec1dd9d40bbfaa26e5f6c99e": "sprites/36_mini_drawer_cabinet",
+    "4c702487e18702c4bb5c99f59d9aba9a": "sprites/36_mini_drawer_cabinet_shadow",
+    "403ac24ba16378c478dc589138a248ae": "sprites/34_test_tube_rack",
+    "842a3773e058f144e93aba7e22f1316f": "sprites/34_test_tube_rack_cut",
+    "f668f7f97a0e7294f8dfb893ee8b59b7": "sprites/34_test_tube_rack_shadow",
+    "c3a23d3d40242bd4fb2c851741a8dc72": "sprites/65_gramophone",
+    "e903cb58b2cc9fb44a317ea504b11322": "sprites/65_gramophone_shadow",
+    "99d8e6f5522bdeb4097824f6dddddeda": "sprites/27_globe",
+    "2565f5c4dea263d46b8262d89c306a3e": "sprites/27_globe_shadow",
+    "a5060335181adb943be362b450086f14": "sprites/49_rounded_table",
+    "1c35a12ae9c85554ab6f920d412b6749": "sprites/49_rounded_table_shadow",
+    "c326f5eb3ec4a744d90c0b1eeac4143e": "sprites/23_window_top",
+    "5546dee5c872d554d899939c83d281a6": "sprites/23_window_top_cut",
+    "194e53f18d3312a4ea0856284ee7724f": "sprites/23_window_top_shadow",
+    "270fade028c0492448a99cf0f47a8c5c": "sprites/47_carpet_2",
+    "93ad84d213b46694c9a2281443eb564e": "sprites/47_carpet_2_shadow",
+    "1752615380cced24d94af06be86869be": "sprites/46_filebox",
+    "844bd14908c41d246a56f01a82dcadd3": "sprites/46_filebox_shadow",
+    "2fcbc6b4d265006429c74025b3834ba3": "sprites/28_4_books",
+    "4b2827a7f957474409a46b4e7835404d": "sprites/28_4_books_shadow",
+    "1f8c5b5b9cebff74c9e60860bfffc162": "sprites/50_tea_pot",
+    "83077fb67e40944478d997872632cfa3": "sprites/50_tea_pot_shadow",
+    "96dcf5cf466b1b44c9748610817489d6": "sprites/22_curtain_right",
+    "7a3ddf3a8cb12234ab786ceb45fb7007": "sprites/59_coat",
+    "67f2077e4fb5f3446b56ce2092b1d193": "sprites/59_coat_shadow",
+    "4a8c8ff3b7e0c4d4e84d873e81acad51": "sprites/52_armchair_2",
+    "d938662e740c3954c9e6eda7fbccd91f": "sprites/52_armchair_2_shadow",
+    "cd115974ef0941b41a9eeaa8d080c368": "sprites/43_rounde__frame",
+    "5c2f402d1ffb10742baae00f643fcbe8": "sprites/43_rounded_frame_shadow",
+    "3f38ce75a86a2f54293bf7386e45b000": "sprites/28_4_books_top",
+    "d7e841985a3d74c49948bfbaf3ec25ba": "sprites/19_skirting_4",
+    "8b102823db94d074bb876630c8eca6a3": "sprites/19_skirting_4_Sd",
+    "b01e510dc243ed74a9a6daf869bdbf23": "sprites/51_teacup",
+    "4d2824109d71ece40a1d89f085f12e5c": "sprites/51_teacup_shadow-1",
+    "71bf05e5d4618534a9384c5ca8511e70": "sprites/35_test_tube_rack",
+    "a6405be42643fd842831e87153293607": "sprites/29_map",
+    "af74c9d670bd784478d07bd5301bdbea": "sprites/29_map_shadow",
+    "534bb0e0e33f3ea4ebf3e379d88a0bc6": "sprites/41_cloth",
+    "501fbfa2edbb8bd48ac81dad20822dbc": "sprites/41_cloth_shadow",
+    "1c10125f37e46fc418abea91a4104ee2": "sprites/33_desklamp",
+    "1e33ca17d1cc7c244b1c77f35ffc64f1": "sprites/33_desklamp_shadow",
+    "8bd40581ac82dc44083a3953f0079fe9": "sprites/48_armchair_1",
+    "31491a3b0e69dd64cbaf095befa39659": "sprites/48_armchair_1_shadow",
+    "fc886f7c971e4084abc3a8249d1cbbaa": "sprites/26bookstack_2",
+    "24a16cc04f1960943a40318eea8638de": "sprites/26bookstack_2_shadow",
+    "2cb72819e96895b4983436c8657955c5": "sprites/57_pipe",
+    "da069476a89d7824396bd83f174ab886": "sprites/57_pipe_shadow",
+    "20a0f8a5de6710446bcca17b8ee259cf": "sprites/45_bookself",
+    "aabf5734021804d4a8e2bd60bb458506": "sprites/45_bookself_cut_mid",
+    "77edd6eaac17b8f449f9d391a985fc9b": "sprites/45_bookself_cut_top",
+    "da0bbbf7c822d0f43bb37eec4e0567b5": "sprites/45_bookself_shadow",
+    "50a8a0fc7cfc6444d94335c2b744ba20": "sprites/54_working_table",
+    "96c6571a120efa949b9761205209e3e4": "sprites/54_working_table_shadow",
+    "acaa9a0b637fde0409bdea7b2ed8ce1e": "sprites/44_bookstack_5",
+    "c5d2652eec5313348800fa2ecb6e8209": "sprites/44_bookstack_5_shadow",
+    "f52c8bd685fc96441831034e1eddbbc9": "sprites/20_window",
+    "18f923e689aa675428ed34abb4a9dab6": "sprites/20_window_shadow",
+    "a185f83af29064c4fa7df4a114d06624": "sprites/60_coart_rack",
+    "2d9492118968ecd46b12d2c1c02ddf1d": "sprites/60_coart_rack_shadow",
+    "fa4213d337740e0479330b277087245b": "sprites/46_book_of_45",
+    "5c5cba09663eb0546abd3b444ac72fec": "sprites/46_book_of_45_shadow",
+    "72c4983543a13d14c8c37fe717469f09": "sprites/24_bookcase",
+    "efaf5387da96fe24383a19eb30744798": "sprites/24_bookcase_cut_t1",
+    "dc4de366a83149648b4f43cf69684561": "sprites/24_bookcase_cut_mid",
+    "b6c5e760e98420d4d943f811437a8990": "sprites/24_bookcase_cut_t2",
+    "7775f0382314e1549976e6389599b593": "sprites/24_bookcase_cut_top",
+    "908467d7c899c73429f7e006a2c10ee9": "sprites/24_bookcase_shadow",
+    "e1a07ad8ab740324cac2e6a75407bed2": "sprites/30_monocular",
+    "a9108734bd2a3e64ea32156cd742275c": "sprites/30_monocular_shadow",
+    "1c17f2ece3813404a932c2f243cf7d04": "sprites/17_skirting_5",
+    "6c995a6d8193bf144a13b69bd3fd7a1f": "sprites/17_skirting_5_shadow",
+    "394dae33075713445ae8f85a69302414": "sprites/40_wood",
+    "886f99f8703bde249986a504674307ef": "sprites/40_wood_shadow",
+    "d451b313b08902842aae16f2cd0da56d": "sprites/61_homes'_hat",
+    "1236552d46f16844299a4724fa026501": "sprites/Layer_29_shadow",
+    "48737f18ed9851540958b29289b48656": "sprites/31_board",
+    "cc853c0f0a3ec9743860338983d70d4c": "sprites/31_board_shadow",
+    "1d29a860823ae194e8eeaa63e108f06f": "sprites/wall_lamp_1_copy_3",
+    "4c19d0a6eb2cd1f499dcff5960ab46f3": "sprites/58_magnifier",
+    "11026bee58d9f5949ac73c2b1e4869a4": "sprites/58_magnifier_shadow",
+    "f77537805c1661f40b157fdb94609a12": "sprites/47_stash",
+    "fbd24095bb9954545b33144a1af46b3c": "sprites/47_stash_shadow",
+    "b58a2972d6bbc674fa0c54c489a2cf6c": "sprites/63_long_pillow",
+    "1c4af7394c1701b4386e3bb2135732ec": "sprites/63_long_pillow_shadow",
+    "ca4bbc3247695264c826005cbf3e9395": "sprites/39_skirting_7",
+    "bfa7c60f093c95b41be0720534c138eb": "sprites/66_wall"
+  },
+  "nodes": [
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931",
+      "parentPath": null,
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [0.5,0.5,0.5]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/1+floor_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1",
+      "active": true,
+      "pos": [-590,-460,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "1+floor_1", "guid": "afde96d51c683374785f886f6f8bcace", "ppu": 100, "nativeSize": [1954,1666], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 20, "layerValue": 0, "bounds": [-783.5,-646.5,193.5,186.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1",
+      "active": true,
+      "pos": [227.0001,-2188,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/9_door_frame",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-1551.5,2277,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "9_door_frame", "guid": "5e28b7f3d095b6448849599b712dbac7", "ppu": 100, "nativeSize": [333,244], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 180, "layerValue": 0, "bounds": [-745.5001,-16.50003,-579.0001,105.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_9_door_frame",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/9_door_frame/9_door_frame_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/9_door_frame",
+      "active": true,
+      "pos": [-3.9999,-3.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "9_door_frame_shadow", "guid": "735eedc353a0f554ba7063fb33321411", "ppu": 100, "nativeSize": [333,244], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 170, "layerValue": 0, "bounds": [-747.5,-18.49998,-581,103.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/6_skirting_2_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-211.0001,1427,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "6_skirting_2", "guid": "94f87b99e24d6f349bbf2bfbe93f141d", "ppu": 100, "nativeSize": [642,498], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 120, "layerValue": 0, "bounds": [-152.5,-505,168.5,-256], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_6_skirting_2_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/6_skirting_2_1/6_skirting_2_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/6_skirting_2_1",
+      "active": true,
+      "pos": [-0.50011,-98.99998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "6_skirting_2_shadow", "guid": "6491a288eeee71f418b0c2359fe03fc7", "ppu": 100, "nativeSize": [632,313], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 110, "layerValue": 0, "bounds": [-150.25,-508.2499,165.75,-351.75], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/7_skirting_3",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-1335.5,1874.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "7_skirting_3", "guid": "67d819dc68c4c4f439027109c36cf36c", "ppu": 100, "nativeSize": [179,277], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 140, "layerValue": 0, "bounds": [-599.0001,-226,-509.5,-87.50002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_7_skirting_3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/7_skirting_3/7_skirting_3_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/7_skirting_3",
+      "active": true,
+      "pos": [-2.49996,-94.99989,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "7_skirting_3_shadow", "guid": "1a1656ddaf2ff814b9af255cd7eaed5d", "ppu": 100, "nativeSize": [176,94], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 130, "layerValue": 0, "bounds": [-599.5001,-227.7499,-511.5,-180.75], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/11_desk",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-1118.5,1779.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "11_desk", "guid": "3955f78b4bbe6f04abd861261fc0dde7", "ppu": 100, "nativeSize": [551,439], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 260, "layerValue": 0, "bounds": [-583.5001,-313.9999,-308,-94.49995], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_11_desk",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/11_desk/11_desk_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/11_desk",
+      "active": true,
+      "pos": [-10.49995,-97.00012,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "11_desk_shadow", "guid": "e8915201359f549438a1c8822b956a22", "ppu": 100, "nativeSize": [508,254], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 250, "layerValue": 0, "bounds": [-578,-316.25,-324,-189.25], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/2_carpet_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-1422,1626,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "2_carpet_1", "guid": "ee9237ae52468fb4fbd733838bc1848c", "ppu": 100, "nativeSize": [314,158], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 40, "layerValue": 0, "bounds": [-676,-320.4999,-519.0001,-241.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_2_carpet_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/2_carpet_1/2_carpet_1_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/2_carpet_1",
+      "active": true,
+      "pos": [0,-7.99999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "2_carpet_1_shadow", "guid": "526abdc2f61684046b1f5136481e0302", "ppu": 100, "nativeSize": [314,158], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 30, "layerValue": 0, "bounds": [-676,-324.4999,-519.0001,-245.4999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/15_door_sign",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-1846,2073.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "15_door_sign", "guid": "5c9e9ce07949b1e438d880e39ff3fbf4", "ppu": 100, "nativeSize": [178,215], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 340, "layerValue": 0, "bounds": [-854,-111,-765,-3.50002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_15_door_sign",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/15_door_sign/15_door_sign_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/15_door_sign",
+      "active": true,
+      "pos": [78.00007,40.50007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "15_door_sign_shadow", "guid": "31c531b8963bb10488aca9793514ed1b", "ppu": 100, "nativeSize": [24,119], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 330, "layerValue": 0, "bounds": [-776.5,-66.74999,-764.5,-7.24999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/wall lamp_1 copy",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-455.0001,1920,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wall_lamp_1", "guid": "61bbbd51555794044b035919c4e6ebec", "ppu": 100, "nativeSize": [102,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 220, "layerValue": 0, "bounds": [-139.5,-171,-88.50001,-97.00002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_wall lamp_1 copy",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/wall lamp_1 copy/Layer 410 copy 5",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/wall lamp_1 copy",
+      "active": false,
+      "pos": [-14.00003,43.00003,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "fx_light", "guid": "4cef72dff47104349b7d33c63beac3ec", "ppu": 100, "nativeSize": [724,724], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 380, "layerValue": 0, "bounds": [-302,-293.5,59.99997,68.49999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/wall lamp_1 copy/Layer 7 copy",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/wall lamp_1 copy",
+      "active": true,
+      "pos": [32.99999,-54.99992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Layer_7_copy_shadow", "guid": "a1bc166072a26fa49be52cbdee204b73", "ppu": 100, "nativeSize": [45,62], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 190, "layerValue": 0, "bounds": [-108.75,-177,-86.25002,-146], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/wall lamp_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-931.0001,2144,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wall_lamp_1", "guid": "61bbbd51555794044b035919c4e6ebec", "ppu": 100, "nativeSize": [102,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 210, "layerValue": 0, "bounds": [-377.5,-59.00003,-326.5,14.99997], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_wall lamp_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/wall lamp_1/fx_light",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/wall lamp_1",
+      "active": false,
+      "pos": [-13.99994,31.00014,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "fx_light", "guid": "4cef72dff47104349b7d33c63beac3ec", "ppu": 100, "nativeSize": [724,724], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 380, "layerValue": 0, "bounds": [-539.9999,-187.5,-178,174.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/wall lamp_1/Layer 7 copy 2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/wall lamp_1",
+      "active": true,
+      "pos": [34.00002,-55.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Layer_7_copy_shadow", "guid": "a1bc166072a26fa49be52cbdee204b73", "ppu": 100, "nativeSize": [45,62], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 200, "layerValue": 0, "bounds": [-346.25,-65.5,-323.75,-34.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/10_wall_lamp",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [8.99983,1711,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wall_lamp_1", "guid": "61bbbd51555794044b035919c4e6ebec", "ppu": 100, "nativeSize": [102,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 240, "layerValue": 0, "bounds": [92.49996,-275.5,143.5,-201.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_10_wall_lamp",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/10_wall_lamp/Layer 410 copy 4",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/10_wall_lamp",
+      "active": false,
+      "pos": [-11.99989,33.00018,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "fx_light", "guid": "4cef72dff47104349b7d33c63beac3ec", "ppu": 100, "nativeSize": [724,724], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 380, "layerValue": 0, "bounds": [-68.99998,-402.9999,293,-40.99994], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/10_wall_lamp/10_wall_lamp_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/10_wall_lamp",
+      "active": true,
+      "pos": [31.99997,-56.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Layer_7_copy_shadow", "guid": "a1bc166072a26fa49be52cbdee204b73", "ppu": 100, "nativeSize": [45,62], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 230, "layerValue": 0, "bounds": [122.7499,-282.5,145.2499,-251.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/12_tablelamp",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-1197,2020.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "12_tablelamp", "guid": "9a55ef9702f4a324aadedf7795471638", "ppu": 100, "nativeSize": [118,313], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 280, "layerValue": 0, "bounds": [-514.5001,-162,-455.5,-5.49996], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_12_tablelamp",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/12_tablelamp/Layer 410 copy 9",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/12_tablelamp",
+      "active": false,
+      "pos": [2.99997,29.50001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Layer_410_copy_9", "guid": "3eef5d6ba7242ee478a34b53984c1fd8", "ppu": 100, "nativeSize": [724,724], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 360, "layerValue": 0, "bounds": [-664.5,-250,-302.5,112], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/12_tablelamp/12_tablelamp_Sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/12_tablelamp",
+      "active": true,
+      "pos": [-1.00002,-118,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "12_tablelamp_Sd", "guid": "9544aa6128020974ea32d9e560ae081a", "ppu": 100, "nativeSize": [116,93], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 270, "layerValue": 0, "bounds": [-514.5001,-166,-456.5001,-119.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/13_telephone",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-1006,1876,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "13_telephone", "guid": "ee2eb2446bb384045b4ae8ed0b26e575", "ppu": 100, "nativeSize": [188,198], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 300, "layerValue": 0, "bounds": [-436.5,-205.4999,-342.5,-106.4999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_13_telephone",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/13_telephone/13_telephone_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/13_telephone",
+      "active": true,
+      "pos": [-10.99997,-54.50001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "13_telephone_shadow", "guid": "a3f45bd01606e054592c6599e5fb0b1c", "ppu": 100, "nativeSize": [179,106], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 290, "layerValue": 0, "bounds": [-439.75,-209.7499,-350.25,-156.75], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/4_skirting_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-1046,1825.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "4_skirting_1", "guid": "008e097bb946bcd469e297734b16d49f", "ppu": 100, "nativeSize": [450,405], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 80, "layerValue": 0, "bounds": [-522,-282.5,-297,-79.99999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_4_skirting_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/4_skirting_1/4_skirting_1_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/4_skirting_1",
+      "active": true,
+      "pos": [-6.50005,-102,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "4_skirting_1_shadow", "guid": "cbd484ebf3214a14185b02391b385d64", "ppu": 100, "nativeSize": [434,215], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 70, "layerValue": 0, "bounds": [-521.2501,-286,-304.2501,-178.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/3_long carpet",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-623.0001,1287,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "3_long_carpet", "guid": "11cfcb94e1816844aa048823b043d39b", "ppu": 100, "nativeSize": [1128,542], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 60, "layerValue": 0, "bounds": [-480,-585.9999,83.99997,-315], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_3_long carpet",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/3_long carpet/3_long carpet _sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/3_long carpet",
+      "active": true,
+      "pos": [-0.99993,-9.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "3_long_carpet__shadow", "guid": "dc7da127684af3743b683881b602431f", "ppu": 100, "nativeSize": [1128,542], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 50, "layerValue": 0, "bounds": [-480.5,-590.5,83.5,-319.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/14_portrait",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-217.5001,1754.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "14_portrait", "guid": "aa196f75bfd92e04dbe6e35d5ac0fde7", "ppu": 100, "nativeSize": [329,409], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 320, "layerValue": 0, "bounds": [-77.50001,-319,86.99998,-114.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_14_portrait",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/14_portrait/14_portrait_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/14_portrait",
+      "active": true,
+      "pos": [4.99992,-13.00011,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "14_portrait_shadow", "guid": "a854efe7454b90e4b807456d64c9ed80", "ppu": 100, "nativeSize": [329,409], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 310, "layerValue": 0, "bounds": [-75.00005,-325.5,89.49995,-121], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/8_main door",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-1551.5,1940,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "8_main_door", "guid": "49fb1c31e4464f34d9372c169c39e67b", "ppu": 100, "nativeSize": [323,690], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 160, "layerValue": 0, "bounds": [-743,-296.5,-581.5001,48.50003], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_8_main door",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/8_main door/8_main door_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/8_main door",
+      "active": true,
+      "pos": [-2.49996,-268.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "8_main_door_shadow", "guid": "9732155e1f83036459a7174f5e89960f", "ppu": 100, "nativeSize": [318,165], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 150, "layerValue": 0, "bounds": [-743,-299.4999,-584,-217], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/5_room_door",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items",
+      "active": true,
+      "pos": [-673.5002,1814,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "5_room_door", "guid": "47140a9cf891b0348a6bc2fce068e849", "ppu": 100, "nativeSize": [321,690], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 100, "layerValue": 0, "bounds": [-303.5,-359.5,-143,-14.49999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_5_room_door",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/5_room_door/5_room_door_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items/5_room_door",
+      "active": true,
+      "pos": [0,-267.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "5_room_door_shadow", "guid": "6881ebf0622ee8d4e8f1c7b68b2960f4", "ppu": 100, "nativeSize": [327,172], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 90, "layerValue": 0, "bounds": [-305,-364,-141.5,-277.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1",
+      "active": true,
+      "pos": [227.0001,-2188,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_wall lamp_1 copy",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-455.0001,1920,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wall_lamp_1", "guid": "61bbbd51555794044b035919c4e6ebec", "ppu": 100, "nativeSize": [102,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 220, "layerValue": 0, "bounds": [-139.5,-171,-88.50001,-97.00002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_6_skirting_2_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-211.0001,1427,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "6_skirting_2", "guid": "94f87b99e24d6f349bbf2bfbe93f141d", "ppu": 100, "nativeSize": [642,498], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 120, "layerValue": 0, "bounds": [-152.5,-505,168.5,-256], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_4_skirting_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-1046,1825.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "4_skirting_1", "guid": "008e097bb946bcd469e297734b16d49f", "ppu": 100, "nativeSize": [450,405], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 80, "layerValue": 0, "bounds": [-522,-282.5,-297,-79.99999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_7_skirting_3",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-1335.5,1874.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "7_skirting_3", "guid": "67d819dc68c4c4f439027109c36cf36c", "ppu": 100, "nativeSize": [179,277], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 140, "layerValue": 0, "bounds": [-599.0001,-226,-509.5,-87.50002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_13_telephone",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-1006,1876,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "13_telephone", "guid": "ee2eb2446bb384045b4ae8ed0b26e575", "ppu": 100, "nativeSize": [188,198], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 300, "layerValue": 0, "bounds": [-436.5,-205.4999,-342.5,-106.4999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_9_door_frame",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-1551.5,2277,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "9_door_frame", "guid": "5e28b7f3d095b6448849599b712dbac7", "ppu": 100, "nativeSize": [333,244], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 180, "layerValue": 0, "bounds": [-745.5001,-16.50003,-579.0001,105.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_11_desk",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-1118.5,1779.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "11_desk", "guid": "3955f78b4bbe6f04abd861261fc0dde7", "ppu": 100, "nativeSize": [551,439], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 260, "layerValue": 0, "bounds": [-583.5001,-313.9999,-308,-94.49995], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_3_long carpet",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-623.0001,1287,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "3_long_carpet", "guid": "11cfcb94e1816844aa048823b043d39b", "ppu": 100, "nativeSize": [1128,542], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 60, "layerValue": 0, "bounds": [-480,-585.9999,83.99997,-315], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_15_door_sign",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-1846,2073.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "15_door_sign", "guid": "5c9e9ce07949b1e438d880e39ff3fbf4", "ppu": 100, "nativeSize": [178,215], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 340, "layerValue": 0, "bounds": [-854,-111,-765,-3.50002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_12_tablelamp",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-1197,2020.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "12_tablelamp", "guid": "9a55ef9702f4a324aadedf7795471638", "ppu": 100, "nativeSize": [118,313], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 280, "layerValue": 0, "bounds": [-514.5001,-162,-455.5,-5.49996], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_2_carpet_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-1422,1626,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "2_carpet_1", "guid": "ee9237ae52468fb4fbd733838bc1848c", "ppu": 100, "nativeSize": [314,158], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 40, "layerValue": 0, "bounds": [-676,-320.4999,-519.0001,-241.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_wall lamp_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-931.0001,2144,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wall_lamp_1", "guid": "61bbbd51555794044b035919c4e6ebec", "ppu": 100, "nativeSize": [102,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 210, "layerValue": 0, "bounds": [-377.5,-59.00003,-326.5,14.99997], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_10_wall_lamp",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [8.99983,1711,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wall_lamp_1", "guid": "61bbbd51555794044b035919c4e6ebec", "ppu": 100, "nativeSize": [102,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 240, "layerValue": 0, "bounds": [92.49996,-275.5,143.5,-201.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_14_portrait",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-217.5001,1754.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "14_portrait", "guid": "aa196f75bfd92e04dbe6e35d5ac0fde7", "ppu": 100, "nativeSize": [329,409], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 320, "layerValue": 0, "bounds": [-77.50001,-319,86.99998,-114.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_8_main door",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-1551.5,1940,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "8_main_door", "guid": "49fb1c31e4464f34d9372c169c39e67b", "ppu": 100, "nativeSize": [323,690], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 160, "layerValue": 0, "bounds": [-743,-296.5,-581.5001,48.50003], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders/Holder_5_room_door",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders",
+      "active": true,
+      "pos": [-673.5002,1814,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "5_room_door", "guid": "47140a9cf891b0348a6bc2fce068e849", "ppu": 100, "nativeSize": [321,690], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 100, "layerValue": 0, "bounds": [-303.5,-359.5,-143,-14.49999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/16_floor_2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2",
+      "active": true,
+      "pos": [255.4999,360,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "16_floor_2", "guid": "26ac9a932f7deea4995ac26658e61357", "ppu": 56.80999, "nativeSize": [2048,1273], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 390, "layerValue": 0, "bounds": [-773.5001,-380.2008,1029,740.2008], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2",
+      "active": true,
+      "pos": [227.0001,-2188,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/56_city map",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1356.5,2470,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "56_city_map", "guid": "873b1a0503d91e84e82986a71657e41a", "ppu": 100, "nativeSize": [209,166], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1410, "layerValue": 0, "bounds": [-617,99.49998,-512.5,182.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_56_city map",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/56_city map/56_city map_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/56_city map",
+      "active": true,
+      "pos": [-4.00009,-4.99992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "56_city_map_shadow", "guid": "1a85167d4f8327e4fa55df6824652c1c", "ppu": 100, "nativeSize": [209,166], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1400, "layerValue": 0, "bounds": [-619.0001,97.00003,-514.5001,180], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/62_sofa",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-819.5001,2160,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "62_sofa", "guid": "d635dc06fb087cd4cbc5554b48db65b4", "ppu": 100, "nativeSize": [763,532], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1520, "layerValue": 0, "bounds": [-487,-146.9999,-105.5,119.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_62_sofa",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/62_sofa/62_sofa_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/62_sofa",
+      "active": true,
+      "pos": [-5.00002,-101,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "62_sofa_shadow", "guid": "f2a84cfbbf34acb46be9f9b48d516b36", "ppu": 100, "nativeSize": [716,358], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1510, "layerValue": 0, "bounds": [-477.75,-154,-119.75,25.00005], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/46_book_of_45_2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1498.5,2887,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "46_book_of_45_2", "guid": "a329da9f7a667d04a990af0004ad8a82", "ppu": 100, "nativeSize": [175,156], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1160, "layerValue": 0, "bounds": [-679.5,310.5,-592,388.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_46_book_of_45_2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/46_book_of_45_2/46_book_of_45_2_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/46_book_of_45_2",
+      "active": true,
+      "pos": [-5.00002,-38.50002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "46_book_of_45_2_shadow", "guid": "4b13f9ebfbb973745a393fe77a92f87e", "ppu": 100, "nativeSize": [177,96], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1150, "layerValue": 0, "bounds": [-682.5,306.25,-593.9999,354.25], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/64_violin",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-895.0001,2263.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "64_violin", "guid": "83db4068bad23e14d877388a9ada6df0", "ppu": 100, "nativeSize": [236,273], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1560, "layerValue": 0, "bounds": [-393,-30.49995,-275,106.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_64_violin",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/64_violin/64_violin_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/64_violin",
+      "active": true,
+      "pos": [-9.50003,-13.00011,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "64_violin_shadow", "guid": "ec058b60d92a78146bfccc68dca0acd7", "ppu": 100, "nativeSize": [217,257], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1550, "layerValue": 0, "bounds": [-393,-33,-284.5,95.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/25_bookstack_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-410.5002,3127.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "25_bookstack_1", "guid": "3b730f9abf0b6e84893142ef7e1c169c", "ppu": 100, "nativeSize": [117,121], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 580, "layerValue": 0, "bounds": [-121,439.5001,-62.50002,500], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_25_bookstack_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/25_bookstack_1/25_bookstack_1_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/25_bookstack_1",
+      "active": true,
+      "pos": [-3.00007,-31.50005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "25_bookstack_1_shadow", "guid": "839832b0803b2af4392032c9db101293", "ppu": 100, "nativeSize": [113,68], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 570, "layerValue": 0, "bounds": [-121.5001,437,-65.00006,471], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/37_microscope",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-565.5002,2975,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "37_microscope", "guid": "4a2a66ccd1c939e42a287f9fd3c57a78", "ppu": 100, "nativeSize": [159,234], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 910, "layerValue": 0, "bounds": [-209,335,-129.5,452.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_37_microscope",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/37_microscope/37_microscope_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/37_microscope",
+      "active": true,
+      "pos": [0,-79.50001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "37_microscope_shadow", "guid": "554198b705a32d4478cc8786fd0d4cee", "ppu": 100, "nativeSize": [159,89], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 900, "layerValue": 0, "bounds": [-209,331.5,-129.5,376.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/32_table",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-617.5001,2847.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "32_table", "guid": "1d9fba418e8992041b57f2144252da1f", "ppu": 100, "nativeSize": [545,401], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 810, "layerValue": 0, "bounds": [-331.5,229.5,-59.00002,430], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_32_table",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/32_table/32_table_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/32_table",
+      "active": true,
+      "pos": [2.49996,-75.99983,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "32_table_shadow", "guid": "499b22969e40cb34e861f447e59b788e", "ppu": 100, "nativeSize": [532,263], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 800, "layerValue": 0, "bounds": [-327.0001,226,-61.00003,357.5001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/55_cigar box",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1559.5,2575.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "55_cigar_box", "guid": "1ecda5d02d51d5d41af8f7da89507bcc", "ppu": 100, "nativeSize": [173,117], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1390, "layerValue": 0, "bounds": [-709.5,164.5,-623.0001,223], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_55_cigar box",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/55_cigar box/55_cigar box_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/55_cigar box",
+      "active": true,
+      "pos": [-1.99995,-19.49997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "55_cigar_box_shadow", "guid": "019872875958c5841b46975363ce1446", "ppu": 100, "nativeSize": [178,90], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1380, "layerValue": 0, "bounds": [-711.75,161.5,-622.7499,206.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/53_chair_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1142.5,2535.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "53_chair_1", "guid": "7cd0d403e7790d54d86db96fd12527ee", "ppu": 100, "nativeSize": [291,455], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1350, "layerValue": 0, "bounds": [-530.5,60.00002,-385,287.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_53_chair_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/53_chair_1/53_chair_1_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/53_chair_1",
+      "active": true,
+      "pos": [-22.99995,-171.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "53_chair_1_shadow", "guid": "92d081ff1656baa43874ab144957e36d", "ppu": 100, "nativeSize": [242,133], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1340, "layerValue": 0, "bounds": [-529.75,54.99997,-408.75,121.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_curtain_hanger",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1111.5,3189,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "24_curtain_hanger", "guid": "3f019d7102e3606458030ec2cffc55f9", "ppu": 100, "nativeSize": [527,318], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 530, "layerValue": 0, "bounds": [-574,421,-310.4999,580], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_24_curtain_hanger",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/42_mirrior",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [97.99995,3112,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "42_mirrior", "guid": "14ca9eb52fe72c6409760f5f1d46a5bc", "ppu": 100, "nativeSize": [218,320], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1030, "layerValue": 0, "bounds": [108,382,217,542], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_42_mirrior",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/42_mirrior/42_mirrior_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/42_mirrior",
+      "active": true,
+      "pos": [4.99992,-3.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "42_mirrior_shadow", "guid": "bbc5b138796fbaf4ab31dfc47a258e7c", "ppu": 100, "nativeSize": [218,320], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1020, "layerValue": 0, "bounds": [110.5,380,219.5,540.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/21_curtain_left",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1255,2858.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "21_curtain_left", "guid": "f67f45645099d8c49bfd2adc6859a608", "ppu": 100, "nativeSize": [200,615], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 490, "layerValue": 0, "bounds": [-564.0001,181.5,-464,489], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_21_curtain_left",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/38_fire_place",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [108.9998,2975.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "38_fire_place", "guid": "240c9dadd7299b3488661aeb08c5f49d", "ppu": 100, "nativeSize": [542,907], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 930, "layerValue": 0, "bounds": [32.49996,167,303.5,620.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_38_fire_place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/38_fire_place/38_fire_place_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/38_fire_place",
+      "active": true,
+      "pos": [12.00008,-335,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "38_fire_place_shadow", "guid": "8b50478ad68762241b1c194f6d9a1003", "ppu": 100, "nativeSize": [520,261], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 920, "layerValue": 0, "bounds": [44.00001,161,304,291.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/36_mini_drawer_cabinet",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-779.0001,2941.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "36_mini_drawer_cabinet", "guid": "7ff4f39fec1dd9d40bbfaa26e5f6c99e", "ppu": 100, "nativeSize": [202,197], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 890, "layerValue": 0, "bounds": [-326.5,327.5,-225.5,426], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_36_mini_drawer_cabinet",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/36_mini_drawer_cabinet/36_mini_drawer_cabinet_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/36_mini_drawer_cabinet",
+      "active": true,
+      "pos": [0.50001,-51.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "36_mini_drawer_cabinet_shadow", "guid": "4c702487e18702c4bb5c99f59d9aba9a", "ppu": 100, "nativeSize": [207,105], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 880, "layerValue": 0, "bounds": [-327.5,325,-224,377.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/34_test_tube_rack",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-647.0001,2993.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "34_test_tube_rack", "guid": "403ac24ba16378c478dc589138a248ae", "ppu": 100, "nativeSize": [188,181], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 850, "layerValue": 0, "bounds": [-257,357.5,-163,448], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_34_test_tube_rack",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/34_test_tube_rack/34_test_tube_rack_cut",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/34_test_tube_rack",
+      "active": false,
+      "pos": [-1.00002,-25,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "34_test_tube_rack_cut", "guid": "842a3773e058f144e93aba7e22f1316f", "ppu": 100, "nativeSize": [188,133], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 870, "layerValue": 0, "bounds": [-257.5,357,-163.5,423.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/34_test_tube_rack/34_test_tube_rack_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/34_test_tube_rack",
+      "active": true,
+      "pos": [-1.99995,-48.99998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "34_test_tube_rack_shadow", "guid": "f668f7f97a0e7294f8dfb893ee8b59b7", "ppu": 100, "nativeSize": [190,99], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 840, "layerValue": 0, "bounds": [-258.5,353.5,-163.5,403], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/65_gramophone",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [430.9999,2638.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "65_gramophone", "guid": "c3a23d3d40242bd4fb2c851741a8dc72", "ppu": 100, "nativeSize": [326,383], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1580, "layerValue": 0, "bounds": [247.5,129.5001,410.5,321.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_65_gramophone",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/65_gramophone/65_gramophone_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/65_gramophone",
+      "active": true,
+      "pos": [-40.00015,-136.5002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "65_gramophone_shadow", "guid": "e903cb58b2cc9fb44a317ea504b11322", "ppu": 100, "nativeSize": [258,132], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1570, "layerValue": 0, "bounds": [244.4999,124,373.4999,190], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/27_globe",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-424.5001,3289.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "27_globe", "guid": "99d8e6f5522bdeb4097824f6dddddeda", "ppu": 100, "nativeSize": [115,191], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 630, "layerValue": 0, "bounds": [-127.5,503.0001,-69.99999,598.5001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_27_globe",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/27_globe/27_globe_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/27_globe",
+      "active": true,
+      "pos": [-2.49996,-69.00024,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "27_globe_shadow", "guid": "2565f5c4dea263d46b8262d89c306a3e", "ppu": 100, "nativeSize": [82,57], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 620, "layerValue": 0, "bounds": [-120.5,501.9999,-79.49998,530.4999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/49_rounded table",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-191.0002,2530,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "49_rounded_table", "guid": "a5060335181adb943be362b450086f14", "ppu": 100, "nativeSize": [308,296], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1280, "layerValue": 0, "bounds": [-59.00004,97,94.99995,245], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_49_rounded table",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/49_rounded table/49_rounded table_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/49_rounded table",
+      "active": true,
+      "pos": [1.00002,-86.49998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "49_rounded_table_shadow", "guid": "1c35a12ae9c85554ab6f920d412b6749", "ppu": 100, "nativeSize": [228,137], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1270, "layerValue": 0, "bounds": [-38.50003,93.50002,75.49997,162], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/23_window_top",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1119,3249,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "23_window_top", "guid": "c326f5eb3ec4a744d90c0b1eeac4143e", "ppu": 100, "nativeSize": [468,264], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 520, "layerValue": 0, "bounds": [-563,464.4999,-329,596.4999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_23_window_top",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/23_window_top/23_window_top_cut",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/23_window_top",
+      "active": false,
+      "pos": [210.5,81.50024,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "23_window_top_cut", "guid": "5546dee5c872d554d899939c83d281a6", "ppu": 100, "nativeSize": [47,67], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 540, "layerValue": 0, "bounds": [-352.5,554.5001,-328.9999,588.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/23_window_top/23_window_top_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/23_window_top",
+      "active": true,
+      "pos": [-2.49996,-10.99968,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "23_window_top_shadow", "guid": "194e53f18d3312a4ea0856284ee7724f", "ppu": 100, "nativeSize": [466,276], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 510, "layerValue": 0, "bounds": [-563.75,456.0001,-330.75,594.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/47_carpet_2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-150.5001,2478.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "47_carpet_2", "guid": "270fade028c0492448a99cf0f47a8c5c", "ppu": 100, "nativeSize": [1095,521], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1230, "layerValue": 0, "bounds": [-235.5,15.00003,312,275.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_47_carpet_2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/47_carpet_2/47_carpet_2_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/47_carpet_2",
+      "active": true,
+      "pos": [-2.00005,-7.99999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "47_carpet_2_shadow", "guid": "93ad84d213b46694c9a2281443eb564e", "ppu": 100, "nativeSize": [1095,521], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1220, "layerValue": 0, "bounds": [-236.5,11.00004,311,271.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/46_filebox",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1591.5,2983,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "46_filebox", "guid": "1752615380cced24d94af06be86869be", "ppu": 100, "nativeSize": [253,184], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1210, "layerValue": 0, "bounds": [-745.5001,351.5,-619,443.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_46_filebox",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/46_filebox/46_filebox_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/46_filebox",
+      "active": true,
+      "pos": [-5.50003,-45.00008,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "46_filebox_shadow", "guid": "844bd14908c41d246a56f01a82dcadd3", "ppu": 100, "nativeSize": [225,114], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1200, "layerValue": 0, "bounds": [-741.2501,346.5,-628.7501,403.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/28_4_books",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-282.5001,3200.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "28_4_books", "guid": "2fcbc6b4d265006429c74025b3834ba3", "ppu": 100, "nativeSize": [159,167], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 660, "layerValue": 0, "bounds": [-67.49999,464.5001,12.00001,548.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_28_4_books",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/28_4_books/28_4_books_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/28_4_books",
+      "active": true,
+      "pos": [-1.00002,-47.00012,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "28_4_books_shadow", "guid": "4b2827a7f957474409a46b4e7835404d", "ppu": 100, "nativeSize": [161,83], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 650, "layerValue": 0, "bounds": [-68.50001,462,12,503.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/50_tea_pot",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-152.5002,2577.6,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "50_tea_pot", "guid": "1f8c5b5b9cebff74c9e60860bfffc162", "ppu": 100, "nativeSize": [143,128], "pivot": [0.5,0], "color": [1,1,1,1], "sortingOrder": 1300, "layerValue": 0, "bounds": [1.49997,194.8,72.99997,258.8], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_50_tea_pot",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/50_tea_pot/50_tea_pot_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/50_tea_pot",
+      "active": true,
+      "pos": [-6.99997,29.40006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "50_tea_pot_shadow", "guid": "83077fb67e40944478d997872632cfa3", "ppu": 100, "nativeSize": [116,74], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1290, "layerValue": 0, "bounds": [4.74999,191,62.74998,228], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/22_curtain_right",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-964.5001,2988.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "22_curtain_right", "guid": "96dcf5cf466b1b44c9748610817489d6", "ppu": 100, "nativeSize": [201,593], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 500, "layerValue": 0, "bounds": [-419,252,-318.5,548.5001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_22_curtain_right",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/59_coat",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-361.0001,2300,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "59_coat", "guid": "7a3ddf3a8cb12234ab786ceb45fb7007", "ppu": 100, "nativeSize": [174,396], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1470, "layerValue": 0, "bounds": [-110.5,-42.99996,-23.49998,155], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_59_coat",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/59_coat/59_coat_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/59_coat",
+      "active": true,
+      "pos": [-1.00002,-222.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "59_coat_shadow", "guid": "67f2077e4fb5f3446b56ce2092b1d193", "ppu": 100, "nativeSize": [154,82], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1460, "layerValue": 0, "bounds": [-106,-75.50002,-29,-34.50002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 25,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/52_armchair_2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [30.49984,2461.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "52_armchair_2", "guid": "4a8c8ff3b7e0c4d4e84d873e81acad51", "ppu": 100, "nativeSize": [403,331], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1330, "layerValue": 0, "bounds": [27.99996,54.00003,229.5,219.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_52_armchair_2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/52_armchair_2/52_armchair_2_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/52_armchair_2",
+      "active": true,
+      "pos": [-31.99997,-102.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "52_armchair_2_shadow", "guid": "d938662e740c3954c9e6eda7fbccd91f", "ppu": 100, "nativeSize": [297,149], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1250, "layerValue": 0, "bounds": [38.49998,48.25005,187,122.75], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 26,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/rounded frame_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [245.4998,3106,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "43_rounde__frame", "guid": "cd115974ef0941b41a9eeaa8d080c368", "ppu": 100, "nativeSize": [85,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1050, "layerValue": 0, "bounds": [214.9999,431,257.5,487], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_rounded frame_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/rounded frame_1/rounded frame_1 copy",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/rounded frame_1",
+      "active": true,
+      "pos": [0,-9.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "43_rounded_frame_shadow", "guid": "5c2f402d1ffb10742baae00f643fcbe8", "ppu": 100, "nativeSize": [85,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1040, "layerValue": 0, "bounds": [214.9999,426.5,257.5,482.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 27,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/28_4_books_top",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-279.5002,3319.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "28_4_books_top", "guid": "3f38ce75a86a2f54293bf7386e45b000", "ppu": 100, "nativeSize": [159,167], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 690, "layerValue": 0, "bounds": [-66.00005,524,13.49995,607.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_28_4_books_top",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/28_4_books_top/28_4_books_top_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/28_4_books_top",
+      "active": true,
+      "pos": [-3.9999,-47.00012,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "28_4_books_shadow", "guid": "4b2827a7f957474409a46b4e7835404d", "ppu": 100, "nativeSize": [161,83], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 680, "layerValue": 0, "bounds": [-68.50001,521.4999,12,562.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 28,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/19_skirting_4",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1518,2538.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "19_skirting_4", "guid": "d7e841985a3d74c49948bfbaf3ec25ba", "ppu": 100, "nativeSize": [400,379], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 460, "layerValue": 0, "bounds": [-745.5,80.50005,-545.5,270.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_19_skirting_4",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/19_skirting_4/19_skirting_4_Sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/19_skirting_4",
+      "active": true,
+      "pos": [-0.50011,-97.00012,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "19_skirting_4_Sd", "guid": "8b102823db94d074bb876630c8eca6a3", "ppu": 100, "nativeSize": [395,194], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 440, "layerValue": 0, "bounds": [-744.5001,78.24999,-547,175.25], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 29,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/51_teacup_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-238.5002,2552.8,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "51_teacup", "guid": "b01e510dc243ed74a9a6daf869bdbf23", "ppu": 100, "nativeSize": [123,90], "pivot": [0.5,0], "color": [1,1,1,1], "sortingOrder": 1320, "layerValue": 0, "bounds": [-36.50006,182.4,24.99994,227.4], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_51_teacup_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/51_teacup_1/51_teacup_sd_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/51_teacup_1",
+      "active": true,
+      "pos": [14.00013,15.69996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "51_teacup_shadow-1", "guid": "4d2824109d71ece40a1d89f085f12e5c", "ppu": 100, "nativeSize": [77,47], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1310, "layerValue": 0, "bounds": [-17.99999,178.5,20.5,202], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 30,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/35_test_tube_rack",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-649.5001,3020.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "35_test_tube_rack", "guid": "71bf05e5d4618534a9384c5ca8511e70", "ppu": 100, "nativeSize": [117,165], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 860, "layerValue": 0, "bounds": [-240.5,375.0001,-182,457.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_35_test_tube_rack",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 31,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/18_skirting_6",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-217.5001,2961,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "4_skirting_1", "guid": "008e097bb946bcd469e297734b16d49f", "ppu": 100, "nativeSize": [450,405], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 430, "layerValue": 0, "bounds": [-107.75,285.25,117.25,487.75], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_18_skirting_6",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/18_skirting_6/18_skirting_6_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/18_skirting_6",
+      "active": true,
+      "pos": [-0.49992,-95.99991,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "4_skirting_1_shadow", "guid": "cbd484ebf3214a14185b02391b385d64", "ppu": 100, "nativeSize": [434,215], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 420, "layerValue": 0, "bounds": [-104,284.75,113,392.25], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 32,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/29_map",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-244.0001,3414,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "29_map", "guid": "a6405be42643fd842831e87153293607", "ppu": 100, "nativeSize": [170,164], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 720, "layerValue": 0, "bounds": [-50.99998,572,34.00002,654], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_29_map",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/29_map/29_map_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/29_map",
+      "active": true,
+      "pos": [-3.00007,-4.99992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "29_map_shadow", "guid": "af74c9d670bd784478d07bd5301bdbea", "ppu": 100, "nativeSize": [170,164], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 710, "layerValue": 0, "bounds": [-52.50002,569.5001,32.49999,651.5001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 33,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/41_cloth",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [61.99989,2951,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "41_cloth", "guid": "534bb0e0e33f3ea4ebf3e379d88a0bc6", "ppu": 100, "nativeSize": [308,210], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1010, "layerValue": 0, "bounds": [67.49999,329,221.5,434.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_41_cloth",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/41_cloth/41_cloth_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/41_cloth",
+      "active": true,
+      "pos": [9.00002,7.99999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "41_cloth_shadow", "guid": "501fbfa2edbb8bd48ac81dad20822dbc", "ppu": 100, "nativeSize": [292,188], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1000, "layerValue": 0, "bounds": [76,338.5001,222,432.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 34,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/33_desklamp",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-542.5001,3125.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "33_desklamp", "guid": "1c10125f37e46fc418abea91a4104ee2", "ppu": 100, "nativeSize": [155,295], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 830, "layerValue": 0, "bounds": [-196.5,395,-119,542.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_33_desklamp",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/33_desklamp/33_desklamp_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/33_desklamp",
+      "active": true,
+      "pos": [0,-115.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "33_desklamp_shadow", "guid": "1e33ca17d1cc7c244b1c77f35ffc64f1", "ppu": 100, "nativeSize": [125,83], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 820, "layerValue": 0, "bounds": [-189,390.25,-126.5,431.75], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 35,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/48_armchair_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-389.0001,2689.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "48_armchair_1", "guid": "8bd40581ac82dc44083a3953f0079fe9", "ppu": 100, "nativeSize": [390,457], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1260, "layerValue": 0, "bounds": [-178.5,136.5,16.49998,365], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_48_armchair_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/48_armchair_1/48_armchair_1_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/48_armchair_1",
+      "active": true,
+      "pos": [16.50009,-154.4998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "48_armchair_1_shadow", "guid": "31491a3b0e69dd64cbaf095befa39659", "ppu": 100, "nativeSize": [297,149], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1240, "layerValue": 0, "bounds": [-147,136.2501,1.50003,210.7501], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 36,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/26bookstack_2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-302.0001,3058.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "26bookstack_2", "guid": "fc886f7c971e4084abc3a8249d1cbbaa", "ppu": 100, "nativeSize": [174,113], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 600, "layerValue": 0, "bounds": [-80.99998,407,6.00002,463.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_26bookstack_2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/26bookstack_2/26bookstack_2_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/26bookstack_2",
+      "active": true,
+      "pos": [-1.50013,-14.99996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "26bookstack_2_shadow", "guid": "24a16cc04f1960943a40318eea8638de", "ppu": 100, "nativeSize": [171,93], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 590, "layerValue": 0, "bounds": [-81.00005,404.5,4.49996,451], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 37,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/57_pipe",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1420.5,2493,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "57_pipe", "guid": "2cb72819e96895b4983436c8657955c5", "ppu": 100, "nativeSize": [173,104], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1430, "layerValue": 0, "bounds": [-639.9999,126.5001,-553.5,178.5001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_57_pipe",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/57_pipe/57_pipe_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/57_pipe",
+      "active": true,
+      "pos": [-0.50001,-10.50014,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "57_pipe_shadow", "guid": "da069476a89d7824396bd83f174ab886", "ppu": 100, "nativeSize": [177,105], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1420, "layerValue": 0, "bounds": [-641.2499,121,-552.7499,173.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 38,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/45_bookself",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1541.5,2834.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "45_bookself", "guid": "20a0f8a5de6710446bcca17b8ee259cf", "ppu": 100, "nativeSize": [341,411], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1110, "layerValue": 0, "bounds": [-742.5,220.5,-572,426], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_45_bookself",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/45_bookself/GameObject",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/45_bookself",
+      "active": false,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/45_bookself/GameObject/45_bookself_cut_mid",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/45_bookself/GameObject",
+      "active": true,
+      "pos": [44.99998,-13.99994,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "45_bookself_cut_mid", "guid": "aabf5734021804d4a8e2bd60bb458506", "ppu": 100, "nativeSize": [193,157], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1140, "layerValue": 0, "bounds": [-683,277.0001,-586.5,355.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/45_bookself/GameObject/45_bookself_cut_top",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/45_bookself/GameObject",
+      "active": true,
+      "pos": [-0.50001,1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "45_bookself_cut_top", "guid": "77edd6eaac17b8f449f9d391a985fc9b", "ppu": 100, "nativeSize": [340,411], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1190, "layerValue": 0, "bounds": [-742.5,221,-572.5,426.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/45_bookself/45_bookself_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/45_bookself",
+      "active": true,
+      "pos": [-27.00005,-7.50008,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "45_bookself_shadow", "guid": "da0bbbf7c822d0f43bb37eec4e0567b5", "ppu": 100, "nativeSize": [295,418], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1100, "layerValue": 0, "bounds": [-744.5001,215,-597,424], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 39,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/54_working_table",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1337,2398,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "54_working_table", "guid": "50a8a0fc7cfc6444d94335c2b744ba20", "ppu": 100, "nativeSize": [690,506], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1370, "layerValue": 0, "bounds": [-727.5,-21.49998,-382.5,231.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_54_working_table",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/54_working_table/54_working_table_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/54_working_table",
+      "active": true,
+      "pos": [4.99992,-104.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "54_working_table_shadow", "guid": "96c6571a120efa949b9761205209e3e4", "ppu": 100, "nativeSize": [627,310], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1360, "layerValue": 0, "bounds": [-709.2501,-24.99994,-395.7501,130.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 40,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/44_bookstack_5",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-74.00017,3097,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "44_bookstack_5", "guid": "acaa9a0b637fde0409bdea7b2ed8ce1e", "ppu": 100, "nativeSize": [128,150], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1090, "layerValue": 0, "bounds": [44.49996,417,108.5,492], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_44_bookstack_5",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/44_bookstack_5/44_bookstack_5_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/44_bookstack_5",
+      "active": true,
+      "pos": [-5.50003,-43.49995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "44_bookstack_5_shadow", "guid": "c5d2652eec5313348800fa2ecb6e8209", "ppu": 100, "nativeSize": [113,79], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1080, "layerValue": 0, "bounds": [45.49995,413,102,452.5001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 41,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/20_window",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1129,2922,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "20_window", "guid": "f52c8bd685fc96441831034e1eddbbc9", "ppu": 100, "nativeSize": [428,780], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 480, "layerValue": 0, "bounds": [-558.0001,172,-344,562], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_20_window",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/20_window/20_window_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/20_window",
+      "active": true,
+      "pos": [-0.50001,-292.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "20_window_shadow", "guid": "18f923e689aa675428ed34abb4a9dab6", "ppu": 100, "nativeSize": [427,212], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 470, "layerValue": 0, "bounds": [-558,167.75,-344.5,273.75], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 42,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/60_coart rack",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-441.5001,2228,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "60_coart_rack", "guid": "a185f83af29064c4fa7df4a114d06624", "ppu": 100, "nativeSize": [161,468], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1490, "layerValue": 0, "bounds": [-147.5,-97.00002,-66.99999,137], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_60_coart rack",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/60_coart rack/60_coart rack_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/60_coart rack",
+      "active": true,
+      "pos": [-0.50011,-202.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "60_coart_rack_shadow", "guid": "2d9492118968ecd46b12d2c1c02ddf1d", "ppu": 100, "nativeSize": [131,72], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1480, "layerValue": 0, "bounds": [-140.25,-99.49996,-74.75005,-63.49996], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 43,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/46_book_of_45",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1519.5,2778,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "46_book_of_45", "guid": "fa4213d337740e0479330b277087245b", "ppu": 100, "nativeSize": [223,186], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1130, "layerValue": 0, "bounds": [-702.0001,248.5,-590.5001,341.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_46_book_of_45",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/46_book_of_45/46_book_of_45_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/46_book_of_45",
+      "active": true,
+      "pos": [1.00002,-46.99993,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "46_book_of_45_shadow", "guid": "5c5cba09663eb0546abd3b444ac72fec", "ppu": 100, "nativeSize": [217,103], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1120, "layerValue": 0, "bounds": [-700.0001,245.75,-591.5001,297.25], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 44,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-319.5002,3136,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "24_bookcase", "guid": "72c4983543a13d14c8c37fe717469f09", "ppu": 100, "nativeSize": [405,756], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 560, "layerValue": 0, "bounds": [-147.5,285,54.99997,662.9999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_24_bookcase",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase/GameObject",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase",
+      "active": false,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase/GameObject/24_bookcase_cut_t1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase/GameObject",
+      "active": true,
+      "pos": [-48.49987,41.50009,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "24_bookcase_cut_t1", "guid": "efaf5387da96fe24383a19eb30744798", "ppu": 100, "nativeSize": [252,181], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 610, "layerValue": 0, "bounds": [-133.5,449.5,-7.49997,540], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase/GameObject/24_bookcase_cut_mid",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase/GameObject",
+      "active": true,
+      "pos": [-31.99997,134.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "24_bookcase_cut_mid", "guid": "dc4de366a83149648b4f43cf69684561", "ppu": 100, "nativeSize": [81,235], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 640, "layerValue": 0, "bounds": [-82.50002,482.4999,-42.00002,599.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase/GameObject/24_bookcase_cut_t2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase/GameObject",
+      "active": true,
+      "pos": [10.49995,127.0002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "24_bookcase_cut_t2", "guid": "b6c5e760e98420d4d943f811437a8990", "ppu": 100, "nativeSize": [140,116], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 670, "layerValue": 0, "bounds": [-76.00006,508.5001,-6.00006,566.5001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase/GameObject/24_bookcase_cut_top",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase/GameObject",
+      "active": true,
+      "pos": [-1.00002,1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "24_bookcase_cut_top", "guid": "7775f0382314e1549976e6389599b593", "ppu": 100, "nativeSize": [405,756], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 700, "layerValue": 0, "bounds": [-148,285.5,54.49996,663.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase/24_bookcase_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/24_bookcase",
+      "active": true,
+      "pos": [-2.00005,-280.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "24_bookcase_shadow", "guid": "908467d7c899c73429f7e006a2c10ee9", "ppu": 100, "nativeSize": [407,206], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 550, "layerValue": 0, "bounds": [-149.0001,282,54.49995,385], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 45,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/30_monocular",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-348.0002,3455.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "30_monocular", "guid": "e1a07ad8ab740324cac2e6a75407bed2", "ppu": 100, "nativeSize": [224,67], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 740, "layerValue": 0, "bounds": [-116.5,617.0001,-4.50003,650.5001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_30_monocular",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/30_monocular/30_monocular_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/30_monocular",
+      "active": true,
+      "pos": [1.00002,-6.00014,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "30_monocular_shadow", "guid": "a9108734bd2a3e64ea32156cd742275c", "ppu": 100, "nativeSize": [224,67], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 730, "layerValue": 0, "bounds": [-116,614,-4.00001,647.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 46,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/17_skirting_5",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-667.0001,2944,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "17_skirting_5", "guid": "1c17f2ece3813404a932c2f243cf7d04", "ppu": 100, "nativeSize": [526,440], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 410, "layerValue": 0, "bounds": [-351.5,268,-88.5,488], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_17_skirting_5",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/17_skirting_5/17_skirting_5_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/17_skirting_5",
+      "active": true,
+      "pos": [0,-98.49987,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "17_skirting_5_shadow", "guid": "6c995a6d8193bf144a13b69bd3fd7a1f", "ppu": 100, "nativeSize": [530,261], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 400, "layerValue": 0, "bounds": [-352.5,263.5001,-87.5,394], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 47,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/40_wood",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [81.49986,2732,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "40_wood", "guid": "394dae33075713445ae8f85a69302414", "ppu": 100, "nativeSize": [249,222], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 990, "layerValue": 0, "bounds": [91.99998,216.5,216.5,327.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_40_wood",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/40_wood/40_wood_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/40_wood",
+      "active": true,
+      "pos": [2.00005,-55.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "40_wood_shadow", "guid": "886f99f8703bde249986a504674307ef", "ppu": 100, "nativeSize": [235,129], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 980, "layerValue": 0, "bounds": [96.5,211.7501,214,276.2501], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 48,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/43_rounde_ frame",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-30.50022,3232,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "43_rounde__frame", "guid": "cd115974ef0941b41a9eeaa8d080c368", "ppu": 100, "nativeSize": [85,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1070, "layerValue": 0, "bounds": [76.99994,494,119.4999,550.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_43_rounde_ frame",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/43_rounde_ frame/43_rounded_frame_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/43_rounde_ frame",
+      "active": true,
+      "pos": [0,-9.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "43_rounded_frame_shadow", "guid": "5c2f402d1ffb10742baae00f643fcbe8", "ppu": 100, "nativeSize": [85,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1060, "layerValue": 0, "bounds": [76.99994,489.5,119.4999,545.5001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 49,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/61_homes' hat",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-526.5001,2285,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "61_homes'_hat", "guid": "d451b313b08902842aae16f2cd0da56d", "ppu": 100, "nativeSize": [137,152], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1500, "layerValue": 0, "bounds": [-184,10.50006,-115.5,86.50006], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_61_homes' hat",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 50,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/wall lamp_1 copy 4",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [476.9998,2979,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wall_lamp_1", "guid": "61bbbd51555794044b035919c4e6ebec", "ppu": 100, "nativeSize": [102,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 950, "layerValue": 0, "bounds": [326.5,358.5,377.5,432.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_wall lamp_1 copy 4",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/wall lamp_1 copy 4/Layer 410 copy 8",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/wall lamp_1 copy 4",
+      "active": false,
+      "pos": [-1.00002,22.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "fx_light", "guid": "4cef72dff47104349b7d33c63beac3ec", "ppu": 100, "nativeSize": [724,724], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 960, "layerValue": 0, "bounds": [170.5,226,532.5,587.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/wall lamp_1 copy 4/Layer 29",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/wall lamp_1 copy 4",
+      "active": true,
+      "pos": [31.99997,-55.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Layer_29_shadow", "guid": "1236552d46f16844299a4724fa026501", "ppu": 100, "nativeSize": [42,56], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 940, "layerValue": 0, "bounds": [357.5,353.5,378.5,381.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 51,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/31_board",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-678.0001,3247,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "31_board", "guid": "48737f18ed9851540958b29289b48656", "ppu": 100, "nativeSize": [294,370], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 760, "layerValue": 0, "bounds": [-299,436.9999,-152,621.9999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_31_board",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/31_board/31_board_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/31_board",
+      "active": true,
+      "pos": [-4.50001,-11.99989,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "31_board_shadow", "guid": "cc853c0f0a3ec9743860338983d70d4c", "ppu": 100, "nativeSize": [295,381], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 750, "layerValue": 0, "bounds": [-301.5,428.25,-154,618.7499], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 52,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/wall lamp_1 copy 3",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-824.0001,3188,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wall_lamp_1_copy_3", "guid": "1d29a860823ae194e8eeaa63e108f06f", "ppu": 100, "nativeSize": [102,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 780, "layerValue": 0, "bounds": [-324,463,-273,537], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_wall lamp_1 copy 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/wall lamp_1 copy 3/Layer 410 copy 7",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/wall lamp_1 copy 3",
+      "active": false,
+      "pos": [6.99997,26.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "fx_light", "guid": "4cef72dff47104349b7d33c63beac3ec", "ppu": 100, "nativeSize": [724,724], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 790, "layerValue": 0, "bounds": [-476,332,-114,694], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/wall lamp_1 copy 3/Layer 22",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/wall lamp_1 copy 3",
+      "active": true,
+      "pos": [-35.00004,-55.50003,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Layer_7_copy_shadow", "guid": "a1bc166072a26fa49be52cbdee204b73", "ppu": 100, "nativeSize": [45,62], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 770, "layerValue": 0, "bounds": [-327.25,456.75,-304.75,487.75], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 53,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/58_magnifier",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1214,2462.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "58_magnifier", "guid": "4c19d0a6eb2cd1f499dcff5960ab46f3", "ppu": 100, "nativeSize": [218,133], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1450, "layerValue": 0, "bounds": [-548.0001,104,-439,170.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_58_magnifier",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/58_magnifier/58_magnifier_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/58_magnifier",
+      "active": true,
+      "pos": [-2.49996,-16.50009,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "58_magnifier_shadow", "guid": "11026bee58d9f5949ac73c2b1e4869a4", "ppu": 100, "nativeSize": [209,122], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1440, "layerValue": 0, "bounds": [-547,98.49999,-442.5,159.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 54,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/47_stash",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-1612.5,2831,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "47_stash", "guid": "f77537805c1661f40b157fdb94609a12", "ppu": 100, "nativeSize": [123,108], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1180, "layerValue": 0, "bounds": [-723.4999,294.5,-662,348.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_47_stash",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/47_stash/47_stash_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/47_stash",
+      "active": true,
+      "pos": [0.49992,-29.50001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "47_stash_shadow", "guid": "fbd24095bb9954545b33144a1af46b3c", "ppu": 100, "nativeSize": [116,62], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1170, "layerValue": 0, "bounds": [-721.5,291.25,-663.5,322.25], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 55,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/63_long_pillow",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [-943.0001,2246.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "63_long_pillow", "guid": "b58a2972d6bbc674fa0c54c489a2cf6c", "ppu": 100, "nativeSize": [320,213], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1540, "layerValue": 0, "bounds": [-438,-23.99995,-278,82.50005], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_63_long_pillow",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/63_long_pillow/63_long_pillow_sd",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/63_long_pillow",
+      "active": true,
+      "pos": [20.49999,-33.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "63_long_pillow_shadow", "guid": "1c4af7394c1701b4386e3bb2135732ec", "ppu": 100, "nativeSize": [263,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1530, "layerValue": 0, "bounds": [-413.5,-24.5,-282,49.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 56,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/39_skirting_7",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items",
+      "active": true,
+      "pos": [483.4999,2642.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "39_skirting_7", "guid": "ca4bbc3247695264c826005cbf3e9395", "ppu": 100, "nativeSize": [247,309], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 450, "layerValue": 0, "bounds": [293.5,150,417,304.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_39_skirting_7",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2",
+      "active": true,
+      "pos": [227.0001,-2188,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_38_fire_place",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [108.9998,2975.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "38_fire_place", "guid": "240c9dadd7299b3488661aeb08c5f49d", "ppu": 100, "nativeSize": [542,907], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 930, "layerValue": 0, "bounds": [32.49996,167,303.5,620.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_24_curtain_hanger",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1111.5,3189,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "24_curtain_hanger", "guid": "3f019d7102e3606458030ec2cffc55f9", "ppu": 100, "nativeSize": [527,318], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 530, "layerValue": 0, "bounds": [-574,421,-310.4999,580], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_23_window_top",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1119,3249,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "23_window_top", "guid": "c326f5eb3ec4a744d90c0b1eeac4143e", "ppu": 100, "nativeSize": [468,264], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 520, "layerValue": 0, "bounds": [-563,464.4999,-329,596.4999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_45_bookself",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1541.5,2834.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "45_bookself", "guid": "20a0f8a5de6710446bcca17b8ee259cf", "ppu": 100, "nativeSize": [341,411], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1110, "layerValue": 0, "bounds": [-742.5,220.5,-572,426], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_27_globe",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-424.5001,3289.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "27_globe", "guid": "99d8e6f5522bdeb4097824f6dddddeda", "ppu": 100, "nativeSize": [115,191], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 630, "layerValue": 0, "bounds": [-127.5,503.0001,-69.99999,598.5001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_63_long_pillow",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-943.0001,2246.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "63_long_pillow", "guid": "b58a2972d6bbc674fa0c54c489a2cf6c", "ppu": 100, "nativeSize": [320,213], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1540, "layerValue": 0, "bounds": [-438,-23.99995,-278,82.50005], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_37_microscope",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-565.5002,2975,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "37_microscope", "guid": "4a2a66ccd1c939e42a287f9fd3c57a78", "ppu": 100, "nativeSize": [159,234], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 910, "layerValue": 0, "bounds": [-209,335,-129.5,452.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_54_working_table",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1337,2398,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "54_working_table", "guid": "50a8a0fc7cfc6444d94335c2b744ba20", "ppu": 100, "nativeSize": [690,506], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1370, "layerValue": 0, "bounds": [-727.5,-21.49998,-382.5,231.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_28_4_books",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-282.5001,3200.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "28_4_books", "guid": "2fcbc6b4d265006429c74025b3834ba3", "ppu": 100, "nativeSize": [159,167], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 660, "layerValue": 0, "bounds": [-67.49999,464.5001,12.00001,548.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_56_city map",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1356.5,2470,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "56_city_map", "guid": "873b1a0503d91e84e82986a71657e41a", "ppu": 100, "nativeSize": [209,166], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1410, "layerValue": 0, "bounds": [-617,99.49998,-512.5,182.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_34_test_tube_rack",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-647.0001,2993.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "34_test_tube_rack", "guid": "403ac24ba16378c478dc589138a248ae", "ppu": 100, "nativeSize": [188,181], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 850, "layerValue": 0, "bounds": [-257,357.5,-163,448], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_28_4_books_top",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-279.5002,3319.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "28_4_books_top", "guid": "3f38ce75a86a2f54293bf7386e45b000", "ppu": 100, "nativeSize": [159,167], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 690, "layerValue": 0, "bounds": [-66.00005,524,13.49995,607.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_42_mirrior",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [97.99995,3112,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "42_mirrior", "guid": "14ca9eb52fe72c6409760f5f1d46a5bc", "ppu": 100, "nativeSize": [218,320], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1030, "layerValue": 0, "bounds": [108,382,217,542], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_59_coat",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-361.0001,2300,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "59_coat", "guid": "7a3ddf3a8cb12234ab786ceb45fb7007", "ppu": 100, "nativeSize": [174,396], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1470, "layerValue": 0, "bounds": [-110.5,-42.99996,-23.49998,155], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_19_skirting_4",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1518,2538.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "19_skirting_4", "guid": "d7e841985a3d74c49948bfbaf3ec25ba", "ppu": 100, "nativeSize": [400,379], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 460, "layerValue": 0, "bounds": [-745.5,80.50005,-545.5,270.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_35_test_tube_rack",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-649.5001,3020.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "35_test_tube_rack", "guid": "71bf05e5d4618534a9384c5ca8511e70", "ppu": 100, "nativeSize": [117,165], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 860, "layerValue": 0, "bounds": [-240.5,375.0001,-182,457.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_rounded frame_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [245.4998,3106,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "43_rounde__frame", "guid": "cd115974ef0941b41a9eeaa8d080c368", "ppu": 100, "nativeSize": [85,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1050, "layerValue": 0, "bounds": [214.9999,431,257.5,487], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_22_curtain_right",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-964.5001,2988.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "22_curtain_right", "guid": "96dcf5cf466b1b44c9748610817489d6", "ppu": 100, "nativeSize": [201,593], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 500, "layerValue": 0, "bounds": [-419,252,-318.5,548.5001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_65_gramophone",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [430.9999,2638.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "65_gramophone", "guid": "c3a23d3d40242bd4fb2c851741a8dc72", "ppu": 100, "nativeSize": [326,383], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1580, "layerValue": 0, "bounds": [247.5,129.5001,410.5,321.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_62_sofa",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-819.5001,2160,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "62_sofa", "guid": "d635dc06fb087cd4cbc5554b48db65b4", "ppu": 100, "nativeSize": [763,532], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1520, "layerValue": 0, "bounds": [-487,-146.9999,-105.5,119.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_55_cigar box",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1559.5,2575.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "55_cigar_box", "guid": "1ecda5d02d51d5d41af8f7da89507bcc", "ppu": 100, "nativeSize": [173,117], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1390, "layerValue": 0, "bounds": [-709.5,164.5,-623.0001,223], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_61_homes' hat",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-526.5001,2285,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "61_homes'_hat", "guid": "d451b313b08902842aae16f2cd0da56d", "ppu": 100, "nativeSize": [137,152], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1500, "layerValue": 0, "bounds": [-184,10.50006,-115.5,86.50006], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_46_book_of_45_2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1498.5,2887,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "46_book_of_45_2", "guid": "a329da9f7a667d04a990af0004ad8a82", "ppu": 100, "nativeSize": [175,156], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1160, "layerValue": 0, "bounds": [-679.5,310.5,-592,388.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_26bookstack_2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-302.0001,3058.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "26bookstack_2", "guid": "fc886f7c971e4084abc3a8249d1cbbaa", "ppu": 100, "nativeSize": [174,113], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 600, "layerValue": 0, "bounds": [-80.99998,407,6.00002,463.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_64_violin",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-895.0001,2263.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "64_violin", "guid": "83db4068bad23e14d877388a9ada6df0", "ppu": 100, "nativeSize": [236,273], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1560, "layerValue": 0, "bounds": [-393,-30.49995,-275,106.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 25,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_25_bookstack_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-410.5002,3127.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "25_bookstack_1", "guid": "3b730f9abf0b6e84893142ef7e1c169c", "ppu": 100, "nativeSize": [117,121], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 580, "layerValue": 0, "bounds": [-121,439.5001,-62.50002,500], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 26,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_20_window",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1129,2922,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "20_window", "guid": "f52c8bd685fc96441831034e1eddbbc9", "ppu": 100, "nativeSize": [428,780], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 480, "layerValue": 0, "bounds": [-558.0001,172,-344,562], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 27,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_32_table",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-617.5001,2847.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "32_table", "guid": "1d9fba418e8992041b57f2144252da1f", "ppu": 100, "nativeSize": [545,401], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 810, "layerValue": 0, "bounds": [-331.5,229.5,-59.00002,430], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 28,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_53_chair_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1142.5,2535.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "53_chair_1", "guid": "7cd0d403e7790d54d86db96fd12527ee", "ppu": 100, "nativeSize": [291,455], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1350, "layerValue": 0, "bounds": [-530.5,60.00002,-385,287.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 29,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_21_curtain_left",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1255,2858.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "21_curtain_left", "guid": "f67f45645099d8c49bfd2adc6859a608", "ppu": 100, "nativeSize": [200,615], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 490, "layerValue": 0, "bounds": [-564.0001,181.5,-464,489], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 30,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_43_rounde_ frame",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-30.50022,3232,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "43_rounde__frame", "guid": "cd115974ef0941b41a9eeaa8d080c368", "ppu": 100, "nativeSize": [85,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1070, "layerValue": 0, "bounds": [76.99994,494,119.4999,550.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 31,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_36_mini_drawer_cabinet",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-779.0001,2941.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "36_mini_drawer_cabinet", "guid": "7ff4f39fec1dd9d40bbfaa26e5f6c99e", "ppu": 100, "nativeSize": [202,197], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 890, "layerValue": 0, "bounds": [-326.5,327.5,-225.5,426], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 32,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_58_magnifier",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1214,2462.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "58_magnifier", "guid": "4c19d0a6eb2cd1f499dcff5960ab46f3", "ppu": 100, "nativeSize": [218,133], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1450, "layerValue": 0, "bounds": [-548.0001,104,-439,170.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 33,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_24_bookcase",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-319.5002,3136,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "24_bookcase", "guid": "72c4983543a13d14c8c37fe717469f09", "ppu": 100, "nativeSize": [405,756], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 560, "layerValue": 0, "bounds": [-147.5,285,54.99997,662.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 34,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_wall lamp_1 copy 3",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-824.0001,3188,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wall_lamp_1_copy_3", "guid": "1d29a860823ae194e8eeaa63e108f06f", "ppu": 100, "nativeSize": [102,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 780, "layerValue": 0, "bounds": [-324,463,-273,537], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 35,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_18_skirting_6",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-217.5001,2961,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "4_skirting_1", "guid": "008e097bb946bcd469e297734b16d49f", "ppu": 100, "nativeSize": [450,405], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 430, "layerValue": 0, "bounds": [-107.75,285.25,117.25,487.75], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 36,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_47_carpet_2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-150.5001,2478.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "47_carpet_2", "guid": "270fade028c0492448a99cf0f47a8c5c", "ppu": 100, "nativeSize": [1095,521], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1230, "layerValue": 0, "bounds": [-235.5,15.00003,312,275.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 37,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_52_armchair_2",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [30.49984,2461.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "52_armchair_2", "guid": "4a8c8ff3b7e0c4d4e84d873e81acad51", "ppu": 100, "nativeSize": [403,331], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1330, "layerValue": 0, "bounds": [27.99996,54.00003,229.5,219.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 38,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_49_rounded table",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-191.0002,2530,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "49_rounded_table", "guid": "a5060335181adb943be362b450086f14", "ppu": 100, "nativeSize": [308,296], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1280, "layerValue": 0, "bounds": [-59.00004,97,94.99995,245], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 39,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_31_board",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-678.0001,3247,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "31_board", "guid": "48737f18ed9851540958b29289b48656", "ppu": 100, "nativeSize": [294,370], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 760, "layerValue": 0, "bounds": [-299,436.9999,-152,621.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 40,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_29_map",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-244.0001,3414,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "29_map", "guid": "a6405be42643fd842831e87153293607", "ppu": 100, "nativeSize": [170,164], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 720, "layerValue": 0, "bounds": [-50.99998,572,34.00002,654], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 41,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_47_stash",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1612.5,2831,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "47_stash", "guid": "f77537805c1661f40b157fdb94609a12", "ppu": 100, "nativeSize": [123,108], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1180, "layerValue": 0, "bounds": [-723.4999,294.5,-662,348.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 42,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_46_filebox",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1591.5,2983,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "46_filebox", "guid": "1752615380cced24d94af06be86869be", "ppu": 100, "nativeSize": [253,184], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1210, "layerValue": 0, "bounds": [-745.5001,351.5,-619,443.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 43,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_50_tea_pot",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-152.5002,2577.6,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "50_tea_pot", "guid": "1f8c5b5b9cebff74c9e60860bfffc162", "ppu": 100, "nativeSize": [143,128], "pivot": [0.5,0], "color": [1,1,1,1], "sortingOrder": 1300, "layerValue": 0, "bounds": [1.49997,194.8,72.99997,258.8], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 44,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_48_armchair_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-389.0001,2689.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "48_armchair_1", "guid": "8bd40581ac82dc44083a3953f0079fe9", "ppu": 100, "nativeSize": [390,457], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1260, "layerValue": 0, "bounds": [-178.5,136.5,16.49998,365], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 45,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_39_skirting_7",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [483.4999,2642.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "39_skirting_7", "guid": "ca4bbc3247695264c826005cbf3e9395", "ppu": 100, "nativeSize": [247,309], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 450, "layerValue": 0, "bounds": [293.5,150,417,304.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 46,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_46_book_of_45",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1519.5,2778,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "46_book_of_45", "guid": "fa4213d337740e0479330b277087245b", "ppu": 100, "nativeSize": [223,186], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1130, "layerValue": 0, "bounds": [-702.0001,248.5,-590.5001,341.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 47,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_57_pipe",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-1420.5,2493,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "57_pipe", "guid": "2cb72819e96895b4983436c8657955c5", "ppu": 100, "nativeSize": [173,104], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1430, "layerValue": 0, "bounds": [-639.9999,126.5001,-553.5,178.5001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 48,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_51_teacup_1",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-238.5002,2552.8,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "51_teacup", "guid": "b01e510dc243ed74a9a6daf869bdbf23", "ppu": 100, "nativeSize": [123,90], "pivot": [0.5,0], "color": [1,1,1,1], "sortingOrder": 1320, "layerValue": 0, "bounds": [-36.50006,182.4,24.99994,227.4], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 49,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_30_monocular",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-348.0002,3455.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "30_monocular", "guid": "e1a07ad8ab740324cac2e6a75407bed2", "ppu": 100, "nativeSize": [224,67], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 740, "layerValue": 0, "bounds": [-116.5,617.0001,-4.50003,650.5001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 50,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_41_cloth",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [61.99989,2951,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "41_cloth", "guid": "534bb0e0e33f3ea4ebf3e379d88a0bc6", "ppu": 100, "nativeSize": [308,210], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1010, "layerValue": 0, "bounds": [67.49999,329,221.5,434.0001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 51,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_33_desklamp",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-542.5001,3125.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "33_desklamp", "guid": "1c10125f37e46fc418abea91a4104ee2", "ppu": 100, "nativeSize": [155,295], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 830, "layerValue": 0, "bounds": [-196.5,395,-119,542.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 52,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_44_bookstack_5",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-74.00017,3097,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "44_bookstack_5", "guid": "acaa9a0b637fde0409bdea7b2ed8ce1e", "ppu": 100, "nativeSize": [128,150], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1090, "layerValue": 0, "bounds": [44.49996,417,108.5,492], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 53,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_60_coart rack",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-441.5001,2228,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "60_coart_rack", "guid": "a185f83af29064c4fa7df4a114d06624", "ppu": 100, "nativeSize": [161,468], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1490, "layerValue": 0, "bounds": [-147.5,-97.00002,-66.99999,137], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 54,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_17_skirting_5",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [-667.0001,2944,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "17_skirting_5", "guid": "1c17f2ece3813404a932c2f243cf7d04", "ppu": 100, "nativeSize": [526,440], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 410, "layerValue": 0, "bounds": [-351.5,268,-88.5,488], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 55,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_40_wood",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [81.49986,2732,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "40_wood", "guid": "394dae33075713445ae8f85a69302414", "ppu": 100, "nativeSize": [249,222], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 990, "layerValue": 0, "bounds": [91.99998,216.5,216.5,327.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 56,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders/Holder_wall lamp_1 copy 4",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders",
+      "active": true,
+      "pos": [476.9998,2979,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wall_lamp_1", "guid": "61bbbd51555794044b035919c4e6ebec", "ppu": 100, "nativeSize": [102,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 950, "layerValue": 0, "bounds": [326.5,358.5,377.5,432.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P3",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Ply52_Level931/Baseroom_Ply52_Level931/P3/66_wall",
+      "parentPath": "Ply52_Level931/Baseroom_Ply52_Level931/P3",
+      "active": true,
+      "pos": [190,315.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "66_wall", "guid": "bfa7c60f093c95b41be0720534c138eb", "ppu": 100, "nativeSize": [1356,1291], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 1590, "layerValue": 0, "bounds": [-244,-165,434,480.5], "flipX": false, "flipY": false }
+    }
+  ],
+  "conflicts": [
+    { "a": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Items", "rangeA": [30,340], "b": "Ply52_Level931/Baseroom_Ply52_Level931/P1/Holders", "rangeB": [40,340], "overlappingPairs": 91 },
+    { "a": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items", "rangeA": [400,1580], "b": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Holders", "rangeB": [410,1580], "overlappingPairs": 672 },
+    { "a": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/49_rounded table", "rangeA": [1270,1280], "b": "Ply52_Level931/Baseroom_Ply52_Level931/P2/Items/52_armchair_2", "rangeB": [1250,1330], "overlappingPairs": 4 }
+  ]
+}

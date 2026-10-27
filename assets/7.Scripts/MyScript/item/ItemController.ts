@@ -143,6 +143,8 @@ export class ItemController extends Component implements IPointerHandler {
         this.itemMovement = this.getComponent(ItemMovement) ?? this.addComponent(ItemMovement);
         this.setupCollider();
         this.initDropShadows();
+        // Chưa ghép: vẽ theo thứ tự cây (hộp / khay / lớp kéo) đè lên map, ghép xong mới về order Unity
+        if (!this.isPlaced) ItemGraphic.setMapSorting(this.node, false);
     }
 
     /** Tự dò bóng đổ (nếu chưa gán tay) rồi ẩn đi — chỉ hiện sau khi ghép (placeDropShadows). */
@@ -440,6 +442,10 @@ export class ItemController extends Component implements IPointerHandler {
         WorldScrollManager.instance?.itemPlaced(this);
 
         this.itemMovement.moveToTarget(target, this.moveDuration, () => {
+            // Đích rỗng (HPlaceHolder bên Unity: renderer tắt, không sprite) -> item ở lại đích làm hình,
+            // thay vì ẩn item để hình của đích hiện thay. Phải xét TRƯỚC khi bóng / FX được gắn vào đích.
+            const keepItemVisible = !ItemGraphic.hasVisual(target);
+
             // 1. Kích hoạt Target và tất cả các node con của Target
             target.active = true;
             for (const child of target.children) {
@@ -487,12 +493,24 @@ export class ItemController extends Component implements IPointerHandler {
             this.node.setWorldRotation(target.worldRotation);
             this.itemGraphic.restoreTargetSprites();
             this.placeDropShadows(target);
+            // Unity: MatchItemSortingOrderToTarget — về lại order Unity (item + bóng vừa chuyển sang đích)
+            ItemGraphic.setMapSorting(this.node, true);
+            for (const s of this.dropShadows) if (s && s.isValid) ItemGraphic.setMapSorting(s, true);
 
             this.moving = false;
             DreamyInputManager.unregister(this);
 
-            // 5. Ẩn item đi (hình ảnh ở Target đã hiện lên thay thế)
-            this.node.active = false;
+            if (keepItemVisible) {
+                // 5. Ở lại đích: giờ là anh em của đích trong cây phòng (Items/Holders cùng transform),
+                //    trả về đúng kích thước gốc — bỏ scale khay / kéo và hệ số zoom đang nhân vào ảnh.
+                TweenUtil.killAll(this.node);
+                this.node.setPosition(target.position);
+                this.node.setScale(this.itemMovement.originalScale);
+                this.itemGraphic.resetZoomScale();
+            } else {
+                // 5. Ẩn item đi (hình ảnh ở Target đã hiện lên thay thế)
+                this.node.active = false;
+            }
 
             // 6. Hiệu ứng Blink / Star FX
             this.spawnBlinkEffect(target);

@@ -21,7 +21,7 @@
 
 import {
     _decorator, Component, Node, UITransform, Sprite, SpriteFrame, Color, Vec3,
-    JsonAsset, resources, CCClass, js, Size, sp, assetManager, Asset, CCObject,
+    JsonAsset, resources, CCClass, js, Size, sp, assetManager, Asset, CCObject, Sorting2D, UIRenderer,
 } from 'cc';
 import { FollowNode } from './FollowNode';
 import { EDITOR } from 'cc/env';
@@ -56,6 +56,8 @@ interface SpineJson { skeletonData: string | null; defaultAnim: string | null; s
 interface ComponentJson { type: string; fields: Record<string, unknown>; }
 interface NodeJson {
     path: string; parentPath: string | null; active: boolean;
+    /** Thứ tự anh em bên Unity (exporter mới có). Thiếu = giữ thứ tự trong JSON. */
+    siblingIndex?: number;
     pos: [number, number, number];
     rot: [number, number, number];
     scale: [number, number, number];
@@ -115,7 +117,30 @@ export class SceneBuilder extends Component {
     })
     lockImageNode = true;
 
-    @property({ tooltip: 'Sắp xếp siblingIndex theo sortingOrder của Unity' })
+    @property({
+        tooltip: 'Vẽ theo sortingOrder của Unity bằng component Sorting2D (giống Order in Layer), KHÔNG phụ thuộc thứ tự cây.\n'
+            + 'Cây node + thứ tự anh em giữ nguyên như Unity, bỏ qua applySorting / restructureFolders / splitEntities.\n'
+            + '⚠ Cần bật module "Sorting 2D" trong Project Settings > Feature Cropping.',
+    })
+    useSorting2D = true;
+
+    @property({
+        tooltip: 'Sorting2D.sortingOrder của sprite CAO NHẤT trong map. Cả map dồn xuống dưới mốc này, nên mọi thứ '
+            + 'KHÔNG gắn Sorting2D (UI, khay, hộp, FX, lớp kéo — order mặc định 0) luôn vẽ đè lên map.\n'
+            + 'Thứ phải nằm DƯỚI map (Background...) thì gắn tay Sorting2D order thấp hơn, vd -32000.',
+        visible(this: SceneBuilder) { return this.useSorting2D; },
+    })
+    sorting2DTop = -1000;
+
+    @property({
+        type: [Node],
+        tooltip: 'Node phải vẽ DƯỚI map (nền, Bg...). Lúc Build, mọi Sprite/Spine trong các nhánh này được gắn '
+            + 'Sorting2D order thấp nhất (-32768) — không gắn thì chúng (order 0) sẽ đè lên map.',
+        visible(this: SceneBuilder) { return this.useSorting2D; },
+    })
+    belowMap: Node[] = [];
+
+    @property({ tooltip: 'Sắp xếp siblingIndex theo sortingOrder của Unity', visible(this: SceneBuilder) { return !this.useSorting2D; } })
     applySorting = true;
 
     @property({
@@ -178,7 +203,10 @@ export class SceneBuilder extends Component {
     private itemNodes = new Set<Node>();
     /** Node đã tách ra khỏi entity (gắn FollowNode) trong lần xếp lớp hiện tại. */
     private hoistedNodes: Node[] = [];
+    /** useSorting2D: khoá xếp lớp Unity (orderKey) → Sorting2D.sortingOrder. */
+    private sorting2DOf = new Map<number, number>();
     private static readonly FOLLOW_FOLDER = 'Follow';
+    private static readonly SORTING2D_MIN = -(1 << 15);
     private static readonly ITEM_COMPONENT = 'ItemController';
 
     start() {
@@ -202,9 +230,15 @@ export class SceneBuilder extends Component {
         const neededKeys = new Set(data.nodes.filter((n) => n.sprite).map((n) => n.sprite!.key));
         await this.loadSpriteFrames(neededKeys);
 
+        if (this.useSorting2D) this.computeSorting2D(data.nodes);
+
         const referenced = SceneBuilder.collectReferencedPaths(data.nodes);
         for (const n of data.nodes) this.createNode(n, referenced);   // pass 1 — cây + sprite
-        if (this.applySorting) this.layoutRenderOrder();              // pass 1.5 — thứ tự render
+        if (this.useSorting2D) {                                       // pass 1.5 — Sorting2D lo thứ tự vẽ
+            this.applyUnitySiblingOrder(data.nodes);
+            this.sortBelowMap();
+        }
+        else if (this.applySorting) this.layoutRenderOrder();         // pass 1.5 — thứ tự render
         for (const n of data.nodes) this.attachComponents(n);    // pass 2 — component + @node:
         for (const n of data.nodes) {                            // pass 3 — active
             const node = this.nodeMap.get(n.path);
@@ -239,6 +273,7 @@ export class SceneBuilder extends Component {
         this.pathOfNode.clear();
         this.ownerOfImage.clear();
         this.itemNodes.clear();
+        this.sorting2DOf.clear();
     }
 
     /** Mọi path xuất hiện dưới dạng "@node:<path>" trong field component. */
@@ -437,6 +472,8 @@ export class SceneBuilder extends Component {
         if (n.render && !n.sprite) {
             this.orderOf.set(node, SceneBuilder.orderKey(n.render.sortingOrder, n.render.layerValue));
             if (n.render.bounds) this.boundsOf.set(node, n.render.bounds);
+            // spine nằm ngay trên node; renderer rỗng (vd Holder) không có UIRenderer -> bỏ qua
+            if (n.spine) this.addSorting2D(node, n.render.sortingOrder, n.render.layerValue);
         }
 
         this.nodeMap.set(n.path, node);
@@ -479,6 +516,8 @@ export class SceneBuilder extends Component {
         // Flip đặt ở node ảnh để không lật luôn các node con gameplay của owner.
         if (s.flipX || s.flipY) img.setScale(s.flipX ? -1 : 1, s.flipY ? -1 : 1, 1);
 
+        this.addSorting2D(img, s.sortingOrder, s.layerValue);
+
         // Khoá xếp lớp đặt trên node CHỦ (owner) — layoutRenderOrder() sắp owner, không sắp node ảnh.
         this.orderOf.set(owner, SceneBuilder.orderKey(s.sortingOrder, s.layerValue));
         if (s.bounds) this.boundsOf.set(owner, s.bounds);
@@ -493,6 +532,89 @@ export class SceneBuilder extends Component {
         skel.loop = s.loop;
         if (s.defaultAnim) skel.animation = s.defaultAnim;
         if (this.verbose) console.warn(`[SceneBuilder] ${node.name}: cần gán tay skeletonData "${s.skeletonData}"`);
+    }
+
+    // ------------------------------------------------------------ Sorting2D
+    /**
+     * useSorting2D: quy khoá xếp lớp Unity (layerValue, sortingOrder) về Sorting2D.sortingOrder (int16),
+     * order cao nhất = sorting2DTop.
+     * 1 sorting layer + dải order vừa chỗ -> chỉ dịch đều (order Cocos = order Unity + hằng số, dễ đối chiếu).
+     * Không thì xếp hạng liền: giữ đúng trước/sau, bỏ khoảng trống giữa các giá trị.
+     */
+    private computeSorting2D(nodes: NodeJson[]): void {
+        const keys = new Set<number>();
+        const layers = new Set<number>();
+        for (const n of nodes) {
+            const r = n.sprite ?? n.render;
+            if (!r) continue;
+            keys.add(SceneBuilder.orderKey(r.sortingOrder, r.layerValue));
+            layers.add(r.layerValue ?? 0);
+        }
+        if (keys.size === 0) return;
+
+        const sorted = [...keys].sort((a, b) => a - b);
+        const top = this.sorting2DTop;
+        const lo = sorted[0], hi = sorted[sorted.length - 1];
+        if (layers.size === 1 && hi - lo <= top - SceneBuilder.SORTING2D_MIN) {
+            const shift = top - hi;
+            for (const k of sorted) this.sorting2DOf.set(k, k + shift);
+            const layer = [...layers][0];
+            const delta = shift + layer * 1_000_000;   // order Cocos - order Unity
+            console.log(`[SceneBuilder] Sorting2D: order Cocos = order Unity ${delta < 0 ? '-' : '+'} ${Math.abs(delta)}`
+                + ` (Unity ${lo - layer * 1_000_000}..${hi - layer * 1_000_000} → ${lo + shift}..${top})`);
+        } else {
+            sorted.forEach((k, i) => this.sorting2DOf.set(k, Math.max(SceneBuilder.SORTING2D_MIN, top - (sorted.length - 1 - i))));
+            console.warn(`[SceneBuilder] Sorting2D: ${layers.size} sorting layer / dải order Unity ${lo}..${hi} không dịch đều được`
+                + ` -> xếp hạng liền ${sorted.length} mức (${top - sorted.length + 1}..${top}), order Cocos không còn = order Unity + hằng số.`);
+        }
+    }
+
+    private addSorting2D(node: Node, sortingOrder: number, layerValue?: number): void {
+        if (!this.useSorting2D) return;
+        const order = this.sorting2DOf.get(SceneBuilder.orderKey(sortingOrder, layerValue));
+        if (order === undefined) return;
+        if (!Sorting2D) {   // module bị cắt khỏi bản build
+            console.error('[SceneBuilder] Không có Sorting2D — bật module "Sorting 2D" trong Project Settings > Feature Cropping.');
+            return;
+        }
+        const s = node.getComponent(Sorting2D) ?? node.addComponent(Sorting2D);
+        s.sortingOrder = order;
+    }
+
+    /** Gắn Sorting2D order thấp nhất cho mọi renderer trong `belowMap` (nền nằm dưới map). */
+    private sortBelowMap(): void {
+        if (!Sorting2D) return;
+        let count = 0;
+        for (const root of this.belowMap) {
+            if (!root || !root.isValid) continue;
+            for (const r of root.getComponentsInChildren(UIRenderer)) {
+                const s = r.getComponent(Sorting2D) ?? r.addComponent(Sorting2D);
+                s.sortingOrder = SceneBuilder.SORTING2D_MIN;
+                count++;
+            }
+        }
+        if (count) console.log(`[SceneBuilder] Sorting2D: ${count} renderer trong belowMap -> order ${SceneBuilder.SORTING2D_MIN} (dưới map)`);
+    }
+
+    /**
+     * useSorting2D: Sorting2D đã lo thứ tự vẽ, cây chỉ cần giống Unity — trả mỗi node về đúng
+     * siblingIndex bên Unity (vd thứ tự item trong Items = thứ tự hộp rớt). Node ảnh `Image`
+     * không có trong JSON nên đứng đầu.
+     */
+    private applyUnitySiblingOrder(nodes: NodeJson[]): void {
+        const indexOf = new Map<Node, number>();
+        for (const n of nodes) {
+            const node = this.nodeMap.get(n.path);
+            if (node && n.siblingIndex !== undefined) indexOf.set(node, n.siblingIndex);
+        }
+        const parents = new Set<Node>();
+        for (const node of indexOf.keys()) if (node.parent) parents.add(node.parent);
+        for (const P of parents) {
+            P.children
+                .map((c, i) => ({ c, k: indexOf.get(c) ?? -1, i }))
+                .sort((a, b) => (a.k - b.k) || (a.i - b.i))
+                .forEach((e, si) => e.c.setSiblingIndex(si));
+        }
     }
 
     // ------------------------------------------------------------ pass 1.5
