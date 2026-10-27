@@ -47,6 +47,9 @@ export class BoxController extends Component implements IPointerHandler {
     @property({ tooltip: 'Click Box lần đầu: chờ bao nhiêu giây (tính từ lúc click) thì item đầu tiên bay ra. 0 = bay ra ngay.', min: 0 })
     firstItemDelay = 1;
 
+    @property({ type: [Node], tooltip: 'Các node bị tắt (active = false) ngay khi click Box lần đầu tiên.' })
+    deactivateOnFirstClick: Node[] = [];
+
     // ========================================== THÔNG SỐ NHẢY ITEM (DOJUMP)
     @property({ tooltip: 'Độ cao cực đại của đường bay Parabol (pixel).' })
     jumpHeight = 150;
@@ -62,6 +65,7 @@ export class BoxController extends Component implements IPointerHandler {
 
     private isClicked = false;
     private isClosing = false;
+    private hasBeenClicked = false;
     private boxGraphic: BoxGraphic | null = null;
 
     readonly inputPriority = InputPriority.Box;
@@ -115,6 +119,14 @@ export class BoxController extends Component implements IPointerHandler {
         if (this.isClicked || this.isClosing) return;
 
         Ply_SoundManager.Ins?.playFx(FxType.ClickBox);
+
+        // Chỉ chạy 1 lần duy nhất, kể cả khi finishedTutorial được tick sẵn hoặc hộp flyBack lượt sau
+        if (!this.hasBeenClicked) {
+            this.hasBeenClicked = true;
+            for (const n of this.deactivateOnFirstClick) {
+                if (n) n.active = false;
+            }
+        }
 
         const im = ItemManager.instance;
         if (im) {
