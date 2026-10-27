@@ -122,7 +122,7 @@
       "uuid": "40471e17-3b69-4428-b021-40e39859ec95"
     },
     "7.Scripts\\MyScript\\box": {
-      "time": 1793090586917.4429,
+      "time": 1793093705845.5796,
       "uuid": "fca59126-8703-4d6d-a4fc-0b49463ffdf6"
     },
     "7.Scripts\\MyScript\\core": {
@@ -138,7 +138,7 @@
       "uuid": "bfadb7c9-2f8a-4ecc-830b-35afa8393bc8"
     },
     "7.Scripts\\MyScript\\managers": {
-      "time": 1792664723131.3787,
+      "time": 1793093701434.6355,
       "uuid": "fa5ca025-9285-44c1-84f0-88241c087ac6"
     },
     "7.Scripts\\MyScript\\pipeline": {
@@ -154,7 +154,7 @@
       "uuid": "a0c2e1bf-4cbe-44ea-af9c-a5cd770df56f"
     },
     "7.Scripts\\MyScript\\utils": {
-      "time": 1792654709562.9934,
+      "time": 1793093934497.4072,
       "uuid": "daed1a92-a434-43ad-9ff1-f408e238e1af"
     },
     "8.Models\\Textures\\Cloud": {
@@ -334,7 +334,7 @@
       "uuid": "a67b6921-a62c-42ff-972e-fbff2f501453"
     },
     "7.Scripts\\MyScript\\box\\BoxController.ts": {
-      "time": 1793090586876.0967,
+      "time": 1793093705813.028,
       "uuid": "7ced8a7d-fd09-44e8-b1af-b41522ee13b2"
     },
     "7.Scripts\\MyScript\\box\\BoxGraphic.ts": {
@@ -394,7 +394,7 @@
       "uuid": "01f9a797-a3c5-4494-833e-348ebe65b0ee"
     },
     "7.Scripts\\MyScript\\managers\\UIManager.ts": {
-      "time": 1791512374282.828,
+      "time": 1793093701135.8032,
       "uuid": "545bdd38-875f-416b-abc9-b06befd3fa89"
     },
     "7.Scripts\\MyScript\\managers\\WorldScrollManager.ts": {
@@ -889,7 +889,7 @@
       "uuid": "54e1328d-b163-4b60-8f36-be68be73c75c"
     },
     "3.Sprites": {
-      "time": 1793089128665.2927,
+      "time": 1793092086574.6235,
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
@@ -897,7 +897,7 @@
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
-      "time": 1791429805360.0188,
+      "time": 1793093118697.1033,
       "uuid": "3821ba58-b5b6-40b4-8da3-e8c689fca25d"
     },
     "6.Scenes": {
@@ -909,7 +909,7 @@
       "uuid": "45b30301-342b-44bf-87d3-0965d3e28fda"
     },
     "8.Assets": {
-      "time": 1791429805362.0876,
+      "time": 1793093118699.2253,
       "uuid": "5ef5907c-1316-4c1c-a51c-24bf1dff2276"
     },
     "8.Models": {
@@ -1165,7 +1165,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1793090516805.68,
+      "time": 1793095975509.3745,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "8.Assets\\127. Spooky Pizza": {
@@ -1492,7 +1492,7 @@
       "time": 1789031320620.3484
     },
     "5.Prefabs.meta": {
-      "time": 1791429805358.9912
+      "time": 1793093118695.1028
     },
     "6.Scenes.meta": {
       "time": 1789031320622.355
@@ -2115,7 +2115,7 @@
       "time": 1792654430947.4126
     },
     "7.Scripts\\MyScript\\managers\\MapPhaseManager.ts": {
-      "time": 1792664723121.4976,
+      "time": 1793093701047.466,
       "uuid": "b1e8e3bb-e8ee-47de-b3dd-6e1eee049a51"
     },
     "4.Sounds\\Cat 1.mp3.meta": {
@@ -2139,7 +2139,7 @@
       "time": 1793089128672.292
     },
     "3.Sprites\\Ply52": {
-      "time": 1793089129634.323,
+      "time": 1793092086574.6235,
       "uuid": "66f4a978-0ea5-479c-ac49-47ee0be200ee"
     },
     "3.Sprites\\Ply52\\sprites": {
@@ -3692,6 +3692,62 @@
     "3.Sprites\\Ply52\\sprites\\67_wall_door_shadow.png": {
       "time": 1788755305160.5198,
       "uuid": "c8ff9cde-8b54-40e4-9137-48c773608f38"
+    },
+    "3.Sprites\\Ply52\\bg_1080x1920.png.meta": {
+      "time": 1793092083995.464
+    },
+    "3.Sprites\\Ply52\\bg_1080x1920.png": {
+      "time": 1793092071159.207,
+      "uuid": "4e872673-4b46-40fa-8fcc-faf86eeac119"
+    },
+    "8.Assets\\Textures": {
+      "time": 1793093118700.233,
+      "uuid": "5f72fdcc-be93-4a20-aa35-02b6da7ff0bb"
+    },
+    "8.Assets\\Textures\\Map-1": {
+      "time": 1793093118700.233,
+      "uuid": "4bd8ff0e-d89e-478e-ab34-2f615b34702b"
+    },
+    "8.Assets\\Textures\\Map-1\\Background": {
+      "time": 1793093118701.7385,
+      "uuid": "d077831a-ef1f-4a46-b54d-ef33e537e27e"
+    },
+    "8.Assets\\Textures\\Map-1\\Background\\Weather": {
+      "time": 1793093118702.747,
+      "uuid": "9ec55ba5-1f4e-4e00-ae3b-db8b6cb33b09"
+    },
+    "8.Assets\\Textures.meta": {
+      "time": 1793093118699.2253
+    },
+    "8.Assets\\Textures\\Map-1.meta": {
+      "time": 1793093118700.233
+    },
+    "8.Assets\\Textures\\Map-1\\Background.meta": {
+      "time": 1793093118701.2322
+    },
+    "8.Assets\\Textures\\Map-1\\Background\\Weather.meta": {
+      "time": 1793093118701.7385
+    },
+    "5.Prefabs\\RainPTC.prefab": {
+      "time": 1793093118697.1033,
+      "uuid": "9b07983a-5fca-4a20-a098-95beee4525ce"
+    },
+    "8.Assets\\Textures\\Map-1\\Background\\Weather\\WaterRain.png": {
+      "time": 1793093118702.747,
+      "uuid": "26a0edb5-9eac-4207-90d3-9839772d987b"
+    },
+    "5.Prefabs\\RainPTC.prefab.meta": {
+      "time": 1793093118697.1033
+    },
+    "8.Assets\\Textures\\Map-1\\Background\\Weather\\WaterRain.png.meta": {
+      "time": 1793093118705.745
+    },
+    "7.Scripts\\MyScript\\utils\\GoogleMode.ts.meta": {
+      "time": 1792460486548.1528
+    },
+    "7.Scripts\\MyScript\\utils\\GoogleMode.ts": {
+      "time": 1792461882906.7024,
+      "uuid": "9b8b1f84-0ecf-4c92-b0b5-055787efa63d"
     }
   },
   "missing": {}

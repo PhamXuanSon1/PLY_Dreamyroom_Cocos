@@ -120,13 +120,7 @@ export class BoxController extends Component implements IPointerHandler {
 
         Ply_SoundManager.Ins?.playFx(FxType.ClickBox);
 
-        // Chỉ chạy 1 lần duy nhất, kể cả khi finishedTutorial được tick sẵn hoặc hộp flyBack lượt sau
-        if (!this.hasBeenClicked) {
-            this.hasBeenClicked = true;
-            for (const n of this.deactivateOnFirstClick) {
-                if (n) n.active = false;
-            }
-        }
+        this.applyFirstClickDeactivation();
 
         const im = ItemManager.instance;
         if (im) {
@@ -179,6 +173,15 @@ export class BoxController extends Component implements IPointerHandler {
         this.boxGraphic?.playItemDispense();
         this.spawnItem();
         this.isClicked = false;
+    }
+
+    /** Tắt deactivateOnFirstClick ở lần click Box đầu tiên — chỉ chạy 1 lần (kể cả hộp flyBack lượt sau). */
+    private applyFirstClickDeactivation(): void {
+        if (this.hasBeenClicked) return;
+        this.hasBeenClicked = true;
+        for (const n of this.deactivateOnFirstClick) {
+            if (n) n.active = false;
+        }
     }
 
     /** Unity: SpawnItem */

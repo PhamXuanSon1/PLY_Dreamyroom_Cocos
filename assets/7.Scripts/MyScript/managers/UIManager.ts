@@ -65,6 +65,12 @@ export class UIManager extends Component implements IPointerHandler {
 
     isGameEnded = false;
 
+    /**
+     * MapPhaseManager gắn vào: trả true = đang/sắp chuyển lượt -> hoãn End Game theo tiến độ
+     * (itemsToEndGame), chuyển lượt xong sẽ gọi recheckEndGame().
+     */
+    static endGameInterceptor: (() => boolean) | null = null;
+
     /** Đồng hồ autoEndAfterSeconds đã được bấm chưa (chỉ bấm 1 lần, ở click Box đầu tiên). */
     private autoEndTimerStarted = false;
 
@@ -156,8 +162,14 @@ export class UIManager extends Component implements IPointerHandler {
         this.checkEndGame();
     }
 
+    /** Kiểm tra lại điều kiện End Game (sau khi endGameInterceptor thôi chặn). */
+    recheckEndGame(): void {
+        this.checkEndGame();
+    }
+
     private checkEndGame(): void {
         if (this.isGameEnded) return;
+        if (UIManager.endGameInterceptor?.()) return;
 
         // itemsToEndGame = 0 (ghép hết): chỉ thắng khi MỌI item trong itemList đã isPlaced,
         // không dựa vào bộ đếm tuSo (lệch đếm cũng không ra Store sớm).
@@ -201,9 +213,11 @@ export class UIManager extends Component implements IPointerHandler {
         this.activateEndGame();
     }
 
-    /** Bật chế độ chạm bất kỳ đâu để chuyển sang Store. */
-    enableStoreOnAnyClick(): void {
-        this.activateEndGame();
+    /** Bật chế độ chạm bất kỳ đâu để chuyển sang Store. showEndCard = false: giữ nguyên màn chơi, không hiện End Card. */
+    enableStoreOnAnyClick(showEndCard = true): void {
+        // Đã End rồi (vd End giữa lúc chuyển lượt, canInput bị tắt sau đó) -> chỉ cần mở lại chạm
+        if (this.isGameEnded) { DreamyInputManager.canInput = true; return; }
+        this.activateEndGame(showEndCard);
     }
 
     /**

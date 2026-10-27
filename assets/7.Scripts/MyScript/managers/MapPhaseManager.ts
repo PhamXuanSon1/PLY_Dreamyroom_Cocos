@@ -20,11 +20,13 @@ import { Ply_SoundManager } from '../ScriptTemplate/Ply_SoundManager';
 import { ItemManager } from './ItemManager';
 import { BoxManager } from './BoxManager';
 import { BaseRoomManager } from './BaseRoomManager';
+import { UIManager } from './UIManager';
 import { ItemController } from '../item/ItemController';
 import { BoxController } from '../box/BoxController';
 import { BaseRoom } from '../utils/BaseRoom';
 import { FollowNode } from '../pipeline/FollowNode';
 import { TweenUtil } from '../core/TweenUtil';
+import { DreamyInputManager } from '../core/DreamyInputManager';
 
 const { ccclass, property } = _decorator;
 
@@ -33,8 +35,11 @@ export class MapPhase {
     @property({ type: Node, tooltip: 'Node cha chứa item của lượt này (vd ItemsMap1). Hộp rớt theo thứ tự trong Hierarchy.' })
     items: Node | null = null;
 
-    @property({ type: Node, tooltip: 'Node cha chứa các món tự rơi xuống khi ghép xong lượt này (vd ItemAfterCompleteMap1). Để trống nếu không có.' })
-    afterComplete: Node | null = null;
+    @property({ type: [Node], tooltip: 'Các món tự rơi xuống khi ghép xong lượt này. Mỗi phần tử là node cha chứa item (vd ItemAfterCompleteMap1) hoặc chính node item. Để trống nếu không có.' })
+    afterComplete: Node[] = [];
+
+    @property({ tooltip: 'Ghép xong lượt này + hộp bay về xong -> chạm bất kỳ đâu (kể cả hộp) là mở Store. Không hiện End Card.' })
+    storeAfterComplete = false;
 
     // ---- khung nhìn phòng khi BẮT ĐẦU lượt này (lượt đầu dùng intro của BaseRoomManager, bỏ qua) ----
     @property({ tooltip: 'Di chuyển / scale phòng (BaseRoom) khi chuyển lượt. Đặt ở lượt sắp bắt đầu hoặc lượt vừa xong đều được (ưu tiên lượt sắp bắt đầu).' })
@@ -60,7 +65,8 @@ export class MapPhase {
 }
 
 interface AfterEntry {
-    item: Node;
+    /** null = node trang trí thường (không phải item), tự nó rơi xuống. */
+    item: Node | null;
     target: Node;
 }
 
@@ -140,10 +146,14 @@ export class MapPhaseManager extends Component {
 
         // Chạy trước mọi start(): ItemManager / UIManager đọc itemList trong start()
         this.itemManager = this.node.scene?.getComponentsInChildren(ItemManager)[0] ?? null;
+        // Lượt không có item (items trống / không có ItemController) -> bỏ, nếu không hộp sẽ bay về mà không có gì để rớt
+        const empty = this.phases.filter((p) => MapPhaseManager.itemsUnder(p.items).length === 0).length;
+        if (empty > 0) {
+            console.warn(`[MapPhaseManager] Bỏ ${empty} lượt không có item.`);
+            this.phases = this.phases.filter((p) => MapPhaseManager.itemsUnder(p.items).length > 0);
+        }
         this.phaseItems = this.phases.map((p) => MapPhaseManager.itemsUnder(p.items));
-        this.afterEntries = this.phases.map((p) => MapPhaseManager.itemsUnder(p.afterComplete)
-            .map((item) => ({ item, target: item.getComponent(ItemController)?.targetPoint ?? null }))
-            .filter((e): e is AfterEntry => !!e.target));
+        this.afterEntries = this.phases.map((p) => MapPhaseManager.afterEntriesOf(p.afterComplete));
 
         if (!this.enabledPhases || !this.itemManager) return;
         const im = this.itemManager;
@@ -156,9 +166,11 @@ export class MapPhaseManager extends Component {
         im.itemList = ([] as Node[]).concat(...this.phaseItems);
         im.spawnLimit = this.phaseItems[0].length;
 
-        // Món tự rơi: node item tắt hẳn (không kéo được), đích ẩn tới lúc rơi
+        // Món tự rơi: node item tắt hẳn (không kéo được), đích ẩn tới lúc rơi.
+        // Node thường (item = null) giữ nguyên trạng thái trong scene, không đụng tới lúc start.
         for (const list of this.afterEntries) {
             for (const e of list) {
+                if (!e.item) continue;
                 e.item.active = false;
                 e.target.active = false;
                 FollowNode.setSuppressedFor(e.target, true);
@@ -166,6 +178,8 @@ export class MapPhaseManager extends Component {
         }
 
         BoxManager.emptyItemsInterceptor = (box) => this.onSpawnExhausted(box);
+        // UIManager.checkEndGame chạy TRƯỚC onItemArrived (cùng lúc ghép item cuối lượt) -> phải chặn từ đây
+        UIManager.endGameInterceptor = () => this.transitioning || this.isPhaseDonePendingTransition();
         im.node.on(ItemManager.EVENT_ITEM_ARRIVED, this.onItemArrived, this);
 
         console.log(`[MapPhaseManager] ${this.phaseItems.length} lượt: ${this.phaseItems.map((l) => l.length).join(' + ')} item`
@@ -175,6 +189,7 @@ export class MapPhaseManager extends Component {
     onDestroy() {
         if (MapPhaseManager.instance === this) MapPhaseManager.instance = null;
         if (BoxManager.emptyItemsInterceptor) BoxManager.emptyItemsInterceptor = null;
+        if (UIManager.endGameInterceptor) UIManager.endGameInterceptor = null;
         if (this.itemManager?.isValid) this.itemManager.node.off(ItemManager.EVENT_ITEM_ARRIVED, this.onItemArrived, this);
     }
 
@@ -182,6 +197,29 @@ export class MapPhaseManager extends Component {
     private static itemsUnder(parent: Node | null): Node[] {
         if (!parent) return [];
         return parent.children.filter((c) => !!c.getComponent(ItemController));
+    }
+
+    /**
+     * Mỗi node trong afterComplete:
+     *   - có ItemController      -> hiện đích (targetPoint) của nó
+     *   - chứa item con          -> hiện đích của từng item con (node cha kiểu ItemAfterCompleteMap1)
+     *   - node thường (sàn, tường...) -> chính node đó rơi xuống
+     */
+    private static afterEntriesOf(nodes: Node[] | null): AfterEntry[] {
+        if (!nodes) return [];
+        const out: AfterEntry[] = [];
+        const addItem = (item: Node) => {
+            const target = item.getComponent(ItemController)?.targetPoint ?? null;
+            if (target) out.push({ item, target });
+        };
+        for (const n of nodes) {
+            if (!n) continue;
+            if (n.getComponent(ItemController)) { addItem(n); continue; }
+            const items = MapPhaseManager.itemsUnder(n);
+            if (items.length > 0) items.forEach(addItem);
+            else out.push({ item: null, target: n });
+        }
+        return out;
     }
 
     private get isLastPhase(): boolean {
@@ -199,14 +237,19 @@ export class MapPhaseManager extends Component {
         return true;
     }
 
+    /** Lượt hiện tại (không phải lượt cuối) đã ghép hết item -> sắp chuyển lượt. */
+    private isPhaseDonePendingTransition(): boolean {
+        if (!this.enabledPhases || this.isLastPhase) return false;
+        return this.phaseItems[this.phaseIndex].every((n) => !n.isValid || !!n.getComponent(ItemController)?.isPlaced);
+    }
+
     // ======================================================== ghép xong lượt -> món rơi -> hộp về
     private onItemArrived(): void {
-        if (!this.enabledPhases || this.transitioning || this.isLastPhase) return;
-        const left = this.phaseItems[this.phaseIndex].filter((n) => n.isValid && !n.getComponent(ItemController)?.isPlaced);
-        if (left.length > 0) return;
+        if (this.transitioning || !this.isPhaseDonePendingTransition()) return;
 
         this.transitioning = true;
         this.setPlayerInputBlocked(true);
+        DreamyInputManager.canInput = false;   // cả lúc chờ chuyển lượt: không nhận chạm nào
         if (this.phaseCompleteSoundDelay > 0) this.scheduleOnce(() => this.playPhaseCompleteSound(), this.phaseCompleteSoundDelay);
         else this.playPhaseCompleteSound();
         // món afterComplete rơi xong -> (delayBeforeBoxReturn) -> phòng chuyển sang khung nhìn lượt mới
@@ -217,15 +260,29 @@ export class MapPhaseManager extends Component {
     }
 
     private startNextPhase(): void {
+        // storeAfterComplete: hộp tới chỗ là chạm đâu cũng ra Store (canInput vẫn tắt từ onItemArrived tới lúc đó)
+        const toStore = !!this.phases[this.phaseIndex]?.storeAfterComplete;
+        if (toStore) console.log(`[MapPhaseManager] Lượt ${this.phaseIndex + 1} bật storeAfterComplete -> hộp về là chạm đâu cũng mở Store, KHÔNG chơi tiếp lượt sau.`);
         let pending = 2;
         const done = () => {
             if (--pending > 0) return;
             this.boxAway = false;
             this.transitioning = false;
             this.setPlayerInputBlocked(false);
+            // Luôn mở lại chạm (onItemArrived đã tắt) — kể cả khi game đã End giữa chừng, nếu không sẽ kẹt không nhận input
+            DreamyInputManager.canInput = true;
+            // itemsToEndGame có thể đã đủ trong lúc chuyển lượt (bị hoãn) -> xét lại
+            if (!toStore) UIManager.instance?.recheckEndGame();
         };
         this.moveRoomTo(this.phaseIndex + 1, done);
-        this.returnBox(done);
+        this.returnBox(() => {
+            if (toStore) {
+                // hộp vừa về: chạm đâu cũng ra Store — không chờ phòng di chuyển xong
+                UIManager.instance?.enableStoreOnAnyClick(false);
+                DreamyInputManager.canInput = true;
+            }
+            done();
+        });
     }
 
     /**
