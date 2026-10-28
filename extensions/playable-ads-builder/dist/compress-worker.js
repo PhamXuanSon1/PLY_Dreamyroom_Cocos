@@ -58,6 +58,35 @@ const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 // @ts-ignore - sharp tự kèm type definition trong gói, nhưng resolve qua node_modules runtime của extension
 const sharp = require("sharp");
+/**
+ * Ảnh là texture premultiplied alpha của Spine: trùng kích thước 1 trang atlas "pma: true", có pixel
+ * bán trong suốt và KHÔNG pixel nào có RGB > alpha. (Chỉ xét pixel thì dính nhầm sprite thường màu tối.)
+ *
+ * Không được nén WebP các ảnh này: libwebp luôn ghi đè RGB ở vùng trong suốt (sharp 0.33 không có
+ * tuỳ chọn exact, kể cả lossless) và lossy còn đẩy RGB vượt alpha -> lúc render blend PMA
+ * (ONE, ONE_MINUS_SRC_ALPHA) phần RGB thừa bị cộng thẳng lên màn hình = viền/vệt trắng quanh spine.
+ */
+async function isPremultipliedAlpha(raw, pmaSizes) {
+    const meta = await sharp(raw).metadata();
+    if (!pmaSizes.includes(`${meta.width},${meta.height}`)) {
+        return false;
+    }
+    const { data, info } = await sharp(raw).raw().toBuffer({ resolveWithObject: true });
+    if (info.channels !== 4) {
+        return false;
+    }
+    let hasTranslucent = false;
+    for (let i = 0; i < data.length; i += 4) {
+        const a = data[i + 3];
+        if (data[i] > a || data[i + 1] > a || data[i + 2] > a) {
+            return false;
+        }
+        if (a > 0 && a < 255) {
+            hasTranslucent = true;
+        }
+    }
+    return hasTranslucent;
+}
 async function main() {
     const jobFile = process.argv[2];
     const resultFile = process.argv[3];
@@ -69,6 +98,10 @@ async function main() {
     for (const img of job.images) {
         try {
             const raw = fs.readFileSync(img.input);
+            if (await isPremultipliedAlpha(raw, job.pmaSizes || [])) {
+                results[img.id] = { compressed: false, originalSize: raw.length, skippedPma: true };
+                continue;
+            }
             const webpOptions = job.compression.type === 'lossless' ? { lossless: true } : { quality: job.compression.quality };
             const compressed = await sharp(raw).webp(webpOptions).toBuffer();
             if (compressed.length < raw.length) {

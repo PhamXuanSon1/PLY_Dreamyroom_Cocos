@@ -65,7 +65,7 @@ function errorDetail(err) {
         return String(err);
     }
 }
-async function compressImagesBatch(images, compression, tempDir) {
+async function compressImagesBatch(images, compression, tempDir, pmaSizes) {
     const compressedById = new Map();
     if (images.length === 0) {
         return compressedById;
@@ -78,6 +78,7 @@ async function compressImagesBatch(images, compression, tempDir) {
     try {
         await fs.writeJson(jobFile, {
             compression,
+            pmaSizes,
             outDir: jobDir,
             images: images.map(img => ({ id: img.id, input: img.full })),
         });
@@ -108,7 +109,10 @@ async function compressImagesBatch(images, compression, tempDir) {
                 console.warn(`[playable-ads-builder] Nén ảnh thất bại, dùng ảnh gốc: ${img.full}. Chi tiết lỗi: ${entry.error}`);
                 continue;
             }
-            if (entry.compressed) {
+            if (entry.skippedPma) {
+                console.log(`[playable-ads-builder] Ảnh ${path.basename(img.full)}: premultiplied alpha (Spine pma) - giữ nguyên PNG, không nén WebP (tránh viền trắng).`);
+            }
+            else if (entry.compressed) {
                 const outFile = path.join(jobDir, `${img.id}.webp`);
                 compressedById.set(img.id, await fs.readFile(outFile));
                 console.log(`[playable-ads-builder] Nén ảnh ${path.basename(img.full)}: ${entry.originalSize} -> ${entry.compressedSize} byte`);
@@ -186,12 +190,37 @@ async function walk(dir, root, audio, tempDir, pendingImages) {
     }));
     return results.flat().filter((f) => f !== null);
 }
+/**
+ * Kích thước ("W,H") các trang atlas Spine "pma: true" trong JSON import của bản build - worker nén ảnh
+ * chỉ giữ nguyên PNG cho ảnh trùng kích thước này VÀ có pixel đúng kiểu premultiplied alpha
+ * (xem compress-worker.ts isPremultipliedAlpha), tránh giữ nhầm sprite thường.
+ */
+function findPmaAtlasSizes(entries) {
+    const sizes = new Set();
+    for (const entry of entries) {
+        if (isPendingImage(entry) || !entry.path.endsWith('.json')) {
+            continue;
+        }
+        const text = entry.data.toString('utf-8');
+        if (!text.includes('pma: true')) {
+            continue;
+        }
+        // atlasText nằm trong chuỗi JSON nên xuống dòng/tab đang ở dạng escape "\n", "\t"
+        const atlas = text.replace(/\\n/g, '\n').replace(/\\t/g, '\t');
+        const re = /size:\s*(\d+),\s*(\d+)\n(?:\t[^\n]*\n)*?\tpma:\s*true/g;
+        let m;
+        while ((m = re.exec(atlas))) {
+            sizes.add(`${m[1]},${m[2]}`);
+        }
+    }
+    return [...sizes];
+}
 async function collectWebMobileFiles(webMobileDir, compression, audio, tempDir) {
     const pendingImages = [];
     const entries = await walk(webMobileDir, webMobileDir, audio, tempDir, pendingImages);
     const compressedById = compression.type === channels_1.CompressionType.None
         ? new Map()
-        : await compressImagesBatch(pendingImages, compression, tempDir);
+        : await compressImagesBatch(pendingImages, compression, tempDir, findPmaAtlasSizes(entries));
     const files = await Promise.all(entries.map(async (entry) => {
         if (!isPendingImage(entry)) {
             return entry;

@@ -1332,7 +1332,7 @@
         "c864c38b-855f-4fe5-a80b-f3905e999ecb@f9941",
         "f57f7e9d-1391-4171-86c0-c31424707fe5",
         "e1fc69b2-618c-4694-9672-0920e014cfe4",
-        "20f60589-d35c-4248-8b6b-9f230f3337e2",
+        "a109aa6f-85fd-4e5d-91f7-8165d2b3a49a",
         "02842ae9-80e4-4a46-8329-dec48c04553b",
         "cf290993-bd80-4b5d-9467-489786c65616",
         "a88a5c3e-fe57-4d78-ba1e-73e9803bcce9",
@@ -50400,6 +50400,13 @@
   "9b8b1f84-0ecf-4c92-b0b5-055787efa63d": {
     "url": "db://assets/7.Scripts/MyScript/utils/GoogleMode.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "a109aa6f-85fd-4e5d-91f7-8165d2b3a49a": {
+    "url": "db://assets/4.Sounds/BGM/2026-10-28 08-46-09 (mp3cut.net).mp3",
+    "value": {
+      "depends": []
+    },
     "versionCode": 1
   }
 }

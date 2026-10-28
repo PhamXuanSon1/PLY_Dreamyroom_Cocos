@@ -31,6 +31,8 @@ interface IJobImage {
 
 interface IJob {
     compression: { type: 'none' | 'lossy' | 'lossless'; quality: number };
+    /** Kích thước "W,H" các trang atlas Spine "pma: true" (build-engine.ts findPmaAtlasSizes). */
+    pmaSizes?: string[];
     outDir: string;
     images: IJobImage[];
 }
@@ -40,6 +42,38 @@ interface IResultEntry {
     originalSize?: number;
     compressedSize?: number;
     error?: string;
+    /** Texture premultiplied alpha (vd atlas Spine "pma: true") - giữ nguyên PNG, không nén. */
+    skippedPma?: boolean;
+}
+
+/**
+ * Ảnh là texture premultiplied alpha của Spine: trùng kích thước 1 trang atlas "pma: true", có pixel
+ * bán trong suốt và KHÔNG pixel nào có RGB > alpha. (Chỉ xét pixel thì dính nhầm sprite thường màu tối.)
+ *
+ * Không được nén WebP các ảnh này: libwebp luôn ghi đè RGB ở vùng trong suốt (sharp 0.33 không có
+ * tuỳ chọn exact, kể cả lossless) và lossy còn đẩy RGB vượt alpha -> lúc render blend PMA
+ * (ONE, ONE_MINUS_SRC_ALPHA) phần RGB thừa bị cộng thẳng lên màn hình = viền/vệt trắng quanh spine.
+ */
+async function isPremultipliedAlpha(raw: Buffer, pmaSizes: string[]): Promise<boolean> {
+    const meta = await sharp(raw).metadata();
+    if (!pmaSizes.includes(`${meta.width},${meta.height}`)) {
+        return false;
+    }
+    const { data, info } = await sharp(raw).raw().toBuffer({ resolveWithObject: true });
+    if (info.channels !== 4) {
+        return false;
+    }
+    let hasTranslucent = false;
+    for (let i = 0; i < data.length; i += 4) {
+        const a = data[i + 3];
+        if (data[i] > a || data[i + 1] > a || data[i + 2] > a) {
+            return false;
+        }
+        if (a > 0 && a < 255) {
+            hasTranslucent = true;
+        }
+    }
+    return hasTranslucent;
 }
 
 async function main() {
@@ -54,6 +88,10 @@ async function main() {
     for (const img of job.images) {
         try {
             const raw = fs.readFileSync(img.input);
+            if (await isPremultipliedAlpha(raw, job.pmaSizes || [])) {
+                results[img.id] = { compressed: false, originalSize: raw.length, skippedPma: true };
+                continue;
+            }
             const webpOptions = job.compression.type === 'lossless' ? { lossless: true } : { quality: job.compression.quality };
             const compressed: Buffer = await sharp(raw).webp(webpOptions).toBuffer();
             if (compressed.length < raw.length) {

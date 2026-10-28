@@ -244,6 +244,15 @@ export class ItemManager extends Component {
      * Các item không có persistentShadow thì target bị tắt lúc gọi hàm này.
      */
     initTargetShadows(): void {
+        // Đích dùng chung (sharedTargets) chưa có item ghép -> ẩn trước, vòng dưới bật lại bóng persistent nếu có
+        for (const node of this.itemList) {
+            const item = node?.isValid ? node.getComponent(ItemController) : null;
+            if (!item || item.isPlaced) continue;
+            for (const t of item.sharedTargetNodes) {
+                if (!ItemController.isTargetClaimed(t)) t.active = false;
+            }
+        }
+
         for (const node of this.itemList) {
             if (!node || !node.isValid) continue;
             const item = node.getComponent(ItemController);

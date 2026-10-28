@@ -76,6 +76,21 @@ export class ItemController extends Component implements IPointerHandler {
     @property({ type: Node, tooltip: 'Vị trí đích mà item cần được kéo vào để ghép.' })
     targetPoint: Node | null = null;
 
+    @property({
+        type: [Node],
+        tooltip: 'Đích dùng chung (cho nhóm item giống nhau): item ghép được vào Target Point HOẶC bất kỳ đích nào ở đây. '
+            + 'Kéo vào node ĐÍCH, hoặc kéo luôn node ITEM (tự lấy Target Point của item đó; có thể kéo cả chính nó). '
+            + 'Đích đã có item ghép vào thì không nhận item khác nữa.',
+    })
+    sharedTargets: Node[] = [];
+
+    /** Target Point gốc (gán trong Inspector), giữ lại trước khi bị đổi sang đích dùng chung khác. */
+    private homeTarget: Node | null = null;
+
+    /** Đích đã có item ghép vào (hoặc đang bay vào) — không nhận item khác nữa. */
+    private static claimedTargets = new Set<Node>();
+    private static instances = new Set<ItemController>();
+
     // ---- Tham số kéo thả & Snap ----
     @property({ tooltip: 'Khoảng cách tối thiểu để item tự hút vào đích (pixel).' })
     snapDistance = 200;
@@ -139,6 +154,7 @@ export class ItemController extends Component implements IPointerHandler {
 
     // ======================================================== Lifecycle
     onLoad() {
+        ItemController.instances.add(this);
         this.itemGraphic = this.getComponent(ItemGraphic) ?? this.addComponent(ItemGraphic);
         this.itemMovement = this.getComponent(ItemMovement) ?? this.addComponent(ItemMovement);
         this.setupCollider();
@@ -183,6 +199,93 @@ export class ItemController extends Component implements IPointerHandler {
 
     onDisable() {
         DreamyInputManager.unregister(this);
+    }
+
+    onDestroy() {
+        ItemController.instances.delete(this);
+    }
+
+    // ======================================================== Shared targets
+    /** Mọi đích item này ghép được: targetPoint + sharedTargets (không trùng, còn valid). */
+    get candidateTargets(): Node[] {
+        const out: Node[] = [];
+        for (const t of [this.targetPoint, ...this.sharedTargetNodes]) {
+            if (t && t.isValid && !out.includes(t)) out.push(t);
+        }
+        return out;
+    }
+
+    /** sharedTargets đã quy đổi: node có ItemController -> Target Point gốc của item đó. */
+    get sharedTargetNodes(): Node[] {
+        const out: Node[] = [];
+        for (const n of this.sharedTargets) {
+            if (!n || !n.isValid) continue;
+            const ic = n.getComponent(ItemController);
+            const t = ic ? (ic.homeTarget ?? ic.targetPoint) : n;
+            if (t && t.isValid && !out.includes(t)) out.push(t);
+        }
+        return out;
+    }
+
+    /** Đổi targetPoint, nhớ lại Target Point gốc cho lần đổi đầu tiên. */
+    private setTargetPoint(t: Node): void {
+        if (!this.homeTarget) this.homeTarget = this.targetPoint;
+        this.targetPoint = t;
+    }
+
+    static isTargetClaimed(target: Node): boolean {
+        return ItemController.claimedTargets.has(target);
+    }
+
+    /** targetPoint đã bị item khác chiếm -> chuyển sang đích dùng chung đầu tiên còn trống. */
+    ensureFreeTarget(): void {
+        if (this.isPlaced || this.sharedTargets.length === 0) return;
+        const cur = this.targetPoint;
+        if (cur && cur.isValid && !ItemController.isTargetClaimed(cur)) return;
+        const free = this.candidateTargets.find((t) => !ItemController.isTargetClaimed(t));
+        if (free) this.setTargetPoint(free);
+    }
+
+    /** Đánh dấu đích đã có chủ, các item khác đang trỏ vào đích này tự đổi sang đích trống. */
+    private claimTarget(target: Node): void {
+        ItemController.claimedTargets.add(target);
+        for (const other of ItemController.instances) {
+            if (other !== this && other.isValid) other.ensureFreeTarget();
+        }
+    }
+
+    /** Đích trống gần nhất mà item đang nằm trong vùng snap (collider của đích hoặc snapDistance). */
+    private findSnapTarget(): Node | null {
+        const itemPos = this.node.worldPosition;
+        const itemPos2D = new Vec2(itemPos.x, itemPos.y);
+        let best: Node | null = null;
+        let bestDist = Infinity;
+        for (const t of this.candidateTargets) {
+            if (ItemController.isTargetClaimed(t)) continue;
+            const dist = Vec3.distance(itemPos, t.worldPosition);
+            const aabb = t.getComponent(Collider2D)?.worldAABB;
+            const inside = !!aabb && aabb.contains(itemPos2D);
+            if ((inside || dist <= this.snapDistance) && dist < bestDist) {
+                best = t;
+                bestDist = dist;
+            }
+        }
+        return best;
+    }
+
+    /** Thả vào đích dùng chung khác targetPoint: tắt bóng ở đích cũ, đổi targetPoint sang đích mới. */
+    private switchTarget(newTarget: Node): void {
+        const old = this.targetPoint;
+        if (old === newTarget) return;
+        if (old && old.isValid) {
+            this.itemGraphic.restoreTargetSprites();
+            old.active = false;
+            FollowNode.setSuppressedFor(old, false);
+        }
+        this.setTargetPoint(newTarget);
+        // Ghi lại sprite của đích mới để restoreTargetSprites() lúc ghép xong trả đúng màu
+        // (đích mới có thể đang bị item khác tô bóng persistent).
+        this.itemGraphic.handleTargetSprites(newTarget, true);
     }
 
     /**
@@ -244,6 +347,8 @@ export class ItemController extends Component implements IPointerHandler {
         if (this.isPlaced || this.moving) return false;
 
         this.initialWorldPos = this.node.worldPosition.clone();
+        // Đích của item có thể đã bị item giống nó chiếm -> đổi sang đích trống trước khi hiện bóng
+        this.ensureFreeTarget();
 
         // Item trong khay: đổi NGAY về scale thật trong phòng (= target), không tween phóng to
         const inTray = ItemTray.instance?.onItemPicked(this) ?? false;
@@ -365,27 +470,10 @@ export class ItemController extends Component implements IPointerHandler {
     // ======================================================== Snap Logic
     /** Kiểm tra xem item có đủ gần đích để ghép không */
     private checkSnap(): void {
-        if (!this.targetPoint || !this.targetPoint.isValid) {
-            this.snapFailed();
-            return;
-        }
+        // targetPoint + sharedTargets: lấy đích trống gần nhất, đích đã có item thì bỏ qua
+        const snapTarget = this.findSnapTarget();
 
-        const targetCollider = this.targetPoint.getComponent(Collider2D);
-        let isSnapped = false;
-
-        if (targetCollider && targetCollider.worldAABB) {
-            const itemPos2D = new Vec2(this.node.worldPosition.x, this.node.worldPosition.y);
-            isSnapped = targetCollider.worldAABB.contains(itemPos2D);
-        }
-
-        if (!isSnapped) {
-            const distance = Vec3.distance(this.node.worldPosition, this.targetPoint.worldPosition);
-            if (distance <= this.snapDistance) {
-                isSnapped = true;
-            }
-        }
-
-        if (isSnapped) {
+        if (snapTarget) {
             // Kiểm tra điều kiện phụ (SeatHandler nếu có)
             const seat = this.getComponent(SeatHandler);
             if (seat && !seat.canPlace()) {
@@ -393,6 +481,7 @@ export class ItemController extends Component implements IPointerHandler {
                 this.snapFailed();
                 return;
             }
+            this.switchTarget(snapTarget);
             this.moveToTarget();
         } else {
             this.snapFailed();
@@ -438,6 +527,8 @@ export class ItemController extends Component implements IPointerHandler {
     private moveToTarget(): void {
         const target = this.targetPoint!;
         this.moving = true;
+        // Chiếm đích ngay lúc bắt đầu bay -> item khác không snap vào đích này nữa
+        this.claimTarget(target);
 
         WorldScrollManager.instance?.itemPlaced(this);
 
