@@ -470,16 +470,7 @@ export class ItemController extends Component implements IPointerHandler {
      */
     private getLockingParentItem(target: Node | null): ItemController | null {
         if (!target || !target.isValid) return null;
-        const others: ItemController[] = [];
-        const itemList = ItemManager.instance?.itemList;
-        if (itemList && itemList.length > 0) {
-            for (const n of itemList) {
-                const ic = n?.isValid ? n.getComponent(ItemController) : null;
-                if (ic) others.push(ic);
-            }
-        } else {
-            others.push(...ItemController.instances);
-        }
+        const others = ItemController.getAllItems();
         for (let n = target.parent; n; n = n.parent) {
             for (const other of others) {
                 if (other === this || other.isPlaced || !other.isValid) continue;
@@ -487,6 +478,27 @@ export class ItemController extends Component implements IPointerHandler {
             }
         }
         return null;
+    }
+
+    /** Mọi item của màn: lấy từ ItemManager.itemList (gồm cả item chưa active), trống thì lấy item đã onLoad. */
+    private static getAllItems(): ItemController[] {
+        const itemList = ItemManager.instance?.itemList;
+        if (!itemList || itemList.length === 0) return [...ItemController.instances];
+        const out: ItemController[] = [];
+        for (const n of itemList) {
+            const ic = n?.isValid ? n.getComponent(ItemController) : null;
+            if (ic) out.push(ic);
+        }
+        return out;
+    }
+
+    /** Ngăn kéo còn item chưa ghép có đích trong ngăn -> giữ mở; ghép hết rồi -> tự đóng sau closeDelay. */
+    private static refreshDrawer(drawer: DrawerHandler | null): void {
+        if (!drawer) return;
+        const pending = ItemController.getAllItems().some((ic) => ic.isValid && !ic.isPlaced
+            && ic.candidateTargets.some((t) => drawer.contains(t)));
+        if (pending) drawer.openDrawer();
+        else drawer.closeAfterDelay();
     }
 
     /** Tắt bóng khi thả tay mà chưa ghép được. Bỏ qua nếu bóng là persistent. */
@@ -527,8 +539,8 @@ export class ItemController extends Component implements IPointerHandler {
         // Thả hụt KHÔNG tốn lượt bóng — lần cầm sau vẫn xin lại bình thường
         this.usedDragShadow = false;
 
-        // Thả hụt -> đóng lại ngăn kéo vừa mở lúc cầm item
-        DrawerHandler.findFor(this.targetPoint)?.closeDrawer();
+        // Thả hụt -> ngăn vẫn còn item chưa ghép (chính item này) nên giữ mở
+        ItemController.refreshDrawer(DrawerHandler.findFor(this.targetPoint));
 
         // Item trong khay -> bay về lại ô của nó
         if (ItemTray.instance?.returnItem(this)) {
@@ -642,8 +654,10 @@ export class ItemController extends Component implements IPointerHandler {
 
             // 6. Hiệu ứng Blink / Star FX
             this.spawnBlinkEffect(target);
-            // Đích trong ngăn kéo -> ghép xong tự đóng ngăn lại
-            DrawerHandler.findFor(target)?.closeAfterDelay();
+            // Vừa ghép tủ (đích chứa ngăn kéo) -> mở các ngăn còn item chưa ghép.
+            // Đích nằm trong ngăn kéo -> ngăn chỉ đóng khi đã ghép hết item của ngăn.
+            for (const d of target.getComponentsInChildren(DrawerHandler)) ItemController.refreshDrawer(d);
+            ItemController.refreshDrawer(DrawerHandler.findFor(target));
 
             // 7. Báo cho ItemManager tiến độ
             //    Item được cấp bóng lúc kéo -> giờ mới trừ 1 lượt trong shadowItemCount.

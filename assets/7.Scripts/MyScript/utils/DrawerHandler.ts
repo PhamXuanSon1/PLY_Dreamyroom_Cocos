@@ -3,10 +3,10 @@
  *
  * Gắn vào node ngăn kéo (vd: Drawer 1), kéo tay node mở / đóng vào Open Nodes / Close Nodes.
  * Đích nằm trong Open Nodes (đang tắt):
- *   - cầm item có đích trong ngăn -> mở ngăn (bật open, tắt close) để thấy bóng đích
- *   - thả hụt -> đóng ngăn ngay
- *   - ghép đúng -> đóng ngăn sau closeDelay giây
- * ItemController gọi thẳng các hàm này, không poll mỗi frame.
+ *   - ghép xong tủ chứa ngăn -> mở ngăn (bật open, tắt close) nếu còn item có đích trong ngăn
+ *   - còn item chưa ghép -> ngăn giữ mở (kể cả thả hụt)
+ *   - ghép xong item cuối cùng của ngăn -> đóng ngăn sau closeDelay giây
+ * ItemController (refreshDrawer) gọi thẳng các hàm này, không poll mỗi frame.
  */
 
 import { _decorator, Component, Node } from 'cc';
