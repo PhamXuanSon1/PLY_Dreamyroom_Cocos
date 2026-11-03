@@ -134,7 +134,7 @@
       "uuid": "59acbb9a-95c1-4780-9edc-f7a5cce7a121"
     },
     "7.Scripts\\MyScript\\item": {
-      "time": 1793691986983.566,
+      "time": 1793694781319.7578,
       "uuid": "bfadb7c9-2f8a-4ecc-830b-35afa8393bc8"
     },
     "7.Scripts\\MyScript\\managers": {
@@ -146,7 +146,7 @@
       "uuid": "40642cf3-a97f-4037-945f-f47cda630de9"
     },
     "7.Scripts\\MyScript\\ScriptTemplate": {
-      "time": 1792656910267.573,
+      "time": 1793694781231.7876,
       "uuid": "5f4a68e3-8d28-4a95-8c2e-5098ed59bdc8"
     },
     "7.Scripts\\MyScript\\ui": {
@@ -358,7 +358,7 @@
       "uuid": "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
     },
     "7.Scripts\\MyScript\\item\\ItemController.ts": {
-      "time": 1793691986965.006,
+      "time": 1793694781297.9626,
       "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
     },
     "7.Scripts\\MyScript\\item\\ItemGraphic.ts": {
@@ -454,7 +454,7 @@
       "uuid": "8ae2cf63-dfd7-4f32-bac7-8bcfde17210d"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Ply_SoundManager.ts": {
-      "time": 1792656909231.6838,
+      "time": 1793694781213.9392,
       "uuid": "784b8157-3757-4d0b-a788-266a2078d644"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Ply_Types.ts": {
@@ -893,7 +893,7 @@
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
-      "time": 1792659293932.7444,
+      "time": 1793698024070.6624,
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
@@ -1165,7 +1165,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1793692290174.0815,
+      "time": 1793698177514.4353,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "8.Assets\\127. Spooky Pizza": {
@@ -3076,6 +3076,13 @@
     "7.Scripts\\MyScript\\utils\\DrawerHandler.ts": {
       "time": 1793691997132.311,
       "uuid": "b9e886b5-3c1f-4257-9b7b-521a099a69ff"
+    },
+    "4.Sounds\\Clock.mp3.meta": {
+      "time": 1793694854587.5188
+    },
+    "4.Sounds\\Clock.mp3": {
+      "time": 1793697967503.7307,
+      "uuid": "1476131f-bd70-441f-a6b8-32db105c8675"
     }
   },
   "missing": {}
