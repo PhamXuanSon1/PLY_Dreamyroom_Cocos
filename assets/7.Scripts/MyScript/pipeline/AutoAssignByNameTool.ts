@@ -29,6 +29,9 @@ export class AutoAssignByNameTool extends Component {
     @property({ tooltip: 'Hậu tố tên target (nếu có, vd: "Place", "_target")' })
     suffix = '';
 
+    @property({ tooltip: 'Tiền tố tên target nằm bên trong node con của targetParent (vd: "HolderDrawer_"). Dùng khi không tìm thấy theo prefix chính.' })
+    childPrefix = 'HolderDrawer_';
+
     @property({ tooltip: 'Tìm kiếm đệ quy cả các node con bên trong targetParent' })
     recursive = true;
 
@@ -77,7 +80,9 @@ export class AutoAssignByNameTool extends Component {
                 const itemController = item.getComponent(ItemController);
                 if (itemController) {
                     const targetName = `${this.prefix}${item.name}${this.suffix}`;
-                    const target = targetDict.get(targetName);
+                    const childTargetName = `${this.childPrefix}${item.name}${this.suffix}`;
+                    const target = targetDict.get(targetName)
+                        ?? (this.childPrefix ? targetDict.get(childTargetName) : undefined);
 
                     if (target) {
                         itemController.targetPoint = target;
@@ -85,7 +90,7 @@ export class AutoAssignByNameTool extends Component {
                         console.log(`[AutoAssignTool] Assign: "${item.name}" -> "${target.name}"`);
                     } else {
                         notFoundCount++;
-                        console.warn(`[AutoAssignTool] Không tìm thấy target cho item: "${item.name}" (Target Name mong muốn: "${targetName}")`);
+                        console.warn(`[AutoAssignTool] Không tìm thấy target cho item: "${item.name}" (Target Name mong muốn: "${targetName}"${this.childPrefix ? ` hoặc "${childTargetName}"` : ''})`);
                     }
                 }
 

@@ -27,7 +27,6 @@ import { ItemController } from '../item/ItemController';
 import { ItemGraphic } from '../item/ItemGraphic';
 import { ItemMovement } from '../item/ItemMovement';
 import { HolderSlot } from '../utils/HolderSlot';
-import { SeatHandler } from '../utils/SeatHandler';
 import { TweenUtil } from '../core/TweenUtil';
 import { WorldScrollManager } from './WorldScrollManager';
 import { UIManager } from './UIManager';
@@ -683,10 +682,8 @@ export class ItemManager extends Component {
         if (!item || !item.isValid) return false;
         if (!item.targetPoint) return false;
 
-        const seat = item.getComponent(SeatHandler);
-
-        // không có seat handler -> dùng được luôn; có thì phải pass điều kiện
-        return seat ? seat.canPlace() : true;
+        // SeatHandler (nếu có) phải pass điều kiện, và đích không bị khoá trong đích của item chưa ghép
+        return item.canShowTargetShadow();
     }
 
     /** Unity: GetValidHintItem — duyệt các holder đang giữ item. */

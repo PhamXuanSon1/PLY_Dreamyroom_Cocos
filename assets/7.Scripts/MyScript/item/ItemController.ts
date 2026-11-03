@@ -13,6 +13,7 @@ import { UIManager } from '../managers/UIManager';
 import { WorldScrollManager } from '../managers/WorldScrollManager';
 import { SeatHandler } from '../utils/SeatHandler';
 import { HolderSlot } from '../utils/HolderSlot';
+import { DrawerHandler } from '../utils/DrawerHandler';
 import { TurnOnSpine } from '../utils/TurnOnSpine';
 import { ChangeLight } from '../utils/ChangeLight';
 import { Ply_Pool, PoolType as PlyPoolType } from '../ScriptTemplate/Ply_Pool';
@@ -262,6 +263,7 @@ export class ItemController extends Component implements IPointerHandler {
         let bestDist = Infinity;
         for (const t of this.candidateTargets) {
             if (ItemController.isTargetClaimed(t)) continue;
+            if (this.getLockingParentItem(t)) continue;
             const dist = Vec3.distance(itemPos, t.worldPosition);
             const aabb = t.getComponent(Collider2D)?.worldAABB;
             const inside = !!aabb && aabb.contains(itemPos2D);
@@ -349,6 +351,9 @@ export class ItemController extends Component implements IPointerHandler {
         this.initialWorldPos = this.node.worldPosition.clone();
         // Đích của item có thể đã bị item giống nó chiếm -> đổi sang đích trống trước khi hiện bóng
         this.ensureFreeTarget();
+
+        // Đích nằm trong ngăn kéo đang đóng -> mở ngăn ra để thấy bóng đích
+        if (this.canShowTargetShadow()) DrawerHandler.findFor(this.targetPoint)?.openDrawer();
 
         // Item trong khay: đổi NGAY về scale thật trong phòng (= target), không tween phóng to
         const inTray = ItemTray.instance?.onItemPicked(this) ?? false;
@@ -449,10 +454,39 @@ export class ItemController extends Component implements IPointerHandler {
         FollowNode.setSuppressedFor(target, true);
     }
 
-    /** Bóng ở đích chỉ được hiện khi SeatHandler (nếu có) đã thoả requiredItems. */
+    /**
+     * Bóng ở đích chỉ được hiện khi SeatHandler (nếu có) đã thoả requiredItems
+     * và đích không nằm trong đích của item khác chưa ghép (vd đồ trong tủ lạnh).
+     */
     canShowTargetShadow(): boolean {
         const seat = this.getComponent(SeatHandler);
-        return !seat || seat.canPlace();
+        if (seat && !seat.canPlace()) return false;
+        return !this.getLockingParentItem(this.targetPoint);
+    }
+
+    /**
+     * Đích nằm bên trong đích của item khác (vd HolderDrawer_tu lanh_sua nằm trong Holder_tu lanh f)
+     * mà item đó chưa ghép -> đích đang bị ẩn theo cha, chưa được ghép vào.
+     */
+    private getLockingParentItem(target: Node | null): ItemController | null {
+        if (!target || !target.isValid) return null;
+        const others: ItemController[] = [];
+        const itemList = ItemManager.instance?.itemList;
+        if (itemList && itemList.length > 0) {
+            for (const n of itemList) {
+                const ic = n?.isValid ? n.getComponent(ItemController) : null;
+                if (ic) others.push(ic);
+            }
+        } else {
+            others.push(...ItemController.instances);
+        }
+        for (let n = target.parent; n; n = n.parent) {
+            for (const other of others) {
+                if (other === this || other.isPlaced || !other.isValid) continue;
+                if (other.targetPoint === n || other.homeTarget === n) return other;
+            }
+        }
+        return null;
     }
 
     /** Tắt bóng khi thả tay mà chưa ghép được. Bỏ qua nếu bóng là persistent. */
@@ -492,6 +526,9 @@ export class ItemController extends Component implements IPointerHandler {
     private snapFailed(): void {
         // Thả hụt KHÔNG tốn lượt bóng — lần cầm sau vẫn xin lại bình thường
         this.usedDragShadow = false;
+
+        // Thả hụt -> đóng lại ngăn kéo vừa mở lúc cầm item
+        DrawerHandler.findFor(this.targetPoint)?.closeDrawer();
 
         // Item trong khay -> bay về lại ô của nó
         if (ItemTray.instance?.returnItem(this)) {
@@ -605,6 +642,8 @@ export class ItemController extends Component implements IPointerHandler {
 
             // 6. Hiệu ứng Blink / Star FX
             this.spawnBlinkEffect(target);
+            // Đích trong ngăn kéo -> ghép xong tự đóng ngăn lại
+            DrawerHandler.findFor(target)?.closeAfterDelay();
 
             // 7. Báo cho ItemManager tiến độ
             //    Item được cấp bóng lúc kéo -> giờ mới trừ 1 lượt trong shadowItemCount.
