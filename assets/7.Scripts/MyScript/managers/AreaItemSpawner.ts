@@ -1,6 +1,7 @@
 /**
- * AreaItemSpawner — nhả item ra sẵn (lơ lửng) thay cho hộp quà (BoxController). 2 chế độ:
+ * AreaItemSpawner — chọn cách nhả item ra cho người chơi (mode). 3 chế độ:
  *
+ *   - Box: hộp quà như cũ (BoxController) — click hộp, item nhảy vào Holder. Spawner chỉ giữ danh sách Holder.
  *   - Holder Nodes: item bay vào các node Holder cố định (HolderSlot). Lượt có nhiều item hơn số
  *     Holder -> item dư xếp hàng, Holder nào trống (item vừa ghép xong) thì item kế tiếp vào thế chỗ.
  *   - Spawn Area: item rải ngẫu nhiên trong 1 vùng Collider2D, mỗi item 1 HolderSlot tạo động
@@ -8,7 +9,7 @@
  *   Item lơ lửng luôn được phóng cho bằng kích thước đích trong phòng (ItemGraphic.fitToTarget).
  *   Danh sách Holder nằm ở đây (không ở ItemManager) — hộp quà (BoxController) cũng lấy Holder từ đây.
  *
- *   Vào game: tắt hộp + tay chỉ hộp, chạy intro phòng (BaseRoomManager), xong thì nhả item
+ *   Holder Nodes / Spawn Area — vào game: tắt hộp + tay chỉ hộp, chạy intro phòng (BaseRoomManager), xong thì nhả item
  *   của lượt hiện tại (ItemManager.spawnLimit).
  *   MapPhaseManager: phòng chuyển khung lượt mới xong -> gọi spawnAvailable() nhả item lượt mới.
  *
@@ -30,9 +31,11 @@ import { TweenUtil } from '../core/TweenUtil';
 
 const { ccclass, property } = _decorator;
 
+/** Giá trị giữ nguyên số cũ (scene đã lưu mode = 0/1), Box thêm sau = 2. */
 export enum SpawnMode {
     HolderNodes = 0,
     SpawnArea = 1,
+    Box = 2,
 }
 Enum(SpawnMode);
 
@@ -41,21 +44,20 @@ export class AreaItemSpawner extends Component {
 
     static instance: AreaItemSpawner | null = null;
 
-    /** Spawner đang dùng (bật trong scene) -> MapPhaseManager bỏ hộp, gọi spawnAvailable(). */
+    /** Spawner tự nhả item (mode khác Box) -> MapPhaseManager bỏ hộp, gọi spawnAvailable(). */
     static get active(): AreaItemSpawner | null {
         const s = AreaItemSpawner.instance;
-        return s && s.isValid && s.enabledInHierarchy ? s : null;
+        return s && s.isValid && s.enabledInHierarchy && s.mode !== SpawnMode.Box ? s : null;
     }
 
-    @property({ type: Enum(SpawnMode), tooltip: 'Holder Nodes: item vào các node Holder cố định. Spawn Area: item rải ngẫu nhiên trong vùng Collider2D.' })
+    @property({ type: Enum(SpawnMode), tooltip: 'Box: click hộp quà, item nhảy vào Holder. Holder Nodes: vào map item tự vào các Holder cố định. Spawn Area: vào map item rải ngẫu nhiên trong vùng Collider2D.' })
     mode: SpawnMode = SpawnMode.SpawnArea;
 
-    // ---- Holder Nodes ----
+    // ---- Holder (Box / Holder Nodes) ----
     @property({
         type: [Node],
-        tooltip: 'Các node Holder (có HolderSlot) theo thứ tự lấp. Hộp quà (BoxController) cũng lấy Holder từ đây. '
-            + 'Trống = tự dò mọi HolderSlot trong scene.',
-        visible(this: AreaItemSpawner) { return this.mode === SpawnMode.HolderNodes; },
+        tooltip: 'Các node Holder (có HolderSlot) theo thứ tự lấp. Trống = tự dò mọi HolderSlot trong scene.',
+        visible(this: AreaItemSpawner) { return this.mode !== SpawnMode.SpawnArea; },
     })
     holders: Node[] = [];
 
@@ -85,24 +87,26 @@ export class AreaItemSpawner extends Component {
     @property({ tooltip: 'Thời gian 1 chu kỳ nhấp nhô (giây). Mỗi item lệch ngẫu nhiên ±15% để không nhấp nhô cùng nhịp.', min: 0.1, visible(this: AreaItemSpawner) { return this.mode === SpawnMode.SpawnArea; } })
     bobbingDuration = 1.6;
 
-    // ---- chung ----
-    @property({ tooltip: 'Vào game: chờ bao nhiêu giây rồi mới chạy intro phòng.', min: 0 })
+    // ---- chung (Holder Nodes / Spawn Area) ----
+    @property({ group: { name: 'Nhả item', id: 'spawnCommon' }, tooltip: 'Vào game: chờ bao nhiêu giây rồi mới chạy intro phòng.', min: 0, visible(this: AreaItemSpawner) { return this.selfSpawn; } })
     startDelay = 0.5;
 
-    @property({ tooltip: 'Nhả item sau khi intro phòng chạy xong (tắt = nhả cùng lúc với intro).' })
+    @property({ group: { name: 'Nhả item', id: 'spawnCommon' }, tooltip: 'Nhả item sau khi intro phòng chạy xong (tắt = nhả cùng lúc với intro).', visible(this: AreaItemSpawner) { return this.selfSpawn; } })
     spawnAfterIntro = true;
 
-    @property({ tooltip: 'Khoảng cách giữa 2 item hiện ra liên tiếp (giây).', min: 0 })
+    @property({ group: { name: 'Nhả item', id: 'spawnCommon' }, tooltip: 'Khoảng cách giữa 2 item hiện ra liên tiếp (giây).', min: 0, visible(this: AreaItemSpawner) { return this.selfSpawn; } })
     staggerInterval = 0.08;
 
-    @property({ tooltip: 'Thời gian item phóng to từ 0 khi hiện ra (giây).', min: 0.01 })
+    @property({ group: { name: 'Nhả item', id: 'spawnCommon' }, tooltip: 'Thời gian item phóng to từ 0 khi hiện ra (giây).', min: 0.01, visible(this: AreaItemSpawner) { return this.selfSpawn; } })
     popDuration = 0.4;
 
-    @property({ tooltip: 'Xoay ngẫu nhiên item trong khoảng ±N độ khi hiện ra (0 = không xoay).', min: 0 })
+    @property({ group: { name: 'Nhả item', id: 'spawnCommon' }, tooltip: 'Xoay ngẫu nhiên item trong khoảng ±N độ khi hiện ra (0 = không xoay).', min: 0, visible(this: AreaItemSpawner) { return this.selfSpawn; } })
     randomRotation = 15;
 
-    @property({ tooltip: 'Tắt hộp quà (BoxManager.box) và tay chỉ hộp lúc vào game.' })
-    hideBox = true;
+    /** Spawner tự nhả item (không dùng hộp). */
+    private get selfSpawn(): boolean {
+        return this.mode !== SpawnMode.Box;
+    }
 
     private slots: HolderSlot[] = [];
     /** Holder Nodes: item chờ Holder trống. */
@@ -120,6 +124,8 @@ export class AreaItemSpawner extends Component {
     }
 
     start() {
+        // Box: hộp tự lo (click hộp lần đầu mới chạy intro + nhả item)
+        if (!this.selfSpawn) return;
         // chạy sau ItemManager.start() (đã thu scale item về 0 + ẩn đích)
         this.scheduleOnce(() => this.beginGame(), this.startDelay);
     }
@@ -129,17 +135,16 @@ export class AreaItemSpawner extends Component {
         if (this.started) return;
         this.started = true;
 
+        // Không dùng hộp: tắt hộp + tay chỉ hộp
         const im = ItemManager.instance;
         const box = BoxManager.instance?.box?.getComponent(BoxController) ?? null;
-        if (this.hideBox) {
-            if (box) {
-                if (box.handText) box.handText.active = false;
-                if (box.handOfBox) box.handOfBox.node.active = false;
-                box.node.active = false;
-            }
-            if (im?.handIntro) im.handIntro.active = false;
+        if (box) {
+            if (box.handText) box.handText.active = false;
+            if (box.handOfBox) box.handOfBox.node.active = false;
+            if (box.slider) box.slider.active = true;
+            box.node.active = false;
         }
-        if (box?.slider) box.slider.active = true;
+        if (im?.handIntro) im.handIntro.active = false;
 
         im?.enableFirstClickObjects();
         im?.onBoxFirstClicked();

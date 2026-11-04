@@ -1,5 +1,8 @@
 /**
- * MapPhaseManager — chia map thành nhiều lượt rớt item từ hộp.
+ * MapPhaseManager — chọn cách chơi của màn (playMode):
+ *   - Single Phase: 1 lượt, item = con của `items` (trống = ItemManager.itemList kéo tay).
+ *   - Multi Phase: chia map thành nhiều lượt theo `phases` (mô tả bên dưới).
+ * Item được nhả ra bằng gì (hộp / Holder / vùng spawn) do AreaItemSpawner.mode quyết định.
  *
  *   Lượt 1: hộp chỉ rớt item của phases[0].items. Rớt hết -> hộp bay đi (boxExitOffset) và tắt.
  *   Ghép xong mọi item lượt 1 -> các món trong phases[0].afterComplete lần lượt hiện từ trên rơi
@@ -15,7 +18,7 @@
  * Chỉ hỗ trợ ItemManager.spawnFromLast = false.
  */
 
-import { _decorator, Component, Node, Vec3, UIOpacity, AudioClip, AudioSource } from 'cc';
+import { _decorator, Component, Enum, Node, Vec3, UIOpacity, AudioClip, AudioSource } from 'cc';
 import { Ply_SoundManager } from '../ScriptTemplate/Ply_SoundManager';
 import { ItemManager } from './ItemManager';
 import { BoxManager } from './BoxManager';
@@ -71,62 +74,85 @@ interface AfterEntry {
     target: Node;
 }
 
+/** Cách chơi của màn. */
+export enum PlayMode {
+    /** 1 lượt: toàn bộ item của `items` (hoặc ItemManager.itemList), không chuyển khung phòng. */
+    SinglePhase = 0,
+    /** Nhiều lượt theo `phases`: ghép xong lượt -> món rơi -> phòng chuyển khung -> nhả item lượt sau. */
+    MultiPhase = 1,
+}
+Enum(PlayMode);
+
 @ccclass('MapPhaseManager')
 export class MapPhaseManager extends Component {
 
     static instance: MapPhaseManager | null = null;
 
-    @property({ type: [MapPhase], tooltip: 'Các lượt theo thứ tự. Để trống = tắt, hộp rớt toàn bộ itemList như cũ.' })
+    @property({ type: Enum(PlayMode), tooltip: 'Single Phase: chơi 1 lượt. Multi Phase: chơi nhiều lượt theo Phases (mỗi lượt 1 khung nhìn phòng).' })
+    playMode: PlayMode = PlayMode.MultiPhase;
+
+    @property({
+        type: Node,
+        tooltip: 'Node cha chứa item của màn (thứ tự Hierarchy = thứ tự nhả). Trống = dùng ItemManager.itemList kéo tay.',
+        visible(this: MapPhaseManager) { return this.playMode === PlayMode.SinglePhase; },
+    })
+    items: Node | null = null;
+
+    @property({ type: [MapPhase], tooltip: 'Các lượt theo thứ tự.', visible(this: MapPhaseManager) { return this.isMulti; } })
     phases: MapPhase[] = [];
 
     // ---------------- món rơi sau khi xong lượt ----------------
-    @property({ tooltip: 'Chờ bao lâu (giây) sau khi ghép xong item cuối của lượt thì bắt đầu rơi.', min: 0 })
+    @property({ group: { name: 'Món rơi', id: 'phaseAfter' }, tooltip: 'Chờ bao lâu (giây) sau khi ghép xong item cuối của lượt thì bắt đầu rơi.', min: 0, visible(this: MapPhaseManager) { return this.isMulti; } })
     delayBeforeAfter = 0.5;
 
-    @property({ tooltip: 'N giây giữa 2 món rơi liên tiếp.', min: 0 })
+    @property({ group: { name: 'Món rơi', id: 'phaseAfter' }, tooltip: 'N giây giữa 2 món rơi liên tiếp.', min: 0, visible(this: MapPhaseManager) { return this.isMulti; } })
     afterInterval = 0.4;
 
-    @property({ tooltip: 'Món bắt đầu rơi từ cao hơn chỗ đặt bao nhiêu (px, world).' })
+    @property({ group: { name: 'Món rơi', id: 'phaseAfter' }, tooltip: 'Món bắt đầu rơi từ cao hơn chỗ đặt bao nhiêu (px, world).', visible(this: MapPhaseManager) { return this.isMulti; } })
     fallHeight = 300;
 
-    @property({ tooltip: 'Thời gian rơi + hiện dần của mỗi món (giây).', min: 0.01 })
+    @property({ group: { name: 'Món rơi', id: 'phaseAfter' }, tooltip: 'Thời gian rơi + hiện dần của mỗi món (giây).', min: 0.01, visible(this: MapPhaseManager) { return this.isMulti; } })
     fallDuration = 0.6;
 
-    @property({ tooltip: 'Easing khi rơi (tên easing của cc.tween, vd bounceOut, backOut, quadOut).' })
+    @property({ group: { name: 'Món rơi', id: 'phaseAfter' }, tooltip: 'Easing khi rơi (tên easing của cc.tween, vd bounceOut, backOut, quadOut).', visible(this: MapPhaseManager) { return this.isMulti; } })
     fallEasing = 'bounceOut';
 
     // ---------------- âm thanh ----------------
-    @property({ type: AudioClip, tooltip: 'Phát 1 lần khi ghép xong hết item của 1 lượt (vd hết map 1 -> sang map 2). Để trống = không phát.' })
+    @property({ group: { name: 'Âm thanh', id: 'phaseSound' }, type: AudioClip, tooltip: 'Phát 1 lần khi ghép xong hết item của 1 lượt (vd hết map 1 -> sang map 2). Để trống = không phát.', visible(this: MapPhaseManager) { return this.isMulti; } })
     phaseCompleteSound: AudioClip | null = null;
 
-    @property({ tooltip: 'Âm lượng phaseCompleteSound.', range: [0, 1, 0.05], slide: true })
+    @property({ group: { name: 'Âm thanh', id: 'phaseSound' }, tooltip: 'Âm lượng phaseCompleteSound.', range: [0, 1, 0.05], slide: true, visible(this: MapPhaseManager) { return this.isMulti; } })
     phaseCompleteVolume = 1;
 
-    @property({ tooltip: 'Phát phaseCompleteSound sau N giây kể từ lúc ghép xong item cuối của lượt (0 = phát ngay).', min: 0 })
+    @property({ group: { name: 'Âm thanh', id: 'phaseSound' }, tooltip: 'Phát phaseCompleteSound sau N giây kể từ lúc ghép xong item cuối của lượt (0 = phát ngay).', min: 0, visible(this: MapPhaseManager) { return this.isMulti; } })
     phaseCompleteSoundDelay = 0;
 
-    // ---------------- hộp ----------------
-    @property({ type: Vec3, tooltip: 'Hộp bay đi theo vector này (world, tính từ chỗ đang đứng) khi rớt hết item của lượt.' })
+    // ---------------- hộp (chỉ dùng khi AreaItemSpawner.mode = Box) ----------------
+    @property({ group: { name: 'Hộp (Spawn Mode = Box)', id: 'phaseBox' }, type: Vec3, tooltip: 'Hộp bay đi theo vector này (world, tính từ chỗ đang đứng) khi rớt hết item của lượt.', visible(this: MapPhaseManager) { return this.isMulti; } })
     boxExitOffset = new Vec3(0, -700, 0);
 
-    @property({ tooltip: 'Thời gian hộp bay đi / bay về (giây).', min: 0.01 })
+    @property({ group: { name: 'Hộp (Spawn Mode = Box)', id: 'phaseBox' }, tooltip: 'Thời gian hộp bay đi / bay về (giây).', min: 0.01, visible(this: MapPhaseManager) { return this.isMulti; } })
     boxFlyDuration = 0.6;
 
-    @property({ tooltip: 'Easing khi hộp bay đi.' })
+    @property({ group: { name: 'Hộp (Spawn Mode = Box)', id: 'phaseBox' }, tooltip: 'Easing khi hộp bay đi.', visible(this: MapPhaseManager) { return this.isMulti; } })
     boxExitEasing = 'backIn';
 
-    @property({ tooltip: 'Easing khi hộp bay về.' })
+    @property({ group: { name: 'Hộp (Spawn Mode = Box)', id: 'phaseBox' }, tooltip: 'Easing khi hộp bay về.', visible(this: MapPhaseManager) { return this.isMulti; } })
     boxReturnEasing = 'backOut';
 
-    @property({ tooltip: 'Chờ bao lâu (giây) sau khi món cuối rơi xong thì phòng chuyển khung + hộp bay về (cùng lúc).', min: 0 })
+    @property({ group: { name: 'Hộp (Spawn Mode = Box)', id: 'phaseBox' }, tooltip: 'Chờ bao lâu (giây) sau khi món cuối rơi xong thì phòng chuyển khung + hộp bay về (cùng lúc).', min: 0, visible(this: MapPhaseManager) { return this.isMulti; } })
     delayBeforeBoxReturn = 0.5;
 
     // ---------------- phòng ----------------
-    @property({ tooltip: 'Thời gian phòng di chuyển / đổi scale sang khung nhìn lượt mới (giây).', min: 0.01 })
+    @property({ group: { name: 'Phòng', id: 'phaseRoom' }, tooltip: 'Thời gian phòng di chuyển / đổi scale sang khung nhìn lượt mới (giây).', min: 0.01, visible(this: MapPhaseManager) { return this.isMulti; } })
     roomMoveDuration = 1;
 
-    @property({ tooltip: 'Easing khi phòng di chuyển sang lượt mới.' })
+    @property({ group: { name: 'Phòng', id: 'phaseRoom' }, tooltip: 'Easing khi phòng di chuyển sang lượt mới.', visible(this: MapPhaseManager) { return this.isMulti; } })
     roomMoveEasing = 'sineInOut';
+
+    private get isMulti(): boolean {
+        return this.playMode === PlayMode.MultiPhase;
+    }
 
     /** Item của từng lượt (đã lọc node có ItemController). */
     private phaseItems: Node[][] = [];
@@ -147,6 +173,17 @@ export class MapPhaseManager extends Component {
 
         // Chạy trước mọi start(): ItemManager / UIManager đọc itemList trong start()
         this.itemManager = this.node.scene?.getComponentsInChildren(ItemManager)[0] ?? null;
+
+        if (!this.isMulti) {
+            // 1 lượt: lấy item từ node cha `items` (trống = giữ ItemManager.itemList kéo tay), không chia lượt
+            const list = MapPhaseManager.itemsUnder(this.items);
+            if (this.itemManager && list.length > 0) this.itemManager.itemList = list;
+            this.phaseItems = [];
+            this.afterEntries = [];
+            console.log(`[MapPhaseManager] Single Phase: ${this.itemManager?.itemList.length ?? 0} item`);
+            return;
+        }
+
         // Lượt không có item (items trống / không có ItemController) -> bỏ, nếu không hộp sẽ bay về mà không có gì để rớt
         const empty = this.phases.filter((p) => MapPhaseManager.itemsUnder(p.items).length === 0).length;
         if (empty > 0) {

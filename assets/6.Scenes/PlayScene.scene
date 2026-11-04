@@ -117584,6 +117584,8 @@
     },
     "_enabled": true,
     "__prefab": null,
+    "playMode": 1,
+    "items": null,
     "phases": [
       {
         "__id__": 3526
@@ -118698,7 +118700,6 @@
     "staggerInterval": 0.08,
     "popDuration": 0.4,
     "randomRotation": 15,
-    "hideBox": true,
     "_id": "13nMC/ip9Igp0G63dNPNTm"
   },
   {

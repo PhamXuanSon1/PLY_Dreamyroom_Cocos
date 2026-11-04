@@ -55,7 +55,7 @@ export class ItemManager extends Component {
     @property({ tooltip: 'Lấy item từ cuối danh sách (từ dưới lên trên).' })
     spawnFromLast = false;
 
-    @property({ type: [Node], tooltip: 'Danh sách các item sẽ rớt ra từ trong hộp.' })
+    @property({ type: [Node], tooltip: 'Item của màn — chỉ cần kéo tay khi MapPhaseManager ở Single Phase và để trống ô Items. Các trường hợp khác MapPhaseManager tự điền lúc chạy.' })
     itemList: Node[] = [];
 
     @property({ type: Node, tooltip: 'Item được spawn sẽ chuyển sang Store ngay lập tức. Để trống nếu không dùng.' })

@@ -16,6 +16,7 @@ import { UIManager } from '../managers/UIManager';
 import { BaseRoomManager } from '../managers/BaseRoomManager';
 import { ItemController } from '../item/ItemController';
 import { ItemMovement } from '../item/ItemMovement';
+import { ItemGraphic } from '../item/ItemGraphic';
 import { AreaItemSpawner } from '../managers/AreaItemSpawner';
 import { HandOfBox } from '../utils/HandOfBox';
 import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
@@ -189,7 +190,7 @@ export class BoxController extends Component implements IPointerHandler {
         const im = ItemManager.instance;
         if (!im) return;
 
-        // Holder do AreaItemSpawner giữ (component có thể tắt khi chơi bằng hộp — vẫn dùng danh sách Holder của nó)
+        // Holder do AreaItemSpawner giữ (mode = Box: spawner chỉ giữ danh sách Holder, hộp tự nhả item)
         const holderSlot = AreaItemSpawner.instance?.getFreeHolder() ?? null;
         if (!holderSlot) {
             console.warn('[BoxController] Hết holder trống!');
@@ -233,6 +234,8 @@ export class BoxController extends Component implements IPointerHandler {
             this.jumpEasing,
             () => {
                 holderSlot.setItem(currentItem);
+                // Holder ở UI: cho item bằng kích thước đích trong phòng (như AreaItemSpawner)
+                if (itemScript?.targetPoint) currentItem.getComponent(ItemGraphic)?.fitToTarget(itemScript.targetPoint, targetScale);
                 if (im.isStoreTriggerItem(currentItem)) {
                     UIManager.instance?.enableStoreOnAnyClick();
                     return;
