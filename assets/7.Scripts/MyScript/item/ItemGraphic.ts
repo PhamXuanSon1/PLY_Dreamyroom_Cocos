@@ -49,6 +49,11 @@ export class ItemGraphic extends Component {
 
     // ---- trạng thái shadow ở targetPoint ----
     private hiddenTargetSprites: Sprite[] = [];
+    /**
+     * Màu gốc (lúc dựng scene) của từng sprite ở đích — tô bóng / phục hồi đều nhân lên màu này,
+     * để sprite vốn đã có màu riêng (vd bóng _sd dùng ảnh gốc tô đen, ShadowReuseTool) không bị ép về trắng.
+     */
+    private static readonly originalColors = new WeakMap<Sprite, Color>();
 
     // ---- trạng thái đồng bộ zoom phòng ----
     /** undefined = chưa tìm; null = tìm rồi nhưng không có node ảnh nào. */
@@ -164,7 +169,7 @@ export class ItemGraphic extends Component {
         for (const sr of sprites) {
             this.hiddenTargetSprites.push(sr);
             if (isShadowEnabled) {
-                sr.color = ItemGraphic.targetShadowColor.clone();
+                sr.color = ItemGraphic.tintOriginal(sr, ItemGraphic.targetShadowColor);
             } else {
                 sr.enabled = false;
             }
@@ -185,9 +190,21 @@ export class ItemGraphic extends Component {
         for (const sr of this.hiddenTargetSprites) {
             if (!sr || !sr.isValid) continue;
             sr.enabled = true;
-            sr.color = ItemGraphic.targetNormalColor.clone();
+            sr.color = ItemGraphic.tintOriginal(sr, ItemGraphic.targetNormalColor);
         }
         this.hiddenTargetSprites.length = 0;
+    }
+
+    /** Màu gốc của sprite (ghi lại ở lần đầu đụng tới) nhân với `tint`. Màu gốc trắng -> đúng bằng `tint` như trước. */
+    private static tintOriginal(sr: Sprite, tint: Color): Color {
+        let orig = ItemGraphic.originalColors.get(sr);
+        if (!orig) { orig = sr.color.clone(); ItemGraphic.originalColors.set(sr, orig); }
+        return new Color(
+            Math.round(orig.r * tint.r / 255),
+            Math.round(orig.g * tint.g / 255),
+            Math.round(orig.b * tint.b / 255),
+            Math.round(orig.a * tint.a / 255),
+        );
     }
 
     // ======================================================== đồng bộ zoom phòng

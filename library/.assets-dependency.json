@@ -85,35 +85,8 @@
         "chunks\\builtin\\internal\\embedded-alpha.chunk",
         "chunks\\builtin\\internal\\alpha-test.chunk"
       ],
-      "0.Spines\\Ghosts\\char1\\char1.json": [
-        "0.Spines\\Ghosts\\char1\\char1.atlas.txt"
-      ],
-      "0.Spines\\Ghosts\\char3\\char3.json": [
-        "0.Spines\\Ghosts\\char3\\char3.atlas.txt"
-      ],
-      "0.Spines\\Ghosts\\char2\\char2.json": [
-        "0.Spines\\Ghosts\\char2\\char2.atlas.txt"
-      ],
-      "0.Spines\\Ghosts\\char4\\char4.json": [
-        "0.Spines\\Ghosts\\char4\\char4.atlas.txt"
-      ],
-      "0.Spines\\box-ingame.json": [
-        "0.Spines\\box-ingame.atlas.txt"
-      ],
       "0.Spines\\Ply44\\Char1.json": [
         "0.Spines\\Ply44\\Char1.atlas.txt"
-      ],
-      "0.Spines\\Ply44\\Char1\\Char1.json": [
-        "0.Spines\\Ply44\\Char1\\Char1.atlas.txt"
-      ],
-      "0.Spines\\Ply44\\char 2\\Char2.json": [
-        "0.Spines\\Ply44\\char 2\\Char2.atlas.txt"
-      ],
-      "0.Spines\\Ply44\\den\\Den.json": [
-        "0.Spines\\Ply44\\den\\Den.atlas.txt"
-      ],
-      "0.Spines\\Ply44\\ma\\Ma.json": [
-        "0.Spines\\Ply44\\ma\\Ma.atlas.txt"
       ],
       "8.Models\\Shaders\\SnowScroll.effect": [
         "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\resources\\3d\\engine\\editor\\assets\\chunks\\sprite-vs.chunk",
@@ -130,6 +103,33 @@
         "chunks\\sprite-fs.chunk",
         "chunks\\builtin\\internal\\embedded-alpha.chunk",
         "chunks\\builtin\\internal\\alpha-test.chunk"
+      ],
+      "0.Spines\\box-ingame.json": [
+        "0.Spines\\box-ingame.atlas.txt"
+      ],
+      "0.Spines\\Ghosts\\char1\\char1.json": [
+        "0.Spines\\Ghosts\\char1\\char1.atlas.txt"
+      ],
+      "0.Spines\\Ghosts\\char2\\char2.json": [
+        "0.Spines\\Ghosts\\char2\\char2.atlas.txt"
+      ],
+      "0.Spines\\Ghosts\\char3\\char3.json": [
+        "0.Spines\\Ghosts\\char3\\char3.atlas.txt"
+      ],
+      "0.Spines\\Ghosts\\char4\\char4.json": [
+        "0.Spines\\Ghosts\\char4\\char4.atlas.txt"
+      ],
+      "0.Spines\\Ply44\\char 2\\Char2.json": [
+        "0.Spines\\Ply44\\char 2\\Char2.atlas.txt"
+      ],
+      "0.Spines\\Ply44\\Char1\\Char1.json": [
+        "0.Spines\\Ply44\\Char1\\Char1.atlas.txt"
+      ],
+      "0.Spines\\Ply44\\den\\Den.json": [
+        "0.Spines\\Ply44\\den\\Den.atlas.txt"
+      ],
+      "0.Spines\\Ply44\\ma\\Ma.json": [
+        "0.Spines\\Ply44\\ma\\Ma.atlas.txt"
       ]
     },
     "uuid": {

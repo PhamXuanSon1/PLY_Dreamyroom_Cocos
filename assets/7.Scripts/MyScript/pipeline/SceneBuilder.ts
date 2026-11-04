@@ -24,6 +24,7 @@ import {
     JsonAsset, resources, CCClass, js, Size, sp, assetManager, Asset, CCObject, Sorting2D, UIRenderer,
 } from 'cc';
 import { FollowNode } from './FollowNode';
+import { ShadowReuseTool } from './ShadowReuseTool';
 import { EDITOR } from 'cc/env';
 import { MaterialType } from '../item/ItemController';
 
@@ -168,6 +169,12 @@ export class SceneBuilder extends Component {
     @property({ tooltip: 'Tự dựng khi Play. TẮT nếu đã bake node vào scene, không thì dựng chồng.' })
     buildOnStart = false;
 
+    @property({
+        tooltip: 'Dựng xong (trong Editor): bóng "_sd" nào chỉ là ảnh gốc tô đen thì dùng luôn ảnh gốc + màu đen mờ '
+            + '(ShadowReuseTool) — bớt ảnh phải tải lúc load game. Bóng có hình khác ảnh gốc giữ nguyên.',
+    })
+    reuseShadowSprites = true;
+
     // ---- nút bấm trong Inspector (checkbox tự nhả ra) ----
 
     @property({ tooltip: 'Tick để dựng node ngay trong Editor. Xong nhớ Ctrl+S lưu scene.' })
@@ -257,6 +264,7 @@ export class SceneBuilder extends Component {
         }
 
         if (EDITOR) {
+            if (this.reuseShadowSprites) await ShadowReuseTool.run(this.node, true);
             console.log('[SceneBuilder] Đang ở Editor — nhấn Ctrl+S để lưu node vào scene.');
             try { Ed?.Message?.send('scene', 'snapshot'); } catch { /* để Ctrl+Z được */ }
         }
