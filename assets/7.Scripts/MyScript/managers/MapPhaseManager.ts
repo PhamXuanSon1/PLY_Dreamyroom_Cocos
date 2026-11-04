@@ -1,10 +1,10 @@
 /**
  * MapPhaseManager — chọn cách chơi của màn (playMode):
- *   - Single Phase: 1 lượt, item = con của `items` (trống = ItemManager.itemList kéo tay).
+ *   - Single Phase: 1 lượt, item = danh sách `Items` (kéo từng item vào).
  *   - Multi Phase: chia map thành nhiều lượt theo `phases` (mô tả bên dưới).
  * Item được nhả ra bằng gì (hộp / Holder / vùng spawn) do AreaItemSpawner.mode quyết định.
  *
- *   Lượt 1: hộp chỉ rớt item của phases[0].items. Rớt hết -> hộp bay đi (boxExitOffset) và tắt.
+ *   Lượt 1: chỉ nhả item của phases[0].itemList. Rớt hết -> hộp bay đi (boxExitOffset) và tắt.
  *   Ghép xong mọi item lượt 1 -> các món trong phases[0].afterComplete lần lượt hiện từ trên rơi
  *   xuống (cách nhau afterInterval giây) -> phòng chuyển sang khung nhìn lượt mới (moveRoom, nếu bật),
  *   cùng lúc hộp bật lại, bay về chỗ cũ, bật tay chỉ.
@@ -36,8 +36,8 @@ const { ccclass, property } = _decorator;
 
 @ccclass('MapPhase')
 export class MapPhase {
-    @property({ type: Node, tooltip: 'Node cha chứa item của lượt này (vd ItemsMap1). Hộp rớt theo thứ tự trong Hierarchy.' })
-    items: Node | null = null;
+    @property({ type: [Node], displayName: 'Items', tooltip: 'Các item của lượt này, kéo từng item vào — thứ tự trong danh sách = thứ tự nhả.' })
+    itemList: Node[] = [];
 
     @property({ type: [Node], tooltip: 'Các món tự rơi xuống khi ghép xong lượt này. Mỗi phần tử là node cha chứa item (vd ItemAfterCompleteMap1) hoặc chính node item. Để trống nếu không có.' })
     afterComplete: Node[] = [];
@@ -95,11 +95,12 @@ export class MapPhaseManager extends Component {
     playMode: PlayMode = PlayMode.MultiPhase;
 
     @property({
-        type: Node,
-        tooltip: 'Node cha chứa item của màn (thứ tự Hierarchy = thứ tự nhả). Trống = dùng ItemManager.itemList kéo tay.',
+        type: [Node],
+        displayName: 'Items',
+        tooltip: 'Các item của màn, kéo từng item vào — thứ tự trong danh sách = thứ tự nhả.',
         visible(this: MapPhaseManager) { return this.playMode === PlayMode.SinglePhase; },
     })
-    items: Node | null = null;
+    singleItems: Node[] = [];
 
     @property({ type: [MapPhase], tooltip: 'Các lượt theo thứ tự.', visible(this: MapPhaseManager) { return this.isMulti; } })
     phases: MapPhase[] = [];
@@ -177,34 +178,36 @@ export class MapPhaseManager extends Component {
         // Chạy trước mọi start(): ItemManager / UIManager đọc itemList trong start()
         this.itemManager = this.node.scene?.getComponentsInChildren(ItemManager)[0] ?? null;
 
+        const im = this.itemManager;
+
         if (!this.isMulti) {
-            // 1 lượt: lấy item từ node cha `items` (trống = giữ ItemManager.itemList kéo tay), không chia lượt
-            const list = MapPhaseManager.itemsUnder(this.items);
-            if (this.itemManager && list.length > 0) this.itemManager.itemList = list;
+            // 1 lượt: item = danh sách singleItems, không chia lượt
+            if (im) im.itemList = MapPhaseManager.validItems(this.singleItems);
             this.phaseItems = [];
             this.afterEntries = [];
-            console.log(`[MapPhaseManager] Single Phase: ${this.itemManager?.itemList.length ?? 0} item`);
+            console.log(`[MapPhaseManager] Single Phase: ${im?.itemList.length ?? 0} item`);
             return;
         }
 
-        // Lượt không có item (items trống / không có ItemController) -> bỏ, nếu không hộp sẽ bay về mà không có gì để rớt
-        const empty = this.phases.filter((p) => MapPhaseManager.itemsUnder(p.items).length === 0).length;
+        // Lượt không có item (danh sách trống / không có ItemController) -> bỏ, nếu không hộp sẽ bay về mà không có gì để rớt
+        const empty = this.phases.filter((p) => MapPhaseManager.validItems(p.itemList).length === 0).length;
         if (empty > 0) {
             console.warn(`[MapPhaseManager] Bỏ ${empty} lượt không có item.`);
-            this.phases = this.phases.filter((p) => MapPhaseManager.itemsUnder(p.items).length > 0);
+            this.phases = this.phases.filter((p) => MapPhaseManager.validItems(p.itemList).length > 0);
         }
-        this.phaseItems = this.phases.map((p) => MapPhaseManager.itemsUnder(p.items));
+        this.phaseItems = this.phases.map((p) => MapPhaseManager.validItems(p.itemList));
         this.afterEntries = this.phases.map((p) => MapPhaseManager.afterEntriesOf(p.afterComplete));
 
-        if (!this.enabledPhases || !this.itemManager) return;
-        const im = this.itemManager;
+        if (!im) return;
+        // ItemManager chỉ giữ itemList lúc chạy — luôn dựng từ đây (kể cả khi chỉ còn 1 lượt)
+        im.itemList = ([] as Node[]).concat(...this.phaseItems);
+        if (!this.enabledPhases) return;
         if (im.spawnFromLast) {
             console.warn('[MapPhaseManager] Không hỗ trợ ItemManager.spawnFromLast = true — tắt chia lượt.');
             this.phaseItems = [];
             return;
         }
 
-        im.itemList = ([] as Node[]).concat(...this.phaseItems);
         im.spawnLimit = this.phaseItems[0].length;
 
         // Món tự rơi: node item tắt hẳn (không kéo được), đích ẩn tới lúc rơi.
@@ -234,7 +237,16 @@ export class MapPhaseManager extends Component {
         if (this.itemManager?.isValid) this.itemManager.node.off(ItemManager.EVENT_ITEM_ARRIVED, this.onItemArrived, this);
     }
 
-    /** Con trực tiếp có ItemController, theo thứ tự Hierarchy. */
+    /** Item hợp lệ (còn tồn tại, có ItemController) trong danh sách, giữ thứ tự, bỏ trùng. */
+    private static validItems(list: Node[] | null): Node[] {
+        const out: Node[] = [];
+        for (const n of list ?? []) {
+            if (n && n.isValid && n.getComponent(ItemController) && !out.includes(n)) out.push(n);
+        }
+        return out;
+    }
+
+    /** Con trực tiếp có ItemController, theo thứ tự Hierarchy (afterComplete nhận cả node cha). */
     private static itemsUnder(parent: Node | null): Node[] {
         if (!parent) return [];
         return parent.children.filter((c) => !!c.getComponent(ItemController));
