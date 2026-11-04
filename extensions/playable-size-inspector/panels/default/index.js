@@ -1,2673 +1,1894 @@
 'use strict';
 
-const fs = require('fs/promises');
-const path = require('path');
+/**
+ * Khung panel: 3 bước Tổng quan → Tìm chỗ nặng → Tối ưu, phân tích tự động (khi mở panel và
+ * khi có bản build mới đã build xong), "Việc nên làm", banner bản build cũ, Lịch sử + hoàn tác,
+ * và khung Chi tiết dùng chung. Nội dung từng bước nằm ở explore-tab.js / texture-tab.js /
+ * audio-tab.js / engine-tab.js / model-tab.js.
+ * "So với lần build trước" (ô cạnh tổng dung lượng, chênh lệch từng file, legend theo nhóm) đọc
+ * cùng một mốc: bản build trước của cùng thư mục (build-baseline.json), chỉ đổi khi build lại.
+ */
 
+const path = require('path');
+const {
+  scanBuild,
+  diffAgainstSnapshot,
+  buildSourceSizeIndex,
+  stableBuildPath,
+  formatBytes,
+  findBuildSettings,
+} = require('../../lib/build-scan');
+const { isDirectory, isSameResolvedPath } = require('../../lib/fs-utils');
+const { buildInsights, findAssetsChangedAfter } = require('../../lib/insights');
+const { isBuildFolder, listBuildFolders, pickDefaultBuild } = require('../../lib/build-folders');
+const { findExportSets, updateExportHistory, detectExporter } = require('../../lib/exports');
+const { checkSetup, describeExporterNote } = require('../../lib/setup-check');
+const { readCaps } = require('../../lib/compat');
+const { moduleBuildShare } = require('../../lib/engine-modules');
+const { HEAVY_TRIANGLES } = require('../../lib/model-compress');
+const exploreTab = require('./explore-tab');
+const textureTab = require('./texture-tab');
+const audioTab = require('./audio-tab');
+const engineTab = require('./engine-tab');
+const modelTab = require('./model-tab');
+const audioPlayer = require('./audio-player');
+
+const PACKAGE_NAME = 'playable-size-inspector';
 const template = require('fs').readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+/** Phiên bản tool (package.json), hiện ở thanh trạng thái để biết bản nào đang chạy khi chép sang dự án khác. */
+const TOOL_VERSION = (() => {
+  try {
+    return String(JSON.parse(require('fs').readFileSync(path.join(__dirname, '..', '..', 'package.json'), 'utf8')).version || '');
+  } catch (_error) {
+    return '';
+  }
+})();
 const style = require('fs').readFileSync(path.join(__dirname, 'index.css'), 'utf8');
 const DEFAULT_BUILD_ROOT = 'build/web-mobile';
-const DEFAULT_OUTPUT_ROOT = 'build/playable-size-inspector/web-mobile';
-const DEFAULT_EXPORT_ROOT = 'build/playable-size-inspector/exports';
-const SAFE_BULK_MAX_TEXTURE_SIZE = 4096;
-const SAFE_BULK_JPEG_QUALITY = 82;
+/** Chu kỳ dò bản build mới (ms). Build ghi file trong vài giây nên phải thấy "đứng yên" 2 nhịp liền mới quét. */
+const BUILD_WATCH_INTERVAL = 2500;
+/** Số nhịp chữ ký bản build phải đứng yên (kèm đã có settings.json) mới coi là build xong. */
+const BUILD_STABLE_TICKS = 2;
+/** Thư mục build đứng yên chừng này nhịp (~60 giây) mà vẫn chưa có settings.json: build bị huỷ / lỗi giữa chừng. */
+const BUILD_STALLED_TICKS = 24;
+const PREFS_KEY = `${PACKAGE_NAME}.panel`;
+
+/**
+ * Các tab Tối ưu và khung của chúng. Không còn dòng hướng dẫn chung cạnh các tab: thanh thao tác của từng tab
+ * đã nói cách làm (đổi theo lựa chọn), banner "bản build cũ" nhắc build lại, nút "?" có hướng dẫn đầy đủ.
+ */
+const OPTIMIZE_TABS = { texture: 'panelTexture', audio: 'panelAudio', model: 'panelModel', engine: 'panelEngine' };
+
+/** Loại mục Lịch sử: màu chấm, tab quét lại sau khi hoàn tác, và câu giải thích trong hộp xác nhận. */
+const HISTORY_KINDS = {
+  texture: { group: 'texture', tab: 'texture', what: 'Thiết lập Texture Compress cũ sẽ được ghi lại vào .meta.' },
+  audio: { group: 'audio', tab: 'audio', what: 'File gốc (kèm .meta) sẽ được chép lại từ bản dự phòng.' },
+  model: { group: 'model', tab: 'model', what: 'Thiết lập Mesh Compress / Mesh Simplify cũ sẽ được ghi lại vào .meta của model (editor import lại).' },
+  'engine-modules': { group: 'engine', tab: 'engine', what: 'Cấu hình module engine (Feature Cropping) sẽ trở về như trước lần này.' },
+};
 
 module.exports = Editor.Panel.define({
   template,
   style,
+  listeners: {
+    // Panel bị ẩn (đổi tab dock...): tạm dừng audio đang nghe thử.
+    hide() {
+      audioPlayer.pauseAll();
+      audioTab.stopQuickPlay();
+    },
+  },
   $: {
+    ...exploreTab.SELECTORS,
+    ...textureTab.SELECTORS,
+    ...audioTab.SELECTORS,
+    ...engineTab.SELECTORS,
+    ...modelTab.SELECTORS,
     scanButton: '#scan-button',
-    scanSourceSelect: '#scan-source-select',
-    optimizeExportButton: '#optimize-export-button',
     buildRootInput: '#build-root-input',
-    outputRootInput: '#output-root-input',
-    exportRootInput: '#export-root-input',
-    tabOverview: '#tab-overview',
-    tabTypes: '#tab-types',
-    tabAssets: '#tab-assets',
-    tabImports: '#tab-imports',
+    buildPick: '#build-pick',
+    banner: '#banner',
+    content: '#content',
+    stepOverview: '#step-overview',
+    stepExplore: '#step-explore',
+    stepOptimize: '#step-optimize',
     panelOverview: '#panel-overview',
-    panelTypes: '#panel-types',
-    panelAssets: '#panel-assets',
-    panelImports: '#panel-imports',
-    filterAll: '#filter-all',
-    filterTexture: '#filter-texture',
-    filterAudio: '#filter-audio',
-    filterFont: '#filter-font',
-    filterModel: '#filter-model',
-    filterPrefab: '#filter-prefab',
-    filterImport: '#filter-import',
-    filterScript: '#filter-script',
-    summary: '#summary',
-    status: '#status',
-    recommendation: '#recommendation',
+    panelExplore: '#panel-explore',
+    panelOptimize: '#panel-optimize',
+    optimizeKind: '#optimize-kind',
+    optCountTexture: '#opt-count-texture',
+    optCountAudio: '#opt-count-audio',
+    optCountEngine: '#opt-count-engine',
+    optCountModel: '#opt-count-model',
     overview: '#overview',
-    typeResults: '#type-results',
-    assetResults: '#asset-results',
-    importResults: '#import-results',
     detail: '#detail',
-    batchPngQuality: '#batch-png-quality',
-    batchApplyPngBtn: '#batch-apply-png-btn',
-    batchResetPngBtn: '#batch-reset-png-btn',
-    batchStatus: '#batch-status',
-    batchAudioBitrate: '#batch-audio-bitrate',
-    batchSelectAllAudioBtn: '#batch-select-all-audio-btn',
-    batchClearAudioBtn: '#batch-clear-audio-btn',
-    batchApplyAudioBtn: '#batch-apply-audio-btn',
-    batchResetAudioBtn: '#batch-reset-audio-btn',
-    batchAudioStatus: '#batch-audio-status',
+    status: '#status',
+    statusUndo: '#status-undo',
+    summary: '#summary',
+    toolVersion: '#tool-version',
+    historyButton: '#history-button',
+    historyCount: '#history-count',
+    historyPop: '#history-pop',
   },
 
   ready() {
+    const prefs = loadPrefs();
     this.state = {
       scanning: false,
-      activeTab: 'overview',
-      assetFilter: 'all',
-      selectedKind: 'asset',
-      selectedIndex: -1,
-      typeRows: [],
+      analyzing: false,
+      buildMissing: false,
+      /** Thư mục build có nhưng chưa build xong (chưa có settings.json) và chưa có số liệu cũ để giữ. */
+      buildPending: false,
+      buildError: '',
+      /** Dấu vân tay bản build đã phân tích; khác đi, đã có settings.json và đứng yên là có bản build mới. */
+      buildSignature: '',
+      pendingSignature: '',
+      /** Số nhịp liền pendingSignature không đổi. */
+      stableTicks: 0,
+      /** Đã báo "Đang build..." cho lần build đang chạy. */
+      buildingShown: false,
+      /** Đã báo bản build dừng giữa chừng (đứng yên lâu mà chưa có settings.json). */
+      stalledShown: false,
+      step: 'overview',
+      optimizeKind: ['audio', 'engine', 'model'].includes(prefs.optimizeKind) ? prefs.optimizeKind : 'texture',
       assetRows: [],
-      importRows: [],
-      fileIndex: new Map(),
-      assetEntries: [],
-      previewByAsset: new Map(),
-      exportMetrics: null,
+      buildFileCount: 0,
       totalBuildBytes: 0,
-      projectRoot: Editor.Project.path,
       buildRoot: '',
-      scanSourceLabel: 'Original Build',
-      tickedAudio: new Set(),
+      diff: null,
+      /** Bản build trước của cùng thư mục (mốc so sánh): { builtAt, totalBytes, groups } hoặc null. */
+      previousBuild: null,
+      buildSizeBySource: null,
+      /** null: đang tính; [] : không có việc gì. */
+      insights: null,
+      /** Thay đổi tool đã ghi vào assets/ (lib/history.js), cũ nhất trước. */
+      history: [],
+      /** Các lần build đã phân tích (tổng dung lượng theo thời gian) cho đường xu hướng. */
+      scanHistory: [],
+      /** Bản xuất theo mạng (lib/exports.js); null: đang tìm. */
+      exportSets: null,
+      /** Lần xuất trước của từng bộ: Map setId -> { at, items: { kênh: bytes } }. */
+      exportPrevious: new Map(),
+      exportSignature: '',
+      /** Bộ bản xuất đang xem (khi có nhiều thư mục xuất). */
+      exportSetId: (prefs.exportSets || {})[Editor.Project.path] || '',
+      /** Bản dự phòng audio (lib/history.js) và số lần giữ lại khi dọn. */
+      backups: [],
+      keepBackups: 5,
+      /**
+       * Thiết lập còn thiếu (lib/setup-check.js), kiểm tra khi mở panel rồi ~10 giây một lần; luôn là kết
+       * quả mới nhất. Mỗi mục: { id, title, detail, action, level, message } (level / message cho khung
+       * issue của các tab: message = title).
+       */
+      setupIssues: [],
+      setupSignature: '',
+    };
+    /** Tab Tối ưu có số liệu mới mà chưa vẽ lại (đang ẩn): vẽ khi được mở. */
+    this.dirtyTabs = new Set();
+    this.insightSignature = '';
+    /** Helper dùng chung cho các module bước / tab. */
+    this.helpers = {
+      escapeHtml,
+      onAction,
+      formatDelta,
+      deltaClass,
+      setStatus: (message) => setStatus.call(this, message),
+      revealAsset: (payload) => revealAssetInEditor.call(this, payload),
+      /** Sau mỗi lần ghi vào assets/: báo kết quả kèm nút Hoàn tác ở thanh trạng thái. */
+      offerUndo: (historyId, message) => offerUndo.call(this, historyId, message),
+      /** Nút của "Việc nên làm" (dùng lại ở khung Chi tiết của bước Tìm chỗ nặng). */
+      runInsightAction: (action) => runInsightAction.call(this, action),
+      /**
+       * Nút của "Thiết lập còn thiếu" (issue.action: install-ffmpeg, open-url, open-settings, open-build,
+       * enable-meshopt), dùng lại được ở các tab. Trả về Promise<boolean>: true khi đã làm xong.
+       */
+      runSetupAction: (action) => runSetupAction.call(this, action),
     };
 
-    this.$.scanButton.addEventListener('confirm', () => {
+    onAction(this.$.scanButton, () => {
+      void analyzeAll.call(this);
+    });
+    // Thư mục build nhớ riêng cho từng dự án (mỗi dự án có thể đặt tên build khác nhau). Chưa chọn lần nào thì
+    // tool tự chọn bản build của build task web mới nhất (lib/build-folders.js pickDefaultBuild).
+    const savedRoot = (prefs.buildRoots || {})[Editor.Project.path];
+    if (savedRoot) {
+      this.$.buildRootInput.value = savedRoot;
+    }
+    this.state.autoBuildRoot = !savedRoot;
+    const caps = readCaps(Editor.Project.path);
+    this.state.caps = caps;
+    if (this.$.toolVersion) {
+      this.$.toolVersion.textContent = TOOL_VERSION ? `v${TOOL_VERSION}` : '';
+      this.$.toolVersion.title = `Playable Size Inspector ${TOOL_VERSION} · Cocos Creator ${caps.version || '?'}${caps.meshCompress ? '' : ' (bản này chưa có Mesh Compress / meshopt: tool chỉ phân tích phần đó)'}`;
+    }
+    // Đổi thư mục build thì chỉ cần phân tích lại phần build.
+    this.$.buildRootInput.addEventListener('confirm', () => {
+      saveBuildRoot.call(this);
       void scanPlayable.call(this);
     });
-
-    this.$.optimizeExportButton.addEventListener('confirm', () => {
-      void optimizeAndExportAll.call(this);
-    });
-
-    this.$.outputRootInput.addEventListener('confirm', () => {
-      void refreshOptimizedScanAvailability.call(this);
-    });
-
-    if (this.$.batchApplyPngBtn) {
-      this.$.batchApplyPngBtn.addEventListener('click', () => {
-        void runBatchPngOptimizeAction.call(this);
-      });
-    }
-
-    if (this.$.batchResetPngBtn) {
-      this.$.batchResetPngBtn.addEventListener('click', () => {
-        void runBatchPngResetAction.call(this);
-      });
-    }
-
-    if (this.$.batchSelectAllAudioBtn) {
-      this.$.batchSelectAllAudioBtn.addEventListener('click', () => {
-        setAllVisibleAudioTicked.call(this, true);
-      });
-    }
-
-    if (this.$.batchClearAudioBtn) {
-      this.$.batchClearAudioBtn.addEventListener('click', () => {
-        this.state.tickedAudio.clear();
-        renderAssetResults.call(this);
-        updateAudioBatchStatus.call(this);
-      });
-    }
-
-    if (this.$.batchApplyAudioBtn) {
-      this.$.batchApplyAudioBtn.addEventListener('click', () => {
-        void runBatchAudioAction.call(this, 'optimize');
-      });
-    }
-
-    if (this.$.batchResetAudioBtn) {
-      this.$.batchResetAudioBtn.addEventListener('click', () => {
-        void runBatchAudioAction.call(this, 'reset');
-      });
-    }
-
-    updateAudioBatchStatus.call(this);
-
-    this.$.assetResults.tabIndex = 0;
-    this.$.assetResults.addEventListener('keydown', (event) => {
-      if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') {
+    this.$.buildPick.addEventListener('change', () => {
+      if (!this.$.buildPick.value) {
         return;
       }
-      event.preventDefault();
-      moveAssetSelection.call(this, event.key === 'ArrowDown' ? 1 : -1);
+      this.$.buildRootInput.value = this.$.buildPick.value;
+      saveBuildRoot.call(this);
+      void scanPlayable.call(this);
+    });
+    for (const button of [this.$.stepOverview, this.$.stepExplore, this.$.stepOptimize]) {
+      button.addEventListener('click', () => switchStep.call(this, button.dataset.step));
+    }
+    for (const button of this.$.optimizeKind.querySelectorAll('button')) {
+      button.addEventListener('click', () => setOptimizeKind.call(this, button.dataset.kind));
+    }
+    this.$.historyButton.addEventListener('click', (event) => {
+      event.stopPropagation();
+      toggleHistory.call(this);
+    });
+    this.$.historyPop.addEventListener('click', (event) => event.stopPropagation());
+    // Bấm ra ngoài / Esc thì đóng danh sách lịch sử.
+    this.$.content.addEventListener('click', () => toggleHistory.call(this, false));
+    this.$.historyPop.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        toggleHistory.call(this, false);
+      }
+    });
+    this.$.statusUndo.addEventListener('click', () => {
+      if (this.$.statusUndo.dataset.id) {
+        void undoHistory.call(this, this.$.statusUndo.dataset.id);
+      }
     });
 
-    for (const button of [this.$.tabOverview, this.$.tabTypes, this.$.tabAssets, this.$.tabImports]) {
-      button.addEventListener('click', () => {
-        this.state.activeTab = button.dataset.tab;
-        renderTabs.call(this);
-      });
-    }
+    // Các module gọi lại khi lựa chọn của chúng đổi / khi quét lại xong.
+    this.renderDetail = () => renderDetail.call(this);
+    this.onSourcesScanned = () => {
+      renderOptimizeCounts.call(this);
+      scheduleInsights.call(this);
+    };
 
-    for (const button of [
-      this.$.filterAll,
-      this.$.filterTexture,
-      this.$.filterAudio,
-      this.$.filterFont,
-      this.$.filterModel,
-      this.$.filterPrefab,
-      this.$.filterImport,
-      this.$.filterScript,
-    ]) {
-      button.addEventListener('click', () => {
-        this.state.assetFilter = button.dataset.filter;
-        ensureValidAssetSelection.call(this);
-        renderAssetFilters.call(this);
-        renderAssetResults.call(this);
-        renderDetail.call(this);
-      });
-    }
+    exploreTab.setup(this, this.helpers);
+    textureTab.setup(this, this.helpers);
+    audioTab.setup(this, this.helpers);
+    engineTab.setup(this, this.helpers);
+    modelTab.setup(this, this.helpers);
 
-    renderTabs.call(this);
-    renderAssetFilters.call(this);
-    void refreshOptimizedScanAvailability.call(this);
+    renderSteps.call(this);
+    this.state.scanHistory = readScanHistory();
+    renderOverview.call(this);
+    void loadHistory.call(this);
+    // Người mới không phải tìm nút nào: mở panel là có số liệu, build xong là tự cập nhật.
+    void analyzeAll.call(this);
+    let tick = 0;
+    this.buildWatch = setInterval(() => {
+      void checkBuildChanged.call(this);
+      // Dò file assets/ sửa sau lần build (banner "build cũ") thưa hơn: ~10 giây một lần.
+      tick += 1;
+      if (tick % 4 === 0 && !this.state.scanning) {
+        void checkStaleBuild.call(this);
+        void refreshBuildList.call(this);
+        void refreshExports.call(this);
+        void refreshSetup.call(this);
+      }
+    }, BUILD_WATCH_INTERVAL);
+  },
+
+  close() {
+    clearInterval(this.buildWatch);
+    clearTimeout(this.insightTimer);
+    audioPlayer.stopAll();
+    audioTab.stopQuickPlay();
+    if (this.state.model && this.state.model.dispose) this.state.model.dispose();
   },
 });
 
-async function refreshOptimizedScanAvailability() {
-  const option = this.$.scanSourceSelect.querySelector('option[value="optimized"]');
-  if (!option) {
-    return;
-  }
-
-  const outputRootInput = String(this.$.outputRootInput.value || DEFAULT_OUTPUT_ROOT).trim() || DEFAULT_OUTPUT_ROOT;
-  const outputRoot = path.resolve(Editor.Project.path, outputRootInput);
-  let available = false;
+function loadPrefs() {
   try {
-    available = (await fs.stat(outputRoot)).isDirectory();
+    return JSON.parse(localStorage.getItem(PREFS_KEY) || '{}');
   } catch (_error) {
-    available = false;
+    return {};
   }
-  option.textContent = `Optimized Copy (${available ? 'Available' : 'Not created'})`;
 }
 
-async function optimizeAndExportAll() {
-  if (this.state.scanning) {
-    return;
-  }
-
-  const sourceRootInput = String(this.$.buildRootInput.value || DEFAULT_BUILD_ROOT).trim() || DEFAULT_BUILD_ROOT;
-  const outputRootInput = String(this.$.outputRootInput.value || DEFAULT_OUTPUT_ROOT).trim() || DEFAULT_OUTPUT_ROOT;
-  const exportRootInput = String(this.$.exportRootInput.value || DEFAULT_EXPORT_ROOT).trim() || DEFAULT_EXPORT_ROOT;
-  const sourceRoot = path.resolve(Editor.Project.path, sourceRootInput);
-  const optimizedRoot = path.resolve(Editor.Project.path, outputRootInput);
-  const exportRoot = path.resolve(Editor.Project.path, exportRootInput);
-
-  this.state.scanning = true;
-  setStatus.call(this, 'Optimizing copy and exporting all networks...');
-  this.$.summary.textContent = 'Optimize + export in progress...';
-  this.$.recommendation.textContent = `Using optimized build copy at ${outputRootInput} and exporting network outputs to ${exportRootInput}...`;
-
+function savePrefs(prefs) {
   try {
-    const result = await Editor.Message.request('playable-size-inspector', 'optimize-export-all', {
-      sourceRoot,
-      optimizedRoot,
-      exportRoot,
-      maxTextureSize: SAFE_BULK_MAX_TEXTURE_SIZE,
-      jpegQuality: SAFE_BULK_JPEG_QUALITY,
-    });
-
-    const optimizeReport = result.optimizeReport || {};
-    const exportReport = result.exportReport || {};
-    const optimizedAnalysis = exportReport.optimizedAnalysis || null;
-    const beforeMB = round((Number(optimizeReport.totalBeforeBytes || 0) / (1024 * 1024)));
-    const afterMB = round((Number(optimizeReport.totalAfterBytes || 0) / (1024 * 1024)));
-    const optimizedFiles = Number(optimizeReport.optimizedFiles || 0);
-    const buildSavedKB = round((Number(optimizeReport.totalBeforeBytes || 0) - Number(optimizeReport.totalAfterBytes || 0)) / 1024);
-    const packageCount = Number(optimizedAnalysis && optimizedAnalysis.packageCount || 0);
-    const largestPackage = optimizedAnalysis && optimizedAnalysis.largestPackage || null;
-    const buildName = String(exportReport.optimizedReport && exportReport.optimizedReport.buildName || '').trim();
-
-    this.state.exportMetrics = {
-      optimized: optimizedAnalysis,
-    };
-    this.$.summary.textContent = `Build: ${beforeMB} MB -> ${afterMB} MB (saved ${buildSavedKB} KB) | ${packageCount} network outputs`;
-    this.$.recommendation.textContent = `Build name: ${buildName || 'unknown'}. Optimized ${optimizedFiles} files. Largest final package: ${formatBytes(largestPackage ? largestPackage.bytes : 0)}. Latest outputs replaced the previous files in ${exportRootInput}.`;
-    setStatus.call(this, `Exported optimized network outputs to ${exportRootInput}`);
-    void refreshOptimizedScanAvailability.call(this);
-
-    this.state.scanning = false;
-  } catch (error) {
-    console.error('[playable-size-inspector] optimize-export-all failed:', error);
-    this.$.summary.textContent = 'Optimize + export failed';
-    this.$.recommendation.textContent = error.message || String(error);
-    setStatus.call(this, error.message || String(error));
-    this.state.scanning = false;
+    localStorage.setItem(PREFS_KEY, JSON.stringify({ ...loadPrefs(), ...prefs }));
+  } catch (_error) {
+    // Chỉ là tiện ích nhớ lựa chọn.
   }
 }
 
-async function scanPlayable() {
+// ---------------------------------------------------------------- 3 bước
+
+function switchStep(step) {
+  this.state.step = step;
+  renderSteps.call(this);
+}
+
+function setOptimizeKind(kind) {
+  this.state.optimizeKind = ['audio', 'engine', 'model'].includes(kind) ? kind : 'texture';
+  savePrefs({ optimizeKind: this.state.optimizeKind });
+  renderSteps.call(this);
+}
+
+function renderSteps() {
+  const step = this.state.step;
+  for (const [name, button, panel] of [
+    ['overview', this.$.stepOverview, this.$.panelOverview],
+    ['explore', this.$.stepExplore, this.$.panelExplore],
+    ['optimize', this.$.stepOptimize, this.$.panelOptimize],
+  ]) {
+    button.classList.toggle('active', step === name);
+    panel.classList.toggle('active', step === name);
+  }
+  // Tổng quan dùng hết bề ngang; hai bước còn lại có khung Chi tiết bên phải.
+  this.$.content.classList.toggle('no-detail', step === 'overview');
+
+  const kind = this.state.optimizeKind;
+  for (const button of this.$.optimizeKind.querySelectorAll('button')) {
+    button.classList.toggle('active', button.dataset.kind === kind);
+  }
+  this.$.panelTexture.classList.toggle('active', kind === 'texture');
+  this.$.panelAudio.classList.toggle('active', kind === 'audio');
+  this.$.panelEngine.classList.toggle('active', kind === 'engine');
+  this.$.panelModel.classList.toggle('active', kind === 'model');
+  // Tab vừa hiện mà có số liệu mới trong lúc ẩn: vẽ lại bây giờ.
+  refreshVisibleTab.call(this);
+
+  if (step === 'explore') {
+    exploreTab.render(this, this.helpers);
+    // Lần đầu vào bước này: chọn sẵn mục nặng nhất để khung Chi tiết không trống.
+    const explore = this.state.explore;
+    if (!explore.selected) {
+      const first = this.$.exploreList.querySelector('[data-key]');
+      if (first) {
+        explore.selected = first.dataset.key;
+        first.classList.add('selected');
+      }
+    }
+  }
+  renderDetail.call(this);
+}
+
+/**
+ * Tab Tối ưu cần vẽ lại theo số liệu mới (bản build, Việc nên làm, thiết lập): chỉ vẽ tab đang mở, tab
+ * khác đánh dấu và vẽ khi được mở (renderSteps). `kinds` mặc định là cả bốn tab.
+ */
+function refreshTabs(kinds = Object.keys(OPTIMIZE_TABS)) {
+  for (const kind of kinds) {
+    this.dirtyTabs.add(kind);
+  }
+  refreshVisibleTab.call(this);
+}
+
+function refreshVisibleTab() {
+  const kind = this.state.optimizeKind;
+  if (this.state.step !== 'optimize' || !this.dirtyTabs.has(kind)) {
+    return;
+  }
+  this.dirtyTabs.delete(kind);
+  const tab = this.state[kind];
+  // Tab chưa quét xong thì tự vẽ khi quét xong.
+  if (tab && tab.scanned && typeof tab.refresh === 'function') {
+    keepScroll(this.$[OPTIMIZE_TABS[kind]], () => tab.refresh());
+  }
+}
+
+/**
+ * Vẽ lại vì số liệu nền đổi, không phải vì người dùng chọn: giữ nguyên vị trí cuộn. refresh() của các tab
+ * cuộn tới mục đang chọn (scrollIntoView), người dùng đang xem chỗ khác thì không bị kéo về.
+ */
+function keepScroll(root, render) {
+  const saved = [];
+  if (root) {
+    for (const element of root.querySelectorAll('.panel-body')) {
+      saved.push([element, element.scrollTop, element.scrollLeft]);
+    }
+    // scrollIntoView cuộn cả khung cha (kể cả khung overflow: hidden).
+    for (let element = root; element; element = element.parentElement) {
+      saved.push([element, element.scrollTop, element.scrollLeft]);
+    }
+  }
+  try {
+    render();
+  } finally {
+    for (const [element, top, left] of saved) {
+      if (element.scrollTop !== top) {
+        element.scrollTop = top;
+      }
+      if (element.scrollLeft !== left) {
+        element.scrollLeft = left;
+      }
+    }
+  }
+}
+
+function renderOptimizeCounts() {
+  const texture = this.state.texture;
+  const audio = this.state.audio;
+  // Có bản build thì đếm file trong build (khớp bộ lọc "Trong build" của các tab), chưa có thì đếm cả assets/.
+  const index = this.state.buildSizeBySource;
+  const count = (list) => String(index ? list.filter((item) => index.has(item.url)).length : list.length);
+  this.$.optCountTexture.textContent = texture && texture.scanned ? count(texture.rows) : '';
+  this.$.optCountAudio.textContent = audio && audio.scanned ? count(audio.files) : '';
+  // Module engine: số module đang bật mà không thấy dùng và tắt được (module khác đang cần thì không tính).
+  const unused = unusedModules(this.state.engine).length;
+  this.$.optCountEngine.textContent = unused ? String(unused) : '';
+  this.$.optCountEngine.classList.toggle('warn', unused > 0);
+  // Model 3D: số model trong build nên xử lý (chưa nén / quá nhiều tam giác).
+  const model = this.state.model;
+  const todo = model && model.scanned && model.ok ? model.todoModels().length : 0;
+  this.$.optCountModel.textContent = todo ? String(todo) : '';
+  this.$.optCountModel.classList.toggle('warn', todo > 0);
+}
+
+/** Module đang bật, không thấy dùng và tắt được (cùng luật với Việc nên làm và thẻ ở Tổng quan). */
+function unusedModules(engine) {
+  // Định dạng cũ của Feature Cropping (Cocos 3.6 / 3.7): mục nào cũng khoá (tool không ghi) nhưng vẫn là việc nên làm.
+  return engine && engine.scanned && engine.ok !== false
+    ? (engine.entries || []).filter((entry) => entry.enabled && !entry.used && (!entry.blocked || entry.legacy))
+    : [];
+}
+
+// ---------------------------------------------------------------- phân tích tất cả
+
+/**
+ * Build + ảnh nguồn + audio nguồn chạy song song; mỗi phần lỗi riêng không chặn phần khác. "Việc nên làm"
+ * tính một lần khi tất cả xong (scheduleInsights chờ trong lúc analyzing) thay vì sau từng phần.
+ */
+async function analyzeAll() {
+  if (this.state.analyzing) {
+    return;
+  }
+  this.state.analyzing = true;
+  this.$.scanButton.setAttribute('disabled', '');
+  setStatus.call(this, 'Đang phân tích bản build, ảnh, âm thanh, model 3D và module engine...');
+  try {
+    await Promise.all([
+      scanPlayable.call(this, { silent: true }),
+      this.state.texture.scan({ silent: true }),
+      this.state.audio.scan({ silent: true }),
+      this.state.engine.scan({ silent: true }),
+      this.state.model.scan({ silent: true }),
+      refreshExports.call(this),
+      refreshSetup.call(this),
+    ]);
+    const parts = [
+      this.state.buildMissing
+        ? 'chưa có bản build'
+        : this.state.buildPending
+          ? 'bản build chưa xong'
+          : `${resolveBuildRoot(this).input} ${formatBytes(this.state.totalBuildBytes)} (${this.state.buildFileCount} file)`,
+      `${this.state.texture.rows.length} ảnh`,
+      `${this.state.audio.files.length} audio`,
+      `${(this.state.model.models || []).length} model`,
+    ];
+    setStatus.call(this, `Đã phân tích: ${parts.join(' · ')}.`);
+  } finally {
+    this.state.analyzing = false;
+    this.$.scanButton.removeAttribute('disabled');
+    scheduleInsights.call(this);
+  }
+}
+
+/** Có bản build mới ở thư mục khác (vd build cho mạng khác): cập nhật danh sách và nhắc chọn. */
+async function refreshBuildList() {
+  const builds = await listBuildFolders(Editor.Project.path);
+  const current = resolveBuildRoot(this).input.replace(/\\/g, '/');
+  const known = this.state.knownBuilds || '';
+  const signature = builds.map((build) => `${build.relative}:${build.builtAt}`).join('|');
+  if (signature === known) {
+    return;
+  }
+  this.state.knownBuilds = signature;
+  renderBuildPick.call(this, builds);
+  const newest = builds[0];
+  if (known && newest && newest.relative !== current && !known.includes(`${newest.relative}:${newest.builtAt}`)) {
+    setStatus.call(this, `Có bản build mới ở ${newest.relative}. Chọn nó trong danh sách cạnh ô Thư mục build để phân tích.`);
+  }
+}
+
+/** Danh sách chọn bản build cạnh ô thư mục: chỉ hiện khi có từ 2 bản build trở lên. */
+function renderBuildPick(builds) {
+  const current = String(this.$.buildRootInput.value || '').replace(/\\/g, '/').replace(/\/+$/, '');
+  const pick = this.$.buildPick;
+  pick.classList.toggle('hidden', builds.length < 2);
+  pick.innerHTML = `
+    ${builds.some((build) => build.relative === current) ? '' : '<option value="">(chọn bản build)</option>'}
+    ${builds.map((build) => `<option value="${escapeHtml(build.relative)}">${escapeHtml(build.relative.replace(/^build\//, ''))} · ${escapeHtml(formatTimestamp(new Date(build.builtAt).toISOString()))}</option>`).join('')}
+  `;
+  pick.value = builds.some((build) => build.relative === current) ? current : '';
+}
+
+function saveBuildRoot() {
+  this.state.autoBuildRoot = false;
+  const prefs = loadPrefs();
+  const roots = prefs.buildRoots || {};
+  roots[Editor.Project.path] = String(this.$.buildRootInput.value || '').trim();
+  savePrefs({ buildRoots: roots });
+}
+
+function resolveBuildRoot(panel) {
+  const input = String(panel.$.buildRootInput.value || DEFAULT_BUILD_ROOT).trim() || DEFAULT_BUILD_ROOT;
+  return { input, fullPath: path.resolve(Editor.Project.path, input) };
+}
+
+/**
+ * Vân tay rẻ của bản build: vài file Cocos luôn ghi lại mỗi lần build. Kèm `exists` (có thư mục),
+ * `complete` (đã có settings.json: Cocos xoá trống thư mục lúc bắt đầu build và ghi file này gần cuối)
+ * và `builtAt` (mtime của settings.json, 0 khi chưa có).
+ */
+async function readBuildSignature(buildRoot) {
+  const fsPromises = require('fs/promises');
+  const parts = [];
+  // Thư mục src/ và assets/main/ cũng đổi mtime khi build ghi lại file bên trong (kể cả khi bật MD5 Cache).
+  for (const relative of ['index.html', 'src', 'assets/main', 'cocos-js']) {
+    const stat = await fsPromises.stat(path.join(buildRoot, relative)).catch(() => null);
+    parts.push(stat ? `${relative}:${stat.mtimeMs}:${stat.size}` : `${relative}:-`);
+  }
+  const settingsPath = await findBuildSettings(buildRoot);
+  const settingsStat = settingsPath ? await fsPromises.stat(settingsPath).catch(() => null) : null;
+  parts.push(settingsStat ? `settings:${settingsStat.mtimeMs}:${settingsStat.size}` : 'settings:-');
+  return {
+    signature: parts.join('|'),
+    exists: await isDirectory(buildRoot),
+    complete: !!settingsStat,
+    builtAt: settingsStat ? settingsStat.mtimeMs : 0,
+  };
+}
+
+/**
+ * Gọi định kỳ. Bản build đổi thì chỉ phân tích lại khi đã build xong: có settings.json VÀ chữ ký đứng
+ * yên BUILD_STABLE_TICKS nhịp liền. Đang build (thư mục bị xoá rồi ghi lại dần) thì chỉ báo "Đang build...",
+ * không quét, không ghi xu hướng / mốc so sánh. Thư mục bị xoá hẳn thì quét để hiện "Chưa có bản build".
+ */
+async function checkBuildChanged() {
+  if (this.state.scanning || this.state.analyzing || !this.state.buildSignature) {
+    return;
+  }
+  const { input, fullPath } = resolveBuildRoot(this);
+  const build = await readBuildSignature(fullPath);
+  if (build.signature === this.state.buildSignature) {
+    this.state.pendingSignature = '';
+    this.state.stableTicks = 0;
+    return;
+  }
+  const building = build.exists && !build.complete;
+  if (building && !this.state.buildingShown) {
+    this.state.buildingShown = true;
+    this.$.summary.textContent = 'Đang build...';
+    setStatus.call(this, `Đang build ở ${input}... build xong là tool tự phân tích.`);
+  }
+  if (build.signature !== this.state.pendingSignature) {
+    this.state.pendingSignature = build.signature;
+    this.state.stableTicks = 0;
+    this.state.stalledShown = false;
+    return;
+  }
+  this.state.stableTicks += 1;
+  if (building && this.state.stableTicks >= BUILD_STALLED_TICKS && !this.state.stalledShown) {
+    // Đứng yên cả phút mà vẫn chưa có settings.json: build bị huỷ / lỗi giữa chừng. Số liệu cũ không còn khớp
+    // thư mục này nữa: hiện thẻ "chưa xong" thay cho "Đang build..." mãi. Build xong là tự quét như thường.
+    this.state.stalledShown = true;
+    showBuildPending.call(this, fullPath, { stalled: true });
+    setStatus.call(this, `Bản build ở ${input} dừng giữa chừng (chưa có src/settings.json). Build lại là tool tự phân tích.`);
+    return;
+  }
+  if (building || this.state.stableTicks < BUILD_STABLE_TICKS) {
+    return;
+  }
+  await scanPlayable.call(this, { auto: true });
+}
+
+// ---------------------------------------------------------------- phân tích bản build
+
+/**
+ * Phân tích thư mục build. `silent`: nằm trong analyzeAll (status do nơi gọi báo);
+ * `auto`: do phát hiện bản build mới (checkBuildChanged, chỉ gọi khi đã build xong).
+ */
+async function scanPlayable({ silent = false, auto = false } = {}) {
   if (this.state.scanning) {
     return;
   }
 
   this.state.scanning = true;
-  const scanOptimized = String(this.$.scanSourceSelect.value || 'original') === 'optimized';
-  const buildRootInput = scanOptimized
-    ? String(this.$.outputRootInput.value || DEFAULT_OUTPUT_ROOT).trim() || DEFAULT_OUTPUT_ROOT
-    : String(this.$.buildRootInput.value || DEFAULT_BUILD_ROOT).trim() || DEFAULT_BUILD_ROOT;
-  const scanSourceLabel = scanOptimized ? 'Optimized Copy' : 'Original Build';
-
-  resetForScan.call(this);
-  setStatus.call(this, `Scanning ${scanSourceLabel}...`);
+  this.$.summary.textContent = 'Đang phân tích bản build...';
+  if (!silent) {
+    setStatus.call(this, auto ? 'Phát hiện bản build mới, đang phân tích...' : 'Đang phân tích bản build...');
+  }
 
   try {
     const projectRoot = Editor.Project.path;
-    const buildRoot = path.resolve(projectRoot, buildRootInput);
-    const assetsIndexPath = path.join(projectRoot, 'library', '.assets-data.json');
-
-    try {
-      const buildRootStat = await fs.stat(buildRoot);
-      if (!buildRootStat.isDirectory()) {
-        throw new Error('not-directory');
+    // Thư mục đang chọn chưa có bản build (dự án mới chép tool sang, đặt tên build khác...):
+    // tự dùng bản build mới nhất trong build/. Có nhiều bản build thì hiện danh sách để chọn.
+    // Chỉ khi mở panel / bấm phân tích: lúc tự quét, thư mục đang chọn có thể chỉ đang được build lại,
+    // đổi đi là bỏ lỡ đúng bản vừa build xong.
+    const builds = await listBuildFolders(Editor.Project.path);
+    let { input: buildRootInput, fullPath: buildRoot } = resolveBuildRoot(this);
+    let switchedFrom = '';
+    if (!auto && this.state.autoBuildRoot && builds.length) {
+      // Người dùng chưa chọn thư mục nào: phân tích đúng bản build task web mới nhất ghi ra (không mặc định build/web-mobile cũ).
+      const pick = await pickDefaultBuild(projectRoot, builds).catch(() => null);
+      if (pick && pick.reason !== 'default' && !isSameResolvedPath(pick.fullPath, buildRoot)) {
+        buildRootInput = pick.relative;
+        buildRoot = pick.fullPath;
+        this.$.buildRootInput.value = buildRootInput;
       }
-    } catch (_error) {
-      const hint = scanOptimized
-        ? 'Apply an asset optimization or run Optimize + Export All first.'
-        : 'Build the web-mobile target in Cocos first.';
-      throw new Error(`${scanSourceLabel} was not found at ${buildRootInput}. ${hint}`);
+    }
+    if (!auto && !await isBuildFolder(buildRoot) && builds.length) {
+      switchedFrom = buildRootInput;
+      buildRootInput = builds[0].relative;
+      buildRoot = builds[0].fullPath;
+      this.$.buildRootInput.value = buildRootInput;
+    }
+    renderBuildPick.call(this, builds);
+    const build = await readBuildSignature(buildRoot);
+    Object.assign(this.state, { buildSignature: build.signature, pendingSignature: '', stableTicks: 0, buildingShown: false, stalledShown: false });
+
+    if (!build.exists) {
+      showBuildMissing.call(this);
+      if (!silent) {
+        setStatus.call(this, `Chưa có bản build ở ${buildRootInput}.`);
+      }
+      return;
+    }
+    if (switchedFrom) {
+      // Báo một lần dù đang nằm trong analyzeAll: người dùng cần biết tool đang đọc thư mục nào.
+      setStatus.call(this, `Không có bản build ở ${switchedFrom}, đang dùng ${buildRootInput} (mới nhất trong build/).`);
+    }
+    if (!build.complete) {
+      // Đang build (Cocos xoá trống thư mục rồi ghi lại) hoặc build dở: số liệu lúc này sai, không ghi vào
+      // xu hướng / mốc so sánh. Build xong (có settings.json) là checkBuildChanged tự quét.
+      showBuildPending.call(this, buildRoot);
+      if (!silent) {
+        setStatus.call(this, `Bản build ở ${buildRootInput} chưa xong (chưa có src/settings.json). Build xong là tool tự phân tích.`);
+      }
+      return;
     }
 
-    this.state.projectRoot = projectRoot;
+    const result = await scanBuild({ projectRoot, buildRoot });
+    // Bắt đầu build lại đúng lúc đang quét: bỏ kết quả lẫn lộn, chờ bản mới build xong.
+    if ((await readBuildSignature(buildRoot)).signature !== build.signature) {
+      showBuildPending.call(this, buildRoot);
+      if (!silent) {
+        setStatus.call(this, `Đang build ở ${buildRootInput}... build xong là tool tự phân tích.`);
+      }
+      return;
+    }
+    if (this.state.buildRoot && !isSameResolvedPath(this.state.buildRoot, buildRoot)) {
+      // Đổi thư mục build: bộ bản xuất mở từ Tổng quan không còn là của bản build đang xem.
+      Object.assign(this.state.html, { setId: '', userChoice: '' });
+    }
+    this.state.buildMissing = false;
+    this.state.buildPending = false;
+    this.state.buildError = '';
     this.state.buildRoot = buildRoot;
-    this.state.scanSourceLabel = scanSourceLabel;
 
-    const assetEntries = await readAssetEntries(assetsIndexPath);
-    const dependencyIndex = await buildPrefabDependencyIndex({
-      projectRoot,
-      buildRoot,
-      assetEntries,
+    const groupBytes = Object.fromEntries(exploreTab.groupRows(result.assetRows).map((group) => [group.key, group.bytes]));
+    // So với bản build TRƯỚC của thư mục này (không phải lần phân tích trước): ô chênh lệch, từng file và
+    // legend theo nhóm cùng một mốc, phân tích lại / mở lại panel không làm mất.
+    const previous = await rotateBuildBaseline(buildRoot, build.builtAt, result.buildFiles, groupBytes).catch((error) => {
+      console.warn(`[${PACKAGE_NAME}] Không lưu được mốc so sánh:`, error);
+      return null;
     });
-    const buildFiles = await collectBuildFiles(buildRoot);
-    const packedAssetIndex = await buildPackedAssetIndex({ buildFiles, assetEntries });
-    const fileIndex = indexBuildFiles(buildFiles);
-    const typeRows = buildTypeSummary(buildFiles);
-    const assetRows = await buildAssetRows({
-      buildFiles,
-      assetEntries,
-      buildRoot,
-      dependencyIndex,
-      packedAssetIndex,
-    });
-    const importRows = await buildImportRows({
-      buildFiles,
-      assetEntries,
-      projectRoot,
-      buildRoot,
-    });
-
-    this.state.assetEntries = assetEntries;
-    this.state.fileIndex = fileIndex;
-    this.state.typeRows = typeRows;
-    this.state.assetRows = assetRows;
-    // A fresh scan replaces every row, so stale ticks would point at nothing.
-    this.state.tickedAudio.clear();
-    this.state.importRows = importRows;
-    this.state.totalBuildBytes = buildFiles.reduce((sum, file) => sum + file.size, 0);
-
-    if (assetRows.length) {
-      this.state.selectedKind = 'asset';
-      this.state.selectedIndex = 0;
-    } else if (typeRows.length) {
-      this.state.selectedKind = 'type';
-      this.state.selectedIndex = 0;
-    } else if (importRows.length) {
-      this.state.selectedKind = 'import';
-      this.state.selectedIndex = 0;
-    } else {
-      this.state.selectedKind = 'asset';
-      this.state.selectedIndex = -1;
+    const diff = diffAgainstSnapshot(result.buildFiles, previous);
+    if (diff) {
+      diff.previousAt = new Date(previous.builtAt).toISOString();
     }
 
-    renderSummary.call(this, buildFiles, typeRows, assetRows, importRows, scanSourceLabel);
-    renderOverview.call(this, buildFiles, typeRows);
-    renderAssetFilters.call(this);
-    renderTypeResults.call(this);
-    renderAssetResults.call(this);
-    renderImportResults.call(this);
-    renderDetail.call(this);
+    this.state.assetRows = result.assetRows;
+    this.state.buildFileCount = result.buildFiles.length;
+    this.state.totalBuildBytes = result.totalBuildBytes;
+    this.state.diff = diff;
+    this.state.previousBuild = previous ? { builtAt: previous.builtAt, totalBytes: previous.totalBytes, groups: previous.groups || null } : null;
+    for (const row of this.state.assetRows) {
+      row.deltaBytes = diff ? (diff.byPath.get(row.relativePath) || 0) : 0;
+    }
+    // Bước Tối ưu dùng bảng này để hiện "trong build chiếm bao nhiêu".
+    this.state.buildSizeBySource = buildSourceSizeIndex(this.state.assetRows);
+    this.state.scanHistory = await appendScanHistory(buildRoot, build.builtAt, result.totalBuildBytes, result.buildFiles.length, groupBytes)
+      .catch(() => this.state.scanHistory);
+    // Lựa chọn cũ có thể không còn tồn tại trong bản build mới.
+    this.state.explore.selected = '';
 
-    setStatus.call(this, `${scanSourceLabel} scan complete. ${buildFiles.length} files analyzed.`);
+    this.$.summary.textContent = `Build ${formatBytes(result.totalBuildBytes)} · ${result.buildFiles.length} file`;
+    renderOverview.call(this);
+    if (this.state.step === 'explore') {
+      renderSteps.call(this);
+    }
+    // Mọi tab Tối ưu đọc số liệu build (trong build chiếm bao nhiêu): vẽ lại khi có Việc nên làm mới
+    // (refreshInsights vẽ tab đang mở, tab khác vẽ khi được mở) thay vì vẽ ngay rồi vẽ lại lần nữa.
+    this.dirtyTabs = new Set(Object.keys(OPTIMIZE_TABS));
+    scheduleInsights.call(this);
+
+    if (!silent) {
+      const delta = diff && diff.totalDelta ? ` (${formatDelta(diff.totalDelta)} so với lần build trước)` : '';
+      setStatus.call(this, `${auto ? 'Bản build mới' : 'Bản build'}: ${formatBytes(result.totalBuildBytes)}, ${result.buildFiles.length} file${delta}.`);
+    }
   } catch (error) {
-    console.error('[playable-size-inspector] Scan failed:', error);
-    this.$.summary.textContent = 'Scan failed';
-    this.$.overview.className = 'panel-content empty';
-    this.$.overview.textContent = error.message || String(error);
-    this.$.typeResults.className = 'panel-content empty';
-    this.$.typeResults.textContent = 'Scan failed.';
-    this.$.assetResults.className = 'panel-content empty';
-    this.$.assetResults.textContent = 'Scan failed.';
-    this.$.importResults.className = 'panel-content empty';
-    this.$.importResults.textContent = 'Scan failed.';
-    this.$.detail.className = 'detail empty';
-    this.$.detail.textContent = 'Scan failed.';
-    this.$.recommendation.textContent = error.message || String(error);
-    setStatus.call(this, error.message || String(error));
+    console.error(`[${PACKAGE_NAME}] Phân tích build thất bại:`, error);
+    const message = error.message || String(error);
+    clearBuildState.call(this);
+    this.state.buildError = message;
+    this.$.summary.textContent = 'Phân tích build thất bại';
+    renderOverview.call(this);
+    renderSteps.call(this);
+    setStatus.call(this, message);
   } finally {
     this.state.scanning = false;
   }
 }
 
-function resetForScan() {
-  this.state.previewByAsset = new Map();
-  this.$.summary.textContent = 'Scanning...';
-  this.$.recommendation.textContent = 'Crunching build files and source mappings...';
-  this.$.overview.className = 'panel-content empty';
-  this.$.overview.textContent = 'Scanning build overview...';
-  this.$.typeResults.className = 'panel-content empty';
-  this.$.typeResults.textContent = 'Scanning type groups...';
-  this.$.assetResults.className = 'panel-content empty';
-  this.$.assetResults.textContent = 'Scanning all built files...';
-  this.$.importResults.className = 'panel-content empty';
-  this.$.importResults.textContent = 'Scanning all import JSON files...';
-  this.$.detail.className = 'detail empty';
-  this.$.detail.textContent = 'Scan in progress...';
+function clearBuildState() {
+  this.state.assetRows = [];
+  this.state.buildFileCount = 0;
+  this.state.totalBuildBytes = 0;
+  this.state.diff = null;
+  this.state.previousBuild = null;
+  this.state.buildSizeBySource = null;
+  this.state.buildPending = false;
+  this.state.explore.selected = '';
 }
 
-function renderTabs() {
-  const pairs = [
-    ['overview', this.$.tabOverview, this.$.panelOverview],
-    ['types', this.$.tabTypes, this.$.panelTypes],
-    ['assets', this.$.tabAssets, this.$.panelAssets],
-    ['imports', this.$.tabImports, this.$.panelImports],
-  ];
+/** Chưa build: không phải lỗi, chỉ dẫn người dùng đi build. Tool tự phân tích khi build xong. */
+function showBuildMissing() {
+  clearBuildState.call(this);
+  this.state.buildMissing = true;
+  this.state.buildError = '';
+  this.$.summary.textContent = 'Chưa có bản build';
+  this.dirtyTabs = new Set(Object.keys(OPTIMIZE_TABS));
+  renderOverview.call(this);
+  renderSteps.call(this);
+  scheduleInsights.call(this);
+}
 
-  for (const [name, button, panel] of pairs) {
-    const active = this.state.activeTab === name;
-    button.classList.toggle('active', active);
-    panel.classList.toggle('active', active);
+/**
+ * Bản build chưa xong (đang build / build dở). Còn số liệu của chính thư mục này thì giữ nguyên tới
+ * khi build xong; không thì hiện thẻ "chưa xong" thay cho số liệu. `stalled`: thư mục đứng yên lâu mà
+ * vẫn chưa xong (build bị huỷ / lỗi): bỏ số liệu cũ, hiện thẻ "chưa xong".
+ */
+function showBuildPending(buildRoot, { stalled = false } = {}) {
+  this.$.summary.textContent = stalled ? 'Bản build chưa xong' : 'Đang build...';
+  if (!stalled && this.state.buildFileCount && this.state.buildRoot && isSameResolvedPath(this.state.buildRoot, buildRoot)) {
+    return;
   }
+  clearBuildState.call(this);
+  this.state.buildMissing = false;
+  this.state.buildPending = true;
+  this.state.buildError = '';
+  this.dirtyTabs = new Set(Object.keys(OPTIMIZE_TABS));
+  renderOverview.call(this);
+  renderSteps.call(this);
+  scheduleInsights.call(this);
 }
 
-function renderAssetFilters() {
-  const buttons = [
-    this.$.filterAll,
-    this.$.filterTexture,
-    this.$.filterAudio,
-    this.$.filterFont,
-    this.$.filterModel,
-    this.$.filterPrefab,
-    this.$.filterImport,
-    this.$.filterScript,
-  ];
-
-  for (const button of buttons) {
-    button.classList.toggle('active', button.dataset.filter === this.state.assetFilter);
+/** Nhãn chênh lệch so với lần build trước (ô cạnh tổng dung lượng ở Tổng quan). */
+function describeDiff(diff) {
+  if (!diff) {
+    return { text: 'Chưa có lần build trước để so', title: 'Build lại là tool tự so chênh lệch với bản build này.', className: '' };
   }
+  if (!diff.totalDelta && !diff.byPath.size) {
+    return { text: 'Không đổi so với lần build trước', title: `So với bản build ${formatTimestamp(diff.previousAt)}`, className: '' };
+  }
+  return {
+    text: `${formatDelta(diff.totalDelta) || '±0'} so với lần build trước`,
+    title: `${diff.byPath.size} file đổi (${diff.added} mới, ${diff.removed} mất) · so với bản build ${formatTimestamp(diff.previousAt)}`,
+    className: deltaClass(diff.totalDelta),
+  };
 }
 
-async function readAssetEntries(indexPath) {
-  const raw = await fs.readFile(indexPath, 'utf8');
-  const data = JSON.parse(raw);
-  const entries = [];
+function formatTimestamp(value) {
+  const date = new Date(String(value || ''));
+  if (Number.isNaN(date.getTime())) {
+    return 'lần trước';
+  }
+  const pad = (number) => String(number).padStart(2, '0');
+  return `${pad(date.getHours())}:${pad(date.getMinutes())} ${pad(date.getDate())}/${pad(date.getMonth() + 1)}`;
+}
 
-  for (const [uuid, info] of Object.entries(data)) {
-    const url = String(info && info.url || '');
-    if (!url.startsWith('db://assets/')) {
-      continue;
-    }
+/** "−12.3 KB" / "+4 KB" / '' khi không đổi. */
+function formatDelta(deltaBytes) {
+  const delta = Number(deltaBytes) || 0;
+  if (!delta) {
+    return '';
+  }
+  return `${delta < 0 ? '−' : '+'}${formatBytes(Math.abs(delta))}`;
+}
 
-    const rootAssetUrl = url.split('@')[0];
-    const extension = path.extname(rootAssetUrl).toLowerCase();
-    const normalizedUrl = normalizeAssetToken(rootAssetUrl);
-    const leafToken = path.basename(rootAssetUrl, extension).toLowerCase();
-    const compactUuid = compactUuidString(uuid);
-    const tokens = Array.from(new Set([
-      normalizedUrl,
-      leafToken,
-      uuid.toLowerCase(),
-      compactUuid,
-    ].filter(Boolean)));
+function deltaClass(deltaBytes) {
+  const delta = Number(deltaBytes) || 0;
+  if (delta < 0) {
+    return 'delta-down';
+  }
+  return delta > 0 ? 'delta-up' : '';
+}
 
-    entries.push({
-      uuid,
-      compactUuid,
-      url,
-      normalizedUrl,
-      leafToken,
-      tokens,
-      extension,
-      category: categorizeSourceExtension(extension),
+// ---------------------------------------------------------------- Tổng quan
+
+function renderOverview() {
+  this.$.overview.className = 'panel-body';
+  this.$.overview.innerHTML = `
+    <div class="ov">
+      ${renderSetupCard.call(this)}
+      ${renderBuildCard.call(this)}
+      ${renderExportsCard.call(this)}
+      <div class="ov-sources">${renderSourceCards.call(this)}</div>
+      ${renderTodoCard.call(this)}
+    </div>
+  `;
+
+  for (const element of this.$.overview.querySelectorAll('.setup-action')) {
+    element.addEventListener('click', () => {
+      const issue = this.state.setupIssues[Number(element.dataset.index)];
+      if (issue && issue.action) {
+        void runSetupAction.call(this, issue.action);
+      }
     });
   }
 
-  return entries;
-}
-
-async function buildPrefabDependencyIndex({ projectRoot, buildRoot, assetEntries }) {
-  const settingsPath = path.join(buildRoot, 'src', 'settings.json');
-  let launchSceneUrl = '';
-  try {
-    const settings = JSON.parse(await fs.readFile(settingsPath, 'utf8'));
-    launchSceneUrl = String(settings && settings.launch && settings.launch.launchScene || '');
-  } catch (_error) {
-    return new Map();
+  const exportPick = this.$.overview.querySelector('.exp-pick');
+  if (exportPick) {
+    exportPick.addEventListener('change', () => {
+      this.state.exportSetId = exportPick.value;
+      // Trang HTML cuối đi theo bộ vừa chọn (tự chọn file html mới nhất của bộ đó).
+      Object.assign(this.state.html, { setId: exportPick.value, userChoice: '' });
+      const prefs = loadPrefs();
+      savePrefs({ exportSets: { ...(prefs.exportSets || {}), [Editor.Project.path]: exportPick.value } });
+      renderOverview.call(this);
+    });
   }
-
-  const documentExtensions = new Set(['.scene', '.prefab', '.material', '.mtl', '.anim']);
-  const documents = [];
-  for (const entry of assetEntries) {
-    if (!documentExtensions.has(entry.extension)) {
-      continue;
-    }
-    const relativeAssetPath = entry.url.replace(/^db:\/\/assets\//, '');
-    const fullPath = path.join(projectRoot, 'assets', relativeAssetPath.replace(/\//g, path.sep));
-    try {
-      const text = await fs.readFile(fullPath, 'utf8');
-      const references = [];
-      const pattern = /"__uuid__"\s*:\s*"([^"]+)"/g;
-      let match = pattern.exec(text);
-      while (match) {
-        references.push(normalizeDependencyUuid(match[1]));
-        match = pattern.exec(text);
-      }
-      documents.push({
-        uuid: normalizeDependencyUuid(entry.uuid),
-        url: entry.url,
-        label: path.basename(relativeAssetPath),
-        references: Array.from(new Set(references.filter(Boolean))),
-      });
-    } catch (_error) {
-      // Ignore source documents that are unavailable during an editor refresh.
-    }
-  }
-
-  const documentByUuid = new Map(documents.map((document) => [document.uuid, document]));
-  const launchDocument = documents.find((document) => document.url.toLowerCase() === launchSceneUrl.toLowerCase());
-  if (!launchDocument) {
-    return new Map();
-  }
-
-  const dependencyIndex = new Map();
-  const queue = [{ document: launchDocument, chain: [launchDocument.label] }];
-  const visitedDocuments = new Set();
-
-  while (queue.length) {
-    const current = queue.shift();
-    if (!current || visitedDocuments.has(current.document.uuid)) {
-      continue;
-    }
-    visitedDocuments.add(current.document.uuid);
-
-    for (const referenceUuid of current.document.references) {
-      let chains = dependencyIndex.get(referenceUuid);
-      if (!chains) {
-        chains = [];
-        dependencyIndex.set(referenceUuid, chains);
-      }
-      const chainLabel = current.chain.join(' > ');
-      if (!chains.includes(chainLabel) && chains.length < 3) {
-        chains.push(chainLabel);
-      }
-
-      const referencedDocument = documentByUuid.get(referenceUuid);
-      if (referencedDocument && !visitedDocuments.has(referencedDocument.uuid)) {
-        queue.push({
-          document: referencedDocument,
-          chain: current.chain.concat(referencedDocument.label),
+  for (const element of this.$.overview.querySelectorAll('[data-open-path]')) {
+    element.addEventListener('click', () => {
+      void Editor.Message.request(PACKAGE_NAME, 'open-path', { path: element.dataset.openPath })
+        .then((result) => {
+          if (!result || !result.ok) {
+            setStatus.call(this, `Không mở được thư mục: ${(result && result.error) || 'không rõ lỗi'}`);
+          }
         });
+    });
+  }
+
+  for (const element of this.$.overview.querySelectorAll('[data-html-file]')) {
+    element.addEventListener('click', () => {
+      switchStep.call(this, 'explore');
+      // Kèm bộ bản xuất đang xem: trang HTML cuối mở đúng file đó kể cả khi là bộ của bản build khác.
+      exploreTab.showHtml(this, this.helpers, element.dataset.htmlFile, element.dataset.htmlSet);
+      renderDetail.call(this);
+    });
+  }
+  for (const element of this.$.overview.querySelectorAll('[data-group]')) {
+    element.addEventListener('click', () => {
+      switchStep.call(this, 'explore');
+      exploreTab.showGroup(this, this.helpers, element.dataset.group);
+      renderDetail.call(this);
+    });
+  }
+  for (const element of this.$.overview.querySelectorAll('[data-goto]')) {
+    element.addEventListener('click', () => {
+      setOptimizeKind.call(this, element.dataset.goto);
+      switchStep.call(this, 'optimize');
+    });
+  }
+  for (const element of this.$.overview.querySelectorAll('.todo-action')) {
+    element.addEventListener('click', () => {
+      const insight = (this.state.insights || [])[Number(element.dataset.index)];
+      if (insight && insight.action) {
+        void runInsightAction.call(this, insight.action);
       }
+    });
+  }
+  for (const element of this.$.overview.querySelectorAll('.ov-open-build')) {
+    element.addEventListener('click', () => { void openBuildPanel.call(this); });
+  }
+}
+
+function renderBuildCard() {
+  if (this.state.buildMissing || this.state.buildError || !this.state.buildFileCount) {
+    let body = 'Đang phân tích bản build...';
+    if (this.state.buildMissing) {
+      body = `Chưa có bản build ở <code>${escapeHtml(resolveBuildRoot(this).input)}</code>. Build platform <b>web-mobile</b>, tool tự phân tích ngay khi build xong.`;
+    } else if (this.state.buildPending) {
+      body = `Bản build ở <code>${escapeHtml(resolveBuildRoot(this).input)}</code> chưa xong (đang build, hoặc build dở: chưa có <code>src/settings.json</code>). Build xong là tool tự phân tích.`;
+    } else if (this.state.buildError) {
+      body = `Không phân tích được bản build: ${escapeHtml(this.state.buildError)}`;
     }
+    return `
+      <section class="ov-card ov-build">
+        <div class="ov-kicker">Bản build web-mobile</div>
+        <div class="ov-empty">${body}</div>
+        ${this.state.buildMissing ? '<button class="ov-button ov-open-build">Mở Build</button>' : ''}
+      </section>
+    `;
   }
 
-  return dependencyIndex;
+  const total = this.state.totalBuildBytes;
+  const groups = exploreTab.groupRows(this.state.assetRows);
+  const diff = describeDiff(this.state.diff);
+  // Chênh lệch từng nhóm so với cùng mốc với ô chênh lệch: bản build trước của thư mục này.
+  const previousBuild = this.state.previousBuild;
+  const percent = (bytes) => (total > 0 ? (bytes / total) * 100 : 0);
+  return `
+    <section class="ov-card ov-build">
+      <div class="ov-build-head">
+        <div>
+          <div class="ov-kicker">Bản build web-mobile</div>
+          <div class="ov-total">${escapeHtml(formatBytes(total))}<span class="ov-files">${this.state.buildFileCount} file</span></div>
+        </div>
+        <div class="ov-build-side">
+          ${renderTrend.call(this)}
+          <div class="ov-delta ${escapeHtml(diff.className)}" title="${escapeHtml(diff.title)}">${escapeHtml(diff.text)}</div>
+        </div>
+      </div>
+      <div class="stack-bar">
+        ${groups.map((group) => `
+          <span class="stack-seg group-${group.key}" data-group="${group.key}" style="width:${percent(group.bytes).toFixed(2)}%"
+            title="${escapeHtml(`${group.label}: ${formatBytes(group.bytes)} (${Math.round(percent(group.bytes))}%) · ${group.files} file\n${group.hint}\nBấm để xem danh sách file`)}"></span>
+        `).join('')}
+      </div>
+      <div class="stack-legend">
+        ${groups.map((group) => {
+          const delta = previousBuild && previousBuild.groups ? group.bytes - (previousBuild.groups[group.key] || 0) : 0;
+          return `
+            <button class="legend-item" data-group="${group.key}" title="${escapeHtml(`${group.hint}. Bấm để xem danh sách file.`)}">
+              <span class="legend-dot group-${group.key}"></span>
+              <span class="legend-label">${escapeHtml(group.label)}</span>
+              <span class="legend-value">${escapeHtml(formatBytes(group.bytes))}</span>
+              <span class="legend-pct">${Math.round(percent(group.bytes))}%</span>
+              ${Math.abs(delta) >= 1024 ? `<span class="legend-delta ${deltaClass(delta)}" title="${escapeHtml(`So với lần build ${formatTimestamp(new Date(previousBuild.builtAt).toISOString())}`)}">${escapeHtml(formatDelta(delta))}</span>` : ''}
+            </button>
+          `;
+        }).join('')}
+      </div>
+      <div class="ov-note">Đây là thư mục build web-mobile, chưa đóng gói. Bản xuất cho từng mạng nén ảnh sang WebP, encode lại audio rồi zip tất cả, nên tỉ lệ giữa các nhóm khác đi: mã engine và dữ liệu JSON co lại nhiều nhất, model và âm thanh gần như giữ nguyên. Phần thật sự chiếm trong file gửi mạng xem ở Tìm chỗ nặng → HTML cuối; Việc nên làm bên dưới tính phần giảm được theo dung lượng sau zip.</div>
+    </section>
+  `;
 }
 
-function normalizeDependencyUuid(uuid) {
-  return String(uuid || '').split('@')[0].toLowerCase();
-}
+// ---------------------------------------------------------------- thiết lập còn thiếu
 
-async function buildPackedAssetIndex({ buildFiles, assetEntries }) {
-  const assetByUuid = new Map(assetEntries.map((entry) => [String(entry.uuid || '').toLowerCase(), entry]));
-  const buildFileByPath = new Map(buildFiles.map((file) => [normalizeBuildPath(file.relativePath), file]));
-  const packedAssetIndex = new Map();
-  const configFiles = buildFiles.filter((file) => /^config(?:\.[^.]+)?\.json$/i.test(file.name));
-
-  for (const configFile of configFiles) {
-    let config;
-    try {
-      config = JSON.parse(await fs.readFile(configFile.fullPath, 'utf8'));
-    } catch (_error) {
-      continue;
-    }
-
-    const uuids = Array.isArray(config.uuids) ? config.uuids : [];
-    const packs = config.packs && typeof config.packs === 'object' ? config.packs : {};
-    const bundleRoot = path.posix.dirname(normalizeBuildPath(configFile.relativePath));
-    const importBase = String(config.importBase || 'import').replace(/^\/+|\/+$/g, '');
-
-    for (const [packId, uuidIndexes] of Object.entries(packs)) {
-      if (!Array.isArray(uuidIndexes)) {
-        continue;
-      }
-
-      const packPrefix = packId.slice(0, 2);
-      const basePath = `${bundleRoot}/${importBase}/${packPrefix}/${packId}`;
-      const packedFile = buildFileByPath.get(`${basePath}.json`)
-        || buildFileByPath.get(`${basePath}.cconb`);
-      if (!packedFile) {
-        continue;
-      }
-
-      const matchedAssets = uuidIndexes
-        .map((index) => decompressCocosUuid(uuids[index]))
-        .map((uuid) => assetByUuid.get(String(uuid || '').toLowerCase()))
-        .filter(Boolean);
-      const packedAssets = Array.from(new Map(
-        matchedAssets.map((entry) => [String(entry.url || '').split('@')[0].toLowerCase(), entry]),
-      ).values());
-      if (packedAssets.length) {
-        packedAssetIndex.set(normalizeBuildPath(packedFile.relativePath), packedAssets);
-      }
-    }
+/**
+ * Tự kiểm tra thiết lập (ffmpeg, preset nén, tên build, mạng đã tick, meshopt). panel.state.setupIssues
+ * luôn là kết quả mới nhất (các tab đọc được); chỉ vẽ lại khi nội dung đổi.
+ */
+async function refreshSetup() {
+  let issues;
+  try {
+    issues = await checkSetup(Editor.Project.path);
+  } catch (error) {
+    console.warn(`[${PACKAGE_NAME}] Không kiểm tra được thiết lập:`, error);
+    issues = [];
   }
-
-  return packedAssetIndex;
-}
-
-function decompressCocosUuid(value) {
-  const rawValue = String(value || '');
-  const separatorIndex = rawValue.indexOf('@');
-  const uuid = separatorIndex >= 0 ? rawValue.slice(0, separatorIndex) : rawValue;
-  const suffix = separatorIndex >= 0 ? rawValue.slice(separatorIndex) : '';
-  if (uuid.length !== 22) {
-    return `${uuid}${suffix}`;
-  }
-
-  const base64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-  const hex = '0123456789abcdef';
-  const chars = [uuid[0], uuid[1]];
-  for (let index = 2; index < 22; index += 2) {
-    const left = base64.indexOf(uuid[index]);
-    const right = base64.indexOf(uuid[index + 1]);
-    if (left < 0 || right < 0) {
-      return `${uuid}${suffix}`;
-    }
-    chars.push(hex[left >> 2]);
-    chars.push(hex[((left & 3) << 2) | (right >> 4)]);
-    chars.push(hex[right & 15]);
-  }
-
-  const compact = chars.join('');
-  return `${compact.slice(0, 8)}-${compact.slice(8, 12)}-${compact.slice(12, 16)}-${compact.slice(16, 20)}-${compact.slice(20)}${suffix}`;
-}
-
-function normalizeBuildPath(value) {
-  return String(value || '').replace(/\\/g, '/').toLowerCase();
-}
-
-async function collectBuildFiles(root) {
-  const files = [];
-
-  async function walk(current) {
-    const entries = await fs.readdir(current, { withFileTypes: true });
-    for (const entry of entries) {
-      const fullPath = path.join(current, entry.name);
-      if (entry.isDirectory()) {
-        await walk(fullPath);
-        continue;
-      }
-
-      if (!entry.isFile()) {
-        continue;
-      }
-
-      const stat = await fs.stat(fullPath);
-      const relativePath = toRelative(root, fullPath);
-      const extension = path.extname(entry.name).toLowerCase();
-      const buildInfo = categorizeBuildFile(relativePath, extension);
-
-      files.push({
-        fullPath,
-        relativePath,
-        name: entry.name,
-        extension,
-        size: stat.size,
-        sizeKB: round(stat.size / 1024),
-        category: buildInfo.category,
-        groupLabel: buildInfo.groupLabel,
-        isNative: buildInfo.isNative,
-        isImport: buildInfo.isImport,
-      });
-    }
-  }
-
-  await walk(root);
-  return files.sort((left, right) => right.size - left.size);
-}
-
-function indexBuildFiles(buildFiles) {
-  const index = new Map();
-  for (const file of buildFiles) {
-    index.set(file.relativePath, file);
-  }
-  return index;
-}
-
-function buildTypeSummary(buildFiles) {
-  const buckets = new Map();
-
-  for (const file of buildFiles) {
-    const key = file.category;
-    let bucket = buckets.get(key);
-    if (!bucket) {
-      bucket = {
-        category: key,
-        label: typeLabel(key),
-        files: 0,
-        size: 0,
-        examples: [],
-      };
-      buckets.set(key, bucket);
-    }
-
-    bucket.files += 1;
-    bucket.size += file.size;
-    if (bucket.examples.length < 3) {
-      bucket.examples.push(file.relativePath);
-    }
-  }
-
-  return Array.from(buckets.values())
-    .map((bucket) => ({
-      ...bucket,
-      sizeKB: round(bucket.size / 1024),
-      sizeMB: round(bucket.size / (1024 * 1024)),
-    }))
-    .sort((left, right) => right.size - left.size);
-}
-
-async function buildAssetRows({ buildFiles, assetEntries, buildRoot, dependencyIndex, packedAssetIndex }) {
-  const rows = await Promise.all(buildFiles.map(async (file) => {
-    const sourceMatch = findBestSourceMatch(file, assetEntries);
-    const packedSources = packedAssetIndex.get(normalizeBuildPath(file.relativePath)) || [];
-    const prefabSources = packedSources.filter((entry) => entry.category === 'prefab');
-    const modelSources = Array.from(new Map(packedSources
-      .filter((entry) => entry.category === 'model-source')
-      .map((entry) => {
-        const rootUrl = String(entry.url || '').split('@')[0];
-        return [rootUrl.toLowerCase(), {
-          uuid: normalizeDependencyUuid(entry.uuid),
-          url: rootUrl,
-          extension: path.extname(rootUrl).toLowerCase(),
-        }];
-      })).values());
-    const primarySource = prefabSources[0] || modelSources[0] || sourceMatch || packedSources[0] || null;
-    const dependencySources = packedSources.length ? packedSources : (primarySource ? [primarySource] : []);
-    const includedBy = Array.from(new Set(dependencySources.flatMap((entry) => (
-      dependencyIndex.get(normalizeDependencyUuid(entry.uuid)) || []
-    )))).slice(0, 3);
-    const textureMeta = await readTextureMeta(file.fullPath, file.extension);
-    return {
-      fullPath: file.fullPath,
-      relativePath: file.relativePath,
-      name: file.name,
-      extension: file.extension,
-      size: file.size,
-      sizeKB: file.sizeKB,
-      sizeMB: round(file.size / (1024 * 1024)),
-      category: file.category,
-      source: primarySource ? primarySource.url : '',
-      sourceUuid: primarySource ? primarySource.uuid : '',
-      sourceCategory: primarySource ? primarySource.category : '',
-      packedSourceCount: packedSources.length,
-      prefabSources: prefabSources.map((entry) => ({ uuid: entry.uuid, url: entry.url })),
-      modelSources,
-      includedBy,
-      textureMeta,
-      canOptimizeDirectly: isDirectAssetOptimizationSupported(file),
-      buildArea: classifyBuildArea(file.relativePath),
-      relativeBuildRoot: toRelative(buildRoot, file.fullPath),
-    };
+  // level / message: cùng dạng với khung issue của các tab (.issue.error / .issue.info).
+  this.state.setupIssues = issues.map((issue) => ({
+    ...issue,
+    level: issue.level || (issue.id === 'meshopt' ? 'error' : 'info'),
+    message: issue.message || issue.title,
   }));
-
-  return rows.sort((left, right) => right.size - left.size);
-}
-
-async function buildImportRows({ buildFiles, assetEntries, projectRoot, buildRoot }) {
-  const importCandidates = buildFiles
-    .filter((file) => file.isImport && file.extension === '.json')
-    .sort((left, right) => right.size - left.size);
-
-  const rows = [];
-  for (const file of importCandidates) {
-    const text = await fs.readFile(file.fullPath, 'utf8');
-    const analysis = analyzeImportFile({
-      projectRoot,
-      buildRoot,
-      file,
-      text,
-      assetEntries,
-    });
-    rows.push(analysis);
-  }
-
-  return rows;
-}
-
-function renderSummary(buildFiles, typeRows, assetRows, importRows, scanSourceLabel = 'Build') {
-  const totalSize = buildFiles.reduce((sum, file) => sum + file.size, 0);
-  this.$.summary.textContent = `${scanSourceLabel}: ${buildFiles.length} files, ${round(totalSize / (1024 * 1024))} MB total`;
-
-  const heavyType = typeRows[0];
-  const heavyImport = importRows[0];
-  const parts = [];
-
-  if (heavyType) {
-    parts.push(`Largest type: ${heavyType.label} (${heavyType.sizeMB} MB)`);
-  }
-  if (heavyImport) {
-    parts.push(`Heaviest import json: ${heavyImport.relativeBuildPath} (${heavyImport.sizeKB} KB)`);
-  }
-
-  this.$.recommendation.textContent = parts.join(' | ') || 'No build files found.';
-}
-
-function renderOverview(buildFiles, typeRows) {
-  if (!buildFiles.length) {
-    this.$.overview.className = 'panel-content empty';
-    this.$.overview.textContent = 'No files found.';
+  const signature = JSON.stringify(issues.map((issue) => [issue.id, issue.title, issue.detail, issue.action && issue.action.type]));
+  if (signature === this.state.setupSignature) {
     return;
   }
+  this.state.setupSignature = signature;
+  renderOverview.call(this);
+  // Tab nào hiện cảnh báo thiết lập (ffmpeg, meshopt...) thì vẽ lại theo kết quả mới (tab đang ẩn: khi được mở).
+  refreshTabs.call(this);
+}
 
-  const totalSize = buildFiles.reduce((sum, file) => sum + file.size, 0);
-  const topThree = typeRows.slice(0, 3);
-  const cards = [
-    {
-      label: 'Total Build',
-      value: `${round(totalSize / (1024 * 1024))} MB`,
-      note: `${buildFiles.length} files`,
-    },
-    {
-      label: 'Largest Type',
-      value: topThree[0] ? topThree[0].label : 'N/A',
-      note: topThree[0] ? `${topThree[0].sizeMB} MB` : 'No data',
-    },
-    {
-      label: 'Top 3 Share',
-      value: `${round(topThree.reduce((sum, row) => sum + row.size, 0) / (1024 * 1024))} MB`,
-      note: topThree.length ? topThree.map((row) => row.label).join(', ') : 'No data',
-    },
-  ];
-
-  const distribution = typeRows.slice(0, 8).map((row) => {
-    const percentage = totalSize > 0 ? round((row.size / totalSize) * 100) : 0;
-    return `
-      <div class="dist-row">
-        <div class="dist-meta">
-          <span class="dist-label">${escapeHtml(row.label)}</span>
-          <span class="dist-size">${row.sizeMB} MB</span>
-        </div>
-        <div class="dist-bar-track">
-          <div class="dist-bar-fill" style="width:${Math.max(4, percentage)}%"></div>
-        </div>
-        <div class="dist-foot">${percentage}% · ${row.files} files</div>
+/** Chỉ hiện khi còn thiếu gì đó; đủ hết thì không chiếm chỗ. */
+function renderSetupCard() {
+  const issues = this.state.setupIssues;
+  if (!issues.length) {
+    return '';
+  }
+  return `
+    <section class="ov-card ov-setup">
+      <div class="ov-todo-head">
+        <span class="ov-title">Thiết lập còn thiếu</span>
+        <span class="ov-sub">${issues.length} việc · tool tự kiểm tra định kỳ, làm xong là mục đó tự biến mất</span>
       </div>
-    `;
-  }).join('');
-
-  this.$.overview.className = 'panel-content';
-  this.$.overview.innerHTML = `
-    <div class="overview-grid">
-      ${cards.map((card) => `
-        <div class="overview-card">
-          <div class="overview-label">${escapeHtml(card.label)}</div>
-          <div class="overview-value">${escapeHtml(card.value)}</div>
-          <div class="overview-note">${escapeHtml(card.note)}</div>
+      ${issues.map((issue, index) => `
+        <div class="setup-item">
+          <span class="setup-icon">!</span>
+          <div class="todo-main">
+            <div class="todo-title">${escapeHtml(issue.title)}</div>
+            <div class="todo-detail">${escapeHtml(issue.detail)}</div>
+          </div>
+          ${issue.action ? `<button class="ov-button setup-action" data-index="${index}">${escapeHtml(issue.action.label)}</button>` : ''}
         </div>
       `).join('')}
-    </div>
-    <div class="distribution">
-      ${distribution}
-    </div>
-    ${renderExportOverview.call(this)}
+    </section>
   `;
 }
 
-function renderTypeResults() {
-  const rows = this.state.typeRows;
-  if (!rows.length) {
-    this.$.typeResults.className = 'panel-content empty';
-    this.$.typeResults.textContent = 'No type groups found.';
-    return;
+/**
+ * Chạy nút của một mục "Thiết lập còn thiếu" (cũng là helpers.runSetupAction cho các tab).
+ * Trả về true khi đã làm xong, false khi huỷ / lỗi (lỗi đã báo ở thanh trạng thái).
+ */
+async function runSetupAction(action) {
+  if (!action) {
+    return false;
   }
-
-  this.$.typeResults.className = 'panel-content';
-  this.$.typeResults.innerHTML = `
-    <table class="result-table compact">
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>MB</th>
-          <th>Files</th>
-          <th>Sample</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${rows.map((entry, index) => `
-          <tr class="result-row ${isSelected(this, 'type', index) ? 'selected' : ''}" data-kind="type" data-index="${index}">
-            <td>${escapeHtml(entry.label)}</td>
-            <td class="size-cell">${entry.sizeMB}</td>
-            <td>${entry.files}</td>
-            <td class="build-file">${escapeHtml(entry.examples[0] || '')}</td>
-          </tr>
-        `).join('')}
-      </tbody>
-    </table>
-  `;
-
-  wireSelectionRows.call(this, this.$.typeResults);
-}
-
-function renderAssetResults() {
-  const rows = getFilteredAssetRows(this);
-  if (!rows.length) {
-    this.$.assetResults.className = 'panel-content empty';
-    this.$.assetResults.textContent = 'No built assets found for this filter.';
-    updateAudioBatchStatus.call(this);
-    return;
+  if (action.type === 'open-build') {
+    await openBuildPanel.call(this);
+    return true;
   }
-
-  const tickableRows = rows.filter(isTickableAudio);
-  const allTickable = tickableRows.length > 0;
-  const allTicked = allTickable
-    && tickableRows.every((entry) => this.state.tickedAudio.has(entry.relativePath));
-
-  this.$.assetResults.className = 'panel-content';
-  this.$.assetResults.innerHTML = `
-    <table class="result-table">
-      <thead>
-        <tr>
-          <th class="tick-cell"><input type="checkbox" id="tick-all-audio" title="Tick every optimizable audio file in this view"${allTickable && allTicked ? ' checked' : ''}${allTickable ? '' : ' disabled'}></th>
-          <th>#</th>
-          <th>Built File</th>
-          <th>Type</th>
-          <th>KB</th>
-          <th>Source Asset</th>
-          <th>Included By</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${rows.map((entry, index) => `
-          <tr class="result-row ${isSelected(this, 'asset', index) ? 'selected' : ''}" data-kind="asset" data-index="${index}">
-            <td class="tick-cell">${isTickableAudio(entry)
-              ? `<input type="checkbox" class="row-tick" data-relative-path="${escapeHtml(entry.relativePath)}"${this.state.tickedAudio.has(entry.relativePath) ? ' checked' : ''}>`
-              : ''}</td>
-            <td>${index + 1}</td>
-            <td class="build-file">${escapeHtml(entry.relativePath)}</td>
-            <td>${escapeHtml(typeLabel(entry.category))}</td>
-            <td class="size-cell">${entry.sizeKB}</td>
-            <td class="build-file">${escapeHtml(formatAssetSourceLabel(entry, this.state.assetFilter))}</td>
-            <td class="dependency-cell" title="${escapeHtml((entry.includedBy || []).join('\n'))}">${escapeHtml(entry.includedBy && entry.includedBy[0] || 'No prefab chain')}</td>
-          </tr>
-        `).join('')}
-      </tbody>
-    </table>
-  `;
-
-  wireSelectionRows.call(this, this.$.assetResults);
-  wireAudioTickBoxes.call(this, this.$.assetResults);
-  updateAudioBatchStatus.call(this);
-}
-
-// Only .mp3/.ogg audio can go through the safe direct optimizer, so those are
-// the rows that get a tick box.
-function isTickableAudio(entry) {
-  return Boolean(entry && entry.category === 'audio' && entry.canOptimizeDirectly);
-}
-
-function getTickableAudioRows(panel) {
-  return getFilteredAssetRows(panel).filter(isTickableAudio);
-}
-
-function setAllVisibleAudioTicked(ticked) {
-  for (const entry of getTickableAudioRows(this)) {
-    if (ticked) {
-      this.state.tickedAudio.add(entry.relativePath);
-    } else {
-      this.state.tickedAudio.delete(entry.relativePath);
-    }
-  }
-  renderAssetResults.call(this);
-  updateAudioBatchStatus.call(this);
-}
-
-function wireAudioTickBoxes(root) {
-  const tickAll = root.querySelector('#tick-all-audio');
-  if (tickAll) {
-    tickAll.addEventListener('click', (event) => event.stopPropagation());
-    tickAll.addEventListener('change', (event) => {
-      setAllVisibleAudioTicked.call(this, event.target.checked);
-    });
-  }
-
-  for (const box of root.querySelectorAll('.row-tick')) {
-    // Stop the row click handler from stealing the tick and re-rendering.
-    box.addEventListener('click', (event) => event.stopPropagation());
-    box.addEventListener('change', (event) => {
-      const relativePath = box.dataset.relativePath;
-      if (event.target.checked) {
-        this.state.tickedAudio.add(relativePath);
-      } else {
-        this.state.tickedAudio.delete(relativePath);
-      }
-      const tickAllBox = root.querySelector('#tick-all-audio');
-      if (tickAllBox && !tickAllBox.disabled) {
-        const tickable = getTickableAudioRows(this);
-        tickAllBox.checked = tickable.length > 0
-          && tickable.every((entry) => this.state.tickedAudio.has(entry.relativePath));
-      }
-      updateAudioBatchStatus.call(this);
-    });
-  }
-}
-
-function getTickedAudioRows(panel) {
-  return panel.state.assetRows.filter(
-    (entry) => isTickableAudio(entry) && panel.state.tickedAudio.has(entry.relativePath)
-  );
-}
-
-function updateAudioBatchStatus() {
-  const tickedCount = getTickedAudioRows(this).length;
-  const tickedKB = round(
-    getTickedAudioRows(this).reduce((sum, entry) => sum + Number(entry.size || 0), 0) / 1024
-  );
-
-  if (this.$.batchAudioStatus) {
-    this.$.batchAudioStatus.textContent = tickedCount
-      ? `${tickedCount} ticked (${tickedKB} KB)`
-      : 'No audio ticked';
-  }
-
-  for (const button of [this.$.batchApplyAudioBtn, this.$.batchResetAudioBtn]) {
-    if (button) {
-      button.disabled = tickedCount === 0;
-    }
-  }
-}
-
-function renderImportResults() {
-  const rows = this.state.importRows;
-  if (!rows.length) {
-    this.$.importResults.className = 'panel-content empty';
-    this.$.importResults.textContent = 'No heavy import files found.';
-    return;
-  }
-
-  this.$.importResults.className = 'panel-content';
-  this.$.importResults.innerHTML = `
-    <table class="result-table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Import File</th>
-          <th>KB</th>
-          <th>Top Sources</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${rows.map((entry, index) => `
-          <tr class="result-row ${isSelected(this, 'import', index) ? 'selected' : ''}" data-kind="import" data-index="${index}">
-            <td>${index + 1}</td>
-            <td class="build-file">${escapeHtml(entry.relativeBuildPath)}</td>
-            <td class="size-cell">${entry.sizeKB}</td>
-            <td><div class="source-list">${renderSourceChips(entry.sources.slice(0, 3))}</div></td>
-          </tr>
-        `).join('')}
-      </tbody>
-    </table>
-  `;
-
-  wireSelectionRows.call(this, this.$.importResults);
-}
-
-function renderDetail() {
-  const selection = getSelectedEntry(this);
-  if (!selection) {
-    this.$.detail.className = 'detail empty';
-    this.$.detail.textContent = 'Run a scan and pick a row to inspect.';
-    return;
-  }
-
-  if (selection.kind === 'type') {
-    renderTypeDetail.call(this, selection.entry);
-    return;
-  }
-
-  if (selection.kind === 'asset') {
-    renderAssetDetail.call(this, selection.entry);
-    return;
-  }
-
-  renderImportDetail.call(this, selection.entry);
-}
-
-function renderTypeDetail(entry) {
-  this.$.detail.className = 'detail';
-  this.$.detail.innerHTML = `
-    <div class="detail-body">
-      <div class="detail-block">
-        <div class="detail-title">Type Group</div>
-        <div class="detail-value">${escapeHtml(entry.label)}</div>
-      </div>
-      <div class="detail-block twin">
-        <div>
-          <div class="detail-title">Total Size</div>
-          <div class="detail-value">${entry.sizeMB} MB</div>
-        </div>
-        <div>
-          <div class="detail-title">Files</div>
-          <div class="detail-value">${entry.files}</div>
-        </div>
-      </div>
-      <div class="detail-block">
-        <div class="detail-title">Sample Files</div>
-        <ul class="detail-list">${entry.examples.map((value) => `<li>${escapeHtml(value)}</li>`).join('')}</ul>
-      </div>
-    </div>
-  `;
-}
-
-function renderAssetDetail(entry) {
-  const previewState = this.state.previewByAsset.get(entry.relativePath) || null;
-  const textureMetaHtml = renderTextureMeta(entry);
-  const prefabCount = Array.isArray(entry.prefabSources) ? entry.prefabSources.length : 0;
-  const modelCount = Array.isArray(entry.modelSources) ? entry.modelSources.length : 0;
-  const displaySource = getAssetDisplaySource(entry, this.state.assetFilter);
-  const packedMetaHtml = [
-    prefabCount > 0 ? `${prefabCount} prefab${prefabCount > 1 ? 's' : ''} in pack` : '',
-    modelCount > 0 ? `${modelCount} model${modelCount > 1 ? 's' : ''} in pack` : '',
-  ].filter(Boolean).map((label) => `<span>${escapeHtml(label)}</span>`).join('');
-
-  this.$.detail.className = 'detail';
-  this.$.detail.innerHTML = `
-    <div class="detail-body">
-      <div class="detail-block asset-preview-block">
-        <div class="detail-title">Asset Preview</div>
-        <div id="detail-asset-preview" class="asset-preview-stage" data-preview-path="${escapeHtml(entry.relativePath)}">
-          <div class="detail-note">Loading built asset preview...</div>
-        </div>
-      </div>
-      ${renderAssetOptimizeBox.call(this, entry, previewState)}
-      <div class="built-file-compact">
-        <div class="detail-title">Built File</div>
-        <div class="built-file-path" title="${escapeHtml(entry.relativePath)}">${escapeHtml(entry.relativePath)}</div>
-        <div class="built-file-chips">
-          <span>${escapeHtml(formatBytes(entry.size || 0))}</span>
-          <span>${escapeHtml(typeLabel(entry.category))}</span>
-          <span>${escapeHtml(entry.buildArea)}</span>
-          ${packedMetaHtml}
-          ${textureMetaHtml}
-        </div>
-        <div class="built-source-line">
-          <span>Source</span>
-          <span class="clickable-source" data-source-url="${escapeHtml(displaySource.url)}" data-source-uuid="${escapeHtml(displaySource.uuid)}">${escapeHtml(formatAssetSourceLabel(entry, this.state.assetFilter))}</span>
-        </div>
-        ${modelCount > 1 ? `
-          <div class="built-source-line">
-            <span>Models In Pack</span>
-            <div class="dependency-chains">
-              ${entry.modelSources.map((model) => `<span>${escapeHtml(shortAssetLabel(model.url))}</span>`).join('')}
-            </div>
-          </div>
-        ` : ''}
-        <div class="built-source-line">
-          <span>Included By</span>
-          <div class="dependency-chains">
-            ${(entry.includedBy && entry.includedBy.length)
-              ? entry.includedBy.map((chain) => `<span>${escapeHtml(chain)}</span>`).join('')
-              : '<span>No scene/prefab chain found</span>'}
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-
-  wireDetailReveal.call(this);
-  wireAssetOptimizeControls.call(this, entry);
-  void loadInitialAssetPreview.call(this, entry);
-}
-
-function renderImportDetail(entry) {
-  const markerHtml = entry.markers.length
-    ? entry.markers.map((marker) => `<span class="marker-chip">${escapeHtml(marker)}</span>`).join('')
-    : '<span class="marker-chip">No markers</span>';
-
-  const sourceHtml = entry.sources.length
-    ? entry.sources.slice(0, 20).map((source) => {
-        const reasons = source.reasons.join(', ');
-        return `<li data-source-url="${escapeHtml(source.url)}" data-source-uuid="${escapeHtml(source.uuid || '')}"><strong>${escapeHtml(source.url)}</strong><br>score ${source.score}${reasons ? ` · ${escapeHtml(reasons)}` : ''}</li>`;
-      }).join('')
-    : '<li>No matched source assets.</li>';
-
-  this.$.detail.className = 'detail';
-  this.$.detail.innerHTML = `
-    <div class="detail-body">
-      <div class="detail-block">
-        <div class="detail-title">Heavy Import File</div>
-        <div class="detail-value">${escapeHtml(entry.relativeBuildPath)}</div>
-      </div>
-      <div class="detail-block twin">
-        <div>
-          <div class="detail-title">Size</div>
-          <div class="detail-value">${entry.sizeKB} KB</div>
-        </div>
-        <div>
-          <div class="detail-title">Top Matched Sources</div>
-          <div class="detail-value">${entry.sources.length}</div>
-        </div>
-      </div>
-      <div class="detail-block">
-        <div class="detail-title">Markers</div>
-        <div class="markers">${markerHtml}</div>
-      </div>
-      <div class="detail-block">
-        <div class="detail-title">Matched Source Assets</div>
-        <ul class="detail-list">${sourceHtml}</ul>
-      </div>
-    </div>
-  `;
-
-  wireImportSourceReveal.call(this);
-}
-
-function wireSelectionRows(root) {
-  for (const row of root.querySelectorAll('.result-row')) {
-    row.addEventListener('click', () => {
-      this.state.selectedKind = row.dataset.kind;
-      this.state.selectedIndex = Number(row.dataset.index);
-      if (row.dataset.kind === 'asset') {
-        this.$.assetResults.focus({ preventScroll: true });
-      }
-      renderTypeResults.call(this);
-      renderAssetResults.call(this);
-      renderImportResults.call(this);
-      renderDetail.call(this);
-    });
-
-    row.addEventListener('dblclick', () => {
-      this.state.selectedKind = row.dataset.kind;
-      this.state.selectedIndex = Number(row.dataset.index);
-      renderTypeResults.call(this);
-      renderAssetResults.call(this);
-      renderImportResults.call(this);
-      renderDetail.call(this);
-      void revealSelectionAsset.call(this);
-    });
-  }
-}
-
-function getFilteredAssetRows(panel) {
-  const filter = panel.state.assetFilter;
-  if (filter === 'all') {
-    return panel.state.assetRows;
-  }
-
-  return panel.state.assetRows.filter((entry) => {
-    switch (filter) {
-      case 'model-bin':
-        return entry.category === 'model-bin'
-          || entry.sourceCategory === 'model-source'
-          || (Array.isArray(entry.modelSources) && entry.modelSources.length > 0);
-      case 'prefab':
-        return (Array.isArray(entry.prefabSources) && entry.prefabSources.length > 0)
-          || entry.sourceCategory === 'prefab'
-          || String(entry.source || '').toLowerCase().endsWith('.prefab');
-      case 'engine-js':
-        return entry.category === 'engine-js' || entry.category === 'game-js';
-      case 'import-json':
-        return entry.category === 'import-json' || entry.category === 'import-binary';
-      default:
-        return entry.category === filter;
-    }
-  });
-}
-
-function ensureValidAssetSelection() {
-  if (this.state.selectedKind !== 'asset') {
-    return;
-  }
-
-  const rows = getFilteredAssetRows(this);
-  if (!rows.length) {
-    this.state.selectedIndex = -1;
-    return;
-  }
-
-  if (this.state.selectedIndex < 0 || this.state.selectedIndex >= rows.length) {
-    this.state.selectedIndex = 0;
-  }
-}
-
-async function revealSelectionAsset() {
-  const selection = getSelectedEntry(this);
-  if (!selection) {
-    return;
-  }
-
-  let payload = null;
-  if (selection.kind === 'asset' && (selection.entry.source || selection.entry.sourceUuid)) {
-    const displaySource = getAssetDisplaySource(selection.entry, this.state.assetFilter);
-    payload = {
-      url: displaySource.url,
-      uuid: displaySource.uuid,
-    };
-  }
-
-  if (selection.kind === 'import' && selection.entry.sources && selection.entry.sources[0]) {
-    payload = {
-      url: selection.entry.sources[0].url || '',
-      uuid: selection.entry.sources[0].uuid || '',
-    };
-  }
-
-  if (!payload) {
-    setStatus.call(this, 'No source asset mapped for this row.');
-    return;
-  }
-
-  await revealAssetInEditor.call(this, payload);
-}
-
-function wireDetailReveal() {
-  const source = this.$.detail.querySelector('.clickable-source');
-  if (!source) {
-    return;
-  }
-
-  source.addEventListener('dblclick', () => {
-    const payload = {
-      url: String(source.dataset.sourceUrl || '').trim(),
-      uuid: String(source.dataset.sourceUuid || '').trim(),
-    };
-    void revealAssetInEditor.call(this, payload);
-  });
-}
-
-function wireImportSourceReveal() {
-  for (const item of this.$.detail.querySelectorAll('.detail-list li[data-source-url]')) {
-    item.addEventListener('dblclick', () => {
-      const payload = {
-        url: String(item.dataset.sourceUrl || '').trim(),
-        uuid: String(item.dataset.sourceUuid || '').trim(),
-      };
-      void revealAssetInEditor.call(this, payload);
-    });
-  }
-}
-
-function renderAssetOptimizeBox(entry, previewState) {
-  if (entry.category === 'audio') {
-    if (!entry.canOptimizeDirectly) {
-      return `
-        <div class="detail-block optimize-box">
-          <div class="detail-title">Direct Optimize</div>
-          <div class="detail-note">Safe audio direct optimize currently supports .mp3 and .ogg. .wav is scan-only for now.</div>
-        </div>
-      `;
-    }
-
-    const resultHtml = renderOptimizeResult(previewState, entry);
-    return `
-      <div class="detail-block optimize-box">
-        <div class="detail-title">Direct Optimize</div>
-        <div class="detail-note">Every Apply starts from the original Build Root file and only writes into Output Root.</div>
-        <div class="optimize-controls">
-          <label class="inline-field optimize-inline-field">
-            <span>Bitrate</span>
-            <select id="detail-audio-bitrate">
-              ${renderAudioBitrateOptions(96)}
-            </select>
-          </label>
-          <button id="detail-apply-optimize" class="action-button">Apply To Output Copy</button>
-          <button id="detail-reset-optimize" class="action-button reset-button">Reset Asset</button>
-        </div>
-        <div id="detail-optimize-result">${resultHtml}</div>
-      </div>
-    `;
-  }
-
-  if (entry.category !== 'texture') {
-    return '';
-  }
-
-  if (!entry.canOptimizeDirectly) {
-    return `
-      <div class="detail-block optimize-box">
-        <div class="detail-title">Direct Optimize</div>
-        <div class="detail-note">Safe direct optimize currently supports .png, .jpg, .jpeg, and .bmp build textures.</div>
-      </div>
-    `;
-  }
-
-  const resultHtml = renderOptimizeResult(previewState, entry);
-  const extension = String(entry.extension || '').toLowerCase();
-  const qualityControl = extension === '.png'
-    ? `
-      <label class="inline-field optimize-inline-field">
-        <span>PNG Quality</span>
-        <select id="detail-png-quality">
-          <option value="80-95">High 80-95</option>
-          <option value="65-85" selected>Balanced 65-85 ⭐</option>
-          <option value="50-75">Medium 50-75</option>
-          <option value="45-70">Aggressive 45-70</option>
-          <option value="30-50">Ultra Small 30-50</option>
-        </select>
-      </label>
-    `
-    : extension === '.jpg' || extension === '.jpeg'
-      ? `
-        <label class="inline-field optimize-inline-field">
-          <span>JPG Q</span>
-          <input id="detail-jpeg-quality" type="number" min="30" max="95" value="${SAFE_BULK_JPEG_QUALITY}">
-        </label>
-      `
-      : '';
-
-  const batchPngButton = extension === '.png'
-    ? `<button id="detail-apply-all-pngs" class="action-button batch-apply-btn" title="Optimize ALL PNGs in project using this quality">⚡ Apply To All PNGs</button>`
-    : '';
-
-  return `
-    <div class="detail-block optimize-box">
-      <div class="detail-title">Direct Optimize</div>
-        <div class="detail-note">Every Apply starts from the original Build Root file. Keeps filename, format, dimensions, and alpha; only a smaller result replaces the Output Root copy.</div>
-      <div class="optimize-controls">
-        ${qualityControl}
-        <button id="detail-apply-optimize" class="action-button">Apply To Output Copy</button>
-        ${batchPngButton}
-        <button id="detail-reset-optimize" class="action-button reset-button">Reset Asset</button>
-      </div>
-      <div id="detail-optimize-result">${resultHtml}</div>
-    </div>
-  `;
-}
-
-function renderTextureMeta(entry) {
-  if (!entry.textureMeta) {
-    return '';
-  }
-
-  const meta = entry.textureMeta;
-  const labels = [];
-  if (meta.width > 0 && meta.height > 0) {
-    labels.push(`${meta.width} x ${meta.height}`);
-  }
-  if (typeof meta.hasAlpha === 'boolean') {
-    labels.push(meta.hasAlpha ? 'alpha detected' : 'no alpha detected');
-  }
-  if (meta.formatLabel) {
-    labels.push(meta.formatLabel);
-  }
-
-  return `<span>${escapeHtml(labels.join(' | ') || 'No texture metadata')}</span>`;
-}
-
-async function loadInitialAssetPreview(entry) {
-  const previewPath = entry.relativePath;
-  const extension = String(entry.extension || '').toLowerCase();
-  const mimeType = getImageMimeType(extension);
-  const previewKind = mimeType.startsWith('image/')
-    ? 'image'
-    : mimeType.startsWith('audio/')
-      ? 'audio'
-      : '';
-  let stage = this.$.detail.querySelector('#detail-asset-preview');
-
-  if (!stage || stage.dataset.previewPath !== previewPath) {
-    return;
-  }
-  if (!previewKind) {
-    stage.innerHTML = `<div class="asset-preview-unavailable">No visual preview for ${escapeHtml(extension || typeLabel(entry.category))}</div>`;
-    return;
-  }
-
-  try {
-    const dataUrl = await readFileAsDataUrl(entry.fullPath);
-    stage = this.$.detail.querySelector('#detail-asset-preview');
-    if (!stage || stage.dataset.previewPath !== previewPath) {
-      return;
-    }
-
-    if (previewKind === 'audio') {
-      stage.innerHTML = `<audio class="asset-preview-audio" controls src="${escapeHtml(dataUrl)}"></audio>`;
-      return;
-    }
-
-    stage.innerHTML = `<img class="asset-preview-image" src="${escapeHtml(dataUrl)}" alt="Built asset preview">`;
-  } catch (error) {
-    stage = this.$.detail.querySelector('#detail-asset-preview');
-    if (stage && stage.dataset.previewPath === previewPath) {
-      stage.innerHTML = `<div class="asset-preview-unavailable">${escapeHtml(error.message || 'Could not load preview.')}</div>`;
-    }
-  }
-}
-
-function renderOptimizeResult(previewState, entry) {
-  if (!previewState) {
-    return '<div class="detail-note">Apply to see the exact size reduction.</div>';
-  }
-
-  if (previewState.status === 'loading') {
-    return `<div class="detail-note">${escapeHtml(previewState.message || 'Optimizing asset...')}</div>`;
-  }
-
-  if (previewState.status === 'error') {
-    return `<div class="detail-note error">${escapeHtml(previewState.message || 'Optimization failed.')}</div>`;
-  }
-
-  const report = previewState.report || {};
-  const beforeBytes = Number(report.beforeBytes || 0);
-  const afterBytes = Number(report.afterBytes || 0);
-  const deltaBytes = beforeBytes - afterBytes;
-  const deltaPercent = beforeBytes > 0 ? round((deltaBytes / beforeBytes) * 100) : 0;
-  const gainLabel = deltaBytes >= 0
-    ? `Saved ${formatBytes(deltaBytes)} (${String(deltaPercent)}%)`
-    : `Larger by ${formatBytes(Math.abs(deltaBytes))} (${String(Math.abs(deltaPercent))}%)`;
-  const badge = report.optimized ? 'Applied to output copy' : 'Kept original (no gain)';
-
-  if (entry && entry.category === 'audio') {
-    return `
-      <div class="preview-shell">
-        <div class="preview-summary">
-          <span class="preview-badge">${escapeHtml(badge)}</span>
-          <span>${escapeHtml(formatBytes(beforeBytes))} -> ${escapeHtml(formatBytes(afterBytes))}</span>
-          <span>${escapeHtml(gainLabel)}</span>
-          <span>Bitrate ${escapeHtml(String(report.originalBitrateKbps || 0))}k -> ${escapeHtml(String(report.outputBitrateKbps || report.requestedAudioBitrateKbps || 0))}k</span>
-          <span>${escapeHtml(String(report.channels || 0))} ch | ${escapeHtml(String(report.sampleRate || 0))} Hz</span>
-          <span>${escapeHtml(String(report.durationSeconds || 0))} s | ${escapeHtml(String(report.codecName || 'audio'))}</span>
-        </div>
-      </div>
-    `;
-  }
-
-  return `
-    <div class="preview-shell">
-        <div class="preview-summary">
-          <span class="preview-badge">${escapeHtml(badge)}</span>
-          <span>${escapeHtml(formatBytes(beforeBytes))} -> ${escapeHtml(formatBytes(afterBytes))}</span>
-          <span>${escapeHtml(gainLabel)}</span>
-        <span>${escapeHtml(String(report.originalWidth || 0))}x${escapeHtml(String(report.originalHeight || 0))}</span>
-        <span>Format ${escapeHtml(String(report.outputFormat || report.extension || ''))}</span>
-        ${report.pngQuality ? `<span>PNG quality ${escapeHtml(String(report.pngQuality))}</span>` : ''}
-      </div>
-    </div>
-  `;
-}
-
-function wireAssetOptimizeControls(entry) {
-  const applyButton = this.$.detail.querySelector('#detail-apply-optimize');
-  const resetButton = this.$.detail.querySelector('#detail-reset-optimize');
-  const audioBitrateInput = this.$.detail.querySelector('#detail-audio-bitrate');
-  const qualityInput = this.$.detail.querySelector('#detail-jpeg-quality');
-  const pngQualityInput = this.$.detail.querySelector('#detail-png-quality');
-
-  const applyAllButton = this.$.detail.querySelector('#detail-apply-all-pngs');
-
-  if (!applyButton && !resetButton && !applyAllButton) {
-    return;
-  }
-
-  if (applyButton) {
-    applyButton.addEventListener('click', () => {
-      void runAssetOptimizeAction.call(this, entry, {
-        jpegQuality: qualityInput ? clampInteger(Number(qualityInput.value), 30, 95, 82) : 82,
-        pngQuality: pngQualityInput ? String(pngQualityInput.value || '65-85') : '65-85',
-        audioBitrate: audioBitrateInput ? clampAudioBitrate(Number(audioBitrateInput.value)) : 96,
+  if (action.type === 'open-settings') {
+    return await Editor.Message.request('project', 'open-settings', action.tab, action.subTab)
+      .then(() => true)
+      .catch((error) => {
+        setStatus.call(this, `Không mở được Project Settings: ${error.message}`);
+        return false;
       });
-    });
   }
-
-  if (applyAllButton) {
-    applyAllButton.addEventListener('click', () => {
-      const q = pngQualityInput ? String(pngQualityInput.value || '65-85') : '65-85';
-      void runBatchPngOptimizeAction.call(this, { pngQuality: q });
-    });
+  if (action.type === 'open-url') {
+    const result = await Editor.Message.request(PACKAGE_NAME, 'open-url', { url: action.url }).catch((error) => ({ ok: false, error: error.message }));
+    setStatus.call(this, result && result.ok
+      ? 'Đã mở trang tải Node.js. Cài bản LTS, tắt hẳn Cocos rồi mở lại, sau đó bấm Cài ffmpeg.'
+      : `Không mở được trình duyệt: ${(result && result.error) || ''} - tự vào https://nodejs.org`);
+    return !!(result && result.ok);
   }
-
-  if (resetButton) {
-    resetButton.addEventListener('click', () => {
-      void runAssetResetAction.call(this, entry);
-    });
-  }
-}
-
-function moveAssetSelection(direction) {
-  const rows = getFilteredAssetRows(this);
-  if (!rows.length) {
-    return;
-  }
-
-  const currentIndex = this.state.selectedKind === 'asset'
-    ? this.state.selectedIndex
-    : (direction > 0 ? -1 : rows.length);
-  this.state.selectedKind = 'asset';
-  this.state.selectedIndex = Math.max(0, Math.min(rows.length - 1, currentIndex + direction));
-  renderAssetResults.call(this);
-  renderDetail.call(this);
-
-  const selectedRow = this.$.assetResults.querySelector('.result-row.selected');
-  if (selectedRow) {
-    selectedRow.scrollIntoView({ block: 'nearest' });
-  }
-}
-
-async function runAssetOptimizeAction(entry, options) {
-  if (!entry || !entry.canOptimizeDirectly) {
-    setStatus.call(this, 'This asset does not support safe direct optimization yet.');
-    return;
-  }
-
-  const jpegQuality = clampInteger(Number(options.jpegQuality), 30, 95, 82);
-  const pngQuality = normalizePngQualityOption(options.pngQuality);
-  const audioBitrate = clampAudioBitrate(Number(options.audioBitrate));
-  const currentState = {
-    status: 'loading',
-    message: 'Optimizing selected asset into output copy...',
-  };
-
-  this.state.previewByAsset.set(entry.relativePath, currentState);
-  renderDetail.call(this);
-  setStatus.call(this, currentState.message);
-
-  try {
-    const sourceRootInput = String(this.$.buildRootInput.value || DEFAULT_BUILD_ROOT).trim() || DEFAULT_BUILD_ROOT;
-    const outputRootInput = String(this.$.outputRootInput.value || DEFAULT_OUTPUT_ROOT).trim() || DEFAULT_OUTPUT_ROOT;
-    const sourceRoot = path.resolve(Editor.Project.path, sourceRootInput);
-    const outputRoot = path.resolve(Editor.Project.path, outputRootInput);
-    const report = await Editor.Message.request('playable-size-inspector', 'optimize-selected-asset', {
-      sourceRoot,
-      outputRoot,
-      relativePath: entry.relativePath,
-      assetKind: entry.category,
-      maxTextureSize: SAFE_BULK_MAX_TEXTURE_SIZE,
-      jpegQuality,
-      pngQuality,
-      targetFormat: 'original',
-      audioBitrate,
-    });
-
-    const previewState = {
-      status: 'ready',
-      report,
-    };
-
-    this.state.previewByAsset.set(entry.relativePath, previewState);
-
-    applyOptimizedAssetToState.call(this, entry, report);
-    void refreshOptimizedScanAvailability.call(this);
-    setStatus.call(this, report.optimized
-      ? `Optimized ${entry.relativePath} into output copy.`
-      : `Kept original ${entry.relativePath}; no smaller safe result.`);
-    this.$.recommendation.textContent = `Asset Preview now shows the output copy. Saved ${formatBytes(Math.max(0, Number(report.beforeBytes || 0) - Number(report.afterBytes || 0)))}.`;
-  } catch (error) {
-    console.error('[playable-size-inspector] asset optimize action failed:', error);
-    this.state.previewByAsset.set(entry.relativePath, {
-      status: 'error',
-      message: error.message || String(error),
-    });
-    setStatus.call(this, error.message || String(error));
-  }
-
-  renderDetail.call(this);
-}
-
-async function runAssetResetAction(entry) {
-  const sourceRootInput = String(this.$.buildRootInput.value || DEFAULT_BUILD_ROOT).trim() || DEFAULT_BUILD_ROOT;
-  const outputRootInput = String(this.$.outputRootInput.value || DEFAULT_OUTPUT_ROOT).trim() || DEFAULT_OUTPUT_ROOT;
-  const sourceRoot = path.resolve(Editor.Project.path, sourceRootInput);
-  const outputRoot = path.resolve(Editor.Project.path, outputRootInput);
-
-  setStatus.call(this, `Restoring ${entry.relativePath} from original build...`);
-  try {
-    const report = await Editor.Message.request('playable-size-inspector', 'reset-selected-asset', {
-      sourceRoot,
-      outputRoot,
-      relativePath: entry.relativePath,
-    });
-    this.state.previewByAsset.delete(entry.relativePath);
-    applyOptimizedAssetToState.call(this, entry, report);
-    void refreshOptimizedScanAvailability.call(this);
-    setStatus.call(this, `Reset ${entry.relativePath} to the original build asset.`);
-    this.$.recommendation.textContent = 'Asset Preview now shows the restored original file in Output Root.';
-} catch (error) {
-    console.error('[playable-size-inspector] asset reset failed:', error);
-    setStatus.call(this, error.message || String(error));
-  }
-
-  renderDetail.call(this);
-}
-
-async function runBatchAudioAction(mode) {
-  if (this.state.scanning) {
-    return;
-  }
-
-  const targets = getTickedAudioRows(this);
-  if (!targets.length) {
-    setStatus.call(this, 'Tick at least one audio file first.');
-    return;
-  }
-
-  const isReset = mode === 'reset';
-  const audioBitrate = Number((this.$.batchAudioBitrate && this.$.batchAudioBitrate.value) || 96);
-  const sourceRootInput = String(this.$.buildRootInput.value || DEFAULT_BUILD_ROOT).trim() || DEFAULT_BUILD_ROOT;
-  const outputRootInput = String(this.$.outputRootInput.value || DEFAULT_OUTPUT_ROOT).trim() || DEFAULT_OUTPUT_ROOT;
-  const sourceRoot = path.resolve(Editor.Project.path, sourceRootInput);
-  const outputRoot = path.resolve(Editor.Project.path, outputRootInput);
-  const relativePaths = targets.map((entry) => entry.relativePath);
-
-  this.state.scanning = true;
-  const busyLabel = isReset
-    ? `Resetting ${targets.length} audio files to original...`
-    : `Optimizing ${targets.length} audio files at ${audioBitrate} kbps...`;
-  if (this.$.batchAudioStatus) {
-    this.$.batchAudioStatus.textContent = busyLabel;
-  }
-  setStatus.call(this, busyLabel);
-  this.$.recommendation.textContent = busyLabel;
-
-  try {
-    const report = await Editor.Message.request(
-      'playable-size-inspector',
-      isReset ? 'reset-selected-audio' : 'optimize-selected-audio',
-      { sourceRoot, outputRoot, relativePaths, audioBitrate }
-    );
-
-    if (Array.isArray(report.results)) {
-      for (const res of report.results) {
-        if (res.error) {
-          continue;
-        }
-
-        const row = this.state.assetRows.find((item) => item.relativePath === res.relativePath);
-        if (row && res.afterBytes) {
-          row.fullPath = res.outputPath || row.fullPath;
-          row.size = res.afterBytes;
-          row.sizeKB = round(res.afterBytes / 1024);
-          row.sizeMB = round(res.afterBytes / (1024 * 1024));
-          row.relativeBuildRoot = res.relativePath;
-        }
-
-        this.state.previewByAsset.set(res.relativePath, {
-          status: 'ready',
-          report: res,
-        });
-      }
-      recalculateAllMetricsFromAssetRows.call(this);
+  if (action.type === 'enable-meshopt') {
+    const result = await Editor.Message.request(PACKAGE_NAME, 'model-set-meshopt', { enabled: true }).catch((error) => ({ ok: false, error: error.message }));
+    if (!result || !result.ok) {
+      setStatus.call(this, (result && result.error) || 'Không bật được meshopt.');
+      return false;
     }
-
-    if (this.$.scanSourceSelect) {
-      this.$.scanSourceSelect.value = 'optimized';
+    // changed=false: meshopt đã bật sẵn, không có mục lịch sử để hoàn tác.
+    this.helpers.offerUndo(result.historyId, result.changed === false
+      ? 'meshopt đã bật sẵn.'
+      : 'Đã bật meshopt. Build lại là các model Encode chạy được.');
+    await refreshSetup.call(this);
+    await this.state.model.scan({ silent: true });
+    return true;
+  }
+  if (action.type === 'install-ffmpeg') {
+    if (!window.confirm('Chạy "npm install" trong thư mục extension để tải ffmpeg-static (khoảng 80 MB từ npm). Tiếp tục?')) {
+      return false;
     }
-    this.state.scanSourceLabel = 'Optimized Copy';
-    await refreshOptimizedScanAvailability.call(this);
-
-    const savedKB = round(Number(report.savedBytes || 0) / 1024);
-    const failedNote = report.failedCount ? ` ${report.failedCount} failed.` : '';
-    const msg = isReset
-      ? `Reset ${report.totalFiles - report.failedCount}/${report.totalFiles} audio files to original.${failedNote}`
-      : `Optimized ${report.optimizedCount}/${report.totalFiles} audio files, saved ${savedKB} KB at ${audioBitrate} kbps.${failedNote}`;
-
-    renderSummaryFromState.call(this);
-    renderOverviewFromState.call(this);
-    renderTypeResults.call(this);
-    renderAssetResults.call(this);
-    renderDetail.call(this);
-
-    setStatus.call(this, msg);
-    this.$.recommendation.textContent = `${msg} Output copy is active.`;
-    // Set last: renderAssetResults resets this line to the ticked-count readout.
-    if (this.$.batchAudioStatus) {
-      this.$.batchAudioStatus.textContent = isReset
-        ? `Reset ${report.totalFiles - report.failedCount}/${report.totalFiles}`
-        : `Saved ${savedKB} KB (${report.optimizedCount}/${report.totalFiles})`;
-    }
-  } catch (error) {
-    console.error(`[playable-size-inspector] batch audio ${mode} failed:`, error);
-    if (this.$.batchAudioStatus) {
-      this.$.batchAudioStatus.textContent = `Batch audio ${mode} failed`;
-    }
-    setStatus.call(this, error.message || String(error));
-    this.$.recommendation.textContent = error.message || String(error);
-  } finally {
-    this.state.scanning = false;
-  }
-}
-
-async function runBatchPngOptimizeAction(options = {}) {
-  if (this.state.scanning) {
-    return;
-  }
-
-  const pngQuality = normalizePngQualityOption(options.pngQuality || (this.$.batchPngQuality && this.$.batchPngQuality.value) || '65-85');
-  const sourceRootInput = String(this.$.buildRootInput.value || DEFAULT_BUILD_ROOT).trim() || DEFAULT_BUILD_ROOT;
-  const outputRootInput = String(this.$.outputRootInput.value || DEFAULT_OUTPUT_ROOT).trim() || DEFAULT_OUTPUT_ROOT;
-  const sourceRoot = path.resolve(Editor.Project.path, sourceRootInput);
-  const outputRoot = path.resolve(Editor.Project.path, outputRootInput);
-
-  this.state.scanning = true;
-  const batchStatus = this.$.batchStatus || (this.shadowRoot && this.shadowRoot.querySelector('#batch-status'));
-  if (batchStatus) {
-    batchStatus.textContent = `Optimizing all PNGs (Quality: ${pngQuality})...`;
-  }
-  setStatus.call(this, `Optimizing all PNG files with quality ${pngQuality}...`);
-  this.$.recommendation.textContent = `Batch PNG optimization in progress with quality ${pngQuality}...`;
-
-  try {
-    const report = await Editor.Message.request('playable-size-inspector', 'optimize-all-pngs', {
-      sourceRoot,
-      outputRoot,
-      pngQuality,
-    });
-
-    if (Array.isArray(report.results)) {
-      for (const res of report.results) {
-        const row = this.state.assetRows.find((item) => item.relativePath === res.relativePath);
-        if (row && res.afterBytes) {
-          row.fullPath = res.outputPath || row.fullPath;
-          row.size = res.afterBytes;
-          row.sizeKB = round(res.afterBytes / 1024);
-          row.sizeMB = round(res.afterBytes / (1024 * 1024));
-          row.relativeBuildRoot = res.relativePath;
-        }
-
-        if (res.optimized) {
-          this.state.previewByAsset.set(res.relativePath, {
-            status: 'ready',
-            report: res,
-          });
-        }
-      }
-      recalculateAllMetricsFromAssetRows.call(this);
-    }
-
-    if (this.$.scanSourceSelect) {
-      this.$.scanSourceSelect.value = 'optimized';
-    }
-    this.state.scanSourceLabel = 'Optimized Copy';
-    await refreshOptimizedScanAvailability.call(this);
-
-    const savedKB = round(Number(report.savedBytes || 0) / 1024);
-    const msg = `Batch optimize complete! ${report.optimizedCount}/${report.totalPngs} PNGs optimized, saved ${savedKB} KB (Quality: ${pngQuality}).`;
-    if (batchStatus) {
-      batchStatus.textContent = `Saved ${savedKB} KB (${report.optimizedCount}/${report.totalPngs} PNGs)`;
-    }
-    setStatus.call(this, msg);
-    this.$.recommendation.textContent = `${msg} Output copy is active.`;
-
-    renderSummaryFromState.call(this);
-    renderOverviewFromState.call(this);
-    renderTypeResults.call(this);
-    renderAssetResults.call(this);
-    renderDetail.call(this);
-  } catch (error) {
-    console.error('[playable-size-inspector] batch PNG optimize failed:', error);
-    if (batchStatus) {
-      batchStatus.textContent = 'Batch optimize failed';
-    }
-    setStatus.call(this, error.message || String(error));
-    this.$.recommendation.textContent = error.message || String(error);
-  } finally {
-    this.state.scanning = false;
-  }
-}
-
-async function runBatchPngResetAction() {
-  if (this.state.scanning) {
-    return;
-  }
-
-  const sourceRootInput = String(this.$.buildRootInput.value || DEFAULT_BUILD_ROOT).trim() || DEFAULT_BUILD_ROOT;
-  const outputRootInput = String(this.$.outputRootInput.value || DEFAULT_OUTPUT_ROOT).trim() || DEFAULT_OUTPUT_ROOT;
-  const sourceRoot = path.resolve(Editor.Project.path, sourceRootInput);
-  const outputRoot = path.resolve(Editor.Project.path, outputRootInput);
-
-  this.state.scanning = true;
-  const batchStatus = this.$.batchStatus || (this.shadowRoot && this.shadowRoot.querySelector('#batch-status'));
-  if (batchStatus) {
-    batchStatus.textContent = 'Resetting all PNGs to original...';
-  }
-  setStatus.call(this, 'Restoring all PNGs from original build...');
-
-  try {
-    const report = await Editor.Message.request('playable-size-inspector', 'reset-all-pngs', {
-      sourceRoot,
-      outputRoot,
-    });
-
-    if (Array.isArray(report.results)) {
-      for (const res of report.results) {
-        const row = this.state.assetRows.find((item) => item.relativePath === res.relativePath);
-        if (row && res.afterBytes) {
-          row.size = res.afterBytes;
-          row.sizeKB = round(res.afterBytes / 1024);
-          row.sizeMB = round(res.afterBytes / (1024 * 1024));
-        }
-        this.state.previewByAsset.delete(res.relativePath);
-      }
-      recalculateAllMetricsFromAssetRows.call(this);
-    }
-
-    if (batchStatus) {
-      batchStatus.textContent = 'All PNGs reset to original.';
-    }
-    setStatus.call(this, `Reset ${report.totalPngs} PNGs to original.`);
-    this.$.recommendation.textContent = 'All PNGs restored from original build in Output Root.';
-
-    renderSummaryFromState.call(this);
-    renderOverviewFromState.call(this);
-    renderTypeResults.call(this);
-    renderAssetResults.call(this);
-    renderDetail.call(this);
-  } catch (error) {
-    console.error('[playable-size-inspector] batch PNG reset failed:', error);
-    if (batchStatus) {
-      batchStatus.textContent = 'Reset failed';
-    }
-    setStatus.call(this, error.message || String(error));
-  } finally {
-    this.state.scanning = false;
-  }
-}
-
-function recalculateAllMetricsFromAssetRows() {
-  this.state.totalBuildBytes = this.state.assetRows.reduce((sum, item) => sum + Number(item.size || 0), 0);
-  for (const typeRow of this.state.typeRows) {
-    const matching = this.state.assetRows.filter((item) => item.category === typeRow.category);
-    const typeSize = matching.reduce((sum, item) => sum + Number(item.size || 0), 0);
-    typeRow.size = typeSize;
-    typeRow.sizeKB = round(typeSize / 1024);
-    typeRow.sizeMB = round(typeSize / (1024 * 1024));
-  }
-  this.state.assetRows.sort((left, right) => right.size - left.size);
-  this.state.typeRows.sort((left, right) => right.size - left.size);
-}
-
-async function readFileAsDataUrl(filePath) {
-  const extension = path.extname(filePath).toLowerCase();
-  const mimeType = getImageMimeType(extension);
-  if (!mimeType) {
-    return '';
-  }
-
-  const buffer = await fs.readFile(filePath);
-  return `data:${mimeType};base64,${buffer.toString('base64')}`;
-}
-
-function getImageMimeType(extension) {
-  switch (extension) {
-    case '.png':
-      return 'image/png';
-    case '.jpg':
-    case '.jpeg':
-      return 'image/jpeg';
-    case '.bmp':
-      return 'image/bmp';
-    case '.webp':
-      return 'image/webp';
-    case '.gif':
-      return 'image/gif';
-    case '.mp3':
-      return 'audio/mpeg';
-    case '.ogg':
-      return 'audio/ogg';
-    case '.wav':
-      return 'audio/wav';
-    default:
-      return '';
-  }
-}
-
-function renderAudioBitrateOptions(selectedValue) {
-  return [128, 96, 64, 48, 32, 24].map((value) => {
-    const selected = value === selectedValue ? ' selected' : '';
-    return `<option value="${value}"${selected}>${value} kbps</option>`;
-  }).join('');
-}
-
-function normalizePngQualityOption(value) {
-  const quality = String(value || '65-85');
-  return ['80-95', '65-85', '50-75', '45-70', '30-50'].includes(quality) || /^\d{1,3}-\d{1,3}$/.test(quality) ? quality : '65-85';
-}
-
-async function readTextureMeta(filePath, extension) {
-  if (!['.png', '.jpg', '.jpeg', '.bmp'].includes(extension)) {
-    return null;
-  }
-
-  try {
-    const buffer = await fs.readFile(filePath);
-    switch (extension) {
-      case '.png':
-        return readPngMeta(buffer);
-      case '.jpg':
-      case '.jpeg':
-        return readJpegMeta(buffer);
-      case '.bmp':
-        return readBmpMeta(buffer);
-      default:
-        return null;
-    }
-  } catch (_error) {
-    return null;
-  }
-}
-
-function readPngMeta(buffer) {
-  if (!buffer || buffer.length < 26) {
-    return null;
-  }
-
-  const width = buffer.readUInt32BE(16);
-  const height = buffer.readUInt32BE(20);
-  const colorType = buffer.readUInt8(25);
-  const hasAlpha = colorType === 4 || colorType === 6;
-
-  return {
-    width,
-    height,
-    hasAlpha,
-    formatLabel: `PNG color type ${colorType}`,
-  };
-}
-
-function readJpegMeta(buffer) {
-  if (!buffer || buffer.length < 4 || buffer.readUInt16BE(0) !== 0xFFD8) {
-    return null;
-  }
-
-  let offset = 2;
-  while (offset + 9 < buffer.length) {
-    if (buffer[offset] !== 0xFF) {
-      offset += 1;
-      continue;
-    }
-
-    const marker = buffer[offset + 1];
-    const length = buffer.readUInt16BE(offset + 2);
-    if (marker >= 0xC0 && marker <= 0xC3 && offset + 8 < buffer.length) {
-      return {
-        width: buffer.readUInt16BE(offset + 7),
-        height: buffer.readUInt16BE(offset + 5),
-        hasAlpha: false,
-        formatLabel: 'JPEG baseline',
-      };
-    }
-
-    if (length <= 0) {
-      break;
-    }
-    offset += 2 + length;
-  }
-
-  return null;
-}
-
-function readBmpMeta(buffer) {
-  if (!buffer || buffer.length < 30 || buffer.toString('ascii', 0, 2) !== 'BM') {
-    return null;
-  }
-
-  const width = Math.abs(buffer.readInt32LE(18));
-  const height = Math.abs(buffer.readInt32LE(22));
-  const bitsPerPixel = buffer.readUInt16LE(28);
-
-  return {
-    width,
-    height,
-    hasAlpha: bitsPerPixel === 32,
-    formatLabel: `BMP ${bitsPerPixel} bpp`,
-  };
-}
-
-function clampAudioBitrate(value) {
-  const numeric = Number(value);
-  if ([128, 96, 64, 48, 32, 24].includes(numeric)) {
-    return numeric;
-  }
-  if (numeric >= 112) {
-    return 128;
-  }
-  if (numeric >= 80) {
-    return 96;
-  }
-  if (numeric >= 56) {
-    return 64;
-  }
-  if (numeric >= 40) {
-    return 48;
-  }
-  if (numeric >= 28) {
-    return 32;
-  }
-  return 24;
-}
-
-async function revealAssetInEditor(payload) {
-  if (!payload || (!payload.url && !payload.uuid)) {
-    setStatus.call(this, 'No source asset mapped for this row.');
-    return;
-  }
-
-  try {
-    const result = await Editor.Message.request('playable-size-inspector', 'reveal-asset', payload);
+    setStatus.call(this, 'Đang cài ffmpeg (npm install)...');
+    const result = await Editor.Message.request(PACKAGE_NAME, 'audio-install-tools').catch((error) => ({ ok: false, output: error.message }));
+    setStatus.call(this, result && result.ok ? 'Đã cài xong ffmpeg.' : `Cài ffmpeg thất bại: ${(result && result.output) || 'không rõ lỗi'}`);
+    await refreshSetup.call(this);
     if (result && result.ok) {
-      setStatus.call(this, `Highlighted asset ${payload.url || payload.uuid}`);
-      return;
+      await this.state.audio.scan({ silent: true });
     }
-  } catch (error) {
-    console.warn('[playable-size-inspector] reveal-asset failed:', error);
-  }
-
-  setStatus.call(this, 'Could not highlight asset in Editor.');
-}
-
-function getSelectedEntry(panel) {
-  if (panel.state.selectedIndex < 0) {
-    return null;
-  }
-
-  if (panel.state.selectedKind === 'type') {
-    return { kind: 'type', entry: panel.state.typeRows[panel.state.selectedIndex] };
-  }
-  if (panel.state.selectedKind === 'asset') {
-    return { kind: 'asset', entry: getFilteredAssetRows(panel)[panel.state.selectedIndex] };
-  }
-  if (panel.state.selectedKind === 'import') {
-    return { kind: 'import', entry: panel.state.importRows[panel.state.selectedIndex] };
-  }
-
-  return null;
-}
-
-function isSelected(panel, kind, index) {
-  return panel.state.selectedKind === kind && panel.state.selectedIndex === index;
-}
-
-function setStatus(message) {
-  this.$.status.textContent = message;
-}
-
-function applyOptimizedAssetToState(entry, report) {
-  const row = this.state.assetRows.find((item) => item.relativePath === entry.relativePath);
-  const currentBytes = Number(row && row.size || entry.size || report.beforeBytes || 0);
-  const afterBytes = Number(report.afterBytes || currentBytes);
-  const deltaBytes = afterBytes - currentBytes;
-  if (row) {
-    row.fullPath = report.outputPath || row.fullPath;
-    row.size = afterBytes;
-    row.sizeKB = round(afterBytes / 1024);
-    row.sizeMB = round(afterBytes / (1024 * 1024));
-    row.relativeBuildRoot = entry.relativePath;
-  }
-
-  const typeRow = this.state.typeRows.find((item) => item.category === entry.category);
-  if (typeRow) {
-    typeRow.size = Math.max(0, Number(typeRow.size || 0) + deltaBytes);
-    typeRow.sizeKB = round(typeRow.size / 1024);
-    typeRow.sizeMB = round(typeRow.size / (1024 * 1024));
-  }
-
-  this.state.totalBuildBytes = Math.max(0, Number(this.state.totalBuildBytes || 0) + deltaBytes);
-  this.state.assetRows.sort((left, right) => right.size - left.size);
-  this.state.typeRows.sort((left, right) => right.size - left.size);
-  selectAssetByRelativePath.call(this, entry.relativePath);
-  renderSummaryFromState.call(this);
-  renderOverviewFromState.call(this);
-  renderTypeResults.call(this);
-  renderAssetResults.call(this);
-}
-
-function selectAssetByRelativePath(relativePath) {
-  const rows = getFilteredAssetRows(this);
-  const index = rows.findIndex((item) => item.relativePath === relativePath);
-  this.state.selectedKind = 'asset';
-  this.state.selectedIndex = index >= 0 ? index : Math.min(this.state.selectedIndex, rows.length - 1);
-}
-
-function renderSummaryFromState() {
-  const heavyType = this.state.typeRows[0];
-  const heavyImport = this.state.importRows[0];
-  const parts = [];
-
-  this.$.summary.textContent = `${this.state.scanSourceLabel}: ${this.state.assetRows.length} build files, ${round(this.state.totalBuildBytes / (1024 * 1024))} MB total`;
-
-  if (heavyType) {
-    parts.push(`Largest type: ${heavyType.label} (${heavyType.sizeMB} MB)`);
-  }
-  if (heavyImport) {
-    parts.push(`Heaviest import json: ${heavyImport.relativeBuildPath} (${heavyImport.sizeKB} KB)`);
-  }
-
-  this.$.recommendation.textContent = parts.join(' | ') || 'No build files found.';
-}
-
-function renderOverviewFromState() {
-  const totalSize = Number(this.state.totalBuildBytes || 0);
-  const topThree = this.state.typeRows.slice(0, 3);
-  const cards = [
-    {
-      label: 'Total Build',
-      value: `${round(totalSize / (1024 * 1024))} MB`,
-      note: `${this.state.assetRows.length} build files loaded`,
-    },
-    {
-      label: 'Largest Type',
-      value: topThree[0] ? topThree[0].label : 'N/A',
-      note: topThree[0] ? `${topThree[0].sizeMB} MB` : 'No data',
-    },
-    {
-      label: 'Top 3 Share',
-      value: `${round(topThree.reduce((sum, row) => sum + row.size, 0) / (1024 * 1024))} MB`,
-      note: topThree.length ? topThree.map((row) => row.label).join(', ') : 'No data',
-    },
-  ];
-
-  const distribution = this.state.typeRows.slice(0, 8).map((row) => {
-    const percentage = totalSize > 0 ? round((row.size / totalSize) * 100) : 0;
-    return `
-      <div class="dist-row">
-        <div class="dist-meta">
-          <span class="dist-label">${escapeHtml(row.label)}</span>
-          <span class="dist-size">${row.sizeMB} MB</span>
-        </div>
-        <div class="dist-bar-track">
-          <div class="dist-bar-fill" style="width:${Math.max(4, percentage)}%"></div>
-        </div>
-        <div class="dist-foot">${percentage}% · ${row.files} files</div>
-      </div>
-    `;
-  }).join('');
-
-  this.$.overview.className = 'panel-content';
-  this.$.overview.innerHTML = `
-    <div class="overview-grid">
-      ${cards.map((card) => `
-        <div class="overview-card">
-          <div class="overview-label">${escapeHtml(card.label)}</div>
-          <div class="overview-value">${escapeHtml(card.value)}</div>
-          <div class="overview-note">${escapeHtml(card.note)}</div>
-        </div>
-      `).join('')}
-    </div>
-    <div class="distribution">${distribution}</div>
-    ${renderExportOverview.call(this)}
-  `;
-}
-
-function renderExportOverview() {
-  const metrics = this.state.exportMetrics;
-  const optimized = metrics && metrics.optimized ? metrics.optimized : null;
-  if (!optimized || !optimized.packageCount) {
-    return '';
-  }
-
-  const largest = optimized.largestPackage || null;
-  const rows = (Array.isArray(optimized.packages) ? optimized.packages : [])
-    .slice(0, 8)
-    .map((item) => `
-      <div class="dist-row">
-        <div class="dist-meta">
-          <span class="dist-label">${escapeHtml(item.network || 'root')}</span>
-          <span class="dist-size">${escapeHtml(formatBytes(item.bytes || 0))}</span>
-        </div>
-        <div class="dist-foot">${escapeHtml(item.kind === 'folder' ? `${item.fileCount || 0} files` : 'single HTML')} | ${escapeHtml(item.relativePath || '')}</div>
-      </div>
-    `)
-    .join('');
-
-  return `
-    <div class="export-overview">
-      <div class="panel-head export-head">Latest Network Outputs</div>
-      <div class="overview-grid export-grid">
-        <div class="overview-card">
-          <div class="overview-label">Networks</div>
-          <div class="overview-value">${escapeHtml(String(optimized.packageCount || 0))}</div>
-          <div class="overview-note">One latest output per network</div>
-        </div>
-        <div class="overview-card">
-          <div class="overview-label">Stored Output</div>
-          <div class="overview-value">${escapeHtml(formatBytes(optimized.totalExportBytes || 0))}</div>
-          <div class="overview-note">All network deliverables</div>
-        </div>
-        <div class="overview-card">
-          <div class="overview-label">Largest Package</div>
-          <div class="overview-value">${escapeHtml(formatBytes(largest ? largest.bytes : 0))}</div>
-          <div class="overview-note">${escapeHtml(largest ? largest.relativePath : 'No data')}</div>
-        </div>
-        <div class="overview-card">
-          <div class="overview-label">Intermediate</div>
-          <div class="overview-value">Removed</div>
-          <div class="overview-note">No baseline duplicate or single-file template</div>
-        </div>
-      </div>
-      <div class="distribution">${rows}</div>
-    </div>
-  `;
-}
-
-function isDirectAssetOptimizationSupported(file) {
-  if (file.category === 'texture') {
-    return ['.png', '.jpg', '.jpeg', '.bmp'].includes(file.extension);
-  }
-  if (file.category === 'audio') {
-    return ['.mp3', '.ogg'].includes(file.extension);
+    return !!(result && result.ok);
   }
   return false;
 }
 
-function findBestSourceMatch(file, assetEntries) {
-  const baseName = file.name;
-  const stem = baseName.replace(file.extension, '');
-  const compactStem = compactUuidString(stem.split('@')[0]);
-  const normalizedPath = normalizeAssetToken(file.relativePath);
+// ---------------------------------------------------------------- bản xuất theo mạng
 
-  let best = null;
-  let bestScore = -1;
-  for (const entry of assetEntries) {
-    let score = 0;
-
-    if (compactStem && entry.compactUuid === compactStem) {
-      score += 10;
-    }
-
-    if (stem && entry.uuid.toLowerCase() === stem.toLowerCase()) {
-      score += 8;
-    }
-
-    if (entry.leafToken && normalizedPath.includes(entry.leafToken)) {
-      score += 4;
-    }
-
-    if (entry.normalizedUrl && normalizedPath.includes(entry.normalizedUrl)) {
-      score += 6;
-    }
-
-    if (score > bestScore) {
-      bestScore = score;
-      best = entry;
-    }
+/** Tìm lại bản xuất; chỉ vẽ lại khi có thay đổi (gọi định kỳ vì builder xuất ngay sau khi build xong). */
+async function refreshExports() {
+  let sets;
+  try {
+    sets = await findExportSets(Editor.Project.path);
+  } catch (error) {
+    console.warn(`[${PACKAGE_NAME}] Không tìm được bản xuất:`, error);
+    sets = [];
   }
-
-  return bestScore > 0 ? best : null;
-}
-
-function analyzeImportFile({ projectRoot, buildRoot, file, text, assetEntries }) {
-  const scores = new Map();
-  const matchedBy = new Map();
-  const strings = collectStringMatches(text);
-  const lowerText = text.toLowerCase();
-
-  for (const entry of assetEntries) {
-    let score = 0;
-    const reasons = [];
-
-    if (entry.leafToken && lowerText.includes(entry.leafToken)) {
-      score += 5;
-      reasons.push('leaf');
-    }
-
-    if (entry.normalizedUrl && lowerText.includes(entry.normalizedUrl)) {
-      score += 8;
-      reasons.push('path');
-    }
-
-    if (entry.compactUuid && lowerText.includes(entry.compactUuid)) {
-      score += 4;
-      reasons.push('uuid');
-    }
-
-    for (const value of strings) {
-      const normalized = normalizeAssetToken(value);
-      if (!normalized) {
-        continue;
-      }
-
-      if (entry.tokens.includes(normalized)) {
-        score += 4;
-        reasons.push('string');
-        continue;
-      }
-
-      for (const token of entry.tokens) {
-        if (!token) {
-          continue;
-        }
-        if (normalized.endsWith(token) || token.endsWith(normalized)) {
-          score += 2;
-          reasons.push('partial');
-          break;
-        }
-      }
-    }
-
-    if (score > 0) {
-      scores.set(entry.url, score + extensionBonus(entry.extension));
-      matchedBy.set(entry.url, Array.from(new Set(reasons)));
-    }
+  // playable-ads-builder / playable-ads-adapter / không có: thẻ bản xuất và trang HTML cuối nói rõ tool đọc được gì.
+  const exporter = await detectExporter(Editor.Project.path).catch(() => null);
+  this.state.exporter = exporter;
+  this.state.exporterNote = describeExporterNote(exporter);
+  const signature = `${this.state.exporterNote}|${sets.map((set) => `${set.id}:${set.at}:${set.items.map((item) => `${item.channel}=${item.bytes}`).join(',')}:${set.missing.join(',')}`).join('|')}`;
+  if (signature === this.state.exportSignature && this.state.exportSets) {
+    return;
   }
-
-  const sources = assetEntries
-    .filter((entry) => scores.has(entry.url))
-    .map((entry) => ({
-      url: entry.url,
-      uuid: entry.uuid,
-      score: scores.get(entry.url),
-      reasons: matchedBy.get(entry.url) || [],
-    }))
-    .sort((left, right) => {
-      if (right.score !== left.score) {
-        return right.score - left.score;
-      }
-      return left.url.localeCompare(right.url);
-    });
-
-  const markers = strings
-    .filter((value) => isInterestingMarker(value))
-    .slice(0, 12);
-
-  return {
-    relativePath: toRelative(projectRoot, file.fullPath),
-    relativeBuildPath: toRelative(buildRoot, file.fullPath),
-    sizeKB: round(file.size / 1024),
-    markers,
-    sources,
-  };
-}
-
-function collectStringMatches(text) {
-  const matches = text.match(/"([^"\\]|\\.)*"/g) || [];
-  return Array.from(new Set(matches
-    .map((value) => value.slice(1, -1))
-    .filter((value) => value.length >= 3)));
-}
-
-function categorizeBuildFile(relativePath, extension) {
-  const normalized = relativePath.replace(/\\/g, '/').toLowerCase();
-
-  if (normalized.includes('/native/')) {
-    return {
-      category: categorizeNativeExtension(extension),
-      groupLabel: 'native',
-      isNative: true,
-      isImport: false,
-    };
-  }
-
-  if (normalized.includes('/import/')) {
-    return {
-      category: extension === '.cconb' ? 'import-binary' : 'import-json',
-      groupLabel: 'import',
-      isNative: false,
-      isImport: true,
-    };
-  }
-
-  if (normalized.endsWith('/config.json') || normalized.endsWith('/settings.json')) {
-    return {
-      category: 'config',
-      groupLabel: 'config',
-      isNative: false,
-      isImport: false,
-    };
-  }
-
-  if (extension === '.js') {
-    return {
-      category: normalized.includes('cocos-js/') ? 'engine-js' : 'game-js',
-      groupLabel: 'script',
-      isNative: false,
-      isImport: false,
-    };
-  }
-
-  if (extension === '.json') {
-    return {
-      category: 'json',
-      groupLabel: 'json',
-      isNative: false,
-      isImport: false,
-    };
-  }
-
-  if (extension === '.html') {
-    return { category: 'html', groupLabel: 'html', isNative: false, isImport: false };
-  }
-
-  if (extension === '.css') {
-    return { category: 'css', groupLabel: 'css', isNative: false, isImport: false };
-  }
-
-  return {
-    category: extension ? extension.slice(1) : 'other',
-    groupLabel: 'other',
-    isNative: false,
-    isImport: false,
-  };
-}
-
-function categorizeNativeExtension(extension) {
-  switch (extension) {
-    case '.png':
-    case '.jpg':
-    case '.jpeg':
-    case '.webp':
-    case '.bmp':
-      return 'texture';
-    case '.mp3':
-    case '.wav':
-    case '.ogg':
-      return 'audio';
-    case '.ttf':
-    case '.otf':
-    case '.woff':
-    case '.woff2':
-      return 'font';
-    case '.bin':
-      return 'model-bin';
-    case '.json':
-      return 'json';
-    default:
-      return 'native-other';
+  this.state.exportSignature = signature;
+  this.state.exportSets = sets;
+  this.state.exportPrevious = await updateExportHistory(Editor.Project.path, sets).catch(() => new Map());
+  renderOverview.call(this);
+  // Trang HTML cuối đọc từ bản xuất: có file mới thì vẽ lại (tự nạp số liệu mới).
+  if (this.state.step === 'explore' && this.state.explore.source === 'html') {
+    exploreTab.render(this, this.helpers);
   }
 }
 
-function categorizeSourceExtension(extension) {
-  switch (extension) {
-    case '.png':
-    case '.jpg':
-    case '.jpeg':
-    case '.webp':
-    case '.bmp':
-      return 'texture';
-    case '.mp3':
-    case '.wav':
-    case '.ogg':
-      return 'audio';
-    case '.ttf':
-    case '.otf':
-    case '.woff':
-    case '.woff2':
-      return 'font';
-    case '.fbx':
-    case '.glb':
-    case '.gltf':
-      return 'model-source';
-    case '.prefab':
-      return 'prefab';
-    case '.scene':
-      return 'scene';
-    default:
-      return extension ? extension.slice(1) : 'asset';
-  }
-}
+const KIND_LABELS = { html: 'html', zip: 'zip', folder: 'thư mục' };
 
-function classifyBuildArea(relativePath) {
-  const normalized = relativePath.replace(/\\/g, '/');
-  if (normalized.startsWith('assets/main/')) {
-    return 'main bundle';
-  }
-  if (normalized.startsWith('assets/internal/')) {
-    return 'internal bundle';
-  }
-  if (normalized.startsWith('src/')) {
-    return 'bootstrap src';
-  }
-  if (normalized.startsWith('cocos-js/')) {
-    return 'engine';
-  }
-  return 'root';
-}
-
-function typeLabel(category) {
-  const labels = {
-    texture: 'Textures',
-    audio: 'Audio',
-    font: 'Fonts',
-    'model-bin': 'Model Binary',
-    'model-source': 'Model Source',
-    'import-json': 'Import JSON',
-    'import-binary': 'Import Binary',
-    'engine-js': 'Engine JS',
-    'game-js': 'Game JS',
-    config: 'Config JSON',
-    json: 'JSON',
-    html: 'HTML',
-    css: 'CSS',
-    'native-other': 'Native Other',
-  };
-
-  return labels[category] || category;
-}
-
-function renderSourceChips(sources) {
-  if (!sources.length) {
-    return '<span class="source-chip">No match</span>';
-  }
-  return sources.map((source) => `<span class="source-chip">${escapeHtml(shortAssetLabel(source.url))}</span>`).join('');
-}
-
-function normalizeAssetToken(value) {
-  let token = String(value || '').trim();
-  if (!token) {
+function renderExportsCard() {
+  const sets = this.state.exportSets;
+  if (!sets) {
     return '';
   }
-  if (token.startsWith('../')) {
-    token = token.slice(3);
+  const exporterNote = this.state.exporterNote ? `<div class="ov-note">${escapeHtml(this.state.exporterNote)}</div>` : '';
+  if (!sets.length) {
+    const adapter = this.state.exporter && this.state.exporter.adapter && !this.state.exporter.builder;
+    return `
+      <section class="ov-card ov-exports">
+        <div class="ov-kicker">Bản xuất theo mạng</div>
+        <div class="ov-empty">${adapter
+          ? 'Chưa thấy bản xuất nào của playable-ads-adapter. Chạy adapter (menu của adapter hoặc Build có bật adapter): file <code>&lt;Tên&gt;_&lt;Mạng&gt;.html</code>, <code>single-file-3x.html</code> và thư mục <code>&lt;Tên&gt;_&lt;Mạng&gt;/</code> trong build/ sẽ hiện ở đây.'
+          : 'Chưa thấy bản xuất nào. Khi Build có tick các mạng (playable-ads-builder), mỗi mạng ra một file <code>&lt;Mạng&gt;_&lt;Tên build&gt;.html / .zip</code> và dung lượng từng mạng sẽ hiện ở đây.'}</div>
+        ${exporterNote}
+      </section>
+    `;
   }
-  if (token.startsWith('db://assets/')) {
-    token = token.slice('db://assets/'.length);
-  }
-  token = token.replace(/\\/g, '/').replace(/^\/+|\/+$/g, '');
-  return token.toLowerCase();
+  const set = sets.find((item) => item.id === this.state.exportSetId) || sets[0];
+  const previous = this.state.exportPrevious.get(set.id);
+  const sizes = set.items.map((item) => item.bytes);
+  const max = Math.max(...sizes, 1);
+  const range = sizes.length
+    ? (Math.min(...sizes) === Math.max(...sizes) ? formatBytes(sizes[0]) : `${formatBytes(Math.min(...sizes))} – ${formatBytes(Math.max(...sizes))}`)
+    : '';
+  const config = set.config;
+  const where = path.relative(Editor.Project.path, set.dir).replace(/\\/g, '/') || '.';
+
+  const rows = set.items.map((item) => {
+    const before = previous && previous.items ? previous.items[item.channel] : undefined;
+    const delta = before === undefined ? 0 : item.bytes - before;
+    const flags = [];
+    if (item.stale) {
+      flags.push('<span class="exp-flag warn" title="File này cũ hơn bản build hiện tại: lần build mới nhất không xuất lại mạng này">cũ hơn bản build</span>');
+    }
+    if (config && !item.selected) {
+      flags.push('<span class="exp-flag" title="Mạng này không được tick ở lần build hiện tại; file còn lại từ lần xuất trước">không tick lần này</span>');
+    }
+    const htmlFile = item.kind === 'folder' ? path.join(item.path, 'index.html') : item.path;
+    return `
+      <div class="exp-row clickable ${config && !item.selected ? 'dim' : ''}" data-html-file="${escapeHtml(htmlFile)}" data-html-set="${escapeHtml(set.id)}" title="${escapeHtml(`${item.name}\nBấm để xem từng phần chiếm bao nhiêu trong file này`)}">
+        <span class="exp-channel">${escapeHtml(item.channel)}</span>
+        <span class="exp-kind">${escapeHtml(KIND_LABELS[item.kind] || item.kind)}</span>
+        <span class="exp-bar"><i style="width:${Math.max(2, (item.bytes / max) * 100).toFixed(1)}%"></i></span>
+        <span class="exp-size" title="${escapeHtml(item.zipEstimated ? `Thư mục: zip ước tính (file thô ${formatBytes(item.rawBytes || 0)})` : '')}">${item.zipEstimated ? '≈ ' : ''}${escapeHtml(formatBytes(item.bytes))}</span>
+        <span class="exp-delta ${deltaClass(delta)}" title="${before === undefined ? '' : 'So với lần xuất trước'}">${escapeHtml(formatDelta(delta))}</span>
+        <span class="exp-flags">${flags.join('')}</span>
+      </div>
+    `;
+  }).join('');
+  const missingRows = set.missing.map((channel) => `
+    <div class="exp-row missing">
+      <span class="exp-channel">${escapeHtml(channel)}</span>
+      <span class="exp-kind"></span>
+      <span class="exp-missing">Đã tick nhưng chưa có file</span>
+    </div>
+  `).join('');
+
+  return `
+    <section class="ov-card ov-exports">
+      <div class="ov-build-head">
+        <div>
+          <div class="ov-kicker">Bản xuất theo mạng${range ? ` · ${escapeHtml(range)}` : ''}</div>
+          <div class="exp-title">
+            <b>${escapeHtml(set.label)}</b>
+            <span class="muted">${config ? `tên build "${escapeHtml(config.name)}" · tick ${config.channels.length} mạng · ` : ''}${set.at ? escapeHtml(formatTimestamp(new Date(set.at).toISOString())) : 'chưa xuất'}</span>
+          </div>
+        </div>
+        <div class="exp-side">
+          ${sets.length > 1 ? `<select class="exp-pick" title="Các thư mục bản xuất (mới nhất trước)">${sets.map((item) => `<option value="${escapeHtml(item.id)}" ${item.id === set.id ? 'selected' : ''}>${escapeHtml(item.label)}</option>`).join('')}</select>` : ''}
+          <button class="ov-button" data-open-path="${escapeHtml(set.dir)}" title="${escapeHtml(where)}">Mở thư mục</button>
+        </div>
+      </div>
+      ${set.items.length ? `<div class="exp-list">${rows}${missingRows}</div>` : `
+        <div class="ov-empty">Đã tick ${config ? config.channels.length : 0} mạng cho build "${escapeHtml(config ? config.name : set.label)}" nhưng chưa thấy file nào trong <code>${escapeHtml(where)}</code>. File được tạo khi Build xong.</div>
+      `}
+      <div class="ov-note">Đây là file thật gửi cho từng mạng: đã nén ảnh / âm thanh và gộp lại nên nhỏ hơn thư mục build ở trên. <b>html</b>: một file duy nhất; <b>zip</b>: gói nén theo yêu cầu của mạng; <b>thư mục</b>: mạng nhận zip của cả thư mục (số là zip ước tính). <b>Bấm một mạng</b> để xem từng phần chiếm bao nhiêu trong file đó (Tìm chỗ nặng → HTML cuối).</div>
+      ${exporterNote}
+    </section>
+  `;
 }
 
-function compactUuidString(value) {
-  return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+/**
+ * Bốn thẻ nhỏ, mỗi thẻ một tab Tối ưu (bấm là mở tab đó). Có bản build thì số TRONG BUILD đứng trước
+ * (màu ok / warn theo số trong build, cùng bằng chứng với Việc nên làm); asset không vào build chỉ ghi phụ.
+ * Model 3D / Module engine dùng đúng số của chip đếm ở các tab (renderOptimizeCounts).
+ */
+function renderSourceCards() {
+  const { texture, audio, model, engine } = this.state;
+  const buildIndex = this.state.buildFileCount ? this.state.buildSizeBySource : null;
+  const buildBytes = (url) => {
+    const info = buildIndex ? buildIndex.get(url) : null;
+    return info ? info.bytes : 0;
+  };
+  const total = (values) => values.reduce((sum, value) => sum + value, 0);
+  const mark = (good, text, title = '') => `<span class="${good ? 'ok' : 'warn'}"${title ? ` title="${escapeHtml(title)}"` : ''}>${escapeHtml(text)}</span>`;
+
+  let textureCard = '<div class="ov-line">Đang quét ảnh nguồn...</div>';
+  if (texture && texture.scanned) {
+    const rows = buildIndex ? texture.rows.filter((row) => buildBytes(row.url) > 0) : texture.rows;
+    const enabled = rows.filter((row) => row.enabled).length;
+    const outside = texture.rows.length - rows.length;
+    // Nhóm "Ảnh" ở thanh trên gồm cả ảnh dựng sẵn của engine (skybox...): nói rõ để hai số khớp nhau.
+    const builtinBytes = total(this.state.assetRows
+      .filter((row) => row.category === 'texture' && !row.source && row.builtinSources.length)
+      .map((row) => row.size));
+    textureCard = `
+      <div class="ov-big">${rows.length} ảnh${buildIndex ? ' trong build' : ''}</div>
+      <div class="ov-line">${mark(enabled === rows.length, `${enabled}/${rows.length} đã bật nén`)}${buildIndex ? ` · ${escapeHtml(formatBytes(total(rows.map((row) => buildBytes(row.url)))))}` : ''}</div>
+      ${outside && buildIndex ? `<div class="ov-line" title="Ảnh không dùng tới, hoặc đã ghép vào auto-atlas (nằm trong ảnh của atlas)">${outside} ảnh khác không có file riêng trong build</div>` : ''}
+      ${builtinBytes ? `<div class="ov-line">+ ${escapeHtml(formatBytes(builtinBytes))} ảnh dựng sẵn của engine (skybox...)</div>` : ''}
+    `;
+  }
+
+  let audioCard = '<div class="ov-line">Đang quét audio nguồn...</div>';
+  if (audio && audio.scanned) {
+    const files = buildIndex ? audio.files.filter((file) => buildBytes(file.url) > 0) : audio.files;
+    const mp3 = files.filter((file) => file.isMp3).length;
+    const mono = files.filter((file) => file.probe && file.probe.channels === 1).length;
+    const outside = audio.files.length - files.length;
+    // Builder encode lại mọi audio lúc xuất: MP3 hay chưa không đổi bản xuất, không tô cảnh báo.
+    const builder = audio.builderAudio && audio.builderAudio.enabled && audio.builderAudio.bitrateKbps ? audio.builderAudio : null;
+    const mp3Text = `${mp3}/${files.length} là MP3`;
+    audioCard = `
+      <div class="ov-big">${files.length} file${buildIndex ? ' trong build' : ''}</div>
+      <div class="ov-line">${builder ? escapeHtml(mp3Text) : mark(mp3 === files.length, mp3Text)} · ${mono} mono${buildIndex ? ` · ${escapeHtml(formatBytes(total(files.map((file) => buildBytes(file.url)))))}` : ''}</div>
+      ${builder ? `<div class="ov-line">Bản xuất encode lại ở ${builder.bitrateKbps} kbps</div>` : ''}
+      ${outside && buildIndex ? `<div class="ov-line">${outside} file khác không vào build</div>` : ''}
+    `;
+  }
+
+  let modelCard = '<div class="ov-line">Đang quét model 3D...</div>';
+  if (model && model.scanned && !model.ok) {
+    modelCard = '<div class="ov-line">Không đọc được model (xem tab Model 3D)</div>';
+  } else if (model && model.scanned) {
+    const models = model.models || [];
+    const infoOf = (item) => (typeof model.infoOf === 'function' ? model.infoOf(item) : { inBuild: false, zipped: 0 });
+    const inBuild = buildIndex ? models.filter((item) => infoOf(item).inBuild) : models;
+    const todo = typeof model.todoModels === 'function' ? model.todoModels().length : 0;
+    const quantized = models.filter((item) => item.compress && item.compress.quantize).length;
+    modelCard = buildIndex
+      ? `
+        <div class="ov-big">${inBuild.length} model trong build</div>
+        <div class="ov-line">${mark(!todo, todo ? `${todo} nên xử lý` : 'đã xử lý hết', `Chưa nén mesh, hoặc từ ${HEAVY_TRIANGLES.toLocaleString('vi-VN')} tam giác mà Mesh Simplify chưa giảm`)} · mesh ${escapeHtml(formatBytes(total(inBuild.map((item) => infoOf(item).zipped))))} sau zip</div>
+        ${models.length > inBuild.length ? `<div class="ov-line">${models.length - inBuild.length} model khác không vào build</div>` : ''}
+      `
+      : `
+        <div class="ov-big">${models.length} model</div>
+        <div class="ov-line">${quantized}/${models.length} đã nén mesh</div>
+      `;
+  }
+
+  let engineCard = '<div class="ov-line">Đang đọc cấu hình module...</div>';
+  if (engine && engine.scanned && engine.ok === false) {
+    engineCard = '<div class="ov-line">Chưa đọc được cấu hình Feature Cropping</div>';
+  } else if (engine && engine.scanned) {
+    const enabled = (engine.entries || []).filter((entry) => entry.enabled);
+    const unused = unusedModules(engine);
+    const bytes = buildIndex ? total(unused.map((entry) => moduleBuildShare(entry.key, this.state.assetRows).bytes)) : 0;
+    engineCard = `
+      <div class="ov-big">${enabled.length} module tuỳ chọn bật</div>
+      <div class="ov-line">${mark(!unused.length, unused.length ? `${unused.length} không thấy dùng` : 'đều đang dùng')}${bytes ? ` · ≈ ${escapeHtml(formatBytes(bytes))} file riêng trong build` : ''}</div>
+      ${unused.length ? `<div class="ov-line">${escapeHtml(unused.map((entry) => entry.label).join(', '))}</div>` : ''}
+    `;
+  }
+
+  const card = (kind, group, title, body, link) => `
+    <section class="ov-card ov-source" data-goto="${kind}" title="Sang bước Tối ưu → ${escapeHtml(title)}">
+      <div class="ov-kicker"><span class="legend-dot group-${group}"></span>${escapeHtml(title)}</div>
+      ${body}
+      <div class="ov-link">${escapeHtml(link)} →</div>
+    </section>
+  `;
+  return [
+    card('texture', 'texture', 'Ảnh', textureCard, 'Tối ưu ảnh'),
+    card('audio', 'audio', 'Âm thanh', audioCard, 'Tối ưu âm thanh'),
+    card('model', 'model', 'Model 3D', modelCard, 'Tối ưu model'),
+    card('engine', 'engine', 'Module engine', engineCard, 'Tắt module không dùng'),
+  ].join('');
 }
 
-function extensionBonus(extension) {
-  switch (extension) {
-    case '.mtl': return 3;
-    case '.effect': return 3;
-    case '.prefab': return 2;
-    case '.scene': return 2;
-    case '.png':
-    case '.jpg':
-    case '.jpeg':
-    case '.webp':
-    case '.mp3':
-    case '.wav':
-    case '.ttf':
-    case '.otf':
-      return 1;
+function renderTodoCard() {
+  const insights = this.state.insights;
+  let body;
+  if (!insights) {
+    body = '<div class="todo-empty">Đang tìm chỗ có thể giảm dung lượng...</div>';
+  } else if (!insights.length) {
+    body = '<div class="todo-empty">Không thấy việc gì cần làm thêm. Muốn giảm tiếp thì xem file nặng nhất ở bước Tìm chỗ nặng.</div>';
+  } else {
+    body = insights.map((insight, index) => `
+      <div class="todo">
+        <span class="todo-num group-${escapeHtml(insight.group)}">${index + 1}</span>
+        <div class="todo-main">
+          <div class="todo-title">${escapeHtml(insight.title)}</div>
+          <div class="todo-detail">${escapeHtml(insight.detail)}</div>
+        </div>
+        <div class="todo-side">
+          <div class="todo-impact ${insight.saving ? '' : 'none'}">${escapeHtml(insight.impact)}</div>
+          ${insight.basis ? `<div class="todo-basis">${escapeHtml(insight.basis)}</div>` : ''}
+          ${insight.action ? `<button class="ov-button todo-action" data-index="${index}">${escapeHtml(insight.action.label)}</button>` : ''}
+        </div>
+      </div>
+    `).join('');
+  }
+  return `
+    <section class="ov-card ov-todo">
+      <div class="ov-todo-head">
+        <span class="ov-title">Việc nên làm</span>
+        <span class="ov-sub" title="Ước tính theo dung lượng sau zip (bản xuất zip mọi file), gần với phần chiếm trong file gửi mạng. Dòng nhỏ dưới mỗi con số ghi nó tính từ đâu.">${insights && insights.length ? `${insights.length} việc · xếp theo dung lượng ước tính giảm được` : ''}</span>
+      </div>
+      ${body}
+    </section>
+  `;
+}
+
+// ---------------------------------------------------------------- việc nên làm + build cũ
+
+/**
+ * Tính lại "Việc nên làm" sau mỗi lần quét (gộp các lần gọi sát nhau thành một). Đang Phân tích lại thì
+ * chờ: analyzeAll gọi lại một lần khi mọi phần đã quét xong.
+ */
+function scheduleInsights() {
+  clearTimeout(this.insightTimer);
+  if (this.state.analyzing) {
+    return;
+  }
+  this.insightTimer = setTimeout(() => { void refreshInsights.call(this); }, 200);
+}
+
+/** Cấu hình module của engine (module nào cần module nào); nạp một lần, lỗi thì lần sau thử lại. */
+async function loadModuleConfig() {
+  if (!this.moduleConfig) {
+    this.moduleConfig = await Editor.Message.request('engine', 'query-modules-config').catch(() => null);
+  }
+  return this.moduleConfig;
+}
+
+async function refreshInsights() {
+  const texture = this.state.texture;
+  const audio = this.state.audio;
+  // Lần tính trước còn đang zip file thì lần sau (số liệu mới hơn) có thể xong trước: chỉ lần mới nhất được ghi.
+  const generation = (this.insightGeneration || 0) + 1;
+  this.insightGeneration = generation;
+  let insights;
+  try {
+    insights = await buildInsights({
+      projectRoot: Editor.Project.path,
+      build: this.state.buildMissing || !this.state.buildFileCount
+        ? null
+        : { assetRows: this.state.assetRows, buildRoot: this.state.buildRoot },
+      textures: texture && texture.scanned ? texture.rows : null,
+      // Ảnh đã nén thử ở tab Ảnh (preset đang chọn): phần giảm được tính theo số đó thay vì tỉ lệ chung.
+      textureEstimates: texture && texture.estimates instanceof Map ? texture.estimates : null,
+      audio: audio && audio.scanned ? audio.files : null,
+      builderAudio: audio ? audio.builderAudio : null,
+      buildSizeBySource: this.state.buildSizeBySource,
+      models: this.state.model && this.state.model.scanned ? this.state.model.models : null,
+      // Bỏ qua module đang bị module khác cần, giống tab Module engine.
+      moduleConfig: await loadModuleConfig.call(this),
+    });
+  } catch (error) {
+    console.warn(`[${PACKAGE_NAME}] Không tính được gợi ý:`, error);
+    insights = [];
+  }
+  if (generation !== this.insightGeneration) {
+    return;
+  }
+  this.state.insights = insights;
+  renderOverview.call(this);
+  // Chip đếm trên các tab cũng đọc số liệu build (model trong build nên xử lý...).
+  renderOptimizeCounts.call(this);
+  // Các tab tô "nên xử lý" theo Việc nên làm: chỉ cần vẽ lại khi danh sách đổi (hoặc tab đã có số liệu
+  // build mới chưa vẽ); vẽ tab đang mở, tab khác vẽ khi được mở.
+  const signature = JSON.stringify(this.state.insights.map((insight) => [insight.id, insight.saving, insight.title, insight.action]));
+  if (signature !== this.insightSignature) {
+    this.insightSignature = signature;
+    refreshTabs.call(this);
+  } else {
+    refreshVisibleTab.call(this);
+  }
+  void checkStaleBuild.call(this);
+}
+
+async function runInsightAction(action) {
+  switch (action.type) {
+    case 'reveal':
+      await revealAssetInEditor.call(this, { url: action.url });
+      return;
+    case 'open-settings':
+      await Editor.Message.request('project', 'open-settings', action.tab, action.subTab)
+        .catch((error) => setStatus.call(this, `Không mở được Project Settings: ${error.message}`));
+      return;
+    case 'texture':
+      setOptimizeKind.call(this, 'texture');
+      switchStep.call(this, 'optimize');
+      this.state.texture.selectOnly(action.urls);
+      return;
+    case 'audio':
+      setOptimizeKind.call(this, 'audio');
+      switchStep.call(this, 'optimize');
+      this.state.audio.selectOnly(action.urls);
+      return;
+    case 'audio-open':
+      setOptimizeKind.call(this, 'audio');
+      switchStep.call(this, 'optimize');
+      this.state.audio.focusFile(action.url);
+      return;
+    case 'modules':
+      setOptimizeKind.call(this, 'engine');
+      switchStep.call(this, 'optimize');
+      this.state.engine.selectKeys(action.keys);
+      return;
+    case 'model':
+      setOptimizeKind.call(this, 'model');
+      switchStep.call(this, 'optimize');
+      this.state.model.selectOnly(action.urls);
+      return;
+    case 'open-build':
+      await openBuildPanel.call(this);
+      return;
     default:
-      return 0;
   }
 }
 
-function isInterestingMarker(value) {
-  return /^[A-Za-z0-9_./@-]+$/.test(value)
-    && !/^cc\./.test(value)
-    && !/^_[A-Za-z]/.test(value)
-    && !/^(mainColor|emissive|albedo|Constants|CC[A-Za-z]|USE_[A-Z_]+)$/.test(value);
+/**
+ * Mở cửa sổ Build, chạy được cả Cocos đời mới lẫn đời cũ:
+ *   - 3.8.x mới: cửa sổ Build mở bằng message `open` của package builder (tài liệu Cocos:
+ *     `await Editor.Message.request('builder', 'open')`); panel tên `builder` không còn, gọi Panel.open sẽ
+ *     chỉ cảnh báo "Panel(builder) is not defined" chứ không ném lỗi.
+ *   - Bản cũ: panel `builder` (hoặc `builder.old`).
+ * Đọc danh sách message / panel của package builder để chọn đúng cách; không đọc được thì thử lần lượt.
+ */
+async function openBuildPanel() {
+  let info = null;
+  try {
+    const builder = Editor.Package && typeof Editor.Package.getPackages === 'function'
+      ? Editor.Package.getPackages({ name: 'builder' })[0]
+      : null;
+    info = builder && builder.info ? builder.info : null;
+  } catch (_error) {
+    info = null;
+  }
+  const messages = (info && info.contributions && info.contributions.messages) || null;
+  const panels = (info && info.panels) || null;
+
+  if (!messages || messages.open) {
+    try {
+      await Editor.Message.request('builder', 'open');
+      return;
+    } catch (_error) {
+      // Bản cũ không có message open: mở panel bên dưới.
+    }
+  }
+  const panelName = !panels || panels.default ? 'builder' : panels.old ? 'builder.old' : '';
+  if (!panelName) {
+    setStatus.call(this, 'Không mở được cửa sổ Build: bản Cocos này không có message builder/open hay panel builder. Mở bằng menu Project → Build.');
+    return;
+  }
+  try {
+    Editor.Panel.open(panelName);
+  } catch (error) {
+    setStatus.call(this, `Không mở được cửa sổ Build: ${error.message}. Mở bằng menu Project → Build.`);
+  }
 }
 
-function shortAssetLabel(url) {
-  return url.replace(/^db:\/\/assets\//, '');
+/**
+ * Banner "bản build cũ": có file trong assets/ sửa sau lần build gần nhất (kể cả .meta do tool
+ * này ghi) thì số liệu build chưa phản ánh thay đổi đó.
+ */
+async function checkStaleBuild() {
+  const banner = this.$.banner;
+  if (this.state.buildMissing || this.state.buildPending || !this.state.buildRoot) {
+    banner.classList.add('hidden');
+    return;
+  }
+  const fsPromises = require('fs/promises');
+  // settings.json do Cocos ghi mỗi lần build; index.html có thể bị công cụ khác chạm vào.
+  const settingsPath = await findBuildSettings(this.state.buildRoot);
+  const stat = await fsPromises.stat(settingsPath || path.join(this.state.buildRoot, 'index.html')).catch(() => null);
+  if (!stat) {
+    banner.classList.add('hidden');
+    return;
+  }
+  const changed = await findAssetsChangedAfter(Editor.Project.path, stat.mtimeMs);
+  if (!changed.count) {
+    banner.classList.add('hidden');
+    return;
+  }
+  banner.classList.remove('hidden');
+  banner.innerHTML = `
+    <span class="banner-icon">!</span>
+    <span class="banner-text">
+      ${changed.count} file trong assets/ đã sửa sau lần build gần nhất (${escapeHtml(formatTimestamp(new Date(stat.mtimeMs).toISOString()))}):
+      <span class="banner-files">${escapeHtml(changed.samples.join(', '))}${changed.count > changed.samples.length ? '...' : ''}</span>.
+      Số liệu build chưa gồm các thay đổi này; build lại là tool tự cập nhật.
+    </span>
+    <button class="ov-button banner-action">Mở Build</button>
+  `;
+  banner.querySelector('.banner-action').addEventListener('click', () => { void openBuildPanel.call(this); });
 }
 
-function getAssetDisplaySource(entry, filter) {
-  if (filter === 'model-bin' && Array.isArray(entry.modelSources) && entry.modelSources.length) {
-    return entry.modelSources[0];
+// ---------------------------------------------------------------- lịch sử + hoàn tác
+
+async function loadHistory() {
+  const result = await Editor.Message.request(PACKAGE_NAME, 'history-list').catch(() => null);
+  this.state.history = result && result.ok ? result.entries : [];
+  this.state.backups = result && result.ok && Array.isArray(result.backups) ? result.backups : [];
+  this.state.keepBackups = result && result.ok && result.keep !== undefined ? result.keep : 5;
+  const pending = this.state.history.filter((entry) => !entry.undone && !entry.backupMissing).length;
+  this.$.historyCount.textContent = String(pending);
+  this.$.historyCount.classList.toggle('hidden', !pending);
+  if (!this.$.historyPop.classList.contains('hidden')) {
+    renderHistoryPop.call(this);
   }
-  if (filter === 'prefab' && Array.isArray(entry.prefabSources) && entry.prefabSources.length) {
-    return entry.prefabSources[0];
-  }
-  if (entry.sourceCategory === 'model-source') {
-    return {
-      uuid: normalizeDependencyUuid(entry.sourceUuid),
-      url: String(entry.source || '').split('@')[0],
-    };
-  }
-  return { uuid: entry.sourceUuid || '', url: entry.source || '' };
 }
 
-function formatAssetSourceLabel(entry, filter = '') {
-  const modelCount = Array.isArray(entry.modelSources) ? entry.modelSources.length : 0;
-  if ((filter === 'model-bin' || !entry.prefabSources || !entry.prefabSources.length) && modelCount > 0) {
-    const firstModel = shortAssetLabel(entry.modelSources[0].url);
-    return modelCount > 1 ? `${firstModel} (+${modelCount - 1} models in pack)` : firstModel;
+function toggleHistory(open) {
+  const show = open === undefined ? this.$.historyPop.classList.contains('hidden') : open;
+  this.$.historyPop.classList.toggle('hidden', !show);
+  this.$.historyButton.classList.toggle('active', show);
+  if (show) {
+    renderHistoryPop.call(this);
+    void loadHistory.call(this);
   }
-  if (filter === 'model-bin' && entry.sourceCategory === 'model-source') {
-    return shortAssetLabel(String(entry.source || '').split('@')[0]);
-  }
-  const prefabCount = Array.isArray(entry.prefabSources) ? entry.prefabSources.length : 0;
-  if (prefabCount > 0) {
-    const firstPrefab = shortAssetLabel(entry.prefabSources[0].url);
-    return prefabCount > 1 ? `${firstPrefab} (+${prefabCount - 1} prefabs in pack)` : firstPrefab;
-  }
-  if (entry.source) {
-    const packedCount = Number(entry.packedSourceCount || 0);
-    const suffix = packedCount > 1 ? ` (+${packedCount - 1} packed assets)` : '';
-    return `${shortAssetLabel(entry.source)}${suffix}`;
-  }
-  return 'No source match';
 }
 
-function toRelative(root, filePath) {
-  return path.relative(root, filePath).replace(/\\/g, '/');
+function renderHistoryPop() {
+  const entries = this.state.history.slice().reverse();
+  this.$.historyPop.innerHTML = `
+    <div class="history-head">
+      <b>Lịch sử thay đổi</b>
+      <span class="muted">Tool ghi gì vào assets/ hoặc Feature Cropping thì ghi lại ở đây; hoàn tác được từng lần.</span>
+    </div>
+    ${entries.length ? `
+      <ul class="history-list">
+        ${entries.map((entry) => `
+          <li class="history-item ${entry.undone ? 'undone' : ''}">
+            <span class="legend-dot group-${(HISTORY_KINDS[entry.kind] || { group: 'other' }).group}"></span>
+            <div class="history-main">
+              <div class="history-title">${escapeHtml(entry.title)}</div>
+              <div class="history-detail">${escapeHtml(formatTimestamp(entry.at))} · ${escapeHtml(entry.detail || '')}</div>
+            </div>
+            ${entry.undone
+              ? `<span class="history-state" title="${escapeHtml(formatTimestamp(entry.undoneAt))}">Đã hoàn tác</span>`
+              : entry.backupMissing
+                ? '<span class="history-state" title="Bản dự phòng của lần này đã được dọn / bị xoá nên không khôi phục được nữa">Hết bản dự phòng</span>'
+                : `<button class="mini-button" data-undo="${escapeHtml(entry.id)}">Hoàn tác</button>`}
+          </li>
+        `).join('')}
+      </ul>
+    ` : '<div class="history-empty">Chưa có thay đổi nào. Mỗi lần tool đổi ảnh, âm thanh, model 3D hay module engine sẽ hiện ở đây kèm nút Hoàn tác.</div>'}
+    ${renderBackupFooter.call(this)}
+  `;
+  for (const button of this.$.historyPop.querySelectorAll('[data-undo]')) {
+    button.addEventListener('click', () => { void undoHistory.call(this, button.dataset.undo); });
+  }
+  const clean = this.$.historyPop.querySelector('.backup-clean');
+  if (clean) {
+    clean.addEventListener('click', () => { void cleanBackups.call(this); });
+  }
 }
 
-function clampInteger(value, min, max, fallback) {
-  if (!Number.isFinite(value)) {
-    return fallback;
+/** Dòng cuối của Lịch sử: bản dự phòng audio chiếm bao nhiêu + nút dọn. */
+function renderBackupFooter() {
+  const backups = this.state.backups;
+  if (!backups.length) {
+    return '';
   }
-  return Math.max(min, Math.min(max, Math.round(value)));
+  const bytes = backups.reduce((sum, backup) => sum + backup.bytes, 0);
+  const keep = this.state.keepBackups;
+  const label = backups.length > keep ? `Dọn bản cũ (giữ ${keep} lần gần nhất)` : 'Dọn hết bản dự phòng';
+  return `
+    <div class="history-foot">
+      <span class="muted">Bản dự phòng audio (để hoàn tác): <b>${backups.length} lần</b> · ${escapeHtml(formatBytes(bytes))} trong <code>temp/</code></span>
+      <button class="mini-button backup-clean">${escapeHtml(label)}</button>
+    </div>
+  `;
 }
 
-function round(value) {
-  return Math.round(value * 100) / 100;
+async function cleanBackups() {
+  const backups = this.state.backups;
+  const keep = backups.length > this.state.keepBackups ? this.state.keepBackups : 0;
+  const removing = backups.slice(keep);
+  if (!removing.length) {
+    return;
+  }
+  const bytes = removing.reduce((sum, backup) => sum + backup.bytes, 0);
+  const blocked = removing.reduce((sum, backup) => sum + backup.usedBy.length, 0);
+  const message = `Xoá ${removing.length} bản dự phòng audio ${keep ? 'cũ nhất' : ''} (${formatBytes(bytes)})?`
+    + (blocked ? `\n${blocked} lần nén / cắt audio trong Lịch sử sẽ không hoàn tác được nữa.` : '\nKhông lần nào trong Lịch sử đang cần các bản này.');
+  if (!window.confirm(message)) {
+    return;
+  }
+  const result = await Editor.Message.request(PACKAGE_NAME, 'history-clean-backups', { keep })
+    .catch((error) => ({ ok: false, error: error.message }));
+  setStatus.call(this, result && result.ok
+    ? `Đã xoá ${result.removed} bản dự phòng audio (${formatBytes(result.bytes)}).`
+    : `Không dọn được: ${(result && result.error) || 'không rõ lỗi'}`);
+  await loadHistory.call(this);
 }
 
-function formatBytes(value) {
-  const size = Math.max(0, Number(value) || 0);
-  if (size >= 1024 * 1024) {
-    return `${round(size / (1024 * 1024))} MB`;
+/** Báo kết quả ghi assets/ kèm nút Hoàn tác (khi có mục lịch sử). */
+function offerUndo(historyId, message) {
+  setStatus.call(this, message);
+  if (historyId) {
+    this.$.statusUndo.dataset.id = historyId;
+    this.$.statusUndo.classList.remove('hidden');
   }
-  if (size >= 1024) {
-    return `${round(size / 1024)} KB`;
+  void loadHistory.call(this);
+}
+
+async function undoHistory(id) {
+  const entry = this.state.history.find((item) => item.id === id);
+  if (!entry || entry.undone) {
+    return;
   }
-  return `${Math.round(size)} B`;
+  // Loại lạ (main.js tự từ chối) thì không đoán câu giải thích.
+  const what = HISTORY_KINDS[entry.kind] ? `\n\n${HISTORY_KINDS[entry.kind].what}` : '';
+  if (!window.confirm(`Hoàn tác: ${entry.title}?${entry.detail ? `\n${entry.detail}` : ''}${what}`)) {
+    return;
+  }
+  setStatus.call(this, `Đang hoàn tác: ${entry.title}...`);
+  let result = await Editor.Message.request(PACKAGE_NAME, 'history-undo', { id }).catch((error) => ({ ok: false, error: error.message }));
+  if (result && result.needsForce) {
+    const conflicts = result.conflicts || [];
+    // Hoàn tác "Bật meshopt" khi còn model bật Encode: cảnh báo build lỗi, không phải "asset bị sửa tiếp".
+    const message = result.warning
+      ? [result.warning, ...conflicts.filter((line) => line !== result.warning)].join('\n') + '\n\nVẫn hoàn tác?'
+      : `Một số asset đã bị sửa tiếp sau lần này:\n${conflicts.slice(0, 6).join('\n')}\n\nVẫn khôi phục về như trước? Các sửa đổi sau đó sẽ mất.`;
+    if (!window.confirm(message)) {
+      setStatus.call(this, 'Đã huỷ hoàn tác.');
+      return;
+    }
+    result = await Editor.Message.request(PACKAGE_NAME, 'history-undo', { id, force: true }).catch((error) => ({ ok: false, error: error.message }));
+  }
+  if (!result || !result.ok) {
+    if (result && result.partial) {
+      // Một phần đã được ghi lại: mục chưa tính là đã hoàn tác (bấm lại để thử tiếp), nhưng tab phải quét lại.
+      setStatus.call(this, `${result.error} · đã khôi phục ${result.restored} mục, bấm Hoàn tác lần nữa để thử lại.`);
+      await loadHistory.call(this);
+      rescanAfterUndo.call(this, entry);
+      return;
+    }
+    setStatus.call(this, `Không hoàn tác được: ${(result && result.error) || 'không rõ lỗi'}`);
+    return;
+  }
+  const errors = result.errors && result.errors.length ? ` (${result.errors.length} lỗi: ${result.errors[0]})` : '';
+  const skipped = result.skipped && result.skipped.length ? ` · bỏ qua ${result.skipped.length} mục không còn asset` : '';
+  setStatus.call(this, `Đã hoàn tác: ${entry.title}${errors}${skipped}. Build lại để số liệu build cập nhật.`);
+  await loadHistory.call(this);
+  rescanAfterUndo.call(this, entry);
+}
+
+/** Quét lại tab của mục vừa hoàn tác. Asset-db cần một nhịp để nhận file / meta vừa ghi rồi mới quét lại cho đúng. */
+function rescanAfterUndo(entry) {
+  setTimeout(() => {
+    const kind = HISTORY_KINDS[entry.kind];
+    const tab = kind ? this.state[kind.tab] : null;
+    if (tab) {
+      void tab.scan({ silent: true });
+    }
+    // Bật / tắt meshopt (engine-modules) cũng đổi cảnh báo của tab Model 3D và "Thiết lập còn thiếu".
+    if (entry.kind === 'engine-modules') {
+      void this.state.model.scan({ silent: true });
+      void refreshSetup.call(this);
+    }
+  }, 800);
+}
+
+// ---------------------------------------------------------------- xu hướng dung lượng qua các lần build
+
+function scanHistoryPath() {
+  return path.join(Editor.Project.path, 'temp', PACKAGE_NAME, 'scan-history.json');
+}
+
+function readScanHistoryFile() {
+  try {
+    const json = JSON.parse(require('fs').readFileSync(scanHistoryPath(), 'utf8'));
+    return Array.isArray(json.builds) ? json.builds : [];
+  } catch (_error) {
+    return [];
+  }
+}
+
+/** Các lần build đã ghi, bỏ các điểm build dở (pruneScanHistory). */
+function readScanHistory() {
+  return pruneScanHistory(readScanHistoryFile());
+}
+
+/** Khoảng thời gian một điểm build dở có thể đứng trước bản build đủ của nó. */
+const PARTIAL_BUILD_WINDOW_MS = 2 * 60 * 1000;
+
+/**
+ * Bỏ các điểm bản tool cũ lỡ ghi lúc build đang chạy (0 file, hoặc vài KB ngay trước một bản build đủ
+ * của cùng thư mục): chúng kéo đáy đường xu hướng về 0 và làm sai "so với lần build trước".
+ */
+function pruneScanHistory(builds) {
+  const kept = new Set();
+  const newestKept = new Map();
+  for (const item of builds.slice().sort((left, right) => right.builtAt - left.builtAt)) {
+    const root = path.resolve(item.buildRoot || '').toLowerCase();
+    const newer = newestKept.get(root);
+    const partial = !item.files || !item.totalBytes
+      || (newer && newer.builtAt - item.builtAt < PARTIAL_BUILD_WINDOW_MS && item.totalBytes < newer.totalBytes * 0.2);
+    if (!partial) {
+      kept.add(item);
+      newestKept.set(root, item);
+    }
+  }
+  return builds.filter((item) => kept.has(item));
+}
+
+/**
+ * Mỗi bản build (theo thời điểm build = mtime settings.json; chỉ gọi khi đã build xong) ghi một điểm
+ * kèm dung lượng từng nhóm; phân tích lại cùng bản build thì không ghi thêm. Giữ 30 lần gần nhất cho
+ * MỖI thư mục build (mỗi mạng một thư mục). Điểm build dở còn sót trong file được dọn luôn khi ghi.
+ */
+async function appendScanHistory(buildRoot, builtAt, totalBytes, files, groups) {
+  const raw = readScanHistoryFile();
+  const all = pruneScanHistory(raw);
+  if (!builtAt) {
+    return all;
+  }
+  let next = all;
+  let changed = all.length !== raw.length;
+  const sameRoot = (item) => isSameResolvedPath(item.buildRoot || '', buildRoot);
+  const builds = all.filter(sameRoot);
+  const last = builds[builds.length - 1];
+  if (last && Math.abs(last.builtAt - builtAt) < 1000) {
+    // Cùng bản build: chỉ bổ sung số theo nhóm nếu lần ghi trước (bản tool cũ) chưa có.
+    if (!last.groups && groups) {
+      last.groups = groups;
+      changed = true;
+    }
+  } else {
+    next = all.filter((item) => !sameRoot(item)).concat([...builds, { buildRoot, builtAt, totalBytes, files, groups }].slice(-30));
+    changed = true;
+  }
+  if (changed) {
+    const fsPromises = require('fs/promises');
+    await fsPromises.mkdir(path.dirname(scanHistoryPath()), { recursive: true });
+    await fsPromises.writeFile(scanHistoryPath(), JSON.stringify({ builds: next }), 'utf8');
+  }
+  return next;
+}
+
+// ---------------------------------------------------------------- mốc so sánh: bản build trước
+
+function baselinePath() {
+  return path.join(Editor.Project.path, 'temp', PACKAGE_NAME, 'build-baseline.json');
+}
+
+/**
+ * Ghi nhớ bản build vừa phân tích và trả về bản build TRƯỚC của cùng thư mục (hoặc null). File lưu
+ * { [thư mục build]: { previous, current } }; chỉ xoay khi thời điểm build (mtime settings.json) đổi, giống
+ * updateExportHistory (lib/exports.js): mở lại panel / Phân tích lại cùng bản build vẫn so với lần build
+ * trước chứ không với chính nó. Mỗi bản: { builtAt, totalBytes, files: { đường dẫn bỏ md5: bytes },
+ * groups: { nhóm: bytes } }, đúng dạng diffAgainstSnapshot đọc.
+ */
+async function rotateBuildBaseline(buildRoot, builtAt, buildFiles, groups) {
+  const fsPromises = require('fs/promises');
+  let store = {};
+  try {
+    store = JSON.parse(await fsPromises.readFile(baselinePath(), 'utf8')) || {};
+  } catch (_error) {
+    store = {};
+  }
+  const key = path.resolve(buildRoot).toLowerCase();
+  const files = {};
+  for (const file of buildFiles) {
+    files[stableBuildPath(file.relativePath)] = file.size;
+  }
+  const current = { builtAt, totalBytes: buildFiles.reduce((sum, file) => sum + file.size, 0), files, groups };
+  const stored = store[key] || {};
+  const sameBuild = !!stored.current && Math.abs(stored.current.builtAt - builtAt) < 1000;
+  const previous = (sameBuild ? stored.previous : stored.current) || null;
+  // Cùng bản build và số liệu y như lần trước thì khỏi ghi lại.
+  if (!sameBuild || JSON.stringify(stored.current.files) !== JSON.stringify(files) || JSON.stringify(stored.current.groups) !== JSON.stringify(groups)) {
+    store[key] = previous ? { previous, current } : { current };
+    await fsPromises.mkdir(path.dirname(baselinePath()), { recursive: true });
+    await fsPromises.writeFile(baselinePath(), JSON.stringify(store), 'utf8');
+  }
+  return previous;
+}
+
+/** Các lần build của thư mục build đang xem, cũ trước. */
+function buildsOfCurrentRoot() {
+  return this.state.scanHistory
+    .filter((item) => isSameResolvedPath(item.buildRoot || '', this.state.buildRoot || ''))
+    .sort((left, right) => left.builtAt - right.builtAt);
+}
+
+/** Nhóm thay đổi nhiều nhất giữa hai lần build, vd "Ảnh −120 KB, Âm thanh +12 KB". */
+function describeGroupChanges(before, after) {
+  if (!before || !before.groups || !after || !after.groups) {
+    return '';
+  }
+  return exploreTab.BUILD_GROUPS
+    .map((group) => ({ group, delta: (after.groups[group.key] || 0) - (before.groups[group.key] || 0) }))
+    .filter((item) => Math.abs(item.delta) >= 1024)
+    .sort((left, right) => Math.abs(right.delta) - Math.abs(left.delta))
+    .slice(0, 3)
+    .map((item) => `${item.group.label} ${formatDelta(item.delta)}`)
+    .join(', ');
+}
+
+/** Đường xu hướng nhỏ cạnh tổng dung lượng: mỗi điểm là một lần build. */
+function renderTrend() {
+  const builds = buildsOfCurrentRoot.call(this);
+  if (builds.length < 2) {
+    return '';
+  }
+  const width = 180;
+  const height = 38;
+  const values = builds.map((item) => item.totalBytes);
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const span = Math.max(max - min, 1);
+  const x = (index) => 4 + (index / (builds.length - 1)) * (width - 8);
+  const y = (value) => 4 + (1 - (value - min) / span) * (height - 8);
+  const points = builds.map((item, index) => `${x(index).toFixed(1)},${y(item.totalBytes).toFixed(1)}`).join(' ');
+  const first = values[0];
+  const last = values[values.length - 1];
+  return `
+    <div class="trend" title="Dung lượng qua ${builds.length} lần build gần nhất">
+      <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+        <polyline points="${points}" fill="none" stroke="#4e8cf4" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline>
+        ${builds.map((item, index) => `
+          <circle cx="${x(index).toFixed(1)}" cy="${y(item.totalBytes).toFixed(1)}" r="${index === builds.length - 1 ? 3.5 : 2.5}" fill="${index === builds.length - 1 ? '#f1f6ff' : '#4e8cf4'}">
+            <title>${escapeHtml(`${formatTimestamp(new Date(item.builtAt).toISOString())}: ${formatBytes(item.totalBytes)} · ${item.files} file${index ? `\n${describeGroupChanges(builds[index - 1], item) || 'các nhóm gần như không đổi'}` : ''}`)}</title>
+          </circle>
+        `).join('')}
+      </svg>
+      <div class="trend-label">${builds.length} lần build · <span class="${deltaClass(last - first)}">${escapeHtml(formatDelta(last - first) || '±0')}</span> từ lần đầu</div>
+    </div>
+  `;
+}
+
+// ---------------------------------------------------------------- khung Chi tiết
+
+function renderDetail() {
+  const onAudio = this.state.step === 'optimize' && this.state.optimizeKind === 'audio';
+  // Khung chi tiết sắp bị thay: tắt trình nghe thử của tab âm thanh (nó tự gắn lại khi quay về).
+  if (!onAudio) {
+    audioPlayer.stopAll();
+    audioTab.stopQuickPlay();
+  }
+  if (this.state.step === 'overview') {
+    return;
+  }
+  if (this.state.step === 'explore') {
+    exploreTab.renderDetail(this, this.helpers);
+    return;
+  }
+  if (onAudio) {
+    audioTab.renderDetail(this, this.helpers);
+    return;
+  }
+  if (this.state.optimizeKind === 'model') {
+    modelTab.renderDetail(this, this.helpers);
+    return;
+  }
+  if (this.state.optimizeKind === 'engine') {
+    engineTab.renderDetail(this, this.helpers);
+    return;
+  }
+  textureTab.renderDetail(this, this.helpers);
+}
+
+async function revealAssetInEditor(payload) {
+  if (!payload || (!payload.url && !payload.uuid)) {
+    setStatus.call(this, 'Dòng này không có asset nguồn trong assets/ để chọn.');
+    return;
+  }
+
+  try {
+    const result = await Editor.Message.request(PACKAGE_NAME, 'reveal-asset', payload);
+    if (result && result.ok) {
+      setStatus.call(this, `Đã chọn ${payload.url || payload.uuid} trong panel Assets.`);
+      return;
+    }
+  } catch (error) {
+    console.warn(`[${PACKAGE_NAME}] reveal-asset thất bại:`, error);
+  }
+
+  setStatus.call(this, 'Không chọn được asset trong Editor.');
+}
+
+function setStatus(message) {
+  this.$.status.textContent = message;
+  this.$.statusUndo.classList.add('hidden');
+  delete this.$.statusUndo.dataset.id;
+}
+
+/**
+ * Gắn handler "bấm nút" đúng loại sự kiện: <ui-button> của Cocos chỉ phát 'confirm',
+ * còn <button> thường chỉ phát 'click'. Chọn theo tag để đổi HTML không làm chết nút.
+ */
+function onAction(element, handler) {
+  if (!element) {
+    return;
+  }
+  const tag = String(element.tagName || element.nodeName || '').toUpperCase();
+  element.addEventListener(tag.startsWith('UI-') ? 'confirm' : 'click', handler);
 }
 
 function escapeHtml(value) {

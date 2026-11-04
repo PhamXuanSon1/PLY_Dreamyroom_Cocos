@@ -1,11 +1,14 @@
 {
   "package_version": 2,
   "name": "playable-size-inspector",
-  "version": "0.1.0",
-  "description": "Inspect playable build size and trace source assets",
+  "version": "0.4.0",
+  "description": "Phân tích dung lượng build playable (web-mobile, HTML cuối) và tối ưu nguồn: ảnh, âm thanh, model 3D, module engine (Feature Cropping)",
   "main": "./main.js",
-  "editor": ">=3.8.0",
-  "author": "Food Hunt",
+  "editor": ">=3.6.0",
+  "author": "Nam Phuong",
+  "dependencies": {
+    "ffmpeg-static": "^5.3.0"
+  },
   "panels": {
     "default": {
       "title": "Playable Size Inspector",
@@ -20,30 +23,7 @@
     }
   },
   "contributions": {
-    "panels": {
-      "default": {
-        "title": "Playable Size Inspector",
-        "type": "dockable",
-        "main": "panels/default",
-        "size": {
-          "min-width": 760,
-          "min-height": 520,
-          "width": 1180,
-          "height": 760
-        }
-      }
-    },
     "menu": [
-      {
-        "path": "Extension/Playable Tools",
-        "label": "Playable Size Inspector",
-        "message": "open-panel"
-      },
-      {
-        "path": "Panel",
-        "label": "Playable Size Inspector",
-        "message": "open-panel"
-      },
       {
         "path": "Tools",
         "label": "Playable Size Inspector",
@@ -61,39 +41,119 @@
           "revealAsset"
         ]
       },
-      "optimize-export-all": {
+      "texture-list-presets": {
         "methods": [
-          "optimizeExportAll"
+          "textureListPresets"
         ]
       },
-      "optimize-selected-asset": {
+      "texture-scan-all": {
         "methods": [
-          "optimizeSelectedAsset"
+          "textureScanAll"
         ]
       },
-      "reset-selected-asset": {
+      "texture-apply-assets": {
         "methods": [
-          "resetSelectedAsset"
+          "textureApplyAssets"
         ]
       },
-      "optimize-all-pngs": {
+      "texture-asset-state": {
         "methods": [
-          "optimizeAllPngs"
+          "textureAssetState"
         ]
       },
-      "reset-all-pngs": {
+      "audio-scan": {
         "methods": [
-          "resetAllPngs"
+          "audioScan"
         ]
       },
-      "optimize-selected-audio": {
+      "audio-convert": {
         "methods": [
-          "optimizeSelectedAudio"
+          "audioConvert"
         ]
       },
-      "reset-selected-audio": {
+      "audio-asset-state": {
         "methods": [
-          "resetSelectedAudio"
+          "audioAssetState"
+        ]
+      },
+      "audio-convert-asset": {
+        "methods": [
+          "audioConvertAsset"
+        ]
+      },
+      "audio-preview-encode": {
+        "methods": [
+          "audioPreviewEncode"
+        ]
+      },
+      "audio-preview-wav": {
+        "methods": [
+          "audioPreviewWav"
+        ]
+      },
+      "texture-estimate": {
+        "methods": [
+          "textureEstimate"
+        ]
+      },
+      "audio-install-tools": {
+        "methods": [
+          "audioInstallTools"
+        ]
+      },
+      "history-list": {
+        "methods": [
+          "historyList"
+        ]
+      },
+      "html-simulate": {
+        "methods": [
+          "htmlSimulate"
+        ]
+      },
+      "model-scan": {
+        "methods": [
+          "modelScan"
+        ]
+      },
+      "model-apply": {
+        "methods": [
+          "modelApply"
+        ]
+      },
+      "model-set-meshopt": {
+        "methods": [
+          "modelSetMeshopt"
+        ]
+      },
+      "engine-modules-scan": {
+        "methods": [
+          "engineModulesScan"
+        ]
+      },
+      "engine-modules-apply": {
+        "methods": [
+          "engineModulesApply"
+        ]
+      },
+      "open-url": {
+        "methods": [
+          "openUrl"
+        ]
+      },
+      "history-undo": {
+        "methods": [
+          "historyUndo"
+        ]
+      },
+      "history-clean-backups": {
+        "methods": [
+          "historyCleanBackups"
+        ]
+      },
+      "open-path": {
+        "methods": [
+          "openPath"
         ]
       }
     }

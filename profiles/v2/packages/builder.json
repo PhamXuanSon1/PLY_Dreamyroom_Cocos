@@ -7,7 +7,7 @@
     "polyfills": {
       "asyncFunctions": true
     },
-    "name": "Cocos_DreamyRoom_PLY49",
+    "name": "Cocos_DreamyRoom_PLY53",
     "buildPath": "project://build",
     "outputName": "web-mobile",
     "mainBundleCompressionType": "merge_dep",
@@ -31,10 +31,10 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "11-3-2026 16:34:41 build success in 2 min 49 s!",
-        "detailMessage": "[playable-ads-builder]\r[buildHtml] 6/8\r",
+        "message": "11-4-2026 10:45:42 build success in 49 s!",
+        "detailMessage": "// ---- build task Query asset bundle ----\r",
         "options": {
-          "name": "Cocos_DreamyRoom_PLY49",
+          "name": "Cocos_DreamyRoom_PLY53",
           "server": "",
           "engineModulesConfigKey": "migrationsConfig",
           "platform": "web-mobile",
@@ -92,11 +92,11 @@
             "threshold": 16,
             "enable": false
           },
-          "__builderUiTaskNavigation": "mw0hn6ir-albiyhkloww:2",
-          "taskId": "1787297348777",
-          "__builderUiTaskTime": 1793698312097
+          "__builderUiTaskNavigation": "mw1knvzt-3pd1hw1ot8c:2",
+          "__builderUiTaskTime": 1793763893145,
+          "taskId": "1787297348777"
         },
-        "time": "11-3-2026 16:31:52",
+        "time": "11-4-2026 10:44:53",
         "dirty": false
       }
     }
