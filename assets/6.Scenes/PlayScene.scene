@@ -113441,8 +113441,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 710.21,
-      "y": 195.024,
+      "x": 720,
+      "y": 118,
       "z": 0
     },
     "_lrot": {
@@ -113508,8 +113508,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 410.21,
-      "y": 195.024,
+      "x": 420,
+      "y": 118,
       "z": 0
     },
     "_lrot": {
@@ -113575,8 +113575,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 560.21,
-      "y": 345.024,
+      "x": 570,
+      "y": 268,
       "z": 0
     },
     "_lrot": {
@@ -113642,8 +113642,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 560.21,
-      "y": 45.024,
+      "x": 570,
+      "y": -32,
       "z": 0
     },
     "_lrot": {
@@ -113770,8 +113770,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -352,
-      "y": -394,
+      "x": -363,
+      "y": -386,
       "z": 0
     },
     "_lrot": {
@@ -113837,8 +113837,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -52,
-      "y": -394,
+      "x": -63,
+      "y": -386,
       "z": 0
     },
     "_lrot": {
@@ -113904,8 +113904,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -202,
-      "y": -544,
+      "x": -213,
+      "y": -536,
       "z": 0
     },
     "_lrot": {
@@ -113971,8 +113971,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -202,
-      "y": -244,
+      "x": -213,
+      "y": -236,
       "z": 0
     },
     "_lrot": {
@@ -115244,8 +115244,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
+      "x": 1.41,
+      "y": 1.41,
       "z": 1
     },
     "_mobility": 0,
@@ -117628,6 +117628,7 @@
     "storeAfterComplete": false,
     "moveRoom": false,
     "roomPos": null,
+    "useRoomPosScale": true,
     "roomScaleMultiplier": 1,
     "leftLimit": null,
     "rightLimit": null,
@@ -117645,6 +117646,7 @@
     "roomPos": {
       "__id__": 3452
     },
+    "useRoomPosScale": true,
     "roomScaleMultiplier": 0.9412,
     "leftLimit": {
       "__id__": 3416
@@ -117670,6 +117672,7 @@
     "roomPos": {
       "__id__": 3450
     },
+    "useRoomPosScale": true,
     "roomScaleMultiplier": 0.7333,
     "leftLimit": {
       "__id__": 3408

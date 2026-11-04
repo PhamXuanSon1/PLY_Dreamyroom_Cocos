@@ -52,7 +52,10 @@ export class MapPhase {
     @property({ type: Node, tooltip: 'Phòng bay tới vị trí (world) của node này. Trống = giữ vị trí.', visible(this: MapPhase) { return this.moveRoom; } })
     roomPos: Node | null = null;
 
-    @property({ tooltip: 'Scale phòng = scale ban đầu × hệ số này (1 = như ban đầu).', min: 0.01, visible(this: MapPhase) { return this.moveRoom; } })
+    @property({ tooltip: 'Scale phòng = scale world của node Room Pos (chỉnh scale node Room Pos là đổi zoom của lượt). Tắt = dùng Room Scale Multiplier.', visible(this: MapPhase) { return this.moveRoom && !!this.roomPos; } })
+    useRoomPosScale = true;
+
+    @property({ tooltip: 'Scale phòng = scale ban đầu × hệ số này (1 = như ban đầu).', min: 0.01, visible(this: MapPhase) { return this.moveRoom && (!this.roomPos || !this.useRoomPosScale); } })
     roomScaleMultiplier = 1;
 
     @property({ type: Node, tooltip: 'Giới hạn kéo phòng mới (trái). Trống = giữ giới hạn cũ.', visible(this: MapPhase) { return this.moveRoom; } })
@@ -349,7 +352,10 @@ export class MapPhaseManager extends Component {
             if (p.topLimit) room.topLimitPos = p.topLimit;
             if (p.bottomLimit) room.bottomLimitPos = p.bottomLimit;
         }
-        brm.moveToPhase(p.roomPos, p.roomScaleMultiplier, this.roomMoveDuration, this.roomMoveEasing, onDone);
+        // useRoomPosScale: scale phòng = scale world của Room Pos -> quy ra hệ số so với scale gốc của phòng
+        let mult = p.roomScaleMultiplier;
+        if (p.roomPos && p.useRoomPosScale && brm.originalScale.x !== 0) mult = Math.abs(p.roomPos.worldScale.x / brm.originalScale.x);
+        brm.moveToPhase(p.roomPos, mult, this.roomMoveDuration, this.roomMoveEasing, onDone);
     }
 
     private playPhaseCompleteSound(): void {

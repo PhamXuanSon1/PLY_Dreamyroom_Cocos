@@ -74,6 +74,11 @@ export class BaseRoomManager extends Component {
         if (BaseRoomManager.instance === this) BaseRoomManager.instance = null;
     }
 
+    /** Scale gốc của phòng (scale đặt trong scene) — mốc cho moveToPhase(scaleMultiplier). */
+    get originalScale(): Readonly<Vec3> {
+        return this.baseRoomOriginalScale;
+    }
+
     /**
      * MapPhaseManager gọi khi sang lượt mới: phòng bay tới `pos` (world, null = đứng yên) và
      * scale = scale gốc × `scaleMultiplier`. Xong thì scale mới thành mốc cho pinch/zoom
