@@ -16,7 +16,7 @@ import { UIManager } from '../managers/UIManager';
 import { BaseRoomManager } from '../managers/BaseRoomManager';
 import { ItemController } from '../item/ItemController';
 import { ItemMovement } from '../item/ItemMovement';
-import { HolderSlot } from '../utils/HolderSlot';
+import { AreaItemSpawner } from '../managers/AreaItemSpawner';
 import { HandOfBox } from '../utils/HandOfBox';
 import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
 import { TweenUtil } from '../core/TweenUtil';
@@ -189,7 +189,9 @@ export class BoxController extends Component implements IPointerHandler {
         const im = ItemManager.instance;
         if (!im) return;
 
-        if (!im.hasAvailableHolder()) {
+        // Holder do AreaItemSpawner giữ (component có thể tắt khi chơi bằng hộp — vẫn dùng danh sách Holder của nó)
+        const holderSlot = AreaItemSpawner.instance?.getFreeHolder() ?? null;
+        if (!holderSlot) {
             console.warn('[BoxController] Hết holder trống!');
             return;
         }
@@ -218,25 +220,18 @@ export class BoxController extends Component implements IPointerHandler {
 
         currentItem.setRotationFromEuler(0, 0, randomRange(-90, 90));
 
-        const holder = im.getCurrentHolder();
-        if (!holder) return;
-
-        const holderSlot = holder.getComponent(HolderSlot);
-        if (holderSlot) {
-            holderSlot.isEmpty = false;
-            if (itemScript) itemScript.currentHolderSlot = holderSlot;
-        }
+        holderSlot.isEmpty = false;
+        if (itemScript) itemScript.currentHolderSlot = holderSlot;
 
         // Unity: DOJump(holder.position, 1.5f, 1, 1f).SetEase(Ease.OutBack)
         TweenUtil.jumpTo(
             currentItem,
-            holder.worldPosition,
+            holderSlot.node.worldPosition,
             this.jumpHeight,
             this.jumpCount,
             this.jumpDuration,
             this.jumpEasing,
             () => {
-                if (!holderSlot) return;
                 holderSlot.setItem(currentItem);
                 if (im.isStoreTriggerItem(currentItem)) {
                     UIManager.instance?.enableStoreOnAnyClick();

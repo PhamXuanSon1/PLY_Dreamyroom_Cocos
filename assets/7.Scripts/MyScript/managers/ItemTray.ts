@@ -84,11 +84,8 @@ export class ItemTray extends Component {
         this.hideWaitingItems();
 
         const im = ItemManager.instance;
-        if (im) {
-            // Hint / isAllHolderEmpty / getFirstItemInHolder đọc holderItemList -> trỏ về các ô khay
-            im.holderItemList = this.slots.map((s) => s.node);
-            if (im.handIntro) im.handIntro.active = false;
-        }
+        // Hint đọc HolderSlot.all -> các ô khay (HolderSlot) tự có mặt, không cần gán gì
+        if (im?.handIntro) im.handIntro.active = false;
         if (this.slider) this.slider.active = true;
 
         // Không có Box nên không có "click Box lần đầu": bật luôn pan/zoom phòng + logic đi kèm

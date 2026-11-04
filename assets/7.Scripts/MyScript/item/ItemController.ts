@@ -23,6 +23,7 @@ import { TweenUtil } from '../core/TweenUtil';
 import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
 import { FollowNode } from '../pipeline/FollowNode';
 import { ItemTray } from '../managers/ItemTray';
+import { AreaItemSpawner } from '../managers/AreaItemSpawner';
 
 const { ccclass, property } = _decorator;
 
@@ -627,6 +628,8 @@ export class ItemController extends Component implements IPointerHandler {
                 this.currentHolderSlot = null;
                 // Khay: ô vừa trống -> lấp item tiếp theo
                 ItemTray.instance?.onSlotFreed(freed);
+                // Spawner chế độ Holder Nodes: item kế tiếp trong hàng vào Holder vừa trống
+                AreaItemSpawner.active?.onSlotFreed(freed);
             }
 
             this.itemGraphic.restoreOriginalLayers();

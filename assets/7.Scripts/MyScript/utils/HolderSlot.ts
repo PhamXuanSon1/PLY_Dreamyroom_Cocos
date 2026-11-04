@@ -13,6 +13,9 @@ const { ccclass, property } = _decorator;
 @ccclass('HolderSlot')
 export class HolderSlot extends Component {
 
+    /** Mọi HolderSlot đang có trong scene (Holder cố định, slot vùng spawn, ô khay) — hint đọc ở đây. */
+    static readonly all: HolderSlot[] = [];
+
     @property({ tooltip: 'Slot này đang trống hay đã có item.' })
     isEmpty = true;
 
@@ -29,6 +32,15 @@ export class HolderSlot extends Component {
     bobbingDuration = 1.5;
 
     private bobbing: Tween<Node> | null = null;
+
+    onLoad() {
+        HolderSlot.all.push(this);
+    }
+
+    onDestroy() {
+        const i = HolderSlot.all.indexOf(this);
+        if (i >= 0) HolderSlot.all.splice(i, 1);
+    }
 
     start() {
         if (!this.originPosition) this.originPosition = this.node;

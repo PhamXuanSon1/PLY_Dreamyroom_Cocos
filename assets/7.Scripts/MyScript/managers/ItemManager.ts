@@ -8,8 +8,8 @@
  * GLUE riêng cho Cocos (Unity không có, nhưng bắt buộc phải có ở đây):
  *   - ItemGraphic.targetShadowColor/targetNormalColor là static -> phải bơm màu
  *     từ ItemManager xuống lúc onLoad.
- *   - ensureHolders(): SceneBuilder dựng scene từ JSON nên holderItemList có thể
- *     rỗng/null, phải tự dò HolderSlot trong scene.
+ *   - Holder (chỗ item chờ trước khi ghép) do AreaItemSpawner quản lý, không nằm ở đây.
+ *     Hint chỉ đọc HolderSlot.all để tìm item đang chờ.
  *   - WorldScrollManager.setupItems(): bên Unity item nằm sẵn đúng vị trí trong
  *     scene, bên Cocos thanh bar do WorldScrollManager xếp. Không ai khác gọi
  *     hàm này nên phải gọi ở đây.
@@ -60,9 +60,6 @@ export class ItemManager extends Component {
 
     @property({ type: Node, tooltip: 'Item được spawn sẽ chuyển sang Store ngay lập tức. Để trống nếu không dùng.' })
     storeTriggerItem: Node | null = null;
-
-    @property({ type: [Node], tooltip: 'Danh sách các vị trí chờ (Holder) để chứa item trước khi ghép.' })
-    holderItemList: Node[] = [];
 
     private currentItemIndex = 0;
 
@@ -160,7 +157,6 @@ export class ItemManager extends Component {
     /** glue Cocos: số lượt bóng đã dùng — chỉ tăng khi item CÓ bóng snap đúng vào target. */
     private dragShadowUsed = 0;
 
-    private currentHolder: Node | null = null;
 
     // ---------------- Target Graphic Settings ----------------
     @property({ tooltip: 'Màu của bóng/shadow hiển thị tại vị trí đích khi kéo thả.' })
@@ -186,14 +182,10 @@ export class ItemManager extends Component {
         // glue Cocos: ItemGraphic đọc 2 màu này qua static
         ItemGraphic.targetShadowColor = this.targetShadowColor.clone();
         ItemGraphic.targetNormalColor = this.targetNormalColor.clone();
-
-        this.ensureHolders();
     }
 
     // ======================================================== Unity: Start
     start() {
-        this.ensureHolders();
-
         if (this.hideItemsOnStart) this.hideItemsAtStart();
 
         if (this.itemList.length > 0) {
@@ -297,15 +289,6 @@ export class ItemManager extends Component {
 
         this.dragShadowUsed++;
         console.log(`[ItemManager] đã dùng ${this.dragShadowUsed}/${this.shadowItemCount} lượt bóng`);
-    }
-
-    /** glue Cocos: SceneBuilder có thể để holderItemList rỗng -> tự dò trong scene. */
-    ensureHolders(): void {
-        if (!this.holderItemList || this.holderItemList.length === 0
-            || this.holderItemList.some(h => !h || !h.isValid)) {
-            const slots = this.node.scene?.getComponentsInChildren(HolderSlot) ?? [];
-            if (slots.length > 0) this.holderItemList = slots.map(s => s.node);
-        }
     }
 
     /** glue Cocos: InputManager gọi mỗi lần chạm — thay phần poll Input bên Unity. */
@@ -436,57 +419,6 @@ export class ItemManager extends Component {
 
     isStoreTriggerItem(item: Node): boolean {
         return this.storeTriggerItem === item;
-    }
-
-    /** Unity: GetCurrentHolder — holder trống đầu tiên trong holderItemList. */
-    getCurrentHolder(): Node | null {
-        this.ensureHolders();
-        for (const holderNode of this.holderItemList) {
-            if (!holderNode || !holderNode.isValid) continue;
-            const slot = holderNode.getComponent(HolderSlot);
-            if (slot && slot.isEmpty) {
-                this.currentHolder = holderNode;
-                return this.currentHolder;
-            }
-        }
-        return null;
-    }
-
-    /** Unity: HasAvailableHolder */
-    hasAvailableHolder(): boolean {
-        this.ensureHolders();
-        for (const holderNode of this.holderItemList) {
-            if (!holderNode || !holderNode.isValid) continue;
-            const slot = holderNode.getComponent(HolderSlot);
-            if (slot && slot.isEmpty) return true;
-        }
-        return false;
-    }
-
-    /** Unity: GetCurrentHolderInUse */
-    getCurrentHolderInUse(): Node | null {
-        return this.currentHolder;
-    }
-
-    /** Unity: GetFirstItemInHolder — item đầu tiên đang nằm trong holder. */
-    getFirstItemInHolder(): ItemController | null {
-        for (const holderNode of this.holderItemList) {
-            const slot = holderNode?.getComponent(HolderSlot);
-            if (slot && !slot.isEmpty && slot.itemInSlot) {
-                const item = slot.itemInSlot.getComponent(ItemController);
-                if (item && item.targetPoint) return item;
-            }
-        }
-        return null;
-    }
-
-    /** Unity: IsAllHolderEmpty */
-    isAllHolderEmpty(): boolean {
-        for (const holderNode of this.holderItemList) {
-            const slot = holderNode?.getComponent(HolderSlot);
-            if (slot && !slot.isEmpty) return false;
-        }
-        return true;
     }
 
     setLastItem(item: ItemController | null): void {
@@ -686,11 +618,10 @@ export class ItemManager extends Component {
         return item.canShowTargetShadow();
     }
 
-    /** Unity: GetValidHintItem — duyệt các holder đang giữ item. */
+    /** Unity: GetValidHintItem — duyệt các holder đang giữ item (Holder / vùng spawn / khay). */
     private getValidHintItem(): ItemController | null {
-        for (const holderNode of this.holderItemList) {
-            const slot = holderNode?.getComponent(HolderSlot);
-            if (!slot) continue;
+        for (const slot of HolderSlot.all) {
+            if (!slot.isValid || !slot.enabledInHierarchy) continue;
             if (slot.isEmpty) continue;
             if (!slot.itemInSlot) continue;
 

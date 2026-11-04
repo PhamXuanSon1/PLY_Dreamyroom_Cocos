@@ -236,6 +236,31 @@ export class ItemGraphic extends Component {
         this.zoomMult = mult;
     }
 
+    /**
+     * Item nằm NGOÀI cây phòng (Holder / vùng spawn ở UI): phóng node ảnh để kích thước world của item
+     * bằng đích — đích nằm trong phòng nên world scale = scale phòng × ..., còn Holder ở UI scale 1.
+     * Ghi lại mốc zoom để syncRoomZoomScale() tiếp tục bù zoom (pinch) từ đây.
+     * @param nodeScale scale node gốc của item sau khi pop xong (node đang tween từ 0 lên).
+     */
+    fitToTarget(target: Node, nodeScale = 1): void {
+        const img = this.resolveImageNode();
+        if (!img || !target) return;
+        const itemWorld = Math.abs((this.node.parent?.worldScale.x ?? 1) * nodeScale);
+        if (itemWorld < 1e-6) return;
+        const mult = Math.abs(target.worldScale.x) / itemWorld;
+
+        if (!this.imageBaseScale) {
+            const s = img.scale;
+            this.imageBaseScale = new Vec3(s.x / this.zoomMult, s.y / this.zoomMult, s.z);
+        }
+        const base = this.imageBaseScale;
+        img.setScale(base.x * mult, base.y * mult, base.z);
+        this.zoomMult = mult;
+        this.zoomAtDetach = BaseRoom.currentZoomFactor;
+        this.multAtDetach = mult;
+        this.zoomRefInitialized = true;
+    }
+
     /** Node con chứa Sprite (do SceneBuilder dựng). Tên "Image" mặc định, fallback: con đầu tiên có Sprite. */
     private resolveImageNode(): Node | null {
         if (this.imageNode !== undefined) return this.imageNode;

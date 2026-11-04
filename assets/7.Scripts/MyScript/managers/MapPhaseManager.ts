@@ -23,6 +23,7 @@ import { BaseRoomManager } from './BaseRoomManager';
 import { UIManager } from './UIManager';
 import { ItemController } from '../item/ItemController';
 import { BoxController } from '../box/BoxController';
+import { AreaItemSpawner } from './AreaItemSpawner';
 import { BaseRoom } from '../utils/BaseRoom';
 import { FollowNode } from '../pipeline/FollowNode';
 import { TweenUtil } from '../core/TweenUtil';
@@ -230,6 +231,8 @@ export class MapPhaseManager extends Component {
     /** BoxManager gọi khi hộp hết item được phép rớt. true = đã xử lý (không đóng hộp). */
     private onSpawnExhausted(box: BoxController): boolean {
         if (!this.enabledPhases || this.isLastPhase) return false;
+        // Nhả item bằng vùng spawn (AreaItemSpawner): hộp đã tắt, không bay đi
+        if (AreaItemSpawner.active) return true;
         if (!this.boxAway) {
             this.boxAway = true;
             box.flyAway(this.boxExitOffset, this.boxFlyDuration, this.boxExitEasing);
@@ -274,15 +277,21 @@ export class MapPhaseManager extends Component {
             // itemsToEndGame có thể đã đủ trong lúc chuyển lượt (bị hoãn) -> xét lại
             if (!toStore) UIManager.instance?.recheckEndGame();
         };
-        this.moveRoomTo(this.phaseIndex + 1, done);
-        this.returnBox(() => {
+        const onItemsBack = () => {
             if (toStore) {
                 // hộp vừa về: chạm đâu cũng ra Store — không chờ phòng di chuyển xong
                 UIManager.instance?.enableStoreOnAnyClick(false);
                 DreamyInputManager.canInput = true;
             }
             done();
-        });
+        };
+        if (AreaItemSpawner.active) {
+            // Không có hộp: phòng chuyển khung lượt mới xong mới nhả item lượt mới vào vùng spawn
+            this.moveRoomTo(this.phaseIndex + 1, () => { done(); this.returnBox(onItemsBack); });
+            return;
+        }
+        this.moveRoomTo(this.phaseIndex + 1, done);
+        this.returnBox(onItemsBack);
     }
 
     /**
@@ -345,6 +354,9 @@ export class MapPhaseManager extends Component {
         const im = this.itemManager;
         this.phaseIndex++;
         if (im) im.spawnLimit += this.phaseItems[this.phaseIndex].length;
+
+        const spawner = AreaItemSpawner.active;
+        if (spawner) { spawner.spawnAvailable(onDone); return; }
 
         const box = BoxManager.instance?.box?.getComponent(BoxController) ?? null;
         if (box) box.flyBack(this.boxFlyDuration, this.boxReturnEasing, onDone);
