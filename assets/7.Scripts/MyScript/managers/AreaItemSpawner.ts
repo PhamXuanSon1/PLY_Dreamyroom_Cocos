@@ -126,8 +126,24 @@ export class AreaItemSpawner extends Component {
     start() {
         // Box: hộp tự lo (click hộp lần đầu mới chạy intro + nhả item)
         if (!this.selfSpawn) return;
+        // Tắt hộp ngay (start chạy trước frame đầu được vẽ) — không để hộp hiện lên rồi mới tắt
+        this.hideBoxUI();
         // chạy sau ItemManager.start() (đã thu scale item về 0 + ẩn đích)
         this.scheduleOnce(() => this.beginGame(), this.startDelay);
+    }
+
+    /** Không dùng hộp: tắt hộp + chữ / tay chỉ hộp, bật thanh tiến độ. */
+    private hideBoxUI(): void {
+        const boxNode = BoxManager.instance?.box ?? this.node.scene?.getComponentInChildren(BoxManager)?.box ?? null;
+        const box = boxNode?.getComponent(BoxController) ?? null;
+        if (box) {
+            if (box.handText) box.handText.active = false;
+            if (box.handOfBox) box.handOfBox.node.active = false;
+            if (box.slider) box.slider.active = true;
+        }
+        if (boxNode) boxNode.active = false;
+        const im = ItemManager.instance;
+        if (im?.handIntro) im.handIntro.active = false;
     }
 
     // ======================================================== vào game (thay click hộp lần đầu)
@@ -135,16 +151,9 @@ export class AreaItemSpawner extends Component {
         if (this.started) return;
         this.started = true;
 
-        // Không dùng hộp: tắt hộp + tay chỉ hộp
         const im = ItemManager.instance;
-        const box = BoxManager.instance?.box?.getComponent(BoxController) ?? null;
-        if (box) {
-            if (box.handText) box.handText.active = false;
-            if (box.handOfBox) box.handOfBox.node.active = false;
-            if (box.slider) box.slider.active = true;
-            box.node.active = false;
-        }
-        if (im?.handIntro) im.handIntro.active = false;
+        // phòng khi thứ gì đó bật lại hộp / tay chỉ hộp trong lúc chờ startDelay
+        this.hideBoxUI();
 
         im?.enableFirstClickObjects();
         im?.onBoxFirstClicked();

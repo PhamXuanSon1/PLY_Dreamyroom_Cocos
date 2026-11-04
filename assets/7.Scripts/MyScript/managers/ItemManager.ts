@@ -538,7 +538,8 @@ export class ItemManager extends Component {
 
         // không còn item nào hợp lệ
         if (!item) {
-            if (this.handIntro) this.handIntro.active = true;
+            // tay chỉ hộp chỉ có nghĩa khi đang chơi bằng hộp (spawner Holder / Area đã tắt hộp)
+            if (this.handIntro && BoxManager.instance?.box?.activeInHierarchy) this.handIntro.active = true;
             this.hideHint();
             return;
         }
