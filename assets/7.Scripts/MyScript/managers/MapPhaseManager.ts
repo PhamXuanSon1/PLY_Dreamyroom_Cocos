@@ -18,7 +18,7 @@
  * Chỉ hỗ trợ ItemManager.spawnFromLast = false.
  */
 
-import { _decorator, Component, Enum, Node, Vec3, UIOpacity, AudioClip, AudioSource } from 'cc';
+import { _decorator, Component, Enum, Node, Vec2, Vec3, UIOpacity, AudioClip, AudioSource } from 'cc';
 import { Ply_SoundManager } from '../ScriptTemplate/Ply_SoundManager';
 import { ItemManager } from './ItemManager';
 import { BoxManager } from './BoxManager';
@@ -45,8 +45,12 @@ export class MapPhase {
     @property({ tooltip: 'Ghép xong lượt này + hộp bay về xong -> chạm bất kỳ đâu (kể cả hộp) là mở Store. Không hiện End Card.' })
     storeAfterComplete = false;
 
-    // ---- khung nhìn phòng khi BẮT ĐẦU lượt này (lượt đầu dùng intro của BaseRoomManager, bỏ qua) ----
-    @property({ tooltip: 'Di chuyển / scale phòng (BaseRoom) khi chuyển lượt. Đặt ở lượt sắp bắt đầu hoặc lượt vừa xong đều được (ưu tiên lượt sắp bắt đầu).' })
+    // ---- khung nhìn phòng của lượt này (lượt 1 = chỗ intro dừng lại) ----
+    @property({
+        displayName: 'Room View',
+        tooltip: 'Lượt này có khung nhìn phòng riêng. Lượt 1: intro phóng phòng tới khung này (thay cho Base Room EndPos + 4 Limit của BaseRoom). '
+            + 'Lượt sau: chuyển lượt thì phòng bay tới khung này. Tắt = giữ khung của lượt trước.',
+    })
     moveRoom = false;
 
     @property({ type: Node, tooltip: 'Phòng bay tới vị trí (world) của node này. Trống = giữ vị trí.', visible(this: MapPhase) { return this.moveRoom; } })
@@ -58,17 +62,18 @@ export class MapPhase {
     @property({ tooltip: 'Scale phòng = scale ban đầu × hệ số này (1 = như ban đầu).', min: 0.01, visible(this: MapPhase) { return this.moveRoom && (!this.roomPos || !this.useRoomPosScale); } })
     roomScaleMultiplier = 1;
 
-    @property({ type: Node, tooltip: 'Giới hạn kéo phòng mới (trái). Trống = giữ giới hạn cũ.', visible(this: MapPhase) { return this.moveRoom; } })
-    leftLimit: Node | null = null;
+    @property({ type: Vec2, tooltip: 'Người chơi kéo phòng được ±x / ±y (px, world) quanh Room Pos. 0 = khoá trục đó.', visible(this: MapPhase) { return this.moveRoom && !!this.roomPos; } })
+    panRange = new Vec2(150, 150);
+}
 
-    @property({ type: Node, tooltip: 'Giới hạn kéo phòng mới (phải). Trống = giữ giới hạn cũ.', visible(this: MapPhase) { return this.moveRoom; } })
-    rightLimit: Node | null = null;
-
-    @property({ type: Node, tooltip: 'Giới hạn kéo phòng mới (trên). Trống = giữ giới hạn cũ.', visible(this: MapPhase) { return this.moveRoom; } })
-    topLimit: Node | null = null;
-
-    @property({ type: Node, tooltip: 'Giới hạn kéo phòng mới (dưới). Trống = giữ giới hạn cũ.', visible(this: MapPhase) { return this.moveRoom; } })
-    bottomLimit: Node | null = null;
+/** Khung nhìn phòng tính sẵn của 1 lượt. */
+export interface RoomView {
+    /** Vị trí world của phòng (null = giữ vị trí). */
+    pos: Vec3 | null;
+    /** Scale tuyệt đối của phòng. */
+    scale: Vec3;
+    /** Khoảng kéo quanh pos (null = giữ giới hạn cũ). */
+    panRange: Vec2 | null;
 }
 
 interface AfterEntry {
@@ -198,6 +203,9 @@ export class MapPhaseManager extends Component {
         this.phaseItems = this.phases.map((p) => MapPhaseManager.validItems(p.itemList));
         this.afterEntries = this.phases.map((p) => MapPhaseManager.afterEntriesOf(p.afterComplete));
 
+        // Lượt 1 có Room View -> intro dừng ở khung này (thay cho Base Room EndPos + Limit của BaseRoom)
+        BaseRoomManager.introViewProvider = () => this.viewOf(0);
+
         if (!im) return;
         // ItemManager chỉ giữ itemList lúc chạy — luôn dựng từ đây (kể cả khi chỉ còn 1 lượt)
         im.itemList = ([] as Node[]).concat(...this.phaseItems);
@@ -234,6 +242,7 @@ export class MapPhaseManager extends Component {
         if (MapPhaseManager.instance === this) MapPhaseManager.instance = null;
         if (BoxManager.emptyItemsInterceptor) BoxManager.emptyItemsInterceptor = null;
         if (UIManager.endGameInterceptor) UIManager.endGameInterceptor = null;
+        if (BaseRoomManager.introViewProvider) BaseRoomManager.introViewProvider = null;
         if (this.itemManager?.isValid) this.itemManager.node.off(ItemManager.EVENT_ITEM_ARRIVED, this.onItemArrived, this);
     }
 
@@ -346,28 +355,29 @@ export class MapPhaseManager extends Component {
         this.returnBox(onItemsBack);
     }
 
-    /**
-     * Đưa phòng sang khung nhìn của lượt `phase`, rồi gọi onDone.
-     * Lấy cấu hình moveRoom của lượt `phase`; lượt đó không bật thì dùng của lượt vừa xong
-     * (phase - 1) — đặt ở lượt nào cũng chạy.
-     */
+    /** Đưa phòng sang khung nhìn (Room View) của lượt `phase`, rồi gọi onDone. Lượt không bật Room View = giữ khung cũ. */
     private moveRoomTo(phase: number, onDone: () => void): void {
-        const next = this.phases[phase], prev = this.phases[phase - 1];
-        const p = next && next.moveRoom ? next : prev && prev.moveRoom ? prev : null;
+        const view = this.viewOf(phase);
         const brm = BaseRoomManager.instance;
-        if (!p || !brm) { onDone(); return; }
+        if (!view || !brm) { onDone(); return; }
+        brm.moveToView(view, this.roomMoveDuration, this.roomMoveEasing, onDone);
+    }
 
-        const room = brm.baseRoom?.getComponent(BaseRoom);
-        if (room) {
-            if (p.leftLimit) room.leftLimitPos = p.leftLimit;
-            if (p.rightLimit) room.rightLimitPos = p.rightLimit;
-            if (p.topLimit) room.topLimitPos = p.topLimit;
-            if (p.bottomLimit) room.bottomLimitPos = p.bottomLimit;
-        }
-        // useRoomPosScale: scale phòng = scale world của Room Pos -> quy ra hệ số so với scale gốc của phòng
-        let mult = p.roomScaleMultiplier;
-        if (p.roomPos && p.useRoomPosScale && brm.originalScale.x !== 0) mult = Math.abs(p.roomPos.worldScale.x / brm.originalScale.x);
-        brm.moveToPhase(p.roomPos, mult, this.roomMoveDuration, this.roomMoveEasing, onDone);
+    /** Khung nhìn phòng của lượt `index` (null = lượt không bật Room View). */
+    private viewOf(index: number): RoomView | null {
+        const p = this.phases[index];
+        const brm = BaseRoomManager.instance;
+        if (!p || !p.moveRoom || !brm) return null;
+
+        // useRoomPosScale: scale phòng = scale world của Room Pos; tắt = scale gốc × roomScaleMultiplier
+        const base = brm.originalScale;
+        const m = p.roomScaleMultiplier > 0 ? p.roomScaleMultiplier : 1;
+        const s = p.roomPos && p.useRoomPosScale ? Math.abs(p.roomPos.worldScale.x) : Math.abs(base.x) * m;
+        return {
+            pos: p.roomPos ? p.roomPos.worldPosition.clone() : null,
+            scale: new Vec3(s, s, base.z),
+            panRange: p.roomPos ? p.panRange.clone() : null,
+        };
     }
 
     private playPhaseCompleteSound(): void {

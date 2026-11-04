@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, Vec3 } from 'cc';
 import { BaseRoom } from '../utils/BaseRoom';
 import { TweenUtil } from '../core/TweenUtil';
+import type { RoomView } from './MapPhaseManager';
 
 const { ccclass, property } = _decorator;
 
@@ -8,6 +9,9 @@ const { ccclass, property } = _decorator;
 export class BaseRoomManager extends Component {
 
     static instance: BaseRoomManager | null = null;
+
+    /** MapPhaseManager (Multi Phase) gắn vào: khung nhìn lượt 1 = chỗ intro dừng lại. null = dùng baseRoomEndPos. */
+    static introViewProvider: (() => RoomView | null) | null = null;
 
     @property({ type: Node, tooltip: 'Node căn phòng chính.' })
     baseRoom: Node | null = null;
@@ -18,7 +22,7 @@ export class BaseRoomManager extends Component {
     @property({ type: Node, tooltip: 'Vị trí phòng lúc mới vào game (hiệu ứng intro).', visible(this: BaseRoomManager) { return this.enableIntro; } })
     baseRoomStartPos: Node | null = null;
 
-    @property({ type: Node, tooltip: 'Vị trí phòng sau khi intro xong.', visible(this: BaseRoomManager) { return this.enableIntro; } })
+    @property({ type: Node, tooltip: 'Vị trí phòng sau khi intro xong (Single Phase). Multi Phase: lượt 1 bật Room View thì dùng khung đó, bỏ qua ô này.', visible(this: BaseRoomManager) { return this.enableIntro; } })
     baseRoomEndPos: Node | null = null;
 
     @property({ tooltip: 'Tỉ lệ thu nhỏ ban đầu của phòng.', visible(this: BaseRoomManager) { return this.enableIntro; } })
@@ -74,68 +78,71 @@ export class BaseRoomManager extends Component {
         if (BaseRoomManager.instance === this) BaseRoomManager.instance = null;
     }
 
-    /** Scale gốc của phòng (scale đặt trong scene) — mốc cho moveToPhase(scaleMultiplier). */
+    /** Scale gốc của phòng (scale đặt trong scene) — mốc cho startScaleMultiplier / roomScaleMultiplier. */
     get originalScale(): Readonly<Vec3> {
         return this.baseRoomOriginalScale;
     }
 
     /**
-     * MapPhaseManager gọi khi sang lượt mới: phòng bay tới `pos` (world, null = đứng yên) và
-     * scale = scale gốc × `scaleMultiplier`. Xong thì scale mới thành mốc cho pinch/zoom
-     * (min/maxScaleMultiplier tính theo scale này). Không tự bật lại kéo phòng.
+     * MapPhaseManager gọi khi sang lượt mới: phòng bay tới khung nhìn `view` (vị trí world + scale tuyệt đối).
+     * Xong thì scale mới thành mốc cho pinch/zoom (min/maxScaleMultiplier tính theo scale này) và đặt
+     * khung kéo quanh view.pos. Không tự bật lại kéo phòng.
      */
-    moveToPhase(pos: Node | null, scaleMultiplier: number, duration: number, easing = 'sineInOut', onComplete?: () => void): void {
+    moveToView(view: RoomView, duration: number, easing = 'sineInOut', onComplete?: () => void): void {
         const roomNode = this.baseRoom;
         if (!roomNode) { onComplete?.(); return; }
-
-        const s = this.baseRoomOriginalScale;
-        const m = scaleMultiplier > 0 ? scaleMultiplier : 1;
-        const targetScale = new Vec3(s.x * m, s.y * m, s.z * m);
         TweenUtil.killAll(roomNode);
 
-        let pending = pos ? 2 : 1;
+        let pending = view.pos ? 2 : 1;
         const done = () => {
             if (--pending > 0) return;
-            roomNode.getComponent(BaseRoom)?.initializeOriginalScale(targetScale);
+            this.applyView(view);
             onComplete?.();
         };
-        TweenUtil.scaleTo(roomNode, targetScale, duration, easing, done);
-        if (pos) TweenUtil.moveTo(roomNode, pos.worldPosition.clone(), duration, easing, done);
+        TweenUtil.scaleTo(roomNode, view.scale, duration, easing, done);
+        if (view.pos) TweenUtil.moveTo(roomNode, view.pos, duration, easing, done);
     }
 
-    /** Unity: PlayIntroAnimation — Phóng to BaseRoom về scale gốc và di chuyển về baseRoomEndPos khi mở hộp. */
+    /** Phòng đã tới khung `view`: chốt scale làm mốc zoom + đặt khung kéo (nếu có). */
+    private applyView(view: RoomView): void {
+        const room = this.baseRoom?.getComponent(BaseRoom);
+        if (!room) return;
+        room.initializeOriginalScale(view.scale);
+        if (view.pos && view.panRange) room.setPanBounds(view.pos, view.panRange);
+    }
+
+    /**
+     * Unity: PlayIntroAnimation — phóng to BaseRoom và di chuyển tới khung nhìn đầu tiên.
+     * Multi Phase: khung = Room View của lượt 1 (introViewProvider). Không có thì như cũ:
+     * scale gốc + baseRoomEndPos, giới hạn kéo là 4 node Limit của BaseRoom.
+     */
     playIntroAnimation(onComplete?: () => void): void {
         if (!this.baseRoom) {
             onComplete?.();
             return;
         }
 
-        // Tắt intro -> không tween, bật pan/zoom luôn
-        if (!this.enableIntro) {
-            const room = this.baseRoom.getComponent(BaseRoom);
-            if (room) {
-                room.initializeOriginalScale(this.baseRoomOriginalScale);
-                room.enableInteraction();
-            }
+        const view: RoomView = BaseRoomManager.introViewProvider?.() ?? {
+            pos: this.baseRoomEndPos ? this.baseRoomEndPos.worldPosition.clone() : this.baseRoomOriginalWorldPos.clone(),
+            scale: this.baseRoomOriginalScale.clone(),
+            panRange: null,
+        };
+        const finish = () => {
+            this.applyView(view);
+            this.baseRoom?.getComponent(BaseRoom)?.enableInteraction();
             onComplete?.();
+        };
+
+        // Tắt intro -> không tween, đặt phòng vào khung luôn và bật pan/zoom
+        if (!this.enableIntro) {
+            this.baseRoom.setScale(view.scale);
+            if (view.pos) this.baseRoom.setWorldPosition(view.pos);
+            finish();
             return;
         }
 
-        // 1. Phóng to BaseRoom về lại kích thước bình thường
-        TweenUtil.scaleTo(this.baseRoom, this.baseRoomOriginalScale, this.introDuration, 'linear');
-
-        // 2. Di chuyển BaseRoom tới baseRoomEndPos
-        const targetWorldPos = this.baseRoomEndPos
-            ? this.baseRoomEndPos.worldPosition.clone()
-            : this.baseRoomOriginalWorldPos.clone();
-
-        TweenUtil.moveTo(this.baseRoom, targetWorldPos, this.introDuration, 'linear', () => {
-            const room = this.baseRoom?.getComponent(BaseRoom);
-            if (room) {
-                room.initializeOriginalScale(this.baseRoomOriginalScale);
-                room.enableInteraction();
-            }
-            onComplete?.();
-        });
+        TweenUtil.scaleTo(this.baseRoom, view.scale, this.introDuration, 'linear');
+        if (view.pos) TweenUtil.moveTo(this.baseRoom, view.pos, this.introDuration, 'linear', finish);
+        else this.scheduleOnce(finish, this.introDuration);
     }
 }

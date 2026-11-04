@@ -11,7 +11,7 @@
  * Mọi khoảng cách là PIXEL.
  */
 
-import { _decorator, Component, Node, Vec3, EventTouch, math, input, Input, EventMouse } from 'cc';
+import { _decorator, Component, Node, Vec2, Vec3, EventTouch, math, input, Input, EventMouse } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler, IPinchHandler } from '../core/DreamyInputManager';
 import { UIManager } from '../managers/UIManager';
 
@@ -76,6 +76,9 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     private originalScaleInitialized = false;
     private interactionEnabled = false;
 
+    /** Khung kéo theo số (MapPhaseManager đặt theo từng lượt) — có thì dùng thay cho 4 node Limit. */
+    private panBounds: { minX: number; maxX: number; minY: number; maxY: number } | null = null;
+
     private dragStartWorld = new Vec3();
     private roomStartPosition = new Vec3();
     private dragging = false;
@@ -130,6 +133,16 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
 
     get isInteractionEnabled(): boolean {
         return this.interactionEnabled;
+    }
+
+    /** Cho kéo phòng trong khoảng center ± range (world). Thay cho 4 node Limit tới khi clearPanBounds(). */
+    setPanBounds(center: Readonly<Vec3>, range: Readonly<Vec2>): void {
+        const rx = Math.abs(range.x), ry = Math.abs(range.y);
+        this.panBounds = { minX: center.x - rx, maxX: center.x + rx, minY: center.y - ry, maxY: center.y + ry };
+    }
+
+    clearPanBounds(): void {
+        this.panBounds = null;
     }
 
     // ======================================================== pan
@@ -200,6 +213,12 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     // ======================================================== clamp
     /** Unity: ClampPosition — kẹp trục X (left/right), và trục Y (top/bottom) nếu bật enableVerticalPan. */
     private clampPosition(position: Vec3): Vec3 {
+        const b = this.panBounds;
+        if (b) {
+            position.x = math.clamp(position.x, b.minX, b.maxX);
+            if (this.enableVerticalPan) position.y = math.clamp(position.y, b.minY, b.maxY);
+            return position;
+        }
         position.x = BaseRoom.clampAxis(position.x,
             this.leftLimitPos?.worldPosition.x, this.rightLimitPos?.worldPosition.x);
         if (this.enableVerticalPan) {
