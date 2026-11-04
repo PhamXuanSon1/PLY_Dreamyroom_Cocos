@@ -157,7 +157,7 @@ export class AreaItemSpawner extends Component {
 
         im?.enableFirstClickObjects();
         im?.onBoxFirstClicked();
-        UIManager.instance?.startAutoEndTimer();
+        // đồng hồ Auto End không chạy từ đây — bắt đầu ở lần chạm đầu tiên (ItemManager.onAnyPointerDown)
 
         const finish = () => {
             if (im) im.finishedTutorial = true;

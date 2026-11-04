@@ -1540,42 +1540,20 @@
         "83c779c8-a94b-4014-a4a6-142ca7b50911@f9941",
         "c5feffed-5f1b-4634-979d-6d0e82dbb359@f9941",
         "77a77245-e9e9-45c6-bfb4-4abbb4b43e1a@f9941",
-        "eed55ec3-2c5e-45ea-b1d3-161a2a98f6af",
         "a88d3345-f98a-41cf-9490-e39152ccb566",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
         "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941",
         "c864c38b-855f-4fe5-a80b-f3905e999ecb@f9941",
         "e1fc69b2-618c-4694-9672-0920e014cfe4",
-        "20f60589-d35c-4248-8b6b-9f230f3337e2",
+        "85a66dbd-6013-4635-944a-bd393e94454d",
         "02842ae9-80e4-4a46-8329-dec48c04553b",
         "cf290993-bd80-4b5d-9467-489786c65616",
         "a88a5c3e-fe57-4d78-ba1e-73e9803bcce9",
-        "363f6949-5969-4b33-85b6-42cf5b39704b",
         "82a6a74e-d8c0-42ec-b0d0-2e0968abe284",
-        "5b757b2e-08e5-4f99-9d72-ab66651e8cb1",
-        "6a23e02d-9056-4d9a-957a-15dc635c17a1",
         "5ae6d90a-6fb6-4eee-9b25-8cbe0af402dc",
-        "9d82fea5-c5e1-4838-a10e-0fbefa44356c",
-        "19952116-2aff-467c-8e8d-639d626e34f6",
-        "393db173-0bdb-4852-a2fb-655c19d32fda",
-        "1f1fe5a1-c894-424a-8a73-90ab623eca26",
-        "ffb6a91e-943b-4118-9561-0c6feb8b9b45",
-        "f57f7e9d-1391-4171-86c0-c31424707fe5",
         "7e2af722-7b11-4556-a5d6-f0bd3b4ee759",
-        "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5",
         "c53be69e-99c0-47d9-9c5a-4b103f98a370",
-        "ba86cebe-4d38-4443-bdd2-0f3817a8a500",
-        "cd3ca3e6-864c-425f-8995-3c4dca508ba2",
-        "ff8b42ea-325d-4827-a60e-5061f68ee560",
-        "63d1baa4-820b-4681-950c-f60679d90469",
-        "07552585-a19c-492a-a9ae-14c3a110023d",
-        "2ae0277d-48f7-46ac-beec-f99b32a91a7a",
-        "36f9559d-0317-42ef-8986-bb3db27ef31c",
-        "c32d3e3b-e812-4c5b-af3d-5459c878942e",
-        "45989b1b-6e08-45e6-8b05-9f325d8fe915",
-        "1489e820-bcb8-404e-8efb-b974246f0460",
-        "8c4ac2a9-ef56-4e70-8c05-c72cae2a5bd6",
-        "1476131f-bd70-441f-a6b8-32db105c8675"
+        "fccb292c-2bde-436f-8f3b-887bc2f0aec6"
       ],
       "dependScripts": [
         "14a54ca0-e12a-490a-948a-754db1575003",
@@ -62082,6 +62060,39 @@
       "depends": [
         "9cc8d06b-2c16-4fea-a66f-b29f5af7884e"
       ]
+    },
+    "versionCode": 1
+  },
+  "fccb292c-2bde-436f-8f3b-887bc2f0aec6": {
+    "url": "db://assets/4.Sounds/Decor.mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "4b69f170-4c5a-4e64-9284-c995dd69526c": {
+    "url": "db://assets/4.Sounds/BGM/Cats & Soup with Christmas Music 🎄 - catsandsoup 고양이와스프.mp3",
+    "value": {},
+    "versionCode": 1
+  },
+  "85a66dbd-6013-4635-944a-bd393e94454d": {
+    "url": "db://assets/4.Sounds/BGM/Cats & Soup with Christmas Music 🎄 - catsandsoup 고양이와스프 (mp3cut.net).mp3",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d9392613-c879-479f-8c16-5213531451e6": {
+    "url": "db://assets/3.Sprites/Ply53/sprites/auto-atlas.pac",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "5ae74dfd-8ac3-4047-8fe2-17bbf27da346": {
+    "url": "db://assets/3.Sprites/auto-atlas.pac",
+    "value": {
+      "depends": []
     },
     "versionCode": 1
   }

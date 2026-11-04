@@ -44,10 +44,11 @@ export enum FxType {
     BoilingPot = 35,
     GhostScare = 36,
     Clock = 37,
+    Decor = 38,
 }
 Enum(FxType);
 
-const FX_TYPE_COUNT = 38;
+const FX_TYPE_COUNT = 39;
 
 /**
  * Cau hinh du lieu am thanh.
@@ -184,6 +185,9 @@ class FxAudio {
 
     @property(SoundData)
     clock: SoundData = new SoundData();
+
+    @property(SoundData)
+    decor: SoundData = new SoundData();
 }
 
 /** 1 sequence FX dang phat (playFxSequence). */
@@ -484,6 +488,7 @@ export class Ply_SoundManager extends Ply_Singleton {
             case FxType.BoilingPot: return this.fxAudio.boilingPot;
             case FxType.GhostScare: return this.fxAudio.ghostScare;
             case FxType.Clock: return this.fxAudio.clock;
+            case FxType.Decor: return this.fxAudio.decor;
             default: return null;
         }
     }

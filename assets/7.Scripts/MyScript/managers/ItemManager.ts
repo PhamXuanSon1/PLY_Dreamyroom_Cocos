@@ -294,6 +294,9 @@ export class ItemManager extends Component {
     /** glue Cocos: InputManager gọi mỗi lần chạm — thay phần poll Input bên Unity. */
     onAnyPointerDown(): void {
         this.enableFirstClickObjects();
+        // Không chơi bằng hộp (spawner Holder / Area đã tắt hộp): đồng hồ Auto End bắt đầu từ lần chạm
+        // đầu tiên ở bất kỳ đâu. Có hộp thì đồng hồ chỉ bắt đầu khi click hộp (BoxController).
+        if (!BoxManager.instance?.box?.activeInHierarchy) UIManager.instance?.startAutoEndTimer();
         this.resetIdleTimer();
         if (!this.isStuckHintActive) {
             this.hideHint();
