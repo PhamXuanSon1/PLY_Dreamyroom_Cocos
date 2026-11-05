@@ -1,0 +1,213 @@
+{
+ "skeleton": {
+  "hash": "fire27lua",
+  "spine": "4.2.43",
+  "x": -60,
+  "y": -6,
+  "width": 120,
+  "height": 120,
+  "images": "./",
+  "audio": ""
+ },
+ "bones": [
+  {
+   "name": "root"
+  },
+  {
+   "name": "back",
+   "parent": "root"
+  },
+  {
+   "name": "front",
+   "parent": "root"
+  }
+ ],
+ "slots": [
+  {
+   "name": "back",
+   "bone": "back",
+   "color": "ff8a4ad0",
+   "attachment": "flame"
+  },
+  {
+   "name": "front",
+   "bone": "front",
+   "attachment": "flame"
+  }
+ ],
+ "skins": [
+  {
+   "name": "default",
+   "attachments": {
+    "back": {
+     "flame": {
+      "path": "lua",
+      "y": 48.32000000000001,
+      "scaleX": 1.12,
+      "scaleY": 1.12,
+      "width": 97,
+      "height": 97
+     }
+    },
+    "front": {
+     "flame": {
+      "path": "lua",
+      "y": 33.83,
+      "scaleX": 0.78,
+      "scaleY": 0.78,
+      "width": 97,
+      "height": 97
+     }
+    }
+   }
+  },
+  {
+   "name": "khach",
+   "attachments": {
+    "back": {
+     "flame": {
+      "path": "lua_khach",
+      "y": 47.760000000000005,
+      "scaleX": 1.12,
+      "scaleY": 1.12,
+      "width": 96,
+      "height": 96
+     }
+    },
+    "front": {
+     "flame": {
+      "path": "lua_khach",
+      "y": 33.44,
+      "scaleX": 0.78,
+      "scaleY": 0.78,
+      "width": 96,
+      "height": 96
+     }
+    }
+   }
+  }
+ ],
+ "animations": {
+  "idle": {
+   "bones": {
+    "front": {
+     "scale": [
+      {
+       "x": 1,
+       "y": 1
+      },
+      {
+       "time": 0.22,
+       "x": 0.93,
+       "y": 1.1
+      },
+      {
+       "time": 0.45,
+       "x": 1.04,
+       "y": 0.95
+      },
+      {
+       "time": 0.68,
+       "x": 0.96,
+       "y": 1.07
+      },
+      {
+       "time": 0.9,
+       "x": 1,
+       "y": 1
+      }
+     ],
+     "shear": [
+      {
+       "x": 0
+      },
+      {
+       "time": 0.3,
+       "x": 4
+      },
+      {
+       "time": 0.6,
+       "x": -4
+      },
+      {
+       "time": 0.9,
+       "x": 0
+      }
+     ]
+    },
+    "back": {
+     "scale": [
+      {
+       "x": 1.04,
+       "y": 0.96
+      },
+      {
+       "time": 0.3,
+       "x": 0.95,
+       "y": 1.12
+      },
+      {
+       "time": 0.6,
+       "x": 1.06,
+       "y": 0.98
+      },
+      {
+       "time": 0.9,
+       "x": 1.04,
+       "y": 0.96
+      }
+     ],
+     "shear": [
+      {
+       "x": -3
+      },
+      {
+       "time": 0.45,
+       "x": 3
+      },
+      {
+       "time": 0.9,
+       "x": -3
+      }
+     ]
+    }
+   },
+   "slots": {
+    "back": {
+     "rgba": [
+      {
+       "color": "ff8a4ad0"
+      },
+      {
+       "time": 0.3,
+       "color": "ff8a4aa0"
+      },
+      {
+       "time": 0.6,
+       "color": "ff8a4ae0"
+      },
+      {
+       "time": 0.9,
+       "color": "ff8a4ad0"
+      }
+     ]
+    },
+    "front": {
+     "rgba": [
+      {
+       "color": "ffffffff"
+      },
+      {
+       "time": 0.45,
+       "color": "ffffffe0"
+      },
+      {
+       "time": 0.9,
+       "color": "ffffffff"
+      }
+     ]
+    }
+   }
+  }
+ }
+}

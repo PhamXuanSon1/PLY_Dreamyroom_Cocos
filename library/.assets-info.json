@@ -110,7 +110,7 @@
       "uuid": "591229da-5767-4c7b-b70a-2e87becdc6bc"
     },
     "7.Scripts\\MyScript\\box": {
-      "time": 1793758690818.5847,
+      "time": 1793861274689.7349,
       "uuid": "fca59126-8703-4d6d-a4fc-0b49463ffdf6"
     },
     "7.Scripts\\MyScript\\core": {
@@ -322,7 +322,7 @@
       "uuid": "a67b6921-a62c-42ff-972e-fbff2f501453"
     },
     "7.Scripts\\MyScript\\box\\BoxController.ts": {
-      "time": 1793758689560.13,
+      "time": 1793861273907.3772,
       "uuid": "7ced8a7d-fd09-44e8-b1af-b41522ee13b2"
     },
     "7.Scripts\\MyScript\\box\\BoxGraphic.ts": {
@@ -856,7 +856,7 @@
       "time": 1789031295425.515
     },
     "0.Spines": {
-      "time": 1791856428362.096,
+      "time": 1793864147274.6536,
       "uuid": "91ce8cc5-cd6c-4470-a59f-ad70a442a383"
     },
     "1.Animations": {
@@ -1144,7 +1144,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1793860991401.5935,
+      "time": 1793864905168.4456,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "8.Assets\\127. Spooky Pizza": {
@@ -3538,6 +3538,34 @@
     "3.Sprites\\Ply46\\sprites\\6_rem_cua_so_sd.png": {
       "time": 1788755307000,
       "uuid": "6add195f-037b-4c58-8cdd-be77858291d7"
+    },
+    "0.Spines\\Fire.meta": {
+      "time": 1793864147291.729
+    },
+    "0.Spines\\Fire\\Fire.atlas.txt.meta": {
+      "time": 1793864147303.9946
+    },
+    "0.Spines\\Fire\\Fire.json.meta": {
+      "time": 1793864147305.5732
+    },
+    "0.Spines\\Fire\\Fire.png.meta": {
+      "time": 1793864147318.6274
+    },
+    "0.Spines\\Fire": {
+      "time": 1793864147277.2124,
+      "uuid": "0737dd05-9058-4644-99bb-45f371fc7ab4"
+    },
+    "0.Spines\\Fire\\Fire.atlas.txt": {
+      "time": 1793864139715.593,
+      "uuid": "360af5fe-f3d4-4858-ab48-2eb934bfbecc"
+    },
+    "0.Spines\\Fire\\Fire.json": {
+      "time": 1793864139716.5774,
+      "uuid": "67fd0284-cefc-4845-aa8e-b8f56f07a912"
+    },
+    "0.Spines\\Fire\\Fire.png": {
+      "time": 1793864139714.5654,
+      "uuid": "f87ab4d8-1dca-4c2c-b530-129f954a7b1b"
     }
   },
   "missing": {}

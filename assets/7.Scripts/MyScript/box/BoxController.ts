@@ -233,7 +233,12 @@ export class BoxController extends Component implements IPointerHandler {
             this.jumpDuration,
             this.jumpEasing,
             () => {
+                // Item bay ra khi còn nằm trong phòng: setParent giữ world sẽ để lại scale phòng ở node gốc,
+                // rồi fitToTarget lại nhân thêm lần nữa -> item nhỏ hơn đích. Dừng tween pop (nếu chưa xong)
+                // và trả node gốc về đúng targetScale SAU khi vào Holder, để chỉ node ảnh mang tỉ lệ phòng.
+                TweenUtil.killAll(currentItem);
                 holderSlot.setItem(currentItem);
+                currentItem.setScale(targetScale, targetScale, targetScale);
                 // Holder ở UI: cho item bằng kích thước đích trong phòng (như AreaItemSpawner)
                 if (itemScript?.targetPoint) currentItem.getComponent(ItemGraphic)?.fitToTarget(itemScript.targetPoint, targetScale);
                 if (im.isStoreTriggerItem(currentItem)) {
