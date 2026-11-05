@@ -104,9 +104,6 @@
         "chunks\\builtin\\internal\\embedded-alpha.chunk",
         "chunks\\builtin\\internal\\alpha-test.chunk"
       ],
-      "0.Spines\\box-ingame.json": [
-        "0.Spines\\box-ingame.atlas.txt"
-      ],
       "0.Spines\\Ghosts\\char1\\char1.json": [
         "0.Spines\\Ghosts\\char1\\char1.atlas.txt"
       ],
@@ -133,6 +130,9 @@
       ],
       "0.Spines\\Fire\\Fire.json": [
         "0.Spines\\Fire\\Fire.atlas.txt"
+      ],
+      "0.Spines\\box-ingame.json": [
+        "0.Spines\\box-ingame.atlas.txt"
       ]
     },
     "uuid": {
