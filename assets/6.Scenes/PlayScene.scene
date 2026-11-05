@@ -5942,7 +5942,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -363.564,
+      "x": -392.058,
       "y": 68.139,
       "z": 0
     },
@@ -76555,7 +76555,10 @@
     "snapDistance": 200,
     "moveDuration": 0.2,
     "materialType": 16,
-    "soundTypes": [],
+    "soundTypes": [
+      7,
+      16
+    ],
     "persistentShadow": false,
     "activeOnPlaced": [],
     "deactiveOnPlaced": [],
@@ -78200,7 +78203,10 @@
     "snapDistance": 200,
     "moveDuration": 0.2,
     "materialType": 16,
-    "soundTypes": [],
+    "soundTypes": [
+      7,
+      16
+    ],
     "persistentShadow": false,
     "activeOnPlaced": [],
     "deactiveOnPlaced": [],
@@ -81101,7 +81107,7 @@
     "sharedTargets": [],
     "snapDistance": 200,
     "moveDuration": 0.2,
-    "materialType": 4,
+    "materialType": 38,
     "soundTypes": [],
     "persistentShadow": false,
     "activeOnPlaced": [
@@ -83095,7 +83101,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -363.564,
+      "x": -392.058,
       "y": 68.1389999999999,
       "z": 0
     },
@@ -86628,7 +86634,10 @@
   },
   {
     "__type__": "SoundData",
-    "clip": null,
+    "clip": {
+      "__uuid__": "07552585-a19c-492a-a9ae-14c3a110023d",
+      "__expectedType__": "cc.AudioClip"
+    },
     "volume": 0.6,
     "repeatCount": 1
   },
