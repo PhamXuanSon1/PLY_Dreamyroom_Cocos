@@ -211,13 +211,13 @@ export class ItemGraphic extends Component {
     /**
      * glue Cocos: Item khi nằm trong Holder / đang bị kéo (ItemGraphic.bringToFront)
      * không còn là con cháu của Scale nữa (xem HolderSlot.setItem/bringToFront), nên
-     * không tự ăn theo scale của phòng qua cây node — phải tự đọc BaseRoom.currentZoomFactor
+     * không tự ăn theo scale của phòng qua cây node — phải tự đọc BaseRoom.roomWorldScale (scale thật của phòng)
      * mỗi frame rồi nhân thêm vào NODE ẢNH (không phải node gốc, node gốc còn đang bị
      * ItemMovement tween scale cho hiệu ứng pop/kéo, đụng vào sẽ đánh nhau).
      * Gọi liên tục từ ItemController.update().
      */
     syncRoomZoomScale(): void {
-        const zoom = BaseRoom.currentZoomFactor;
+        const zoom = BaseRoom.roomWorldScale;
 
         // Mốc ban đầu: coi như item vừa "rời" phòng ở zoom hiện tại, hệ số 1.
         if (!this.zoomRefInitialized) {
@@ -273,7 +273,7 @@ export class ItemGraphic extends Component {
         const base = this.imageBaseScale;
         img.setScale(base.x * mult, base.y * mult, base.z);
         this.zoomMult = mult;
-        this.zoomAtDetach = BaseRoom.currentZoomFactor;
+        this.zoomAtDetach = BaseRoom.roomWorldScale;
         this.multAtDetach = mult;
         this.zoomRefInitialized = true;
     }

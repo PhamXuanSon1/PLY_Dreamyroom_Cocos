@@ -63,6 +63,18 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     /** glue Cocos: node đang gắn BaseRoom (gốc cây Scale), để item kiểm tra mình đang nằm trong hay ngoài phòng. */
     static roomNode: Node | null = null;
 
+    /**
+     * Scale world thật của phòng (|worldScale.x| của roomNode). Đổi theo MỌI cách làm phòng to/nhỏ:
+     * pinch zoom, intro, chuyển khung nhìn giữa các lượt (BaseRoomManager.moveToView), chỉnh tay...
+     * Item ngoài cây Scale (Holder / DragLayer) dùng số này để giữ kích thước khớp với phòng.
+     * Chưa có phòng thì trả về currentZoomFactor.
+     */
+    static get roomWorldScale(): number {
+        const room = BaseRoom.roomNode;
+        if (!room || !room.isValid) return BaseRoom.currentZoomFactor;
+        return Math.abs(room.worldScale.x) || BaseRoom.currentZoomFactor;
+    }
+
     /** Node `n` có nằm trong cây Scale (con cháu của roomNode) không. */
     static isInsideRoom(n: Node | null): boolean {
         const room = BaseRoom.roomNode;
