@@ -24,7 +24,7 @@ import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
 import { FollowNode } from '../pipeline/FollowNode';
 import { ItemTray } from '../managers/ItemTray';
 import { AreaItemSpawner } from '../managers/AreaItemSpawner';
-import { PlayerMode } from '../managers/PlayerMode';
+import { MistakeHintMode } from '../managers/MistakeHintMode';
 
 const { ccclass, property } = _decorator;
 
@@ -145,12 +145,13 @@ export class ItemController extends Component implements IPointerHandler {
     private moving = false;
     private itemCollider: Collider2D | null = null;
     private initialWorldPos = new Vec3();
-    /** PlayerMode: vị trí chạm lúc cầm lên + quãng kéo xa nhất — chạm nhẹ không tính là thả sai. */
-    private pointerDownPos = new Vec3();
-    private dragDistance = 0;
 
     /** glue Cocos: lần cầm này item có được cấp bóng lúc kéo không — snap xong mới trừ 1 lượt. */
     private usedDragShadow = false;
+
+    /** Âm thanh ghép (playFxSequence lúc tới đích) đang phát. */
+    private landSoundPlaying = false;
+    private landSoundWaiters: (() => void)[] = [];
 
     /** Tổng thời gian (giây) đã kéo item này mà chưa ghép được, cộng dồn qua các lần kéo. */
     private dragTimeTotal = 0;
@@ -355,8 +356,8 @@ export class ItemController extends Component implements IPointerHandler {
         if (this.isPlaced || this.moving) return false;
 
         this.initialWorldPos = this.node.worldPosition.clone();
-        this.pointerDownPos.set(worldPos);
-        this.dragDistance = 0;
+        // MistakeHintMode: đếm số lần click liên tiếp vào item này (click item khác -> đếm lại)
+        MistakeHintMode.active?.onItemPressed(this);
         // Đích của item có thể đã bị item giống nó chiếm -> đổi sang đích trống trước khi hiện bóng
         this.ensureFreeTarget();
 
@@ -415,7 +416,6 @@ export class ItemController extends Component implements IPointerHandler {
     onPointerMove(worldPos: Vec3, _ev: EventTouch): void {
         if (!this.dragging) return;
         this.itemMovement.moveToPosition(worldPos);
-        this.dragDistance = Math.max(this.dragDistance, Vec3.distance(worldPos, this.pointerDownPos));
     }
 
     /** Thả tay (Pointer Up) */
@@ -545,10 +545,9 @@ export class ItemController extends Component implements IPointerHandler {
         }
     }
 
-    /** PlayerMode: kéo đi thật (không phải chạm nhẹ) rồi thả trượt -> tính 1 lần sai. */
+    /** MistakeHintMode: thả ra mà không ghép được (kể cả chỉ click) -> click đủ số lần thì hiện tay. */
     private reportWrongDrop(): void {
-        const pm = PlayerMode.active;
-        if (pm && this.dragDistance >= pm.minDragDistance) pm.onWrongDrop(this);
+        MistakeHintMode.active?.onItemReleased(this);
     }
 
     /** Thả trượt: Bay về vị trí ban đầu (Holder / vị trí nhấc lên). Thả hụt không phát âm thanh. */
@@ -629,10 +628,10 @@ export class ItemController extends Component implements IPointerHandler {
                 .filter((materialType) => materialType !== MaterialType.None)
                 .map((materialType) => this.materialTypeToFxType(materialType))
                 .filter((fxType): fxType is FxType => fxType !== null);
-            if (fxTypes.length > 0) {
-                Ply_SoundManager.Ins?.playFxSequence(fxTypes);
-            } else {
-                Ply_SoundManager.Ins?.playFxSequence([FxType.HeavyWood]);
+            const sm = Ply_SoundManager.Ins;
+            if (sm) {
+                this.landSoundPlaying = true;
+                sm.playFxSequence(fxTypes.length > 0 ? fxTypes : [FxType.HeavyWood], () => this.onLandSoundDone());
             }
 
 
@@ -691,6 +690,19 @@ export class ItemController extends Component implements IPointerHandler {
 
             ChangeLight.notifyItemPlaced();
         });
+    }
+
+    /** Gọi cb khi âm thanh ghép của item phát xong (không phát / đã xong -> gọi ngay). */
+    whenLandSoundDone(cb: () => void): void {
+        if (this.landSoundPlaying) this.landSoundWaiters.push(cb);
+        else cb();
+    }
+
+    private onLandSoundDone(): void {
+        this.landSoundPlaying = false;
+        const waiters = this.landSoundWaiters;
+        this.landSoundWaiters = [];
+        for (const cb of waiters) cb();
     }
 
     /**

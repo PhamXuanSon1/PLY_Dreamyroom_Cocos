@@ -1250,12 +1250,12 @@
         "e1c7bc15-dfa4-4d99-8a14-a42a4da08684@f9941",
         "f8e3ed59-4dcd-4f2e-bbc6-6606fcf1837e@f9941",
         "652ac211-cd24-4edb-8d84-fc8d0ac08c63@f9941",
-        "4cc01c28-6fc4-4eac-9ebd-6822e6196b05@f9941",
-        "f8af6c77-36ea-4e8f-ad2d-bebb9e0498fb@f9941",
-        "98161951-b93b-40c1-beec-52b9b27eca90@f9941",
-        "5935fb2e-babe-4bf5-957f-2d1b6c1306d7@f9941",
         "ca358107-65da-41dd-9587-8a39ab501e92@f9941",
         "412459cf-da49-4adb-a218-45e80a13bac1@f9941",
+        "98161951-b93b-40c1-beec-52b9b27eca90@f9941",
+        "5935fb2e-babe-4bf5-957f-2d1b6c1306d7@f9941",
+        "4cc01c28-6fc4-4eac-9ebd-6822e6196b05@f9941",
+        "f8af6c77-36ea-4e8f-ad2d-bebb9e0498fb@f9941",
         "d491f101-fbc8-4314-8f7d-f01725f07326@f9941",
         "cb04c862-d9c1-4c25-b688-8b139227dad5@f9941",
         "e75a15c9-41d8-46b1-b212-37add8f737c2@f9941",
@@ -1335,12 +1335,13 @@
         "31659e42-77aa-4d4e-9406-602f69cdc4e6@f9941",
         "72b03549-2db9-4346-919a-5e1c8476588c@f9941",
         "0c4623ea-71e7-4562-97de-0117fd37aa1f@f9941",
-        "358c6b28-863a-4634-99b2-ab8f8a0be116@f9941",
-        "7be42565-8233-4db8-9b8e-57a5b26cee59@f9941",
         "4c55189d-5ef6-44c7-9350-3d3c17df851e@f9941",
         "31c2fd02-8b45-4298-9513-ee875ac332dd@f9941",
+        "a51fc4ae-2e0a-4aa3-9f71-5c1dcbe16da4@f9941",
         "af84c47e-a79a-4ce7-8f5c-692ce3df2a6b@f9941",
         "95796b53-7eea-4c14-a106-7d941f67da0e@f9941",
+        "358c6b28-863a-4634-99b2-ab8f8a0be116@f9941",
+        "7be42565-8233-4db8-9b8e-57a5b26cee59@f9941",
         "6e27dee2-711f-42b1-ba50-5d93649b6a8f",
         "a88d3345-f98a-41cf-9490-e39152ccb566",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
@@ -1360,6 +1361,7 @@
         "ffb6a91e-943b-4118-9561-0c6feb8b9b45",
         "7e2af722-7b11-4556-a5d6-f0bd3b4ee759",
         "c53be69e-99c0-47d9-9c5a-4b103f98a370",
+        "ba86cebe-4d38-4443-bdd2-0f3817a8a500",
         "169b453d-cd6b-4f88-ac6e-6c32a6a4b2d5",
         "ff8b42ea-325d-4827-a60e-5061f68ee560",
         "63d1baa4-820b-4681-950c-f60679d90469",
@@ -1382,6 +1384,7 @@
         "ffc0c2df-0287-40ef-8beb-7f4381ae1550",
         "d558005a-8f0f-441f-95a3-dfdeb2a6e567",
         "5340f45e-f6ea-46c6-841b-0215c9469592",
+        "c785373b-9232-4d90-a7b8-dd120081b0eb",
         "74320d90-14e8-4824-bbef-19d9fc3367d1",
         "9823c617-75c7-4125-915f-7b7e2e3428d4",
         "ed11c822-bfde-4941-92f4-36f47be1994f",
@@ -74242,7 +74245,7 @@
     "versionCode": 1
   },
   "9a3b011d-235d-40b1-b99b-337ec622d50e": {
-    "url": "db://assets/7.Scripts/MyScript/managers/PlayerMode.ts",
+    "url": "db://assets/7.Scripts/MyScript/managers/MistakeHintMode.ts",
     "value": {},
     "versionCode": 1
   },
@@ -74299,6 +74302,56 @@
   "270973e3-998e-4a48-b59a-c5e94f44c978": {
     "url": "db://assets/7.Scripts/MyScript/effects/WindowLight.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "e4507d9b-0767-44ec-a058-1d5c3348b738": {
+    "url": "db://assets/3.Sprites/Chung/fx_window_glass_glow.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "e4507d9b-0767-44ec-a058-1d5c3348b738@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/fx_window_glass_glow.png@6c48a",
+    "value": {
+      "depends": [
+        "e4507d9b-0767-44ec-a058-1d5c3348b738"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e4507d9b-0767-44ec-a058-1d5c3348b738@f9941": {
+    "url": "db://assets/3.Sprites/Chung/fx_window_glass_glow.png@f9941",
+    "value": {
+      "depends": [
+        "e4507d9b-0767-44ec-a058-1d5c3348b738@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a51fc4ae-2e0a-4aa3-9f71-5c1dcbe16da4": {
+    "url": "db://assets/3.Sprites/Chung/cuaso_light2.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a51fc4ae-2e0a-4aa3-9f71-5c1dcbe16da4@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/cuaso_light2.png@6c48a",
+    "value": {
+      "depends": [
+        "a51fc4ae-2e0a-4aa3-9f71-5c1dcbe16da4"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a51fc4ae-2e0a-4aa3-9f71-5c1dcbe16da4@f9941": {
+    "url": "db://assets/3.Sprites/Chung/cuaso_light2.png@f9941",
+    "value": {
+      "depends": [
+        "a51fc4ae-2e0a-4aa3-9f71-5c1dcbe16da4@6c48a"
+      ]
+    },
     "versionCode": 1
   }
 }

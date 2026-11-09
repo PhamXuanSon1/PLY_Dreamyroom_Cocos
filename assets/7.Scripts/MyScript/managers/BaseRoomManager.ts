@@ -129,7 +129,9 @@ export class BaseRoomManager extends Component {
         };
         const finish = () => {
             this.applyView(view);
-            this.baseRoom?.getComponent(BaseRoom)?.enableInteraction();
+            const room = this.baseRoom?.getComponent(BaseRoom);
+            room?.warnIfOutsideLimits();
+            room?.enableInteraction();
             onComplete?.();
         };
 

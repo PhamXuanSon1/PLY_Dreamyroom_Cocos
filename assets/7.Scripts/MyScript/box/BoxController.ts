@@ -66,6 +66,9 @@ export class BoxController extends Component implements IPointerHandler {
 
     private isClicked = false;
     private isClosing = false;
+
+    /** Hộp đang nhận click (không đang mở lần đầu / đóng / bay đi). */
+    get canClick(): boolean { return !this.isClicked && !this.isClosing; }
     private hasBeenClicked = false;
     private boxGraphic: BoxGraphic | null = null;
 

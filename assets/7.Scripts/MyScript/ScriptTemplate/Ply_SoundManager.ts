@@ -196,6 +196,8 @@ interface FxSequenceRun {
     list: FxType[];
     index: number;
     callback: (() => void) | null;
+    /** Gọi 1 lần khi sequence phát xong / bị dừng. */
+    onDone: (() => void) | null;
 }
 
 /**
@@ -268,18 +270,21 @@ export class Ply_SoundManager extends Ply_Singleton {
      * Phat cac FX theo thu tu. FX sau chi bat dau khi FX truoc da phat xong.
      * Moi lan goi chay 1 sequence rieng (AudioSource rieng) -> KHONG cat sequence dang phat
      * cua item truoc, cac sequence phat chong len nhau.
+     * onDone: gọi khi phát xong cả sequence (tắt tiếng / không có clip -> gọi ngay).
      */
-    public playFxSequence(fxTypes: readonly FxType[]): void {
-        if (this.isMute) return;
-
-        const list = fxTypes.filter((fxType) => !!this.getSoundData(fxType)?.clip);
-        if (list.length === 0) return;
+    public playFxSequence(fxTypes: readonly FxType[], onDone?: () => void): void {
+        const list = this.isMute ? [] : fxTypes.filter((fxType) => !!this.getSoundData(fxType)?.clip);
+        if (list.length === 0) {
+            onDone?.();
+            return;
+        }
 
         const run: FxSequenceRun = {
             source: this.idleSequenceSources.pop() ?? this.createAudioSource('SoundFX_Sequence'),
             list,
             index: 0,
             callback: null,
+            onDone: onDone ?? null,
         };
         this.sequences.push(run);
         this.playNextFxInSequence(run);
@@ -323,6 +328,14 @@ export class Ply_SoundManager extends Ply_Singleton {
         const i = this.sequences.indexOf(run);
         if (i >= 0) this.sequences.splice(i, 1);
         if (this.idleSequenceSources.indexOf(run.source) < 0) this.idleSequenceSources.push(run.source);
+        const onDone = run.onDone;
+        run.onDone = null;
+        onDone?.();
+    }
+
+    /** Còn sequence FX (âm thanh ghép item - playFxSequence) đang phát không. */
+    public get isFxSequencePlaying(): boolean {
+        return this.sequences.length > 0;
     }
 
     /** Dung TAT CA sequence FX dang phat (mute / destroy). */

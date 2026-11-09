@@ -157,6 +157,19 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
         this.panBounds = null;
     }
 
+    /**
+     * Phòng (vị trí hiện tại) nằm ngoài khung kéo -> lần kéo đầu tiên phòng bị giật về mép khung.
+     * Hay gặp khi 4 node Limit còn để ở vị trí của màn cũ. Chỉ cảnh báo, không tự sửa.
+     */
+    warnIfOutsideLimits(): void {
+        const cur = this.node.worldPosition;
+        const clamped = this.clampPosition(cur.clone());
+        if (Vec3.distance(cur, clamped) <= 1) return;
+        console.warn(`[BaseRoom] Phòng ở (${cur.x.toFixed(0)}, ${cur.y.toFixed(0)}) nằm NGOÀI khung kéo `
+            + `-> chạm kéo là phòng nhảy tới (${clamped.x.toFixed(0)}, ${clamped.y.toFixed(0)}). `
+            + `Dời 4 node Limit (Left/Right/Top/Bottom) về quanh vị trí phòng sau intro.`);
+    }
+
     // ======================================================== pan
     hitTest(worldPos: Vec3): boolean {
         if (UIManager.instance?.isGameEnded) return false;

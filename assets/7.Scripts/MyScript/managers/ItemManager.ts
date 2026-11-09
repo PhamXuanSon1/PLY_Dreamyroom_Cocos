@@ -31,7 +31,8 @@ import { TweenUtil } from '../core/TweenUtil';
 import { WorldScrollManager } from './WorldScrollManager';
 import { UIManager } from './UIManager';
 import { BoxManager } from './BoxManager';
-import { PlayerMode } from './PlayerMode';
+import { BoxController } from '../box/BoxController';
+import { MistakeHintMode } from './MistakeHintMode';
 
 const { ccclass, property } = _decorator;
 
@@ -130,6 +131,9 @@ export class ItemManager extends Component {
 
     @property({ tooltip: 'Chỉ hiện Hand Hint (tay chỉ dẫn, cả Idle Hint lẫn Stuck Hint) cho N item ĐẦU TIÊN người chơi ghép xong. Ghép đủ N item thì các item sau không còn hiện hint nữa. 0 = không giới hạn, luôn hiện hint. Không ảnh hưởng Hand Intro và hint dắt tay lần đầu (showFirstDragHint) — hai cái đó luôn hiện như cũ.' })
     hintItemCount = 0;
+
+    @property({ tooltip: 'Sau End Game (chạm đâu cũng mở Store, vd ghép đủ Items To End Game): không chạm gì N giây thì tay chỉ vẫn hiện ở item còn lại. Áp dụng mọi mode, không xét Hint Item Count. 0 = tắt.', min: 0 })
+    endGameHintTime = 3;
 
     /** Cờ báo hiệu đang ở chế độ Hint cố định 5s (chỉ tắt khi ghép xong item đó hoặc click item khác) */
     isStuckHintActive = false;
@@ -329,7 +333,10 @@ export class ItemManager extends Component {
 
     // ======================================================== Unity: Update
     update(dt: number) {
-        if (UIManager.instance?.isGameEnded) return;
+        if (UIManager.instance?.isGameEnded) {
+            this.updateEndGameIdleHint(dt);
+            return;
+        }
 
         // Đang chuyển lượt (MapPhaseManager): không đếm hint, chỉ kiểm tra hết item
         if (this.hintsBlocked) {
@@ -340,8 +347,9 @@ export class ItemManager extends Component {
             return;
         }
 
-        // PlayerMode: không có hint theo giờ — tay chỉ hiện khi thả sai quá N lần (PlayerMode.onWrongDrop)
-        if (PlayerMode.active) {
+        // MistakeHintMode: không có hint theo giờ — tay chỉ hiện khi click cùng 1 item đủ N lần (MistakeHintMode.onItemReleased)
+        if (MistakeHintMode.active) {
+            this.updateBoxHandWhenHoldersEmpty();
             this.checkSpawnExhausted();
             return;
         }
@@ -382,6 +390,54 @@ export class ItemManager extends Component {
         }
 
         this.checkSpawnExhausted();
+    }
+
+    /**
+     * MistakeHintMode (không có hint theo giờ): sau lần click hộp đầu, holder trống hết (không còn item nằm
+     * chờ / đang bay vào) và không kéo gì -> bật tay chỉ hộp (handIntro); holder có item lại thì tắt.
+     */
+    private updateBoxHandWhenHoldersEmpty(): void {
+        const hand = this.handIntro;
+        if (!hand || !this.hasBoxBeenClickedOnce) return;
+        const box = BoxManager.instance?.box;
+        const boxCtrl = box?.getComponent(BoxController);
+        let show = !!box?.activeInHierarchy && !this.isDragging && !!boxCtrl?.canClick && this.hasItemLeftInBox();
+        if (show) {
+            for (const slot of HolderSlot.all) {
+                if (slot.isValid && slot.enabledInHierarchy && !slot.isEmpty) { show = false; break; }
+            }
+        }
+        if (hand.active !== show) hand.active = show;
+    }
+
+    /**
+     * Sau End Game (chạm đâu cũng mở Store, vd ghép đủ Items To End Game): không chạm gì endGameHintTime giây
+     * -> tay chỉ chạy từ item còn đang chờ trong holder tới đích (mọi mode, không xét hintItemCount).
+     * Chạm -> mở Store + tắt tay (onEndGamePointerDown), rảnh lại đủ giây thì hiện lại.
+     */
+    private updateEndGameIdleHint(dt: number): void {
+        if (this.endGameHintTime <= 0 || this.hasShownHint) return;
+        this.idleTimer += dt;
+        if (this.idleTimer < this.endGameHintTime) return;
+
+        let item = this.getLastItem();
+        if (!this.canUseItemHint(item) || item!.isPlaced) item = this.getValidHintItem();
+        if (!item || !item.targetPoint || this.isDragging) return; // không còn item chờ trong holder
+
+        this.hasShownHint = true;
+        if (this.handIntro) this.handIntro.active = false;
+        this.runHintTween(item);
+    }
+
+    /** DreamyInputManager gọi khi chạm sau End Game (trước khi mở Store): tắt tay, đếm lại từ đầu. */
+    onEndGamePointerDown(): void {
+        this.resetIdleTimer();
+        this.hideHint();
+    }
+
+    /** Hộp còn item được phép rớt không. */
+    private hasItemLeftInBox(): boolean {
+        return this.spawnFromLast ? (this.currentItemIndex >= 0) : (this.currentItemIndex < this.spawnEnd);
     }
 
     /** Hộp rớt hết item được phép (cả list, hoặc tới spawnLimit) -> báo BoxManager. */
@@ -504,10 +560,10 @@ export class ItemManager extends Component {
     }
 
     /**
-     * PlayerMode: thả sai quá N lần -> hiện tay chỉ nước đi đúng, ưu tiên item vừa thả sai
+     * MistakeHintMode: thả sai quá N lần -> hiện tay chỉ nước đi đúng, ưu tiên item vừa thả sai
      * (item đó chưa ghép được thì lấy item khác đang chờ). Dùng chung trạng thái stuck:
      * tay giữ nguyên tới khi ghép đúng, cầm item khác thì huỷ (cancelStuckHint).
-     * Không xét hintItemCount — PlayerMode có luật hint riêng.
+     * Không xét hintItemCount — MistakeHintMode có luật hint riêng.
      */
     showMistakeHint(item: ItemController | null): void {
         if (this.hintsBlocked) return;
@@ -541,8 +597,8 @@ export class ItemManager extends Component {
     showStuckHintAgain(): void {
         if (!this.isStuckHintActive || !this.stuckTargetItem || !this.stuckTargetItem.isValid) return;
         if (this.stuckTargetItem.isPlaced) return;
-        // PlayerMode: tay chỉ đang hiện thì giữ nguyên — thả tay ra là hiện lại ngay
-        if (PlayerMode.active) {
+        // MistakeHintMode: tay chỉ đang hiện thì giữ nguyên — thả tay ra là hiện lại ngay
+        if (MistakeHintMode.active) {
             this.runHintTween(this.stuckTargetItem);
             return;
         }
@@ -604,6 +660,14 @@ export class ItemManager extends Component {
         }
 
         this.showedFirstDragHint = true;
+        // MistakeHintMode không có idle hint hiện lại -> giữ tay như stuck hint: chạm chỗ khác (bấm hộp,
+        // kéo phòng) không tắt, chỉ tắt khi ghép xong item này hoặc cầm item khác.
+        if (MistakeHintMode.active) {
+            this.isStuckHintActive = true;
+            this.stuckReshowPending = false;
+            this.stuckTargetItem = item;
+            this.hasShownHint = true;
+        }
         this.runHintTween(item);
     }
 

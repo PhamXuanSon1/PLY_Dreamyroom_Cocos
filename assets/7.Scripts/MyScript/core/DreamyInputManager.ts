@@ -173,6 +173,7 @@ export class DreamyInputManager extends Component {
 
         // Nếu game đã kết thúc -> Mọi cú chạm tiếp theo trên màn hình sẽ mở store ngay
         if (UIManager.instance?.isGameEnded) {
+            ItemManager.instance?.onEndGamePointerDown();
             UIManager.instance.gotoStore();
             return;
         }
