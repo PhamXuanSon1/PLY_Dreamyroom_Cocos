@@ -8,13 +8,15 @@
  *
  *   2. Ánh sáng cửa sổ: WindowLight (onlyInPlayerMode) tự tắt khi mode không bật.
  *
- * Đồ nhỏ tự hiện (đồ trong tủ, quân cờ...): không cần code — để node đích của đồ nhỏ làm con của
- * đích đồ đựng, ghép đồ đựng xong thì đích + con tự bật (ItemController.moveToTarget).
+ *   3. Đồ nhỏ tự hiện (đồ trong tủ, quân cờ...): node đích của đồ nhỏ (…Place) là con của đích đồ đựng,
+ *      ghép đồ đựng xong thì đích + con tự bật (ItemController.moveToTarget). PlayerMode cho các
+ *      đích con đó nảy ra lần lượt thay vì hiện cùng lúc.
  */
 
 import { _decorator, Component, Node } from 'cc';
 import { ItemManager } from './ItemManager';
 import { ItemController } from '../item/ItemController';
+import { TweenUtil } from '../core/TweenUtil';
 
 const { ccclass, property } = _decorator;
 
@@ -53,6 +55,16 @@ export class PlayerMode extends Component {
     @property({ tooltip: 'Chờ N giây sau khi thả sai mới hiện tay (cho item thả hụt kịp về chỗ).', min: 0 })
     hintDelay = 0.3;
 
+    // ---------------- Đồ nhỏ tự hiện ----------------
+    @property({ group: { name: 'Đồ nhỏ tự hiện', id: 'reveal' }, tooltip: 'Ghép đồ đựng xong, chờ N giây thì đồ nhỏ đầu tiên nảy ra.', min: 0 })
+    revealDelay = 0.15;
+
+    @property({ group: { name: 'Đồ nhỏ tự hiện', id: 'reveal' }, tooltip: 'N giây giữa 2 đồ nhỏ liên tiếp.', min: 0 })
+    revealInterval = 0.08;
+
+    @property({ group: { name: 'Đồ nhỏ tự hiện', id: 'reveal' }, tooltip: 'Thời gian nảy ra của mỗi đồ nhỏ (giây).', min: 0.01 })
+    revealDuration = 0.3;
+
     private wrongCount = 0;
     private hintItem: ItemController | null = null;
     private itemManager: ItemManager | null = null;
@@ -90,10 +102,26 @@ export class PlayerMode extends Component {
         im.showMistakeHint(this.hintItem);
     }
 
-    /** Ghép đúng -> đếm lại từ đầu (ItemManager.onItemCompleted đã tắt tay). */
-    private onItemArrived(): void {
+    private onItemArrived(item?: ItemController): void {
+        // Ghép đúng -> đếm lại từ đầu (ItemManager.onItemCompleted đã tắt tay)
         this.wrongCount = 0;
         this.hintItem = null;
         this.unschedule(this.showWrongHint);
+
+        if (item?.targetPoint) this.revealSmallItems(item.targetPoint);
+    }
+
+    // ======================================================== đồ nhỏ tự hiện
+    /** Đích con (…Place) của đích vừa ghép: vừa được bật cùng đích -> thu về 0 rồi nảy ra lần lượt. */
+    private revealSmallItems(target: Node): void {
+        const smalls = target.children.filter((c) => c.active && /Place$/.test(c.name));
+        smalls.forEach((c, i) => {
+            const scale = c.scale.clone();
+            TweenUtil.killAll(c);
+            c.setScale(0, 0, scale.z);
+            this.scheduleOnce(() => {
+                if (c.isValid) TweenUtil.scaleTo(c, scale, this.revealDuration, 'backOut', () => { if (c.isValid) c.setScale(scale); });
+            }, this.revealDelay + i * this.revealInterval);
+        });
     }
 }
