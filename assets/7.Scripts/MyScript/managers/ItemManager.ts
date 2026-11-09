@@ -31,6 +31,7 @@ import { TweenUtil } from '../core/TweenUtil';
 import { WorldScrollManager } from './WorldScrollManager';
 import { UIManager } from './UIManager';
 import { BoxManager } from './BoxManager';
+import { PlayerMode } from './PlayerMode';
 
 const { ccclass, property } = _decorator;
 
@@ -339,6 +340,12 @@ export class ItemManager extends Component {
             return;
         }
 
+        // PlayerMode: không có hint theo giờ — tay chỉ hiện khi thả sai quá N lần (PlayerMode.onWrongDrop)
+        if (PlayerMode.active) {
+            this.checkSpawnExhausted();
+            return;
+        }
+
         // Đang kéo: mọi bộ đếm hint đứng ở 0 -> tay chỉ hiện sau N giây TÍNH TỪ LÚC THẢ TAY
         if (this.isDragging) {
             this.idleTimer = 0;
@@ -496,6 +503,29 @@ export class ItemManager extends Component {
         this.runHintTween(item);
     }
 
+    /**
+     * PlayerMode: thả sai quá N lần -> hiện tay chỉ nước đi đúng, ưu tiên item vừa thả sai
+     * (item đó chưa ghép được thì lấy item khác đang chờ). Dùng chung trạng thái stuck:
+     * tay giữ nguyên tới khi ghép đúng, cầm item khác thì huỷ (cancelStuckHint).
+     * Không xét hintItemCount — PlayerMode có luật hint riêng.
+     */
+    showMistakeHint(item: ItemController | null): void {
+        if (this.hintsBlocked) return;
+        if (!this.canUseItemHint(item) || item!.isPlaced) item = this.getValidHintItem();
+        if (!item || !item.targetPoint) return;
+
+        const ui = UIManager.instance;
+        if (ui && ui.tuSo >= ui.mauSo) return;
+
+        this.isStuckHintActive = true;
+        this.stuckReshowPending = false;
+        this.stuckTargetItem = item;
+        this.hasShownHint = true;
+        this.setLastItem(item);
+        if (this.handIntro) this.handIntro.active = false;
+        this.runHintTween(item);
+    }
+
     /** Huỷ trạng thái 5s stuck khi người chơi click sang item khác -> chuyển về logic 3s không tương tác */
     cancelStuckHint(): void {
         this.isStuckHintActive = false;
@@ -511,6 +541,11 @@ export class ItemManager extends Component {
     showStuckHintAgain(): void {
         if (!this.isStuckHintActive || !this.stuckTargetItem || !this.stuckTargetItem.isValid) return;
         if (this.stuckTargetItem.isPlaced) return;
+        // PlayerMode: tay chỉ đang hiện thì giữ nguyên — thả tay ra là hiện lại ngay
+        if (PlayerMode.active) {
+            this.runHintTween(this.stuckTargetItem);
+            return;
+        }
         // Không hiện ngay lúc thả tay: chờ stuckTimeToHint giây (xem update, bước 3)
         this.stuckReshowPending = true;
         this.stuckReshowTimer = 0;

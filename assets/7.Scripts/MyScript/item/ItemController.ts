@@ -24,6 +24,7 @@ import { Ply_SoundManager, FxType } from '../ScriptTemplate/Ply_SoundManager';
 import { FollowNode } from '../pipeline/FollowNode';
 import { ItemTray } from '../managers/ItemTray';
 import { AreaItemSpawner } from '../managers/AreaItemSpawner';
+import { PlayerMode } from '../managers/PlayerMode';
 
 const { ccclass, property } = _decorator;
 
@@ -144,6 +145,9 @@ export class ItemController extends Component implements IPointerHandler {
     private moving = false;
     private itemCollider: Collider2D | null = null;
     private initialWorldPos = new Vec3();
+    /** PlayerMode: vị trí chạm lúc cầm lên + quãng kéo xa nhất — chạm nhẹ không tính là thả sai. */
+    private pointerDownPos = new Vec3();
+    private dragDistance = 0;
 
     /** glue Cocos: lần cầm này item có được cấp bóng lúc kéo không — snap xong mới trừ 1 lượt. */
     private usedDragShadow = false;
@@ -346,11 +350,13 @@ export class ItemController extends Component implements IPointerHandler {
     }
 
     /** Bắt đầu nhấc item lên (Pick) */
-    onPointerDown(_worldPos: Vec3, _ev: EventTouch): boolean {
+    onPointerDown(worldPos: Vec3, _ev: EventTouch): boolean {
         if (UIManager.instance?.isGameEnded) return false;
         if (this.isPlaced || this.moving) return false;
 
         this.initialWorldPos = this.node.worldPosition.clone();
+        this.pointerDownPos.set(worldPos);
+        this.dragDistance = 0;
         // Đích của item có thể đã bị item giống nó chiếm -> đổi sang đích trống trước khi hiện bóng
         this.ensureFreeTarget();
 
@@ -409,6 +415,7 @@ export class ItemController extends Component implements IPointerHandler {
     onPointerMove(worldPos: Vec3, _ev: EventTouch): void {
         if (!this.dragging) return;
         this.itemMovement.moveToPosition(worldPos);
+        this.dragDistance = Math.max(this.dragDistance, Vec3.distance(worldPos, this.pointerDownPos));
     }
 
     /** Thả tay (Pointer Up) */
@@ -526,14 +533,22 @@ export class ItemController extends Component implements IPointerHandler {
             const seat = this.getComponent(SeatHandler);
             if (seat && !seat.canPlace()) {
                 console.log('[ItemController] Phải đặt item khác trước!');
+                this.reportWrongDrop();
                 this.snapFailed();
                 return;
             }
             this.switchTarget(snapTarget);
             this.moveToTarget();
         } else {
+            this.reportWrongDrop();
             this.snapFailed();
         }
+    }
+
+    /** PlayerMode: kéo đi thật (không phải chạm nhẹ) rồi thả trượt -> tính 1 lần sai. */
+    private reportWrongDrop(): void {
+        const pm = PlayerMode.active;
+        if (pm && this.dragDistance >= pm.minDragDistance) pm.onWrongDrop(this);
     }
 
     /** Thả trượt: Bay về vị trí ban đầu (Holder / vị trí nhấc lên). Thả hụt không phát âm thanh. */
