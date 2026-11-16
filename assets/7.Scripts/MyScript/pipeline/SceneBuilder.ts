@@ -141,6 +141,15 @@ export class SceneBuilder extends Component {
     })
     belowMap: Node[] = [];
 
+    @property({
+        tooltip: 'Gắn Sprite + Sorting2D THẲNG lên node (không tạo node con Image) — Sorting2D đã lo thứ tự vẽ nên '
+            + 'không cần node cha bọc nữa. Áp dụng cho Holder / đồ trang trí.\n'
+            + 'Vẫn giữ node con Image cho: item kéo thả (ItemGraphic phóng to/thu nhỏ riêng node ảnh khi vào khay) '
+            + 'và sprite bị lật (flip ở node ảnh để không lật theo các node con).',
+        visible(this: SceneBuilder) { return this.useSorting2D; },
+    })
+    flattenImageNode = true;
+
     @property({ tooltip: 'Sắp xếp siblingIndex theo sortingOrder của Unity', visible(this: SceneBuilder) { return !this.useSorting2D; } })
     applySorting = true;
 
@@ -498,6 +507,15 @@ export class SceneBuilder extends Component {
         ownerUt.setContentSize(size);
         ownerUt.setAnchorPoint(s.pivot[0], s.pivot[1]);
 
+        // Sorting2D lo thứ tự vẽ -> không cần node cha bọc: Sprite nằm ngay trên owner
+        if (this.useSorting2D && this.flattenImageNode && !this.itemNodes.has(owner) && !s.flipX && !s.flipY) {
+            this.applySprite(owner, owner, s);
+            this.addSorting2D(owner, s.sortingOrder, s.layerValue);
+            this.orderOf.set(owner, SceneBuilder.orderKey(s.sortingOrder, s.layerValue));
+            if (s.bounds) this.boundsOf.set(owner, s.bounds);
+            return;
+        }
+
         const img = new Node(this.imageNodeName || 'Image');
         img.layer = owner.layer;
         img.setParent(owner);
@@ -511,15 +529,7 @@ export class SceneBuilder extends Component {
         ut.setContentSize(size);
         ut.setAnchorPoint(s.pivot[0], s.pivot[1]);
 
-        const sprite = img.addComponent(Sprite);
-        sprite.sizeMode = Sprite.SizeMode.CUSTOM;
-        sprite.trim = false;
-
-        const sf = this.getFrame(s.key);
-        if (sf) sprite.spriteFrame = sf;
-        else if (this.verbose) console.warn(`[SceneBuilder] Thiếu SpriteFrame "${s.key}" cho ${owner.name}`);
-
-        sprite.color = new Color(s.color[0] * 255, s.color[1] * 255, s.color[2] * 255, s.color[3] * 255);
+        this.applySprite(img, owner, s);
 
         // Flip đặt ở node ảnh để không lật luôn các node con gameplay của owner.
         if (s.flipX || s.flipY) img.setScale(s.flipX ? -1 : 1, s.flipY ? -1 : 1, 1);
@@ -531,6 +541,19 @@ export class SceneBuilder extends Component {
         if (s.bounds) this.boundsOf.set(owner, s.bounds);
         this.ownerOfImage.set(img, owner);
         this.entities.add(img);   // không bao giờ hoà tan / tách node ảnh
+    }
+
+    /** Gắn Sprite (frame + màu) lên `host`; `owner` chỉ dùng cho log. */
+    private applySprite(host: Node, owner: Node, s: SpriteJson): void {
+        const sprite = host.addComponent(Sprite);
+        sprite.sizeMode = Sprite.SizeMode.CUSTOM;
+        sprite.trim = false;
+
+        const sf = this.getFrame(s.key);
+        if (sf) sprite.spriteFrame = sf;
+        else if (this.verbose) console.warn(`[SceneBuilder] Thiếu SpriteFrame "${s.key}" cho ${owner.name}`);
+
+        sprite.color = new Color(s.color[0] * 255, s.color[1] * 255, s.color[2] * 255, s.color[3] * 255);
     }
 
     private setupSpine(node: Node, s: SpineJson): void {

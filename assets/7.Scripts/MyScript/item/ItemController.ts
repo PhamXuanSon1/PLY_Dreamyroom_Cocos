@@ -3,7 +3,7 @@
  * Sử dụng hệ thống âm thanh từ PLY_SoundManager (sm).
  */
 
-import { _decorator, BoxCollider2D, Collider2D, Component, Enum, EventTouch, Node, ParticleSystem2D, sp, UITransform, Vec2, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Collider2D, Component, Enum, EventTouch, Node, ParticleSystem2D, sp, Sprite, UITransform, Vec2, Vec3 } from 'cc';
 import { DreamyInputManager, InputPriority, IPointerHandler } from '../core/DreamyInputManager';
 import { ItemGraphic } from './ItemGraphic';
 import { ItemMovement } from './ItemMovement';
@@ -715,6 +715,11 @@ export class ItemController extends Component implements IPointerHandler {
         for (const sk of skeletons) sk.node.active = spineOn;
         const img = target.getChildByName('Image');
         if (img) img.active = !spineOn;
+        else {
+            // SceneBuilder.flattenImageNode: Sprite nằm ngay trên đích, không có node con Image
+            const sr = target.getComponent(Sprite);
+            if (sr) sr.enabled = !spineOn;
+        }
     }
 
     private materialTypeToFxType(materialType: MaterialType): FxType | null {
