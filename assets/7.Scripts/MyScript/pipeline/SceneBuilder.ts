@@ -729,9 +729,15 @@ export class SceneBuilder extends Component {
             const item = f.node;
             if (!t || !t.isValid || !t.getComponent(SceneBuilder.ITEM_COMPONENT)) continue;
             const oldParent = item.parent;
-            item.setParent(t, true);
-            // bóng (_sd) vẽ DƯỚI ảnh item -> đứng đầu; còn lại (_cut, _fx...) vẽ đè -> cuối
-            if (/_sd(\b|_)/i.test(item.name)) item.setSiblingIndex(0);
+            if (/(_sd(\b|_)|shadow)/i.test(item.name)) {
+                // bóng vẽ DƯỚI ảnh item -> đứng đầu; phải là con trực tiếp của item (ItemController.initDropShadows)
+                item.setParent(t, true);
+                item.setSiblingIndex(0);
+            } else {
+                // _cut, _fx... vẽ đè -> làm con node Image: ItemGraphic.fitToTarget / syncRoomZoomScale chỉ phóng
+                // node Image lúc item nằm Holder / đang kéo, để ngoài Image thì mảnh này lệch tỉ lệ so với item.
+                item.setParent(t.getChildByName('Image') ?? t, true);
+            }
             f.destroy();
             merged.push(`${item.name}  →  ${t.name}`);
             if (oldParent && oldParent.isValid && oldParent !== t

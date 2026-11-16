@@ -71,6 +71,9 @@ export class MistakeHintMode extends Component {
     @property({ group: { name: 'Đồ nhỏ tự hiện', id: 'reveal' }, tooltip: 'TRUE: mỗi đồ nhỏ phát 1 lần. FALSE: chỉ phát 1 lần lúc đồ nhỏ đầu tiên nảy ra.', visible(this: MistakeHintMode) { return this.revealSound; } })
     revealSoundEach = false;
 
+    @property({ group: { name: 'Đồ nhỏ tự hiện', id: 'reveal' }, tooltip: 'Âm lượng lúc đồ nhỏ nảy ra = volume của Reveal Fx trong Ply_SoundManager × hệ số này (1 = giữ nguyên, 0.5 = nhỏ một nửa). Chỉ áp dụng cho lúc nảy ra.', range: [0, 1, 0.05], slide: true, visible(this: MistakeHintMode) { return this.revealSound; } })
+    revealVolume = 0.4;
+
     private clickCount = 0;
     private hintItem: ItemController | null = null;
     private itemManager: ItemManager | null = null;
@@ -142,7 +145,7 @@ export class MistakeHintMode extends Component {
             smalls.forEach((c, i) => {
                 const scale = scales[i];
                 this.scheduleOnce(() => {
-                    if (this.revealSound && (i === 0 || this.revealSoundEach)) Ply_SoundManager.Ins?.playFx(this.revealFx);
+                    if (this.revealSound && (i === 0 || this.revealSoundEach)) Ply_SoundManager.Ins?.playFx(this.revealFx, this.revealVolume);
                     if (c.isValid) TweenUtil.scaleTo(c, scale, this.revealDuration, 'backOut', () => { if (c.isValid) c.setScale(scale); });
                 }, this.revealDelay + i * this.revealInterval);
             });

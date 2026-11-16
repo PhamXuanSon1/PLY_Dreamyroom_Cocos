@@ -244,7 +244,8 @@ export class Ply_SoundManager extends Ply_Singleton {
         return this.isMute;
     }
 
-    public playFx(fxType: FxType) {
+    /** volumeScale: nhân thêm vào volume của SoundData (vd 0.5 = nhỏ một nửa), không đổi cấu hình chung. */
+    public playFx(fxType: FxType, volumeScale = 1) {
         if (this.isMute) return;
 
         const data = this.getSoundData(fxType);
@@ -255,14 +256,15 @@ export class Ply_SoundManager extends Ply_Singleton {
             this.fxSources[index] = this.createAudioSource(`SoundFX_${FxType[fxType]}`);
         }
 
+        const volume = Math.max(0, Math.min(1, data.volume * volumeScale));
         const source = this.fxSources[index]!;
         source.clip = data.clip;
-        source.volume = data.volume;
+        source.volume = volume;
         source.play();
 
         // Phat lap de tang am luong (giong xu ly trong Unity)
         for (let i = 1; i < data.repeatCount; i++) {
-            source.playOneShot(data.clip, data.volume);
+            source.playOneShot(data.clip, volume);
         }
     }
 
@@ -288,6 +290,21 @@ export class Ply_SoundManager extends Ply_Singleton {
         };
         this.sequences.push(run);
         this.playNextFxInSequence(run);
+    }
+
+    /**
+     * Phat TAT CA FX cung luc (moi FX 1 AudioSource rieng, chong len nhau).
+     * onDone: gọi 1 lần khi FX dài nhất phát xong (tắt tiếng / không có clip -> gọi ngay).
+     */
+    public playFxTogether(fxTypes: readonly FxType[], onDone?: () => void): void {
+        const list = this.isMute ? [] : fxTypes.filter((fxType) => !!this.getSoundData(fxType)?.clip);
+        if (list.length === 0) {
+            onDone?.();
+            return;
+        }
+        let pending = list.length;
+        const one = () => { if (--pending === 0) onDone?.(); };
+        for (const fxType of list) this.playFxSequence([fxType], one);
     }
 
     private playNextFxInSequence(run: FxSequenceRun): void {

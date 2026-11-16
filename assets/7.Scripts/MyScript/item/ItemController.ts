@@ -111,9 +111,16 @@ export class ItemController extends Component implements IPointerHandler {
     @property({
         type: [Enum(MaterialType)],
         displayName: 'Sound Type',
-        tooltip: 'Danh sach FX phat lan luot khi ghep dung. Neu co gia tri o day, Sound Type se duoc bo qua.'
+        tooltip: 'Danh sach FX phat khi ghep dung (lan luot, hoac cung luc neu bat Play Together). Neu co gia tri o day, Material Type se duoc bo qua.'
     })
     soundTypes: MaterialType[] = [];
+
+    @property({
+        displayName: 'Play Together',
+        tooltip: 'Bật: mọi FX trong Sound Type phát CÙNG LÚC. Tắt: phát lần lượt, FX sau chờ FX trước xong.',
+        visible(this: ItemController) { return this.soundTypes.length > 1; },
+    })
+    playSoundsTogether = false;
 
     /** Đã ghép thành công vào đích hay chưa */
     isPlaced = false;
@@ -631,7 +638,9 @@ export class ItemController extends Component implements IPointerHandler {
             const sm = Ply_SoundManager.Ins;
             if (sm) {
                 this.landSoundPlaying = true;
-                sm.playFxSequence(fxTypes.length > 0 ? fxTypes : [FxType.HeavyWood], () => this.onLandSoundDone());
+                const list = fxTypes.length > 0 ? fxTypes : [FxType.HeavyWood];
+                if (this.playSoundsTogether) sm.playFxTogether(list, () => this.onLandSoundDone());
+                else sm.playFxSequence(list, () => this.onLandSoundDone());
             }
 
 
