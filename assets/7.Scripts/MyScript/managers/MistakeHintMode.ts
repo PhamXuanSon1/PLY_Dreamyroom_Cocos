@@ -125,11 +125,11 @@ export class MistakeHintMode extends Component {
 
     // ======================================================== đồ nhỏ tự hiện
     /**
-     * Đích con (…Place) của đích vừa ghép: vừa được bật cùng đích -> thu về 0 ngay,
-     * chờ âm thanh ghép của đồ đựng phát xong + revealDelay rồi nảy ra lần lượt.
+     * Đích con (…Place / Holder_…) của đích vừa ghép: vừa được bật cùng đích -> thu về 0 ngay,
+     * chờ âm thanh ghép của đồ đựng phát xong + revealDelay rồi nảy ra lần lượt (theo thứ tự Hierarchy).
      */
     private revealSmallItems(item: ItemController, target: Node): void {
-        const smalls = target.children.filter((c) => c.active && /Place$/.test(c.name));
+        const smalls = target.children.filter((c) => c.active && /(Place$|^Holder_)/.test(c.name));
         if (smalls.length === 0) return;
         const scales = smalls.map((c) => {
             const scale = c.scale.clone();
