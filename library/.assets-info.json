@@ -34,7 +34,7 @@
       "uuid": "cd5cb729-eb3d-4740-9984-ae0a52366814"
     },
     "3.Sprites\\Chung": {
-      "time": 1794977503634.9983,
+      "time": 1794984413210.9556,
       "uuid": "9def9b2b-946d-4e03-9044-3dfbbb6ec505"
     },
     "3.Sprites\\WinCard": {
@@ -876,7 +876,7 @@
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
-      "time": 1793093118697.1033,
+      "time": 1794977999592.9277,
       "uuid": "3821ba58-b5b6-40b4-8da3-e8c689fca25d"
     },
     "6.Scenes": {
@@ -884,7 +884,7 @@
       "uuid": "af8a22d7-c3ba-450f-a0e3-fa6e50ffd89d"
     },
     "7.Scripts": {
-      "time": 1791429887394.6355,
+      "time": 1794977999593.928,
       "uuid": "45b30301-342b-44bf-87d3-0965d3e28fda"
     },
     "8.Assets": {
@@ -1144,7 +1144,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1794977965954.6548,
+      "time": 1794984722070.7373,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "8.Assets\\127. Spooky Pizza": {
@@ -2028,7 +2028,7 @@
       "uuid": "2298bbf4-4fd5-49c3-9b76-62050b237245"
     },
     "8.Assets\\Textures": {
-      "time": 1793093118700.233,
+      "time": 1794977999599.9287,
       "uuid": "5f72fdcc-be93-4a20-aa35-02b6da7ff0bb"
     },
     "8.Assets\\Textures\\Map-1": {
@@ -3496,6 +3496,55 @@
     "3.Sprites\\Ply56\\sprites\\hộp_quà_1_shadow.png": {
       "time": 1788754655106.5552,
       "uuid": "a504ae2f-eecf-4f74-9561-dc741ff82b32"
+    },
+    "7.Scripts\\Ver56": {
+      "time": 1794977999595.9297,
+      "uuid": "50e95068-efbe-4818-a579-702683d8de60"
+    },
+    "8.Assets\\Textures\\Map-3": {
+      "time": 1794977999600.9287,
+      "uuid": "afdc0375-4e9e-4671-a29e-d046371b31ff"
+    },
+    "8.Assets\\Textures\\Map-3\\Background": {
+      "time": 1794977999602.9297,
+      "uuid": "79191cce-f354-4ab5-97cc-ad26ec7354b1"
+    },
+    "7.Scripts\\Ver56\\V56Snow.ts": {
+      "time": 1794977999594.9282,
+      "uuid": "54e9062b-845d-4c3b-b019-e9949e080edc"
+    },
+    "7.Scripts\\Ver56.meta": {
+      "time": 1794977999594.9282
+    },
+    "8.Assets\\Textures\\Map-3.meta": {
+      "time": 1794977999599.9287
+    },
+    "8.Assets\\Textures\\Map-3\\Background.meta": {
+      "time": 1794977999600.9287
+    },
+    "7.Scripts\\Ver56\\V56Snow.ts.meta": {
+      "time": 1794977999595.9297
+    },
+    "5.Prefabs\\V56_Snow.prefab": {
+      "time": 1794983823941.63,
+      "uuid": "bb22efed-c90f-4464-a6b0-2a853642e205"
+    },
+    "8.Assets\\Textures\\Map-3\\Background\\circle_blurred.png": {
+      "time": 1794977999602.9297,
+      "uuid": "b79e1f18-5763-48c4-9cab-cc63a037ebe6"
+    },
+    "5.Prefabs\\V56_Snow.prefab.meta": {
+      "time": 1794977999592.9277
+    },
+    "8.Assets\\Textures\\Map-3\\Background\\circle_blurred.png.meta": {
+      "time": 1794977999602.9297
+    },
+    "3.Sprites\\Chung\\SnowmanIcon.png.meta": {
+      "time": 1794984510756.1897
+    },
+    "3.Sprites\\Chung\\SnowmanIcon.png": {
+      "time": 1794984510096.1523,
+      "uuid": "56372e47-4272-4317-957f-c6e4880d5f30"
     }
   },
   "missing": {}

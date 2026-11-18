@@ -1175,6 +1175,7 @@
         "089a1f34-0792-44c3-954a-8ab671aefec5@f9941",
         "43451b8a-77f6-47cc-8b77-4338c5656fd2",
         "ac9175b9-91cc-46e2-a155-9115434bc1da@f9941",
+        "56372e47-4272-4317-957f-c6e4880d5f30@f9941",
         "71c86fe2-bde9-434f-ac65-a05233ba9f36@f9941",
         "49cad4b1-07c6-4ef9-bfae-d7f5db99a410@f9941",
         "cbcfe9d6-0aee-4ea3-9fd9-e7af30be7c56@f9941",
@@ -1281,9 +1282,6 @@
         "fd048608-a4b2-43cf-81a7-e58763e31bb9@f9941",
         "47fa301a-00b3-4f45-ada6-4bcb903c2802@f9941",
         "e98fbda0-019e-4bda-9c45-63c8b11dc58b@f9941",
-        "d8bcab15-7637-4e5b-bb1f-f83c48e09523@f9941",
-        "cd2aa79d-229b-4689-a0dc-3da9aaa9457f@f9941",
-        "5c6560bf-ff6a-4ea9-aca0-04a4f74d2a2e@f9941",
         "43e20327-01f8-4ff0-85dd-c78dd162c744@f9941",
         "a8179440-af41-4bfa-934f-e9af4faea4a9@f9941",
         "f4e10200-5481-4f30-bac2-f6b89a243520@f9941",
@@ -1305,6 +1303,9 @@
         "c6a1e84f-3137-4fb0-a707-f2b2906cf06d@f9941",
         "1582841a-f429-4534-955a-791fb6a603c7@f9941",
         "709fa8a6-349a-4052-b5bb-2a0bda3d3831@f9941",
+        "d8bcab15-7637-4e5b-bb1f-f83c48e09523@f9941",
+        "cd2aa79d-229b-4689-a0dc-3da9aaa9457f@f9941",
+        "5c6560bf-ff6a-4ea9-aca0-04a4f74d2a2e@f9941",
         "3509b771-a624-4eba-a309-d7e5594c5d9b@f9941",
         "61c2d67a-87bc-49f3-8fa7-8f28b57a9ff0@f9941",
         "6acd700e-7e0c-4e70-ac95-6c741431f2db@f9941",
@@ -1363,7 +1364,7 @@
         "af84c47e-a79a-4ce7-8f5c-692ce3df2a6b@f9941",
         "95796b53-7eea-4c14-a106-7d941f67da0e@f9941",
         "a51fc4ae-2e0a-4aa3-9f71-5c1dcbe16da4@f9941",
-        "409dcce8-cad5-47f4-8ccf-b4cbfe600822",
+        "bb22efed-c90f-4464-a6b0-2a853642e205",
         "a88d3345-f98a-41cf-9490-e39152ccb566",
         "6f3ccacc-901d-4e21-bbd2-55d4524b15cc",
         "ee247a59-6f6a-4b1f-a0d4-938507f99290@f9941",
@@ -1411,6 +1412,7 @@
         "74320d90-14e8-4824-bbef-19d9fc3367d1",
         "9823c617-75c7-4125-915f-7b7e2e3428d4",
         "ed11c822-bfde-4941-92f4-36f47be1994f",
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8",
         "8a38c844-8233-4ba7-95a7-565bb74d651f",
         "7ced8a7d-fd09-44e8-b1af-b41522ee13b2",
         "5ca735d3-50fd-42d6-bd8c-3d6078b30e83",
@@ -88700,6 +88702,88 @@
   "5555d34b-a413-4bce-b8e6-f3d7a686a823": {
     "url": "db://assets/7.Scripts/MyScript/item/RevealOnPlaced.ts",
     "value": {},
+    "versionCode": 1
+  },
+  "50e95068-efbe-4818-a579-702683d8de60": {
+    "url": "db://assets/7.Scripts/Ver56",
+    "value": {},
+    "versionCode": 1
+  },
+  "afdc0375-4e9e-4671-a29e-d046371b31ff": {
+    "url": "db://assets/8.Assets/Textures/Map-3",
+    "value": {},
+    "versionCode": 1
+  },
+  "79191cce-f354-4ab5-97cc-ad26ec7354b1": {
+    "url": "db://assets/8.Assets/Textures/Map-3/Background",
+    "value": {},
+    "versionCode": 1
+  },
+  "54e9062b-845d-4c3b-b019-e9949e080edc": {
+    "url": "db://assets/7.Scripts/Ver56/V56Snow.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "bb22efed-c90f-4464-a6b0-2a853642e205": {
+    "url": "db://assets/5.Prefabs/V56_Snow.prefab",
+    "value": {
+      "depends": [
+        "b79e1f18-5763-48c4-9cab-cc63a037ebe6@f9941"
+      ],
+      "dependScripts": [
+        "54e9062b-845d-4c3b-b019-e9949e080edc"
+      ]
+    },
+    "versionCode": 2
+  },
+  "b79e1f18-5763-48c4-9cab-cc63a037ebe6": {
+    "url": "db://assets/8.Assets/Textures/Map-3/Background/circle_blurred.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "b79e1f18-5763-48c4-9cab-cc63a037ebe6@6c48a": {
+    "url": "db://assets/8.Assets/Textures/Map-3/Background/circle_blurred.png@6c48a",
+    "value": {
+      "depends": [
+        "b79e1f18-5763-48c4-9cab-cc63a037ebe6"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b79e1f18-5763-48c4-9cab-cc63a037ebe6@f9941": {
+    "url": "db://assets/8.Assets/Textures/Map-3/Background/circle_blurred.png@f9941",
+    "value": {
+      "depends": [
+        "b79e1f18-5763-48c4-9cab-cc63a037ebe6@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "56372e47-4272-4317-957f-c6e4880d5f30": {
+    "url": "db://assets/3.Sprites/Chung/SnowmanIcon.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "56372e47-4272-4317-957f-c6e4880d5f30@6c48a": {
+    "url": "db://assets/3.Sprites/Chung/SnowmanIcon.png@6c48a",
+    "value": {
+      "depends": [
+        "56372e47-4272-4317-957f-c6e4880d5f30"
+      ]
+    },
+    "versionCode": 1
+  },
+  "56372e47-4272-4317-957f-c6e4880d5f30@f9941": {
+    "url": "db://assets/3.Sprites/Chung/SnowmanIcon.png@f9941",
+    "value": {
+      "depends": [
+        "56372e47-4272-4317-957f-c6e4880d5f30@6c48a"
+      ]
+    },
     "versionCode": 1
   }
 }
