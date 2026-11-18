@@ -48,7 +48,7 @@ export class MapPhase {
     // ---- khung nhìn phòng của lượt này (lượt 1 = chỗ intro dừng lại) ----
     @property({
         displayName: 'Room View',
-        tooltip: 'Lượt này có khung nhìn phòng riêng. Lượt 1: intro phóng phòng tới khung này (thay cho Base Room EndPos + 4 Limit của BaseRoom). '
+        tooltip: 'Lượt này có khung nhìn phòng riêng. Lượt 1: intro phóng phòng tới khung này (thay cho Base Room EndPos + Pan Left/Right/Up/Down của BaseRoom). '
             + 'Lượt sau: chuyển lượt thì phòng bay tới khung này. Tắt = giữ khung của lượt trước.',
     })
     moveRoom = false;
@@ -203,7 +203,7 @@ export class MapPhaseManager extends Component {
         this.phaseItems = this.phases.map((p) => MapPhaseManager.validItems(p.itemList));
         this.afterEntries = this.phases.map((p) => MapPhaseManager.afterEntriesOf(p.afterComplete));
 
-        // Lượt 1 có Room View -> intro dừng ở khung này (thay cho Base Room EndPos + Limit của BaseRoom)
+        // Lượt 1 có Room View -> intro dừng ở khung này (thay cho Base Room EndPos + Pan Left/Right/Up/Down của BaseRoom)
         BaseRoomManager.introViewProvider = () => this.viewOf(0);
 
         if (!im) return;

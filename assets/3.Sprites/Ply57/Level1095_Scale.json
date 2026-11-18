@@ -1,0 +1,3909 @@
+{
+  "meta": { "K": 100, "scene": "Level1095", "exportRoot": "Scale", "distancesInPx": true, "onlyNodeLinks": true, "zeroZ": true, "exportInactive": true, "ignoreInactiveInConflicts": true, "exportedAt": "2026-11-18T15:54:58" },
+  "assetMap": {
+    "7f0e12ad5a1f68e40b27f949e28c9bc5": "sprites/base_o_tren_2",
+    "0df3ff4d5b0091c4db18a40fa3ed67c7": "sprites/base_1",
+    "2490b58960fd4dd44b0b5751cb65b0ce": "sprites/base_o_tren_1",
+    "b194202d0386a1047a1bdc3fae47e924": "sprites/tuong",
+    "ef5e05d17e2c24a43a2f030a75a518bb": "sprites/san",
+    "3db0e96ac86fda84b9b275cf078df8c5": "sprites/cua",
+    "dc2243fc55344d04789792434ce75537": "sprites/tham_tang_1",
+    "6ec7bfd8bea1c4d4e98177479aca0ac8": "sprites/cua_so_bep",
+    "fb89c38d7e58e8140917f2c1c0091529": "sprites/cua_so_lon",
+    "e0145538865190d44987db56cbd8dc11": "sprites/cay_trang_tri",
+    "26808c18cb2fc654eb05164e5f657415": "sprites/qua_cau_trang_tri_2",
+    "e625385879e52684f91805d772e66c10": "sprites/bep",
+    "62a07e021671d4142a2b96805a087737": "sprites/tranh_3",
+    "ad4d126e2621a9a459dfd2368b4e643a": "sprites/cay_thong_trong_nha",
+    "38a55c164fb9bc949a657b7c0a5853e9": "sprites/trang_tri_cay_thong",
+    "e4b7f35ca5a55fd4190d91fe920b285c": "sprites/ngoi_sao",
+    "c4b096bc81ad0e7438f4c5e35e8f2c83": "sprites/bep_nuonfg",
+    "b6593f396f9fb0c4b917a06ac7b7fb51": "sprites/bon_rua_chen",
+    "1334217e54976cb4f93b2f5f4b747cbb": "sprites/voi_nuoc",
+    "6d620254cc972764f8c0646c0f6b5209": "sprites/may_làm_banh_mi",
+    "f47c6c9479f94f344a421cccd12369f8": "sprites/cam_dao",
+    "f578bc8224fdcf94680c7e3c15a48e62": "sprites/lo_gia_vi_3",
+    "5d13d26d45742be4a8c0db3d4de91f51": "sprites/lo_gia_vi_2",
+    "822e15a6438ccef4791f607b6467fd3d": "sprites/lo_gia_vi_1",
+    "a03f50e1bb2bac148b05b04591d4ecdb": "sprites/tu_lanh",
+    "50c1ed9edc442d44cb4c6e15dd29e355": "sprites/tat",
+    "b5867c5b64bbbad48b3a755c364eff47": "sprites/keo",
+    "b418e659f7d63534fbaecf8a0ea63ef9": "sprites/danh_tu_lanh_2",
+    "7ba06ffab79fafc4a8db910750c69c38": "sprites/dan_tu_lanh_1",
+    "45aae5cf5ff246647905ea76f270db6a": "sprites/thot",
+    "535c0a276ae7d364087a8d669158d8f2": "sprites/noi_soup",
+    "167ae844eab917642a41eaa61f40d26a": "sprites/ke_gap",
+    "4d9f01c83f21bec44ac3cb8335874732": "sprites/hu_2",
+    "4de2870de562ab64ca383a8547722d38": "sprites/hu_1",
+    "0594226d9f0829d42b134b8ba3cf0803": "sprites/lo_2",
+    "0fdddcb56f2612049bf40f248d143206": "sprites/lo_1",
+    "b0fdb24db854ac34dbd8425325dc1633": "sprites/ke_nho",
+    "f498945f61aab9b4884e7188f67fd887": "sprites/ly_uong_ruou_3",
+    "3b8da11de4169174f97713321498d9b2": "sprites/ly_uong_ruou_2",
+    "2cf7930694b34fc46a8ec8383809d2f1": "sprites/ly_uong_ruou_1",
+    "d714e0567884c2041945725eb3cf6f6a": "sprites/ke_lon",
+    "4d9b74a90dbddd14bb9cd9d2898ff560": "sprites/chai_ruou",
+    "01e56a20b67370f41af6024bec6f5b98": "sprites/lo_banh_quy",
+    "edabf0df49b965e4d9b8b080c80a1e7f": "sprites/cay_trang_tri_2",
+    "98157c4430c6d0449ade0ac19ad17af4": "sprites/qua_cau_trang_tri",
+    "6f9434d74bd3e7c45879ce33ce06ba1b": "sprites/tranh_2",
+    "9abd13339c3d4f149ba6d4c6092ddf27": "sprites/lo_suoi",
+    "249ee3f0dfb2e7049b5b686ed3c7d670": "sprites/khung_chan_ong_khoi",
+    "29db182885b02a84485aa09091407bcf": "sprites/cau_tuyet",
+    "8b5d96c58672eca4e99df7e7b1352a6e": "sprites/nen",
+    "f48fa81aa7ea1d24ca1793c171798092": "sprites/decor",
+    "1d54eb4bbcb4b2e4e8b049ca86791b2b": "sprites/vong_decor_2",
+    "2181faa79a56ffe46b44216991286a3b": "sprites/chau_hoa",
+    "6e5eb81d1603a9e40b4869a589fd8665": "sprites/den_tang_1",
+    "e9de6bce10d812a4ba781f4a59eec935": "sprites/ghe_tang_1",
+    "45cd725835d647643818200e216eac35": "sprites/khan_trai",
+    "ecb5ae432c4e0df438ba3f7368f33bc4": "sprites/goi_2",
+    "9dfe59536aab0ab40b9eee8c473c026d": "sprites/goi",
+    "bf0b93c44daef2f4593ba0a2deb7448d": "sprites/ban_tra_2",
+    "c7b680362f16843478d0795b75971a6f": "sprites/bo_am_tra",
+    "1793334c1f39dca4d826e59fbec934a6": "sprites/gio_len",
+    "f1845a2cd0c6dfa4e91466ba40c452a3": "sprites/nhan_vat",
+    "66dc51b1e981bc246918613a50a47a2f": "sprites/xe_day",
+    "3079e57e310a4dd44ac480aec1bf0a6f": "sprites/pizza",
+    "a3ed3f6a2def84042a9884a2de0c7403": "sprites/ghe_an_phai",
+    "c0c638fb90dda5643b435e258be7049f": "sprites/ban_an",
+    "5e2231443c6f03d40b6d21fdb083d3dc": "sprites/trai_ban_an",
+    "3456b0561c8a9cd4f990acdfa710e1a6": "sprites/ly_socola",
+    "e89b568eed3b3964e8baaf3abeb174ad": "sprites/ly_cf_2",
+    "b36b45158b9fb474392d05aad7cd8a29": "sprites/banh_mi",
+    "aa39b3c712beb044f8c6fc4662dea413": "sprites/banh_tao",
+    "41019ac23dc58ce4db0d0a0705a0f160": "sprites/ly_cf_3",
+    "7f6972ff4201e9746bd1b47b4203bf5f": "sprites/ga",
+    "636bf86c20a2f3c4eac213b60a35d138": "sprites/binh_hoa_ban_an",
+    "872adf0c39a80234d9d3e8a0438cdeb1": "sprites/ghe_an_trai",
+    "066b4e7ecbc47e74384a098d84f407da": "sprites/noi",
+    "d59f98754caaf0045868ac8f244ea0dd": "sprites/chuong",
+    "39fcce7796e189343b37df9c1c3e5ed8": "sprites/no",
+    "abdff012395cdb04b8742bb295e804b6": "sprites/vong_decor",
+    "61621fe8f9b1b8444b7fb94a8eb2a0d7": "sprites/tranh_4",
+    "fc5730f76a7d2dd40bc212f6d551bc48": "sprites/dong_ho_to",
+    "7f96f3f34037d8842af44cc9e2af451d": "sprites/cay_lon_o_ngoai",
+    "45d911eedf9cc5e4abdbabc6746081a2": "sprites/cay_lon_o_ngoai_shadow",
+    "132daf9cfa30a9c40b20d17c94452ee7": "sprites/cay_thong_ngoai_troi_6",
+    "aaa75c6f336a447449e9ec6aa2692616": "sprites/cay_thong_ngoai_troi_6_shadow",
+    "fb70627c3834acc4687b102983cf8c57": "sprites/cay_thong_ngoai_troi_5",
+    "297f34ce6b963054ab6d7af88cf02b7e": "sprites/cay_thong_ngoai_troi_5_shadow",
+    "c8949ff2b9fbf994ab43f26a77f0714e": "sprites/tham_tang_1_shadow",
+    "1e8a6fa0f47bb884283d7417750373aa": "sprites/qua_cau_trang_tri_2_shadow",
+    "46cf1308b4180954284a4ab6fc7e9601": "sprites/bep_shadow",
+    "c00bbdd4830d8074eb328f07e2a07822": "sprites/tranh_3_shadow",
+    "79b1c408ed2342f43bf624f2317f483b": "sprites/cay_thong_trong_nha_shadow",
+    "cd1cf9a28693aec4da92f4ce9bf200eb": "sprites/ngoi_sao_fx",
+    "0d0f591075bf0764caaf75ba0e4a16d8": "sprites/bep_nuonfg_shadow",
+    "a3a67b9fa44e8ae4dbc83246f5afbc66": "sprites/bon_rua_chen_shadow",
+    "a06c155e4af85d4439b3ca400fb68831": "sprites/may_làm_banh_mi_shadow",
+    "91a8d759dceee1243b23db24d5b798c1": "sprites/cam_dao_shadow",
+    "6dd697578844b384e840d74ecd1cff8f": "sprites/lo_gia_vi_3_shadow",
+    "e6c762030660e974a9ff09d1369c949f": "sprites/lo_gia_vi_2_shadow",
+    "7af82783b24a5994c9f92aefd3d3ee7a": "sprites/lo_gia_vi_1_shadow",
+    "09e2685eb43465b4c8b7cf9016134fda": "sprites/tu_lanh_shadow",
+    "d059694c1d4e3404180d98b6d7b68fd2": "sprites/tat_shadow",
+    "1608c6e1ef083d542810a091db0d0113": "sprites/keo_shadow",
+    "d009abb70aee32d49a358f507dd45cbf": "sprites/danh_tu_lanh_2_shadow",
+    "5ff253fc85999fc4f90dfbd9d83a603c": "sprites/dan_tu_lanh_1_shadow",
+    "d20ccd4bbb95c3b4da2a4a003a59056a": "sprites/thot_shadow",
+    "35d35b94e8ff26c41884bedd80bcd934": "sprites/ke_gap_cut",
+    "9955277d081f5e4488443035b1245b15": "sprites/hu_2_shadow",
+    "16baa4232aea3fb449ef1b53f47d395d": "sprites/hu_1_shadow",
+    "f816dbe14bfcb3b46a6045d80e9f24bc": "sprites/lo_2_shadow",
+    "39594c28fdc953149983a8e0944c687a": "sprites/lo_1_shadow",
+    "482ff0e7803bf9b4989a67e3ac090853": "sprites/ly_uong_ruou_3_shadow",
+    "92e941d7b05d8f94b863d52ed49c8afb": "sprites/ly_uong_ruou_2_shadow",
+    "266e5c873ca710f4aaf8db38d24f5069": "sprites/ly_uong_ruou_1_shadow",
+    "947ad0af4b4595346af2dac2ef9383c2": "sprites/chai_ruou_shadow",
+    "486709b5020443d4ea2373c95346553e": "sprites/lo_banh_quy_shadow",
+    "509189143c0b7214f995cb2e2778c706": "sprites/qua_cau_trang_tri_shadow",
+    "3f88c7da785600641a6a246361e4b5d3": "sprites/tranh_2_shadow",
+    "98ca8eec2fc36554fa87e1fb4f24b19a": "sprites/lo_suoi_cut",
+    "0e2a8e333576eb947a57afe768a28254": "sprites/lua",
+    "c83d797b370fc3348afb9f2f313c4eff": "sprites/lua_fx",
+    "7e8d33ada14791541bfb899a0a4b8380": "sprites/lo_suoi_shadow",
+    "07c3c7271faa92648952a54257469bfb": "sprites/cau_tuyet_shadow",
+    "8b809f1978c0165428a5b6cc934c68ba": "sprites/nen_fx",
+    "5cc280b4f86f91844aaa4716a2ab65c2": "sprites/nen_shadow",
+    "6ecf58cc20002bc4ab00297fdaeb63b5": "sprites/chau_hoa_shadow",
+    "f2a15d6ec1923a642ba81a868519fb06": "sprites/den_tang_1_fx",
+    "89e6adab851a60e45bac9d0ece5ff49d": "sprites/den_tang_1_shadow",
+    "bf17185c15e52f84c9c04e5193321d92": "sprites/ghe_tang_1_cut",
+    "fd6cc0e03430589418436c0f6af20afb": "sprites/ghe_tang_1_shadow",
+    "52a62753c9d81164d80b1e8f0e605a5d": "sprites/khan_trai_shadow",
+    "e0e919bd184d5b44a910fdc691151178": "sprites/goi_2_shadow",
+    "2d98b1243b96b1047b15da56e1f156e8": "sprites/goi_shadow",
+    "5b6f6efd725444049942ce9ee64a596f": "sprites/ban_tra_2_shadow",
+    "89544fe018393d943a4d80a8b394e502": "sprites/bo_am_tra_shadow",
+    "934fead4a0cd25541b18fd61c66d4b41": "sprites/gio_len_shadow",
+    "94b6187c460a76049acbc14d50b1d942": "sprites/nhan_vat_shadow",
+    "efd67cb65087c98439d0eb318180e13f": "sprites/xe_day_shadow",
+    "afe6c60c2cd704e4a8dd3ac61597490e": "sprites/pizza_shadow",
+    "f4e48f9ba09fd5d43be5d7adb35e9544": "sprites/ghe_an_phai_shadow",
+    "1e167ecb5e6964d48b37736853476358": "sprites/ban_an_shadow",
+    "e10f703b6947ed34e9c1fbfdda1ce51c": "sprites/ly_socola_shadow",
+    "dd50cf47475a7124f89260f52c25335b": "sprites/ly_cf_2_shadow",
+    "acb4cfcb2e7b8cd49bbc65747db7c8e3": "sprites/banh_mi_shadow",
+    "057b4dc63af5fe84fb885cbb29dcf64a": "sprites/banh_tao_shadow",
+    "ee9bbb1bb1506d04393d1678c777452e": "sprites/ly_cf_3_shadow",
+    "78018adbb5fa3ed4293930003233275b": "sprites/ga_shadow",
+    "a48883a8cc515a6468ebf723b45a867d": "sprites/ghe_an_trai_shadow",
+    "7fda4415035584346b63497e65592ee8": "sprites/noi_shadow",
+    "64bf6edd260485d4396d9d08246d08fa": "sprites/tranh_4_shadow",
+    "a2e8586dd01cef94e91f16c1394d3c3a": "sprites/dong_ho_to_shadow",
+    "6af4beaed074a9040b0132858c3b5f8a": "sprites/cay_thong_ngoai_troi_4",
+    "e6511bab31c8c05498c8177a38f8d152": "sprites/cay_thong_ngoai_troi_4_shadow",
+    "09f8646cfb8aa014480e315dd6f1f2e4": "sprites/cay_thong_ngoai_troi_3",
+    "7cfd90e6cfc8e8846aede8ec3a352a2f": "sprites/cay_thong_ngoai_troi_3_shadow",
+    "1848bfa181207fd49a34c51f657b00fc": "sprites/cay_thong_ngoai_troi_1",
+    "09b61837be5248b41b42587f850b461f": "sprites/cay_thong_ngoai_troi_1_shadow",
+    "a70da5bd147131f4cb407a1208c0cb79": "sprites/tuyet_ngoai_troi_1",
+    "8ae63deed5489f346857fdab6a5b1d9f": "sprites/tuyet_ngoai_troi_1_shadow",
+    "8a0dca3ee654cf4408a3c85bc3b262e4": "sprites/tuyet_ngoai_troi_2",
+    "874df24422e8b8e43857c8ae637baef5": "sprites/tuyet_ngoai_troi_2_shadow",
+    "eb75fb438a567ec46a011deed459f40d": "sprites/cay_thong_ngoai_troi_2",
+    "336e7dd5f99a6d441867d47491e97070": "sprites/cay_thong_ngoai_troi_2_shadow",
+    "8bb96f6b1e3c2c94cbfe816691b9166e": "sprites/bac_thang",
+    "e2950b407f3eed340b4d4392ce37501e": "sprites/bac_thang_shadow",
+    "1f6cd3a3954f5f74a9cd2fb9ba249b21": "sprites/hang_rao",
+    "e32570e5433ec4c42bdaea64f1c6f10c": "sprites/hang_rao_shadow",
+    "4d9762c4163ac454cb8e45fdae25d772": "sprites/den_hang_rao",
+    "4bfddf39c9e6a6c44aa3c86a00fa7f6e": "sprites/den_hang_rao_fx",
+    "b4816bb1554589c44ab653b81f101176": "sprites/soi",
+    "6f8fb3ec734aa4547b8b9f47e4ecd9df": "sprites/soi_shadow",
+    "a26ca59b47ed1ac4cb62444e26607c9e": "sprites/nguoi_tuyet",
+    "93f8ad94e60d1124fa796a5f8d6bd838": "sprites/nguoi_tuyet_shadow",
+    "f646e8d524ddbb447ae2a59442285832": "sprites/cuc_tuyet",
+    "3578bc982b93cfa46aacb4144d8c3a07": "sprites/cuc_tuyet_shadow"
+  },
+  "nodes": [
+    {
+      "siblingIndex": 1,
+      "path": "Scale",
+      "parentPath": null,
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [0.42,0.42,0.42]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController/Decor",
+      "parentPath": "Scale/LevelController",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController/Decor/base o tren 2",
+      "parentPath": "Scale/LevelController/Decor",
+      "active": true,
+      "pos": [-552.0001,-136.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "base_o_tren_2", "guid": "7f0e12ad5a1f68e40b27f949e28c9bc5", "ppu": 100, "nativeSize": [1101,656], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4970, "layerValue": 0, "bounds": [-463.05,-194.88,-0.63002,80.63997], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/LevelController/Decor/base 1",
+      "parentPath": "Scale/LevelController/Decor",
+      "active": true,
+      "pos": [12.4999,-831.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "base_1", "guid": "0df3ff4d5b0091c4db18a40fa3ed67c7", "ppu": 72.25761, "nativeSize": [2048,1021], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4940, "layerValue": 0, "bounds": [-589.9537,-645.96,600.4537,-52.49998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/LevelController/Decor/base o tren 1",
+      "parentPath": "Scale/LevelController/Decor",
+      "active": true,
+      "pos": [876.9999,-40.50007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "base_o_tren_1", "guid": "2490b58960fd4dd44b0b5751cb65b0ce", "ppu": 100, "nativeSize": [1111,637], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4930, "layerValue": 0, "bounds": [135.03,-150.78,601.65,116.76], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/LevelController/Decor/tuong",
+      "parentPath": "Scale/LevelController/Decor",
+      "active": true,
+      "pos": [72.99995,2.49996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tuong", "guid": "b194202d0386a1047a1bdc3fae47e924", "ppu": 90.72012, "nativeSize": [2048,1222], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4880, "layerValue": 0, "bounds": [-443.4135,-281.82,504.7334,283.92], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/LevelController/Decor/san",
+      "parentPath": "Scale/LevelController/Decor",
+      "active": true,
+      "pos": [73.99998,-576,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "san", "guid": "ef5e05d17e2c24a43a2f030a75a518bb", "ppu": 90.90102, "nativeSize": [2048,862], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4870, "layerValue": 0, "bounds": [-442.0499,-441.0597,504.21,-42.78033], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/ITEMS",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [6120,19,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/ITEMS/cua",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3566,-208.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cua", "guid": "3db0e96ac86fda84b9b275cf078df8c5", "ppu": 100, "nativeSize": [253,581], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 53, "layerValue": 0, "bounds": [1019.55,-201.6,1125.81,42.42002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cua",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/ITEMS/tham tang 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3042.5,-436.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tham_tang_1", "guid": "dc2243fc55344d04789792434ce75537", "ppu": 100, "nativeSize": [668,329], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 54, "layerValue": 0, "bounds": [1152.27,-244.44,1432.83,-106.26], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tham tang 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/ITEMS/cua so bep",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1914.5,128.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cua_so_bep", "guid": "6ec7bfd8bea1c4d4e98177479aca0ac8", "ppu": 100, "nativeSize": [222,349], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 55, "layerValue": 0, "bounds": [1719.69,-11.33998,1812.93,135.24], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cua so bep",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/ITEMS/cua so lon",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3232,118.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cua_so_lon", "guid": "fb89c38d7e58e8140917f2c1c0091529", "ppu": 100, "nativeSize": [415,614], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 56, "layerValue": 0, "bounds": [1125.81,-71.39996,1300.11,186.48], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cua so lon",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/ITEMS/cay trang tri",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2078.5,365,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_trang_tri", "guid": "e0145538865190d44987db56cbd8dc11", "ppu": 100, "nativeSize": [1094,334], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 57, "layerValue": 0, "bounds": [1467.69,91.13999,1927.17,231.42], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cay trang tri",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Scale/ITEMS/qua cau trang tri 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2065.5,347,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "qua_cau_trang_tri_2", "guid": "26808c18cb2fc654eb05164e5f657415", "ppu": 100, "nativeSize": [1040,330], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 58, "layerValue": 0, "bounds": [1484.49,84.41998,1921.29,223.02], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/qua cau trang tri 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Scale/ITEMS/bep",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2001,-238,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bep", "guid": "e625385879e52684f91805d772e66c10", "ppu": 100, "nativeSize": [559,448], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 59, "layerValue": 0, "bounds": [1612.59,-186.06,1847.37,2.10002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/bep",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Scale/ITEMS/tranh 3",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2883.5,177.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tranh_3", "guid": "62a07e021671d4142a2b96805a087737", "ppu": 100, "nativeSize": [106,140], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 60, "layerValue": 0, "bounds": [1337.07,53.33997,1381.59,112.14], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tranh 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Scale/ITEMS/cay thong trong nha",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3014,17.00006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_trong_nha", "guid": "ad4d126e2621a9a459dfd2368b4e643a", "ppu": 100, "nativeSize": [415,634], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 61, "layerValue": 0, "bounds": [1217.37,-118.02,1391.67,148.26], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cay thong trong nha",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Scale/ITEMS/trang tri cay thong",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3013.5,54.50005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "trang_tri_cay_thong", "guid": "38a55c164fb9bc949a657b7c0a5853e9", "ppu": 100, "nativeSize": [286,425], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 62, "layerValue": 0, "bounds": [1244.67,-58.37997,1364.79,120.12], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/trang tri cay thong",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Scale/ITEMS/ngoi sao",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3038,318.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ngoi_sao", "guid": "e4b7f35ca5a55fd4190d91fe920b285c", "ppu": 100, "nativeSize": [107,100], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 63, "layerValue": 0, "bounds": [1271.97,120.96,1316.91,162.96], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ngoi sao",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Scale/ITEMS/bep nuonfg",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2279,-256.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bep_nuonfg", "guid": "c4b096bc81ad0e7438f4c5e35e8f2c83", "ppu": 100, "nativeSize": [319,321], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 64, "layerValue": 0, "bounds": [1546.23,-167.16,1680.21,-32.33999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/bep nuonfg",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Scale/ITEMS/bon rua chen",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1922.5,-182.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bon_rua_chen", "guid": "b6593f396f9fb0c4b917a06ac7b7fb51", "ppu": 100, "nativeSize": [294,152], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 65, "layerValue": 0, "bounds": [1701.21,-100.8,1824.69,-36.95998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/bon rua chen",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Scale/ITEMS/voi nuoc",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1887.5,-98.50001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "voi_nuoc", "guid": "1334217e54976cb4f93b2f5f4b747cbb", "ppu": 100, "nativeSize": [110,117], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 66, "layerValue": 0, "bounds": [1754.55,-57.96,1800.75,-8.82], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/voi nuoc",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Scale/ITEMS/may làm banh mi",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2099,4.99998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "may_làm_banh_mi", "guid": "6d620254cc972764f8c0646c0f6b5209", "ppu": 100, "nativeSize": [157,194], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 67, "layerValue": 0, "bounds": [1655.85,-30.66001,1721.79,50.81999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/may làm banh mi",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Scale/ITEMS/cam dao",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2000,-21.49996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cam_dao", "guid": "f47c6c9479f94f344a421cccd12369f8", "ppu": 100, "nativeSize": [119,211], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 68, "layerValue": 0, "bounds": [1705.41,-45.35998,1755.39,43.26001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cam dao",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Scale/ITEMS/lo gia vi 3",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2208.5,-58.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_gia_vi_3", "guid": "f578bc8224fdcf94680c7e3c15a48e62", "ppu": 100, "nativeSize": [78,102], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 69, "layerValue": 0, "bounds": [1626.45,-38.21998,1659.21,4.62002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/lo gia vi 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Scale/ITEMS/lo gia vi 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2156.5,-81.00008,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_gia_vi_2", "guid": "5d13d26d45742be4a8c0db3d4de91f51", "ppu": 100, "nativeSize": [78,102], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 70, "layerValue": 0, "bounds": [1648.29,-47.46003,1681.05,-4.62004], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/lo gia vi 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Scale/ITEMS/lo gia vi 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2105.5,-105.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_gia_vi_1", "guid": "822e15a6438ccef4791f607b6467fd3d", "ppu": 100, "nativeSize": [78,102], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 71, "layerValue": 0, "bounds": [1669.71,-57.54002,1702.47,-14.70002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/lo gia vi 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Scale/ITEMS/tu lanh",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1709,-255,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tu_lanh", "guid": "a03f50e1bb2bac148b05b04591d4ecdb", "ppu": 100, "nativeSize": [303,574], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 72, "layerValue": 0, "bounds": [1788.99,-219.66,1916.25,21.42], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tu lanh",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Scale/ITEMS/tat",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1724.5,-175.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tat", "guid": "50c1ed9edc442d44cb4c6e15dd29e355", "ppu": 100, "nativeSize": [86,107], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 73, "layerValue": 0, "bounds": [1828.05,-88.20001,1864.17,-43.26001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tat",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Scale/ITEMS/keo",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1796,-88.49996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "keo", "guid": "b5867c5b64bbbad48b3a755c364eff47", "ppu": 100, "nativeSize": [55,99], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 74, "layerValue": 0, "bounds": [1804.53,-49.97998,1827.63,-8.39998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/keo",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Scale/ITEMS/danh tu lanh 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1747,-408.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "danh_tu_lanh_2", "guid": "b418e659f7d63534fbaecf8a0ea63ef9", "ppu": 100, "nativeSize": [67,77], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 75, "layerValue": 0, "bounds": [1822.59,-179.76,1850.73,-147.42], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/danh tu lanh 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Scale/ITEMS/dan tu lanh 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1796.5,-310,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "dan_tu_lanh_1", "guid": "7ba06ffab79fafc4a8db910750c69c38", "ppu": 100, "nativeSize": [62,76], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 76, "layerValue": 0, "bounds": [1802.85,-138.18,1828.89,-106.26], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/dan tu lanh 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Scale/ITEMS/thot",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2337.5,-8.99996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "thot", "guid": "45aae5cf5ff246647905ea76f270db6a", "ppu": 100, "nativeSize": [104,194], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 77, "layerValue": 0, "bounds": [1566.81,-36.53999,1610.49,44.94002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/thot",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 25,
+      "path": "Scale/ITEMS/noi soup",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2278.5,-145,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "noi_soup", "guid": "535c0a276ae7d364087a8d669158d8f2", "ppu": 100, "nativeSize": [144,124], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 78, "layerValue": 0, "bounds": [1583.19,-78.96001,1643.67,-26.88001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/noi soup",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 26,
+      "path": "Scale/ITEMS/ke gap",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2229,133,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_gap", "guid": "167ae844eab917642a41eaa61f40d26a", "ppu": 100, "nativeSize": [397,200], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 79, "layerValue": 0, "bounds": [1550.85,21.84002,1717.59,105.84], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ke gap",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 27,
+      "path": "Scale/ITEMS/hu 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2078.5,182,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu_2", "guid": "4d9f01c83f21bec44ac3cb8335874732", "ppu": 100, "nativeSize": [94,92], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 80, "layerValue": 0, "bounds": [1677.69,65.10001,1717.17,103.74], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/hu 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 28,
+      "path": "Scale/ITEMS/hu 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2142,163.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu_1", "guid": "4de2870de562ab64ca383a8547722d38", "ppu": 100, "nativeSize": [97,93], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 81, "layerValue": 0, "bounds": [1650.39,57.12003,1691.13,96.18003], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/hu 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 29,
+      "path": "Scale/ITEMS/lo 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2221,254,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_2", "guid": "0594226d9f0829d42b134b8ba3cf0803", "ppu": 100, "nativeSize": [85,140], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 82, "layerValue": 0, "bounds": [1619.73,85.25997,1655.43,144.06], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/lo 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 30,
+      "path": "Scale/ITEMS/lo 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2270.5,221.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_1", "guid": "0fdddcb56f2612049bf40f248d143206", "ppu": 100, "nativeSize": [76,111], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 83, "layerValue": 0, "bounds": [1600.83,77.70001,1632.75,124.32], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/lo 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 31,
+      "path": "Scale/ITEMS/ke nho",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1707,51.49999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_nho", "guid": "b0fdb24db854ac34dbd8425325dc1633", "ppu": 100, "nativeSize": [253,151], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 84, "layerValue": 0, "bounds": [1800.33,-2.1,1906.59,61.32], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ke nho",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 32,
+      "path": "Scale/ITEMS/ly uong ruou 3",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1770,149.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_uong_ruou_3", "guid": "f498945f61aab9b4884e7188f67fd887", "ppu": 100, "nativeSize": [79,129], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 85, "layerValue": 0, "bounds": [1810.41,43.67998,1843.59,97.85998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ly uong ruou 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 33,
+      "path": "Scale/ITEMS/ly uong ruou 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1716,124.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_uong_ruou_2", "guid": "3b8da11de4169174f97713321498d9b2", "ppu": 100, "nativeSize": [79,129], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 86, "layerValue": 0, "bounds": [1833.09,33.17998,1866.27,87.35998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ly uong ruou 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 34,
+      "path": "Scale/ITEMS/ly uong ruou 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1652,95.50003,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_uong_ruou_1", "guid": "2cf7930694b34fc46a8ec8383809d2f1", "ppu": 100, "nativeSize": [79,129], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 87, "layerValue": 0, "bounds": [1859.97,21.00002,1893.15,75.18002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ly uong ruou 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 35,
+      "path": "Scale/ITEMS/ke lon",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1723,182,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_lon", "guid": "d714e0567884c2041945725eb3cf6f6a", "ppu": 100, "nativeSize": [279,160], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 88, "layerValue": 0, "bounds": [1788.15,50.82,1905.33,118.02], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ke lon",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 36,
+      "path": "Scale/ITEMS/chai ruou",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1764,272,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chai_ruou", "guid": "4d9b74a90dbddd14bb9cd9d2898ff560", "ppu": 100, "nativeSize": [91,164], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 89, "layerValue": 0, "bounds": [1810.41,87.77999,1848.63,156.66], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/chai ruou",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 37,
+      "path": "Scale/ITEMS/lo banh quy 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-1673.5,230.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_banh_quy", "guid": "01e56a20b67370f41af6024bec6f5b98", "ppu": 100, "nativeSize": [128,151], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 90, "layerValue": 0, "bounds": [1840.65,73.08003,1894.41,136.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/lo banh quy 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 38,
+      "path": "Scale/ITEMS/cay trang tri 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3143,459.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_trang_tri_2", "guid": "edabf0df49b965e4d9b8b080c80a1e7f", "ppu": 100, "nativeSize": [739,337], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 91, "layerValue": 0, "bounds": [1095.15,130.2,1405.53,271.74], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cay trang tri 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 39,
+      "path": "Scale/ITEMS/qua cau trang tri",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3118.5,447.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "qua_cau_trang_tri", "guid": "98157c4430c6d0449ade0ac19ad17af4", "ppu": 100, "nativeSize": [570,316], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 92, "layerValue": 0, "bounds": [1140.93,129.78,1380.33,262.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/qua cau trang tri",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 40,
+      "path": "Scale/ITEMS/tranh 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2865.5,347,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tranh_2", "guid": "6f9434d74bd3e7c45879ce33ce06ba1b", "ppu": 100, "nativeSize": [124,142], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 93, "layerValue": 0, "bounds": [1340.85,123.9,1392.93,183.54], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tranh 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 41,
+      "path": "Scale/ITEMS/lo suoi",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2735.5,82.49992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_suoi", "guid": "9abd13339c3d4f149ba6d4c6092ddf27", "ppu": 100, "nativeSize": [444,935], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 94, "layerValue": 0, "bounds": [1328.25,-153.72,1514.73,238.98], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/lo suoi",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 42,
+      "path": "Scale/ITEMS/khung chan ong khoi",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2790,-254.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khung_chan_ong_khoi", "guid": "249ee3f0dfb2e7049b5b686ed3c7d670", "ppu": 100, "nativeSize": [135,113], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 95, "layerValue": 0, "bounds": [1370.25,-122.64,1426.95,-75.17999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/khung chan ong khoi",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 43,
+      "path": "Scale/ITEMS/lo banh quy",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2821.5,64.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_banh_quy", "guid": "01e56a20b67370f41af6024bec6f5b98", "ppu": 100, "nativeSize": [128,151], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 96, "layerValue": 0, "bounds": [1358.49,3.36004,1412.25,66.78004], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/lo banh quy",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 44,
+      "path": "Scale/ITEMS/cau tuyet",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2734,19.50002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cau_tuyet", "guid": "29db182885b02a84485aa09091407bcf", "ppu": 100, "nativeSize": [113,125], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 97, "layerValue": 0, "bounds": [1398.39,-10.07999,1445.85,42.42001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cau tuyet",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 45,
+      "path": "Scale/ITEMS/nen",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2650,-20.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nen", "guid": "8b5d96c58672eca4e99df7e7b1352a6e", "ppu": 100, "nativeSize": [135,128], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 98, "layerValue": 0, "bounds": [1429.05,-27.30001,1485.75,26.45999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/nen",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 46,
+      "path": "Scale/ITEMS/decor",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2780.5,-83.50005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "decor", "guid": "f48fa81aa7ea1d24ca1793c171798092", "ppu": 100, "nativeSize": [280,189], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 99, "layerValue": 0, "bounds": [1343.79,-66.78002,1461.39,12.59998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/decor",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 47,
+      "path": "Scale/ITEMS/vong decor 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2742,290,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "vong_decor_2", "guid": "1d54eb4bbcb4b2e4e8b049ca86791b2b", "ppu": 100, "nativeSize": [219,270], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 100, "layerValue": 0, "bounds": [1372.77,73.08001,1464.75,186.48], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/vong decor 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 48,
+      "path": "Scale/ITEMS/chau hoa 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2530,-236,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chau_hoa", "guid": "2181faa79a56ffe46b44216991286a3b", "ppu": 100, "nativeSize": [253,346], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 101, "layerValue": 0, "bounds": [1454.67,-163.8,1560.93,-18.48], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/chau hoa 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 49,
+      "path": "Scale/ITEMS/den tang 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3108.5,-115.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "den_tang_1", "guid": "6e5eb81d1603a9e40b4869a589fd8665", "ppu": 100, "nativeSize": [162,351], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 102, "layerValue": 0, "bounds": [1230.81,-114.24,1298.85,33.17999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/den tang 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 50,
+      "path": "Scale/ITEMS/ghe tang 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3256,-253,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_tang_1", "guid": "e9de6bce10d812a4ba781f4a59eec935", "ppu": 100, "nativeSize": [377,398], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 103, "layerValue": 0, "bounds": [1123.71,-181.86,1282.05,-14.7], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ghe tang 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 51,
+      "path": "Scale/ITEMS/khan trai",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3317.5,-145,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khan_trai", "guid": "45cd725835d647643818200e216eac35", "ppu": 100, "nativeSize": [172,182], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 104, "layerValue": 0, "bounds": [1140.93,-91.14001,1213.17,-14.70001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/khan trai",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 52,
+      "path": "Scale/ITEMS/goi 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3211.5,-199.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "goi_2", "guid": "ecb5ae432c4e0df438ba3f7368f33bc4", "ppu": 100, "nativeSize": [192,159], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 105, "layerValue": 0, "bounds": [1181.25,-109.2,1261.89,-42.42], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/goi 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 53,
+      "path": "Scale/ITEMS/goi",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3276,-257.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "goi", "guid": "9dfe59536aab0ab40b9eee8c473c026d", "ppu": 100, "nativeSize": [163,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 106, "layerValue": 0, "bounds": [1160.25,-127.68,1228.71,-72.66], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/goi",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 54,
+      "path": "Scale/ITEMS/ban tra 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2989,-357.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_tra_2", "guid": "bf0b93c44daef2f4593ba0a2deb7448d", "ppu": 100, "nativeSize": [249,218], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 107, "layerValue": 0, "bounds": [1262.73,-188.16,1367.31,-96.59998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ban tra 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 55,
+      "path": "Scale/ITEMS/bo am tra",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2992.5,-253,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bo_am_tra", "guid": "c7b680362f16843478d0795b75971a6f", "ppu": 100, "nativeSize": [188,202], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 108, "layerValue": 0, "bounds": [1274.07,-140.7,1353.03,-55.85999], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/bo am tra",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 56,
+      "path": "Scale/ITEMS/gio len",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3151.5,-411.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gio_len", "guid": "1793334c1f39dca4d826e59fbec934a6", "ppu": 100, "nativeSize": [190,201], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 109, "layerValue": 0, "bounds": [1206.87,-207.06,1286.67,-122.64], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/gio len",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 57,
+      "path": "Scale/ITEMS/nhan vat",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2826.5,-422.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nhan_vat", "guid": "f1845a2cd0c6dfa4e91466ba40c452a3", "ppu": 100, "nativeSize": [292,454], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 110, "layerValue": 0, "bounds": [1321.95,-265.02,1444.59,-74.33998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/nhan vat",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 58,
+      "path": "Scale/ITEMS/xe day",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2972,-585,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "xe_day", "guid": "66dc51b1e981bc246918613a50a47a2f", "ppu": 100, "nativeSize": [301,270], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 111, "layerValue": 0, "bounds": [1258.95,-294.42,1385.37,-181.02], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/xe day",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 59,
+      "path": "Scale/ITEMS/pizza",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3014.5,-538.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pizza", "guid": "3079e57e310a4dd44ac480aec1bf0a6f", "ppu": 100, "nativeSize": [206,130], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 112, "layerValue": 0, "bounds": [1261.05,-245.7,1347.57,-191.1], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pizza",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 60,
+      "path": "Scale/ITEMS/ghe an phai 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2337,-424.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_phai", "guid": "a3ed3f6a2def84042a9884a2de0c7403", "ppu": 100, "nativeSize": [183,263], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 113, "layerValue": 0, "bounds": [1550.43,-225.54,1627.29,-115.08], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ghe an phai 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 61,
+      "path": "Scale/ITEMS/ghe an phai 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2190,-492.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_phai", "guid": "a3ed3f6a2def84042a9884a2de0c7403", "ppu": 100, "nativeSize": [183,263], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 114, "layerValue": 0, "bounds": [1612.17,-254.1,1689.03,-143.64], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ghe an phai 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 62,
+      "path": "Scale/ITEMS/ghe an phai 3",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2029,-579.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_phai", "guid": "a3ed3f6a2def84042a9884a2de0c7403", "ppu": 100, "nativeSize": [183,263], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 115, "layerValue": 0, "bounds": [1679.79,-290.64,1756.65,-180.18], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ghe an phai 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 63,
+      "path": "Scale/ITEMS/ban an",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2376,-603.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_an", "guid": "c0c638fb90dda5643b435e258be7049f", "ppu": 100, "nativeSize": [535,362], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 116, "layerValue": 0, "bounds": [1460.13,-321.72,1684.83,-169.68], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ban an",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 64,
+      "path": "Scale/ITEMS/trai ban an",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2379.5,-588.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "trai_ban_an", "guid": "5e2231443c6f03d40b6d21fdb083d3dc", "ppu": 100, "nativeSize": [572,346], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 117, "layerValue": 0, "bounds": [1450.89,-312.0599,1691.13,-166.74], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/trai ban an",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 65,
+      "path": "Scale/ITEMS/ly socola 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2469,-396,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_socola", "guid": "3456b0561c8a9cd4f990acdfa710e1a6", "ppu": 100, "nativeSize": [89,130], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 118, "layerValue": 0, "bounds": [1514.73,-185.64,1552.11,-131.04], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ly socola 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 66,
+      "path": "Scale/ITEMS/ly cf 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2585,-467.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_cf_2", "guid": "e89b568eed3b3964e8baaf3abeb174ad", "ppu": 100, "nativeSize": [115,107], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 119, "layerValue": 0, "bounds": [1460.55,-210.84,1508.85,-165.9], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ly cf 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 67,
+      "path": "Scale/ITEMS/banh mi",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2381.5,-444.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_mi", "guid": "b36b45158b9fb474392d05aad7cd8a29", "ppu": 100, "nativeSize": [170,143], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 120, "layerValue": 0, "bounds": [1534.47,-208.74,1605.87,-148.68], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/banh mi",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 68,
+      "path": "Scale/ITEMS/banh tao",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2487,-482.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_tao", "guid": "aa39b3c712beb044f8c6fc4662dea413", "ppu": 100, "nativeSize": [177,154], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 121, "layerValue": 0, "bounds": [1488.69,-227.22,1563.03,-162.54], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/banh tao",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 69,
+      "path": "Scale/ITEMS/ly cf 3",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2251,-507.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_cf_3", "guid": "41019ac23dc58ce4db0d0a0705a0f160", "ppu": 100, "nativeSize": [115,107], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 122, "layerValue": 0, "bounds": [1600.83,-227.64,1649.13,-182.7], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ly cf 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 70,
+      "path": "Scale/ITEMS/ga",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2353,-555.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ga", "guid": "7f6972ff4201e9746bd1b47b4203bf5f", "ppu": 100, "nativeSize": [241,169], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 123, "layerValue": 0, "bounds": [1531.53,-260.82,1632.75,-189.84], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ga",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 71,
+      "path": "Scale/ITEMS/binh hoa ban an",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2169.5,-510.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "binh_hoa_ban_an", "guid": "636bf86c20a2f3c4eac213b60a35d138", "ppu": 100, "nativeSize": [152,205], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 124, "layerValue": 0, "bounds": [1627.29,-249.48,1691.13,-163.38], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/binh hoa ban an",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 72,
+      "path": "Scale/ITEMS/ly socola 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2223,-586.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_socola", "guid": "3456b0561c8a9cd4f990acdfa710e1a6", "ppu": 100, "nativeSize": [89,130], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 125, "layerValue": 0, "bounds": [1618.05,-265.8599,1655.43,-211.2599], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ly socola 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 73,
+      "path": "Scale/ITEMS/ghe an trai 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2682.5,-597.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_trai", "guid": "872adf0c39a80234d9d3e8a0438cdeb1", "ppu": 100, "nativeSize": [174,224], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 126, "layerValue": 0, "bounds": [1407.21,-290.22,1480.29,-196.14], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ghe an trai 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 74,
+      "path": "Scale/ITEMS/ghe an trai 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2538.5,-674,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_trai", "guid": "872adf0c39a80234d9d3e8a0438cdeb1", "ppu": 100, "nativeSize": [174,224], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 127, "layerValue": 0, "bounds": [1467.69,-322.14,1540.77,-228.06], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ghe an trai 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 75,
+      "path": "Scale/ITEMS/ghe an trai 3",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2383.5,-750.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_trai", "guid": "872adf0c39a80234d9d3e8a0438cdeb1", "ppu": 100, "nativeSize": [174,224], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 128, "layerValue": 0, "bounds": [1532.79,-354.4799,1605.87,-260.4], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ghe an trai 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 76,
+      "path": "Scale/ITEMS/noi",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2350,196,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "noi", "guid": "066b4e7ecbc47e74384a098d84f407da", "ppu": 100, "nativeSize": [153,138], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 129, "layerValue": 0, "bounds": [1551.27,61.31998,1615.53,119.28], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/noi",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 77,
+      "path": "Scale/ITEMS/chuong",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3226.5,322,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chuong", "guid": "d59f98754caaf0045868ac8f244ea0dd", "ppu": 100, "nativeSize": [200,144], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 130, "layerValue": 0, "bounds": [1173.27,112.98,1257.27,173.46], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/chuong",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 78,
+      "path": "Scale/ITEMS/no",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3235.5,385.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "no", "guid": "39fcce7796e189343b37df9c1c3e5ed8", "ppu": 100, "nativeSize": [158,150], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 131, "layerValue": 0, "bounds": [1178.31,138.6,1244.67,201.6], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/no",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 79,
+      "path": "Scale/ITEMS/vong decor",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-3565,189,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "vong_decor", "guid": "abdff012395cdb04b8742bb295e804b6", "ppu": 100, "nativeSize": [219,270], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 132, "layerValue": 0, "bounds": [1027.11,30.66,1119.09,144.06], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/vong decor",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 80,
+      "path": "Scale/ITEMS/tranh 4",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2524,33.00004,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tranh_4", "guid": "61621fe8f9b1b8444b7fb94a8eb2a0d7", "ppu": 100, "nativeSize": [115,192], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 133, "layerValue": 0, "bounds": [1486.17,-18.47998,1534.47,62.16002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tranh 4",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 81,
+      "path": "Scale/ITEMS/dong ho to",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [-2519.5,207.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "dong_ho_to", "guid": "fc5730f76a7d2dd40bc212f6d551bc48", "ppu": 100, "nativeSize": [136,163], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 134, "layerValue": 0, "bounds": [1483.65,60.89997,1540.77,129.36], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/dong ho to",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/SLOTS",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cay lon o ngoai",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-975.5001,426.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_lon_o_ngoai", "guid": "7f96f3f34037d8842af44cc9e2af451d", "ppu": 100, "nativeSize": [976,1369], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4950, "layerValue": 0, "bounds": [-614.67,-108.36,-204.75,466.62], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cay lon o ngoai/cay lon o ngoai shadow",
+      "parentPath": "Scale/SLOTS/cay lon o ngoai",
+      "active": true,
+      "pos": [145.5001,-560.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_lon_o_ngoai_shadow", "guid": "45d911eedf9cc5e4abdbabc6746081a2", "ppu": 100, "nativeSize": [685,265], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4960, "layerValue": 0, "bounds": [-492.45,-112.14,-204.75,-0.83997], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/cay thong ngoai troi 6",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1065,430.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_6", "guid": "132daf9cfa30a9c40b20d17c94452ee7", "ppu": 100, "nativeSize": [355,518], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4910, "layerValue": 0, "bounds": [372.7499,72.23998,521.8499,289.8], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cay thong ngoai troi 6/cay thong ngoai troi 6 shadow",
+      "parentPath": "Scale/SLOTS/cay thong ngoai troi 6",
+      "active": true,
+      "pos": [-1.00002,-235.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_6_shadow", "guid": "aaa75c6f336a447449e9ec6aa2692616", "ppu": 100, "nativeSize": [139,58], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4920, "layerValue": 0, "bounds": [417.6899,69.72003,476.0699,94.08003], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/SLOTS/cay thong ngoai troi 5",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1210.5,298.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_5", "guid": "fb70627c3834acc4687b102983cf8c57", "ppu": 100, "nativeSize": [286,435], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4890, "layerValue": 0, "bounds": [448.3499,34.02003,568.4699,216.72], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cay thong ngoai troi 5/cay thong ngoai troi 5 shadow",
+      "parentPath": "Scale/SLOTS/cay thong ngoai troi 5",
+      "active": true,
+      "pos": [10.50014,-198.0002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_5_shadow", "guid": "297f34ce6b963054ab6d7af88cf02b7e", "ppu": 100, "nativeSize": [111,43], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4900, "layerValue": 0, "bounds": [489.51,33.17996,536.13,51.23996], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/SLOTS/cua",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-857.0001,-189.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cua", "guid": "3db0e96ac86fda84b9b275cf078df8c5", "ppu": 100, "nativeSize": [253,581], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4860, "layerValue": 0, "bounds": [-413.07,-201.6,-306.81,42.42002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/SLOTS/tham tang 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-333.5001,-417.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tham_tang_1", "guid": "dc2243fc55344d04789792434ce75537", "ppu": 100, "nativeSize": [668,329], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4840, "layerValue": 0, "bounds": [-280.35,-244.44,0.20996,-106.26], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tham tang 1/tham tang 1 shadow",
+      "parentPath": "Scale/SLOTS/tham tang 1",
+      "active": true,
+      "pos": [0,-4.99992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tham_tang_1_shadow", "guid": "c8949ff2b9fbf994ab43f26a77f0714e", "ppu": 100, "nativeSize": [668,329], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4850, "layerValue": 0, "bounds": [-280.35,-246.54,0.20996,-108.36], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Scale/SLOTS/cua so bep",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [794.4999,147.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cua_so_bep", "guid": "6ec7bfd8bea1c4d4e98177479aca0ac8", "ppu": 100, "nativeSize": [222,349], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4830, "layerValue": 0, "bounds": [287.0699,-11.33998,380.3099,135.24], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Scale/SLOTS/cua so lon",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-523.0001,137.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cua_so_lon", "guid": "fb89c38d7e58e8140917f2c1c0091529", "ppu": 100, "nativeSize": [415,614], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4820, "layerValue": 0, "bounds": [-306.81,-71.39996,-132.51,186.48], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Scale/SLOTS/cay trang tri",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [630.4999,384,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_trang_tri", "guid": "e0145538865190d44987db56cbd8dc11", "ppu": 100, "nativeSize": [1094,334], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4810, "layerValue": 0, "bounds": [35.06999,91.14,494.5499,231.42], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Scale/SLOTS/qua cau trang tri 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [643.4999,366,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "qua_cau_trang_tri_2", "guid": "26808c18cb2fc654eb05164e5f657415", "ppu": 100, "nativeSize": [1040,330], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4790, "layerValue": 0, "bounds": [51.86994,84.41999,488.6699,223.02], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/qua cau trang tri 2/qua cau trang tri 2 shadow",
+      "parentPath": "Scale/SLOTS/qua cau trang tri 2",
+      "active": true,
+      "pos": [3.00007,-3.00007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "qua_cau_trang_tri_2_shadow", "guid": "1e8a6fa0f47bb884283d7417750373aa", "ppu": 100, "nativeSize": [1040,330], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4800, "layerValue": 0, "bounds": [53.12998,83.15996,489.93,221.7599], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Scale/SLOTS/bep",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [707.9999,-219,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bep", "guid": "e625385879e52684f91805d772e66c10", "ppu": 100, "nativeSize": [559,448], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4770, "layerValue": 0, "bounds": [179.9699,-186.06,414.75,2.10002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/bep/bep shadow",
+      "parentPath": "Scale/SLOTS/bep",
+      "active": true,
+      "pos": [3.49999,-4,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bep_shadow", "guid": "46cf1308b4180954284a4ab6fc7e9601", "ppu": 100, "nativeSize": [552,448], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4780, "layerValue": 0, "bounds": [182.9099,-187.74,414.7499,0.42002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Scale/SLOTS/tranh 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-174.5001,196.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tranh_3", "guid": "62a07e021671d4142a2b96805a087737", "ppu": 100, "nativeSize": [106,140], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4750, "layerValue": 0, "bounds": [-95.55003,53.33997,-51.03003,112.14], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tranh 3/tranh 3 shadow",
+      "parentPath": "Scale/SLOTS/tranh 3",
+      "active": true,
+      "pos": [4,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tranh_3_shadow", "guid": "c00bbdd4830d8074eb328f07e2a07822", "ppu": 100, "nativeSize": [106,140], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4760, "layerValue": 0, "bounds": [-93.87003,53.33997,-49.35004,112.14], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Scale/SLOTS/cay thong trong nha",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-305,36.00006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_trong_nha", "guid": "ad4d126e2621a9a459dfd2368b4e643a", "ppu": 100, "nativeSize": [415,634], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4730, "layerValue": 0, "bounds": [-215.25,-118.02,-40.95,148.26], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cay thong trong nha/cay thong trong nha shadow",
+      "parentPath": "Scale/SLOTS/cay thong trong nha",
+      "active": true,
+      "pos": [-3.50008,-289,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_trong_nha_shadow", "guid": "79b1c408ed2342f43bf624f2317f483b", "ppu": 100, "nativeSize": [162,64], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4740, "layerValue": 0, "bounds": [-163.59,-119.7,-95.55005,-92.81999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Scale/SLOTS/trang tri cay thong",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-304.5,73.50006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "trang_tri_cay_thong", "guid": "38a55c164fb9bc949a657b7c0a5853e9", "ppu": 100, "nativeSize": [286,425], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4720, "layerValue": 0, "bounds": [-187.95,-58.37997,-67.83001,120.12], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Scale/SLOTS/ngoi sao",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-329.0001,337.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ngoi_sao", "guid": "e4b7f35ca5a55fd4190d91fe920b285c", "ppu": 100, "nativeSize": [107,100], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4710, "layerValue": 0, "bounds": [-160.65,120.96,-115.71,162.96], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ngoi sao/ngoi sao fx",
+      "parentPath": "Scale/SLOTS/ngoi sao",
+      "active": true,
+      "pos": [-0.99993,7.00016,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ngoi_sao_fx", "guid": "cd1cf9a28693aec4da92f4ce9bf200eb", "ppu": 100, "nativeSize": [413,414], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4700, "layerValue": 0, "bounds": [-225.33,57.96003,-51.87001,231.84], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Scale/SLOTS/bep nuonfg",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [430,-237.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bep_nuonfg", "guid": "c4b096bc81ad0e7438f4c5e35e8f2c83", "ppu": 100, "nativeSize": [319,321], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4680, "layerValue": 0, "bounds": [113.61,-167.16,247.59,-32.34], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/bep nuonfg/bep nuonfg shadow",
+      "parentPath": "Scale/SLOTS/bep nuonfg",
+      "active": true,
+      "pos": [0.99983,-4,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bep_nuonfg_shadow", "guid": "0d0f591075bf0764caaf75ba0e4a16d8", "ppu": 100, "nativeSize": [301,321], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4690, "layerValue": 0, "bounds": [117.8099,-168.84,244.2299,-34.02], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Scale/SLOTS/bon rua chen",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [786.4999,-163.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bon_rua_chen", "guid": "b6593f396f9fb0c4b917a06ac7b7fb51", "ppu": 100, "nativeSize": [294,152], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4660, "layerValue": 0, "bounds": [268.5899,-100.8,392.0699,-36.95998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/bon rua chen/bon rua chen shadow",
+      "parentPath": "Scale/SLOTS/bon rua chen",
+      "active": true,
+      "pos": [0,-3.00007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bon_rua_chen_shadow", "guid": "a3a67b9fa44e8ae4dbc83246f5afbc66", "ppu": 100, "nativeSize": [294,152], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4670, "layerValue": 0, "bounds": [268.5899,-102.06,392.0699,-38.22], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Scale/SLOTS/voi nuoc",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [821.4999,-79.50001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "voi_nuoc", "guid": "1334217e54976cb4f93b2f5f4b747cbb", "ppu": 100, "nativeSize": [110,117], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4650, "layerValue": 0, "bounds": [321.93,-57.96,368.1299,-8.82], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Scale/SLOTS/may làm banh mi",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [609.9999,23.99998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "may_làm_banh_mi", "guid": "6d620254cc972764f8c0646c0f6b5209", "ppu": 100, "nativeSize": [157,194], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4630, "layerValue": 0, "bounds": [223.23,-30.66001,289.17,50.81999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/may làm banh mi/may làm banh mi shadow",
+      "parentPath": "Scale/SLOTS/may làm banh mi",
+      "active": true,
+      "pos": [0.49992,-2.99988,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "may_làm_banh_mi_shadow", "guid": "a06c155e4af85d4439b3ca400fb68831", "ppu": 100, "nativeSize": [150,194], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4640, "layerValue": 0, "bounds": [224.9099,-31.91996,287.9099,49.56004], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Scale/SLOTS/cam dao",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [708.9999,-2.49996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cam_dao", "guid": "f47c6c9479f94f344a421cccd12369f8", "ppu": 100, "nativeSize": [119,211], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4610, "layerValue": 0, "bounds": [272.7899,-45.35998,322.77,43.26001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cam dao/cam dao shadow",
+      "parentPath": "Scale/SLOTS/cam dao",
+      "active": true,
+      "pos": [0,-3.00007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cam_dao_shadow", "guid": "91a8d759dceee1243b23db24d5b798c1", "ppu": 100, "nativeSize": [119,211], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4620, "layerValue": 0, "bounds": [272.7899,-46.62001,322.77,41.99998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Scale/SLOTS/lo gia vi 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [500.5,-39.99996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_gia_vi_3", "guid": "f578bc8224fdcf94680c7e3c15a48e62", "ppu": 100, "nativeSize": [78,102], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4590, "layerValue": 0, "bounds": [193.83,-38.21998,226.59,4.62002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lo gia vi 3/lo gia vi 3 shadow",
+      "parentPath": "Scale/SLOTS/lo gia vi 3",
+      "active": true,
+      "pos": [-4.00009,-42.00001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_gia_vi_3_shadow", "guid": "6dd697578844b384e840d74ecd1cff8f", "ppu": 100, "nativeSize": [58,24], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4600, "layerValue": 0, "bounds": [196.35,-39.47998,220.7099,-29.39999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Scale/SLOTS/lo gia vi 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [552.4999,-62.00008,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_gia_vi_2", "guid": "5d13d26d45742be4a8c0db3d4de91f51", "ppu": 100, "nativeSize": [78,102], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4570, "layerValue": 0, "bounds": [215.6699,-47.46003,248.4299,-4.62004], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lo gia vi 2/lo gia vi 2 shadow",
+      "parentPath": "Scale/SLOTS/lo gia vi 2",
+      "active": true,
+      "pos": [-1.99986,-40.99998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_gia_vi_2_shadow", "guid": "e6c762030660e974a9ff09d1369c949f", "ppu": 100, "nativeSize": [58,24], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4580, "layerValue": 0, "bounds": [219.03,-48.30003,243.39,-38.22003], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Scale/SLOTS/lo gia vi 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [603.4999,-86.00006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_gia_vi_1", "guid": "822e15a6438ccef4791f607b6467fd3d", "ppu": 100, "nativeSize": [78,102], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4550, "layerValue": 0, "bounds": [237.09,-57.54002,269.8499,-14.70003], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lo gia vi 1/lo gia vi 1 shadow",
+      "parentPath": "Scale/SLOTS/lo gia vi 1",
+      "active": true,
+      "pos": [-1.00002,-40.99998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_gia_vi_1_shadow", "guid": "7af82783b24a5994c9f92aefd3d3ee7a", "ppu": 100, "nativeSize": [58,24], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4560, "layerValue": 0, "bounds": [240.8699,-58.38002,265.2299,-48.30002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Scale/SLOTS/tu lanh",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1000,-236,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tu_lanh", "guid": "a03f50e1bb2bac148b05b04591d4ecdb", "ppu": 100, "nativeSize": [303,574], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4530, "layerValue": 0, "bounds": [356.37,-219.66,483.63,21.42], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tu lanh/tu lanh shadow",
+      "parentPath": "Scale/SLOTS/tu lanh",
+      "active": true,
+      "pos": [-1.00002,-4,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tu_lanh_shadow", "guid": "09e2685eb43465b4c8b7cf9016134fda", "ppu": 100, "nativeSize": [303,574], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4540, "layerValue": 0, "bounds": [355.95,-221.34,483.21,19.74001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Scale/SLOTS/tat",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [984.4998,-156.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tat", "guid": "50c1ed9edc442d44cb4c6e15dd29e355", "ppu": 100, "nativeSize": [86,107], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4510, "layerValue": 0, "bounds": [395.4299,-88.20002,431.5499,-43.26002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tat/tat shadow",
+      "parentPath": "Scale/SLOTS/tat",
+      "active": true,
+      "pos": [3.00007,-2.99988,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tat_shadow", "guid": "d059694c1d4e3404180d98b6d7b68fd2", "ppu": 100, "nativeSize": [86,107], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4520, "layerValue": 0, "bounds": [396.69,-89.45997,432.81,-44.51997], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Scale/SLOTS/keo",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [913,-69.49997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "keo", "guid": "b5867c5b64bbbad48b3a755c364eff47", "ppu": 100, "nativeSize": [55,99], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4490, "layerValue": 0, "bounds": [371.91,-49.97998,395.01,-8.39999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/keo/keo shadow",
+      "parentPath": "Scale/SLOTS/keo",
+      "active": true,
+      "pos": [2.99988,-1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "keo_shadow", "guid": "1608c6e1ef083d542810a091db0d0113", "ppu": 100, "nativeSize": [55,99], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4500, "layerValue": 0, "bounds": [373.17,-50.39999,396.2699,-8.82], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 25,
+      "path": "Scale/SLOTS/danh tu lanh 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [962,-389.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "danh_tu_lanh_2", "guid": "b418e659f7d63534fbaecf8a0ea63ef9", "ppu": 100, "nativeSize": [67,77], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4470, "layerValue": 0, "bounds": [389.97,-179.76,418.11,-147.42], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/danh tu lanh 2/danh tu lanh 2 shadow",
+      "parentPath": "Scale/SLOTS/danh tu lanh 2",
+      "active": true,
+      "pos": [2.99988,-2.00005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "danh_tu_lanh_2_shadow", "guid": "d009abb70aee32d49a358f507dd45cbf", "ppu": 100, "nativeSize": [67,77], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4480, "layerValue": 0, "bounds": [391.2299,-180.6,419.3699,-148.26], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 26,
+      "path": "Scale/SLOTS/dan tu lanh 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [912.4999,-291,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "dan_tu_lanh_1", "guid": "7ba06ffab79fafc4a8db910750c69c38", "ppu": 100, "nativeSize": [62,76], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4450, "layerValue": 0, "bounds": [370.2299,-138.18,396.2699,-106.26], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/dan tu lanh 1/dan tu lanh 1 shadow",
+      "parentPath": "Scale/SLOTS/dan tu lanh 1",
+      "active": true,
+      "pos": [2.00005,-2.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "dan_tu_lanh_1_shadow", "guid": "5ff253fc85999fc4f90dfbd9d83a603c", "ppu": 100, "nativeSize": [62,76], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4460, "layerValue": 0, "bounds": [371.07,-139.44,397.11,-107.52], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 27,
+      "path": "Scale/SLOTS/thot",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [371.4999,10.00004,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "thot", "guid": "45aae5cf5ff246647905ea76f270db6a", "ppu": 100, "nativeSize": [104,194], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4430, "layerValue": 0, "bounds": [134.19,-36.53999,177.87,44.94002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/thot/thot shadow",
+      "parentPath": "Scale/SLOTS/thot",
+      "active": true,
+      "pos": [-4.99992,-1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "thot_shadow", "guid": "d20ccd4bbb95c3b4da2a4a003a59056a", "ppu": 100, "nativeSize": [104,194], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4440, "layerValue": 0, "bounds": [132.09,-36.96,175.77,44.52001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 28,
+      "path": "Scale/SLOTS/noi soup",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [430.4999,-126,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "noi_soup", "guid": "535c0a276ae7d364087a8d669158d8f2", "ppu": 100, "nativeSize": [144,124], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4420, "layerValue": 0, "bounds": [150.57,-78.96001,211.05,-26.88001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 29,
+      "path": "Scale/SLOTS/ke gap",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [480,152,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_gap", "guid": "167ae844eab917642a41eaa61f40d26a", "ppu": 100, "nativeSize": [397,200], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4410, "layerValue": 0, "bounds": [118.23,21.84002,284.97,105.84], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ke gap/ke gap cut",
+      "parentPath": "Scale/SLOTS/ke gap",
+      "active": true,
+      "pos": [-70.00008,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_gap_cut", "guid": "35d35b94e8ff26c41884bedd80bcd934", "ppu": 100, "nativeSize": [257,200], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4360, "layerValue": 0, "bounds": [118.23,21.84002,226.17,105.84], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 30,
+      "path": "Scale/SLOTS/hu 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [630.4999,201,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu_2", "guid": "4d9f01c83f21bec44ac3cb8335874732", "ppu": 100, "nativeSize": [94,92], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4390, "layerValue": 0, "bounds": [245.07,65.10001,284.55,103.74], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/hu 2/hu 2 shadow",
+      "parentPath": "Scale/SLOTS/hu 2",
+      "active": true,
+      "pos": [0.49992,-34.49993,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu_2_shadow", "guid": "9955277d081f5e4488443035b1245b15", "ppu": 100, "nativeSize": [69,31], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4400, "layerValue": 0, "bounds": [250.5299,63.42003,279.5099,76.44003], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 31,
+      "path": "Scale/SLOTS/hu 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [566.9999,182.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu_1", "guid": "4de2870de562ab64ca383a8547722d38", "ppu": 100, "nativeSize": [97,93], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4370, "layerValue": 0, "bounds": [217.77,57.12003,258.51,96.18003], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/hu 1/hu 1 shadow",
+      "parentPath": "Scale/SLOTS/hu 1",
+      "active": true,
+      "pos": [0,-34.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu_1_shadow", "guid": "16baa4232aea3fb449ef1b53f47d395d", "ppu": 100, "nativeSize": [69,31], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4380, "layerValue": 0, "bounds": [223.6499,55.86002,252.63,68.88003], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 32,
+      "path": "Scale/SLOTS/lo 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [488,272.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_2", "guid": "0594226d9f0829d42b134b8ba3cf0803", "ppu": 100, "nativeSize": [85,140], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4340, "layerValue": 0, "bounds": [187.11,85.25997,222.81,144.06], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lo 2/lo 2 shadow",
+      "parentPath": "Scale/SLOTS/lo 2",
+      "active": true,
+      "pos": [-1.00002,-52.00005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_2_shadow", "guid": "f816dbe14bfcb3b46a6045d80e9f24bc", "ppu": 100, "nativeSize": [85,44], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4350, "layerValue": 0, "bounds": [186.69,83.57996,222.39,102.06], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 33,
+      "path": "Scale/SLOTS/lo 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [438.4999,240.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_1", "guid": "0fdddcb56f2612049bf40f248d143206", "ppu": 100, "nativeSize": [76,111], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4320, "layerValue": 0, "bounds": [168.21,77.70003,200.13,124.32], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lo 1/lo 1 shadow",
+      "parentPath": "Scale/SLOTS/lo 1",
+      "active": true,
+      "pos": [0,-40.00015,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_1_shadow", "guid": "39594c28fdc953149983a8e0944c687a", "ppu": 100, "nativeSize": [74,39], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4330, "layerValue": 0, "bounds": [168.63,76.01996,199.71,92.39996], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 34,
+      "path": "Scale/SLOTS/ke nho",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1002,70.49999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_nho", "guid": "b0fdb24db854ac34dbd8425325dc1633", "ppu": 100, "nativeSize": [253,151], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4310, "layerValue": 0, "bounds": [367.71,-2.1,473.97,61.32], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 35,
+      "path": "Scale/SLOTS/ly uong ruou 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [938.9998,168.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_uong_ruou_3", "guid": "f498945f61aab9b4884e7188f67fd887", "ppu": 100, "nativeSize": [79,129], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4290, "layerValue": 0, "bounds": [377.7899,43.67998,410.9699,97.85998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ly uong ruou 3/ly uong ruou 3 shadow",
+      "parentPath": "Scale/SLOTS/ly uong ruou 3",
+      "active": true,
+      "pos": [0,-51.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_uong_ruou_3_shadow", "guid": "482ff0e7803bf9b4989a67e3ac090853", "ppu": 100, "nativeSize": [67,35], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4300, "layerValue": 0, "bounds": [380.3099,41.99997,408.45,56.69997], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 36,
+      "path": "Scale/SLOTS/ly uong ruou 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [992.9999,143.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_uong_ruou_2", "guid": "3b8da11de4169174f97713321498d9b2", "ppu": 100, "nativeSize": [79,129], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4270, "layerValue": 0, "bounds": [400.47,33.17998,433.6499,87.35998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ly uong ruou 2/ly uong ruou 2 shadow",
+      "parentPath": "Scale/SLOTS/ly uong ruou 2",
+      "active": true,
+      "pos": [0,-51.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_uong_ruou_2_shadow", "guid": "92e941d7b05d8f94b863d52ed49c8afb", "ppu": 100, "nativeSize": [67,35], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4280, "layerValue": 0, "bounds": [402.99,31.49997,431.1299,46.19997], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 37,
+      "path": "Scale/SLOTS/ly uong ruou 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1057,114.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_uong_ruou_1", "guid": "2cf7930694b34fc46a8ec8383809d2f1", "ppu": 100, "nativeSize": [79,129], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4250, "layerValue": 0, "bounds": [427.3499,21.00002,460.5299,75.18002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ly uong ruou 1/ly uong ruou 1 shadow",
+      "parentPath": "Scale/SLOTS/ly uong ruou 1",
+      "active": true,
+      "pos": [0,-51.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_uong_ruou_1_shadow", "guid": "266e5c873ca710f4aaf8db38d24f5069", "ppu": 100, "nativeSize": [67,35], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4260, "layerValue": 0, "bounds": [429.8699,19.32001,458.0099,34.02001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 38,
+      "path": "Scale/SLOTS/ke lon",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [985.9999,201,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_lon", "guid": "d714e0567884c2041945725eb3cf6f6a", "ppu": 100, "nativeSize": [279,160], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4240, "layerValue": 0, "bounds": [355.53,50.82,472.7099,118.02], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 39,
+      "path": "Scale/SLOTS/chai ruou",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [945,291,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chai_ruou", "guid": "4d9b74a90dbddd14bb9cd9d2898ff560", "ppu": 100, "nativeSize": [91,164], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4220, "layerValue": 0, "bounds": [377.79,87.77999,416.01,156.66], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/chai ruou/chai ruou shadow",
+      "parentPath": "Scale/SLOTS/chai ruou",
+      "active": true,
+      "pos": [0,-67.00001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chai_ruou_shadow", "guid": "947ad0af4b4595346af2dac2ef9383c2", "ppu": 100, "nativeSize": [75,36], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4230, "layerValue": 0, "bounds": [381.15,86.51999,412.65,101.64], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 40,
+      "path": "Scale/SLOTS/lo banh quy 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1035.5,249.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_banh_quy", "guid": "01e56a20b67370f41af6024bec6f5b98", "ppu": 100, "nativeSize": [128,151], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4200, "layerValue": 0, "bounds": [408.0299,73.08003,461.7899,136.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lo banh quy 2/lo banh quy 2 shadow",
+      "parentPath": "Scale/SLOTS/lo banh quy 2",
+      "active": true,
+      "pos": [-0.49992,-56.50005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_banh_quy_shadow", "guid": "486709b5020443d4ea2373c95346553e", "ppu": 100, "nativeSize": [95,42], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4210, "layerValue": 0, "bounds": [414.75,72.24001,454.65,89.88], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 41,
+      "path": "Scale/SLOTS/cay trang tri 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-434,478.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_trang_tri_2", "guid": "edabf0df49b965e4d9b8b080c80a1e7f", "ppu": 100, "nativeSize": [739,337], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4190, "layerValue": 0, "bounds": [-337.47,130.2,-27.09001,271.74], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 42,
+      "path": "Scale/SLOTS/qua cau trang tri",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-409.5,467,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "qua_cau_trang_tri", "guid": "98157c4430c6d0449ade0ac19ad17af4", "ppu": 100, "nativeSize": [570,316], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4170, "layerValue": 0, "bounds": [-291.69,129.78,-52.29001,262.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/qua cau trang tri/qua cau trang tri shadow",
+      "parentPath": "Scale/SLOTS/qua cau trang tri",
+      "active": true,
+      "pos": [-5.00002,-3.00007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "qua_cau_trang_tri_shadow", "guid": "509189143c0b7214f995cb2e2778c706", "ppu": 100, "nativeSize": [570,316], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4180, "layerValue": 0, "bounds": [-293.79,128.52,-54.39003,261.24], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 43,
+      "path": "Scale/SLOTS/tranh 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-156.5001,366,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tranh_2", "guid": "6f9434d74bd3e7c45879ce33ce06ba1b", "ppu": 100, "nativeSize": [124,142], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4150, "layerValue": 0, "bounds": [-91.77002,123.9,-39.69002,183.54], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tranh 2/tranh 2 shadow",
+      "parentPath": "Scale/SLOTS/tranh 2",
+      "active": true,
+      "pos": [6.00004,1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tranh_2_shadow", "guid": "3f88c7da785600641a6a246361e4b5d3", "ppu": 100, "nativeSize": [124,142], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4160, "layerValue": 0, "bounds": [-89.25001,124.32,-37.17001,183.96], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 44,
+      "path": "Scale/SLOTS/lo suoi",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-26.50003,101.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_suoi", "guid": "9abd13339c3d4f149ba6d4c6092ddf27", "ppu": 100, "nativeSize": [444,935], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4130, "layerValue": 0, "bounds": [-104.37,-153.72,82.10999,238.98], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lo suoi/lo suoi cut",
+      "parentPath": "Scale/SLOTS/lo suoi",
+      "active": true,
+      "pos": [7.49998,31.00014,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_suoi_cut", "guid": "98ca8eec2fc36554fa87e1fb4f24b19a", "ppu": 100, "nativeSize": [383,873], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4110, "layerValue": 0, "bounds": [-88.41002,-127.68,72.44997,238.98], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/lo suoi/lua",
+      "parentPath": "Scale/SLOTS/lo suoi",
+      "active": true,
+      "pos": [-46,-257.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lua", "guid": "0e2a8e333576eb947a57afe768a28254", "ppu": 100, "nativeSize": [128,160], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4120, "layerValue": 0, "bounds": [-57.33001,-99.11997,-3.57002,-31.91998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lo suoi/lua/lua fx",
+      "parentPath": "Scale/SLOTS/lo suoi/lua",
+      "active": true,
+      "pos": [5.49994,2.49996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lua_fx", "guid": "c83d797b370fc3348afb9f2f313c4eff", "ppu": 100, "nativeSize": [233,233], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4100, "layerValue": 0, "bounds": [-77.07004,-113.4,20.78996,-15.54], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/SLOTS/lo suoi/lo suoi shadow",
+      "parentPath": "Scale/SLOTS/lo suoi",
+      "active": true,
+      "pos": [0,-343.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_suoi_shadow", "guid": "7e8d33ada14791541bfb899a0a4b8380", "ppu": 100, "nativeSize": [444,256], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4140, "layerValue": 0, "bounds": [-104.37,-155.4,82.10999,-47.88], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 45,
+      "path": "Scale/SLOTS/khung chan ong khoi",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-81.00005,-235.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khung_chan_ong_khoi", "guid": "249ee3f0dfb2e7049b5b686ed3c7d670", "ppu": 100, "nativeSize": [135,113], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4090, "layerValue": 0, "bounds": [-62.37001,-122.64,-5.67002,-75.17999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 46,
+      "path": "Scale/SLOTS/lo banh quy",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-112.5001,83.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_banh_quy", "guid": "01e56a20b67370f41af6024bec6f5b98", "ppu": 100, "nativeSize": [128,151], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4070, "layerValue": 0, "bounds": [-74.13004,3.36004,-20.37004,66.78004], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lo banh quy/lo banh quy shadow",
+      "parentPath": "Scale/SLOTS/lo banh quy",
+      "active": true,
+      "pos": [-0.49992,-56.50005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_banh_quy_shadow", "guid": "486709b5020443d4ea2373c95346553e", "ppu": 100, "nativeSize": [95,42], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4080, "layerValue": 0, "bounds": [-67.41,2.52002,-27.51001,20.16002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 47,
+      "path": "Scale/SLOTS/cau tuyet",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-25.0001,38.50002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cau_tuyet", "guid": "29db182885b02a84485aa09091407bcf", "ppu": 100, "nativeSize": [113,125], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4050, "layerValue": 0, "bounds": [-34.23004,-10.07999,13.22996,42.42001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cau tuyet/cau tuyet shadow",
+      "parentPath": "Scale/SLOTS/cau tuyet",
+      "active": true,
+      "pos": [1.50003,-48.50006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cau_tuyet_shadow", "guid": "07c3c7271faa92648952a54257469bfb", "ppu": 100, "nativeSize": [86,34], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4060, "layerValue": 0, "bounds": [-27.93003,-11.34002,8.18998,2.93998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 48,
+      "path": "Scale/SLOTS/nen",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [58.99992,-1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nen", "guid": "8b5d96c58672eca4e99df7e7b1352a6e", "ppu": 100, "nativeSize": [135,128], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4030, "layerValue": 0, "bounds": [-3.57003,-27.30001,53.12997,26.45999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/nen/nen fx",
+      "parentPath": "Scale/SLOTS/nen",
+      "active": true,
+      "pos": [2.00005,43.00003,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nen_fx", "guid": "8b809f1978c0165428a5b6cc934c68ba", "ppu": 100, "nativeSize": [145,128], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4020, "layerValue": 0, "bounds": [-4.83002,-9.24,56.06998,44.52], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/nen/nen shadow",
+      "parentPath": "Scale/SLOTS/nen",
+      "active": true,
+      "pos": [0,-3.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nen_shadow", "guid": "5cc280b4f86f91844aaa4716a2ab65c2", "ppu": 100, "nativeSize": [135,128], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4040, "layerValue": 0, "bounds": [-3.57003,-28.97997,53.12997,24.78003], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 49,
+      "path": "Scale/SLOTS/decor",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-71.50002,-64.50005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "decor", "guid": "f48fa81aa7ea1d24ca1793c171798092", "ppu": 100, "nativeSize": [280,189], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4010, "layerValue": 0, "bounds": [-88.83001,-66.78002,28.76999,12.59998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 50,
+      "path": "Scale/SLOTS/vong decor 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-33.00009,309,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "vong_decor_2", "guid": "1d54eb4bbcb4b2e4e8b049ca86791b2b", "ppu": 100, "nativeSize": [219,270], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4000, "layerValue": 0, "bounds": [-59.85004,73.08001,32.12996,186.48], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 51,
+      "path": "Scale/SLOTS/chau hoa 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [179,-217,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chau_hoa", "guid": "2181faa79a56ffe46b44216991286a3b", "ppu": 100, "nativeSize": [253,346], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3980, "layerValue": 0, "bounds": [22.05,-163.8,128.31,-18.48], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/chau hoa 1/chau hoa shadow 1",
+      "parentPath": "Scale/SLOTS/chau hoa 1",
+      "active": true,
+      "pos": [11.49998,-151.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chau_hoa_shadow", "guid": "6ecf58cc20002bc4ab00297fdaeb63b5", "ppu": 100, "nativeSize": [100,61], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3990, "layerValue": 0, "bounds": [59.00999,-167.58,101.01,-141.96], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 52,
+      "path": "Scale/SLOTS/den tang 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-399.5001,-96.50002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "den_tang_1", "guid": "6e5eb81d1603a9e40b4869a589fd8665", "ppu": 100, "nativeSize": [162,351], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3960, "layerValue": 0, "bounds": [-201.81,-114.24,-133.77,33.17999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/den tang 1/den tang 1 fx",
+      "parentPath": "Scale/SLOTS/den tang 1",
+      "active": true,
+      "pos": [6.00004,114.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "den_tang_1_fx", "guid": "f2a15d6ec1923a642ba81a868519fb06", "ppu": 100, "nativeSize": [534,526], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3950, "layerValue": 0, "bounds": [-277.41,-102.9,-53.13,118.02], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/den tang 1/den tang 1 shadow",
+      "parentPath": "Scale/SLOTS/den tang 1",
+      "active": true,
+      "pos": [-0.50001,-159,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "den_tang_1_shadow", "guid": "89e6adab851a60e45bac9d0ece5ff49d", "ppu": 100, "nativeSize": [95,45], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3970, "layerValue": 0, "bounds": [-187.95,-116.76,-148.05,-97.86001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 53,
+      "path": "Scale/SLOTS/ghe tang 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-547,-234,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_tang_1", "guid": "e9de6bce10d812a4ba781f4a59eec935", "ppu": 100, "nativeSize": [377,398], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3930, "layerValue": 0, "bounds": [-308.91,-181.86,-150.57,-14.7], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ghe tang 1/ghe tang 1 cut",
+      "parentPath": "Scale/SLOTS/ghe tang 1",
+      "active": true,
+      "pos": [-110,-52.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_tang_1_cut", "guid": "bf17185c15e52f84c9c04e5193321d92", "ppu": 100, "nativeSize": [157,196], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3860, "layerValue": 0, "bounds": [-308.91,-161.7,-242.97,-79.37999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/ghe tang 1/ghe tang 1 shadow",
+      "parentPath": "Scale/SLOTS/ghe tang 1",
+      "active": true,
+      "pos": [9.49993,-124,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_tang_1_shadow", "guid": "fd6cc0e03430589418436c0f6af20afb", "ppu": 100, "nativeSize": [332,158], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3940, "layerValue": 0, "bounds": [-295.47,-183.54,-156.03,-117.18], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 54,
+      "path": "Scale/SLOTS/khan trai",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-608.5,-126,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khan_trai", "guid": "45cd725835d647643818200e216eac35", "ppu": 100, "nativeSize": [172,182], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3910, "layerValue": 0, "bounds": [-291.69,-91.14001,-219.45,-14.70001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/khan trai/khan trai shadow",
+      "parentPath": "Scale/SLOTS/khan trai",
+      "active": true,
+      "pos": [-3.00007,-1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khan_trai_shadow", "guid": "52a62753c9d81164d80b1e8f0e605a5d", "ppu": 100, "nativeSize": [172,182], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3920, "layerValue": 0, "bounds": [-292.95,-91.56002,-220.71,-15.12002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 55,
+      "path": "Scale/SLOTS/goi 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-502.5001,-180.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "goi_2", "guid": "ecb5ae432c4e0df438ba3f7368f33bc4", "ppu": 100, "nativeSize": [192,159], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3890, "layerValue": 0, "bounds": [-251.37,-109.2,-170.73,-42.42001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/goi 2/goi 2 shadow",
+      "parentPath": "Scale/SLOTS/goi 2",
+      "active": true,
+      "pos": [0,-4,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "goi_2_shadow", "guid": "e0e919bd184d5b44a910fdc691151178", "ppu": 100, "nativeSize": [192,159], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3900, "layerValue": 0, "bounds": [-251.37,-110.88,-170.73,-44.10001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 56,
+      "path": "Scale/SLOTS/goi",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-567,-238.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "goi", "guid": "9dfe59536aab0ab40b9eee8c473c026d", "ppu": 100, "nativeSize": [163,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3870, "layerValue": 0, "bounds": [-272.37,-127.68,-203.91,-72.66], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/goi/goi shadow",
+      "parentPath": "Scale/SLOTS/goi",
+      "active": true,
+      "pos": [0,-4.99992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "goi_shadow", "guid": "2d98b1243b96b1047b15da56e1f156e8", "ppu": 100, "nativeSize": [163,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3880, "layerValue": 0, "bounds": [-272.37,-129.78,-203.91,-74.75997], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 57,
+      "path": "Scale/SLOTS/ban tra 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-280,-338.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_tra_2", "guid": "bf0b93c44daef2f4593ba0a2deb7448d", "ppu": 100, "nativeSize": [249,218], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3840, "layerValue": 0, "bounds": [-169.89,-188.16,-65.31,-96.59998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ban tra 2/ban tra 2 shadow",
+      "parentPath": "Scale/SLOTS/ban tra 2",
+      "active": true,
+      "pos": [0,-75,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_tra_2_shadow", "guid": "5b6f6efd725444049942ce9ee64a596f", "ppu": 100, "nativeSize": [205,74], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3850, "layerValue": 0, "bounds": [-160.65,-189.42,-74.55,-158.34], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 58,
+      "path": "Scale/SLOTS/bo am tra",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-283.5001,-234,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bo_am_tra", "guid": "c7b680362f16843478d0795b75971a6f", "ppu": 100, "nativeSize": [188,202], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3820, "layerValue": 0, "bounds": [-158.55,-140.7,-79.59005,-55.86001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/bo am tra/bo am tra shadow",
+      "parentPath": "Scale/SLOTS/bo am tra",
+      "active": true,
+      "pos": [-5.49994,-19.49997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bo_am_tra_shadow", "guid": "89544fe018393d943a4d80a8b394e502", "ppu": 100, "nativeSize": [177,171], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3830, "layerValue": 0, "bounds": [-158.55,-142.38,-84.21001,-70.55999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 59,
+      "path": "Scale/SLOTS/gio len",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-442.5,-392.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gio_len", "guid": "1793334c1f39dca4d826e59fbec934a6", "ppu": 100, "nativeSize": [190,201], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3800, "layerValue": 0, "bounds": [-225.75,-207.06,-145.95,-122.64], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/gio len/gio len shadow",
+      "parentPath": "Scale/SLOTS/gio len",
+      "active": true,
+      "pos": [5.99995,-77.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gio_len_shadow", "guid": "934fead4a0cd25541b18fd61c66d4b41", "ppu": 100, "nativeSize": [124,57], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3810, "layerValue": 0, "bounds": [-209.37,-209.58,-157.29,-185.64], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 60,
+      "path": "Scale/SLOTS/nhan vat",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-117.5,-404,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nhan_vat", "guid": "f1845a2cd0c6dfa4e91466ba40c452a3", "ppu": 100, "nativeSize": [292,454], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3780, "layerValue": 0, "bounds": [-110.67,-265.02,11.97,-74.33999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/nhan vat/nhan vat shadow",
+      "parentPath": "Scale/SLOTS/nhan vat",
+      "active": true,
+      "pos": [-28.50008,-205.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nhan_vat_shadow", "guid": "94b6187c460a76049acbc14d50b1d942", "ppu": 100, "nativeSize": [131,52], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3790, "layerValue": 0, "bounds": [-88.83004,-267.12,-33.81004,-245.28], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 61,
+      "path": "Scale/SLOTS/xe day",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-263,-566,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "xe_day", "guid": "66dc51b1e981bc246918613a50a47a2f", "ppu": 100, "nativeSize": [301,270], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3760, "layerValue": 0, "bounds": [-173.67,-294.42,-47.25001,-181.02], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/xe day/xe day shadow",
+      "parentPath": "Scale/SLOTS/xe day",
+      "active": true,
+      "pos": [-20.00008,-82.99999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "xe_day_shadow", "guid": "efd67cb65087c98439d0eb318180e13f", "ppu": 100, "nativeSize": [217,106], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3770, "layerValue": 0, "bounds": [-164.43,-294.84,-73.29002,-250.32], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 62,
+      "path": "Scale/SLOTS/pizza",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-305.5,-520,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pizza", "guid": "3079e57e310a4dd44ac480aec1bf0a6f", "ppu": 100, "nativeSize": [206,130], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3740, "layerValue": 0, "bounds": [-171.57,-245.7,-85.05002,-191.1], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pizza/pizza shadow",
+      "parentPath": "Scale/SLOTS/pizza",
+      "active": true,
+      "pos": [0,-4,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pizza_shadow", "guid": "afe6c60c2cd704e4a8dd3ac61597490e", "ppu": 100, "nativeSize": [206,130], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3750, "layerValue": 0, "bounds": [-171.57,-247.38,-85.05002,-192.78], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 63,
+      "path": "Scale/SLOTS/ghe an phai 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [371.9998,-405.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_phai", "guid": "a3ed3f6a2def84042a9884a2de0c7403", "ppu": 100, "nativeSize": [183,263], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3720, "layerValue": 0, "bounds": [117.8099,-225.54,194.6699,-115.08], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ghe an phai 1/ghe an phai shadow 1",
+      "parentPath": "Scale/SLOTS/ghe an phai 1",
+      "active": true,
+      "pos": [-14.49986,-89.99996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_phai_shadow", "guid": "f4e48f9ba09fd5d43be5d7adb35e9544", "ppu": 100, "nativeSize": [154,87], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3730, "layerValue": 0, "bounds": [117.81,-226.38,182.49,-189.84], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 64,
+      "path": "Scale/SLOTS/ghe an phai 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [518.9999,-473.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_phai", "guid": "a3ed3f6a2def84042a9884a2de0c7403", "ppu": 100, "nativeSize": [183,263], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3700, "layerValue": 0, "bounds": [179.55,-254.1,256.41,-143.64], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ghe an phai 2/ghe an phai shadow 2",
+      "parentPath": "Scale/SLOTS/ghe an phai 2",
+      "active": true,
+      "pos": [-14.50005,-90.00006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_phai_shadow", "guid": "f4e48f9ba09fd5d43be5d7adb35e9544", "ppu": 100, "nativeSize": [154,87], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3710, "layerValue": 0, "bounds": [179.55,-254.94,244.23,-218.4], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 65,
+      "path": "Scale/SLOTS/ghe an phai 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [680,-560.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_phai", "guid": "a3ed3f6a2def84042a9884a2de0c7403", "ppu": 100, "nativeSize": [183,263], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3680, "layerValue": 0, "bounds": [247.17,-290.64,324.03,-180.18], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ghe an phai 3/ghe an phai shadow 3",
+      "parentPath": "Scale/SLOTS/ghe an phai 3",
+      "active": true,
+      "pos": [-14.50005,-90.00006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_phai_shadow", "guid": "f4e48f9ba09fd5d43be5d7adb35e9544", "ppu": 100, "nativeSize": [154,87], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3690, "layerValue": 0, "bounds": [247.17,-291.48,311.85,-254.94], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 66,
+      "path": "Scale/SLOTS/ban an",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [332.9999,-584.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_an", "guid": "c0c638fb90dda5643b435e258be7049f", "ppu": 100, "nativeSize": [535,362], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3660, "layerValue": 0, "bounds": [27.50995,-321.72,252.2099,-169.68], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ban an/ban an shadow",
+      "parentPath": "Scale/SLOTS/ban an",
+      "active": true,
+      "pos": [1.50013,-61.00006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_an_shadow", "guid": "1e167ecb5e6964d48b37736853476358", "ppu": 100, "nativeSize": [532,250], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3670, "layerValue": 0, "bounds": [28.77001,-323.82,252.21,-218.82], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 67,
+      "path": "Scale/SLOTS/trai ban an",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [329.4999,-570,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "trai_ban_an", "guid": "5e2231443c6f03d40b6d21fdb083d3dc", "ppu": 100, "nativeSize": [572,346], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3650, "layerValue": 0, "bounds": [18.26997,-312.06,258.5099,-166.74], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 68,
+      "path": "Scale/SLOTS/ly socola 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [239.9999,-376.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_socola", "guid": "3456b0561c8a9cd4f990acdfa710e1a6", "ppu": 100, "nativeSize": [89,130], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3630, "layerValue": 0, "bounds": [82.10994,-185.64,119.4899,-131.04], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ly socola 1/ly socola shadow 1",
+      "parentPath": "Scale/SLOTS/ly socola 1",
+      "active": true,
+      "pos": [-9.00002,-50,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_socola_shadow", "guid": "e10f703b6947ed34e9c1fbfdda1ce51c", "ppu": 100, "nativeSize": [67,36], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3640, "layerValue": 0, "bounds": [82.94994,-186.9,111.0899,-171.78], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 69,
+      "path": "Scale/SLOTS/ly cf 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [123.9999,-448.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_cf_2", "guid": "e89b568eed3b3964e8baaf3abeb174ad", "ppu": 100, "nativeSize": [115,107], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3610, "layerValue": 0, "bounds": [27.92995,-210.84,76.22994,-165.9], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ly cf 2/ly cf 2 shadow",
+      "parentPath": "Scale/SLOTS/ly cf 2",
+      "active": true,
+      "pos": [-1.00002,-46.50002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_cf_2_shadow", "guid": "dd50cf47475a7124f89260f52c25335b", "ppu": 100, "nativeSize": [59,28], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3620, "layerValue": 0, "bounds": [39.26994,-213.78,64.04994,-202.02], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 70,
+      "path": "Scale/SLOTS/banh mi",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [327.4999,-425.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_mi", "guid": "b36b45158b9fb474392d05aad7cd8a29", "ppu": 100, "nativeSize": [170,143], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3590, "layerValue": 0, "bounds": [101.8499,-208.74,173.2499,-148.68], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/banh mi/banh mi shadow",
+      "parentPath": "Scale/SLOTS/banh mi",
+      "active": true,
+      "pos": [-4.50001,-36.49998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_mi_shadow", "guid": "acb4cfcb2e7b8cd49bbc65747db7c8e3", "ppu": 100, "nativeSize": [137,78], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3600, "layerValue": 0, "bounds": [106.8899,-210.42,164.4299,-177.66], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 71,
+      "path": "Scale/SLOTS/banh tao",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [222,-463.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_tao", "guid": "aa39b3c712beb044f8c6fc4662dea413", "ppu": 100, "nativeSize": [177,154], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3570, "layerValue": 0, "bounds": [56.07001,-227.22,130.41,-162.54], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/banh tao/banh tao shadow",
+      "parentPath": "Scale/SLOTS/banh tao",
+      "active": true,
+      "pos": [-1.50013,-4.00009,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_tao_shadow", "guid": "057b4dc63af5fe84fb885cbb29dcf64a", "ppu": 100, "nativeSize": [174,154], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3580, "layerValue": 0, "bounds": [56.06996,-228.9,129.1499,-164.22], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 72,
+      "path": "Scale/SLOTS/ly cf 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [457.9999,-488.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_cf_3", "guid": "41019ac23dc58ce4db0d0a0705a0f160", "ppu": 100, "nativeSize": [115,107], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3550, "layerValue": 0, "bounds": [168.2099,-227.64,216.5099,-182.7], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ly cf 3/ly cf 3 shadow",
+      "parentPath": "Scale/SLOTS/ly cf 3",
+      "active": true,
+      "pos": [-1.00002,-46.49992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_cf_3_shadow", "guid": "ee9bbb1bb1506d04393d1678c777452e", "ppu": 100, "nativeSize": [59,28], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3560, "layerValue": 0, "bounds": [179.5499,-230.58,204.3299,-218.82], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 73,
+      "path": "Scale/SLOTS/ga",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [355.9998,-536.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ga", "guid": "7f6972ff4201e9746bd1b47b4203bf5f", "ppu": 100, "nativeSize": [241,169], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3530, "layerValue": 0, "bounds": [98.90993,-260.82,200.1299,-189.84], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ga/ga shadow",
+      "parentPath": "Scale/SLOTS/ga",
+      "active": true,
+      "pos": [0,-4,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ga_shadow", "guid": "78018adbb5fa3ed4293930003233275b", "ppu": 100, "nativeSize": [241,168], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3540, "layerValue": 0, "bounds": [98.90993,-262.29,200.1299,-191.73], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 74,
+      "path": "Scale/SLOTS/binh hoa ban an",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [539.4999,-491.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "binh_hoa_ban_an", "guid": "636bf86c20a2f3c4eac213b60a35d138", "ppu": 100, "nativeSize": [152,205], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3520, "layerValue": 0, "bounds": [194.67,-249.48,258.51,-163.38], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 75,
+      "path": "Scale/SLOTS/ly socola 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [486,-567.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_socola", "guid": "3456b0561c8a9cd4f990acdfa710e1a6", "ppu": 100, "nativeSize": [89,130], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3500, "layerValue": 0, "bounds": [185.43,-265.86,222.81,-211.26], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ly socola 2/ly socola shadow 2",
+      "parentPath": "Scale/SLOTS/ly socola 2",
+      "active": true,
+      "pos": [-9.00002,-50,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ly_socola_shadow", "guid": "e10f703b6947ed34e9c1fbfdda1ce51c", "ppu": 100, "nativeSize": [67,36], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3510, "layerValue": 0, "bounds": [186.27,-267.12,214.41,-252], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 76,
+      "path": "Scale/SLOTS/ghe an trai 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [26.49994,-579,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_trai", "guid": "872adf0c39a80234d9d3e8a0438cdeb1", "ppu": 100, "nativeSize": [174,224], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3480, "layerValue": 0, "bounds": [-25.41003,-290.22,47.66997,-196.14], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ghe an trai 1/ghe an trai shadow 1",
+      "parentPath": "Scale/SLOTS/ghe an trai 1",
+      "active": true,
+      "pos": [7.99999,-69.49997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_trai_shadow", "guid": "a48883a8cc515a6468ebf723b45a867d", "ppu": 100, "nativeSize": [154,87], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3490, "layerValue": 0, "bounds": [-17.85003,-290.64,46.82997,-254.1], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 77,
+      "path": "Scale/SLOTS/ghe an trai 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [170.4999,-655,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_trai", "guid": "872adf0c39a80234d9d3e8a0438cdeb1", "ppu": 100, "nativeSize": [174,224], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3460, "layerValue": 0, "bounds": [35.06996,-322.14,108.15,-228.06], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ghe an trai 2/ghe an trai shadow 2",
+      "parentPath": "Scale/SLOTS/ghe an trai 2",
+      "active": true,
+      "pos": [5.00011,-68.49995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_trai_shadow", "guid": "a48883a8cc515a6468ebf723b45a867d", "ppu": 100, "nativeSize": [154,87], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3470, "layerValue": 0, "bounds": [41.37,-322.14,106.05,-285.6], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 78,
+      "path": "Scale/SLOTS/ghe an trai 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [325.5,-732,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_trai", "guid": "872adf0c39a80234d9d3e8a0438cdeb1", "ppu": 100, "nativeSize": [174,224], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3440, "layerValue": 0, "bounds": [100.17,-354.48,173.25,-260.4], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ghe an trai 3/ghe an trai shadow 3",
+      "parentPath": "Scale/SLOTS/ghe an trai 3",
+      "active": true,
+      "pos": [6.99997,-71.50002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_trai_shadow", "guid": "a48883a8cc515a6468ebf723b45a867d", "ppu": 100, "nativeSize": [154,87], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3450, "layerValue": 0, "bounds": [107.31,-355.74,171.99,-319.2], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 79,
+      "path": "Scale/SLOTS/noi",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [358.9999,215,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "noi", "guid": "066b4e7ecbc47e74384a098d84f407da", "ppu": 100, "nativeSize": [153,138], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3420, "layerValue": 0, "bounds": [118.65,61.31998,182.91,119.28], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/noi/noi shadow",
+      "parentPath": "Scale/SLOTS/noi",
+      "active": true,
+      "pos": [2.49996,-46.99993,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "noi_shadow", "guid": "7fda4415035584346b63497e65592ee8", "ppu": 100, "nativeSize": [110,50], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3430, "layerValue": 0, "bounds": [128.7299,60.06001,174.9299,81.06001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 80,
+      "path": "Scale/SLOTS/chuong",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-517.5,341,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chuong", "guid": "d59f98754caaf0045868ac8f244ea0dd", "ppu": 100, "nativeSize": [200,144], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3410, "layerValue": 0, "bounds": [-259.35,112.98,-175.35,173.46], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 81,
+      "path": "Scale/SLOTS/no",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-526.5001,404.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "no", "guid": "39fcce7796e189343b37df9c1c3e5ed8", "ppu": 100, "nativeSize": [158,150], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3400, "layerValue": 0, "bounds": [-254.31,138.6,-187.95,201.6], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 82,
+      "path": "Scale/SLOTS/vong decor",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-856.0001,208,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "vong_decor", "guid": "abdff012395cdb04b8742bb295e804b6", "ppu": 100, "nativeSize": [219,270], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3390, "layerValue": 0, "bounds": [-405.51,30.66,-313.53,144.06], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 83,
+      "path": "Scale/SLOTS/tranh 4",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [184.9999,52.00005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tranh_4", "guid": "61621fe8f9b1b8444b7fb94a8eb2a0d7", "ppu": 100, "nativeSize": [115,192], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3370, "layerValue": 0, "bounds": [53.54997,-18.47998,101.85,62.16002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tranh 4/tranh 4 shadow",
+      "parentPath": "Scale/SLOTS/tranh 4",
+      "active": true,
+      "pos": [4.99992,-1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tranh_4_shadow", "guid": "64bf6edd260485d4396d9d08246d08fa", "ppu": 100, "nativeSize": [115,192], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3380, "layerValue": 0, "bounds": [55.64995,-18.89999,103.9499,61.74001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 84,
+      "path": "Scale/SLOTS/dong ho to",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [189.5,226.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "dong_ho_to", "guid": "fc5730f76a7d2dd40bc212f6d551bc48", "ppu": 100, "nativeSize": [136,163], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3350, "layerValue": 0, "bounds": [51.02998,60.89997,108.15,129.36], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/dong ho to/dong ho to shadow",
+      "parentPath": "Scale/SLOTS/dong ho to",
+      "active": true,
+      "pos": [3.9999,1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "dong_ho_to_shadow", "guid": "a2e8586dd01cef94e91f16c1394d3c3a", "ppu": 100, "nativeSize": [136,163], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3360, "layerValue": 0, "bounds": [52.70994,61.31998,109.8299,129.78], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 85,
+      "path": "Scale/SLOTS/cay thong ngoai troi 4",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-1094.5,-325.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_4", "guid": "6af4beaed074a9040b0132858c3b5f8a", "ppu": 100, "nativeSize": [456,775], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2710, "layerValue": 0, "bounds": [-555.45,-299.46,-363.93,26.03999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cay thong ngoai troi 4/cay thong ngoai troi 4 shadow",
+      "parentPath": "Scale/SLOTS/cay thong ngoai troi 4",
+      "active": true,
+      "pos": [13.99994,-361,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_4_shadow", "guid": "e6511bab31c8c05498c8177a38f8d152", "ppu": 100, "nativeSize": [188,67], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2720, "layerValue": 0, "bounds": [-493.29,-302.4,-414.33,-274.26], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 86,
+      "path": "Scale/SLOTS/cay thong ngoai troi 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-1267.5,-443.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_3", "guid": "09f8646cfb8aa014480e315dd6f1f2e4", "ppu": 100, "nativeSize": [406,641], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2690, "layerValue": 0, "bounds": [-617.61,-320.88,-447.09,-51.65998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cay thong ngoai troi 3/cay thong ngoai troi 3 shadow",
+      "parentPath": "Scale/SLOTS/cay thong ngoai troi 3",
+      "active": true,
+      "pos": [-10.50005,-293.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_3_shadow", "guid": "7cfd90e6cfc8e8846aede8ec3a352a2f", "ppu": 100, "nativeSize": [167,74], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2700, "layerValue": 0, "bounds": [-571.83,-325.08,-501.69,-294], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 87,
+      "path": "Scale/SLOTS/cay thong ngoai troi 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1270,-459.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_1", "guid": "1848bfa181207fd49a34c51f657b00fc", "ppu": 100, "nativeSize": [385,642], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2670, "layerValue": 0, "bounds": [452.55,-328.02,614.2499,-58.37997], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cay thong ngoai troi 1/cay thong ngoai troi 1 shadow",
+      "parentPath": "Scale/SLOTS/cay thong ngoai troi 1",
+      "active": true,
+      "pos": [0.49992,-295.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_1_shadow", "guid": "09b61837be5248b41b42587f850b461f", "ppu": 100, "nativeSize": [170,70], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2680, "layerValue": 0, "bounds": [497.91,-331.8,569.3099,-302.4], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 88,
+      "path": "Scale/SLOTS/tuyet ngoai troi 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-820.0001,-751.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tuyet_ngoai_troi_1", "guid": "a70da5bd147131f4cb407a1208c0cb79", "ppu": 100, "nativeSize": [945,594], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2650, "layerValue": 0, "bounds": [-542.85,-440.5799,-145.95,-191.1], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tuyet ngoai troi 1/tuyet ngoai troi 1 shadow",
+      "parentPath": "Scale/SLOTS/tuyet ngoai troi 1",
+      "active": true,
+      "pos": [0,-6.00004,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tuyet_ngoai_troi_1_shadow", "guid": "8ae63deed5489f346857fdab6a5b1d9f", "ppu": 100, "nativeSize": [945,594], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2660, "layerValue": 0, "bounds": [-542.85,-443.1,-145.95,-193.62], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 89,
+      "path": "Scale/SLOTS/tuyet ngoai troi 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [914.9999,-784.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tuyet_ngoai_troi_2", "guid": "8a0dca3ee654cf4408a3c85bc3b262e4", "ppu": 100, "nativeSize": [825,431], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2630, "layerValue": 0, "bounds": [211.0499,-420,557.5499,-238.98], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tuyet ngoai troi 2/tuyet ngoai troi 2 shadow",
+      "parentPath": "Scale/SLOTS/tuyet ngoai troi 2",
+      "active": true,
+      "pos": [0,-5.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tuyet_ngoai_troi_2_shadow", "guid": "874df24422e8b8e43857c8ae637baef5", "ppu": 100, "nativeSize": [825,431], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2640, "layerValue": 0, "bounds": [211.0499,-422.1,557.5499,-241.08], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 90,
+      "path": "Scale/SLOTS/cay thong ngoai troi 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-907.5001,-717.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_2", "guid": "eb75fb438a567ec46a011deed459f40d", "ppu": 100, "nativeSize": [330,502], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2610, "layerValue": 0, "bounds": [-450.45,-406.9799,-311.85,-196.14], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cay thong ngoai troi 2/cay thong ngoai troi 2 shadow",
+      "parentPath": "Scale/SLOTS/cay thong ngoai troi 2",
+      "active": true,
+      "pos": [-3.49999,-228.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cay_thong_ngoai_troi_2_shadow", "guid": "336e7dd5f99a6d441867d47491e97070", "ppu": 100, "nativeSize": [131,59], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2620, "layerValue": 0, "bounds": [-410.13,-409.92,-355.11,-385.14], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 91,
+      "path": "Scale/SLOTS/bac thang",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-121.0001,-913.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bac_thang", "guid": "8bb96f6b1e3c2c94cbfe816691b9166e", "ppu": 100, "nativeSize": [313,245], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2590, "layerValue": 0, "bounds": [-116.55,-435.12,14.90996,-332.2199], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/bac thang/bac thang shadow",
+      "parentPath": "Scale/SLOTS/bac thang",
+      "active": true,
+      "pos": [0,-6.00004,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bac_thang_shadow", "guid": "e2950b407f3eed340b4d4392ce37501e", "ppu": 100, "nativeSize": [313,245], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2600, "layerValue": 0, "bounds": [-116.55,-437.64,14.90996,-334.74], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 92,
+      "path": "Scale/SLOTS/hang rao",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [845.4999,-913.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hang_rao", "guid": "1f6cd3a3954f5f74a9cd2fb9ba249b21", "ppu": 100, "nativeSize": [614,429], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2550, "layerValue": 0, "bounds": [226.17,-473.7599,484.0499,-293.58], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/hang rao/hang rao shadow",
+      "parentPath": "Scale/SLOTS/hang rao",
+      "active": true,
+      "pos": [2.49996,-84.00006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hang_rao_shadow", "guid": "e32570e5433ec4c42bdaea64f1c6f10c", "ppu": 100, "nativeSize": [563,275], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2560, "layerValue": 0, "bounds": [237.9299,-476.7,474.3899,-361.2], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 93,
+      "path": "Scale/SLOTS/den hang rao",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [850.9999,-914.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "den_hang_rao", "guid": "4d9762c4163ac454cb8e45fdae25d772", "ppu": 100, "nativeSize": [607,328], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2540, "layerValue": 0, "bounds": [229.95,-453.18,484.89,-315.42], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/den hang rao/den hang rao fx",
+      "parentPath": "Scale/SLOTS/den hang rao",
+      "active": true,
+      "pos": [-4.50001,2.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "den_hang_rao_fx", "guid": "4bfddf39c9e6a6c44aa3c86a00fa7f6e", "ppu": 100, "nativeSize": [716,426], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2530, "layerValue": 0, "bounds": [205.17,-472.5,505.89,-293.58], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 94,
+      "path": "Scale/SLOTS/soi",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [123.5,-1083,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "soi", "guid": "b4816bb1554589c44ab653b81f101176", "ppu": 100, "nativeSize": [474,228], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2510, "layerValue": 0, "bounds": [-47.67001,-502.74,151.41,-406.98], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/soi/soi shadow",
+      "parentPath": "Scale/SLOTS/soi",
+      "active": true,
+      "pos": [0,-4.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "soi_shadow", "guid": "6f8fb3ec734aa4547b8b9f47e4ecd9df", "ppu": 100, "nativeSize": [474,228], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2520, "layerValue": 0, "bounds": [-47.67001,-504.8399,151.41,-409.08], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 95,
+      "path": "Scale/SLOTS/nguoi tuyet",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-444.0001,-909.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nguoi_tuyet", "guid": "a26ca59b47ed1ac4cb62444e26607c9e", "ppu": 100, "nativeSize": [401,431], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2490, "layerValue": 0, "bounds": [-270.69,-472.4999,-102.27,-291.48], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/nguoi tuyet/nguoi tuyet shadow",
+      "parentPath": "Scale/SLOTS/nguoi tuyet",
+      "active": true,
+      "pos": [-10.00004,-147.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nguoi_tuyet_shadow", "guid": "93f8ad94e60d1124fa796a5f8d6bd838", "ppu": 100, "nativeSize": [319,152], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2500, "layerValue": 0, "bounds": [-257.67,-475.86,-123.69,-412.02], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 96,
+      "path": "Scale/SLOTS/cuc tuyet",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-278.0001,-1127.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cuc_tuyet", "guid": "f646e8d524ddbb447ae2a59442285832", "ppu": 100, "nativeSize": [245,221], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2470, "layerValue": 0, "bounds": [-168.21,-519.96,-65.31003,-427.14], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cuc tuyet/cuc tuyet shadow",
+      "parentPath": "Scale/SLOTS/cuc tuyet",
+      "active": true,
+      "pos": [1.00002,-5.99999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cuc_tuyet_shadow", "guid": "3578bc982b93cfa46aacb4144d8c3a07", "ppu": 100, "nativeSize": [245,221], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2480, "layerValue": 0, "bounds": [-167.79,-522.4799,-64.89001,-429.6599], "flipX": false, "flipY": false }
+    }
+  ],
+  "conflicts": [
+    { "a": "Scale/LevelController", "rangeA": [-4970,-4870], "b": "Scale/SLOTS", "rangeB": [-4960,-2470], "overlappingPairs": 516 },
+    { "a": "Scale/SLOTS/ke gap", "rangeA": [-4410,-4360], "b": "Scale/SLOTS/hu 1", "rangeB": [-4380,-4370], "overlappingPairs": 4 },
+    { "a": "Scale/SLOTS/ghe tang 1", "rangeA": [-3940,-3860], "b": "Scale/SLOTS/khan trai", "rangeB": [-3920,-3910], "overlappingPairs": 4 },
+    { "a": "Scale/SLOTS/ghe tang 1", "rangeA": [-3940,-3860], "b": "Scale/SLOTS/goi 2", "rangeB": [-3900,-3890], "overlappingPairs": 4 },
+    { "a": "Scale/SLOTS/ghe tang 1", "rangeA": [-3940,-3860], "b": "Scale/SLOTS/goi", "rangeB": [-3880,-3870], "overlappingPairs": 6 },
+    { "a": "Scale/SLOTS/lo suoi/lo suoi cut", "rangeA": [-4110,-4110], "b": "Scale/SLOTS/lo suoi/lua", "rangeB": [-4120,-4100], "overlappingPairs": 2 }
+  ]
+}

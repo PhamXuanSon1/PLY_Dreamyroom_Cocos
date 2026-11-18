@@ -109,12 +109,13 @@ export class BaseRoomManager extends Component {
         if (!room) return;
         room.initializeOriginalScale(view.scale);
         if (view.pos && view.panRange) room.setPanBounds(view.pos, view.panRange);
+        else if (view.pos) room.setPanAnchor(view.pos);
     }
 
     /**
      * Unity: PlayIntroAnimation — phóng to BaseRoom và di chuyển tới khung nhìn đầu tiên.
      * Multi Phase: khung = Room View của lượt 1 (introViewProvider). Không có thì như cũ:
-     * scale gốc + baseRoomEndPos, giới hạn kéo là 4 node Limit của BaseRoom.
+     * scale gốc + baseRoomEndPos, giới hạn kéo là panLeft/Right/Up/Down (px) của BaseRoom quanh vị trí đó.
      */
     playIntroAnimation(onComplete?: () => void): void {
         if (!this.baseRoom) {

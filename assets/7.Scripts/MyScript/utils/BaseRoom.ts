@@ -20,20 +20,20 @@ const { ccclass, property } = _decorator;
 @ccclass('BaseRoom')
 export class BaseRoom extends Component implements IPointerHandler, IPinchHandler {
 
-    @property({ type: Node, tooltip: 'Giới hạn phải khi kéo màn.' })
-    rightLimitPos: Node | null = null;
+    @property({ tooltip: 'Kéo phòng sang PHẢI tối đa bao nhiêu px, tính từ vị trí phòng sau intro (Base Room EndPos).' })
+    panRight = 120;
 
-    @property({ type: Node, tooltip: 'Giới hạn trái khi kéo màn.' })
-    leftLimitPos: Node | null = null;
+    @property({ tooltip: 'Kéo phòng sang TRÁI tối đa bao nhiêu px, tính từ vị trí phòng sau intro (Base Room EndPos).' })
+    panLeft = 120;
 
     @property({ tooltip: 'Cho phép kéo phòng lên/xuống (trục Y), không chỉ trái/phải.' })
     enableVerticalPan = true;
 
-    @property({ type: Node, tooltip: 'Giới hạn trên khi kéo màn (vị trí Y cao nhất của phòng).', visible(this: BaseRoom) { return this.enableVerticalPan; } })
-    topLimitPos: Node | null = null;
+    @property({ tooltip: 'Kéo phòng LÊN tối đa bao nhiêu px, tính từ vị trí phòng sau intro.', visible(this: BaseRoom) { return this.enableVerticalPan; } })
+    panUp = 80;
 
-    @property({ type: Node, tooltip: 'Giới hạn dưới khi kéo màn (vị trí Y thấp nhất của phòng).', visible(this: BaseRoom) { return this.enableVerticalPan; } })
-    bottomLimitPos: Node | null = null;
+    @property({ tooltip: 'Kéo phòng XUỐNG tối đa bao nhiêu px, tính từ vị trí phòng sau intro.', visible(this: BaseRoom) { return this.enableVerticalPan; } })
+    panDown = 80;
 
     @property({ tooltip: 'Tốc độ pinch zoom trên mobile.' })
     mobileZoomSpeed = 0.005;
@@ -88,8 +88,11 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     private originalScaleInitialized = false;
     private interactionEnabled = false;
 
-    /** Khung kéo theo số (MapPhaseManager đặt theo từng lượt) — có thì dùng thay cho 4 node Limit. */
+    /** Khung kéo theo số (MapPhaseManager đặt theo từng lượt) — có thì dùng thay cho panLeft/Right/Up/Down. */
     private panBounds: { minX: number; maxX: number; minY: number; maxY: number } | null = null;
+
+    /** Mốc (world) cho panLeft/Right/Up/Down. Chưa đặt thì lấy vị trí phòng lúc kẹp lần đầu. */
+    private panAnchor: Vec3 | null = null;
 
     private dragStartWorld = new Vec3();
     private roomStartPosition = new Vec3();
@@ -147,7 +150,13 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
         return this.interactionEnabled;
     }
 
-    /** Cho kéo phòng trong khoảng center ± range (world). Thay cho 4 node Limit tới khi clearPanBounds(). */
+    /** Mốc cho panLeft/Right/Up/Down (thường là vị trí phòng sau intro). Bỏ khung setPanBounds nếu có. */
+    setPanAnchor(pos: Readonly<Vec3>): void {
+        this.panAnchor = new Vec3(pos);
+        this.panBounds = null;
+    }
+
+    /** Cho kéo phòng trong khoảng center ± range (world). Thay cho panLeft/Right/Up/Down tới khi clearPanBounds(). */
     setPanBounds(center: Readonly<Vec3>, range: Readonly<Vec2>): void {
         const rx = Math.abs(range.x), ry = Math.abs(range.y);
         this.panBounds = { minX: center.x - rx, maxX: center.x + rx, minY: center.y - ry, maxY: center.y + ry };
@@ -159,7 +168,7 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
 
     /**
      * Phòng (vị trí hiện tại) nằm ngoài khung kéo -> lần kéo đầu tiên phòng bị giật về mép khung.
-     * Hay gặp khi 4 node Limit còn để ở vị trí của màn cũ. Chỉ cảnh báo, không tự sửa.
+     * Chỉ xảy ra với khung setPanBounds (Room View của MapPhaseManager). Chỉ cảnh báo, không tự sửa.
      */
     warnIfOutsideLimits(): void {
         const cur = this.node.worldPosition;
@@ -167,7 +176,7 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
         if (Vec3.distance(cur, clamped) <= 1) return;
         console.warn(`[BaseRoom] Phòng ở (${cur.x.toFixed(0)}, ${cur.y.toFixed(0)}) nằm NGOÀI khung kéo `
             + `-> chạm kéo là phòng nhảy tới (${clamped.x.toFixed(0)}, ${clamped.y.toFixed(0)}). `
-            + `Dời 4 node Limit (Left/Right/Top/Bottom) về quanh vị trí phòng sau intro.`);
+            + `Kiểm tra Room Pos / Pan Range của lượt trong MapPhaseManager.`);
     }
 
     // ======================================================== pan
@@ -236,7 +245,7 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
     }
 
     // ======================================================== clamp
-    /** Unity: ClampPosition — kẹp trục X (left/right), và trục Y (top/bottom) nếu bật enableVerticalPan. */
+    /** Unity: ClampPosition — kẹp trục X (panLeft/panRight), và trục Y (panUp/panDown) nếu bật enableVerticalPan. Đơn vị px world. */
     private clampPosition(position: Vec3): Vec3 {
         const b = this.panBounds;
         if (b) {
@@ -244,20 +253,12 @@ export class BaseRoom extends Component implements IPointerHandler, IPinchHandle
             if (this.enableVerticalPan) position.y = math.clamp(position.y, b.minY, b.maxY);
             return position;
         }
-        position.x = BaseRoom.clampAxis(position.x,
-            this.leftLimitPos?.worldPosition.x, this.rightLimitPos?.worldPosition.x);
+        if (!this.panAnchor) this.panAnchor = this.node.worldPosition.clone();
+        const a = this.panAnchor;
+        position.x = math.clamp(position.x, a.x - Math.abs(this.panLeft), a.x + Math.abs(this.panRight));
         if (this.enableVerticalPan) {
-            position.y = BaseRoom.clampAxis(position.y,
-                this.bottomLimitPos?.worldPosition.y, this.topLimitPos?.worldPosition.y);
+            position.y = math.clamp(position.y, a.y - Math.abs(this.panDown), a.y + Math.abs(this.panUp));
         }
         return position;
-    }
-
-    /** Kẹp v trong [a, b] (không cần biết a/b cái nào nhỏ hơn); thiếu 1 đầu thì chỉ kẹp đầu còn lại. */
-    private static clampAxis(v: number, a: number | undefined, b: number | undefined): number {
-        if (a !== undefined && b !== undefined) return math.clamp(v, Math.min(a, b), Math.max(a, b));
-        if (a !== undefined) return Math.max(v, a);
-        if (b !== undefined) return Math.min(v, b);
-        return v;
     }
 }
