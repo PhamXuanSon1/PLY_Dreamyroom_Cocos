@@ -219,11 +219,16 @@ exports.methods = {
         if (state.popDirty.size) {
             const merges = Object.keys(state.merged).map((u) => ({ source: state.merged[u].source, item: u }));
             const orders = {};
-            state.popDirty.forEach((u) => { orders[u] = (state.pops[u] || []).map((p) => p.uuid); });
-            const mr = await Editor.Message.request(PKG, 'apply-merges', merges, orders)
+            const removals = [];
+            state.popDirty.forEach((u) => {
+                const list = state.pops[u] || [];
+                list.filter((p) => p.remove).forEach((p) => removals.push(p.uuid));
+                orders[u] = list.filter((p) => !p.remove).map((p) => p.uuid);
+            });
+            const mr = await Editor.Message.request(PKG, 'apply-merges', merges, orders, removals, state.parent.uuid)
                 .catch((e) => ({ ok: false, errors: [String(e)] }));
             seatMsg += mr && mr.ok && !mr.errors.length
-                ? ' Gộp ' + mr.merged + ' item vào đồ đựng.'
+                ? ' Gộp ' + mr.merged + ' item vào đồ đựng' + (mr.removed ? ', tách ' + mr.removed + ' đồ nhỏ thành item' : '') + '.'
                 : ' Gộp đồ nhỏ LỖI: ' + (((mr && mr.errors) || []).join('; ') || '?') + '.';
         }
         await this.load(state.parent.uuid);
@@ -294,7 +299,15 @@ exports.methods = {
         const source = state.revealTarget;
         const list = state.pops[source] || [];
         const entry = list[index];
-        if (!entry || !entry.item) {
+        if (!entry) {
+            return;
+        }
+        if (!entry.item) {
+            // Đồ đã gộp (đã Save): đánh dấu tách ra — Save đưa đích về Placeholder + tạo item mới (không xoá); bấm lại = giữ
+            entry.remove = !entry.remove;
+            state.popDirty.add(source);
+            state.dirty = true;
+            this.render();
             return;
         }
         list.splice(index, 1);
@@ -350,13 +363,16 @@ exports.methods = {
         }
         list.forEach((p, i) => {
             const row = document.createElement('div');
-            row.className = 'reveal-row' + (p.item ? ' pending' : '');
-            row.title = p.item ? 'Chưa Save — ✕ để trả item về board' : 'Đã gộp (con của đích đồ đựng). Muốn bỏ thì sửa trong Hierarchy.';
+            row.className = 'reveal-row' + (p.item ? ' pending' : '') + (p.remove ? ' removed' : '');
+            row.title = p.item ? 'Chưa Save — ✕ để trả item về board'
+                : p.remove ? 'Save sẽ TÁCH ra thành item thường (hiện lại trên board) — bấm ↺ để giữ trong đồ đựng'
+                    : 'Đã gộp (con của đích đồ đựng) — ✕ để tách ra thành item thường (không xoá)';
             row.innerHTML = '<span class="idx">' + (i + 1) + '</span>'
                 + '<span class="name">' + escapeHtml(p.name) + '</span>'
                 + '<button data-a="up" title="Lên"' + (i === 0 ? ' disabled' : '') + '>▲</button>'
                 + '<button data-a="down" title="Xuống"' + (i === list.length - 1 ? ' disabled' : '') + '>▼</button>'
-                + (p.item ? '<button data-a="del" title="Trả item về board">✕</button>' : '');
+                + '<button data-a="del" title="' + (p.item ? 'Trả item về board' : p.remove ? 'Giữ lại' : 'Tách ra thành item (khi Save)') + '">'
+                + (p.remove ? '↺' : '✕') + '</button>';
             row.addEventListener('click', (e) => {
                 const a = e.target && e.target.dataset && e.target.dataset.a;
                 if (a === 'up') this.revealMove(i, -1);
@@ -558,7 +574,7 @@ exports.methods = {
         if (state.mode === 'reveal' && state.revealTarget === item.uuid) {
             el.classList.add('seat-target');
         }
-        const pops = state.pops[item.uuid] || [];
+        const pops = (state.pops[item.uuid] || []).filter((p) => !p.remove);
         el.draggable = state.mode === 'order';
         el.title = item.name + '\n' + item.width + ' x ' + item.height + (item.active ? '' : '\n(inactive)')
             + (requires.length ? '\nCần ghép trước: ' + requires.map((u) => state.names[u] || u).join(', ') : '');

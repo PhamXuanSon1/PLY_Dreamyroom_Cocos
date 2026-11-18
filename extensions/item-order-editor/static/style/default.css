@@ -290,3 +290,12 @@ header h2 {
     line-height: 16px;
     cursor: pointer;
 }
+
+.reveal-row.removed {
+    opacity: 0.5;
+}
+
+.reveal-row.removed .name {
+    font-style: italic;
+    color: #f0ad4e;
+}

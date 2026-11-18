@@ -160,6 +160,56 @@ async function removeFromItemLists(removed) {
     return count;
 }
 
+/**
+ * Tách 1 đồ nhỏ (đích …Place đang là con của đích đồ đựng) thành item thường:
+ *   - đích chuyển lên cùng cấp với đích đồ đựng (vd Placeholder), giữ vị trí world;
+ *   - tạo item trong `itemsParent`: UITransform + ItemController(targetPoint) + ItemMovement + ItemGraphic
+ *     + BoxCollider2D, layer Item, con "Image" dùng sprite của đích (giống item khác).
+ */
+async function splitToItem(targetUuid, itemsParent, k) {
+    const req = (m, a) => Editor.Message.request('scene', m, a);
+    const t = await queryNode(targetUuid);
+    if (!t || !itemsParent) {
+        return false;
+    }
+    const holder = await queryNode((dumpValue(t.parent) || {}).uuid);
+    const up = holder && (dumpValue(holder.parent) || {}).uuid;
+    if (up) {
+        await req('set-parent', { parent: up, uuids: [targetUuid], keepWorldTransform: true });
+    }
+    const sprite = findComp(t, 'cc.Sprite');
+    const sf = (compProp(sprite, 'spriteFrame') || {}).uuid || '';
+    const size = compProp(findComp(t, 'cc.UITransform'), 'contentSize') || { width: 100, height: 100 };
+    const name = String(dumpValue(t.name)).replace(/Place$/, '') || 'item';
+
+    const idx = async (u, type) => (((await queryNode(u)) || {}).__comps__ || []).findIndex((c) => c && c.type === type);
+    const add = async (u, type) => { if (await idx(u, type) < 0) await req('create-component', { uuid: u, component: type }); };
+    const set = async (u, type, prop, dump) => {
+        const i = await idx(u, type);
+        if (i >= 0) await req('set-property', { uuid: u, path: '__comps__.' + i + '.' + prop, dump });
+    };
+    const SZ = { type: 'cc.Size', value: { width: size.width, height: size.height } };
+
+    const item = await req('create-node', { parent: itemsParent, name });
+    await req('set-property', { uuid: item, path: 'position', dump: { type: 'cc.Vec3', value: { x: -1450 + (k % 5) * 160, y: -1250 - Math.floor(k / 5) * 220, z: 0 } } });
+    await req('set-property', { uuid: item, path: 'layer', dump: { type: 'Enum', value: 2 } });
+    await add(item, 'cc.UITransform');
+    await set(item, 'cc.UITransform', 'contentSize', SZ);
+    for (const type of [ITEM_COMPONENT, 'ItemMovement', 'ItemGraphic', 'cc.BoxCollider2D']) await add(item, type);
+    await set(item, ITEM_COMPONENT, 'targetPoint', { type: 'cc.Node', value: { uuid: targetUuid } });
+    await set(item, 'cc.BoxCollider2D', 'size', SZ);
+    await set(item, 'cc.BoxCollider2D', 'offset', { type: 'cc.Vec2', value: { x: 0, y: 0 } });
+
+    const img = await req('create-node', { parent: item, name: 'Image' });
+    await req('set-property', { uuid: img, path: 'layer', dump: { type: 'Enum', value: 8 } });
+    for (const type of ['cc.UITransform', 'cc.Sprite', 'cc.Sorting2D']) await add(img, type);
+    if (sf) await set(img, 'cc.Sprite', 'spriteFrame', { type: 'cc.SpriteFrame', value: { uuid: sf } });
+    await set(img, 'cc.Sprite', 'sizeMode', { type: 'Enum', value: 0 });
+    await set(img, 'cc.UITransform', 'contentSize', SZ);
+    await set(img, 'cc.Sorting2D', 'sortingOrder', { type: 'Number', value: -1001 });
+    return true;
+}
+
 async function queryNode(uuid) {
     try {
         return await Editor.Message.request('scene', 'query-node', uuid);
@@ -458,7 +508,13 @@ exports.methods = {
      *   tên chưa khớp "...Place" / "Holder_..." thì thêm hậu tố "Place"; node item bị xoá + gỡ khỏi danh sách item.
      *   orders = { sourceItemUuid: [uuid con nảy ra theo thứ tự] }: sắp lại siblingIndex các con đó.
      */
-    async applyMerges(merges, orders) {
+    async applyMerges(merges, orders, splits, itemsParent) {
+        // Tách đồ nhỏ ra khỏi đồ đựng (KHÔNG xoá): đích về lại cùng cấp với đích đồ đựng
+        // (giữ vị trí world) + tạo item kéo thả mới trỏ vào nó -> hiện lại trên board.
+        let dropped = 0;
+        for (let k = 0; k < (splits || []).length; k++) {
+            if (await splitToItem(splits[k], itemsParent, k)) dropped++;
+        }
         const removed = [];
         const errors = [];
         for (const m of merges || []) {
@@ -504,9 +560,9 @@ exports.methods = {
         } catch (e) {
             /* editor cũ không có snapshot */
         }
-        log('Gộp ' + removed.length + ' item vào đồ đựng (gỡ ' + unlisted + ' chỗ trong danh sách item), sắp lại ' + moves
+        log('Tách ' + dropped + ' đồ nhỏ thành item. Gộp ' + removed.length + ' item vào đồ đựng (gỡ ' + unlisted + ' chỗ trong danh sách item), sắp lại ' + moves
             + ' node' + (errors.length ? ', lỗi: ' + errors.join('; ') : '') + '. Nhấn Ctrl+S để lưu scene.');
-        return { ok: true, merged: removed.length, moves, errors };
+        return { ok: true, merged: removed.length, removed: dropped, moves, errors };
     },
 };
 
