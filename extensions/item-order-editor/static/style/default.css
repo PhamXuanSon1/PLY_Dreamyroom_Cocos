@@ -239,3 +239,54 @@ header h2 {
     background: #f0ad4e;
     color: #222;
 }
+
+/* ---- reveal mode (gộp đồ nhỏ vào đồ đựng) ---- */
+
+.cell .badge.reveal {
+    background: #6a4c93;
+    color: #f3e8ff;
+}
+
+.reveal-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px 8px;
+    border-radius: 3px;
+    background: var(--color-normal-fill-weaker, #2a2a2a);
+    border-left: 3px solid #6a4c93;
+}
+
+.reveal-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.reveal-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background: var(--color-normal-fill, #333);
+}
+
+.reveal-row.pending {
+    outline: 1px dashed #b48ee0;
+}
+
+.reveal-row .idx {
+    min-width: 16px;
+    text-align: right;
+    color: var(--color-normal-contrast-weakest, #888);
+}
+
+.reveal-row button {
+    padding: 0 4px;
+    font-size: 10px;
+    line-height: 16px;
+    cursor: pointer;
+}

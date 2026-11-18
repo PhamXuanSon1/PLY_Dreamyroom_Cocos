@@ -49,6 +49,117 @@ function seatRequires(dump) {
     return list.map((e) => { const v = dumpValue(e); return (v && v.uuid) || ''; }).filter(Boolean);
 }
 
+/**
+ * Đồ nhỏ nảy ra lần lượt sau khi ghép đồ đựng (MistakeHintMode.revealSmallItems): con trực tiếp của
+ * đích đồ đựng, tên kết thúc bằng "Place" hoặc bắt đầu bằng "Holder_". Thứ tự nảy = thứ tự Hierarchy.
+ */
+const POP_RE = /(Place$|^Holder_)/;
+
+function targetOf(dump) {
+    const t = compProp(findComp(dump, ITEM_COMPONENT), 'targetPoint');
+    return (t && t.uuid) || '';
+}
+
+async function nodeName(uuid) {
+    const dump = uuid ? await queryNode(uuid) : null;
+    return dump ? String(dumpValue(dump.name) || '') : '';
+}
+
+/** Con nảy ra lần lượt của node đích (theo thứ tự Hierarchy). */
+async function popsOf(targetUuid) {
+    const tree = targetUuid ? await queryTree(targetUuid) : null;
+    return ((tree && tree.children) || [])
+        .filter((c) => POP_RE.test(c.name))
+        .map((c) => ({ uuid: c.uuid, name: c.name }));
+}
+
+/**
+ * Sắp lại các con có trong `ordered` của parentUuid theo thứ tự đó; con khác giữ nguyên slot.
+ * Dùng move-array-element (có undo). Trả về số lần di chuyển.
+ */
+async function reorderChildren(parentUuid, ordered) {
+    const tree = await queryTree(parentUuid);
+    if (!tree) {
+        return 0;
+    }
+    const current = (tree.children || []).map((c) => c.uuid);
+    const list = ordered.filter((u) => current.includes(u));
+    const queue = list.slice();
+    const wanted = current.map((u) => (list.includes(u) ? queue.shift() : u));
+    let moves = 0;
+    for (let target = 0; target < wanted.length; target++) {
+        const from = current.indexOf(wanted[target]);
+        if (from === target) {
+            continue;
+        }
+        await Editor.Message.request('scene', 'move-array-element', {
+            uuid: parentUuid,
+            path: 'children',
+            target: from,
+            offset: target - from,
+        });
+        current.splice(from, 1);
+        current.splice(target, 0, wanted[target]);
+        moves++;
+    }
+    return moves;
+}
+
+/** Dump mảng cc.Node cho set-property. */
+function nodeArrayDump(uuids) {
+    return { type: 'cc.Node', isArray: true, value: uuids.map((u) => ({ type: 'cc.Node', value: u ? { uuid: u } : null })) };
+}
+
+function uuidsOfArrayDump(listDump) {
+    return ((listDump && listDump.value) || []).map((e) => (e && e.value && e.value.uuid) || '');
+}
+
+/**
+ * Gỡ các node `removed` khỏi mọi danh sách item trong scene: ItemManager.itemList,
+ * MapPhaseManager.singleItems, MapPhaseManager.phases[*].itemList / afterComplete.
+ */
+async function removeFromItemLists(removed) {
+    const root = await queryTree();
+    const owners = [];
+    (function walk(n) {
+        if ((n.components || []).some((c) => c.type === MANAGER_COMPONENT || c.type === 'MapPhaseManager')) {
+            owners.push(n.uuid);
+        }
+        (n.children || []).forEach(walk);
+    })(root || {});
+
+    let count = 0;
+    const strip = async (uuid, path, listDump) => {
+        const cur = uuidsOfArrayDump(listDump);
+        const next = cur.filter((u) => !removed.includes(u));
+        if (next.length === cur.length) {
+            return;
+        }
+        await Editor.Message.request('scene', 'set-property', { uuid, path, dump: nodeArrayDump(next) });
+        count += cur.length - next.length;
+    };
+    for (const uuid of owners) {
+        const dump = await queryNode(uuid);
+        const comps = (dump && dump.__comps__) || [];
+        for (let i = 0; i < comps.length; i++) {
+            const c = comps[i];
+            const v = (c && c.value) || {};
+            if (c.type === MANAGER_COMPONENT) {
+                await strip(uuid, '__comps__.' + i + '.itemList', v.itemList);
+            } else if (c.type === 'MapPhaseManager') {
+                await strip(uuid, '__comps__.' + i + '.singleItems', v.singleItems);
+                const phases = (v.phases && v.phases.value) || [];
+                for (let j = 0; j < phases.length; j++) {
+                    const p = (phases[j] && phases[j].value) || {};
+                    await strip(uuid, '__comps__.' + i + '.phases.' + j + '.itemList', p.itemList);
+                    await strip(uuid, '__comps__.' + i + '.phases.' + j + '.afterComplete', p.afterComplete);
+                }
+            }
+        }
+    }
+    return count;
+}
+
 async function queryNode(uuid) {
     try {
         return await Editor.Message.request('scene', 'query-node', uuid);
@@ -232,6 +343,9 @@ exports.methods = {
                 thumb: await thumbnailOf(sfUuid),
                 hasSeat: !!findComp(dump, SEAT_COMPONENT),
                 requires: seatRequires(dump),
+                targetUuid: targetOf(dump),
+                targetName: await nodeName(targetOf(dump)),
+                pops: await popsOf(targetOf(dump)),
             });
         }
         const list = await readItemList();
@@ -336,6 +450,63 @@ exports.methods = {
         }
         log('SeatHandler: ghi ' + set + ' item, gỡ ' + removed + ' component. Nhấn Ctrl+S để lưu scene.');
         return { ok: true, set, removed };
+    },
+
+    /**
+     * Gộp item vào đồ đựng (đồ nhỏ nảy ra lần lượt khi ghép đồ đựng — MistakeHintMode):
+     *   merges = [{ source, item }]: đích của `item` thành con của đích `source` (giữ vị trí world),
+     *   tên chưa khớp "...Place" / "Holder_..." thì thêm hậu tố "Place"; node item bị xoá + gỡ khỏi danh sách item.
+     *   orders = { sourceItemUuid: [uuid con nảy ra theo thứ tự] }: sắp lại siblingIndex các con đó.
+     */
+    async applyMerges(merges, orders) {
+        const removed = [];
+        const errors = [];
+        for (const m of merges || []) {
+            const srcTarget = targetOf(await queryNode(m.source));
+            const itemDump = await queryNode(m.item);
+            const itemTarget = targetOf(itemDump);
+            const itemName = itemDump ? String(dumpValue(itemDump.name)) : m.item;
+            if (!srcTarget || !itemTarget) {
+                errors.push(itemName + ': thiếu Target Point');
+                continue;
+            }
+            // Đích của item là tổ tiên của đích đồ đựng -> set-parent sẽ tạo vòng
+            let p = await queryNode(srcTarget);
+            let cyclic = false;
+            for (let guard = 0; p && guard < 64; guard++) {
+                const parentUuid = (dumpValue(p.parent) || {}).uuid;
+                if (!parentUuid) break;
+                if (parentUuid === itemTarget) { cyclic = true; break; }
+                p = await queryNode(parentUuid);
+            }
+            if (cyclic || srcTarget === itemTarget) {
+                errors.push(itemName + ': đích nằm bao ngoài đích đồ đựng');
+                continue;
+            }
+            await Editor.Message.request('scene', 'set-parent', { parent: srcTarget, uuids: [itemTarget], keepWorldTransform: true });
+            const name = await nodeName(itemTarget);
+            if (!POP_RE.test(name)) {
+                await Editor.Message.request('scene', 'set-property', { uuid: itemTarget, path: 'name', dump: { type: 'String', value: name + 'Place' } });
+            }
+            removed.push(m.item);
+        }
+        const unlisted = removed.length ? await removeFromItemLists(removed) : 0;
+        for (const uuid of removed) {
+            await Editor.Message.request('scene', 'remove-node', { uuid });
+        }
+        let moves = 0;
+        for (const source of Object.keys(orders || {})) {
+            const srcTarget = targetOf(await queryNode(source));
+            if (srcTarget) moves += await reorderChildren(srcTarget, orders[source]);
+        }
+        try {
+            await Editor.Message.request('scene', 'snapshot');
+        } catch (e) {
+            /* editor cũ không có snapshot */
+        }
+        log('Gộp ' + removed.length + ' item vào đồ đựng (gỡ ' + unlisted + ' chỗ trong danh sách item), sắp lại ' + moves
+            + ' node' + (errors.length ? ', lỗi: ' + errors.join('; ') : '') + '. Nhấn Ctrl+S để lưu scene.');
+        return { ok: true, merged: removed.length, moves, errors };
     },
 };
 

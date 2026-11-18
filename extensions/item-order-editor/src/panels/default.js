@@ -18,6 +18,10 @@ exports.$ = {
     sortByList: '#sortByList',
     seatMode: '#seatMode',
     seatClear: '#seatClear',
+    revealMode: '#revealMode',
+    revealPanel: '#revealPanel',
+    revealTitle: '#revealTitle',
+    revealList: '#revealList',
     status: '#status',
     board: '#board',
 };
@@ -54,7 +58,11 @@ const state = {
     drag: null,         // { col, row }
     dirty: false,
     itemListOrder: null, // uuid theo ItemManager.itemList (thứ tự spawn) lúc load
-    mode: 'order',      // 'order' = sắp thứ tự | 'seat' = điền SeatHandler.requiredItems
+    mode: 'order',      // 'order' = sắp thứ tự | 'seat' = điền SeatHandler.requiredItems | 'reveal' = gộp đồ nhỏ vào đồ đựng
+    revealTarget: null, // uuid đồ đựng đang sửa (chế độ reveal)
+    pops: {},           // uuid item -> [{ uuid, name, item? }] con nảy ra lần lượt của đích (item = uuid item gộp chờ Save)
+    merged: {},         // uuid item gộp chờ Save -> { source, item (object để trả lại board) }
+    popDirty: new Set(), // uuid đồ đựng đã đổi danh sách / thứ tự, chưa Save
     seatTarget: null,   // uuid item đang sửa requiredItems (chế độ seat)
     requires: {},       // uuid -> [uuid item bắt buộc ghép trước]
     seatDirty: new Set(), // uuid item đã đổi requiredItems, chưa Save
@@ -133,6 +141,13 @@ exports.methods = {
         if (state.seatTarget && !state.requires[state.seatTarget]) {
             state.seatTarget = null;
         }
+        state.pops = {};
+        res.items.forEach((it) => { state.pops[it.uuid] = (it.pops || []).slice(); });
+        state.merged = {};
+        state.popDirty = new Set();
+        if (state.revealTarget && !state.pops[state.revealTarget]) {
+            state.revealTarget = null;
+        }
         this.$.parentName.textContent = res.parent.name + '  (' + res.items.length + ' items'
             + (res.skipped ? ', bỏ qua ' + res.skipped + ' node không phải item' : '') + ')';
         savePrefs({ parentUuid: res.parent.uuid, perColumn: this.perColumn() });
@@ -201,6 +216,16 @@ exports.methods = {
                 ? ' SeatHandler: ghi ' + sr.set + ' item' + (sr.removed ? ', gỡ ' + sr.removed : '') + '.'
                 : ' SeatHandler LỖI: ' + ((sr && sr.error) || '?') + '.';
         }
+        if (state.popDirty.size) {
+            const merges = Object.keys(state.merged).map((u) => ({ source: state.merged[u].source, item: u }));
+            const orders = {};
+            state.popDirty.forEach((u) => { orders[u] = (state.pops[u] || []).map((p) => p.uuid); });
+            const mr = await Editor.Message.request(PKG, 'apply-merges', merges, orders)
+                .catch((e) => ({ ok: false, errors: [String(e)] }));
+            seatMsg += mr && mr.ok && !mr.errors.length
+                ? ' Gộp ' + mr.merged + ' item vào đồ đựng.'
+                : ' Gộp đồ nhỏ LỖI: ' + (((mr && mr.errors) || []).join('; ') || '?') + '.';
+        }
         await this.load(state.parent.uuid);
         const list = res.itemList || {};
         this.showStatus('Đã sắp xếp lại ' + uuids.length + ' node (' + res.moves + ' lần di chuyển). '
@@ -211,13 +236,135 @@ exports.methods = {
     // ------------------------------------------------------------ seat mode
 
     toggleSeatMode() {
-        state.mode = state.mode === 'seat' ? 'order' : 'seat';
+        this.setMode(state.mode === 'seat' ? 'order' : 'seat');
+    },
+
+    toggleRevealMode() {
+        this.setMode(state.mode === 'reveal' ? 'order' : 'reveal');
+    },
+
+    setMode(mode) {
+        state.mode = mode;
         state.picked = null;
         state.seatTarget = null;
-        if (state.mode === 'order') {
+        state.revealTarget = null;
+        if (mode === 'order') {
             this.hideStatus();
         }
         this.render();
+    },
+
+    // ------------------------------------------------------------ reveal mode (gộp đồ nhỏ vào đồ đựng)
+
+    /** Chuột trái: chọn đồ đựng đang sửa (click lại = xong). */
+    revealClick(item) {
+        state.revealTarget = state.revealTarget === item.uuid ? null : item.uuid;
+        this.render();
+    },
+
+    /** Chuột phải: gộp item này vào đồ đựng đang sửa -> biến khỏi board, đích của nó nảy ra khi ghép đồ đựng. */
+    revealMerge(item) {
+        const source = state.revealTarget;
+        if (!source) {
+            this.showStatus('Chuột trái vào đồ đựng trước, rồi mới chuột phải vào các item sẽ nảy ra.', 'error');
+            return;
+        }
+        if (item.uuid === source) {
+            return;
+        }
+        if (!item.targetUuid) {
+            this.showStatus('"' + item.name + '" chưa gán Target Point -> không có gì để nảy ra.', 'error');
+            return;
+        }
+        const pos = this.findPos(item.uuid);
+        if (!pos) {
+            return;
+        }
+        this.take(pos);
+        this.normalize();
+        state.merged[item.uuid] = { source, item };
+        (state.pops[source] || (state.pops[source] = [])).push({ uuid: item.targetUuid, name: item.targetName || item.name, item: item.uuid });
+        state.popDirty.add(source);
+        state.dirty = true;
+        this.render();
+    },
+
+    /** Bỏ gộp (chưa Save): item về lại cuối board. */
+    revealUnmerge(index) {
+        const source = state.revealTarget;
+        const list = state.pops[source] || [];
+        const entry = list[index];
+        if (!entry || !entry.item) {
+            return;
+        }
+        list.splice(index, 1);
+        const m = state.merged[entry.item];
+        delete state.merged[entry.item];
+        if (m) {
+            this.put({ col: state.columns.length, row: 0 }, m.item);
+            this.normalize();
+        }
+        state.popDirty.add(source);
+        this.render();
+    },
+
+    revealMove(index, delta) {
+        const list = state.pops[state.revealTarget] || [];
+        const to = index + delta;
+        if (to < 0 || to >= list.length) {
+            return;
+        }
+        list.splice(to, 0, list.splice(index, 1)[0]);
+        state.popDirty.add(state.revealTarget);
+        state.dirty = true;
+        this.render();
+    },
+
+    findPos(uuid) {
+        for (let c = 0; c < state.columns.length; c++) {
+            const r = state.columns[c].findIndex((it) => it.uuid === uuid);
+            if (r >= 0) return { col: c, row: r };
+        }
+        return null;
+    },
+
+    renderRevealPanel() {
+        const source = state.mode === 'reveal' ? state.revealTarget : null;
+        this.$.revealPanel.classList.toggle('hidden', !source);
+        if (state.mode === 'reveal') {
+            this.showStatus(source
+                ? 'Đang sửa "' + (state.names[source] || source) + '": CHUỘT PHẢI vào item để gộp vào (item biến khỏi board, đích của nó nảy ra khi ghép xong đồ đựng). '
+                    + 'Chuột trái item khác = đổi đồ đựng, click lại = xong. Save rồi Ctrl+S để ghi vào scene.'
+                : 'Reveal mode: CHUỘT TRÁI chọn đồ đựng, rồi CHUỘT PHẢI các item sẽ nảy ra lần lượt sau khi ghép đồ đựng đó.');
+        }
+        if (!source) {
+            return;
+        }
+        const list = state.pops[source] || [];
+        this.$.revealTitle.textContent = 'Ghép xong "' + (state.names[source] || source) + '" -> nảy ra lần lượt (' + list.length + '):';
+        const box = this.$.revealList;
+        box.innerHTML = '';
+        if (!list.length) {
+            box.innerHTML = '<span class="hint">Chưa có. Chuột phải vào item trên board để gộp vào.</span>';
+            return;
+        }
+        list.forEach((p, i) => {
+            const row = document.createElement('div');
+            row.className = 'reveal-row' + (p.item ? ' pending' : '');
+            row.title = p.item ? 'Chưa Save — ✕ để trả item về board' : 'Đã gộp (con của đích đồ đựng). Muốn bỏ thì sửa trong Hierarchy.';
+            row.innerHTML = '<span class="idx">' + (i + 1) + '</span>'
+                + '<span class="name">' + escapeHtml(p.name) + '</span>'
+                + '<button data-a="up" title="Lên"' + (i === 0 ? ' disabled' : '') + '>▲</button>'
+                + '<button data-a="down" title="Xuống"' + (i === list.length - 1 ? ' disabled' : '') + '>▼</button>'
+                + (p.item ? '<button data-a="del" title="Trả item về board">✕</button>' : '');
+            row.addEventListener('click', (e) => {
+                const a = e.target && e.target.dataset && e.target.dataset.a;
+                if (a === 'up') this.revealMove(i, -1);
+                else if (a === 'down') this.revealMove(i, 1);
+                else if (a === 'del') this.revealUnmerge(i);
+            });
+            box.appendChild(row);
+        });
     },
 
     /** Chế độ seat: click item -> chọn item để sửa / thêm-bỏ item bắt buộc. */
@@ -372,9 +519,13 @@ exports.methods = {
         });
 
         this.$.save.disabled = false;
-        this.$.save.textContent = state.dirty || state.seatDirty.size ? 'Save *' : 'Save';
+        this.$.save.textContent = state.dirty || state.seatDirty.size || state.popDirty.size ? 'Save *' : 'Save';
         const seat = state.mode === 'seat';
-        board.classList.toggle('seat-mode', seat);
+        const reveal = state.mode === 'reveal';
+        board.classList.toggle('seat-mode', seat || reveal);
+        this.$.revealMode.textContent = reveal ? 'Reveal mode: ON' : 'Reveal mode';
+        this.$.revealMode.setAttribute('type', reveal ? 'primary' : 'default');
+        this.renderRevealPanel();
         this.$.seatMode.textContent = seat ? 'Seat mode: ON' : 'Seat mode';
         this.$.seatMode.setAttribute('type', seat ? 'primary' : 'default');
         this.$.seatClear.classList.toggle('hidden', !seat || !state.seatTarget);
@@ -404,7 +555,11 @@ exports.methods = {
         if (isReq) {
             el.classList.add('seat-req');
         }
-        el.draggable = !seat;
+        if (state.mode === 'reveal' && state.revealTarget === item.uuid) {
+            el.classList.add('seat-target');
+        }
+        const pops = state.pops[item.uuid] || [];
+        el.draggable = state.mode === 'order';
         el.title = item.name + '\n' + item.width + ' x ' + item.height + (item.active ? '' : '\n(inactive)')
             + (requires.length ? '\nCần ghép trước: ' + requires.map((u) => state.names[u] || u).join(', ') : '');
 
@@ -418,12 +573,18 @@ exports.methods = {
             + '<span class="name">' + escapeHtml(item.name) + '</span>'
             + '<span class="size">' + Math.round(item.width) + '×' + Math.round(item.height) + '</span>'
             + '</span>'
-            + this.seatBadge(requires, isReq);
+            + this.seatBadge(requires, isReq)
+            + (pops.length ? '<span class="badge reveal" title="Ghép xong nảy ra: ' + escapeHtml(pops.map((p) => p.name).join(', '))
+                + '">✨' + pops.length + '</span>' : '');
 
         // ---- click: seat mode -> sửa requiredItems; order mode -> chọn 2 ô để swap
         el.addEventListener('click', () => {
             if (state.mode === 'seat') {
                 this.seatClick(item);
+                return;
+            }
+            if (state.mode === 'reveal') {
+                this.revealClick(item);
                 return;
             }
             if (!state.picked) {
@@ -439,9 +600,19 @@ exports.methods = {
             this.swap(state.picked, pos);
         });
 
+        // ---- chuột phải (reveal mode): gộp item này vào đồ đựng đang sửa
+        el.addEventListener('contextmenu', (e) => {
+            if (state.mode !== 'reveal') {
+                return;
+            }
+            e.preventDefault();
+            e.stopPropagation();
+            this.revealMerge(item);
+        });
+
         // ---- drag & drop
         el.addEventListener('dragstart', (e) => {
-            if (state.mode === 'seat') {
+            if (state.mode !== 'order') {
                 e.preventDefault();
                 return;
             }
@@ -517,6 +688,7 @@ exports.ready = async function () {
     this.$.sortByList.addEventListener('confirm', this.sortByItemList.bind(this));
     this.$.seatMode.addEventListener('confirm', this.toggleSeatMode.bind(this));
     this.$.seatClear.addEventListener('confirm', this.seatClearTarget.bind(this));
+    this.$.revealMode.addEventListener('confirm', this.toggleRevealMode.bind(this));
     this.$.perColumn.addEventListener('change', () => {
         savePrefs({ parentUuid: state.parent && state.parent.uuid, perColumn: this.perColumn() });
         if (state.parent) {
