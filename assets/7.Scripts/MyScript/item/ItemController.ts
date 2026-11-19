@@ -70,6 +70,7 @@ export enum MaterialType {
     BoilingPot = 37,
     GhostScare = 38,
     Clock = 39,
+    Ring = 40,
 }
 Enum(MaterialType);
 

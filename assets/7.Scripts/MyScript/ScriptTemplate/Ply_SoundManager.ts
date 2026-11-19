@@ -45,6 +45,7 @@ export enum FxType {
     GhostScare = 36,
     Clock = 37,
     Decor = 38,
+    Ring = 39,
 }
 Enum(FxType);
 
@@ -188,6 +189,9 @@ class FxAudio {
 
     @property(SoundData)
     decor: SoundData = new SoundData();
+
+    @property(SoundData)
+    ring: SoundData = new SoundData();
 }
 
 /** 1 sequence FX dang phat (playFxSequence). */
@@ -519,6 +523,7 @@ export class Ply_SoundManager extends Ply_Singleton {
             case FxType.GhostScare: return this.fxAudio.ghostScare;
             case FxType.Clock: return this.fxAudio.clock;
             case FxType.Decor: return this.fxAudio.decor;
+            case FxType.Ring: return this.fxAudio.ring;
             default: return null;
         }
     }
