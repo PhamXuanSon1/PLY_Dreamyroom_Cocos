@@ -1271,6 +1271,7 @@
         "31ff1653-1355-494e-8cda-8ebd1709f381@f9941",
         "a2123839-1505-45a1-a9ca-4dc84a2ce4cc@f9941",
         "2d2f6b65-56a6-4261-ad29-6325b338f670@f9941",
+        "faa16332-a7af-4707-89cf-c2b3ff6bb6e7",
         "867fa135-bb3c-47bc-aac2-e4014c431f37@f9941",
         "63a50892-a39d-4594-aabf-8ac4cafded79@f9941",
         "1d83c256-0372-456b-b11f-f4299f792858@f9941",
@@ -104173,6 +104174,15 @@
     "url": "db://assets/4.Sounds/sfx_correct_2.ogg",
     "value": {
       "depends": []
+    },
+    "versionCode": 1
+  },
+  "faa16332-a7af-4707-89cf-c2b3ff6bb6e7": {
+    "url": "db://assets/8.Models/Shaders/StarGlow.mtl",
+    "value": {
+      "depends": [
+        "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+      ]
     },
     "versionCode": 1
   }

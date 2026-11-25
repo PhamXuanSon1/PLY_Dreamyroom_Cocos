@@ -18767,7 +18767,10 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "_customMaterial": null,
+    "_customMaterial": {
+      "__uuid__": "faa16332-a7af-4707-89cf-c2b3ff6bb6e7",
+      "__expectedType__": "cc.Material"
+    },
     "_srcBlendFactor": 2,
     "_dstBlendFactor": 4,
     "_color": {
@@ -43541,7 +43544,7 @@
     "sharedTargets": [],
     "snapDistance": 200,
     "moveDuration": 0.2,
-    "materialType": 5,
+    "materialType": 27,
     "soundTypes": [],
     "playSoundsTogether": false,
     "persistentShadow": false,
@@ -43872,7 +43875,7 @@
     "sharedTargets": [],
     "snapDistance": 200,
     "moveDuration": 0.2,
-    "materialType": 5,
+    "materialType": 27,
     "soundTypes": [],
     "playSoundsTogether": false,
     "persistentShadow": false,
