@@ -1271,7 +1271,7 @@
         "31ff1653-1355-494e-8cda-8ebd1709f381@f9941",
         "a2123839-1505-45a1-a9ca-4dc84a2ce4cc@f9941",
         "2d2f6b65-56a6-4261-ad29-6325b338f670@f9941",
-        "faa16332-a7af-4707-89cf-c2b3ff6bb6e7",
+        "d6e54007-1b75-4ec8-b5a0-a46c8509cb20@f9941",
         "867fa135-bb3c-47bc-aac2-e4014c431f37@f9941",
         "63a50892-a39d-4594-aabf-8ac4cafded79@f9941",
         "1d83c256-0372-456b-b11f-f4299f792858@f9941",
@@ -1382,8 +1382,7 @@
         "9c42e089-55d8-4a68-857f-c0ae58d701ec",
         "1476131f-bd70-441f-a6b8-32db105c8675",
         "fccb292c-2bde-436f-8f3b-887bc2f0aec6",
-        "8642360c-b685-4203-8159-dea06c080b6f",
-        "7c402209-5a79-467c-b1fb-123e5c62dc93"
+        "8642360c-b685-4203-8159-dea06c080b6f"
       ],
       "dependScripts": [
         "14a54ca0-e12a-490a-948a-754db1575003",
@@ -104179,9 +104178,30 @@
   },
   "faa16332-a7af-4707-89cf-c2b3ff6bb6e7": {
     "url": "db://assets/8.Models/Shaders/StarGlow.mtl",
+    "value": {},
+    "versionCode": 1
+  },
+  "d6e54007-1b75-4ec8-b5a0-a46c8509cb20": {
+    "url": "db://assets/3.Sprites/Ply58/sprites/ngoi_sao_fx.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d6e54007-1b75-4ec8-b5a0-a46c8509cb20@6c48a": {
+    "url": "db://assets/3.Sprites/Ply58/sprites/ngoi_sao_fx.png@6c48a",
     "value": {
       "depends": [
-        "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+        "d6e54007-1b75-4ec8-b5a0-a46c8509cb20"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d6e54007-1b75-4ec8-b5a0-a46c8509cb20@f9941": {
+    "url": "db://assets/3.Sprites/Ply58/sprites/ngoi_sao_fx.png@f9941",
+    "value": {
+      "depends": [
+        "d6e54007-1b75-4ec8-b5a0-a46c8509cb20@6c48a"
       ]
     },
     "versionCode": 1
