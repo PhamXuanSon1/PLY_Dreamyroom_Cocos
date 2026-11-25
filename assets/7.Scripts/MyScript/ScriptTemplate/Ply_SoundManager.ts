@@ -46,10 +46,11 @@ export enum FxType {
     Clock = 37,
     Decor = 38,
     Ring = 39,
+    Santa = 40,
 }
 Enum(FxType);
 
-const FX_TYPE_COUNT = 39;
+const FX_TYPE_COUNT = 41;
 
 /**
  * Cau hinh du lieu am thanh.
@@ -192,6 +193,9 @@ class FxAudio {
 
     @property(SoundData)
     ring: SoundData = new SoundData();
+
+    @property(SoundData)
+    santa: SoundData = new SoundData();
 }
 
 /** 1 sequence FX dang phat (playFxSequence). */
@@ -524,6 +528,7 @@ export class Ply_SoundManager extends Ply_Singleton {
             case FxType.Clock: return this.fxAudio.clock;
             case FxType.Decor: return this.fxAudio.decor;
             case FxType.Ring: return this.fxAudio.ring;
+            case FxType.Santa: return this.fxAudio.santa;
             default: return null;
         }
     }

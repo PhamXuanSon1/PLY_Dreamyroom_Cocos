@@ -71,6 +71,7 @@ export enum MaterialType {
     GhostScare = 38,
     Clock = 39,
     Ring = 40,
+    Santa = 41,
 }
 Enum(MaterialType);
 
@@ -135,6 +136,12 @@ export class ItemController extends Component implements IPointerHandler {
 
     @property({ type: [Node], tooltip: 'Các node sẽ bị TẮT khi item ghép đúng vào đích.' })
     deactiveOnPlaced: Node[] = [];
+
+    @property({
+        tooltip: 'Đích có spine con: ghép xong có TẮT sprite (Image) của đích không. '
+            + 'Bỏ tick khi spine chỉ là hiệu ứng phủ lên sprite (vd lửa trên củi) -> sprite đích vẫn hiện cùng spine.',
+    })
+    hideTargetSpriteWithSpine = true;
 
     @property({
         type: [Node],
@@ -718,17 +725,19 @@ export class ItemController extends Component implements IPointerHandler {
     /**
      * Đích có node spine (sp.Skeleton) bên trong: spineOn = false -> hiện Image, tắt spine (lúc bóng);
      * spineOn = true -> tắt Image, bật spine (ghép xong). Đích không có spine thì không làm gì.
+     * hideTargetSpriteWithSpine = false: ghép xong vẫn giữ Image, spine chỉ phủ thêm lên trên.
      */
     private setTargetSpineMode(target: Node, spineOn: boolean): void {
         const skeletons = target.getComponentsInChildren(sp.Skeleton);
         if (skeletons.length === 0) return;
         for (const sk of skeletons) sk.node.active = spineOn;
+        const showImage = !spineOn || !this.hideTargetSpriteWithSpine;
         const img = target.getChildByName('Image');
-        if (img) img.active = !spineOn;
+        if (img) img.active = showImage;
         else {
             // SceneBuilder.flattenImageNode: Sprite nằm ngay trên đích, không có node con Image
             const sr = target.getComponent(Sprite);
-            if (sr) sr.enabled = !spineOn;
+            if (sr) sr.enabled = showImage;
         }
     }
 

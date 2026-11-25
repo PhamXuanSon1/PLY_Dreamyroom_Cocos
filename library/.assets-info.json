@@ -122,7 +122,7 @@
       "uuid": "59acbb9a-95c1-4780-9edc-f7a5cce7a121"
     },
     "7.Scripts\\MyScript\\item": {
-      "time": 1794974990017.0955,
+      "time": 1795579499799.7437,
       "uuid": "bfadb7c9-2f8a-4ecc-830b-35afa8393bc8"
     },
     "7.Scripts\\MyScript\\managers": {
@@ -346,7 +346,7 @@
       "uuid": "9dd37341-4308-4704-88cb-e8bc39a3cbfb"
     },
     "7.Scripts\\MyScript\\item\\ItemController.ts": {
-      "time": 1795053367434.966,
+      "time": 1795581612767.0093,
       "uuid": "ffc0c2df-0287-40ef-8beb-7f4381ae1550"
     },
     "7.Scripts\\MyScript\\item\\ItemGraphic.ts": {
@@ -442,7 +442,7 @@
       "uuid": "8ae2cf63-dfd7-4f32-bac7-8bcfde17210d"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Ply_SoundManager.ts": {
-      "time": 1795053303026.4077,
+      "time": 1795581612766.0088,
       "uuid": "784b8157-3757-4d0b-a788-266a2078d644"
     },
     "7.Scripts\\MyScript\\ScriptTemplate\\Ply_Types.ts": {
@@ -868,11 +868,11 @@
       "uuid": "54e1328d-b163-4b60-8f36-be68be73c75c"
     },
     "3.Sprites": {
-      "time": 1794992141390.478,
+      "time": 1795576975823.5269,
       "uuid": "36219f24-f537-45aa-b30d-0cad073f95ba"
     },
     "4.Sounds": {
-      "time": 1795053262781.2817,
+      "time": 1795588557886.1082,
       "uuid": "5728f6d5-27c9-4801-9b4e-7d211d2831e1"
     },
     "5.Prefabs": {
@@ -1144,7 +1144,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1795053508319.213,
+      "time": 1795589485894.6409,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "8.Assets\\127. Spooky Pizza": {
@@ -2300,1636 +2300,1468 @@
       "time": 1794991780140.907,
       "uuid": "42072bf4-e9b2-41e2-b639-319ee102fb5f"
     },
-    "3.Sprites\\Ply57.meta": {
-      "time": 1794992141528.1382
-    },
-    "3.Sprites\\Ply57\\sprites.meta": {
-      "time": 1794992141528.1382
-    },
-    "3.Sprites\\Ply57\\Level1095_Scale.json.meta": {
-      "time": 1794992141562.5752
-    },
-    "3.Sprites\\Ply57\\sprites\\bac_thang.png.meta": {
-      "time": 1794992141594.929
-    },
-    "3.Sprites\\Ply57\\sprites\\bac_thang_shadow.png.meta": {
-      "time": 1794992141592.4192
-    },
-    "3.Sprites\\Ply57\\sprites\\banh_mi.png.meta": {
-      "time": 1794992141593.4192
-    },
-    "3.Sprites\\Ply57\\sprites\\banh_mi_shadow.png.meta": {
-      "time": 1794992141597.466
-    },
-    "3.Sprites\\Ply57\\sprites\\banh_tao.png.meta": {
-      "time": 1794992141610.4297
-    },
-    "3.Sprites\\Ply57\\sprites\\banh_tao_shadow.png.meta": {
-      "time": 1794992141613.4333
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_an.png.meta": {
-      "time": 1794992141629.546
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_an_shadow.png.meta": {
-      "time": 1794992141633.0608
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_tra.png.meta": {
-      "time": 1794992141616.9958
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_tra_2.png.meta": {
-      "time": 1794992141643.1895
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_tra_2_shadow.png.meta": {
-      "time": 1794992141645.217
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_tra_shadow.png.meta": {
-      "time": 1794992141644.7107
-    },
-    "3.Sprites\\Ply57\\sprites\\base_1.png.meta": {
-      "time": 1794992141748.5034
-    },
-    "3.Sprites\\Ply57\\sprites\\base_o_tren_1.png.meta": {
-      "time": 1794992141749.5107
-    },
-    "3.Sprites\\Ply57\\sprites\\base_o_tren_2.png.meta": {
-      "time": 1794992141766.166
-    },
-    "3.Sprites\\Ply57\\sprites\\base_san_tang_2.png.meta": {
-      "time": 1794992141780.4312
-    },
-    "3.Sprites\\Ply57\\sprites\\base_tuong_tang_2.png.meta": {
-      "time": 1794992141780.4312
-    },
-    "3.Sprites\\Ply57\\sprites\\bep.png.meta": {
-      "time": 1794992141793.076
-    },
-    "3.Sprites\\Ply57\\sprites\\bep_nuonfg.png.meta": {
-      "time": 1794992141793.076
-    },
-    "3.Sprites\\Ply57\\sprites\\bep_nuonfg_shadow.png.meta": {
-      "time": 1794992141800.6638
-    },
-    "3.Sprites\\Ply57\\sprites\\bep_shadow.png.meta": {
-      "time": 1794992141829.6003
-    },
-    "3.Sprites\\Ply57\\sprites\\BG_c.png.meta": {
-      "time": 1794992141827.0405
-    },
-    "3.Sprites\\Ply57\\sprites\\BG_pattern_1.png.meta": {
-      "time": 1794992141950.262
-    },
-    "3.Sprites\\Ply57\\sprites\\BG_pattern_2.png.meta": {
-      "time": 1794992141948.2185
-    },
-    "3.Sprites\\Ply57\\sprites\\binh_hoa_ban_an.png.meta": {
-      "time": 1794992141843.7883
-    },
-    "3.Sprites\\Ply57\\sprites\\bon_rua_chen.png.meta": {
-      "time": 1794992141961.912
-    },
-    "3.Sprites\\Ply57\\sprites\\bon_rua_chen_shadow.png.meta": {
-      "time": 1794992141963.9104
-    },
-    "3.Sprites\\Ply57\\sprites\\bo_am_tra.png.meta": {
-      "time": 1794992141970.4226
-    },
-    "3.Sprites\\Ply57\\sprites\\bo_am_tra_shadow.png.meta": {
-      "time": 1794992141974.4243
-    },
-    "3.Sprites\\Ply57\\sprites\\cam_dao.png.meta": {
-      "time": 1794992141976.425
-    },
-    "3.Sprites\\Ply57\\sprites\\cam_dao_shadow.png.meta": {
-      "time": 1794992141988.5327
-    },
-    "3.Sprites\\Ply57\\sprites\\cau_tuyet.png.meta": {
-      "time": 1794992141991.5317
-    },
-    "3.Sprites\\Ply57\\sprites\\cau_tuyet_shadow.png.meta": {
-      "time": 1794992142001.0566
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_lon_o_ngoai.png.meta": {
-      "time": 1794992142019.088
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_lon_o_ngoai_shadow.png.meta": {
-      "time": 1794992142011.5693
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_1.png.meta": {
-      "time": 1794992142020.0886
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_1_shadow.png.meta": {
-      "time": 1794992142024.6108
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_2.png.meta": {
-      "time": 1794992142036.159
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_2_shadow.png.meta": {
-      "time": 1794992142041.1697
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_3.png.meta": {
-      "time": 1794992142061.9338
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_3_shadow.png.meta": {
-      "time": 1794992142048.8972
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_4.png.meta": {
-      "time": 1794992142058.936
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_4_shadow.png.meta": {
-      "time": 1794992142064.935
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_5.png.meta": {
-      "time": 1794992142071.4507
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_5_shadow.png.meta": {
-      "time": 1794992142080.4907
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_6.png.meta": {
-      "time": 1794992142086.5142
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_6_shadow.png.meta": {
-      "time": 1794992142088.5242
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_trong_nha.png.meta": {
-      "time": 1794992142094.5203
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_trong_nha_shadow.png.meta": {
-      "time": 1794992142099.6138
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_trang_tri.png.meta": {
-      "time": 1794992142109.648
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_trang_tri_2.png.meta": {
-      "time": 1794992142127.7195
-    },
-    "3.Sprites\\Ply57\\sprites\\chai_ruou.png.meta": {
-      "time": 1794992142116.6824
-    },
-    "3.Sprites\\Ply57\\sprites\\chai_ruou_shadow.png.meta": {
-      "time": 1794992142437.7275
-    },
-    "3.Sprites\\Ply57\\sprites\\chau_hoa.png.meta": {
-      "time": 1794992142129.7205
-    },
-    "3.Sprites\\Ply57\\sprites\\chau_hoa_shadow.png.meta": {
-      "time": 1794992142439.7273
-    },
-    "3.Sprites\\Ply57\\sprites\\chuong.png.meta": {
-      "time": 1794992142457.798
-    },
-    "3.Sprites\\Ply57\\sprites\\cua.png.meta": {
-      "time": 1794992142462.9138
-    },
-    "3.Sprites\\Ply57\\sprites\\cua_so_bep.png.meta": {
-      "time": 1794992142466.93
-    },
-    "3.Sprites\\Ply57\\sprites\\cua_so_lon.png.meta": {
-      "time": 1794992142476.217
-    },
-    "3.Sprites\\Ply57\\sprites\\cua_so_tang_2.png.meta": {
-      "time": 1794992142479.7344
-    },
-    "3.Sprites\\Ply57\\sprites\\cuc_tuyet.png.meta": {
-      "time": 1794992142487.7349
-    },
-    "3.Sprites\\Ply57\\sprites\\cuc_tuyet_shadow.png.meta": {
-      "time": 1794992142492.1116
-    },
-    "3.Sprites\\Ply57\\sprites\\danh_tu_lanh_2.png.meta": {
-      "time": 1794992142500.623
-    },
-    "3.Sprites\\Ply57\\sprites\\danh_tu_lanh_2_shadow.png.meta": {
-      "time": 1794992142502.625
-    },
-    "3.Sprites\\Ply57\\sprites\\dan_tu_lanh_1.png.meta": {
-      "time": 1794992142504.6255
-    },
-    "3.Sprites\\Ply57\\sprites\\dan_tu_lanh_1_shadow.png.meta": {
-      "time": 1794992142524.8213
-    },
-    "3.Sprites\\Ply57\\sprites\\day_trang_tri.png.meta": {
-      "time": 1794992142555.8926
-    },
-    "3.Sprites\\Ply57\\sprites\\decor.png.meta": {
-      "time": 1794992142519.8213
-    },
-    "3.Sprites\\Ply57\\sprites\\den_2.png.meta": {
-      "time": 1794992142543.8723
-    },
-    "3.Sprites\\Ply57\\sprites\\den_2_fx.png.meta": {
-      "time": 1794992142536.357
-    },
-    "3.Sprites\\Ply57\\sprites\\den_2_shadow.png.meta": {
-      "time": 1794992142553.837
-    },
-    "3.Sprites\\Ply57\\sprites\\den_hang_rao.png.meta": {
-      "time": 1794992142561.4463
-    },
-    "3.Sprites\\Ply57\\sprites\\den_hang_rao_fx.png.meta": {
-      "time": 1794992142636.4539
-    },
-    "3.Sprites\\Ply57\\sprites\\den_tang_1.png.meta": {
-      "time": 1794992142572.9854
-    },
-    "3.Sprites\\Ply57\\sprites\\den_tang_1_fx.png.meta": {
-      "time": 1794992142639.7854
-    },
-    "3.Sprites\\Ply57\\sprites\\den_tang_1_shadow.png.meta": {
-      "time": 1794992142646.336
-    },
-    "3.Sprites\\Ply57\\sprites\\den_treo.png.meta": {
-      "time": 1794992142658.4307
-    },
-    "3.Sprites\\Ply57\\sprites\\den_treo_fx.png.meta": {
-      "time": 1794992142663.4343
-    },
-    "3.Sprites\\Ply57\\sprites\\den_treo_trong_nha.png.meta": {
-      "time": 1794992142689.8987
-    },
-    "3.Sprites\\Ply57\\sprites\\den_treo_trong_nha_fx.png.meta": {
-      "time": 1794992142682.3408
-    },
-    "3.Sprites\\Ply57\\sprites\\dong_ho_to.png.meta": {
-      "time": 1794992142671.5396
-    },
-    "3.Sprites\\Ply57\\sprites\\dong_ho_to_shadow.png.meta": {
-      "time": 1794992142691.9175
-    },
-    "3.Sprites\\Ply57\\sprites\\ga.png.meta": {
-      "time": 1794992142712.673
-    },
-    "3.Sprites\\Ply57\\sprites\\ga_shadow.png.meta": {
-      "time": 1794992142715.1865
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_an_phai.png.meta": {
-      "time": 1794992142722.3284
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_an_phai_shadow.png.meta": {
-      "time": 1794992142717.1936
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_an_trai.png.meta": {
-      "time": 1794992142734.4482
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_an_trai_shadow.png.meta": {
-      "time": 1794992142737.4546
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_tang_1.png.meta": {
-      "time": 1794992142742.4565
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_tang_1_cut.png.meta": {
-      "time": 1794992142749.4902
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_tang_1_shadow.png.meta": {
-      "time": 1794992142750.489
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_tang_2.png.meta": {
-      "time": 1794992142835.6382
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_tang_2_shadow.png.meta": {
-      "time": 1794992142764.7556
-    },
-    "3.Sprites\\Ply57\\sprites\\gio_len.png.meta": {
-      "time": 1794992142767.7637
-    },
-    "3.Sprites\\Ply57\\sprites\\gio_len_shadow.png.meta": {
-      "time": 1794992142783.197
-    },
-    "3.Sprites\\Ply57\\sprites\\goi.png.meta": {
-      "time": 1794992142784.223
-    },
-    "3.Sprites\\Ply57\\sprites\\goi_2.png.meta": {
-      "time": 1794992142800.3518
-    },
-    "3.Sprites\\Ply57\\sprites\\goi_2_shadow.png.meta": {
-      "time": 1794992142802.3594
-    },
-    "3.Sprites\\Ply57\\sprites\\goi_shadow.png.meta": {
-      "time": 1794992142829.0916
-    },
-    "3.Sprites\\Ply57\\sprites\\hang_rao.png.meta": {
-      "time": 1794992142808.3887
-    },
-    "3.Sprites\\Ply57\\sprites\\hang_rao_shadow.png.meta": {
-      "time": 1794992142869.2678
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_1.png.meta": {
-      "time": 1794992142855.8303
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_1_shadow.png.meta": {
-      "time": 1794992142852.2803
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_2.png.meta": {
-      "time": 1794992142880.34
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_2_shadow.png.meta": {
-      "time": 1794992142883.8547
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_3.png.meta": {
-      "time": 1794992142886.858
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_3_shadow.png.meta": {
-      "time": 1794992142900.4124
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_4.png.meta": {
-      "time": 1794992142905.045
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_4_shadow.png.meta": {
-      "time": 1794992142913.608
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_5.png.meta": {
-      "time": 1794992142931.186
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_5_shadow.png.meta": {
-      "time": 1794992142919.6328
-    },
-    "3.Sprites\\Ply57\\sprites\\hu_1.png.meta": {
-      "time": 1794992142950.7297
-    },
-    "3.Sprites\\Ply57\\sprites\\hu_1_shadow.png.meta": {
-      "time": 1794992142935.702
-    },
-    "3.Sprites\\Ply57\\sprites\\hu_2.png.meta": {
-      "time": 1794992142960.807
-    },
-    "3.Sprites\\Ply57\\sprites\\hu_2_shadow.png.meta": {
-      "time": 1794992142988.2954
-    },
-    "3.Sprites\\Ply57\\sprites\\keo.png.meta": {
-      "time": 1794992142977.7239
-    },
-    "3.Sprites\\Ply57\\sprites\\keo_shadow.png.meta": {
-      "time": 1794992142966.5876
-    },
-    "3.Sprites\\Ply57\\sprites\\ke_gap.png.meta": {
-      "time": 1794992143042.876
-    },
-    "3.Sprites\\Ply57\\sprites\\ke_gap_cut.png.meta": {
-      "time": 1794992143008.0703
-    },
-    "3.Sprites\\Ply57\\sprites\\ke_lon.png.meta": {
-      "time": 1794992143006.5635
-    },
-    "3.Sprites\\Ply57\\sprites\\ke_nho.png.meta": {
-      "time": 1794992143020.6907
-    },
-    "3.Sprites\\Ply57\\sprites\\khan_qang.png.meta": {
-      "time": 1794992143039.867
-    },
-    "3.Sprites\\Ply57\\sprites\\khan_qang_shadow.png.meta": {
-      "time": 1794992143058.6387
-    },
-    "3.Sprites\\Ply57\\sprites\\khan_trai.png.meta": {
-      "time": 1794992143043.8745
-    },
-    "3.Sprites\\Ply57\\sprites\\khan_trai_shadow.png.meta": {
-      "time": 1794992143060.6458
-    },
-    "3.Sprites\\Ply57\\sprites\\khung_chan_ong_khoi.png.meta": {
-      "time": 1794992143068.1592
-    },
-    "3.Sprites\\Ply57\\sprites\\lan_can_1.png.meta": {
-      "time": 1794992143085.6233
-    },
-    "3.Sprites\\Ply57\\sprites\\lan_can_1_shadow.png.meta": {
-      "time": 1794992143092.2095
-    },
-    "3.Sprites\\Ply57\\sprites\\lan_can_2.png.meta": {
-      "time": 1794992143097.7556
-    },
-    "3.Sprites\\Ply57\\sprites\\lan_can_2_shadow.png.meta": {
-      "time": 1794992143107.947
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_1.png.meta": {
-      "time": 1794992143112.0383
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_1_shadow.png.meta": {
-      "time": 1794992143117.0808
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_2.png.meta": {
-      "time": 1794992143125.6196
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_2_shadow.png.meta": {
-      "time": 1794992143131.392
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_banh_quy.png.meta": {
-      "time": 1794992143143.7866
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_banh_quy_shadow.png.meta": {
-      "time": 1794992143165.032
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_1.png.meta": {
-      "time": 1794992143149.9507
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_1_shadow.png.meta": {
-      "time": 1794992143157.5166
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_2.png.meta": {
-      "time": 1794992143181.87
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_2_shadow.png.meta": {
-      "time": 1794992143175.1516
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_3.png.meta": {
-      "time": 1794992143215.0347
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_3_shadow.png.meta": {
-      "time": 1794992143208.5242
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_suoi.png.meta": {
-      "time": 1794992143242.8186
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_suoi_cut.png.meta": {
-      "time": 1794992143297.523
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_suoi_shadow.png.meta": {
-      "time": 1794992143231.2336
-    },
-    "3.Sprites\\Ply57\\sprites\\lua.png.meta": {
-      "time": 1794992143244.3242
-    },
-    "3.Sprites\\Ply57\\sprites\\lua_fx.png.meta": {
-      "time": 1794992143249.331
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf.png.meta": {
-      "time": 1794992143300.0276
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf_2.png.meta": {
-      "time": 1794992143301.0332
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf_2_shadow.png.meta": {
-      "time": 1794992143306.6895
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf_3.png.meta": {
-      "time": 1794992143317.8718
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf_3_shadow.png.meta": {
-      "time": 1794992143320.3796
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf_shadow.png.meta": {
-      "time": 1794992143333.1013
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_socola.png.meta": {
-      "time": 1794992143348.1917
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_socola_shadow.png.meta": {
-      "time": 1794992143335.6084
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_1.png.meta": {
-      "time": 1794992143358.25
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_1_shadow.png.meta": {
-      "time": 1794992143342.1553
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_2.png.meta": {
-      "time": 1794992143363.4006
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_2_shadow.png.meta": {
-      "time": 1794992143361.3938
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_3.png.meta": {
-      "time": 1794992143376.0469
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_3_shadow.png.meta": {
-      "time": 1794992143370.524
-    },
-    "3.Sprites\\Ply57\\sprites\\may_làm_banh_mi.png.meta": {
-      "time": 1794992143386.4275
-    },
-    "3.Sprites\\Ply57\\sprites\\may_làm_banh_mi_shadow.png.meta": {
-      "time": 1794992143388.427
-    },
-    "3.Sprites\\Ply57\\sprites\\nen.png.meta": {
-      "time": 1794992143397.0537
-    },
-    "3.Sprites\\Ply57\\sprites\\nen_fx.png.meta": {
-      "time": 1794992143412.17
-    },
-    "3.Sprites\\Ply57\\sprites\\nen_shadow.png.meta": {
-      "time": 1794992143405.1416
-    },
-    "3.Sprites\\Ply57\\sprites\\ngoi_sao.png.meta": {
-      "time": 1794992143461.155
-    },
-    "3.Sprites\\Ply57\\sprites\\ngoi_sao_fx.png.meta": {
-      "time": 1794992143457.1147
-    },
-    "3.Sprites\\Ply57\\sprites\\nguoi_tuyet.png.meta": {
-      "time": 1794992143516.9412
-    },
-    "3.Sprites\\Ply57\\sprites\\nguoi_tuyet_shadow.png.meta": {
-      "time": 1794992143459.1438
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat.png.meta": {
-      "time": 1794992143540.4778
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat_2.png.meta": {
-      "time": 1794992143894.6548
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat_2_shadow.png.meta": {
-      "time": 1794992143569.3455
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat_3.png.meta": {
-      "time": 1794992143870.474
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat_3_shadow.png.meta": {
-      "time": 1794992143624.4768
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat_shadow.png.meta": {
-      "time": 1794992143597.8318
-    },
-    "3.Sprites\\Ply57\\sprites\\no.png.meta": {
-      "time": 1794992143887.71
-    },
-    "3.Sprites\\Ply57\\sprites\\noc_nha.png.meta": {
-      "time": 1794992143912.8855
-    },
-    "3.Sprites\\Ply57\\sprites\\noi.png.meta": {
-      "time": 1794992143877.6565
-    },
-    "3.Sprites\\Ply57\\sprites\\noi_shadow.png.meta": {
-      "time": 1794992143902.1738
-    },
-    "3.Sprites\\Ply57\\sprites\\noi_soup.png.meta": {
-      "time": 1794992143927.141
-    },
-    "3.Sprites\\Ply57\\sprites\\pizza.png.meta": {
-      "time": 1794992143930.6597
-    },
-    "3.Sprites\\Ply57\\sprites\\pizza_shadow.png.meta": {
-      "time": 1794992143936.881
-    },
-    "3.Sprites\\Ply57\\sprites\\qua_cau_trang_tri.png.meta": {
-      "time": 1794992143941.3997
-    },
-    "3.Sprites\\Ply57\\sprites\\qua_cau_trang_tri_2.png.meta": {
-      "time": 1794992143961.861
-    },
-    "3.Sprites\\Ply57\\sprites\\qua_cau_trang_tri_2_shadow.png.meta": {
-      "time": 1794992143965.8872
-    },
-    "3.Sprites\\Ply57\\sprites\\qua_cau_trang_tri_shadow.png.meta": {
-      "time": 1794992143961.861
-    },
-    "3.Sprites\\Ply57\\sprites\\sach.png.meta": {
-      "time": 1794992143978.4336
-    },
-    "3.Sprites\\Ply57\\sprites\\sach_shadow.png.meta": {
-      "time": 1794992143976.9255
-    },
-    "3.Sprites\\Ply57\\sprites\\san.png.meta": {
-      "time": 1794992144112.0264
-    },
-    "3.Sprites\\Ply57\\sprites\\soi.png.meta": {
-      "time": 1794992143994.6682
-    },
-    "3.Sprites\\Ply57\\sprites\\soi_shadow.png.meta": {
-      "time": 1794992143991.1594
-    },
-    "3.Sprites\\Ply57\\sprites\\tat.png.meta": {
-      "time": 1794992144001.698
-    },
-    "3.Sprites\\Ply57\\sprites\\tat_shadow.png.meta": {
-      "time": 1794992144004.234
-    },
-    "3.Sprites\\Ply57\\sprites\\tham_tang_1.png.meta": {
-      "time": 1794992144023.2205
-    },
-    "3.Sprites\\Ply57\\sprites\\tham_tang_1_shadow.png.meta": {
-      "time": 1794992144095.4636
-    },
-    "3.Sprites\\Ply57\\sprites\\thang.png.meta": {
-      "time": 1794992144091.95
-    },
-    "3.Sprites\\Ply57\\sprites\\thang_shadow.png.meta": {
-      "time": 1794992144069.0654
-    },
-    "3.Sprites\\Ply57\\sprites\\thot.png.meta": {
-      "time": 1794992144117.1272
-    },
-    "3.Sprites\\Ply57\\sprites\\thot_shadow.png.meta": {
-      "time": 1794992144114.036
-    },
-    "3.Sprites\\Ply57\\sprites\\thảm_tang_2.png.meta": {
-      "time": 1794992144132.7058
-    },
-    "3.Sprites\\Ply57\\sprites\\thảm_tang_2_shadow.png.meta": {
-      "time": 1794992144130.6785
-    },
-    "3.Sprites\\Ply57\\sprites\\trai_ban_an.png.meta": {
-      "time": 1794992144141.718
-    },
-    "3.Sprites\\Ply57\\sprites\\trang_tri_cay_thong.png.meta": {
-      "time": 1794992144143.9019
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_2.png.meta": {
-      "time": 1794992144150.3274
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_2_shadow.png.meta": {
-      "time": 1794992144153.8755
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_3.png.meta": {
-      "time": 1794992144160.9004
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_3_shadow.png.meta": {
-      "time": 1794992144168.3757
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_4.png.meta": {
-      "time": 1794992144170.8923
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_4_shadow.png.meta": {
-      "time": 1794992144175.9607
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_treo_tang_2.png.meta": {
-      "time": 1794992144179.0027
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_treo_tang_2_shadow.png.meta": {
-      "time": 1794992144194.101
-    },
-    "3.Sprites\\Ply57\\sprites\\tuong.png.meta": {
-      "time": 1794992144249.9514
-    },
-    "3.Sprites\\Ply57\\sprites\\tuyet_ngoai_troi_1.png.meta": {
-      "time": 1794992144251.466
-    },
-    "3.Sprites\\Ply57\\sprites\\tuyet_ngoai_troi_1_shadow.png.meta": {
-      "time": 1794992144210.072
-    },
-    "3.Sprites\\Ply57\\sprites\\tuyet_ngoai_troi_2.png.meta": {
-      "time": 1794992144206.0393
-    },
-    "3.Sprites\\Ply57\\sprites\\tuyet_ngoai_troi_2_shadow.png.meta": {
-      "time": 1794992144230.8516
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_lanh.png.meta": {
-      "time": 1794992144233.631
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_lanh_shadow.png.meta": {
-      "time": 1794992144249.9514
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_sach.png.meta": {
-      "time": 1794992144275.38
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_sach_cut.png.meta": {
-      "time": 1794992144294.568
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_sach_cut_1.png.meta": {
-      "time": 1794992144269.991
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_sach_cut_2.png.meta": {
-      "time": 1794992144268.9807
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_sach_shadow.png.meta": {
-      "time": 1794992144295.5708
-    },
-    "3.Sprites\\Ply57\\sprites\\voi_nuoc.png.meta": {
-      "time": 1794992144298.5977
-    },
-    "3.Sprites\\Ply57\\sprites\\vong_decor.png.meta": {
-      "time": 1794992144306.4023
-    },
-    "3.Sprites\\Ply57\\sprites\\vong_decor_2.png.meta": {
-      "time": 1794992144334.9375
-    },
-    "3.Sprites\\Ply57\\sprites\\xe_day.png.meta": {
-      "time": 1794992144320.771
-    },
-    "3.Sprites\\Ply57\\sprites\\xe_day_shadow.png.meta": {
-      "time": 1794992144314.6775
-    },
-    "3.Sprites\\Ply57": {
-      "time": 1794992141391.4863,
-      "uuid": "3b9d4bd5-09d3-440c-bd79-969e78361395"
-    },
-    "3.Sprites\\Ply57\\sprites": {
-      "time": 1794992141515.9976,
-      "uuid": "ec5d1bd9-fde9-4659-8a20-ae08bc5d1368"
-    },
-    "3.Sprites\\Ply57\\Level1095_Scale.json": {
-      "time": 1794992098532.9846,
-      "uuid": "8f8a835a-cb8e-48f1-baea-611f877b7c73"
-    },
-    "3.Sprites\\Ply57\\sprites\\bac_thang_shadow.png": {
-      "time": 1788754621264.0803,
-      "uuid": "6c3934df-f3ef-4a97-8c20-7b31a212441b"
-    },
-    "3.Sprites\\Ply57\\sprites\\banh_mi.png": {
-      "time": 1788754621272.7144,
-      "uuid": "2775d4a0-f6e7-438a-9ca4-ddca8481d318"
-    },
-    "3.Sprites\\Ply57\\sprites\\bac_thang.png": {
-      "time": 1788754621265.588,
-      "uuid": "a21934e0-92a1-45dd-8e8d-ff62d9ad1576"
-    },
-    "3.Sprites\\Ply57\\sprites\\banh_mi_shadow.png": {
-      "time": 1788754621272.7144,
-      "uuid": "630bcc15-b52f-4db3-82c7-325745915db4"
-    },
-    "3.Sprites\\Ply57\\sprites\\banh_tao.png": {
-      "time": 1788754621273.7146,
-      "uuid": "fcce453f-f342-465b-832c-e1dc03b37c5c"
-    },
-    "3.Sprites\\Ply57\\sprites\\banh_tao_shadow.png": {
-      "time": 1788754621273.7146,
-      "uuid": "2ab0991d-07f1-43fc-b790-4f9131fff107"
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_tra.png": {
-      "time": 1788754621271.7146,
-      "uuid": "d8b74daf-a028-4ed3-a55c-ed35810ccfa1"
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_an.png": {
-      "time": 1788754621267.1064,
-      "uuid": "c3fd8e81-7402-4837-a69c-e2b586d150f4"
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_an_shadow.png": {
-      "time": 1788754621265.588,
-      "uuid": "6cca10d7-9a4e-413f-8b40-65bd079dbd66"
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_tra_2.png": {
-      "time": 1788754621270.4048,
-      "uuid": "0498857c-c2de-4a5a-82b8-1ec39680d82e"
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_tra_shadow.png": {
-      "time": 1788754621270.7122,
-      "uuid": "2d5c6ea4-de0a-4c74-adc4-767acd7ec9f6"
-    },
-    "3.Sprites\\Ply57\\sprites\\ban_tra_2_shadow.png": {
-      "time": 1788754621268.4048,
-      "uuid": "c8c40142-7cac-47da-b786-2de93c62adf4"
-    },
-    "3.Sprites\\Ply57\\sprites\\base_1.png": {
-      "time": 1788754621279.1704,
-      "uuid": "2f16a51a-6eae-47ac-a6f4-72ce05d85cee"
-    },
-    "3.Sprites\\Ply57\\sprites\\base_o_tren_1.png": {
-      "time": 1788754621282.3848,
-      "uuid": "7dc899ef-2d3e-4055-913a-210ad8c523c7"
-    },
-    "3.Sprites\\Ply57\\sprites\\base_o_tren_2.png": {
-      "time": 1788754621283.4062,
-      "uuid": "33fbc78c-d0e6-4f2b-99b4-61b91089ef1e"
-    },
-    "3.Sprites\\Ply57\\sprites\\base_san_tang_2.png": {
-      "time": 1788754621285.0547,
-      "uuid": "e4621ff3-9b62-4a63-909c-5a93eb3c56ad"
-    },
-    "3.Sprites\\Ply57\\sprites\\base_tuong_tang_2.png": {
-      "time": 1788754621287.2905,
-      "uuid": "1ce7add5-65ba-4c69-af46-2c7917c03b05"
-    },
-    "3.Sprites\\Ply57\\sprites\\bep.png": {
-      "time": 1788754621291.0793,
-      "uuid": "cf13139f-2aea-4970-9605-0d1204f7f499"
-    },
-    "3.Sprites\\Ply57\\sprites\\bep_nuonfg.png": {
-      "time": 1788754621288.5698,
-      "uuid": "0c4cb9ab-a81b-4252-b4ba-54c568bdcf79"
-    },
-    "3.Sprites\\Ply57\\sprites\\bep_nuonfg_shadow.png": {
-      "time": 1788754621288.5698,
-      "uuid": "34f9dead-0d61-44b7-8471-2b920c68106a"
-    },
-    "3.Sprites\\Ply57\\sprites\\BG_c.png": {
-      "time": 1788754621223.5103,
-      "uuid": "656d786a-e74e-4ca2-b22b-c41e7857cb9e"
-    },
-    "3.Sprites\\Ply57\\sprites\\bep_shadow.png": {
-      "time": 1788754621290.0747,
-      "uuid": "a6b93f78-4d8a-4c9c-8742-cc8a4a37c4be"
-    },
-    "3.Sprites\\Ply57\\sprites\\binh_hoa_ban_an.png": {
-      "time": 1788754621292.3325,
-      "uuid": "daabb4f4-bc84-494f-ac4b-de530eb6bfbf"
-    },
-    "3.Sprites\\Ply57\\sprites\\BG_pattern_2.png": {
-      "time": 1788754621228.8406,
-      "uuid": "55eba02d-6b4b-4afc-b03a-f18b4a12d029"
-    },
-    "3.Sprites\\Ply57\\sprites\\BG_pattern_1.png": {
-      "time": 1788754621225.6787,
-      "uuid": "c5dd0b59-5f2d-4dc6-b54e-a2fdada45441"
-    },
-    "3.Sprites\\Ply57\\sprites\\bon_rua_chen.png": {
-      "time": 1788754621294.8364,
-      "uuid": "eb91dd7f-f74f-4f9e-b3e7-fc79cd1c4b70"
-    },
-    "3.Sprites\\Ply57\\sprites\\bon_rua_chen_shadow.png": {
-      "time": 1788754621294.8364,
-      "uuid": "0cbcc128-683e-4cce-b501-bacb2f7da6b0"
-    },
-    "3.Sprites\\Ply57\\sprites\\bo_am_tra.png": {
-      "time": 1788754621293.3315,
-      "uuid": "bdbf1d37-8776-47d0-99e2-bf413fca1b9b"
-    },
-    "3.Sprites\\Ply57\\sprites\\bo_am_tra_shadow.png": {
-      "time": 1788754621293.3315,
-      "uuid": "7d911a9b-3f39-4e8a-80fe-7fccf90533dc"
-    },
-    "3.Sprites\\Ply57\\sprites\\cam_dao.png": {
-      "time": 1788754621297.5146,
-      "uuid": "96af03eb-d877-466a-b203-d066b228ca5d"
-    },
-    "3.Sprites\\Ply57\\sprites\\cam_dao_shadow.png": {
-      "time": 1788754621296.5073,
-      "uuid": "7d759b26-1e92-41c9-93b9-c6a1fce35c0c"
-    },
-    "3.Sprites\\Ply57\\sprites\\cau_tuyet.png": {
-      "time": 1788754621298.5125,
-      "uuid": "d937bad5-f19e-49f6-b226-6a37e012eaaf"
-    },
-    "3.Sprites\\Ply57\\sprites\\cau_tuyet_shadow.png": {
-      "time": 1788754621298.5125,
-      "uuid": "c9cf60d5-b62e-4f15-89dc-99ed0fa86f64"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_lon_o_ngoai_shadow.png": {
-      "time": 1788754621299.5117,
-      "uuid": "b6c00773-682d-44d4-b6ff-d1bea1a5d464"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_lon_o_ngoai.png": {
-      "time": 1788754621302.0664,
-      "uuid": "e7570ec8-d10e-41e2-89af-6702cd0f19d2"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_1.png": {
-      "time": 1788754621305.2866,
-      "uuid": "c5f0d60f-c452-41a3-83e4-74e5e94fb943"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_1_shadow.png": {
-      "time": 1788754621303.068,
-      "uuid": "65995b78-81c7-47b5-b67f-4868f277afc0"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_2.png": {
-      "time": 1788754621307.328,
-      "uuid": "aa0533e1-11b8-4db4-8091-f53b54adb730"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_2_shadow.png": {
-      "time": 1788754621306.287,
-      "uuid": "8457f08e-7cf3-455b-8d4f-beac500292a9"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_3_shadow.png": {
-      "time": 1788754621307.328,
-      "uuid": "77cb4e51-1071-4236-b66b-ec088cfb4fba"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_4.png": {
-      "time": 1788754621312.089,
-      "uuid": "fb2016ac-7af0-4043-8a36-e906548642fd"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_3.png": {
-      "time": 1788754621308.833,
-      "uuid": "bafb0274-f5cc-4a69-a25e-061f62c8f605"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_4_shadow.png": {
-      "time": 1788754621310.0898,
-      "uuid": "565af58b-fce3-4f9d-bd5e-57099d06ac91"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_5.png": {
-      "time": 1788754621313.8042,
-      "uuid": "94fd2364-7c83-403e-8809-6dc0897c1a23"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_5_shadow.png": {
-      "time": 1788754621312.089,
-      "uuid": "ac5493fe-d571-490d-913d-bda32564f972"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_6.png": {
-      "time": 1788754621315.81,
-      "uuid": "14739db1-9ab7-4008-8323-5117d7eedb54"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_ngoai_troi_6_shadow.png": {
-      "time": 1788754621313.8042,
-      "uuid": "f1a14d63-4a40-4ec9-aa83-8de325742e2b"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_trong_nha.png": {
-      "time": 1788754621316.95,
-      "uuid": "460bd6fd-4413-4887-a14a-8d2bb833d669"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_thong_trong_nha_shadow.png": {
-      "time": 1788754621315.81,
-      "uuid": "2a77d86d-a9a7-41aa-88e0-48391d9c1e38"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_trang_tri.png": {
-      "time": 1788754621319.9036,
-      "uuid": "9319ae78-daae-49af-b5eb-6d8d7fd47492"
-    },
-    "3.Sprites\\Ply57\\sprites\\chai_ruou.png": {
-      "time": 1788754621321.904,
-      "uuid": "9618a4df-83cd-4f64-96f1-6b9f718604af"
-    },
-    "3.Sprites\\Ply57\\sprites\\cay_trang_tri_2.png": {
-      "time": 1788754621318.4548,
-      "uuid": "39448302-85cb-4c99-b5c5-ced20af63f24"
-    },
-    "3.Sprites\\Ply57\\sprites\\chau_hoa.png": {
-      "time": 1788754621323.4087,
-      "uuid": "fc2eb2c0-7f2d-4e2b-98a1-eae19cac36fa"
-    },
-    "3.Sprites\\Ply57\\sprites\\chai_ruou_shadow.png": {
-      "time": 1788754621320.9036,
-      "uuid": "79dab78b-e8b4-49bc-aa1e-7638d2de694c"
-    },
-    "3.Sprites\\Ply57\\sprites\\chau_hoa_shadow.png": {
-      "time": 1788754621321.904,
-      "uuid": "b6dadd93-6606-496b-8f3f-ab8dd92203c1"
-    },
-    "3.Sprites\\Ply57\\sprites\\chuong.png": {
-      "time": 1788754621324.6946,
-      "uuid": "4d5e9284-288a-4229-b86d-cbd3a95e89d6"
-    },
-    "3.Sprites\\Ply57\\sprites\\cua.png": {
-      "time": 1788754621328.6013,
-      "uuid": "d267da84-6831-464a-b3a3-2b5b68525e9e"
-    },
-    "3.Sprites\\Ply57\\sprites\\cua_so_bep.png": {
-      "time": 1788754621325.6956,
-      "uuid": "a487fe40-e28b-4296-a9d1-173a606f940f"
-    },
-    "3.Sprites\\Ply57\\sprites\\cua_so_lon.png": {
-      "time": 1788754621326.8792,
-      "uuid": "ec69bf06-b263-4c5b-81e7-7cade62bde5e"
-    },
-    "3.Sprites\\Ply57\\sprites\\cua_so_tang_2.png": {
-      "time": 1788754621326.8792,
-      "uuid": "71e72837-28a0-4907-83a8-32c573cff59f"
-    },
-    "3.Sprites\\Ply57\\sprites\\cuc_tuyet.png": {
-      "time": 1788754621329.6072,
-      "uuid": "678f9efa-adca-4662-92fe-3268a472eda4"
-    },
-    "3.Sprites\\Ply57\\sprites\\cuc_tuyet_shadow.png": {
-      "time": 1788754621328.6013,
-      "uuid": "a3f3d497-2e5c-4dc6-bc0d-c6b176c50625"
-    },
-    "3.Sprites\\Ply57\\sprites\\danh_tu_lanh_2.png": {
-      "time": 1788754621333.2644,
-      "uuid": "bff79348-882f-4c7c-a48c-f6ef733f8e4f"
-    },
-    "3.Sprites\\Ply57\\sprites\\danh_tu_lanh_2_shadow.png": {
-      "time": 1788754621331.7595,
-      "uuid": "24ebcc40-1390-4e4d-8473-5e11b4327a2d"
-    },
-    "3.Sprites\\Ply57\\sprites\\dan_tu_lanh_1.png": {
-      "time": 1788754621331.7595,
-      "uuid": "d2623ce5-449e-439e-bbb5-ab42efea4d46"
-    },
-    "3.Sprites\\Ply57\\sprites\\decor.png": {
-      "time": 1788754621336.4702,
-      "uuid": "9f6ed67e-676e-48fd-9307-fd8810bc5e87"
-    },
-    "3.Sprites\\Ply57\\sprites\\dan_tu_lanh_1_shadow.png": {
-      "time": 1788754621330.6064,
-      "uuid": "d10b110d-4fdb-4cc2-b0b7-0cbaa7c05722"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_2_fx.png": {
-      "time": 1788754621337.9746,
-      "uuid": "fe3f777f-0db3-496a-8809-c795bd406ca2"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_2.png": {
-      "time": 1788754621339.2014,
-      "uuid": "0fac51d8-da4c-4ec0-9b1f-844a447ddae0"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_2_shadow.png": {
-      "time": 1788754621337.9746,
-      "uuid": "5911df1d-2227-45f8-b61f-6bc3202a8186"
-    },
-    "3.Sprites\\Ply57\\sprites\\day_trang_tri.png": {
-      "time": 1788754621335.2861,
-      "uuid": "91202c24-7177-42d5-bedb-e1a92d512a5f"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_hang_rao.png": {
-      "time": 1788754621341.2046,
-      "uuid": "954b7250-6629-475d-963a-124e74ec1d7e"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_tang_1.png": {
-      "time": 1788754621344.9604,
-      "uuid": "5a7e327e-43c2-4dec-9f19-7ec4d48a10fa"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_hang_rao_fx.png": {
-      "time": 1788754621340.2007,
-      "uuid": "39dab1e6-d3cb-4277-a94c-2c546ab86b78"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_tang_1_fx.png": {
-      "time": 1788754621342.95,
-      "uuid": "c0a9cce2-a747-4e58-b652-fc481fba8cae"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_tang_1_shadow.png": {
-      "time": 1788754621343.9595,
-      "uuid": "a1f8afe7-c64e-4240-a7bd-36736d9b7705"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_treo.png": {
-      "time": 1788754621348.8352,
-      "uuid": "f8019130-f926-4dbe-99d3-c4c90188ae90"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_treo_fx.png": {
-      "time": 1788754621345.317,
-      "uuid": "50e178ea-7e42-4a3e-a192-94fe4e6e63bd"
-    },
-    "3.Sprites\\Ply57\\sprites\\dong_ho_to.png": {
-      "time": 1788754621351.0645,
-      "uuid": "78c569a2-27e8-45d9-a4aa-8cad31b899e5"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_treo_trong_nha_fx.png": {
-      "time": 1788754621346.3193,
-      "uuid": "2092c8a6-1925-4ded-8b74-d959514725a2"
-    },
-    "3.Sprites\\Ply57\\sprites\\den_treo_trong_nha.png": {
-      "time": 1788754621348.8352,
-      "uuid": "27f44cfe-cd88-4833-96e4-a9e74e78a5ca"
-    },
-    "3.Sprites\\Ply57\\sprites\\dong_ho_to_shadow.png": {
-      "time": 1788754621350.064,
-      "uuid": "8ae3b421-75ee-4327-82fa-dd5b53397ed5"
-    },
-    "3.Sprites\\Ply57\\sprites\\ga.png": {
-      "time": 1788754621352.5725,
-      "uuid": "f1bfef98-171f-46db-b384-1ba25173a19e"
-    },
-    "3.Sprites\\Ply57\\sprites\\ga_shadow.png": {
-      "time": 1788754621351.0645,
-      "uuid": "ba5dedae-6746-4b85-92e8-3ebc88cfe348"
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_an_phai_shadow.png": {
-      "time": 1788754621353.867,
-      "uuid": "3775f7c7-0311-460a-b4db-e795b675b77f"
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_an_phai.png": {
-      "time": 1788754621354.8667,
-      "uuid": "242db040-6f83-450a-85e1-008249ebfdb2"
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_an_trai.png": {
-      "time": 1788754621356.3823,
-      "uuid": "b87654e5-24e4-4c72-9475-75b7ae1ef742"
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_an_trai_shadow.png": {
-      "time": 1788754621355.3762,
-      "uuid": "6c0c7dc8-143b-4bcb-9019-3963ca9cf474"
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_tang_1.png": {
-      "time": 1788754621359.6792,
-      "uuid": "6584dcfe-ab84-4abf-a480-b19320fa9ae7"
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_tang_1_cut.png": {
-      "time": 1788754621357.6694,
-      "uuid": "e196febb-92ce-420c-ac3a-5f98818c85f1"
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_tang_1_shadow.png": {
-      "time": 1788754621358.6792,
-      "uuid": "c73a6ded-2429-4e6b-81cf-096387053890"
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_tang_2_shadow.png": {
-      "time": 1788754621362.477,
-      "uuid": "f6fa9c3a-d7e6-4ccf-b811-f80bb11695e7"
-    },
-    "3.Sprites\\Ply57\\sprites\\gio_len.png": {
-      "time": 1788754621364.9978,
-      "uuid": "04f19e34-2e39-4083-9a81-68b3b747bd1b"
-    },
-    "3.Sprites\\Ply57\\sprites\\gio_len_shadow.png": {
-      "time": 1788754621363.789,
-      "uuid": "ab2be348-38a4-4bb3-9f89-3f7f6f349337"
-    },
-    "3.Sprites\\Ply57\\sprites\\goi.png": {
-      "time": 1788754621368.2883,
-      "uuid": "9d0b60b0-4a19-4c48-b60a-92f550de9a6c"
-    },
-    "3.Sprites\\Ply57\\sprites\\goi_2.png": {
-      "time": 1788754621366.003,
-      "uuid": "e86ed78f-a13d-447b-aff7-f7b1a0494891"
-    },
-    "3.Sprites\\Ply57\\sprites\\goi_2_shadow.png": {
-      "time": 1788754621366.003,
-      "uuid": "d3844562-5f28-423c-bb73-57ee5fb1f5fe"
-    },
-    "3.Sprites\\Ply57\\sprites\\hang_rao.png": {
-      "time": 1788754621370.313,
-      "uuid": "d139273c-d1d5-4c21-a078-defda4e750bb"
-    },
-    "3.Sprites\\Ply57\\sprites\\goi_shadow.png": {
-      "time": 1788754621367.0024,
-      "uuid": "778b5a80-8a9a-4445-8b66-020e77587bea"
-    },
-    "3.Sprites\\Ply57\\sprites\\ghe_tang_2.png": {
-      "time": 1788754621363.4866,
-      "uuid": "dbbc1ede-57e4-4724-910f-f8da9a1c9a70"
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_1_shadow.png": {
-      "time": 1788754621370.313,
-      "uuid": "e88eeb0c-240a-45cd-8ade-96749642756b"
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_1.png": {
-      "time": 1788754621371.9912,
-      "uuid": "dd785a20-328f-4de5-a9a8-4288a20426e8"
-    },
-    "3.Sprites\\Ply57\\sprites\\hang_rao_shadow.png": {
-      "time": 1788754621369.3005,
-      "uuid": "d3e14bf2-28e2-45be-be0b-ace277342b61"
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_2.png": {
-      "time": 1788754621372.9963,
-      "uuid": "dadeb638-3e98-4883-a409-e05ecd3c3570"
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_2_shadow.png": {
-      "time": 1788754621372.9963,
-      "uuid": "5d5e5a9c-2047-430f-9c4a-3d7b76cd4651"
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_3.png": {
-      "time": 1788754621375.9272,
-      "uuid": "1edd91de-740b-483b-a9c6-2642a092d14b"
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_3_shadow.png": {
-      "time": 1788754621374.9258,
-      "uuid": "06e74afd-4ec5-456c-9516-89df90509ebc"
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_4.png": {
-      "time": 1788754621377.996,
-      "uuid": "57dbc263-420a-4fc3-b830-ba500cc3c123"
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_4_shadow.png": {
-      "time": 1788754621376.927,
-      "uuid": "a4d6e99e-5358-49c6-8865-d71c8b2c54e1"
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_5_shadow.png": {
-      "time": 1788754621378.3745,
-      "uuid": "0ab66f05-f5ca-4069-bfa4-acdf52c79b00"
-    },
-    "3.Sprites\\Ply57\\sprites\\hop_qua_5.png": {
-      "time": 1788754621379.3752,
-      "uuid": "0a3a6127-a23b-492b-be1e-d412169d34b6"
-    },
-    "3.Sprites\\Ply57\\sprites\\hu_1_shadow.png": {
-      "time": 1788754621380.3748,
-      "uuid": "294bc9b2-d676-4e0d-829e-2bf12f3af440"
-    },
-    "3.Sprites\\Ply57\\sprites\\hu_1.png": {
-      "time": 1788754621380.3748,
-      "uuid": "a799364d-1a88-428d-a170-2b4feab167b2"
-    },
-    "3.Sprites\\Ply57\\sprites\\hu_2.png": {
-      "time": 1788754621384.107,
-      "uuid": "616f480a-c48e-4c98-9ae2-c47a5a748169"
-    },
-    "3.Sprites\\Ply57\\sprites\\keo_shadow.png": {
-      "time": 1788754621387.993,
-      "uuid": "3cc063ee-61ef-408d-9da4-14733c256282"
-    },
-    "3.Sprites\\Ply57\\sprites\\keo.png": {
-      "time": 1788754621389.3062,
-      "uuid": "f922f1d2-1e57-45bc-8b87-0b55e229baee"
-    },
-    "3.Sprites\\Ply57\\sprites\\hu_2_shadow.png": {
-      "time": 1788754621381.881,
-      "uuid": "9a76d9ba-66d4-4dfe-a1c9-8f62924d19fc"
-    },
-    "3.Sprites\\Ply57\\sprites\\ke_lon.png": {
-      "time": 1788754621385.1914,
-      "uuid": "242c3f35-e6d1-4abd-af96-956d25c18513"
-    },
-    "3.Sprites\\Ply57\\sprites\\ke_gap_cut.png": {
-      "time": 1788754621384.107,
-      "uuid": "b5aea2dc-d933-4df0-9b0d-fbe1b68386b3"
-    },
-    "3.Sprites\\Ply57\\sprites\\ke_nho.png": {
-      "time": 1788754621386.9878,
-      "uuid": "86a0aa3d-d447-4ffd-9fef-534aca5885f3"
-    },
-    "3.Sprites\\Ply57\\sprites\\khan_qang.png": {
-      "time": 1788754621390.3071,
-      "uuid": "074733f2-b7c2-4101-b881-5a057247834f"
-    },
-    "3.Sprites\\Ply57\\sprites\\ke_gap.png": {
-      "time": 1788754621385.1914,
-      "uuid": "360ebe40-a85c-4d70-a112-f8c077799e8d"
-    },
-    "3.Sprites\\Ply57\\sprites\\khan_trai.png": {
-      "time": 1788754621392.8176,
-      "uuid": "eb1d87f1-a6a3-4116-9007-01785a9cafc9"
-    },
-    "3.Sprites\\Ply57\\sprites\\khan_qang_shadow.png": {
-      "time": 1788754621390.3071,
-      "uuid": "9b6f7ee7-7445-43c3-a58c-35838b0d4f3e"
-    },
-    "3.Sprites\\Ply57\\sprites\\khan_trai_shadow.png": {
-      "time": 1788754621391.812,
-      "uuid": "5b649272-3d87-4d71-9a73-19967b8e1ccc"
-    },
-    "3.Sprites\\Ply57\\sprites\\khung_chan_ong_khoi.png": {
-      "time": 1788754621393.8174,
-      "uuid": "598d56b7-4d9d-421c-9f2f-6efd990f00d6"
-    },
-    "3.Sprites\\Ply57\\sprites\\lan_can_1.png": {
-      "time": 1788754621394.8618,
-      "uuid": "c22c1152-dfbd-4f1f-85ef-523b84e16a33"
-    },
-    "3.Sprites\\Ply57\\sprites\\lan_can_1_shadow.png": {
-      "time": 1788754621393.8174,
-      "uuid": "53bb9c06-efb2-4251-b57f-afa0dedd7144"
-    },
-    "3.Sprites\\Ply57\\sprites\\lan_can_2.png": {
-      "time": 1788754621397.5742,
-      "uuid": "c55e833c-adbc-4119-8648-084c3c8a59c9"
-    },
-    "3.Sprites\\Ply57\\sprites\\lan_can_2_shadow.png": {
-      "time": 1788754621394.8618,
-      "uuid": "987685a8-d01b-4809-8f60-46f9374f0771"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_1.png": {
-      "time": 1788754621398.5725,
-      "uuid": "12c610cd-c3d7-4e09-b65d-fdc4ca6a2648"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_1_shadow.png": {
-      "time": 1788754621398.5725,
-      "uuid": "676e1f9a-deeb-4e3e-941c-b22b2738cb28"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_2.png": {
-      "time": 1788754621399.5737,
-      "uuid": "836e0ce4-7d1c-4307-b43e-0b1faedc6398"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_2_shadow.png": {
-      "time": 1788754621399.5737,
-      "uuid": "5fa09c54-8a6f-4c9b-9483-bb18ce46063d"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_banh_quy.png": {
-      "time": 1788754621402.2944,
-      "uuid": "1ad16ef9-98b2-42ba-88df-91b2cd92dfc3"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_1.png": {
-      "time": 1788754621403.8027,
-      "uuid": "6cfd5777-c671-4aa7-8681-a1d0bf860510"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_1_shadow.png": {
-      "time": 1788754621402.2944,
-      "uuid": "0fa9b728-1481-484e-8ef4-380268ff91c8"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_banh_quy_shadow.png": {
-      "time": 1788754621401.2888,
-      "uuid": "63243f3d-d3fc-45ce-b4c6-089ec9d021d7"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_2_shadow.png": {
-      "time": 1788754621403.8027,
-      "uuid": "72d4c433-fc2c-40b1-8dc2-69fe52304c89"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_2.png": {
-      "time": 1788754621405.0908,
-      "uuid": "10915c80-3220-4f09-b209-d0f94f49c09b"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_3_shadow.png": {
-      "time": 1788754621406.0923,
-      "uuid": "0f7eb60e-048f-4591-8c4a-1daae36f230c"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_gia_vi_3.png": {
-      "time": 1788754621407.1567,
-      "uuid": "e6567f50-aa16-4409-a7d6-7e8c160f3d2f"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_suoi_shadow.png": {
-      "time": 1788754621409.3108,
-      "uuid": "1ce202fd-f603-41d6-a963-80ab99ebc54a"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_suoi.png": {
-      "time": 1788754621410.8157,
-      "uuid": "b9f3f741-a5d0-4d23-b8ef-48da9526316a"
-    },
-    "3.Sprites\\Ply57\\sprites\\lua.png": {
-      "time": 1788754621412.0486,
-      "uuid": "8fc80a0c-98ff-40dd-8b54-5f525cb2b373"
-    },
-    "3.Sprites\\Ply57\\sprites\\lua_fx.png": {
-      "time": 1788754621412.0486,
-      "uuid": "84412823-89de-455f-91c1-d6a62b532bbb"
-    },
-    "3.Sprites\\Ply57\\sprites\\lo_suoi_cut.png": {
-      "time": 1788754621408.3103,
-      "uuid": "eba48bbf-6b87-4119-9c97-c9eb78c920af"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf.png": {
-      "time": 1788754621416.6965,
-      "uuid": "d7ece75c-f8dc-44c1-8c04-de2ce8f31051"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf_2.png": {
-      "time": 1788754621413.5537,
-      "uuid": "7f71b81f-266c-49ad-9d10-ed95b7c59f40"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf_2_shadow.png": {
-      "time": 1788754621413.5537,
-      "uuid": "6cb7c8f8-4a10-4c39-9854-5f17154fadb3"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf_3.png": {
-      "time": 1788754621415.5593,
-      "uuid": "26e64659-2fd7-43f8-93a9-f1df14ce22b3"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf_3_shadow.png": {
-      "time": 1788754621414.56,
-      "uuid": "6d1c85a7-b31b-4b9f-bd09-78d4c387c2d1"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_cf_shadow.png": {
-      "time": 1788754621416.6965,
-      "uuid": "da72ee43-e676-487d-a4aa-a6c83e96374e"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_socola_shadow.png": {
-      "time": 1788754621417.6963,
-      "uuid": "fcbe4df2-917e-49cd-845a-73620ac7f6c8"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_1_shadow.png": {
-      "time": 1788754621418.8726,
-      "uuid": "fb72ea68-8128-4418-90e6-fee742a736bb"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_socola.png": {
-      "time": 1788754621418.8726,
-      "uuid": "6a02d2a2-fd29-49a8-9163-3e183979e0aa"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_1.png": {
-      "time": 1788754621420.381,
-      "uuid": "7d2673e5-3266-43cf-b0e2-60afc3a622a0"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_2_shadow.png": {
-      "time": 1788754621421.3875,
-      "uuid": "7610383c-d74a-46ee-8223-a498445cc4e7"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_2.png": {
-      "time": 1788754621421.3875,
-      "uuid": "6a1c235b-9d8c-4133-9791-89499bb1baac"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_3_shadow.png": {
-      "time": 1788754621422.6863,
-      "uuid": "49409490-6abf-4a7e-a4aa-beb1cefe8ff2"
-    },
-    "3.Sprites\\Ply57\\sprites\\ly_uong_ruou_3.png": {
-      "time": 1788754621423.1904,
-      "uuid": "c15c7260-986b-486f-8c21-8585443e926c"
-    },
-    "3.Sprites\\Ply57\\sprites\\may_làm_banh_mi.png": {
-      "time": 1788754621425.1958,
-      "uuid": "c49f70d8-d301-434a-83bf-cd0792a34270"
-    },
-    "3.Sprites\\Ply57\\sprites\\may_làm_banh_mi_shadow.png": {
-      "time": 1788754621424.1965,
-      "uuid": "6bdbcf06-b124-4d2b-90c1-47c235523cd3"
-    },
-    "3.Sprites\\Ply57\\sprites\\nen.png": {
-      "time": 1788754621427.3716,
-      "uuid": "df21fe8f-db12-44fe-84f7-9dbe7c359311"
-    },
-    "3.Sprites\\Ply57\\sprites\\nen_shadow.png": {
-      "time": 1788754621426.3726,
-      "uuid": "fc53692a-4d8c-4cc4-83b2-327a6103e25e"
-    },
-    "3.Sprites\\Ply57\\sprites\\nen_fx.png": {
-      "time": 1788754621425.1958,
-      "uuid": "defd5604-394c-4b04-83b0-a223fad9c5f3"
-    },
-    "3.Sprites\\Ply57\\sprites\\ngoi_sao_fx.png": {
-      "time": 1788754621428.3723,
-      "uuid": "f4aaac42-2555-4f38-897e-80c5242a48a9"
-    },
-    "3.Sprites\\Ply57\\sprites\\nguoi_tuyet_shadow.png": {
-      "time": 1788754621430.071,
-      "uuid": "d4bc3f3d-ab44-4f53-8b81-700e77ea91a5"
-    },
-    "3.Sprites\\Ply57\\sprites\\ngoi_sao.png": {
-      "time": 1788754621428.3723,
-      "uuid": "6be3cce7-f2c6-4172-b5cb-e1ff8d373c2a"
-    },
-    "3.Sprites\\Ply57\\sprites\\nguoi_tuyet.png": {
-      "time": 1788754621431.0774,
-      "uuid": "c3fda51b-dd7c-4994-a5c9-d9d2683577ca"
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat.png": {
-      "time": 1788754621437.0867,
-      "uuid": "97c8c762-b3c1-4642-9035-8957f361d2b1"
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat_2_shadow.png": {
-      "time": 1788754621432.0771,
-      "uuid": "54e56675-d454-48b0-85fe-f835b7551604"
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat_shadow.png": {
-      "time": 1788754621435.807,
-      "uuid": "e8ba6f3b-54f4-4946-bb54-30a6fc678fd3"
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat_3_shadow.png": {
-      "time": 1788754621433.2854,
-      "uuid": "29520708-5e2e-4036-a4b0-51da78d22d10"
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat_3.png": {
-      "time": 1788754621434.8008,
-      "uuid": "3fab1da9-724b-4159-86c9-58ec3efebcf5"
-    },
-    "3.Sprites\\Ply57\\sprites\\noi.png": {
-      "time": 1788754621442.8252,
-      "uuid": "a15f9eca-a85c-4339-bb1a-74487e61b80d"
-    },
-    "3.Sprites\\Ply57\\sprites\\no.png": {
-      "time": 1788754621438.086,
-      "uuid": "76fe4f54-7415-4dc4-8479-a2793600cfa2"
-    },
-    "3.Sprites\\Ply57\\sprites\\nhan_vat_2.png": {
-      "time": 1788754621433.2854,
-      "uuid": "7bc06ecb-1f76-4b86-b3a0-1f747115e074"
-    },
-    "3.Sprites\\Ply57\\sprites\\noi_shadow.png": {
-      "time": 1788754621441.8242,
-      "uuid": "0530939a-203d-45e3-9fa5-dcc97bd38161"
-    },
-    "3.Sprites\\Ply57\\sprites\\noc_nha.png": {
-      "time": 1788754621440.8245,
-      "uuid": "65dc8d56-dd08-48f2-b8f7-63c6e5de088c"
-    },
-    "3.Sprites\\Ply57\\sprites\\noi_soup.png": {
-      "time": 1788754621442.8252,
-      "uuid": "d9984b59-8bd8-4e39-91d0-665b35e8f1dd"
-    },
-    "3.Sprites\\Ply57\\sprites\\pizza.png": {
-      "time": 1788754621445.5605,
-      "uuid": "67ef9e58-7f08-4622-8ea1-bfd680dd6270"
-    },
-    "3.Sprites\\Ply57\\sprites\\pizza_shadow.png": {
-      "time": 1788754621444.5542,
-      "uuid": "1cb2efb1-9a29-46e0-96ed-25dd11e1ce8b"
-    },
-    "3.Sprites\\Ply57\\sprites\\qua_cau_trang_tri.png": {
-      "time": 1788754621447.6926,
-      "uuid": "689574f4-d710-4cc4-addf-6455104416d4"
-    },
-    "3.Sprites\\Ply57\\sprites\\qua_cau_trang_tri_shadow.png": {
-      "time": 1788754621447.6926,
-      "uuid": "2af5cad5-13e3-4fa5-a7ce-e6119c885cec"
-    },
-    "3.Sprites\\Ply57\\sprites\\qua_cau_trang_tri_2.png": {
-      "time": 1788754621446.56,
-      "uuid": "648779ec-f272-4d1c-9404-294cd27d03dc"
-    },
-    "3.Sprites\\Ply57\\sprites\\qua_cau_trang_tri_2_shadow.png": {
-      "time": 1788754621445.5605,
-      "uuid": "fc295f14-6031-4899-90dc-16f5f0a9ef53"
-    },
-    "3.Sprites\\Ply57\\sprites\\sach_shadow.png": {
-      "time": 1788754621449.197,
-      "uuid": "fa551d51-b3f4-465f-b6b9-86424a2c0a66"
-    },
-    "3.Sprites\\Ply57\\sprites\\sach.png": {
-      "time": 1788754621450.2021,
-      "uuid": "be228aa3-081f-4928-afcf-ad715dd713e0"
-    },
-    "3.Sprites\\Ply57\\sprites\\soi_shadow.png": {
-      "time": 1788754621452.3557,
-      "uuid": "cd916252-eff0-4b5c-a528-21cd4f812185"
-    },
-    "3.Sprites\\Ply57\\sprites\\soi.png": {
-      "time": 1788754621454.6516,
-      "uuid": "859bbd08-b35b-45fb-87e4-4e5fca0e50d5"
-    },
-    "3.Sprites\\Ply57\\sprites\\tat.png": {
-      "time": 1788754621456.1558,
-      "uuid": "fbb6d680-3937-4e4c-918b-457c1af4fa2d"
-    },
-    "3.Sprites\\Ply57\\sprites\\tat_shadow.png": {
-      "time": 1788754621455.6519,
-      "uuid": "1fe0efe4-5bc9-48d5-a5f6-e9c14b3d3869"
-    },
-    "3.Sprites\\Ply57\\sprites\\tham_tang_1.png": {
-      "time": 1788754621458.161,
-      "uuid": "7d10a4e6-cb08-452f-ab98-feb83beacc6a"
-    },
-    "3.Sprites\\Ply57\\sprites\\thang_shadow.png": {
-      "time": 1788754621458.161,
-      "uuid": "19765dad-bbcb-4a07-958e-59a4a7f5ed3e"
-    },
-    "3.Sprites\\Ply57\\sprites\\thang.png": {
-      "time": 1788754621460.1934,
-      "uuid": "bc7ae63a-319e-4e84-8cf2-1815fac55666"
-    },
-    "3.Sprites\\Ply57\\sprites\\tham_tang_1_shadow.png": {
-      "time": 1788754621457.1611,
-      "uuid": "e13ad9b5-131f-46ed-aaea-a27fb050ff65"
-    },
-    "3.Sprites\\Ply57\\sprites\\san.png": {
-      "time": 1788754621452.3557,
-      "uuid": "552edfd4-9f92-4230-87b8-0a7cb11d58dc"
-    },
-    "3.Sprites\\Ply57\\sprites\\thot_shadow.png": {
-      "time": 1788754621461.1929,
-      "uuid": "a1caca08-4581-478e-be5a-0d9d518f44fd"
-    },
-    "3.Sprites\\Ply57\\sprites\\thot.png": {
-      "time": 1788754621461.1929,
-      "uuid": "cb282af7-b4fa-4476-b4df-a9350c6e47c6"
-    },
-    "3.Sprites\\Ply57\\sprites\\thảm_tang_2_shadow.png": {
-      "time": 1788754621462.1936,
-      "uuid": "974fb267-487a-40b6-9e7f-1982418fc402"
-    },
-    "3.Sprites\\Ply57\\sprites\\thảm_tang_2.png": {
-      "time": 1788754621462.1936,
-      "uuid": "9a4e1da7-32da-45b9-8bfa-2c0ee74f2eb8"
-    },
-    "3.Sprites\\Ply57\\sprites\\trai_ban_an.png": {
-      "time": 1788754621463.9084,
-      "uuid": "8f8b304d-388a-43e1-9dac-f35521e27d11"
-    },
-    "3.Sprites\\Ply57\\sprites\\trang_tri_cay_thong.png": {
-      "time": 1788754621464.9143,
-      "uuid": "6b5b282a-2727-4f2f-a516-645930c5339d"
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_2.png": {
-      "time": 1788754621467.1006,
-      "uuid": "706724a4-6adc-4fc8-b9d7-a8a5d8ecf439"
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_2_shadow.png": {
-      "time": 1788754621466.1008,
-      "uuid": "e3e9386b-59c0-4904-8c6c-e0fda705ff3f"
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_3.png": {
-      "time": 1788754621468.6062,
-      "uuid": "a26af212-3bda-44b8-a8e4-122524593933"
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_3_shadow.png": {
-      "time": 1788754621467.1006,
-      "uuid": "f489bfdc-041c-4b3b-88be-0968ffae4127"
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_4.png": {
-      "time": 1788754621469.8455,
-      "uuid": "e4d3590d-85dd-416b-bb86-54ef0b7c89db"
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_4_shadow.png": {
-      "time": 1788754621469.8455,
-      "uuid": "5ebf1c45-77b8-465d-b547-f5a21c831244"
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_treo_tang_2.png": {
-      "time": 1788754621471.8452,
-      "uuid": "d4e36241-ea2f-479d-bf89-b52a12be5eae"
-    },
-    "3.Sprites\\Ply57\\sprites\\tranh_treo_tang_2_shadow.png": {
-      "time": 1788754621470.8462,
-      "uuid": "3e4e42f2-7406-49ea-8ac4-8ad3c7933254"
-    },
-    "3.Sprites\\Ply57\\sprites\\tuyet_ngoai_troi_2.png": {
-      "time": 1788754621486.5544,
-      "uuid": "8e471f7b-6365-4a82-9e2e-4100cfcc8af0"
-    },
-    "3.Sprites\\Ply57\\sprites\\tuyet_ngoai_troi_1_shadow.png": {
-      "time": 1788754621483.0142,
-      "uuid": "63590ff2-170c-420a-b9ff-f8c5a465f76e"
-    },
-    "3.Sprites\\Ply57\\sprites\\tuyet_ngoai_troi_2_shadow.png": {
-      "time": 1788754621485.1597,
-      "uuid": "507cf102-9dd8-4bca-a907-454bbec1b9c1"
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_lanh.png": {
-      "time": 1788754621473.5652,
-      "uuid": "1916de62-9575-46db-98c0-1c4670b2bd28"
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_lanh_shadow.png": {
-      "time": 1788754621471.8452,
-      "uuid": "5485ad2e-0bb0-45e8-9c8d-83a7826c7dc5"
-    },
-    "3.Sprites\\Ply57\\sprites\\tuong.png": {
-      "time": 1788754621482.0095,
-      "uuid": "2fb630dd-a254-4f87-93da-0e8c73cd2e2e"
-    },
-    "3.Sprites\\Ply57\\sprites\\tuyet_ngoai_troi_1.png": {
-      "time": 1788754621484.1614,
-      "uuid": "a22ec45d-ba3c-4247-a322-14ba2057380f"
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_sach_cut_2.png": {
-      "time": 1788754621475.5715,
-      "uuid": "1d27b1dc-1e39-46f8-90e2-01cbbf96e30f"
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_sach_cut_1.png": {
-      "time": 1788754621474.5708,
-      "uuid": "9362e4e5-03c0-474d-8067-f7b031b8af8e"
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_sach.png": {
-      "time": 1788754621479.3044,
-      "uuid": "0457eabb-ae16-4e90-840f-0a3eb7730f9f"
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_sach_cut.png": {
-      "time": 1788754621476.7954,
-      "uuid": "819423e1-aa89-46ad-aa40-ede0ff428f6b"
-    },
-    "3.Sprites\\Ply57\\sprites\\tu_sach_shadow.png": {
-      "time": 1788754621478.3003,
-      "uuid": "3df3f3bb-d081-4eda-8d4e-9a6f2e53e7e4"
-    },
-    "3.Sprites\\Ply57\\sprites\\voi_nuoc.png": {
-      "time": 1788754621487.558,
-      "uuid": "0735a068-5eae-46e8-9086-3b9520cb932e"
-    },
-    "3.Sprites\\Ply57\\sprites\\vong_decor.png": {
-      "time": 1788754621488.564,
-      "uuid": "796ab377-46c0-4f9d-b475-883f0327f11d"
-    },
-    "3.Sprites\\Ply57\\sprites\\xe_day_shadow.png": {
-      "time": 1788754621489.563,
-      "uuid": "bf3e880b-33f7-4e0d-b816-d528562b0402"
-    },
-    "3.Sprites\\Ply57\\sprites\\xe_day.png": {
-      "time": 1788754621489.563,
-      "uuid": "70a2d97a-32e1-4ea1-a160-b81e4e2376be"
-    },
-    "3.Sprites\\Ply57\\sprites\\vong_decor_2.png": {
-      "time": 1788754621487.558,
-      "uuid": "edfa68bb-9aa9-42c8-a5ae-bf529ea55ede"
-    },
     "4.Sounds\\ring.mp3.meta": {
       "time": 1795053262862.2324
     },
     "4.Sounds\\ring.mp3": {
       "time": 1795053240291.9993,
       "uuid": "8642360c-b685-4203-8159-dea06c080b6f"
+    },
+    "3.Sprites\\Ply58.meta": {
+      "time": 1795576975832.1533
+    },
+    "3.Sprites\\Ply58\\sprites.meta": {
+      "time": 1795576975833.1624
+    },
+    "3.Sprites\\Ply58": {
+      "time": 1795578297692.0916,
+      "uuid": "61f0c4ef-7b32-4d6f-9402-904ff5942588"
+    },
+    "3.Sprites\\Ply58\\sprites": {
+      "time": 1795577101910.3713,
+      "uuid": "2b7f95ef-bd0e-4386-9787-3693f66de591"
+    },
+    "3.Sprites\\Ply58\\Level838_Scale.json.meta": {
+      "time": 1795576976043.8171
+    },
+    "3.Sprites\\Ply58\\sprites\\bag.png.meta": {
+      "time": 1795576976051.8765
+    },
+    "3.Sprites\\Ply58\\sprites\\bag_2.png.meta": {
+      "time": 1795576976047.8572
+    },
+    "3.Sprites\\Ply58\\sprites\\bag_shadow.png.meta": {
+      "time": 1795576976053.8945
+    },
+    "3.Sprites\\Ply58\\sprites\\base_F1.png.meta": {
+      "time": 1795576976137.672
+    },
+    "3.Sprites\\Ply58\\sprites\\base_F1_shadow.png.meta": {
+      "time": 1795576976143.192
+    },
+    "3.Sprites\\Ply58\\sprites\\base_F2.png.meta": {
+      "time": 1795576976140.1885
+    },
+    "3.Sprites\\Ply58\\sprites\\base_F2_shadow.png.meta": {
+      "time": 1795576976158.3894
+    },
+    "3.Sprites\\Ply58\\sprites\\bed.png.meta": {
+      "time": 1795576976174.257
+    },
+    "3.Sprites\\Ply58\\sprites\\bed_1.png.meta": {
+      "time": 1795576976178.4028
+    },
+    "3.Sprites\\Ply58\\sprites\\bed_shadow.png.meta": {
+      "time": 1795576976180.4521
+    },
+    "3.Sprites\\Ply58\\sprites\\BG.png.meta": {
+      "time": 1795577103398.3877
+    },
+    "3.Sprites\\Ply58\\sprites\\blanket-1.png.meta": {
+      "time": 1795576976201.2356
+    },
+    "3.Sprites\\Ply58\\sprites\\blanket.png.meta": {
+      "time": 1795576976208.4307
+    },
+    "3.Sprites\\Ply58\\sprites\\blanket_shadow-1.png.meta": {
+      "time": 1795576976211.1155
+    },
+    "3.Sprites\\Ply58\\sprites\\blanket_shadow.png.meta": {
+      "time": 1795576976222.3503
+    },
+    "3.Sprites\\Ply58\\sprites\\book.png.meta": {
+      "time": 1795576976236.032
+    },
+    "3.Sprites\\Ply58\\sprites\\book_shadow.png.meta": {
+      "time": 1795576976241.0847
+    },
+    "3.Sprites\\Ply58\\sprites\\cake.png.meta": {
+      "time": 1795576976248.449
+    },
+    "3.Sprites\\Ply58\\sprites\\cake_shadow.png.meta": {
+      "time": 1795576976333.1543
+    },
+    "3.Sprites\\Ply58\\sprites\\candle.png.meta": {
+      "time": 1795576976345.3953
+    },
+    "3.Sprites\\Ply58\\sprites\\candle_shadow.png.meta": {
+      "time": 1795576976349.5725
+    },
+    "3.Sprites\\Ply58\\sprites\\candy.png.meta": {
+      "time": 1795576976392.3528
+    },
+    "3.Sprites\\Ply58\\sprites\\candy_2.png.meta": {
+      "time": 1795576976404.9138
+    },
+    "3.Sprites\\Ply58\\sprites\\candy_shadow.png.meta": {
+      "time": 1795576976395.8179
+    },
+    "3.Sprites\\Ply58\\sprites\\carpet_2.png.meta": {
+      "time": 1795576976417.508
+    },
+    "3.Sprites\\Ply58\\sprites\\carpet_2_shadow.png.meta": {
+      "time": 1795576977073.902
+    },
+    "3.Sprites\\Ply58\\sprites\\carpet_3.png.meta": {
+      "time": 1795576977072.8848
+    },
+    "3.Sprites\\Ply58\\sprites\\carpet_3_shadow.png.meta": {
+      "time": 1795576977092.6855
+    },
+    "3.Sprites\\Ply58\\sprites\\cat.png.meta": {
+      "time": 1795576977090.6387
+    },
+    "3.Sprites\\Ply58\\sprites\\cat_shadow.png.meta": {
+      "time": 1795576977102.492
+    },
+    "3.Sprites\\Ply58\\sprites\\chair_2.png.meta": {
+      "time": 1795576977121.231
+    },
+    "3.Sprites\\Ply58\\sprites\\chair_2_shadow.png.meta": {
+      "time": 1795576977119.116
+    },
+    "3.Sprites\\Ply58\\sprites\\chair_3.png.meta": {
+      "time": 1795576977124.448
+    },
+    "3.Sprites\\Ply58\\sprites\\chair_3_shadow.png.meta": {
+      "time": 1795576977129.2454
+    },
+    "3.Sprites\\Ply58\\sprites\\char.png.meta": {
+      "time": 1795576977141.7686
+    },
+    "3.Sprites\\Ply58\\sprites\\chimey_fx.png.meta": {
+      "time": 1795576977161.2466
+    },
+    "3.Sprites\\Ply58\\sprites\\chimney.png.meta": {
+      "time": 1795576977157.6033
+    },
+    "3.Sprites\\Ply58\\sprites\\chimney_shadow.png.meta": {
+      "time": 1795576977149.4482
+    },
+    "3.Sprites\\Ply58\\sprites\\chimney_snow.png.meta": {
+      "time": 1795576977179.224
+    },
+    "3.Sprites\\Ply58\\sprites\\chimney_snow_shadow.png.meta": {
+      "time": 1795576977175.0686
+    },
+    "3.Sprites\\Ply58\\sprites\\cup.png.meta": {
+      "time": 1795576977184.2795
+    },
+    "3.Sprites\\Ply58\\sprites\\cup_shadow.png.meta": {
+      "time": 1795576977180.7437
+    },
+    "3.Sprites\\Ply58\\sprites\\deer.png.meta": {
+      "time": 1795576977195.7966
+    },
+    "3.Sprites\\Ply58\\sprites\\deer_shadow.png.meta": {
+      "time": 1795576977201.8513
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_1.png.meta": {
+      "time": 1795576977254.2524
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_1_shadow.png.meta": {
+      "time": 1795576977204.3408
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_2.png.meta": {
+      "time": 1795576977285.1418
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_2_shadow.png.meta": {
+      "time": 1795576977259.3481
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_3.png.meta": {
+      "time": 1795576977260.3887
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_3_shadow.png.meta": {
+      "time": 1795576977272.0022
+    },
+    "3.Sprites\\Ply58\\sprites\\horse.png.meta": {
+      "time": 1795576977283.6238
+    },
+    "3.Sprites\\Ply58\\sprites\\horse_shadow.png.meta": {
+      "time": 1795576977277.5334
+    },
+    "3.Sprites\\Ply58\\sprites\\label.png.meta": {
+      "time": 1795576977323.4597
+    },
+    "3.Sprites\\Ply58\\sprites\\label_2.png.meta": {
+      "time": 1795576977304.5012
+    },
+    "3.Sprites\\Ply58\\sprites\\label_2_shadow.png.meta": {
+      "time": 1795576977303.0757
+    },
+    "3.Sprites\\Ply58\\sprites\\label_shadow.png.meta": {
+      "time": 1795576977312.9502
+    },
+    "3.Sprites\\Ply58\\sprites\\lamp.png.meta": {
+      "time": 1795576977320.9844
+    },
+    "3.Sprites\\Ply58\\sprites\\lamp_3.png.meta": {
+      "time": 1795576977344.8145
+    },
+    "3.Sprites\\Ply58\\sprites\\lamp_3_shadow.png.meta": {
+      "time": 1795576977350.305
+    },
+    "3.Sprites\\Ply58\\sprites\\lamp_shadow.png.meta": {
+      "time": 1795576977346.7305
+    },
+    "3.Sprites\\Ply58\\sprites\\light.png.meta": {
+      "time": 1795576977365.9868
+    },
+    "3.Sprites\\Ply58\\sprites\\light_shadow.png.meta": {
+      "time": 1795576977373.1472
+    },
+    "3.Sprites\\Ply58\\sprites\\pad.png.meta": {
+      "time": 1795576977394.376
+    },
+    "3.Sprites\\Ply58\\sprites\\pad_shadow.png.meta": {
+      "time": 1795576977401.6145
+    },
+    "3.Sprites\\Ply58\\sprites\\paper.png.meta": {
+      "time": 1795576977397.5503
+    },
+    "3.Sprites\\Ply58\\sprites\\paper_shadow.png.meta": {
+      "time": 1795576977406.2534
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_1.png.meta": {
+      "time": 1795576977418.9648
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_1_shadow.png.meta": {
+      "time": 1795576977423.1902
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_2.png.meta": {
+      "time": 1795576977434.2278
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_2_shadow.png.meta": {
+      "time": 1795576977438.7715
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_3.png.meta": {
+      "time": 1795576977441.219
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_3_shadow.png.meta": {
+      "time": 1795576977454.871
+    },
+    "3.Sprites\\Ply58\\sprites\\pen.png.meta": {
+      "time": 1795576977461.7642
+    },
+    "3.Sprites\\Ply58\\sprites\\pen_shadow.png.meta": {
+      "time": 1795576977458.3977
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_1.png.meta": {
+      "time": 1795576977477.8975
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_1_shadow.png.meta": {
+      "time": 1795576977474.5479
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_2.png.meta": {
+      "time": 1795576977488.0146
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_2_shadow.png.meta": {
+      "time": 1795576977493.7383
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_3.png.meta": {
+      "time": 1795576977498.2615
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_3_shadow.png.meta": {
+      "time": 1795576977505.8333
+    },
+    "3.Sprites\\Ply58\\sprites\\pillow.png.meta": {
+      "time": 1795576977515.605
+    },
+    "3.Sprites\\Ply58\\sprites\\pillow_2.png.meta": {
+      "time": 1795576977522.1558
+    },
+    "3.Sprites\\Ply58\\sprites\\pillow_2_shadow.png.meta": {
+      "time": 1795576977549.1816
+    },
+    "3.Sprites\\Ply58\\sprites\\pillow_shadow.png.meta": {
+      "time": 1795576977553.209
+    },
+    "3.Sprites\\Ply58\\sprites\\pine.png.meta": {
+      "time": 1795576977571.8896
+    },
+    "3.Sprites\\Ply58\\sprites\\pine_2.png.meta": {
+      "time": 1795576977582.7822
+    },
+    "3.Sprites\\Ply58\\sprites\\pine_2_shadow.png.meta": {
+      "time": 1795576977574.9148
+    },
+    "3.Sprites\\Ply58\\sprites\\pine_BG.png.meta": {
+      "time": 1795576977768.6743
+    },
+    "3.Sprites\\Ply58\\sprites\\pine_BG_shadow.png.meta": {
+      "time": 1795576977626.8357
+    },
+    "3.Sprites\\Ply58\\sprites\\pine_shadow.png.meta": {
+      "time": 1795576977610.0288
+    },
+    "3.Sprites\\Ply58\\sprites\\pot.png.meta": {
+      "time": 1795576977613.172
+    },
+    "3.Sprites\\Ply58\\sprites\\pot_2.png.meta": {
+      "time": 1795576977631.3545
+    },
+    "3.Sprites\\Ply58\\sprites\\pot_2_shadow.png.meta": {
+      "time": 1795576977647.8828
+    },
+    "3.Sprites\\Ply58\\sprites\\pot_3.png.meta": {
+      "time": 1795576977653.4358
+    },
+    "3.Sprites\\Ply58\\sprites\\pot_3_shadow.png.meta": {
+      "time": 1795576977764.0913
+    },
+    "3.Sprites\\Ply58\\sprites\\pot_shadow.png.meta": {
+      "time": 1795576977767.147
+    },
+    "3.Sprites\\Ply58\\sprites\\railing_1.png.meta": {
+      "time": 1795576977790.2244
+    },
+    "3.Sprites\\Ply58\\sprites\\railing_shadow.png.meta": {
+      "time": 1795576977792.0864
+    },
+    "3.Sprites\\Ply58\\sprites\\reindeer_1.png.meta": {
+      "time": 1795576977797.6123
+    },
+    "3.Sprites\\Ply58\\sprites\\reindeer_2.png.meta": {
+      "time": 1795576977807.464
+    },
+    "3.Sprites\\Ply58\\sprites\\ring.png.meta": {
+      "time": 1795576977811.0498
+    },
+    "3.Sprites\\Ply58\\sprites\\ring_shadow.png.meta": {
+      "time": 1795576977822.5347
+    },
+    "3.Sprites\\Ply58\\sprites\\roof.png.meta": {
+      "time": 1795576977858.343
+    },
+    "3.Sprites\\Ply58\\sprites\\roof_shadow.png.meta": {
+      "time": 1795576977860.3691
+    },
+    "3.Sprites\\Ply58\\sprites\\ruby.png.meta": {
+      "time": 1795576977847.13
+    },
+    "3.Sprites\\Ply58\\sprites\\ruby_2.png.meta": {
+      "time": 1795576977860.8984
+    },
+    "3.Sprites\\Ply58\\sprites\\ruby_2_shadow.png.meta": {
+      "time": 1795576977858.8494
+    },
+    "3.Sprites\\Ply58\\sprites\\ruby_shadow.png.meta": {
+      "time": 1795576977881.7966
+    },
+    "3.Sprites\\Ply58\\sprites\\shoes.png.meta": {
+      "time": 1795576977882.304
+    },
+    "3.Sprites\\Ply58\\sprites\\shoes_shadow.png.meta": {
+      "time": 1795576977891.8623
+    },
+    "3.Sprites\\Ply58\\sprites\\sled.png.meta": {
+      "time": 1795576977897.9065
+    },
+    "3.Sprites\\Ply58\\sprites\\sled_2.png.meta": {
+      "time": 1795576977895.3833
+    },
+    "3.Sprites\\Ply58\\sprites\\sled_shadow.png.meta": {
+      "time": 1795576977921.2046
+    },
+    "3.Sprites\\Ply58\\sprites\\snowman.png.meta": {
+      "time": 1795576977922.202
+    },
+    "3.Sprites\\Ply58\\sprites\\snowman_2.png.meta": {
+      "time": 1795576977918.6802
+    },
+    "3.Sprites\\Ply58\\sprites\\snowman_2_shadow.png.meta": {
+      "time": 1795576977927.2495
+    },
+    "3.Sprites\\Ply58\\sprites\\snowman_shadow.png.meta": {
+      "time": 1795576977935.7354
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_1.png.meta": {
+      "time": 1795576977945.0767
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_1_shadow.png.meta": {
+      "time": 1795576977947.595
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_3.png.meta": {
+      "time": 1795576978022.462
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_3_shadow.png.meta": {
+      "time": 1795576978024.981
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_ball.png.meta": {
+      "time": 1795576977964.8672
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_ball_shadow.png.meta": {
+      "time": 1795576977966.375
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_BG.png.meta": {
+      "time": 1795576978121.67
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_BG_shadow.png.meta": {
+      "time": 1795576978119.5293
+    },
+    "3.Sprites\\Ply58\\sprites\\sofa.png.meta": {
+      "time": 1795576978046.6074
+    },
+    "3.Sprites\\Ply58\\sprites\\sofacloth.png.meta": {
+      "time": 1795576978059.657
+    },
+    "3.Sprites\\Ply58\\sprites\\sofacloth_shadow.png.meta": {
+      "time": 1795576978061.7063
+    },
+    "3.Sprites\\Ply58\\sprites\\sofa_shadow.png.meta": {
+      "time": 1795576978127.2021
+    },
+    "3.Sprites\\Ply58\\sprites\\stairs-1.png.meta": {
+      "time": 1795576978132.2644
+    },
+    "3.Sprites\\Ply58\\sprites\\stairs-2.png.meta": {
+      "time": 1795576978138.9758
+    },
+    "3.Sprites\\Ply58\\sprites\\stairs.png.meta": {
+      "time": 1795576978152.629
+    },
+    "3.Sprites\\Ply58\\sprites\\stairs_shadow-1.png.meta": {
+      "time": 1795576978156.1516
+    },
+    "3.Sprites\\Ply58\\sprites\\stairs_shadow.png.meta": {
+      "time": 1795576978163.8347
+    },
+    "3.Sprites\\Ply58\\sprites\\star-1.png.meta": {
+      "time": 1795576978172.3655
+    },
+    "3.Sprites\\Ply58\\sprites\\star.png.meta": {
+      "time": 1795576978176.8833
+    },
+    "3.Sprites\\Ply58\\sprites\\star_2.png.meta": {
+      "time": 1795576978193.5972
+    },
+    "3.Sprites\\Ply58\\sprites\\star_2_shadow.png.meta": {
+      "time": 1795576978194.7427
+    },
+    "3.Sprites\\Ply58\\sprites\\star_copy.png.meta": {
+      "time": 1795576978202.795
+    },
+    "3.Sprites\\Ply58\\sprites\\star_shadow.png.meta": {
+      "time": 1795576978206.8274
+    },
+    "3.Sprites\\Ply58\\sprites\\stove.png.meta": {
+      "time": 1795576978229.7998
+    },
+    "3.Sprites\\Ply58\\sprites\\stove_2.png.meta": {
+      "time": 1795576978228.2764
+    },
+    "3.Sprites\\Ply58\\sprites\\stove_3.png.meta": {
+      "time": 1795576978236.853
+    },
+    "3.Sprites\\Ply58\\sprites\\stove_shadow.png.meta": {
+      "time": 1795576978287.9182
+    },
+    "3.Sprites\\Ply58\\sprites\\table.png.meta": {
+      "time": 1795576978252.2078
+    },
+    "3.Sprites\\Ply58\\sprites\\tablecloth.png.meta": {
+      "time": 1795576978287.9182
+    },
+    "3.Sprites\\Ply58\\sprites\\tablecloth_shadow.png.meta": {
+      "time": 1795576978291.4463
+    },
+    "3.Sprites\\Ply58\\sprites\\table_2.png.meta": {
+      "time": 1795576978305.5786
+    },
+    "3.Sprites\\Ply58\\sprites\\table_2_shadow.png.meta": {
+      "time": 1795576978312.1243
+    },
+    "3.Sprites\\Ply58\\sprites\\table_shadow.png.meta": {
+      "time": 1795576978323.047
+    },
+    "3.Sprites\\Ply58\\sprites\\teapot.png.meta": {
+      "time": 1795576978318.3035
+    },
+    "3.Sprites\\Ply58\\sprites\\teapot_shadow.png.meta": {
+      "time": 1795576978309.1238
+    },
+    "3.Sprites\\Ply58\\sprites\\tree_1.png.meta": {
+      "time": 1795576978333.9526
+    },
+    "3.Sprites\\Ply58\\sprites\\tree_1_shadow.png.meta": {
+      "time": 1795576978335.4636
+    },
+    "3.Sprites\\Ply58\\sprites\\tree_4.png.meta": {
+      "time": 1795576978344.0208
+    },
+    "3.Sprites\\Ply58\\sprites\\tree_4_shadow.png.meta": {
+      "time": 1795576978347.5442
+    },
+    "3.Sprites\\Ply58\\sprites\\window.png.meta": {
+      "time": 1795576978358.067
+    },
+    "3.Sprites\\Ply58\\sprites\\window_shadow.png.meta": {
+      "time": 1795576978366.4656
+    },
+    "3.Sprites\\Ply58\\sprites\\wood_2.png.meta": {
+      "time": 1795576978370.9885
+    },
+    "3.Sprites\\Ply58\\sprites\\wood_2_shadow.png.meta": {
+      "time": 1795576978368.4675
+    },
+    "3.Sprites\\Ply58\\Level838_Scale.json": {
+      "time": 1795576806719.884,
+      "uuid": "4ea694d9-82c1-4991-881f-b84f9d54bf7c"
+    },
+    "3.Sprites\\Ply58\\sprites\\bag_2.png": {
+      "time": 1788755264650.991,
+      "uuid": "72b5783a-54d9-4a79-b1c2-5acabaeebbba"
+    },
+    "3.Sprites\\Ply58\\sprites\\bag.png": {
+      "time": 1788755264681.6838,
+      "uuid": "cdd0ab6f-7104-4dd9-a9a3-96035e34d78e"
+    },
+    "3.Sprites\\Ply58\\sprites\\bag_shadow.png": {
+      "time": 1788755264699.0764,
+      "uuid": "17785539-546d-4a08-8532-68a3ca2c5b58"
+    },
+    "3.Sprites\\Ply58\\sprites\\base_F1.png": {
+      "time": 1788755264819.9116,
+      "uuid": "e52050e9-ca32-443d-b72d-a4c318e77de0"
+    },
+    "3.Sprites\\Ply58\\sprites\\base_F2.png": {
+      "time": 1788755264901.828,
+      "uuid": "95d8796a-0ece-4877-a16e-b710de7fbecb"
+    },
+    "3.Sprites\\Ply58\\sprites\\base_F1_shadow.png": {
+      "time": 1788755264884.429,
+      "uuid": "cd9b9740-5b96-467b-930f-91b0bb83b31b"
+    },
+    "3.Sprites\\Ply58\\sprites\\base_F2_shadow.png": {
+      "time": 1788755264917.9197,
+      "uuid": "db29c127-fe5d-4a6d-a523-3c91ca4f2bc5"
+    },
+    "3.Sprites\\Ply58\\sprites\\bed.png": {
+      "time": 1788755264936.8547,
+      "uuid": "901c8153-05e8-4243-a678-bd7efcc65ceb"
+    },
+    "3.Sprites\\Ply58\\sprites\\bed_1.png": {
+      "time": 1788755264932.2988,
+      "uuid": "d42d99e8-8dfd-4079-ad92-a5f67740aa53"
+    },
+    "3.Sprites\\Ply58\\sprites\\bed_shadow.png": {
+      "time": 1788755264951.2085,
+      "uuid": "b9f8fecb-1473-4236-a623-a132fc5bc69f"
+    },
+    "3.Sprites\\Ply58\\sprites\\blanket-1.png": {
+      "time": 1788755264971.0059,
+      "uuid": "09d48b09-06b9-42eb-b37b-da80e9a359e5"
+    },
+    "3.Sprites\\Ply58\\sprites\\blanket.png": {
+      "time": 1788755264972.0051,
+      "uuid": "151196ac-5b2e-4d57-8946-e15448d7de96"
+    },
+    "3.Sprites\\Ply58\\sprites\\blanket_shadow-1.png": {
+      "time": 1788755264994.2427,
+      "uuid": "4e8899ec-81e1-4808-97db-f0c8553a2948"
+    },
+    "3.Sprites\\Ply58\\sprites\\blanket_shadow.png": {
+      "time": 1788755264996.2495,
+      "uuid": "79843bc5-200e-4db8-b877-5177c11ee762"
+    },
+    "3.Sprites\\Ply58\\sprites\\book.png": {
+      "time": 1788755265015.257,
+      "uuid": "42de0555-1e69-41f2-9417-94ea177820d7"
+    },
+    "3.Sprites\\Ply58\\sprites\\book_shadow.png": {
+      "time": 1788755265052.9944,
+      "uuid": "6bbc2cf7-2712-4cad-9836-c5a97f6492e0"
+    },
+    "3.Sprites\\Ply58\\sprites\\cake.png": {
+      "time": 1788755265107.1626,
+      "uuid": "74c12cfd-2510-470f-a17e-a4e185768e26"
+    },
+    "3.Sprites\\Ply58\\sprites\\BG.png": {
+      "time": 1795577101904.805,
+      "uuid": "4b2d6f63-a4bc-4f92-a02c-129f7a427bbc"
+    },
+    "3.Sprites\\Ply58\\sprites\\cake_shadow.png": {
+      "time": 1788755265125.8757,
+      "uuid": "efed4124-10d1-4b91-82a4-f3d016c7975c"
+    },
+    "3.Sprites\\Ply58\\sprites\\candle.png": {
+      "time": 1788755265125.8757,
+      "uuid": "9f5f91c4-ce22-4710-b9af-d68f865ac8e2"
+    },
+    "3.Sprites\\Ply58\\sprites\\candle_shadow.png": {
+      "time": 1788755265125.8757,
+      "uuid": "56638060-2189-4198-8f2c-14a7f239d20a"
+    },
+    "3.Sprites\\Ply58\\sprites\\candy.png": {
+      "time": 1788755265166.3667,
+      "uuid": "7905d0e3-d4c2-4a24-bc87-eb27232d36e3"
+    },
+    "3.Sprites\\Ply58\\sprites\\candy_shadow.png": {
+      "time": 1788755265184.4243,
+      "uuid": "478c83b2-8aff-4ae0-9036-6f6c5d76fca9"
+    },
+    "3.Sprites\\Ply58\\sprites\\candy_2.png": {
+      "time": 1788755265165.3557,
+      "uuid": "e2e3714f-23f7-4004-9c9e-3035a4ee2aa8"
+    },
+    "3.Sprites\\Ply58\\sprites\\carpet_2.png": {
+      "time": 1788755265202.6858,
+      "uuid": "f67239b6-c86c-420d-9d33-177570511bd4"
+    },
+    "3.Sprites\\Ply58\\sprites\\carpet_3.png": {
+      "time": 1788755265243.8313,
+      "uuid": "3c061f81-62a9-4bb2-8374-cb5d1aebf8fd"
+    },
+    "3.Sprites\\Ply58\\sprites\\carpet_2_shadow.png": {
+      "time": 1788755265224.4148,
+      "uuid": "5353ef68-a496-45e0-8290-9db01ad38a7e"
+    },
+    "3.Sprites\\Ply58\\sprites\\cat.png": {
+      "time": 1788755265281.7385,
+      "uuid": "f7ac9b9d-d235-4561-a211-98594c0457b9"
+    },
+    "3.Sprites\\Ply58\\sprites\\carpet_3_shadow.png": {
+      "time": 1788755265281.7385,
+      "uuid": "a9b7afe8-07e8-4362-9fa9-ddeceba2a6de"
+    },
+    "3.Sprites\\Ply58\\sprites\\cat_shadow.png": {
+      "time": 1788755265281.7385,
+      "uuid": "f5a227c5-4681-4ad8-a42e-2e0c55cb873e"
+    },
+    "3.Sprites\\Ply58\\sprites\\chair_2_shadow.png": {
+      "time": 1788755265301.152,
+      "uuid": "b9e73a9e-73df-44f8-a88a-f5d616e9c2d7"
+    },
+    "3.Sprites\\Ply58\\sprites\\chair_2.png": {
+      "time": 1788755265281.7385,
+      "uuid": "3d29e31e-80e8-453d-bbea-661079b4ece7"
+    },
+    "3.Sprites\\Ply58\\sprites\\chair_3.png": {
+      "time": 1788755265320.1743,
+      "uuid": "f6044277-2f02-4374-b1a2-4063fa0015a5"
+    },
+    "3.Sprites\\Ply58\\sprites\\chair_3_shadow.png": {
+      "time": 1788755265338.9153,
+      "uuid": "cc7bb51a-301c-4029-a202-3a44c9f5e9b2"
+    },
+    "3.Sprites\\Ply58\\sprites\\char.png": {
+      "time": 1788755265338.9153,
+      "uuid": "b1df1e36-29c9-4041-9eed-438cb534e9d4"
+    },
+    "3.Sprites\\Ply58\\sprites\\chimney_shadow.png": {
+      "time": 1788755265430.7942,
+      "uuid": "3262a576-5c93-47ca-a9c5-536ebfb12c99"
+    },
+    "3.Sprites\\Ply58\\sprites\\chimney.png": {
+      "time": 1788755265430.7942,
+      "uuid": "044d16f7-c793-4e03-9e30-76b110f239bd"
+    },
+    "3.Sprites\\Ply58\\sprites\\chimey_fx.png": {
+      "time": 1788755265372.6333,
+      "uuid": "d39ea43e-3598-4df0-b3d2-3f1267208de3"
+    },
+    "3.Sprites\\Ply58\\sprites\\chimney_snow_shadow.png": {
+      "time": 1788755265478.6863,
+      "uuid": "bf55d623-05af-4db2-8c6c-31ba24ea803f"
+    },
+    "3.Sprites\\Ply58\\sprites\\chimney_snow.png": {
+      "time": 1788755265478.6863,
+      "uuid": "dc971a24-00ea-49ea-8144-96e77175b329"
+    },
+    "3.Sprites\\Ply58\\sprites\\cup_shadow.png": {
+      "time": 1788755265541.3604,
+      "uuid": "b1fc8c53-3f6d-4c5c-9412-9ea1872b485c"
+    },
+    "3.Sprites\\Ply58\\sprites\\cup.png": {
+      "time": 1788755265541.3604,
+      "uuid": "4cb2d5bf-f861-4ccb-8afd-9849e0e96d30"
+    },
+    "3.Sprites\\Ply58\\sprites\\deer.png": {
+      "time": 1788755265541.3604,
+      "uuid": "f254a737-c03e-4e92-a0b2-3bf42c0ca7c4"
+    },
+    "3.Sprites\\Ply58\\sprites\\deer_shadow.png": {
+      "time": 1788755265546.0408,
+      "uuid": "a7ecbafb-1bff-4a15-85f2-af5735b9f35e"
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_1_shadow.png": {
+      "time": 1788755265546.0408,
+      "uuid": "ea9a3973-2f6c-419a-8d5e-f51ae427c6d3"
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_1.png": {
+      "time": 1788755265546.0408,
+      "uuid": "6aca4a05-4493-406c-90b9-e2ded393d5c4"
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_2_shadow.png": {
+      "time": 1788755265546.0408,
+      "uuid": "fcabf02e-bc7f-4988-bcd8-b2b69b41595a"
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_3.png": {
+      "time": 1788755265546.0408,
+      "uuid": "aaf58c32-007a-4e7b-adee-fb593fd6a235"
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_3_shadow.png": {
+      "time": 1788755265551.031,
+      "uuid": "454c6acd-5e9b-4932-ae78-fb0736fe5955"
+    },
+    "3.Sprites\\Ply58\\sprites\\horse_shadow.png": {
+      "time": 1788755265555.9155,
+      "uuid": "37022782-a614-4bd6-8b3b-ccf40067b8b0"
+    },
+    "3.Sprites\\Ply58\\sprites\\horse.png": {
+      "time": 1788755265555.9155,
+      "uuid": "c930e76d-a292-4aa9-abba-f89232b097df"
+    },
+    "3.Sprites\\Ply58\\sprites\\gift_2.png": {
+      "time": 1788755265546.0408,
+      "uuid": "ae475fde-a602-44cf-9a8b-c960c7eb7404"
+    },
+    "3.Sprites\\Ply58\\sprites\\label_2_shadow.png": {
+      "time": 1788755265555.9155,
+      "uuid": "6385c42c-6eab-4dfa-8568-6073995f348a"
+    },
+    "3.Sprites\\Ply58\\sprites\\label_2.png": {
+      "time": 1788755265555.9155,
+      "uuid": "baec6347-59b9-4178-8da3-3ae90b92c2bb"
+    },
+    "3.Sprites\\Ply58\\sprites\\label_shadow.png": {
+      "time": 1788755265561.0454,
+      "uuid": "a936cda2-d4ba-457a-b874-0ab641125ece"
+    },
+    "3.Sprites\\Ply58\\sprites\\lamp.png": {
+      "time": 1788755265561.0454,
+      "uuid": "36f08eb4-eb3d-4f16-a024-168b68a9d6a8"
+    },
+    "3.Sprites\\Ply58\\sprites\\label.png": {
+      "time": 1788755265555.9155,
+      "uuid": "00455b36-1c5b-466e-b602-1551eda58837"
+    },
+    "3.Sprites\\Ply58\\sprites\\lamp_3.png": {
+      "time": 1788755265561.0454,
+      "uuid": "93059363-00a7-4562-b5ca-3c353e5424a9"
+    },
+    "3.Sprites\\Ply58\\sprites\\lamp_shadow.png": {
+      "time": 1788755265561.0454,
+      "uuid": "175867ac-364e-4067-b73e-4be6c37d79e4"
+    },
+    "3.Sprites\\Ply58\\sprites\\lamp_3_shadow.png": {
+      "time": 1788755265561.0454,
+      "uuid": "0c6c5cd6-5677-41b0-8701-f40ea23917b6"
+    },
+    "3.Sprites\\Ply58\\sprites\\light.png": {
+      "time": 1788755265565.8179,
+      "uuid": "63a50892-a39d-4594-aabf-8ac4cafded79"
+    },
+    "3.Sprites\\Ply58\\sprites\\light_shadow.png": {
+      "time": 1788755265565.8179,
+      "uuid": "1d83c256-0372-456b-b11f-f4299f792858"
+    },
+    "3.Sprites\\Ply58\\sprites\\pad.png": {
+      "time": 1788755265565.8179,
+      "uuid": "726aca26-60cc-4707-9838-fd3ae774a915"
+    },
+    "3.Sprites\\Ply58\\sprites\\paper.png": {
+      "time": 1788755265565.8179,
+      "uuid": "7d6eb180-392e-4c8c-afab-c2cbe6059c71"
+    },
+    "3.Sprites\\Ply58\\sprites\\pad_shadow.png": {
+      "time": 1788755265565.8179,
+      "uuid": "d3c70c70-d61a-42ff-8ea7-28cd1ad797ef"
+    },
+    "3.Sprites\\Ply58\\sprites\\paper_shadow.png": {
+      "time": 1788755265565.8179,
+      "uuid": "6ac95b6b-8315-43d2-8b79-e37d2dba0797"
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_1.png": {
+      "time": 1788755265570.5847,
+      "uuid": "5266c12c-f5f4-40a3-b6a3-38fdf34c304d"
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_1_shadow.png": {
+      "time": 1788755265571.5967,
+      "uuid": "cc530e69-7e14-47e7-b3b5-e6f2bc031b1c"
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_2.png": {
+      "time": 1788755265571.5967,
+      "uuid": "a75f07d8-c034-4dd9-8338-b9a0945d1f35"
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_2_shadow.png": {
+      "time": 1788755265571.5967,
+      "uuid": "be343641-c85e-4a98-92b8-bae7e447ac3f"
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_3.png": {
+      "time": 1788755265571.5967,
+      "uuid": "de94ce3d-2f1d-44a1-bbf5-73d9baaa8aed"
+    },
+    "3.Sprites\\Ply58\\sprites\\pearls_3_shadow.png": {
+      "time": 1788755265571.5967,
+      "uuid": "15886fec-56e6-4813-a132-fce97bde5be8"
+    },
+    "3.Sprites\\Ply58\\sprites\\pen_shadow.png": {
+      "time": 1788755265575.3875,
+      "uuid": "ad953ca5-bd17-4497-a99a-c2fd93ac22f0"
+    },
+    "3.Sprites\\Ply58\\sprites\\pen.png": {
+      "time": 1788755265575.3875,
+      "uuid": "ecadfda8-64be-4c96-ba3e-e449fec07cd0"
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_1_shadow.png": {
+      "time": 1788755265575.3875,
+      "uuid": "695c8b89-a6bf-4233-98b9-5b58e959d72f"
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_1.png": {
+      "time": 1788755265575.3875,
+      "uuid": "cb63a85b-5148-4f20-a77e-53ddff51df46"
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_2.png": {
+      "time": 1788755265575.3875,
+      "uuid": "0565fd07-142e-437d-94f6-72413ac36243"
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_2_shadow.png": {
+      "time": 1788755265579.9397,
+      "uuid": "633adcca-e6b3-4584-b281-65d3ec48c862"
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_3.png": {
+      "time": 1788755265579.9397,
+      "uuid": "eb79bb22-130c-4103-a761-d7594cf735b8"
+    },
+    "3.Sprites\\Ply58\\sprites\\picture_3_shadow.png": {
+      "time": 1788755265579.9397,
+      "uuid": "451bdd3b-5b0f-4452-bdab-053e582ce253"
+    },
+    "3.Sprites\\Ply58\\sprites\\pillow.png": {
+      "time": 1788755265579.9397,
+      "uuid": "3601a1e1-7920-4fa7-b423-7afb60cb7950"
+    },
+    "3.Sprites\\Ply58\\sprites\\pillow_2.png": {
+      "time": 1788755265579.9397,
+      "uuid": "8f8cd71d-94ef-4086-bc45-075692fce4ce"
+    },
+    "3.Sprites\\Ply58\\sprites\\pillow_2_shadow.png": {
+      "time": 1788755265579.9397,
+      "uuid": "64df1b94-b988-4cab-b160-cf81836a3220"
+    },
+    "3.Sprites\\Ply58\\sprites\\pillow_shadow.png": {
+      "time": 1788755265585.2268,
+      "uuid": "7957b72a-633b-4112-9f52-6092cf261ffa"
+    },
+    "3.Sprites\\Ply58\\sprites\\pine.png": {
+      "time": 1788755265589.7478,
+      "uuid": "73b3474a-5be0-4855-be14-89a1975c6938"
+    },
+    "3.Sprites\\Ply58\\sprites\\pine_2_shadow.png": {
+      "time": 1788755265587.2405,
+      "uuid": "ffaf9549-60b3-453e-94d9-09a684e5b541"
+    },
+    "3.Sprites\\Ply58\\sprites\\pine_2.png": {
+      "time": 1788755265587.2405,
+      "uuid": "5f59d791-2e0a-49bd-a53d-0a9ec4d6d094"
+    },
+    "3.Sprites\\Ply58\\sprites\\pine_shadow.png": {
+      "time": 1788755265599.1882,
+      "uuid": "eae21cdb-d5ab-4930-b9ec-1df039c83c7f"
+    },
+    "3.Sprites\\Ply58\\sprites\\pot.png": {
+      "time": 1788755265604.9954,
+      "uuid": "c9eac417-290f-4131-9699-ccd80032c75a"
+    },
+    "3.Sprites\\Ply58\\sprites\\pine_BG_shadow.png": {
+      "time": 1788755265599.1882,
+      "uuid": "139ca1dc-4279-4d89-bb25-31060f800914"
+    },
+    "3.Sprites\\Ply58\\sprites\\pot_2.png": {
+      "time": 1788755265599.1882,
+      "uuid": "b037bc79-8c0e-4077-8c94-37876441397d"
+    },
+    "3.Sprites\\Ply58\\sprites\\pot_2_shadow.png": {
+      "time": 1788755265602.9724,
+      "uuid": "67d75e64-ec81-4b18-a25d-2b8dd0776799"
+    },
+    "3.Sprites\\Ply58\\sprites\\pot_3.png": {
+      "time": 1788755265603.9788,
+      "uuid": "10f721ac-a41c-42a5-a2f7-3bb00b4a96a6"
+    },
+    "3.Sprites\\Ply58\\sprites\\pot_3_shadow.png": {
+      "time": 1788755265604.9954,
+      "uuid": "3537be02-09b9-480c-ae04-dd9205745c3b"
+    },
+    "3.Sprites\\Ply58\\sprites\\pot_shadow.png": {
+      "time": 1788755265604.9954,
+      "uuid": "2e18bd14-7f6e-4e79-aaa5-8c3d3e40c7f0"
+    },
+    "3.Sprites\\Ply58\\sprites\\pine_BG.png": {
+      "time": 1788755265595.167,
+      "uuid": "34385bac-a265-4fc4-96dd-e5321bf45e76"
+    },
+    "3.Sprites\\Ply58\\sprites\\railing_1.png": {
+      "time": 1788755265604.9954,
+      "uuid": "e3634c0f-51cb-4218-882a-176563cf4592"
+    },
+    "3.Sprites\\Ply58\\sprites\\railing_shadow.png": {
+      "time": 1788755265608.506,
+      "uuid": "312b1dbd-0416-4370-8b0e-423b38879b1a"
+    },
+    "3.Sprites\\Ply58\\sprites\\reindeer_1.png": {
+      "time": 1788755265608.506,
+      "uuid": "d77494a5-ab84-4bcb-9c1d-4705b1f81ab5"
+    },
+    "3.Sprites\\Ply58\\sprites\\reindeer_2.png": {
+      "time": 1788755265608.506,
+      "uuid": "bf5959f0-ee1d-45c1-aebe-e47e24ed3698"
+    },
+    "3.Sprites\\Ply58\\sprites\\ring.png": {
+      "time": 1788755265613.3196,
+      "uuid": "e5a05843-ddf6-4218-a7f2-2a48a51c26a1"
+    },
+    "3.Sprites\\Ply58\\sprites\\ring_shadow.png": {
+      "time": 1788755265613.3196,
+      "uuid": "119f388e-f46d-43a3-88b8-36db2b183216"
+    },
+    "3.Sprites\\Ply58\\sprites\\ruby.png": {
+      "time": 1788755265623.6997,
+      "uuid": "a2123839-1505-45a1-a9ca-4dc84a2ce4cc"
+    },
+    "3.Sprites\\Ply58\\sprites\\roof.png": {
+      "time": 1788755265614.8335,
+      "uuid": "6476b0d3-d416-4add-a9a8-86725e1d9f20"
+    },
+    "3.Sprites\\Ply58\\sprites\\ruby_2_shadow.png": {
+      "time": 1788755265618.1414,
+      "uuid": "5138d177-d6ef-4828-8859-0dac2a323714"
+    },
+    "3.Sprites\\Ply58\\sprites\\roof_shadow.png": {
+      "time": 1788755265614.8335,
+      "uuid": "ac69d848-1893-4a0f-a260-3429947c89db"
+    },
+    "3.Sprites\\Ply58\\sprites\\ruby_2.png": {
+      "time": 1788755265618.1414,
+      "uuid": "df2d3c43-c392-469e-8859-03a25c50e80f"
+    },
+    "3.Sprites\\Ply58\\sprites\\ruby_shadow.png": {
+      "time": 1788755265624.7122,
+      "uuid": "31ff1653-1355-494e-8cda-8ebd1709f381"
+    },
+    "3.Sprites\\Ply58\\sprites\\shoes.png": {
+      "time": 1788755265630.9639,
+      "uuid": "c8492571-42be-4990-a22c-c0b2da47a00f"
+    },
+    "3.Sprites\\Ply58\\sprites\\shoes_shadow.png": {
+      "time": 1788755265630.9639,
+      "uuid": "dfc52dda-22b1-4287-be3a-78bca556331f"
+    },
+    "3.Sprites\\Ply58\\sprites\\sled_2.png": {
+      "time": 1788755265632.4783,
+      "uuid": "ead2db00-8a1e-469e-8fdb-1b1a5270078c"
+    },
+    "3.Sprites\\Ply58\\sprites\\sled.png": {
+      "time": 1788755265635.5928,
+      "uuid": "74250eeb-9585-4959-a664-80b401fc0edb"
+    },
+    "3.Sprites\\Ply58\\sprites\\snowman_2.png": {
+      "time": 1788755265646.65,
+      "uuid": "8f391908-5b5e-4a93-a245-1b485a6ac6bd"
+    },
+    "3.Sprites\\Ply58\\sprites\\sled_shadow.png": {
+      "time": 1788755265635.5928,
+      "uuid": "e4c2a51b-1f16-4ad6-8d90-3d879b60fbfc"
+    },
+    "3.Sprites\\Ply58\\sprites\\snowman.png": {
+      "time": 1788755265648.8076,
+      "uuid": "4777e657-83ed-44fd-af47-2a806bbb2b59"
+    },
+    "3.Sprites\\Ply58\\sprites\\snowman_2_shadow.png": {
+      "time": 1788755265647.8086,
+      "uuid": "63a01bde-3fcc-47fd-be8c-051a4970b055"
+    },
+    "3.Sprites\\Ply58\\sprites\\snowman_shadow.png": {
+      "time": 1788755265649.8074,
+      "uuid": "f0866d03-050f-44d6-a545-e2a308ed7440"
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_1.png": {
+      "time": 1788755265637.0974,
+      "uuid": "ca159e6c-8f35-41c8-8bd2-48b80d1b84f7"
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_1_shadow.png": {
+      "time": 1788755265638.104,
+      "uuid": "6f4e5fa4-6403-4d4d-874d-a8b8f6b71dc7"
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_ball.png": {
+      "time": 1788755265642.1033,
+      "uuid": "328f9781-797d-4f6e-9138-5a58a266dd53"
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_ball_shadow.png": {
+      "time": 1788755265643.1404,
+      "uuid": "6751475d-ba64-4c14-8e79-6296ef80f0d5"
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_3.png": {
+      "time": 1788755265640.104,
+      "uuid": "d824cc1e-0a56-41e9-9815-29092d69e34d"
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_3_shadow.png": {
+      "time": 1788755265641.1033,
+      "uuid": "e5c5a6f0-901f-432a-8c0e-d0b74104e41f"
+    },
+    "3.Sprites\\Ply58\\sprites\\sofa.png": {
+      "time": 1788755265649.8074,
+      "uuid": "8835e710-fb7d-4e74-93ee-5c016eacfe8c"
+    },
+    "3.Sprites\\Ply58\\sprites\\sofacloth.png": {
+      "time": 1788755265651.359,
+      "uuid": "05733dac-a60c-4cb7-bdf7-eb02138b1b54"
+    },
+    "3.Sprites\\Ply58\\sprites\\sofacloth_shadow.png": {
+      "time": 1788755265653.919,
+      "uuid": "fb190a32-a4b3-4346-b209-16f6a670efe6"
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_BG_shadow.png": {
+      "time": 1788755265645.65,
+      "uuid": "8a5d3423-2298-47f9-bb38-7ba9306546da"
+    },
+    "3.Sprites\\Ply58\\sprites\\snow_BG.png": {
+      "time": 1788755265644.6465,
+      "uuid": "7f0fea9c-932c-4704-b6ef-dd0514424e63"
+    },
+    "3.Sprites\\Ply58\\sprites\\sofa_shadow.png": {
+      "time": 1788755265651.359,
+      "uuid": "63ecedb4-dda9-408a-8b54-c73b114cfb8c"
+    },
+    "3.Sprites\\Ply58\\sprites\\stairs-1.png": {
+      "time": 1788755265653.919,
+      "uuid": "ddd166f8-cf6c-4a83-88fb-94aedce0a8d8"
+    },
+    "3.Sprites\\Ply58\\sprites\\stairs-2.png": {
+      "time": 1788755265655.9363,
+      "uuid": "b07b182c-f2a9-4e17-b77a-04e0c9e2388e"
+    },
+    "3.Sprites\\Ply58\\sprites\\stairs.png": {
+      "time": 1788755265655.9363,
+      "uuid": "a93ee55e-3050-4c87-9368-95d1836398cf"
+    },
+    "3.Sprites\\Ply58\\sprites\\stairs_shadow-1.png": {
+      "time": 1788755265655.9363,
+      "uuid": "5c0668a6-e66d-4b42-98e2-915721e83831"
+    },
+    "3.Sprites\\Ply58\\sprites\\stairs_shadow.png": {
+      "time": 1788755265655.9363,
+      "uuid": "4b87ad4d-a8fa-45b8-98ca-3f6d580e1fb2"
+    },
+    "3.Sprites\\Ply58\\sprites\\star-1.png": {
+      "time": 1788755265660.8323,
+      "uuid": "867fa135-bb3c-47bc-aac2-e4014c431f37"
+    },
+    "3.Sprites\\Ply58\\sprites\\star.png": {
+      "time": 1788755265663.526,
+      "uuid": "937ab653-4988-42bf-9871-d76389e53ccb"
+    },
+    "3.Sprites\\Ply58\\sprites\\star_2.png": {
+      "time": 1788755265655.9363,
+      "uuid": "bb8406d6-6391-452c-9ef9-cde1bbc25059"
+    },
+    "3.Sprites\\Ply58\\sprites\\star_2_shadow.png": {
+      "time": 1788755265660.8323,
+      "uuid": "508f808c-826a-4995-a99f-9ee9bbe3951a"
+    },
+    "3.Sprites\\Ply58\\sprites\\star_copy.png": {
+      "time": 1788755265660.8323,
+      "uuid": "f9f3da6b-5244-4f46-b656-2d53b725ca00"
+    },
+    "3.Sprites\\Ply58\\sprites\\star_shadow.png": {
+      "time": 1788755265663.526,
+      "uuid": "2d2f6b65-56a6-4261-ad29-6325b338f670"
+    },
+    "3.Sprites\\Ply58\\sprites\\stove_2.png": {
+      "time": 1788755265663.526,
+      "uuid": "61b40f57-7ec0-4dc5-8936-89ad017985a1"
+    },
+    "3.Sprites\\Ply58\\sprites\\stove.png": {
+      "time": 1788755265665.5486,
+      "uuid": "9939c0ad-d0b7-4b1b-853b-2369145d6751"
+    },
+    "3.Sprites\\Ply58\\sprites\\stove_3.png": {
+      "time": 1788755265665.5486,
+      "uuid": "22421fdf-6ae0-4c21-a60f-32ae9d7af75a"
+    },
+    "3.Sprites\\Ply58\\sprites\\table.png": {
+      "time": 1788755265670.33,
+      "uuid": "0ff00864-a096-4964-a298-6f48782a8343"
+    },
+    "3.Sprites\\Ply58\\sprites\\tablecloth.png": {
+      "time": 1788755265674.8882,
+      "uuid": "f9caa2e0-4677-467d-8d06-46f947b6fe19"
+    },
+    "3.Sprites\\Ply58\\sprites\\stove_shadow.png": {
+      "time": 1788755265670.33,
+      "uuid": "bdf55ef9-2322-43b8-b082-ae426951bb9d"
+    },
+    "3.Sprites\\Ply58\\sprites\\tablecloth_shadow.png": {
+      "time": 1788755265674.8882,
+      "uuid": "a660d5e5-9857-4770-bcd0-4c97802fed21"
+    },
+    "3.Sprites\\Ply58\\sprites\\table_2.png": {
+      "time": 1788755265670.33,
+      "uuid": "c288f93a-db22-4c66-ab9b-d3471a26a3d9"
+    },
+    "3.Sprites\\Ply58\\sprites\\teapot_shadow.png": {
+      "time": 1788755265674.8882,
+      "uuid": "10a3f1a8-917e-4035-ba2e-ca325c88a7e8"
+    },
+    "3.Sprites\\Ply58\\sprites\\table_2_shadow.png": {
+      "time": 1788755265670.33,
+      "uuid": "c57de2f5-50eb-48cf-b540-6a962283fb88"
+    },
+    "3.Sprites\\Ply58\\sprites\\teapot.png": {
+      "time": 1788755265674.8882,
+      "uuid": "6724f698-bcc1-42d4-8dc8-c34fa1c2ec98"
+    },
+    "3.Sprites\\Ply58\\sprites\\table_shadow.png": {
+      "time": 1788755265673.3748,
+      "uuid": "052c1586-2be5-4cdf-8078-d928671e40c6"
+    },
+    "3.Sprites\\Ply58\\sprites\\tree_1.png": {
+      "time": 1788755265674.8882,
+      "uuid": "59419f64-1160-4b03-9ac0-1cd1ff7ad0bf"
+    },
+    "3.Sprites\\Ply58\\sprites\\tree_1_shadow.png": {
+      "time": 1788755265741.593,
+      "uuid": "ff0e616e-7b2c-4ffb-8625-1b30216358df"
+    },
+    "3.Sprites\\Ply58\\sprites\\tree_4.png": {
+      "time": 1788755265742.5989,
+      "uuid": "1e5b2f24-8988-4f2a-adca-6cc1c50749b7"
+    },
+    "3.Sprites\\Ply58\\sprites\\tree_4_shadow.png": {
+      "time": 1788755265823.2073,
+      "uuid": "6e426d5f-ffa0-4ff8-b6cb-d00acd0978c3"
+    },
+    "3.Sprites\\Ply58\\sprites\\window.png": {
+      "time": 1788755265825.1497,
+      "uuid": "a4ce1ed8-563b-4585-87d8-89f1a7ed4082"
+    },
+    "3.Sprites\\Ply58\\sprites\\window_shadow.png": {
+      "time": 1788755265880.9944,
+      "uuid": "d31beaf8-3360-4887-ad3d-12fd0aa8b0a0"
+    },
+    "3.Sprites\\Ply58\\sprites\\wood_2_shadow.png": {
+      "time": 1788755265918.0278,
+      "uuid": "7fd897b1-20e7-4459-a845-81ada45e8dd6"
+    },
+    "3.Sprites\\Ply58\\sprites\\wood_2.png": {
+      "time": 1788755265880.9944,
+      "uuid": "5596d7aa-5c26-4207-aa57-f404d8005466"
+    },
+    "3.Sprites\\Ply58\\Spine.meta": {
+      "time": 1795578297721.4397
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua.atlas.txt.meta": {
+      "time": 1795578297759.3958
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua.json.meta": {
+      "time": 1795578297772.4338
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua.png.meta": {
+      "time": 1795578297786.6558
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua_Atlas.asset.meta": {
+      "time": 1795578297762.3965
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua_Material.mat.meta": {
+      "time": 1795578297765.3992
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua_SkeletonData.asset.meta": {
+      "time": 1795578297777.5566
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo.atlas.txt.meta": {
+      "time": 1795578297782.2349
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo.json.meta": {
+      "time": 1795578297789.8354
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo.png.meta": {
+      "time": 1795578297813.529
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo_Atlas.asset.meta": {
+      "time": 1795578297791.91
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo_Material.mat.meta": {
+      "time": 1795578297801.0862
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo_SkeletonData.asset.meta": {
+      "time": 1795578297802.0999
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01.atlas.txt.meta": {
+      "time": 1795578297803.615
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01.json.meta": {
+      "time": 1795578297811.007
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01.png.meta": {
+      "time": 1795578297921.9353
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01_Atlas.asset.meta": {
+      "time": 1795578297816.5295
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01_Material.mat.meta": {
+      "time": 1795578297816.5295
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01_SkeletonData.asset.meta": {
+      "time": 1795578297825.5293
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02.atlas.txt.meta": {
+      "time": 1795578297823.5288
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02.json.meta": {
+      "time": 1795578297906.8596
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02.png.meta": {
+      "time": 1795578297931.7942
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02_Atlas.asset.meta": {
+      "time": 1795578297911.2917
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02_Material.mat.meta": {
+      "time": 1795578297911.2917
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02_SkeletonData.asset.meta": {
+      "time": 1795578297923.4487
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa.atlas.txt.meta": {
+      "time": 1795578297925.7903
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa.json.meta": {
+      "time": 1795578297934.803
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa.png.meta": {
+      "time": 1795578297977.312
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa_Atlas.asset.meta": {
+      "time": 1795578297936.802
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa_Material.mat.meta": {
+      "time": 1795578297948.306
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa_SkeletonData.asset.meta": {
+      "time": 1795578297954.3137
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01.atlas.txt.meta": {
+      "time": 1795578297956.3137
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01.json.meta": {
+      "time": 1795578297961.3147
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01.png.meta": {
+      "time": 1795578297987.313
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01_Atlas.asset.meta": {
+      "time": 1795578297965.3152
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01_Material.mat.meta": {
+      "time": 1795578297967.3157
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01_SkeletonData.asset.meta": {
+      "time": 1795578297979.3142
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02.atlas.txt.meta": {
+      "time": 1795578297981.3127
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02.json.meta": {
+      "time": 1795578298127.0327
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02.png.meta": {
+      "time": 1795578298139.178
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02_Atlas.asset.meta": {
+      "time": 1795578298128.0342
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02_Material.mat.meta": {
+      "time": 1795578298129.034
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02_SkeletonData.asset.meta": {
+      "time": 1795578298134.1765
+    },
+    "3.Sprites\\Ply58\\Spine": {
+      "time": 1795578297715.8174,
+      "uuid": "a9dcfaf2-eed8-4f4b-bff1-12b1735dbc4a"
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua.atlas.txt": {
+      "time": 1788755264599.1665,
+      "uuid": "57693487-6121-43c2-8e71-212ed6fbc405"
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua_Atlas.asset": {
+      "time": 1788766683877.6936,
+      "uuid": "ce58c200-02b1-481c-bb2b-f35bd880e7a4"
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua_Material.mat": {
+      "time": 1788766683873.0757,
+      "uuid": "49f9855f-0399-44f0-9ca4-5928f3c9cb77"
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua.json": {
+      "time": 1795578517789.5488,
+      "uuid": "27655982-c89c-4d88-b333-16a03df4c3ae"
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua_SkeletonData.asset": {
+      "time": 1788755264603.9436,
+      "uuid": "e32661a5-85f6-4635-b72d-a3c06fd8a62d"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo.atlas.txt": {
+      "time": 1788755264606.965,
+      "uuid": "f5aeb328-74bb-4c54-861b-d0581b921b60"
+    },
+    "3.Sprites\\Ply58\\Spine\\Lua.png": {
+      "time": 1788755264603.4392,
+      "uuid": "19d263f0-aec1-4b3d-bf55-2af8538df4e9"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo.json": {
+      "time": 1795578517791.5483,
+      "uuid": "74887abb-8055-420d-86b0-3bf7e298941a"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo_Atlas.asset": {
+      "time": 1788766050699.0664,
+      "uuid": "5b29b48c-7ed2-49f8-99eb-5e0ff76bfeb1"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo_Material.mat": {
+      "time": 1788766050692.282,
+      "uuid": "718f2b5b-ef4c-4e13-b560-08ecf84d8d07"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo_SkeletonData.asset": {
+      "time": 1788755264608.479,
+      "uuid": "151fb95e-a05d-4b18-a206-4fb622adf3f0"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01.atlas.txt": {
+      "time": 1788755264608.479,
+      "uuid": "be5f50bc-cb8a-4a1e-8650-8a688895c311"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01.json": {
+      "time": 1795578517792.5479,
+      "uuid": "c2e0d656-d8b3-4ca6-9fd9-4667a1a8c27c"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguaGo.png": {
+      "time": 1788755264608.479,
+      "uuid": "ffc42420-03af-4fe0-9fb4-b540a1669d36"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01_Material.mat": {
+      "time": 1788766167590.2366,
+      "uuid": "d404371a-e9aa-40e8-8925-b68b7008cd75"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01_Atlas.asset": {
+      "time": 1788766167583.6658,
+      "uuid": "57916200-346b-4121-bb55-964010bcb162"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02.atlas.txt": {
+      "time": 1788755264616.6907,
+      "uuid": "908cf9f6-2b5e-4d1f-a07c-42e32f04a335"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01_SkeletonData.asset": {
+      "time": 1788755264616.6907,
+      "uuid": "928f61a6-5c05-4d1b-a974-17f3f532a2be"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02.json": {
+      "time": 1795578517793.5476,
+      "uuid": "db102991-f177-491c-b2cd-1d2e801c7f5e"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02_Atlas.asset": {
+      "time": 1788766069202.6975,
+      "uuid": "2c380238-5dcb-48dc-8d3b-ac965d73df8c"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02_Material.mat": {
+      "time": 1788766069206.725,
+      "uuid": "370e4b85-db1d-459e-b86e-eab3e1deddc8"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01.png": {
+      "time": 1788755264613.441,
+      "uuid": "0c3dc243-72dc-4b68-90d1-26a2a3efa903"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02_SkeletonData.asset": {
+      "time": 1788755264619.2268,
+      "uuid": "12f93805-2020-4205-b1f4-534d3b98ceb0"
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa.atlas.txt": {
+      "time": 1788755264619.2268,
+      "uuid": "29fb716c-4e61-48eb-b2be-5fe402b5f482"
+    },
+    "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02.png": {
+      "time": 1788755264619.2268,
+      "uuid": "9be9df8c-2abc-4f55-b0d6-52ae2da4fc74"
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa.json": {
+      "time": 1795578517794.5476,
+      "uuid": "9c4808f6-5f90-4cd0-abd0-623eebdec76e"
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa_Atlas.asset": {
+      "time": 1788766064842.0703,
+      "uuid": "f4d5ad63-6198-4815-bdcf-b447980fe71b"
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa_Material.mat": {
+      "time": 1788766064836.0293,
+      "uuid": "d3d497a9-30c9-41e2-af8a-988a4bae706d"
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa_SkeletonData.asset": {
+      "time": 1788755264625.5896,
+      "uuid": "c7f0e9d5-a5b9-4b0c-a0df-0c0301dee258"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01.atlas.txt": {
+      "time": 1788755264626.6057,
+      "uuid": "72c81ea5-3eaa-4bfe-87e3-3c1550baab13"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01.json": {
+      "time": 1795578517796.5476,
+      "uuid": "aad5ff34-9637-4204-ab03-57f9ef779d32"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01_Atlas.asset": {
+      "time": 1788766455111.7744,
+      "uuid": "55012789-0b97-41aa-a0d0-29cfcda3d516"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01_Material.mat": {
+      "time": 1788766455118.3157,
+      "uuid": "32118f3d-e0f5-4318-9167-130ebd893cd5"
+    },
+    "3.Sprites\\Ply58\\Spine\\Santa.png": {
+      "time": 1788755264622.9646,
+      "uuid": "8ac2fdef-197c-42d7-83cc-6f7df7de4494"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01_SkeletonData.asset": {
+      "time": 1788755264631.7063,
+      "uuid": "315c5de4-f685-4221-bec8-129c33e001fa"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02.atlas.txt": {
+      "time": 1788755264632.2205,
+      "uuid": "20e3df57-f31b-42fe-a003-61f4e311bc85"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_01.png": {
+      "time": 1788755264627.623,
+      "uuid": "ce7c04c4-f469-495a-8c8b-05e9b6b9dc44"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02.json": {
+      "time": 1795578517797.5503,
+      "uuid": "0dea5256-a323-4111-9815-19eb1bedcffa"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02_Atlas.asset": {
+      "time": 1788766054139.1743,
+      "uuid": "7b6d72e9-305b-4ceb-a8db-0ec2a798e50e"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02_Material.mat": {
+      "time": 1788766054145.0166,
+      "uuid": "5ba5c762-2759-4a8b-9217-96b7dad43710"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02_SkeletonData.asset": {
+      "time": 1788755264637.0044,
+      "uuid": "d6b82e0a-8a57-4524-9df9-a23ff2eaea9f"
+    },
+    "3.Sprites\\Ply58\\Spine\\TuanLoc_02.png": {
+      "time": 1788755264634.9785,
+      "uuid": "7f4bf344-f952-4f54-a3a1-9ce37006eacd"
+    },
+    "4.Sounds\\santa.mp3.meta": {
+      "time": 1795581591751.9834
+    },
+    "4.Sounds\\santa.mp3": {
+      "time": 1795581544223.145,
+      "uuid": "7c402209-5a79-467c-b1fb-123e5c62dc93"
+    },
+    "4.Sounds\\sfx_correct_2.ogg.meta": {
+      "time": 1795588557903.1096
+    },
+    "4.Sounds\\sfx_correct_2.ogg": {
+      "time": 1780036335000,
+      "uuid": "9c42e089-55d8-4a68-857f-c0ae58d701ec"
     }
   },
   "missing": {}

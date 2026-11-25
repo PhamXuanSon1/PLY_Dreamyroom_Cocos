@@ -1,0 +1,3501 @@
+{
+  "meta": { "K": 100, "scene": "Level838", "exportRoot": "Scale", "distancesInPx": true, "onlyNodeLinks": true, "zeroZ": true, "exportInactive": true, "ignoreInactiveInConflicts": true, "exportedAt": "2026-11-25T10:20:06" },
+  "assetMap": {
+    "5497b8cc9e9e5a040bc01dd79b025f1d": "sprites/snow_BG",
+    "f462e989fef135f4e8c22352b0b2d524": "sprites/snow_BG_shadow",
+    "22705441c8508ab4c93036c0c2b38339": "sprites/pine_BG",
+    "739fdb5e5174ad14fabdc094fefa8407": "sprites/pine_BG_shadow",
+    "7f3101804536e6c46bec32fdccdafc3c": "sprites/base_F1",
+    "f9d992c942c9c944988a7ea4ef78c714": "sprites/base_F1_shadow",
+    "4574e27a46f404f4691ddcaf09929f88": "sprites/roof",
+    "17033685712b374469299f60065caa71": "sprites/roof_shadow",
+    "7ce1bd6d6f14c2e44ba3e6c3f6acf9e8": "sprites/snow_3",
+    "880777225928c3848b4d1e9708b1b7c1": "sprites/snow_3_shadow",
+    "be6b1bd9c9d37aa4cbdcc1e8fd4d725b": "sprites/BG",
+    "210384419b2b6c343803f3f8467d8f2e": "sprites/carpet_3",
+    "5dba1a5171a49e244876e57db0243d9b": "sprites/window",
+    "9ac8053e2d153c54181934fd66620b8d": "sprites/stove",
+    "ab493fedfffbbc94f8e983d321145cf9": "sprites/stove_2",
+    "6b9556e0e209a314da3775e504123545": "sprites/wood_2",
+    "23d7fbad935108f4baf0a1fd7a911625": "sprites/sofa",
+    "680affb784731cc43a3101e4bb005fce": "sprites/sofacloth",
+    "4c503bf675ee29640abbd2defaac6920": "sprites/blanket",
+    "d07350c277d453d4db814fd1ba2b256c": "sprites/char",
+    "1b27cae50e8673a46bb564c86426def1": "sprites/pad",
+    "0b39700457987b64d91d0ee2c475c7e4": "sprites/cat",
+    "83539f61cdd66804fb46c30496a16825": "sprites/table",
+    "b4786973f13ee6543a8fb11283a194d4": "sprites/tablecloth",
+    "cd32ada6121e29e40b12941c4e0f64cb": "sprites/teapot",
+    "e0e308c6b7ab7694483724a9affe05de": "sprites/cup",
+    "1dc95ba3c369c6e479aa2f68f518901b": "sprites/cake",
+    "c09f599339c7e794aab96875f7e62442": "sprites/label",
+    "bb8ef7b6c30c39644ae7017885d3feb2": "sprites/label_2",
+    "d4301a21ec6c1324b8fa6798566abe6f": "sprites/star_2",
+    "03c04a38979a91842824fc0c6412be0b": "sprites/tree_1",
+    "de8c2c6e128d8e94580260e01d37dad7": "sprites/tree_4",
+    "1d752d81ae696f447aa541cb811d53d5": "sprites/ring",
+    "7e26d7cb87058ac459a180c4ff5efcc0": "sprites/stairs",
+    "46caf7d1374058a438977be073da922f": "sprites/picture_1",
+    "e0ddaea86f62c8549839845033a38b24": "sprites/picture_2",
+    "77b7c75da9fd76a44b374576b4bfa4e3": "sprites/picture_3",
+    "bd578ad9df765c34baec19c032734ed4": "sprites/pine",
+    "b265142fca4c1bd448533b3fe7b3962d": "sprites/pearls_3",
+    "ca8276075cf43cf45b5e3f7d0b910f13": "sprites/pearls_2",
+    "bb10a85a4b9ffe240a731035b5da44d2": "sprites/pearls_1",
+    "f43ffb40dc25998408efd63ed2bf26e9": "sprites/ruby",
+    "a6ef43839341d7948b558ae5e5c33e4c": "sprites/star-1",
+    "3f33c600669b9b24d945337c7458032e": "sprites/sled",
+    "4d5b6e8eae445d440b7bcd32d4996cf8": "sprites/bag",
+    "998866cdd4f6d964e918e02264a51d5b": "sprites/gift_3",
+    "cb698c5402a258d40856b74b8e1d6043": "sprites/gift_2",
+    "1ad63cb6d3a732d44a393fbce91a857b": "sprites/gift_1",
+    "2ddd8bbfc744bcb4aad829a287eff051": "sprites/reindeer_2",
+    "115f328f7fcb1bb4f8c78c60413d566a": "sprites/reindeer_1",
+    "90ecea41a754f2a4486a4a9ed9c4273a": "sprites/horse",
+    "477feaf0536815b428e5ec5b6d8e36c4": "sprites/base_F2",
+    "69c146f10dc06e84aba0d48086a63de9": "sprites/snowman",
+    "83b85191ea1d1974996818b34472df4e": "sprites/snowman_2",
+    "fd66c129af28f1343936ce281b03a4de": "sprites/bed",
+    "9f99109efb57eb34d80a97574a732af0": "sprites/pillow_2",
+    "55b7c623b04c7c94fb52e67b2c4fb2f9": "sprites/pillow",
+    "3ce422945c1545a4ea60b04dfcd669be": "sprites/blanket-1",
+    "6a7febb417e85f44db7bb6387a9e36bc": "sprites/deer",
+    "c55ea68351315fe48bfa87aae03a79d5": "sprites/chair_3",
+    "974cb834f3e7d874ead439cf815f1d15": "sprites/chair_2",
+    "05757124abad0ed44888020b6966550e": "sprites/table_2",
+    "4e72e8915c54deb499c6c46fe3eefdde": "sprites/paper",
+    "5aeec95fcf272d94aa8eb2fe534ece55": "sprites/pen",
+    "225f733e049b7a64d9282f2adec865fa": "sprites/candle",
+    "188cbf553e8aa50488d4d1ed18a1f8b9": "sprites/book",
+    "1e4243355112d384c82f75f590302a52": "sprites/carpet_2",
+    "b517cadb499f47b439238959656736bf": "sprites/shoes",
+    "667bf27cc0fb38846b217ee1cb627d70": "sprites/pot_2",
+    "ae307109ff1104b4c8d1b467466e5c1c": "sprites/pot",
+    "e999fdb268511fb4e9c03e596842fb4a": "sprites/railing_1",
+    "b0358c383ba80f944b27361c842129e0": "sprites/pot_3",
+    "5af932aa14e6a194ca0dc4ea3f9f294c": "sprites/candy",
+    "e517006f301fc4e4ba0ec081bd9cc7ca": "sprites/star",
+    "89fc5dade4d1be545a252d4a37532c36": "sprites/lamp",
+    "272f033f43ba2c44ab94b4526da9f69b": "sprites/stairs-2",
+    "beca05a6b60d8be4690e3c90272a9cd6": "sprites/stairs-1",
+    "b87050a63eb1f6044a9e48766d70ed61": "sprites/chimney",
+    "900fe5a0d04e4e24f82bbf5fefb2ab51": "sprites/chimney_shadow",
+    "3aa8114b56df7204dac87426f093d3b6": "sprites/chimney_snow",
+    "4ff74375154696d4d872277af78c5d15": "sprites/chimney_snow_shadow",
+    "21b14b08b21125b4c8a4380865ee8b22": "sprites/chimey_fx",
+    "b17b2a369f82c9b4baba985cf921c27d": "sprites/carpet_3_shadow",
+    "556a70f9061bc9e4d8ff0fbdfe04d1cc": "sprites/window_shadow",
+    "fc74e397c5875254585601f53bbe4019": "sprites/stove_shadow",
+    "9768c32000beef84680d38caf3aa7c81": "sprites/stove_3",
+    "3099cc50e7db86a4dbf1daac4659188c": "sprites/wood_2_shadow",
+    "879769d6a6d08af4f8804791a74d9196": "sprites/sofa_shadow",
+    "4867423ea91c769428ff85b6f68975b5": "sprites/sofacloth_shadow",
+    "9097c8c7620c87d4b9e53858414f8258": "sprites/blanket_shadow-1",
+    "91fbe5ff5fdb3a54bb73390ea1ec4b46": "sprites/pad_shadow",
+    "78da1d0d22946084aa4aee0c4bbb9512": "sprites/cat_shadow",
+    "503a83edffeb0dd49a41779072c6ecd8": "sprites/table_shadow",
+    "b8bfa23616f85ba49a4ff0c6cd71f311": "sprites/tablecloth_shadow",
+    "4a46d3612655ba24cb1cfb4ebc9cfe67": "sprites/teapot_shadow",
+    "243c34ddf4fe8e24a8da50dd00890d80": "sprites/cup_shadow",
+    "e0d7be1adcf2da243af851c0dd87aa62": "sprites/cake_shadow",
+    "9c78f4a198c76a248981275537fed632": "sprites/lamp_3",
+    "642ae815f35d72041a45e66533dd59d6": "sprites/lamp_3_shadow",
+    "7d8b525d205c2b6479af8154782c45fd": "sprites/ruby_2",
+    "28f346b2d8077e14082a1a35ea68f222": "sprites/ruby_2_shadow",
+    "a919ea32986520b468b28af673f0e1a7": "sprites/snow_ball",
+    "b6376d7e558c5604c9c1a015f12b0065": "sprites/snow_ball_shadow",
+    "fa0b2da798cfaa84a896b19b6cc02ee2": "sprites/snow_1",
+    "0af7c8ff3f67b3548bf5ba846e48687d": "sprites/snow_1_shadow",
+    "f0686b23d5be69940a4fabfdc9ade302": "sprites/pine_2",
+    "64aa9738e66a11243bb13ff3adcc7c55": "sprites/pine_2_shadow",
+    "bee47c4ba8ccda14c97b32d6a00c0e6a": "sprites/label_shadow",
+    "05fa6a70528f7d245bcd5991698b64ae": "sprites/label_2_shadow",
+    "2582dcad439310e4298f4e1e0c9168c6": "sprites/star_2_shadow",
+    "e263ed47b8a61c449aeba03b28c4d29d": "sprites/tree_1_shadow",
+    "4a948dc3b2e4045419a9da134913e903": "sprites/tree_4_shadow",
+    "59066331e85e63e47bdd74832280463d": "sprites/ring_shadow",
+    "dafb6e5832ada644285b2e4cd890f700": "sprites/stairs_shadow",
+    "cf27742271a94f0458e39ac69c6d6a9f": "sprites/picture_1_shadow",
+    "74e2a86253377a34eab7b356f352c63b": "sprites/picture_2_shadow",
+    "8b9bbb9b80f82a34eb56c4880c186308": "sprites/picture_3_shadow",
+    "397a2c500c45fd24e90760732ad1973d": "sprites/pine_shadow",
+    "0b3d82f577094e546a7a0b87da54628e": "sprites/pearls_3_shadow",
+    "35b3490d0914f644ebf40444874ca11d": "sprites/pearls_2_shadow",
+    "dc84a4c332b3d6a488597a407ff29a70": "sprites/pearls_1_shadow",
+    "2b007e3f1fe13044f90e2b0c0971383a": "sprites/ruby_shadow",
+    "5b11d9aa3a9f7704c968dad9d8e30db5": "sprites/star_shadow",
+    "95b1522a0c5957942866d9621c3e93e1": "sprites/light",
+    "e273b5f39be88c648bb51bdd2fe43e24": "sprites/light_shadow",
+    "4a0f86f30c63adb44a44de9223f66822": "sprites/sled_2",
+    "d96f55b39db0ad343aadeb400f00032e": "sprites/sled_shadow",
+    "3e51561562909e748b69d2d22793e27b": "sprites/bag_2",
+    "254d4bb1d3a30844f983febbb806c937": "sprites/bag_shadow",
+    "158c8d5b7f1ea88449a7c7168437b04a": "sprites/gift_3_shadow",
+    "09fc85aa6c1af1144b8a6bd006d2007c": "sprites/gift_2_shadow",
+    "dd24ad8067a6ca34f8f4f0fb82cdf8da": "sprites/gift_1_shadow",
+    "6ffab30caf1017a4caf37733ec4e5291": "sprites/horse_shadow",
+    "15a3a2200f5e4054a9e90f22b6d511f4": "sprites/base_F2_shadow",
+    "e0cdbb756c11acd4d828254e4cd88d56": "sprites/bed_1",
+    "1dddba6379cfcf44ebb609fe4ba5d8bd": "sprites/bed_shadow",
+    "841dc32fdab221b439d8ce32399b88df": "sprites/pillow_2_shadow",
+    "64633c1a49ff53049adae2f17c74ba74": "sprites/pillow_shadow",
+    "199ee934e23baa94285b97a377ab7c07": "sprites/blanket_shadow",
+    "f602ab6cdf2c35d45a9f739ead2e449d": "sprites/deer_shadow",
+    "b3ace52fd2b96a04fa8d26aa35995e72": "sprites/chair_3_shadow",
+    "e35f3b9a618152c41a2700714439384b": "sprites/chair_2_shadow",
+    "9bc329dabde3d49418aac99e893e87e9": "sprites/table_2_shadow",
+    "455d0e26e18192b4d9d73bbfc49ea538": "sprites/paper_shadow",
+    "a004f1ece3c1903459536c9634f0acb6": "sprites/pen_shadow",
+    "88dc1427e55b3534eb3c9e7010bb460d": "sprites/candle_shadow",
+    "b92c2505083a9fd42a13b958e66fc646": "sprites/book_shadow",
+    "699f8ce7bb607bf4db23b37f9eb57785": "sprites/carpet_2_shadow",
+    "50d139b85c6e5034a975e2f0d71d9877": "sprites/shoes_shadow",
+    "ccc767441211c0b4ea0cead691b2c947": "sprites/pot_2_shadow",
+    "e9cfa5fb871c18e498005f38f69ec225": "sprites/pot_shadow",
+    "36438286550853d40a2b0722760f0a52": "sprites/railing_shadow",
+    "a5d3c122dc433b34c8bb24f4e8667f9a": "sprites/pot_3_shadow",
+    "3273ad97a6ab5d24982d69817b828bb8": "sprites/candy_2",
+    "de3c697789123f64f8878c5f5029c331": "sprites/candy_shadow",
+    "436596535d90ad84ebf557e863fef001": "sprites/star_copy",
+    "42314814afac7e849b92f86e79b3e9fd": "sprites/lamp_shadow",
+    "37471d66478b53a45ad48d695818d81c": "sprites/stairs_shadow-1",
+    "31ec7f6b533b9de4b85bd502c981ba4a": "sprites/snowman_shadow",
+    "200767457ab3dce47bbaac25f8d6544b": "sprites/snowman_2_shadow"
+  },
+  "nodes": [
+    {
+      "siblingIndex": 1,
+      "path": "Scale",
+      "parentPath": null,
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [0.43,0.43,0.43]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController/Decor",
+      "parentPath": "Scale/LevelController",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController/Decor/snow_BG",
+      "parentPath": "Scale/LevelController/Decor",
+      "active": true,
+      "pos": [11.99999,-714.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snow_BG", "guid": "5497b8cc9e9e5a040bc01dd79b025f1d", "ppu": 70.04105, "nativeSize": [2048,1183], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1980, "layerValue": 0, "bounds": [-623.4999,-670.587,633.8199,55.6871], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController/Decor/snow_BG/snow_BG_shadow",
+      "parentPath": "Scale/LevelController/Decor/snow_BG",
+      "active": true,
+      "pos": [0,-31.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snow_BG_shadow", "guid": "f462e989fef135f4e8c22352b0b2d524", "ppu": 70.04105, "nativeSize": [2048,1183], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1990, "layerValue": 0, "bounds": [-623.4999,-684.347,633.8199,41.9271], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/LevelController/Decor/pine_BG",
+      "parentPath": "Scale/LevelController/Decor",
+      "active": true,
+      "pos": [-38.00001,572.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pine_BG", "guid": "22705441c8508ab4c93036c0c2b38339", "ppu": 70.57202, "nativeSize": [2048,1618], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1960, "layerValue": 0, "bounds": [-640.27,-246.754,607.59,739.1041], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController/Decor/pine_BG/pine_BG_shadow",
+      "parentPath": "Scale/LevelController/Decor/pine_BG",
+      "active": true,
+      "pos": [115.5,-869.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pine_BG_shadow", "guid": "739fdb5e5174ad14fabdc094fefa8407", "ppu": 80.291, "nativeSize": [2048,607], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1970, "layerValue": 0, "bounds": [-515.0801,-290.035,581.7302,35.04501], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/LevelController/Decor/base_F1",
+      "parentPath": "Scale/LevelController/Decor",
+      "active": true,
+      "pos": [40.49997,-103.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "base_F1", "guid": "7f3101804536e6c46bec32fdccdafc3c", "ppu": 98.69879, "nativeSize": [2048,1974], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1890, "layerValue": 0, "bounds": [-428.71,-474.5103,463.54,385.5003], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController/Decor/base_F1/base_F1_shadow",
+      "parentPath": "Scale/LevelController/Decor/base_F1",
+      "active": true,
+      "pos": [0,-22.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "base_F1_shadow", "guid": "f9d992c942c9c944988a7ea4ef78c714", "ppu": 98.69879, "nativeSize": [2048,1973], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [-428.71,-484.1824,463.54,375.3925], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/LevelController/Decor/roof",
+      "parentPath": "Scale/LevelController/Decor",
+      "active": true,
+      "pos": [-116,838.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "roof", "guid": "4574e27a46f404f4691ddcaf09929f88", "ppu": 100, "nativeSize": [2048,1046], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1870, "layerValue": 0, "bounds": [-490.2,135.665,390.44,585.445], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController/Decor/roof/roof_shadow",
+      "parentPath": "Scale/LevelController/Decor/roof",
+      "active": true,
+      "pos": [0,-7.99999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "roof_shadow", "guid": "17033685712b374469299f60065caa71", "ppu": 100, "nativeSize": [2048,1046], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1880, "layerValue": 0, "bounds": [-490.2,132.225,390.44,582.005], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/LevelController/Decor/roof/snow 3",
+      "parentPath": "Scale/LevelController/Decor/roof",
+      "active": true,
+      "pos": [114.5,-89.99996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snow_3", "guid": "7ce1bd6d6f14c2e44ba3e6c3f6acf9e8", "ppu": 92.17528, "nativeSize": [2048,1178], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -120, "layerValue": 0, "bounds": [-478.3436,47.08502,477.0536,596.6251], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController/Decor/roof/snow 3/snow 3_shadow",
+      "parentPath": "Scale/LevelController/Decor/roof/snow 3",
+      "active": true,
+      "pos": [0,-11.00006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snow_3_shadow", "guid": "880777225928c3848b4d1e9708b1b7c1", "ppu": 92.17528, "nativeSize": [2048,1178], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -130, "layerValue": 0, "bounds": [-478.3436,42.35501,477.0536,591.895], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/LevelController/background",
+      "parentPath": "Scale/LevelController",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/LevelController/background/BG",
+      "parentPath": "Scale/LevelController/background",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1.00027,1,1],
+      "sprite": { "key": "BG", "guid": "be6b1bd9c9d37aa4cbdcc1e8fd4d725b", "ppu": 52.0193, "nativeSize": [1561,2048], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [-3785.021,-846.4551,3785.021,846.4551], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/LevelController/background/BG (1)",
+      "parentPath": "Scale/LevelController/background",
+      "active": true,
+      "pos": [0,3900,0],
+      "rot": [0,0,0],
+      "scale": [1.00027,1,1],
+      "sprite": { "key": "BG", "guid": "be6b1bd9c9d37aa4cbdcc1e8fd4d725b", "ppu": 52.0193, "nativeSize": [1561,2048], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [-3785.021,830.5449,3785.021,2523.455], "flipX": false, "flipY": true }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/LevelController/background/BG (3)",
+      "parentPath": "Scale/LevelController/background",
+      "active": true,
+      "pos": [0,-3900,0],
+      "rot": [0,0,0],
+      "scale": [1.00027,1,1],
+      "sprite": { "key": "BG", "guid": "be6b1bd9c9d37aa4cbdcc1e8fd4d725b", "ppu": 52.0193, "nativeSize": [1561,2048], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [-3785.021,-2523.455,3785.021,-830.5449], "flipX": false, "flipY": true }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/LevelController/background/BG (2)",
+      "parentPath": "Scale/LevelController/background",
+      "active": true,
+      "pos": [0,7800,0],
+      "rot": [0,0,0],
+      "scale": [1.00027,1,1],
+      "sprite": { "key": "BG", "guid": "be6b1bd9c9d37aa4cbdcc1e8fd4d725b", "ppu": 52.0193, "nativeSize": [1561,2048], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [-3785.021,2507.545,3785.021,4200.455], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/LevelController/background/BG (4)",
+      "parentPath": "Scale/LevelController/background",
+      "active": true,
+      "pos": [0,-7800,0],
+      "rot": [0,0,0],
+      "scale": [1.00027,1,1],
+      "sprite": { "key": "BG", "guid": "be6b1bd9c9d37aa4cbdcc1e8fd4d725b", "ppu": 52.0193, "nativeSize": [1561,2048], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [-3785.021,-4200.455,3785.021,-2507.545], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/ITEMS",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [6291,1187,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/ITEMS/Phase 1",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/ITEMS/Phase 1/carpet 3",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3151.5,-1644.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "carpet_3", "guid": "210384419b2b6c343803f3f8467d8f2e", "ppu": 100, "nativeSize": [889,468], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 52, "layerValue": 0, "bounds": [1158.85,-297.345,1541.12,-96.105], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/carpet 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/ITEMS/Phase 1/window",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3411,-848.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "window", "guid": "5dba1a5171a49e244876e57db0243d9b", "ppu": 100, "nativeSize": [420,656], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 53, "layerValue": 0, "bounds": [1148.1,4.515,1328.7,286.595], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/window",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/ITEMS/Phase 1/stove",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2890.5,-854,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stove", "guid": "9ac8053e2d153c54181934fd66620b8d", "ppu": 100, "nativeSize": [669,1247], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 54, "layerValue": 0, "bounds": [1318.38,-124.915,1606.05,411.295], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/stove",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/ITEMS/Phase 1/stove 2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2978.5,-1235,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stove_2", "guid": "ab493fedfffbbc94f8e983d321145cf9", "ppu": 100, "nativeSize": [325,329], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 55, "layerValue": 0, "bounds": [1354.5,-91.37498,1494.25,50.09502], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/stove 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/ITEMS/Phase 1/wood 2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2990,-1276,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wood_2", "guid": "6b9556e0e209a314da3775e504123545", "ppu": 100, "nativeSize": [198,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 56, "layerValue": 0, "bounds": [1376.86,-66.43498,1462,-10.10497], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/wood 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Scale/ITEMS/Phase 1/sofa",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3422.5,-1229,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "sofa", "guid": "23d7fbad935108f4baf0a1fd7a911625", "ppu": 100, "nativeSize": [475,579], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 57, "layerValue": 0, "bounds": [1131.33,-142.545,1335.58,106.425], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/sofa",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Scale/ITEMS/Phase 1/sofacloth",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3509.5,-1000,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "sofacloth", "guid": "680affb784731cc43a3101e4bb005fce", "ppu": 100, "nativeSize": [243,139], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 58, "layerValue": 0, "bounds": [1143.8,50.52496,1248.29,110.295], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/sofacloth",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Scale/ITEMS/Phase 1/blanket_1",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3356,-1323.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "blanket", "guid": "4c503bf675ee29640abbd2defaac6920", "ppu": 100, "nativeSize": [292,234], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 59, "layerValue": 0, "bounds": [1199.27,-109.005,1324.83,-8.38499], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/blanket_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Scale/ITEMS/Phase 1/char",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3416.5,-1163.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "char", "guid": "d07350c277d453d4db814fd1ba2b256c", "ppu": 100, "nativeSize": [301,248], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 60, "layerValue": 0, "bounds": [1171.32,-43.21498,1300.75,63.42503], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/char",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Scale/ITEMS/Phase 1/pad",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3116,-1495,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pad", "guid": "1b27cae50e8673a46bb564c86426def1", "ppu": 100, "nativeSize": [302,209], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 61, "layerValue": 0, "bounds": [1300.32,-177.375,1430.18,-87.505], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pad",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Scale/ITEMS/Phase 1/cat",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3116.5,-1442,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cat", "guid": "0b39700457987b64d91d0ee2c475c7e4", "ppu": 100, "nativeSize": [199,149], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 62, "layerValue": 0, "bounds": [1322.25,-141.685,1407.82,-77.61501], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cat",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Scale/ITEMS/Phase 1/table",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3530.5,-1475.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "table", "guid": "83539f61cdd66804fb46c30496a16825", "ppu": 100, "nativeSize": [281,216], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 63, "layerValue": 0, "bounds": [1126.6,-170.495,1247.43,-77.61501], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/table",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Scale/ITEMS/Phase 1/tablecloth",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3522,-1474.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tablecloth", "guid": "b4786973f13ee6543a8fb11283a194d4", "ppu": 100, "nativeSize": [224,222], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 64, "layerValue": 0, "bounds": [1142.51,-171.355,1238.83,-75.895], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tablecloth",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Scale/ITEMS/Phase 1/teapot",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3516,-1372.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "teapot", "guid": "cd32ada6121e29e40b12941c4e0f64cb", "ppu": 100, "nativeSize": [146,140], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 65, "layerValue": 0, "bounds": [1161.86,-109.865,1224.64,-49.66498], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/teapot",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Scale/ITEMS/Phase 1/cup",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3458,-1437,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cup", "guid": "e0e308c6b7ab7694483724a9affe05de", "ppu": 100, "nativeSize": [106,99], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 66, "layerValue": 0, "bounds": [1195.4,-128.785,1240.98,-86.215], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cup",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Scale/ITEMS/Phase 1/cake",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3588,-1442.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cake", "guid": "1dc95ba3c369c6e479aa2f68f518901b", "ppu": 100, "nativeSize": [142,110], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 67, "layerValue": 0, "bounds": [1131.76,-133.515,1192.82,-86.215], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/cake",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Scale/ITEMS/Phase 1/label",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-4171,-1068.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "label", "guid": "c09f599339c7e794aab96875f7e62442", "ppu": 100, "nativeSize": [244,304], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 72, "layerValue": 0, "bounds": [859.14,-14.40502,964.06,116.315], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/label",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Scale/ITEMS/Phase 1/label 2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-4193.5,-854,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "label_2", "guid": "bb8ef7b6c30c39644ae7017885d3feb2", "ppu": 100, "nativeSize": [315,303], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 73, "layerValue": 0, "bounds": [834.2001,78.04501,969.6501,208.335], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/label 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Scale/ITEMS/Phase 1/star 2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2207.5,-1099,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "star_2", "guid": "d4301a21ec6c1324b8fa6798566abe6f", "ppu": 100, "nativeSize": [289,381], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 74, "layerValue": 0, "bounds": [1693.77,-44.07504,1818.04,119.755], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/star 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Scale/ITEMS/Phase 1/tree 1",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2602.5,-400.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_1", "guid": "03c04a38979a91842824fc0c6412be0b", "ppu": 100, "nativeSize": [287,204], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 75, "layerValue": 0, "bounds": [1524.35,294.335,1647.76,382.055], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tree 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Scale/ITEMS/Phase 1/tree 2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2217.5,-887.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_1", "guid": "03c04a38979a91842824fc0c6412be0b", "ppu": 100, "nativeSize": [287,204], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 76, "layerValue": 0, "bounds": [1689.9,84.92496,1813.31,172.6449], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tree 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Scale/ITEMS/Phase 1/tree 3",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2874.5,-285.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_1", "guid": "03c04a38979a91842824fc0c6412be0b", "ppu": 100, "nativeSize": [287,204], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 77, "layerValue": 0, "bounds": [1407.39,343.785,1530.8,431.505], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tree 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Scale/ITEMS/Phase 1/tree 4",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2901,-546.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_4", "guid": "de8c2c6e128d8e94580260e01d37dad7", "ppu": 100, "nativeSize": [252,268], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 78, "layerValue": 0, "bounds": [1403.52,217.7949,1511.88,333.0349], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/tree 4",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Scale/ITEMS/Phase 1/ring",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2923.5,-502.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ring", "guid": "1d752d81ae696f447aa541cb811d53d5", "ppu": 100, "nativeSize": [189,176], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 79, "layerValue": 0, "bounds": [1407.39,256.495,1488.66,332.175], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ring",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Scale/ITEMS/Phase 1/stairs_1",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3287.5,-2029.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stairs", "guid": "7e26d7cb87058ac459a180c4ff5efcc0", "ppu": 100, "nativeSize": [343,248], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 80, "layerValue": 0, "bounds": [1217.76,-415.595,1365.25,-308.955], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/stairs_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 25,
+      "path": "Scale/ITEMS/Phase 1/picture 1",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2584,-732.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "picture_1", "guid": "46caf7d1374058a438977be073da922f", "ppu": 100, "nativeSize": [200,231], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 81, "layerValue": 0, "bounds": [1551.01,145.985,1637.01,245.315], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/picture 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 26,
+      "path": "Scale/ITEMS/Phase 1/picture 2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2636,-876.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "picture_2", "guid": "e0ddaea86f62c8549839845033a38b24", "ppu": 100, "nativeSize": [102,132], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 82, "layerValue": 0, "bounds": [1549.72,105.135,1593.58,161.895], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/picture 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 27,
+      "path": "Scale/ITEMS/Phase 1/picture 3",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2502,-971,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "picture_3", "guid": "77b7c75da9fd76a44b374576b4bfa4e3", "ppu": 100, "nativeSize": [118,201], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 83, "layerValue": 0, "bounds": [1603.9,49.66499,1654.64,136.095], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/picture 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 28,
+      "path": "Scale/ITEMS/Phase 1/pine",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2525.5,-1383.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pine", "guid": "bd578ad9df765c34baec19c032734ed4", "ppu": 100, "nativeSize": [575,660], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 84, "layerValue": 0, "bounds": [1495.54,-226.395,1742.79,57.40499], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pine",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 29,
+      "path": "Scale/ITEMS/Phase 1/pearls 3",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2494.5,-1308.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pearls_3", "guid": "b265142fca4c1bd448533b3fe7b3962d", "ppu": 100, "nativeSize": [129,208], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 85, "layerValue": 0, "bounds": [1604.76,-96.96501,1660.23,-7.52501], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pearls 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 30,
+      "path": "Scale/ITEMS/Phase 1/pearls 2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2610,-1457.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pearls_2", "guid": "ca8276075cf43cf45b5e3f7d0b910f13", "ppu": 100, "nativeSize": [196,138], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 86, "layerValue": 0, "bounds": [1540.69,-145.985,1624.97,-86.645], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pearls 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 31,
+      "path": "Scale/ITEMS/Phase 1/pearls 1",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2499,-1564.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pearls_1", "guid": "bb10a85a4b9ffe240a731035b5da44d2", "ppu": 100, "nativeSize": [368,182], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 87, "layerValue": 0, "bounds": [1551.44,-201.455,1709.68,-123.195], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pearls 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 32,
+      "path": "Scale/ITEMS/Phase 1/ruby",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2527,-1197.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ruby", "guid": "f43ffb40dc25998408efd63ed2bf26e9", "ppu": 100, "nativeSize": [348,440], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 88, "layerValue": 0, "bounds": [1543.7,-99.11498,1693.34,90.08502], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/ruby",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 33,
+      "path": "Scale/ITEMS/Phase 1/star_1",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2505.5,-1065,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "star-1", "guid": "a6ef43839341d7948b558ae5e5c33e4c", "ppu": 100, "nativeSize": [129,147], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 89, "layerValue": 0, "bounds": [1600.03,20.85497,1655.5,84.06497], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/star_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 34,
+      "path": "Scale/ITEMS/Phase 1/sled",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2183.5,-1789,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "sled", "guid": "3f33c600669b9b24d945337c7458032e", "ppu": 100, "nativeSize": [767,701], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 90, "layerValue": 0, "bounds": [1601.32,-409.575,1931.13,-108.145], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/sled",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 35,
+      "path": "Scale/ITEMS/Phase 1/bag",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2057.5,-1656,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bag", "guid": "4d5b6e8eae445d440b7bcd32d4996cf8", "ppu": 100, "nativeSize": [375,283], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 91, "layerValue": 0, "bounds": [1739.78,-262.5151,1901.03,-140.8251], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/bag",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 36,
+      "path": "Scale/ITEMS/Phase 1/gift 3",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-1977.5,-1519.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gift_3", "guid": "998866cdd4f6d964e918e02264a51d5b", "ppu": 100, "nativeSize": [171,210], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 92, "layerValue": 0, "bounds": [1818.04,-188.125,1891.57,-97.825], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/gift 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 37,
+      "path": "Scale/ITEMS/Phase 1/gift 2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2108,-1555,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gift_2", "guid": "cb698c5402a258d40856b74b8e1d6043", "ppu": 100, "nativeSize": [168,165], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 93, "layerValue": 0, "bounds": [1762.57,-193.715,1834.81,-122.765], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/gift 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 38,
+      "path": "Scale/ITEMS/Phase 1/gift 1",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-1975,-1605,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gift_1", "guid": "1ad63cb6d3a732d44a393fbce91a857b", "ppu": 100, "nativeSize": [182,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 94, "layerValue": 0, "bounds": [1816.75,-207.905,1895.01,-151.575], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/gift 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 39,
+      "path": "Scale/ITEMS/Phase 1/reindeer 2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2699.5,-2033,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "reindeer_2", "guid": "2ddd8bbfc744bcb4aad829a287eff051", "ppu": 100, "nativeSize": [345,346], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 95, "layerValue": 0, "bounds": [1470.17,-438.17,1618.52,-289.39], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/reindeer 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 40,
+      "path": "Scale/ITEMS/Phase 1/reindeer 1",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2508.5,-2129,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "reindeer_1", "guid": "115f328f7fcb1bb4f8c78c60413d566a", "ppu": 100, "nativeSize": [345,346], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 96, "layerValue": 0, "bounds": [1552.3,-479.45,1700.65,-330.67], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/reindeer 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 41,
+      "path": "Scale/ITEMS/Phase 1/horse",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3252,-1665.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "horse", "guid": "90ecea41a754f2a4486a4a9ed9c4273a", "ppu": 100, "nativeSize": [384,328], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 97, "layerValue": 0, "bounds": [1224.21,-276.2749,1389.33,-135.235], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/horse",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 42,
+      "path": "Scale/ITEMS/Phase 1/base_F2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-2982.5,-766.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "base_F2", "guid": "477feaf0536815b428e5ec5b6d8e36c4", "ppu": 100, "nativeSize": [1375,601], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 98, "layerValue": 0, "bounds": [1127.03,51.81496,1718.28,310.245], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/base_F2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 43,
+      "path": "Scale/ITEMS/Phase 1/snowman",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3944.5,-1853,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snowman", "guid": "69c146f10dc06e84aba0d48086a63de9", "ppu": 100, "nativeSize": [383,563], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 99, "layerValue": 0, "bounds": [926.65,-407.425,1091.34,-165.3349], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/snowman",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 44,
+      "path": "Scale/ITEMS/Phase 1/snowman 2",
+      "parentPath": "Scale/ITEMS/Phase 1",
+      "active": true,
+      "pos": [-3589,-1917.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snowman_2", "guid": "83b85191ea1d1974996818b34472df4e", "ppu": 100, "nativeSize": [279,322], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 100, "layerValue": 0, "bounds": [1101.875,-383.345,1221.845,-244.885], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/snowman 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/ITEMS/Phase 2",
+      "parentPath": "Scale/ITEMS",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/ITEMS/Phase 2/bed 2",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3088,-507.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bed", "guid": "fd66c129af28f1343936ce281b03a4de", "ppu": 100, "nativeSize": [715,598], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 101, "layerValue": 0, "bounds": [1223.565,163.615,1531.015,420.755], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/bed 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/ITEMS/Phase 2/pillow 2",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3127.5,-396,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pillow_2", "guid": "9f99109efb57eb34d80a97574a732af0", "ppu": 100, "nativeSize": [279,173], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 102, "layerValue": 0, "bounds": [1300.32,302.935,1420.29,377.325], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pillow 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/ITEMS/Phase 2/pillow",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3278.5,-491.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pillow", "guid": "55b7c623b04c7c94fb52e67b2c4fb2f9", "ppu": 100, "nativeSize": [263,205], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 103, "layerValue": 0, "bounds": [1238.83,255.205,1351.92,343.3549], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pillow",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/ITEMS/Phase 2/blanket",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3010,-555,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "blanket-1", "guid": "3ce422945c1545a4ea60b04dfcd669be", "ppu": 100, "nativeSize": [514,357], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 104, "layerValue": 0, "bounds": [1300.32,195.005,1521.34,348.515], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/blanket",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/ITEMS/Phase 2/deer",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3022,-446.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "deer", "guid": "6a7febb417e85f44db7bb6387a9e36bc", "ppu": 100, "nativeSize": [262,166], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 105, "layerValue": 0, "bounds": [1349.34,282.7249,1462,354.1049], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/deer",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Scale/ITEMS/Phase 2/chair 3",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-2796.5,-674.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chair_3", "guid": "c55ea68351315fe48bfa87aae03a79d5", "ppu": 100, "nativeSize": [203,284], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 106, "layerValue": 0, "bounds": [1458.99,159.315,1546.28,281.435], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/chair 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Scale/ITEMS/Phase 2/chair 2",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-2776.5,-684.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chair_2", "guid": "974cb834f3e7d874ead439cf815f1d15", "ppu": 100, "nativeSize": [177,117], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 107, "layerValue": 0, "bounds": [1473.18,190.705,1549.29,241.015], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/chair 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Scale/ITEMS/Phase 2/table 2",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-2669.5,-783.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "table_2", "guid": "05757124abad0ed44888020b6966550e", "ppu": 100, "nativeSize": [621,361], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 108, "layerValue": 0, "bounds": [1423.73,96.10496,1690.76,251.335], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/table 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Scale/ITEMS/Phase 2/paper",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-2752,-770,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "paper", "guid": "4e72e8915c54deb499c6c46fe3eefdde", "ppu": 100, "nativeSize": [250,111], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 109, "layerValue": 0, "bounds": [1468.02,155.445,1575.52,203.175], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/paper",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Scale/ITEMS/Phase 2/pen",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-2892,-745,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pen", "guid": "5aeec95fcf272d94aa8eb2fe534ece55", "ppu": 100, "nativeSize": [132,159], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 110, "layerValue": 0, "bounds": [1433.19,155.875,1489.95,224.245], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pen",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Scale/ITEMS/Phase 2/candle",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-2462,-575.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "candle", "guid": "225f733e049b7a64d9282f2adec865fa", "ppu": 100, "nativeSize": [102,175], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 111, "layerValue": 0, "bounds": [1624.54,225.535,1668.4,300.785], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/candle",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Scale/ITEMS/Phase 2/book_1",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-2584,-697,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "book", "guid": "188cbf553e8aa50488d4d1ed18a1f8b9", "ppu": 100, "nativeSize": [270,147], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 112, "layerValue": 0, "bounds": [1535.96,179.095,1652.06,242.305], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/book_1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Scale/ITEMS/Phase 2/carpet 2",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3309.5,-784.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "carpet_2", "guid": "1e4243355112d384c82f75f590302a52", "ppu": 100, "nativeSize": [461,227], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 113, "layerValue": 0, "bounds": [1182.93,124.055,1381.16,221.665], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/carpet 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Scale/ITEMS/Phase 2/shoes 1",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3278.9,-714.2,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "shoes", "guid": "b517cadb499f47b439238959656736bf", "ppu": 100, "nativeSize": [176,142], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 114, "layerValue": 0, "bounds": [1257.363,172.774,1333.043,233.834], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/shoes 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Scale/ITEMS/Phase 2/pot 2",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3117.5,-89.49995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pot_2", "guid": "667bf27cc0fb38846b217ee1cb627d70", "ppu": 100, "nativeSize": [193,310], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 115, "layerValue": 0, "bounds": [1323.11,405.275,1406.1,538.575], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pot 2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Scale/ITEMS/Phase 2/pot",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3428,-214.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pot", "guid": "ae307109ff1104b4c8d1b467466e5c1c", "ppu": 100, "nativeSize": [146,128], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 117, "layerValue": 0, "bounds": [1199.7,390.655,1262.48,445.695], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pot",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Scale/ITEMS/Phase 2/railing 1",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-2852.5,-829.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "railing_1", "guid": "e999fdb268511fb4e9c03e596842fb4a", "ppu": 100, "nativeSize": [1085,325], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 119, "layerValue": 0, "bounds": [1245.28,83.85004,1711.83,223.6001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/railing 1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Scale/ITEMS/Phase 2/pot 3",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3484,-628,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pot_3", "guid": "b0358c383ba80f944b27361c842129e0", "ppu": 100, "nativeSize": [100,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 120, "layerValue": 0, "bounds": [1185.51,212.205,1228.51,268.535], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/pot 3",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Scale/ITEMS/Phase 2/candy",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3448.5,-469,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "candy", "guid": "5af932aa14e6a194ca0dc4ea3f9f294c", "ppu": 100, "nativeSize": [109,257], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 121, "layerValue": 0, "bounds": [1198.84,253.485,1245.71,363.995], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/candy",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Scale/ITEMS/Phase 2/star",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3437,-487.5002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "star", "guid": "e517006f301fc4e4ba0ec081bd9cc7ca", "ppu": 100, "nativeSize": [106,176], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 122, "layerValue": 0, "bounds": [1204.43,262.9449,1250.01,338.6249], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/star",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Scale/ITEMS/Phase 2/lamp",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3838,-773.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lamp", "guid": "89fc5dade4d1be545a252d4a37532c36", "ppu": 100, "nativeSize": [172,223], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 123, "layerValue": 0, "bounds": [1017.81,130.075,1091.77,225.965], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/lamp",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Scale/ITEMS/Phase 2/stairs-2",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3698,-1250.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stairs-2", "guid": "272f033f43ba2c44ab94b4526da9f69b", "ppu": 100, "nativeSize": [440,893], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 124, "layerValue": 0, "bounds": [1020.39,-219.3,1209.59,164.69], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/stairs-2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Scale/ITEMS/Phase 2/stairs",
+      "parentPath": "Scale/ITEMS/Phase 2",
+      "active": true,
+      "pos": [-3732,-1248.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stairs-1", "guid": "beca05a6b60d8be4690e3c90272a9cd6", "ppu": 100, "nativeSize": [596,896], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 125, "layerValue": 0, "bounds": [972.23,-219.085,1228.51,166.195], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/SLOTS/stairs",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/SLOTS",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/chimney",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [211.9999,1206,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chimney", "guid": "b87050a63eb1f6044a9e48766d70ed61", "ppu": 100, "nativeSize": [278,461], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1940, "layerValue": 0, "bounds": [31.38996,419.465,150.9299,617.695], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/chimney/chimney_shadow",
+      "parentPath": "Scale/SLOTS/chimney",
+      "active": true,
+      "pos": [0,-10.00004,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chimney_shadow", "guid": "900fe5a0d04e4e24f82bbf5fefb2ab51", "ppu": 100, "nativeSize": [278,461], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1950, "layerValue": 0, "bounds": [31.38996,415.165,150.9299,613.395], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/chimney/chimney_snow",
+      "parentPath": "Scale/SLOTS/chimney",
+      "active": true,
+      "pos": [7.50008,132.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chimney_snow", "guid": "3aa8114b56df7204dac87426f093d3b6", "ppu": 100, "nativeSize": [315,210], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1920, "layerValue": 0, "bounds": [26.65998,530.405,162.11,620.705], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/chimney/chimney_snow/chimney_snow_shadow",
+      "parentPath": "Scale/SLOTS/chimney/chimney_snow",
+      "active": true,
+      "pos": [0,-9.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chimney_snow_shadow", "guid": "4ff74375154696d4d872277af78c5d15", "ppu": 100, "nativeSize": [315,210], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1930, "layerValue": 0, "bounds": [26.65998,526.535,162.11,616.835], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/SLOTS/chimney/chimey_fx",
+      "parentPath": "Scale/SLOTS/chimney",
+      "active": false,
+      "pos": [321.0001,470.5002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chimey_fx", "guid": "21b14b08b21125b4c8a4380865ee8b22", "ppu": 100, "nativeSize": [672,448], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1910, "layerValue": 0, "bounds": [84.70999,624.5751,373.67,817.2151], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/carpet 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-61.50007,-614.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "carpet_3", "guid": "210384419b2b6c343803f3f8467d8f2e", "ppu": 100, "nativeSize": [889,468], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1850, "layerValue": 0, "bounds": [-217.58,-364.8549,164.69,-163.615], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/carpet 3/carpet 3_shadow",
+      "parentPath": "Scale/SLOTS/carpet 3",
+      "active": true,
+      "pos": [0,-9.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "carpet_3_shadow", "guid": "b17b2a369f82c9b4baba985cf921c27d", "ppu": 100, "nativeSize": [889,468], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1860, "layerValue": 0, "bounds": [-217.58,-368.725,164.69,-167.485], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/SLOTS/window",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-321,181.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "window", "guid": "5dba1a5171a49e244876e57db0243d9b", "ppu": 100, "nativeSize": [420,656], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1830, "layerValue": 0, "bounds": [-228.33,-62.99498,-47.73,219.085], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/window/window_shadow",
+      "parentPath": "Scale/SLOTS/window",
+      "active": true,
+      "pos": [-10.00004,2.00005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "window_shadow", "guid": "556a70f9061bc9e4d8ff0fbdfe04d1cc", "ppu": 100, "nativeSize": [420,656], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1840, "layerValue": 0, "bounds": [-232.63,-62.13496,-52.03001,219.9451], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/SLOTS/stove",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [199.4999,176,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stove", "guid": "9ac8053e2d153c54181934fd66620b8d", "ppu": 100, "nativeSize": [669,1247], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1810, "layerValue": 0, "bounds": [-58.05005,-192.425,229.6199,343.785], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/stove/stove_shadow",
+      "parentPath": "Scale/SLOTS/stove",
+      "active": true,
+      "pos": [12.00008,-13.99994,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stove_shadow", "guid": "fc74e397c5875254585601f53bbe4019", "ppu": 100, "nativeSize": [669,1247], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1820, "layerValue": 0, "bounds": [-52.89001,-198.445,234.78,337.765], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/SLOTS/stove 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [111.5,-204.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stove_2", "guid": "ab493fedfffbbc94f8e983d321145cf9", "ppu": 100, "nativeSize": [325,329], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [-21.93001,-158.885,117.82,-17.41497], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/stove 2/stove 3",
+      "parentPath": "Scale/SLOTS/stove 2",
+      "active": true,
+      "pos": [51.00002,75.49992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stove_3", "guid": "9768c32000beef84680d38caf3aa7c81", "ppu": 100, "nativeSize": [163,174], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1750, "layerValue": 0, "bounds": [34.83,-93.095,104.92,-18.275], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Scale/SLOTS/wood 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [100,-245.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wood_2", "guid": "6b9556e0e209a314da3775e504123545", "ppu": 100, "nativeSize": [198,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1780, "layerValue": 0, "bounds": [0.43,-133.945,85.57,-77.61496], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/wood 2/wood 2_shadow",
+      "parentPath": "Scale/SLOTS/wood 2",
+      "active": true,
+      "pos": [0,-4.00009,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "wood_2_shadow", "guid": "3099cc50e7db86a4dbf1daac4659188c", "ppu": 100, "nativeSize": [198,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1790, "layerValue": 0, "bounds": [0.43,-135.665,85.57,-79.33501], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/wood 2/Spine GameObject (Lua)",
+      "parentPath": "Scale/SLOTS/wood 2",
+      "active": true,
+      "pos": [25.6,25.1,0],
+      "rot": [0,0,0],
+      "scale": [0.75,0.75,1],
+      "render": { "sortingOrder": -1779, "layerValue": 0, "bounds": [21.97085,-95.09339,83.24585,-34.1409] },
+      "spine": { "skeletonData": "Lua_SkeletonData", "defaultAnim": "action1", "skin": null, "loop": false }
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Scale/SLOTS/sofa",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-332.5,-199,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "sofa", "guid": "23d7fbad935108f4baf0a1fd7a911625", "ppu": 100, "nativeSize": [475,579], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1730, "layerValue": 0, "bounds": [-245.1,-210.055,-40.84999,38.91502], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/sofa/sofa_shadow",
+      "parentPath": "Scale/SLOTS/sofa",
+      "active": true,
+      "pos": [33.49991,-209,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "sofa_shadow", "guid": "879769d6a6d08af4f8804791a74d9196", "ppu": 100, "nativeSize": [374,185], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1740, "layerValue": 0, "bounds": [-208.98,-215.215,-48.16003,-135.665], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Scale/SLOTS/sofacloth",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-419.5001,29.99992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "sofacloth", "guid": "680affb784731cc43a3101e4bb005fce", "ppu": 100, "nativeSize": [243,139], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1710, "layerValue": 0, "bounds": [-232.63,-16.98503,-128.14,42.78497], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/sofacloth/sofacloth_shadow",
+      "parentPath": "Scale/SLOTS/sofacloth",
+      "active": true,
+      "pos": [0,-6.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "sofacloth_shadow", "guid": "4867423ea91c769428ff85b6f68975b5", "ppu": 100, "nativeSize": [243,139], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1720, "layerValue": 0, "bounds": [-232.63,-19.99502,-128.14,39.77498], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Scale/SLOTS/blanket_1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-266,-293.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "blanket", "guid": "4c503bf675ee29640abbd2defaac6920", "ppu": 100, "nativeSize": [292,234], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1690, "layerValue": 0, "bounds": [-177.16,-176.515,-51.59999,-75.89498], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/blanket_1/blanket_shadow_1",
+      "parentPath": "Scale/SLOTS/blanket_1",
+      "active": true,
+      "pos": [0,-5.00011,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "blanket_shadow-1", "guid": "9097c8c7620c87d4b9e53858414f8258", "ppu": 100, "nativeSize": [292,234], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1700, "layerValue": 0, "bounds": [-177.16,-178.665,-51.59999,-78.04503], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Scale/SLOTS/char",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-326.5,-133.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "char", "guid": "d07350c277d453d4db814fd1ba2b256c", "ppu": 100, "nativeSize": [301,248], "pivot": [0.5,0.5], "color": [1,1,1,0], "sortingOrder": -1670, "layerValue": 0, "bounds": [-205.11,-110.725,-75.68002,-4.08496], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/char/Spine GameObject (Santa)",
+      "parentPath": "Scale/SLOTS/char",
+      "active": true,
+      "pos": [22.9,-125,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "render": { "sortingOrder": -1670, "layerValue": 0, "bounds": [-130.548,-111.155,-130.548,-111.155] }
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Scale/SLOTS/pad",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-26.00002,-465,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pad", "guid": "1b27cae50e8673a46bb564c86426def1", "ppu": 100, "nativeSize": [302,209], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1610, "layerValue": 0, "bounds": [-76.11001,-244.885,53.74999,-155.015], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pad/pad_shadow",
+      "parentPath": "Scale/SLOTS/pad",
+      "active": true,
+      "pos": [0,-7.00007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pad_shadow", "guid": "91fbe5ff5fdb3a54bb73390ea1ec4b46", "ppu": 100, "nativeSize": [302,209], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1620, "layerValue": 0, "bounds": [-76.11001,-247.895,53.74999,-158.025], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Scale/SLOTS/cat",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-26.50003,-412,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cat", "guid": "0b39700457987b64d91d0ee2c475c7e4", "ppu": 100, "nativeSize": [199,149], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1590, "layerValue": 0, "bounds": [-54.18002,-209.195,31.38999,-145.125], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cat/cat_shadow",
+      "parentPath": "Scale/SLOTS/cat",
+      "active": true,
+      "pos": [0,-5.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cat_shadow", "guid": "78da1d0d22946084aa4aee0c4bbb9512", "ppu": 100, "nativeSize": [199,149], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1600, "layerValue": 0, "bounds": [-54.18002,-211.775,31.38999,-147.705], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Scale/SLOTS/table",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-440.5001,-445.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "table", "guid": "83539f61cdd66804fb46c30496a16825", "ppu": 100, "nativeSize": [281,216], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1570, "layerValue": 0, "bounds": [-249.83,-238.005,-129,-145.125], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/table/table_shadow",
+      "parentPath": "Scale/SLOTS/table",
+      "active": true,
+      "pos": [-0.49992,-77.49996,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "table_shadow", "guid": "503a83edffeb0dd49a41779072c6ecd8", "ppu": 100, "nativeSize": [294,115], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1580, "layerValue": 0, "bounds": [-252.84,-249.615,-126.42,-200.165], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Scale/SLOTS/tablecloth",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-432.0001,-444.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tablecloth", "guid": "b4786973f13ee6543a8fb11283a194d4", "ppu": 100, "nativeSize": [224,222], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1550, "layerValue": 0, "bounds": [-233.92,-238.865,-137.6,-143.405], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tablecloth/tablecloth_shadow",
+      "parentPath": "Scale/SLOTS/tablecloth",
+      "active": true,
+      "pos": [-2.99997,-5.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tablecloth_shadow", "guid": "b8bfa23616f85ba49a4ff0c6cd71f311", "ppu": 100, "nativeSize": [224,222], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1560, "layerValue": 0, "bounds": [-235.21,-241.015,-138.89,-145.555], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Scale/SLOTS/teapot",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-426,-342.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "teapot", "guid": "cd32ada6121e29e40b12941c4e0f64cb", "ppu": 100, "nativeSize": [146,140], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1530, "layerValue": 0, "bounds": [-214.57,-177.375,-151.79,-117.175], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/teapot/teapot_shadow",
+      "parentPath": "Scale/SLOTS/teapot",
+      "active": true,
+      "pos": [0,-4.00009,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "teapot_shadow", "guid": "4a46d3612655ba24cb1cfb4ebc9cfe67", "ppu": 100, "nativeSize": [146,140], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1540, "layerValue": 0, "bounds": [-214.57,-179.095,-151.79,-118.895], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Scale/SLOTS/cup",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-368,-407,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cup", "guid": "e0e308c6b7ab7694483724a9affe05de", "ppu": 100, "nativeSize": [106,99], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1510, "layerValue": 0, "bounds": [-181.03,-196.295,-135.45,-153.725], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cup/cup_shadow",
+      "parentPath": "Scale/SLOTS/cup",
+      "active": true,
+      "pos": [0,-5.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cup_shadow", "guid": "243c34ddf4fe8e24a8da50dd00890d80", "ppu": 100, "nativeSize": [106,98], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1520, "layerValue": 0, "bounds": [-181.03,-198.23,-135.45,-156.09], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Scale/SLOTS/cake",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-498.0001,-412.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cake", "guid": "1dc95ba3c369c6e479aa2f68f518901b", "ppu": 100, "nativeSize": [142,110], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1490, "layerValue": 0, "bounds": [-244.67,-201.025,-183.61,-153.725], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/cake/cake_shadow",
+      "parentPath": "Scale/SLOTS/cake",
+      "active": true,
+      "pos": [0,-5.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cake_shadow", "guid": "e0d7be1adcf2da243af851c0dd87aa62", "ppu": 100, "nativeSize": [142,110], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1500, "layerValue": 0, "bounds": [-244.67,-203.605,-183.61,-156.305], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Scale/SLOTS/lamp 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1253,-291,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lamp_3", "guid": "9c78f4a198c76a248981275537fed632", "ppu": 100, "nativeSize": [232,739], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1470, "layerValue": 0, "bounds": [488.91,-284.015,588.6699,33.755], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lamp 3/lamp 3_shadow",
+      "parentPath": "Scale/SLOTS/lamp 3",
+      "active": true,
+      "pos": [0,-6.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lamp_3_shadow", "guid": "642ae815f35d72041a45e66533dd59d6", "ppu": 100, "nativeSize": [232,739], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1480, "layerValue": 0, "bounds": [488.91,-287.025,588.6699,30.74502], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Scale/SLOTS/ruby 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1245.5,-207.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ruby_2", "guid": "7d8b525d205c2b6479af8154782c45fd", "ppu": 100, "nativeSize": [247,200], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1450, "layerValue": 0, "bounds": [482.46,-132.225,588.67,-46.22504], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ruby 2/ruby 2_shadow",
+      "parentPath": "Scale/SLOTS/ruby 2",
+      "active": true,
+      "pos": [0,7.00016,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ruby_2_shadow", "guid": "28f346b2d8077e14082a1a35ea68f222", "ppu": 100, "nativeSize": [247,200], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1460, "layerValue": 0, "bounds": [482.46,-129.215,588.67,-43.21497], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Scale/SLOTS/snow ball",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1246.5,90.99998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snow_ball", "guid": "a919ea32986520b468b28af673f0e1a7", "ppu": 100, "nativeSize": [155,155], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1430, "layerValue": 0, "bounds": [502.67,5.805,569.32,72.45499], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/snow ball/snow ball_shadow",
+      "parentPath": "Scale/SLOTS/snow ball",
+      "active": true,
+      "pos": [0,-67.00001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snow_ball_shadow", "guid": "b6376d7e558c5604c9c1a015f12b0065", "ppu": 100, "nativeSize": [155,37], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1440, "layerValue": 0, "bounds": [502.67,2.36499,569.32,18.27499], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/snow ball/snow 1",
+      "parentPath": "Scale/SLOTS/snow ball",
+      "active": true,
+      "pos": [5.49984,-18.00003,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snow_1", "guid": "fa0b2da798cfaa84a896b19b6cc02ee2", "ppu": 100, "nativeSize": [226,199], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1410, "layerValue": 0, "bounds": [489.7699,-11.39502,586.95,74.17498], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/snow ball/snow 1/snow 1_shadow",
+      "parentPath": "Scale/SLOTS/snow ball/snow 1",
+      "active": true,
+      "pos": [0,-3.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snow_1_shadow", "guid": "0af7c8ff3f67b3548bf5ba846e48687d", "ppu": 100, "nativeSize": [226,199], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1420, "layerValue": 0, "bounds": [489.7699,-13.11498,586.95,72.45502], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Scale/SLOTS/pine 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-1110,-541,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pine_2", "guid": "f0686b23d5be69940a4fabfdc9ade302", "ppu": 100, "nativeSize": [564,707], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1390, "layerValue": 0, "bounds": [-598.5601,-384.635,-356.04,-80.62498], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pine 2/pine 2_shadow",
+      "parentPath": "Scale/SLOTS/pine 2",
+      "active": true,
+      "pos": [28.00007,-319.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pine_2_shadow", "guid": "64aa9738e66a11243bb13ff3adcc7c55", "ppu": 100, "nativeSize": [468,150], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1400, "layerValue": 0, "bounds": [-565.8799,-402.265,-364.64,-337.765], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Scale/SLOTS/label",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-1081,-38.50002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "label", "guid": "c09f599339c7e794aab96875f7e62442", "ppu": 100, "nativeSize": [244,304], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1370, "layerValue": 0, "bounds": [-517.29,-81.91501,-412.37,48.80499], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/label/label_shadow",
+      "parentPath": "Scale/SLOTS/label",
+      "active": true,
+      "pos": [107.4999,54.50001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "label_shadow", "guid": "bee47c4ba8ccda14c97b32d6a00c0e6a", "ppu": 100, "nativeSize": [37,221], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1380, "layerValue": 0, "bounds": [-426.56,-40.63501,-410.6501,54.395], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Scale/SLOTS/label 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-1103.5,176,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "label_2", "guid": "bb8ef7b6c30c39644ae7017885d3feb2", "ppu": 100, "nativeSize": [315,303], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1350, "layerValue": 0, "bounds": [-542.23,10.53501,-406.78,140.825], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/label 2/label 2_shadow",
+      "parentPath": "Scale/SLOTS/label 2",
+      "active": true,
+      "pos": [132.5,38.50002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "label_2_shadow", "guid": "05fa6a70528f7d245bcd5991698b64ae", "ppu": 100, "nativeSize": [44,226], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1360, "layerValue": 0, "bounds": [-426.99,43.64502,-408.07,140.825], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Scale/SLOTS/star 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [882.4999,-69.00005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "star_2", "guid": "d4301a21ec6c1324b8fa6798566abe6f", "ppu": 100, "nativeSize": [289,381], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1330, "layerValue": 0, "bounds": [317.3399,-111.585,441.61,52.24498], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/star 2/star 2_shadow",
+      "parentPath": "Scale/SLOTS/star 2",
+      "active": true,
+      "pos": [3.00007,-1.99986,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "star_2_shadow", "guid": "2582dcad439310e4298f4e1e0c9168c6", "ppu": 100, "nativeSize": [289,381], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1340, "layerValue": 0, "bounds": [318.63,-112.445,442.9,51.38504], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Scale/SLOTS/tree 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [487.5,629.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_1", "guid": "03c04a38979a91842824fc0c6412be0b", "ppu": 100, "nativeSize": [287,204], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1310, "layerValue": 0, "bounds": [147.92,226.825,271.33,314.545], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tree 1/tree 1_shadow",
+      "parentPath": "Scale/SLOTS/tree 1",
+      "active": true,
+      "pos": [4.99992,3.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_1_shadow", "guid": "e263ed47b8a61c449aeba03b28c4d29d", "ppu": 100, "nativeSize": [287,204], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1320, "layerValue": 0, "bounds": [150.07,228.545,273.4799,316.265], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 25,
+      "path": "Scale/SLOTS/tree 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [872.5001,142.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_1", "guid": "03c04a38979a91842824fc0c6412be0b", "ppu": 100, "nativeSize": [287,204], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1290, "layerValue": 0, "bounds": [313.47,17.41497,436.88,105.135], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tree 2/tree 2_shadow",
+      "parentPath": "Scale/SLOTS/tree 2",
+      "active": true,
+      "pos": [4.99992,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_1_shadow", "guid": "e263ed47b8a61c449aeba03b28c4d29d", "ppu": 100, "nativeSize": [287,204], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1300, "layerValue": 0, "bounds": [315.62,17.41497,439.03,105.135], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 26,
+      "path": "Scale/SLOTS/tree 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [215.4999,744.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_1", "guid": "03c04a38979a91842824fc0c6412be0b", "ppu": 100, "nativeSize": [287,204], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1270, "layerValue": 0, "bounds": [30.95995,276.275,154.3699,363.995], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tree 3/tree 3_shadow",
+      "parentPath": "Scale/SLOTS/tree 3",
+      "active": true,
+      "pos": [6.00014,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_1_shadow", "guid": "e263ed47b8a61c449aeba03b28c4d29d", "ppu": 100, "nativeSize": [287,204], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1280, "layerValue": 0, "bounds": [33.54001,276.275,156.95,363.995], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 27,
+      "path": "Scale/SLOTS/tree 4",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [188.9999,483.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_4", "guid": "de8c2c6e128d8e94580260e01d37dad7", "ppu": 100, "nativeSize": [252,268], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1250, "layerValue": 0, "bounds": [27.08997,150.285,135.45,265.525], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/tree 4/tree 4_shadow",
+      "parentPath": "Scale/SLOTS/tree 4",
+      "active": true,
+      "pos": [5.00011,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tree_4_shadow", "guid": "4a948dc3b2e4045419a9da134913e903", "ppu": 100, "nativeSize": [252,268], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1260, "layerValue": 0, "bounds": [29.24002,150.285,137.6,265.525], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 28,
+      "path": "Scale/SLOTS/ring",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [166.4999,527.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ring", "guid": "1d752d81ae696f447aa541cb811d53d5", "ppu": 100, "nativeSize": [189,176], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1230, "layerValue": 0, "bounds": [30.95996,188.985,112.23,264.665], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ring/ring_shadow",
+      "parentPath": "Scale/SLOTS/ring",
+      "active": true,
+      "pos": [5.00011,-1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ring_shadow", "guid": "59066331e85e63e47bdd74832280463d", "ppu": 100, "nativeSize": [189,176], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1240, "layerValue": 0, "bounds": [33.11,188.555,114.38,264.235], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 29,
+      "path": "Scale/SLOTS/stairs_1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-197.5,-999.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stairs", "guid": "7e26d7cb87058ac459a180c4ff5efcc0", "ppu": 100, "nativeSize": [343,248], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1210, "layerValue": 0, "bounds": [-158.67,-483.105,-11.18002,-376.465], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/stairs_1/stairs_shadow_1",
+      "parentPath": "Scale/SLOTS/stairs_1",
+      "active": true,
+      "pos": [6.99997,2.00005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stairs_shadow", "guid": "dafb6e5832ada644285b2e4cd890f700", "ppu": 100, "nativeSize": [343,248], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1220, "layerValue": 0, "bounds": [-155.66,-482.245,-8.17003,-375.605], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 30,
+      "path": "Scale/SLOTS/picture 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [505.9999,297.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "picture_1", "guid": "46caf7d1374058a438977be073da922f", "ppu": 100, "nativeSize": [200,231], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1190, "layerValue": 0, "bounds": [174.58,78.47498,260.58,177.805], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/picture 1/picture 1_shadow",
+      "parentPath": "Scale/SLOTS/picture 1",
+      "active": true,
+      "pos": [5.99995,1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "picture_1_shadow", "guid": "cf27742271a94f0458e39ac69c6d6a9f", "ppu": 100, "nativeSize": [200,231], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1200, "layerValue": 0, "bounds": [177.16,78.905,263.16,178.235], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 31,
+      "path": "Scale/SLOTS/picture 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [453.9999,153.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "picture_2", "guid": "e0ddaea86f62c8549839845033a38b24", "ppu": 100, "nativeSize": [102,132], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1170, "layerValue": 0, "bounds": [173.2899,37.625,217.1499,94.38499], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/picture 2/picture 2_shadow",
+      "parentPath": "Scale/SLOTS/picture 2",
+      "active": true,
+      "pos": [5.00011,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "picture_2_shadow", "guid": "74e2a86253377a34eab7b356f352c63b", "ppu": 100, "nativeSize": [102,132], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1180, "layerValue": 0, "bounds": [175.44,37.625,219.3,94.38499], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 32,
+      "path": "Scale/SLOTS/picture 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [587.9999,59.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "picture_3", "guid": "77b7c75da9fd76a44b374576b4bfa4e3", "ppu": 100, "nativeSize": [118,201], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1150, "layerValue": 0, "bounds": [227.47,-17.84499,278.21,68.58501], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/picture 3/picture 3_shadow",
+      "parentPath": "Scale/SLOTS/picture 3",
+      "active": true,
+      "pos": [5.00011,1.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "picture_3_shadow", "guid": "8b9bbb9b80f82a34eb56c4880c186308", "ppu": 100, "nativeSize": [118,201], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1160, "layerValue": 0, "bounds": [229.62,-17.41498,280.36,69.01501], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 33,
+      "path": "Scale/SLOTS/pine",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [564.5001,-353.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pine", "guid": "bd578ad9df765c34baec19c032734ed4", "ppu": 100, "nativeSize": [575,660], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1130, "layerValue": 0, "bounds": [119.11,-293.905,366.36,-10.10499], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pine/pine_shadow",
+      "parentPath": "Scale/SLOTS/pine",
+      "active": true,
+      "pos": [0,-7.99999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pine_shadow", "guid": "397a2c500c45fd24e90760732ad1973d", "ppu": 100, "nativeSize": [575,660], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1140, "layerValue": 0, "bounds": [119.11,-297.345,366.36,-13.54499], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 34,
+      "path": "Scale/SLOTS/pearls 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [595.5,-278.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pearls_3", "guid": "b265142fca4c1bd448533b3fe7b3962d", "ppu": 100, "nativeSize": [129,208], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1110, "layerValue": 0, "bounds": [228.33,-164.475,283.8,-75.035], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pearls 3/pearls 3_shadow",
+      "parentPath": "Scale/SLOTS/pearls 3",
+      "active": true,
+      "pos": [3.9999,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pearls_3_shadow", "guid": "0b3d82f577094e546a7a0b87da54628e", "ppu": 100, "nativeSize": [129,208], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1120, "layerValue": 0, "bounds": [230.05,-164.475,285.52,-75.035], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 35,
+      "path": "Scale/SLOTS/pearls 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [479.9999,-427.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pearls_2", "guid": "ca8276075cf43cf45b5e3f7d0b910f13", "ppu": 100, "nativeSize": [196,138], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1090, "layerValue": 0, "bounds": [164.26,-213.495,248.54,-154.155], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pearls 2/pearls 2_shadow",
+      "parentPath": "Scale/SLOTS/pearls 2",
+      "active": true,
+      "pos": [5.99995,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pearls_2_shadow", "guid": "35b3490d0914f644ebf40444874ca11d", "ppu": 100, "nativeSize": [196,138], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1100, "layerValue": 0, "bounds": [166.8399,-213.495,251.1199,-154.155], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 36,
+      "path": "Scale/SLOTS/pearls 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [591,-534.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pearls_1", "guid": "bb10a85a4b9ffe240a731035b5da44d2", "ppu": 100, "nativeSize": [368,182], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1070, "layerValue": 0, "bounds": [175.01,-268.965,333.25,-190.705], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pearls 1/pearls 1_shadow",
+      "parentPath": "Scale/SLOTS/pearls 1",
+      "active": true,
+      "pos": [4.99992,0.99993,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pearls_1_shadow", "guid": "dc84a4c332b3d6a488597a407ff29a70", "ppu": 100, "nativeSize": [368,182], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1080, "layerValue": 0, "bounds": [177.16,-268.535,335.4,-190.275], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 37,
+      "path": "Scale/SLOTS/ruby",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [562.9999,-167.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ruby", "guid": "f43ffb40dc25998408efd63ed2bf26e9", "ppu": 100, "nativeSize": [348,440], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1050, "layerValue": 0, "bounds": [167.27,-166.625,316.9099,22.57503], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/ruby/ruby_shadow",
+      "parentPath": "Scale/SLOTS/ruby",
+      "active": true,
+      "pos": [0,-9.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ruby_shadow", "guid": "2b007e3f1fe13044f90e2b0c0971383a", "ppu": 100, "nativeSize": [348,440], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1060, "layerValue": 0, "bounds": [167.27,-170.495,316.9099,18.70503], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 38,
+      "path": "Scale/SLOTS/star_1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [584.4999,-35.00004,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "star-1", "guid": "a6ef43839341d7948b558ae5e5c33e4c", "ppu": 100, "nativeSize": [129,147], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1030, "layerValue": 0, "bounds": [223.6,-46.65502,279.07,16.55499], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/star_1/star_shadow",
+      "parentPath": "Scale/SLOTS/star_1",
+      "active": true,
+      "pos": [5.99995,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "star_shadow", "guid": "5b11d9aa3a9f7704c968dad9d8e30db5", "ppu": 100, "nativeSize": [129,147], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1040, "layerValue": 0, "bounds": [226.18,-46.65502,281.6499,16.55499], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 39,
+      "path": "Scale/SLOTS/sled",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [906.4999,-759,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "sled", "guid": "3f33c600669b9b24d945337c7458032e", "ppu": 100, "nativeSize": [767,701], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1010, "layerValue": 0, "bounds": [224.89,-477.085,554.7,-175.655], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/sled/light",
+      "parentPath": "Scale/SLOTS/sled",
+      "active": true,
+      "pos": [66.00018,18.50004,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "light", "guid": "95b1522a0c5957942866d9621c3e93e1", "ppu": 100, "nativeSize": [573,274], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -890, "layerValue": 0, "bounds": [294.98,-377.325,541.37,-259.505], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/sled/light_shadow",
+      "parentPath": "Scale/SLOTS/sled",
+      "active": true,
+      "pos": [66.00018,12.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "light_shadow", "guid": "e273b5f39be88c648bb51bdd2fe43e24", "ppu": 100, "nativeSize": [573,274], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -900, "layerValue": 0, "bounds": [294.98,-379.905,541.37,-262.085], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/SLOTS/sled/sled 2",
+      "parentPath": "Scale/SLOTS/sled",
+      "active": true,
+      "pos": [252,38.00001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "sled_2", "guid": "4a0f86f30c63adb44a44de9223f66822", "ppu": 100, "nativeSize": [243,273], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -910, "layerValue": 0, "bounds": [445.91,-368.725,550.4,-251.335], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/SLOTS/sled/sled_shadow",
+      "parentPath": "Scale/SLOTS/sled",
+      "active": true,
+      "pos": [-3.49999,-185.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "sled_shadow", "guid": "d96f55b39db0ad343aadeb400f00032e", "ppu": 100, "nativeSize": [797,375], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1020, "layerValue": 0, "bounds": [216.935,-486.76,559.645,-325.51], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 40,
+      "path": "Scale/SLOTS/bag",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1032.5,-626,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bag", "guid": "4d5b6e8eae445d440b7bcd32d4996cf8", "ppu": 100, "nativeSize": [375,283], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -990, "layerValue": 0, "bounds": [363.35,-330.025,524.6,-208.335], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/bag/bag 2",
+      "parentPath": "Scale/SLOTS/bag",
+      "active": true,
+      "pos": [10.50014,-26.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bag_2", "guid": "3e51561562909e748b69d2d22793e27b", "ppu": 100, "nativeSize": [298,133], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -920, "layerValue": 0, "bounds": [384.42,-309.385,512.56,-252.195], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/bag/bag_shadow",
+      "parentPath": "Scale/SLOTS/bag",
+      "active": true,
+      "pos": [0,-4.99992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bag_shadow", "guid": "254d4bb1d3a30844f983febbb806c937", "ppu": 100, "nativeSize": [375,282], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1000, "layerValue": 0, "bounds": [363.35,-331.96,524.6,-210.7], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 41,
+      "path": "Scale/SLOTS/gift 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1112.5,-489.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gift_3", "guid": "998866cdd4f6d964e918e02264a51d5b", "ppu": 100, "nativeSize": [171,210], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -970, "layerValue": 0, "bounds": [441.61,-255.635,515.14,-165.335], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/gift 3/gift 3_shadow",
+      "parentPath": "Scale/SLOTS/gift 3",
+      "active": true,
+      "pos": [3.9999,-6.00004,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gift_3_shadow", "guid": "158c8d5b7f1ea88449a7c7168437b04a", "ppu": 100, "nativeSize": [171,210], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -980, "layerValue": 0, "bounds": [443.33,-258.215,516.86,-167.915], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 42,
+      "path": "Scale/SLOTS/gift 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [982,-525,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gift_2", "guid": "cb698c5402a258d40856b74b8e1d6043", "ppu": 100, "nativeSize": [168,165], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -950, "layerValue": 0, "bounds": [386.14,-261.225,458.38,-190.275], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/gift 2/gift 2_shadow",
+      "parentPath": "Scale/SLOTS/gift 2",
+      "active": true,
+      "pos": [-2.00005,-4,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gift_2_shadow", "guid": "09fc85aa6c1af1144b8a6bd006d2007c", "ppu": 100, "nativeSize": [168,165], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -960, "layerValue": 0, "bounds": [385.28,-262.945,457.52,-191.995], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 43,
+      "path": "Scale/SLOTS/gift 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [1115,-575,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gift_1", "guid": "1ad63cb6d3a732d44a393fbce91a857b", "ppu": 100, "nativeSize": [182,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -930, "layerValue": 0, "bounds": [440.32,-275.415,518.58,-219.085], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/gift 1/gift 1_shadow",
+      "parentPath": "Scale/SLOTS/gift 1",
+      "active": true,
+      "pos": [1.00002,-5.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gift_1_shadow", "guid": "dd24ad8067a6ca34f8f4f0fb82cdf8da", "ppu": 100, "nativeSize": [182,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -940, "layerValue": 0, "bounds": [440.75,-277.995,519.01,-221.665], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 44,
+      "path": "Scale/SLOTS/reindeer 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [390.4999,-1003,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "reindeer_2", "guid": "2ddd8bbfc744bcb4aad829a287eff051", "ppu": 100, "nativeSize": [345,346], "pivot": [0.5,0.5], "color": [1,1,1,0], "sortingOrder": -850, "layerValue": 0, "bounds": [93.73995,-505.68,242.0899,-356.9], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/reindeer 2/Spine GameObject (TuanLoc_02)",
+      "parentPath": "Scale/SLOTS/reindeer 2",
+      "active": true,
+      "pos": [5,-176,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "render": { "sortingOrder": -850, "layerValue": 0, "bounds": [170.065,-506.97,170.065,-506.97] }
+    },
+    {
+      "siblingIndex": 45,
+      "path": "Scale/SLOTS/reindeer 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [581.4999,-1099,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "reindeer_1", "guid": "115f328f7fcb1bb4f8c78c60413d566a", "ppu": 100, "nativeSize": [345,346], "pivot": [0.5,0.5], "color": [1,1,1,0], "sortingOrder": -830, "layerValue": 0, "bounds": [175.8699,-546.96,324.2199,-398.18], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/reindeer 1/Spine GameObject (TuanLoc_01)",
+      "parentPath": "Scale/SLOTS/reindeer 1",
+      "active": true,
+      "pos": [-1,-183,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "render": { "sortingOrder": -830, "layerValue": 0, "bounds": [249.6149,-551.26,249.6149,-551.26] }
+    },
+    {
+      "siblingIndex": 46,
+      "path": "Scale/SLOTS/horse",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-162,-635.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "horse", "guid": "90ecea41a754f2a4486a4a9ed9c4273a", "ppu": 100, "nativeSize": [384,328], "pivot": [0.5,0.5], "color": [1,1,1,0], "sortingOrder": -810, "layerValue": 0, "bounds": [-152.22,-343.785,12.9,-202.745], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/horse/horse_shadow",
+      "parentPath": "Scale/SLOTS/horse",
+      "active": true,
+      "pos": [-18.50004,-135.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "horse_shadow", "guid": "6ffab30caf1017a4caf37733ec4e5291", "ppu": 100, "nativeSize": [395,101], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -820, "layerValue": 0, "bounds": [-162.54,-353.245,7.30999,-309.815], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/horse/Spine GameObject (NguaGo)",
+      "parentPath": "Scale/SLOTS/horse",
+      "active": true,
+      "pos": [-24.8,-162.4,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "render": { "sortingOrder": -810, "layerValue": 0, "bounds": [-80.324,-343.097,-80.324,-343.097] }
+    },
+    {
+      "siblingIndex": 47,
+      "path": "Scale/SLOTS/base_F2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [107.4999,263.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "base_F2", "guid": "477feaf0536815b428e5ec5b6d8e36c4", "ppu": 100, "nativeSize": [1375,601], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -790, "layerValue": 0, "bounds": [-249.4,-15.69502,341.8499,242.735], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/base_F2/base_F2_shadow",
+      "parentPath": "Scale/SLOTS/base_F2",
+      "active": true,
+      "pos": [0,6.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "base_F2_shadow", "guid": "15a3a2200f5e4054a9e90f22b6d511f4", "ppu": 100, "nativeSize": [1375,601], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -800, "layerValue": 0, "bounds": [-249.4,-12.68504,341.8499,245.745], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 48,
+      "path": "Scale/SLOTS/bed 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [2,522.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bed", "guid": "fd66c129af28f1343936ce281b03a4de", "ppu": 100, "nativeSize": [715,598], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -770, "layerValue": 0, "bounds": [-152.865,96.105,154.585,353.245], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/bed 2/bed 1",
+      "parentPath": "Scale/SLOTS/bed 2",
+      "active": true,
+      "pos": [165,-130.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bed_1", "guid": "e0cdbb756c11acd4d828254e4cd88d56", "ppu": 100, "nativeSize": [384,337], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -680, "layerValue": 0, "bounds": [-10.74999,96.105,154.37,241.015], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/bed 2/bed_shadow",
+      "parentPath": "Scale/SLOTS/bed 2",
+      "active": true,
+      "pos": [4.99997,-139.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bed_shadow", "guid": "1dddba6379cfcf44ebb609fe4ba5d8bd", "ppu": 100, "nativeSize": [704,334], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -780, "layerValue": 0, "bounds": [-148.35,93.09496,154.37,236.715], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 49,
+      "path": "Scale/SLOTS/pillow 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-37.5,634,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pillow_2", "guid": "9f99109efb57eb34d80a97574a732af0", "ppu": 100, "nativeSize": [279,173], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -750, "layerValue": 0, "bounds": [-76.11,235.425,43.86,309.815], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pillow 2/pillow 2_shadow",
+      "parentPath": "Scale/SLOTS/pillow 2",
+      "active": true,
+      "pos": [0,-6.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pillow_2_shadow", "guid": "841dc32fdab221b439d8ce32399b88df", "ppu": 100, "nativeSize": [279,172], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -760, "layerValue": 0, "bounds": [-76.11,232.63,43.86,306.59], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 50,
+      "path": "Scale/SLOTS/pillow",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-188.5,538.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pillow", "guid": "55b7c623b04c7c94fb52e67b2c4fb2f9", "ppu": 100, "nativeSize": [263,205], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -730, "layerValue": 0, "bounds": [-137.6,187.695,-24.51001,275.845], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pillow/pillow_shadow",
+      "parentPath": "Scale/SLOTS/pillow",
+      "active": true,
+      "pos": [1.00002,-6.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pillow_shadow", "guid": "64633c1a49ff53049adae2f17c74ba74", "ppu": 100, "nativeSize": [263,205], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -740, "layerValue": 0, "bounds": [-137.17,184.685,-24.08,272.835], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 51,
+      "path": "Scale/SLOTS/blanket",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [79.99992,475,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "blanket-1", "guid": "3ce422945c1545a4ea60b04dfcd669be", "ppu": 100, "nativeSize": [514,357], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -710, "layerValue": 0, "bounds": [-76.11004,127.495,144.91,281.005], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/blanket/blanket_shadow",
+      "parentPath": "Scale/SLOTS/blanket",
+      "active": true,
+      "pos": [0,-7.99999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "blanket_shadow", "guid": "199ee934e23baa94285b97a377ab7c07", "ppu": 100, "nativeSize": [514,357], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -720, "layerValue": 0, "bounds": [-76.11004,124.055,144.91,277.565], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 52,
+      "path": "Scale/SLOTS/deer",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [67.99994,583.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "deer", "guid": "6a7febb417e85f44db7bb6387a9e36bc", "ppu": 100, "nativeSize": [262,166], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -690, "layerValue": 0, "bounds": [-27.09003,215.215,85.56998,286.595], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/deer/deer_shadow",
+      "parentPath": "Scale/SLOTS/deer",
+      "active": true,
+      "pos": [0,-6.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "deer_shadow", "guid": "f602ab6cdf2c35d45a9f739ead2e449d", "ppu": 100, "nativeSize": [262,166], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -700, "layerValue": 0, "bounds": [-27.09003,212.205,85.56998,283.585], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 53,
+      "path": "Scale/SLOTS/chair 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [293.4999,355.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chair_3", "guid": "c55ea68351315fe48bfa87aae03a79d5", "ppu": 100, "nativeSize": [203,284], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -660, "layerValue": 0, "bounds": [82.55998,91.80502,169.85,213.925], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/chair 3/chair 3_shadow",
+      "parentPath": "Scale/SLOTS/chair 3",
+      "active": true,
+      "pos": [9.49993,-95.49999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chair_3_shadow", "guid": "b3ace52fd2b96a04fa8d26aa35995e72", "ppu": 100, "nativeSize": [206,93], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -670, "layerValue": 0, "bounds": [85.99995,91.80502,174.58,131.795], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 54,
+      "path": "Scale/SLOTS/chair 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [313.5,345.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chair_2", "guid": "974cb834f3e7d874ead439cf815f1d15", "ppu": 100, "nativeSize": [177,117], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -640, "layerValue": 0, "bounds": [96.75001,123.195,172.86,173.505], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/chair 2/chair 2_shadow",
+      "parentPath": "Scale/SLOTS/chair 2",
+      "active": true,
+      "pos": [0,-9.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chair_2_shadow", "guid": "e35f3b9a618152c41a2700714439384b", "ppu": 100, "nativeSize": [170,109], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -650, "layerValue": 0, "bounds": [98.25501,121.045,171.355,167.915], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 55,
+      "path": "Scale/SLOTS/table 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [420.5,246.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "table_2", "guid": "05757124abad0ed44888020b6966550e", "ppu": 100, "nativeSize": [621,361], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -620, "layerValue": 0, "bounds": [47.3,28.59497,314.33,183.825], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/table 2/table 2_shadow",
+      "parentPath": "Scale/SLOTS/table 2",
+      "active": true,
+      "pos": [5.99995,-2.99988,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "table_2_shadow", "guid": "9bc329dabde3d49418aac99e893e87e9", "ppu": 100, "nativeSize": [621,361], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -630, "layerValue": 0, "bounds": [49.87998,27.30503,316.91,182.535], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 56,
+      "path": "Scale/SLOTS/paper",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [337.9999,260,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "paper", "guid": "4e72e8915c54deb499c6c46fe3eefdde", "ppu": 100, "nativeSize": [250,111], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -600, "layerValue": 0, "bounds": [91.58997,87.93501,199.09,135.665], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/paper/paper_shadow",
+      "parentPath": "Scale/SLOTS/paper",
+      "active": true,
+      "pos": [0,-5.99995,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "paper_shadow", "guid": "455d0e26e18192b4d9d73bbfc49ea538", "ppu": 100, "nativeSize": [250,111], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -610, "layerValue": 0, "bounds": [91.58997,85.35503,199.09,133.085], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 57,
+      "path": "Scale/SLOTS/pen",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [198,285,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pen", "guid": "5aeec95fcf272d94aa8eb2fe534ece55", "ppu": 100, "nativeSize": [132,159], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -580, "layerValue": 0, "bounds": [56.75998,88.36502,113.52,156.735], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pen/pen_shadow",
+      "parentPath": "Scale/SLOTS/pen",
+      "active": true,
+      "pos": [0,-4.00009,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pen_shadow", "guid": "a004f1ece3c1903459536c9634f0acb6", "ppu": 100, "nativeSize": [132,159], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -590, "layerValue": 0, "bounds": [56.75998,86.64497,113.52,155.015], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 58,
+      "path": "Scale/SLOTS/candle",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [627.9999,454.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "candle", "guid": "225f733e049b7a64d9282f2adec865fa", "ppu": 100, "nativeSize": [102,175], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -560, "layerValue": 0, "bounds": [248.11,158.025,291.97,233.275], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/candle/candle_shadow",
+      "parentPath": "Scale/SLOTS/candle",
+      "active": true,
+      "pos": [0,-4.99992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "candle_shadow", "guid": "88dc1427e55b3534eb3c9e7010bb460d", "ppu": 100, "nativeSize": [102,175], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -570, "layerValue": 0, "bounds": [248.11,155.875,291.97,231.125], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 59,
+      "path": "Scale/SLOTS/book_1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [505.9999,333,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "book", "guid": "188cbf553e8aa50488d4d1ed18a1f8b9", "ppu": 100, "nativeSize": [270,147], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -540, "layerValue": 0, "bounds": [159.53,111.585,275.63,174.795], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/book_1/book_shadow_1",
+      "parentPath": "Scale/SLOTS/book_1",
+      "active": true,
+      "pos": [0,-3.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "book_shadow", "guid": "b92c2505083a9fd42a13b958e66fc646", "ppu": 100, "nativeSize": [267,147], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -550, "layerValue": 0, "bounds": [160.175,109.865,274.985,173.075], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 60,
+      "path": "Scale/SLOTS/carpet 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-219.5001,245.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "carpet_2", "guid": "1e4243355112d384c82f75f590302a52", "ppu": 100, "nativeSize": [461,227], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -520, "layerValue": 0, "bounds": [-193.5,56.54503,4.72997,154.155], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/carpet 2/carpet 2_shadow",
+      "parentPath": "Scale/SLOTS/carpet 2",
+      "active": true,
+      "pos": [0,-7.00016,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "carpet_2_shadow", "guid": "699f8ce7bb607bf4db23b37f9eb57785", "ppu": 100, "nativeSize": [459,227], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -530, "layerValue": 0, "bounds": [-193.07,53.53497,4.29997,151.145], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 61,
+      "path": "Scale/SLOTS/shoes 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-188.9,315.8,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "shoes", "guid": "b517cadb499f47b439238959656736bf", "ppu": 100, "nativeSize": [176,142], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -480, "layerValue": 0, "bounds": [-119.067,105.264,-43.387,166.324], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/shoes 1/shoes 1_shadow",
+      "parentPath": "Scale/SLOTS/shoes 1",
+      "active": true,
+      "pos": [0,-4.99992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "shoes_shadow", "guid": "50d139b85c6e5034a975e2f0d71d9877", "ppu": 100, "nativeSize": [176,140], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -490, "layerValue": 0, "bounds": [-119.067,103.544,-43.387,163.744], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 62,
+      "path": "Scale/SLOTS/pot 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-27.50006,940.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pot_2", "guid": "667bf27cc0fb38846b217ee1cb627d70", "ppu": 100, "nativeSize": [193,310], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -460, "layerValue": 0, "bounds": [-53.32003,337.765,29.66997,471.065], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pot 2/pot 2_shadow",
+      "parentPath": "Scale/SLOTS/pot 2",
+      "active": true,
+      "pos": [0,-6.00014,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pot_2_shadow", "guid": "ccc767441211c0b4ea0cead691b2c947", "ppu": 100, "nativeSize": [193,310], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -470, "layerValue": 0, "bounds": [-53.32003,335.185,29.66997,468.485], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 63,
+      "path": "Scale/SLOTS/pot",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-338,815.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pot", "guid": "ae307109ff1104b4c8d1b467466e5c1c", "ppu": 100, "nativeSize": [146,128], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -420, "layerValue": 0, "bounds": [-176.73,323.1451,-113.95,378.185], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pot/pot_shadow",
+      "parentPath": "Scale/SLOTS/pot",
+      "active": true,
+      "pos": [0,-5.00011,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pot_shadow", "guid": "e9cfa5fb871c18e498005f38f69ec225", "ppu": 100, "nativeSize": [146,128], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -430, "layerValue": 0, "bounds": [-176.73,320.995,-113.95,376.035], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 64,
+      "path": "Scale/SLOTS/railing 1",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [237.5,200.5001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "railing_1", "guid": "e999fdb268511fb4e9c03e596842fb4a", "ppu": 100, "nativeSize": [1085,325], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -380, "layerValue": 0, "bounds": [-131.15,16.34005,335.4,156.09], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/railing 1/railing_shadow",
+      "parentPath": "Scale/SLOTS/railing 1",
+      "active": true,
+      "pos": [-3.49999,-51.50013,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "railing_shadow", "guid": "36438286550853d40a2b0722760f0a52", "ppu": 100, "nativeSize": [1076,223], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -390, "layerValue": 0, "bounds": [-130.72,16.12499,331.96,112.015], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 65,
+      "path": "Scale/SLOTS/pot 3",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-394.0001,402.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pot_3", "guid": "b0358c383ba80f944b27361c842129e0", "ppu": 100, "nativeSize": [100,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -360, "layerValue": 0, "bounds": [-190.92,144.695,-147.92,201.025], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/pot 3/pot 3_shadow",
+      "parentPath": "Scale/SLOTS/pot 3",
+      "active": true,
+      "pos": [0,-5.00011,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "pot_3_shadow", "guid": "a5d3c122dc433b34c8bb24f4e8667f9a", "ppu": 100, "nativeSize": [100,131], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -370, "layerValue": 0, "bounds": [-190.92,142.545,-147.92,198.875], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 66,
+      "path": "Scale/SLOTS/candy",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-358.5,561.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "candy", "guid": "5af932aa14e6a194ca0dc4ea3f9f294c", "ppu": 100, "nativeSize": [109,257], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -340, "layerValue": 0, "bounds": [-177.59,185.975,-130.72,296.485], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/candy/candy 2",
+      "parentPath": "Scale/SLOTS/candy",
+      "active": true,
+      "pos": [31.99997,70.99991,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "candy_2", "guid": "3273ad97a6ab5d24982d69817b828bb8", "ppu": 100, "nativeSize": [45,107], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -310, "layerValue": 0, "bounds": [-150.07,248.755,-130.72,294.765], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/candy/candy_shadow",
+      "parentPath": "Scale/SLOTS/candy",
+      "active": true,
+      "pos": [0,-4.00009,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "candy_shadow", "guid": "de3c697789123f64f8878c5f5029c331", "ppu": 100, "nativeSize": [109,257], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -350, "layerValue": 0, "bounds": [-177.59,184.255,-130.72,294.765], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 67,
+      "path": "Scale/SLOTS/star",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-347,542.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "star", "guid": "e517006f301fc4e4ba0ec081bd9cc7ca", "ppu": 100, "nativeSize": [106,176], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -320, "layerValue": 0, "bounds": [-172,195.435,-126.42,271.115], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/star/star copy",
+      "parentPath": "Scale/SLOTS/star",
+      "active": true,
+      "pos": [2.99997,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "star_copy", "guid": "436596535d90ad84ebf557e863fef001", "ppu": 100, "nativeSize": [106,176], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -330, "layerValue": 0, "bounds": [-170.71,195.435,-125.13,271.115], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 68,
+      "path": "Scale/SLOTS/lamp",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-748,257,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lamp", "guid": "89fc5dade4d1be545a252d4a37532c36", "ppu": 100, "nativeSize": [172,223], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -290, "layerValue": 0, "bounds": [-358.62,62.56499,-284.66,158.455], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/lamp/lamp_shadow",
+      "parentPath": "Scale/SLOTS/lamp",
+      "active": true,
+      "pos": [-4,2.00005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lamp_shadow", "guid": "42314814afac7e849b92f86e79b3e9fd", "ppu": 100, "nativeSize": [172,223], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -300, "layerValue": 0, "bounds": [-360.34,63.425,-286.38,159.315], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 69,
+      "path": "Scale/SLOTS/stairs-2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-608,-220.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stairs-2", "guid": "272f033f43ba2c44ab94b4526da9f69b", "ppu": 100, "nativeSize": [440,893], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -270, "layerValue": 0, "bounds": [-356.04,-286.81,-166.84,97.18002], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/stairs-2/stairs_shadow",
+      "parentPath": "Scale/SLOTS/stairs-2",
+      "active": true,
+      "pos": [-26.00002,-351.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stairs_shadow-1", "guid": "37471d66478b53a45ad48d695818d81c", "ppu": 100, "nativeSize": [504,244], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -280, "layerValue": 0, "bounds": [-380.98,-298.635,-164.26,-193.715], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 70,
+      "path": "Scale/SLOTS/stairs",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-642,-218.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "stairs-1", "guid": "beca05a6b60d8be4690e3c90272a9cd6", "ppu": 100, "nativeSize": [596,896], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -260, "layerValue": 0, "bounds": [-404.2,-286.595,-147.92,98.68503], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 71,
+      "path": "Scale/SLOTS/snowman",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-854.5,-822.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snowman", "guid": "69c146f10dc06e84aba0d48086a63de9", "ppu": 100, "nativeSize": [383,563], "pivot": [0.5,0.5], "color": [1,1,1,0], "sortingOrder": -240, "layerValue": 0, "bounds": [-449.78,-474.935,-285.09,-232.845], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/snowman/snowman_shadow",
+      "parentPath": "Scale/SLOTS/snowman",
+      "active": false,
+      "pos": [-10.49995,-203.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snowman_shadow", "guid": "31ec7f6b533b9de4b85bd502c981ba4a", "ppu": 100, "nativeSize": [374,117], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -250, "layerValue": 0, "bounds": [-452.36,-466.55,-291.54,-416.24], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/snowman/Spine GameObject (NguoiTuyet_01)",
+      "parentPath": "Scale/SLOTS/snowman",
+      "active": true,
+      "pos": [-8,-275,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "render": { "sortingOrder": -240, "layerValue": 0, "bounds": [-370.875,-472.14,-370.875,-472.14] }
+    },
+    {
+      "siblingIndex": 72,
+      "path": "Scale/SLOTS/snowman 2",
+      "parentPath": "Scale/SLOTS",
+      "active": true,
+      "pos": [-499,-887.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snowman_2", "guid": "83b85191ea1d1974996818b34472df4e", "ppu": 100, "nativeSize": [279,322], "pivot": [0.5,0.5], "color": [1,1,1,0], "sortingOrder": -180, "layerValue": 0, "bounds": [-274.555,-450.855,-154.585,-312.395], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SLOTS/snowman 2/snowman 2_shadow",
+      "parentPath": "Scale/SLOTS/snowman 2",
+      "active": false,
+      "pos": [4,-125.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "snowman_2_shadow", "guid": "200767457ab3dce47bbaac25f8d6544b", "ppu": 100, "nativeSize": [268,99], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -190, "layerValue": 0, "bounds": [-270.47,-456.875,-155.23,-414.305], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/SLOTS/snowman 2/Spine GameObject (NguoiTuyet_02)",
+      "parentPath": "Scale/SLOTS/snowman 2",
+      "active": true,
+      "pos": [13,-166,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "render": { "sortingOrder": -180, "layerValue": 0, "bounds": [-208.98,-453.005,-208.98,-453.005] }
+    }
+  ],
+  "conflicts": [
+    { "a": "Scale/LevelController", "rangeA": [-2000,-120], "b": "Scale/SLOTS", "rangeB": [-1950,-180], "overlappingPairs": 1159 },
+    { "a": "Scale/SLOTS/stove 2", "rangeA": [-1800,-1750], "b": "Scale/SLOTS/wood 2", "rangeB": [-1790,-1779], "overlappingPairs": 6 },
+    { "a": "Scale/SLOTS/sled", "rangeA": [-1020,-890], "b": "Scale/SLOTS/bag", "rangeB": [-1000,-920], "overlappingPairs": 14 },
+    { "a": "Scale/SLOTS/sled", "rangeA": [-1020,-890], "b": "Scale/SLOTS/gift 3", "rangeB": [-980,-970], "overlappingPairs": 4 },
+    { "a": "Scale/SLOTS/sled", "rangeA": [-1020,-890], "b": "Scale/SLOTS/gift 2", "rangeB": [-960,-950], "overlappingPairs": 7 },
+    { "a": "Scale/SLOTS/sled", "rangeA": [-1020,-890], "b": "Scale/SLOTS/gift 1", "rangeB": [-940,-930], "overlappingPairs": 8 },
+    { "a": "Scale/SLOTS/bag", "rangeA": [-1000,-920], "b": "Scale/SLOTS/gift 3", "rangeB": [-980,-970], "overlappingPairs": 6 },
+    { "a": "Scale/SLOTS/bag", "rangeA": [-1000,-920], "b": "Scale/SLOTS/gift 2", "rangeB": [-960,-950], "overlappingPairs": 6 },
+    { "a": "Scale/SLOTS/bag", "rangeA": [-1000,-920], "b": "Scale/SLOTS/gift 1", "rangeB": [-940,-930], "overlappingPairs": 6 },
+    { "a": "Scale/SLOTS/bed 2", "rangeA": [-780,-680], "b": "Scale/SLOTS/pillow 2", "rangeB": [-760,-750], "overlappingPairs": 6 },
+    { "a": "Scale/SLOTS/bed 2", "rangeA": [-780,-680], "b": "Scale/SLOTS/blanket", "rangeB": [-720,-710], "overlappingPairs": 6 },
+    { "a": "Scale/SLOTS/bed 2", "rangeA": [-780,-680], "b": "Scale/SLOTS/deer", "rangeB": [-700,-690], "overlappingPairs": 6 },
+    { "a": "Scale/SLOTS/candy", "rangeA": [-350,-310], "b": "Scale/SLOTS/star", "rangeB": [-330,-320], "overlappingPairs": 6 }
+  ]
+}
