@@ -202,12 +202,12 @@ function findPmaAtlasSizes(entries) {
             continue;
         }
         const text = entry.data.toString('utf-8');
-        if (!text.includes('pma: true')) {
+        if (!/pma:\s*true/.test(text)) {
             continue;
         }
         // atlasText nằm trong chuỗi JSON nên xuống dòng/tab đang ở dạng escape "\n", "\t"
-        const atlas = text.replace(/\\n/g, '\n').replace(/\\t/g, '\t');
-        const re = /size:\s*(\d+),\s*(\d+)\n(?:\t[^\n]*\n)*?\tpma:\s*true/g;
+        const atlas = text.replace(/\\r/g, '').replace(/\\n/g, '\n').replace(/\\t/g, '\t');
+        const re = /size:\s*(\d+)\s*,\s*(\d+)\n(?:[ \t]*[a-z]+:[^\n]*\n)*?[ \t]*pma:\s*true/gi;
         let m;
         while ((m = re.exec(atlas))) {
             sizes.add(`${m[1]},${m[2]}`);

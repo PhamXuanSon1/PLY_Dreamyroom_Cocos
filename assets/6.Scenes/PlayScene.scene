@@ -33314,7 +33314,7 @@
     "sharedTargets": [],
     "snapDistance": 200,
     "moveDuration": 0.2,
-    "materialType": 0,
+    "materialType": 41,
     "soundTypes": [
       41
     ],
@@ -38150,7 +38150,7 @@
     "persistentShadow": false,
     "activeOnPlaced": [],
     "deactiveOnPlaced": [],
-    "hideTargetSpriteWithSpine": true,
+    "hideTargetSpriteWithSpine": false,
     "dropShadows": [],
     "_id": "2anamuqPRATqgZo9TZcO7n"
   },
@@ -52148,7 +52148,7 @@
         "__id__": 1305
       }
     ],
-    "storeAfterComplete": false,
+    "storeAfterComplete": true,
     "moveRoom": true,
     "roomPos": {
       "__id__": 1544
@@ -52999,7 +52999,7 @@
   {
     "__type__": "SoundData",
     "clip": {
-      "__uuid__": "9c42e089-55d8-4a68-857f-c0ae58d701ec",
+      "__uuid__": "1f3006b0-c14f-4069-9401-fd093d6c9038",
       "__expectedType__": "cc.AudioClip"
     },
     "volume": 0.6,
@@ -53034,7 +53034,10 @@
   },
   {
     "__type__": "SoundData",
-    "clip": null,
+    "clip": {
+      "__uuid__": "7c402209-5a79-467c-b1fb-123e5c62dc93",
+      "__expectedType__": "cc.AudioClip"
+    },
     "volume": 1,
     "repeatCount": 1
   },

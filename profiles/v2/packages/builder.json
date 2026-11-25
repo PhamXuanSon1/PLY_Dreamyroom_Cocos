@@ -7,7 +7,7 @@
     "polyfills": {
       "asyncFunctions": true
     },
-    "name": "Cocos_DreamyRoom_PLY57",
+    "name": "Cocos_DreamyRoom_PLY58_Adapt",
     "buildPath": "project://build",
     "outputName": "web-mobile",
     "mainBundleCompressionType": "merge_dep",
@@ -31,10 +31,10 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "11-19-2026 09:48:11 build success in 47 s!",
-        "detailMessage": "[playable-ads-builder]\r[buildHtml] 3/8\r",
+        "message": "11-25-2026 15:28:05 build success in 26 s!",
+        "detailMessage": "[playable-ads-builder]\r  - F:\\CocosProject\\PLY_Dreamyroom_Cocos\\Cocos_DreamyRoom_PLY58_Adapt\\Unity_Cocos_DreamyRoom_PLY58_Adapt.html 4.3MB\r",
         "options": {
-          "name": "Cocos_DreamyRoom_PLY57",
+          "name": "Cocos_DreamyRoom_PLY58_Adapt",
           "server": "",
           "engineModulesConfigKey": "migrationsConfig",
           "platform": "web-mobile",
@@ -92,11 +92,11 @@
             "threshold": 16,
             "enable": false
           },
-          "__builderUiTaskNavigation": "mwmy8i7x-8ofrv2kk2wm:2",
-          "__builderUiTaskTime": 1795056443861,
+          "__builderUiTaskNavigation": "mwvv1208-5bgeg8d5sg:2",
+          "__builderUiTaskTime": 1795595258444,
           "taskId": "1787297348777"
         },
-        "time": "11-19-2026 09:47:23",
+        "time": "11-25-2026 15:27:38",
         "dirty": false
       }
     }

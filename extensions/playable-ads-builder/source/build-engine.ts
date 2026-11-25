@@ -219,12 +219,13 @@ function findPmaAtlasSizes(entries: IWalkEntry[]): string[] {
             continue;
         }
         const text = entry.data.toString('utf-8');
-        if (!text.includes('pma: true')) {
+        if (!/pma:\s*true/.test(text)) {
             continue;
         }
         // atlasText nằm trong chuỗi JSON nên xuống dòng/tab đang ở dạng escape "\n", "\t"
-        const atlas = text.replace(/\\n/g, '\n').replace(/\\t/g, '\t');
-        const re = /size:\s*(\d+),\s*(\d+)\n(?:\t[^\n]*\n)*?\tpma:\s*true/g;
+        // Atlas có thể ghi "pma:true" (không tab/dấu cách) và xuống dòng CRLF -> bỏ "\r" trước khi match
+        const atlas = text.replace(/\\r/g, '').replace(/\\n/g, '\n').replace(/\\t/g, '\t');
+        const re = /size:\s*(\d+)\s*,\s*(\d+)\n(?:[ \t]*[a-z]+:[^\n]*\n)*?[ \t]*pma:\s*true/gi;
         let m: RegExpExecArray | null;
         while ((m = re.exec(atlas))) {
             sizes.add(`${m[1]},${m[2]}`);
