@@ -74,7 +74,7 @@
       "uuid": "4ee28933-deb0-4266-8f3b-25071b1a6ef8"
     },
     "7.Scripts\\Utils": {
-      "time": 1791452894479.3691,
+      "time": 1795593485658.455,
       "uuid": "2a85486d-eb51-4b6b-b8a9-36c6434b4a19"
     },
     "8.Models\\Materials": {
@@ -1144,7 +1144,7 @@
       "uuid": "c6a61899-b2f1-4055-953b-fd22da9f8337"
     },
     "6.Scenes\\PlayScene.scene": {
-      "time": 1795592547577.137,
+      "time": 1795593523559.583,
       "uuid": "37150f18-4c52-4f26-bdc5-00b4308270f1"
     },
     "8.Assets\\127. Spooky Pizza": {
@@ -2328,7 +2328,7 @@
       "time": 1795591540887.5503
     },
     "3.Sprites\\Ply59": {
-      "time": 1795591541788.2878,
+      "time": 1795592931889.4722,
       "uuid": "68668876-db48-4d60-a0a0-897e877d7ef8"
     },
     "3.Sprites\\Ply59\\sprites": {
@@ -2831,6 +2831,188 @@
     "3.Sprites\\Ply59\\sprites\\ro_khoai.png": {
       "time": 1788755200600.913,
       "uuid": "036b49de-8c65-4b89-a5c7-a63cc054a8d5"
+    },
+    "3.Sprites\\Ply59\\Anims.meta": {
+      "time": 1795592931912.3176
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2.atlas.txt.meta": {
+      "time": 1795592931914.4392
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2.json.meta": {
+      "time": 1795592931920.9875
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2.png.meta": {
+      "time": 1795592931945.021
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2_Atlas.asset.meta": {
+      "time": 1795592931916.9602
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2_Material.mat.meta": {
+      "time": 1795592931918.4717
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2_SkeletonData.asset.meta": {
+      "time": 1795592931923.5034
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen.atlas.txt.meta": {
+      "time": 1795592931925.513
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen.json.meta": {
+      "time": 1795592931927.0254
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen.png.meta": {
+      "time": 1795592931966.1729
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen_Atlas.asset.meta": {
+      "time": 1795592931930.6118
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen_Material.mat.meta": {
+      "time": 1795592931934.014
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen_SkeletonData.asset.meta": {
+      "time": 1795592931943.514
+    },
+    "3.Sprites\\Ply59\\Anims\\mama.atlas.txt.meta": {
+      "time": 1795592931947.1172
+    },
+    "3.Sprites\\Ply59\\Anims\\mama.json.meta": {
+      "time": 1795592931951.1477
+    },
+    "3.Sprites\\Ply59\\Anims\\mama.png.meta": {
+      "time": 1795592931990.5247
+    },
+    "3.Sprites\\Ply59\\Anims\\mama_Atlas.asset.meta": {
+      "time": 1795592931953.5767
+    },
+    "3.Sprites\\Ply59\\Anims\\mama_Material.mat.meta": {
+      "time": 1795592931957.607
+    },
+    "3.Sprites\\Ply59\\Anims\\mama_SkeletonData.asset.meta": {
+      "time": 1795592931967.204
+    },
+    "3.Sprites\\Ply59\\Anims\\tree.atlas.txt.meta": {
+      "time": 1795592931968.6711
+    },
+    "3.Sprites\\Ply59\\Anims\\tree.json.meta": {
+      "time": 1795592931973.761
+    },
+    "3.Sprites\\Ply59\\Anims\\tree.png.meta": {
+      "time": 1795592932034.398
+    },
+    "3.Sprites\\Ply59\\Anims\\tree_Atlas.asset.meta": {
+      "time": 1795592931975.7969
+    },
+    "3.Sprites\\Ply59\\Anims\\tree_Material.mat.meta": {
+      "time": 1795592931977.31
+    },
+    "3.Sprites\\Ply59\\Anims\\tree_SkeletonData.asset.meta": {
+      "time": 1795592931992.0315
+    },
+    "3.Sprites\\Ply59\\Anims": {
+      "time": 1795592931903.6094,
+      "uuid": "4d8fcf3a-627a-4246-8637-b72f762812c8"
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2.atlas.txt": {
+      "time": 1788755200415.5427,
+      "uuid": "21bb96fe-8996-43b6-8b79-80d8ebf3853a"
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2_Atlas.asset": {
+      "time": 1795576160696.6646,
+      "uuid": "697a646e-da01-4a55-8ded-1b6e08e502bc"
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2_Material.mat": {
+      "time": 1795576160702.672,
+      "uuid": "2dc8bf65-e362-48c1-b538-f3aba3be1bcf"
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2.json": {
+      "time": 1795593032198.9949,
+      "uuid": "e294db41-23c7-4799-9fc9-3694bce2f0d7"
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2_SkeletonData.asset": {
+      "time": 1788755200423.9077,
+      "uuid": "fb91e51a-cf6b-4055-83b8-1a1c2efc4760"
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen.atlas.txt": {
+      "time": 1788755200423.9077,
+      "uuid": "2ee107a5-ed47-4363-a0c1-06e247b62658"
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen.json": {
+      "time": 1795593032201.015,
+      "uuid": "c9f94986-2f0c-4760-99b7-b38257c50dac"
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen_Atlas.asset": {
+      "time": 1795576160956.778,
+      "uuid": "b1e81b14-9cfe-4f66-9ca8-977eed9d6e4d"
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen_Material.mat": {
+      "time": 1795576160949.7505,
+      "uuid": "58b71803-f620-47c0-8309-1012f0b99bf8"
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen_SkeletonData.asset": {
+      "time": 1788755200428.5867,
+      "uuid": "021d0baf-a594-462c-9bf0-9afd251d18f4"
+    },
+    "3.Sprites\\Ply59\\Anims\\baby2.png": {
+      "time": 1788755200419.372,
+      "uuid": "cd1a44de-d7e3-487d-b3ae-5774eab77005"
+    },
+    "3.Sprites\\Ply59\\Anims\\mama.atlas.txt": {
+      "time": 1788755200431.123,
+      "uuid": "99fbb274-f968-4806-ae1a-b6e67d7618de"
+    },
+    "3.Sprites\\Ply59\\Anims\\mama.json": {
+      "time": 1795593032202.3662,
+      "uuid": "2e398346-b8a3-4790-b523-efd96a16b4d2"
+    },
+    "3.Sprites\\Ply59\\Anims\\mama_Atlas.asset": {
+      "time": 1795576160895.9028,
+      "uuid": "cc510436-f93f-47f6-a656-52908baba524"
+    },
+    "3.Sprites\\Ply59\\Anims\\mama_Material.mat": {
+      "time": 1795576160889.3877,
+      "uuid": "73284def-0dd5-4eeb-a895-71bc89db016c"
+    },
+    "3.Sprites\\Ply59\\Anims\\cay_nen.png": {
+      "time": 1788755200423.9077,
+      "uuid": "bbf66f18-4bac-4e23-af4f-52061bf3e2ea"
+    },
+    "3.Sprites\\Ply59\\Anims\\mama_SkeletonData.asset": {
+      "time": 1788755200437.722,
+      "uuid": "535d2007-6863-48b8-8292-99032dc2ebf1"
+    },
+    "3.Sprites\\Ply59\\Anims\\tree.atlas.txt": {
+      "time": 1788755200437.722,
+      "uuid": "62093c6e-675e-4c65-a76d-cde5163c3f3f"
+    },
+    "3.Sprites\\Ply59\\Anims\\tree.json": {
+      "time": 1795593032212.9697,
+      "uuid": "fd06f3d8-4a02-43fd-b8ad-9d353263f472"
+    },
+    "3.Sprites\\Ply59\\Anims\\tree_Atlas.asset": {
+      "time": 1795576160766.5396,
+      "uuid": "b7d54ceb-cc45-47b1-a92f-824a310bd603"
+    },
+    "3.Sprites\\Ply59\\Anims\\tree_Material.mat": {
+      "time": 1795576160760.0232,
+      "uuid": "b623340b-32ec-42f8-8cdb-0afda486dc51"
+    },
+    "3.Sprites\\Ply59\\Anims\\mama.png": {
+      "time": 1788755200435.2114,
+      "uuid": "8d1dc449-a2df-4583-b123-217aab0a624e"
+    },
+    "3.Sprites\\Ply59\\Anims\\tree_SkeletonData.asset": {
+      "time": 1788755200442.262,
+      "uuid": "44319151-be0c-46fd-92d9-1a32e3811d91"
+    },
+    "3.Sprites\\Ply59\\Anims\\tree.png": {
+      "time": 1788755200442.262,
+      "uuid": "7fa7912e-f9cb-4471-b054-093713e232d4"
+    },
+    "7.Scripts\\Utils\\SpineSlotVisibility.ts.meta": {
+      "time": 1795593485666.4866
+    },
+    "7.Scripts\\Utils\\SpineSlotVisibility.ts": {
+      "time": 1795593473963.645,
+      "uuid": "f1f887e1-a388-49fc-aa1a-77c062fa80fe"
     }
   },
   "missing": {}
