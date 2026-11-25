@@ -1,0 +1,1764 @@
+{
+  "meta": { "K": 100, "scene": "Level589", "exportRoot": "Scale", "distancesInPx": true, "onlyNodeLinks": true, "zeroZ": true, "exportInactive": true, "ignoreInactiveInConflicts": true, "exportedAt": "2026-11-25T14:12:16" },
+  "assetMap": {
+    "f1a56a3d4bef88341b1e962b24eeb359": "sprites/snow_pattern",
+    "20f6e0c7f723b3c4d8744b0684d9d0b3": "sprites/room",
+    "6936f9a6b8fd20042bd9243e6862c83b": "sprites/lo_sui",
+    "462c04792c5cf6a40a0abc656b2da489": "sprites/nen",
+    "0ff89289e36995a4db32e289b69aefa7": "sprites/tu_bep_lon",
+    "bfd284e59ebc788458d36713af4370d3": "sprites/tu_bep_lon_shadow",
+    "aa8c92197b1ef4e45b104693dc44e8e8": "sprites/tu_bep_lon_cut",
+    "438e0e37ce190434cab047b3ce29b33b": "sprites/hop_",
+    "e0e207ac82421ba42a61209424c00401": "sprites/hu_1",
+    "dc371cc80c4da1e46ab79210df508d67": "sprites/hu2",
+    "50495f5d0080a33459469e60ac4099ec": "sprites/noi",
+    "53f6142e01127b34cb7a7a80c918d13b": "sprites/bep",
+    "36aae1812bf8f7346a346325d2fe8e63": "sprites/thot",
+    "b2c366f3fc73c8a4b8ff7218b4b4472a": "sprites/to_lon",
+    "3e40d4b071242db4c9e77e12580b6a18": "sprites/chen_nho",
+    "96d44f0b2a59f8c48b0673575ff498f1": "sprites/khung_anh",
+    "fa72b4a463db34849b9b58c20ff9df16": "sprites/ke_dung_gia_vi",
+    "6e256403b6408804fa30fc4ee93a70f8": "sprites/ke_dung_gia_vi_cut",
+    "6882cf8c3f3427e4c96c1670f7e92a3d": "sprites/lo_1",
+    "d10e233918db4634a97a45cd57035634": "sprites/lo2",
+    "0b55dd7ac15362a4497464db01d7adf2": "sprites/KnifeShelfPlace",
+    "f6985b18ddca700488d1710e35d9d8b5": "sprites/ke_treo_dao",
+    "b323a5ce1a9ee894d8032087138d3d9b": "sprites/dao",
+    "e79f8a68aef97e44ba5d86c5742768de": "sprites/chao_tron",
+    "da26a5f4688cc8047b710c8c2cd79cda": "sprites/chao_vuong",
+    "e84b4e33698ae914f9feb0bfd8c89321": "sprites/thung_nuoc",
+    "2849f297d8b42ea41975280bd160d883": "sprites/ro_khoai",
+    "b323147b5a4e48d4183b5262e951bc6a": "sprites/cui",
+    "653246abb4ee05c45af4e6994cd67bf5": "sprites/ghe_an_2",
+    "260563b160374d541b5af0ea053e7556": "sprites/ban_an",
+    "ee223dfc70a72c94aad4c838d9d9c3c8": "sprites/khan_ban_an",
+    "4a9e018f72bc3104da60f3ca65cd7370": "sprites/lo_mut_dau",
+    "29285d1df9eedda43adb0fbcdfb38c99": "sprites/banh_mi",
+    "3e74c437203a3a941b010f6e7ff326f9": "sprites/banh_mi_cat_lat",
+    "1119c37b4670f614e8a7f163336f4956": "sprites/chau_cay",
+    "7128c4190bff2934884e1b78b6d33fae": "sprites/chau_cay_treo_tuong",
+    "eb9717b1509735240a173290740bb02b": "sprites/ghe_chau_cay",
+    "7e8801ea01c795e47a4d246857b416c3": "sprites/ghe__tua",
+    "f6460ea7fefdae04686d66ceb7808746": "sprites/mother",
+    "9acd7f22505cb584db70828a66ea270d": "sprites/tham_copy",
+    "bab6359457a15004baab8980c26641ea": "sprites/ban_tron",
+    "83c8399216ef76f479686d3311ad8866": "sprites/khan",
+    "1f96a23e10a5d064892e575fb97e25ec": "sprites/cup",
+    "8a0954f5f7f1dad4abab8dc03bf6e254": "sprites/gio_len_2",
+    "920ad80deceb882419d723ae431d7e68": "sprites/Baby",
+    "1c1436668be567a4481c9eb4062b44e9": "sprites/gio_len_2_shadow",
+    "786ce3ea9a0bf8d48aa131a1d6b82509": "sprites/ban_tron_shadow",
+    "f88d02e480c07bd468c119491c062173": "sprites/ghe_tua_shadow",
+    "39138f8f88db7434eb7f1e642dfcabdd": "sprites/ghe_chau_cay_shadow",
+    "cf28d98dcd848d54c8a76024eafaf427": "sprites/chau_cay_treo_tuong_shadow",
+    "f0d2d3e5e6b5dac48874a7fd8bc7c42f": "sprites/banh_mi_cat_lat_shadow",
+    "aba4778cad97ec44da9ecf55360e5639": "sprites/banh_mi_shadow",
+    "a82c83b1f0a3f8948b7678b94d9ea32a": "sprites/lo_mut_dau_shadow",
+    "8b40d6978c2d49a4a8140d6f0ad704a4": "sprites/ban_an_shadow",
+    "68443e7c19a358a47afcb995fa7672ff": "sprites/cui_shadow",
+    "fe32baf0061fa7b4da5642fae8aa6cd9": "sprites/ro_khoai_shadow",
+    "c42ed4381785b704bb215baf73b0a59c": "sprites/thung_nuoc_shadow",
+    "fa2555a8580087446b9b0129edb207db": "sprites/chen_nho_shadow",
+    "d24108949a9a0344cadf110ffc2f90d2": "sprites/to_lon_shadow",
+    "8c0b865cc1e63c74a9aa6d5616eec74a": "sprites/thot_shadow",
+    "16d44f337a9447040ade59bf33315a6f": "sprites/bep_shadow",
+    "b55937118492b86489d9443dbb73efc4": "sprites/Layer_638",
+    "9ae310d38133fb949b0afebe9dd0c3d2": "sprites/hu2_shadow",
+    "afa36f2d872e44b40aa7b404dbfd62b5": "sprites/hu_1_shadow",
+    "32e3dc4f55c25ee4e83934ecf902974c": "sprites/hop_shadow",
+    "37818ae9c52b0b94d9c7da0ebf5c2517": "sprites/nen_shadow",
+    "614bf7fbf77721b43abf348b701271ef": "sprites/tuyet_che_ong_khoi",
+    "a0f655385db4a384da403fa7ffa62740": "sprites/ghe_an_2_shadow",
+    "a2e69aaf3cc78884a8bed62d6aca244e": "sprites/chao_tron_shadow",
+    "92fb8bc0527968447a85c521fe9fd183": "sprites/chao_vuong_shadow"
+  },
+  "nodes": [
+    {
+      "siblingIndex": 1,
+      "path": "Scale",
+      "parentPath": null,
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [0.3,0.3,0.3]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/SnowPattern",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [-320,100,0],
+      "rot": [0,0,33.70001],
+      "scale": [0.7,0.7,0.7],
+      "sprite": { "key": "snow_pattern", "guid": "f1a56a3d4bef88341b1e962b24eeb359", "ppu": 100, "nativeSize": [807,867], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4000, "layerValue": 0, "bounds": [-3102.635,-2847.767,2910.636,2907.767], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/BaseRoom",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "room", "guid": "20f6e0c7f723b3c4d8744b0684d9d0b3", "ppu": 52.05267, "nativeSize": [2016,2048], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3000, "layerValue": 0, "bounds": [-580.95,-590.1714,580.95,590.1714], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/PlaceHolders",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/PlaceHolders/FirePlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [126,630,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_sui", "guid": "6936f9a6b8fd20042bd9243e6862c83b", "ppu": 78.82231, "nativeSize": [763,2048], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2500, "layerValue": 0, "bounds": [-107.4,-200.7374,183,578.7374], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/PlaceHolders/CandlePlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-180.4368,265.812,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nen", "guid": "462c04792c5cf6a40a0abc656b2da489", "ppu": 100, "nativeSize": [342,566], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2200, "layerValue": 0, "bounds": [-105.431,-5.15641,-2.83103,164.6436], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/PlaceHolders/CandlePlace/Spine",
+      "parentPath": "Scale/PlaceHolders/CandlePlace",
+      "active": true,
+      "pos": [12,-244,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "render": { "sortingOrder": -2200, "layerValue": 0, "bounds": [-50.53103,6.54359,-50.53103,6.54359] }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/PlaceHolders/BigCabinetPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [663,-288,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tu_bep_lon", "guid": "0ff89289e36995a4db32e289b69aefa7", "ppu": 100, "nativeSize": [702,1017], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2200, "layerValue": 0, "bounds": [93.6,-238.95,304.2,66.14999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/PlaceHolders/BigCabinetPlace/Shadow",
+      "parentPath": "Scale/PlaceHolders/BigCabinetPlace",
+      "active": true,
+      "pos": [5,-6,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tu_bep_lon_shadow", "guid": "bfd284e59ebc788458d36713af4370d3", "ppu": 98.65125, "nativeSize": [691,1024], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2800, "layerValue": 0, "bounds": [95.33292,-243.9,305.4671,67.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/PlaceHolders/BigCabinetPlace/P1",
+      "parentPath": "Scale/PlaceHolders/BigCabinetPlace",
+      "active": true,
+      "pos": [0,176,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tu_bep_lon_cut", "guid": "aa8c92197b1ef4e45b104693dc44e8e8", "ppu": 100, "nativeSize": [701,667], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2100, "layerValue": 0, "bounds": [93.75,-133.65,304.05,66.45], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/PlaceHolders/Box1Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [729.8736,53.61433,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hop_", "guid": "438e0e37ce190434cab047b3ce29b33b", "ppu": 100, "nativeSize": [416,350], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [156.5621,-36.4157,281.3621,68.5843], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/PlaceHolders/CircleBottle1Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [559.7061,147.6504,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu_1", "guid": "e0e207ac82421ba42a61209424c00401", "ppu": 100, "nativeSize": [380,321], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1950, "layerValue": 0, "bounds": [110.9118,-3.85489,224.9118,92.44512], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Scale/PlaceHolders/CircleBottle2Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [559.7061,303.0504,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu2", "guid": "dc371cc80c4da1e46ab79210df508d67", "ppu": 100, "nativeSize": [334,284], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [117.8118,48.31512,218.0118,133.5151], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Scale/PlaceHolders/Pot1Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [610.4061,-184.8496,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "noi", "guid": "50495f5d0080a33459469e60ac4099ec", "ppu": 100, "nativeSize": [365,315], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2150, "layerValue": 0, "bounds": [128.3718,-102.7049,237.8718,-8.20488], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Scale/PlaceHolders/KitChenPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1034,-691,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bep", "guid": "53f6142e01127b34cb7a7a80c918d13b", "ppu": 100, "nativeSize": [835,748], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2100, "layerValue": 0, "bounds": [184.95,-319.5,435.45,-95.09998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Scale/PlaceHolders/BoardPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1141.7,-567.2581,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "thot", "guid": "36aae1812bf8f7346a346325d2fe8e63", "ppu": 100, "nativeSize": [450,308], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [275.01,-216.3774,410.01,-123.9774], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Scale/PlaceHolders/BigCircleRacketPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [950.1865,-329.7346,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "to_lon", "guid": "b2c366f3fc73c8a4b8ff7218b4b4472a", "ppu": 100, "nativeSize": [396,421], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [225.656,-162.0704,344.456,-35.77037], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Scale/PlaceHolders/SmallCircleRacketPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [793.0999,-440.4581,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chen_nho", "guid": "3e40d4b071242db4c9e77e12580b6a18", "ppu": 100, "nativeSize": [283,232], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [195.48,-166.9374,280.38,-97.33742], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Scale/PlaceHolders/Pic1Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-493.0728,201.8249,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khung_anh", "guid": "96d44f0b2a59f8c48b0673575ff498f1", "ppu": 100, "nativeSize": [396,465], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [-207.3219,-9.20252,-88.52184,130.2975], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Scale/PlaceHolders/WallShelfPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1146,58,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_dung_gia_vi", "guid": "fa72b4a463db34849b9b58c20ff9df16", "ppu": 100, "nativeSize": [439,361], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2200, "layerValue": 0, "bounds": [277.95,-36.75,409.65,71.55], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/PlaceHolders/WallShelfPlace/P1",
+      "parentPath": "Scale/PlaceHolders/WallShelfPlace",
+      "active": true,
+      "pos": [-0.6,-27,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_dung_gia_vi_cut", "guid": "6e256403b6408804fa30fc4ee93a70f8", "ppu": 100, "nativeSize": [439,309], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [277.7701,-37.05,409.47,55.64999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Scale/PlaceHolders/RedBottlePlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1105.218,126.4089,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_1", "guid": "6882cf8c3f3427e4c96c1670f7e92a3d", "ppu": 100, "nativeSize": [230,285], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [297.0655,-4.82734,366.0655,80.67267], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Scale/PlaceHolders/GreenBottlePlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1185.318,89.30888,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo2", "guid": "d10e233918db4634a97a45cd57035634", "ppu": 100, "nativeSize": [230,285], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [321.0955,-15.95734,390.0955,69.54266], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Scale/PlaceHolders/KnifeShelfPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1439,-208,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "KnifeShelfPlace", "guid": "0b55dd7ac15362a4497464db01d7adf2", "ppu": 100, "nativeSize": [448,419], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [364.5001,-125.25,498.9,0.45], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/PlaceHolders/KnifeShelfPlace/P1",
+      "parentPath": "Scale/PlaceHolders/KnifeShelfPlace",
+      "active": true,
+      "pos": [-28,-14.3,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_treo_dao", "guid": "f6985b18ddca700488d1710e35d9d8b5", "ppu": 100, "nativeSize": [292,230], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [379.5,-101.19,467.1,-32.19], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Scale/PlaceHolders/KnifePlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1410.3,-241.6,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "dao", "guid": "b323a5ce1a9ee894d8032087138d3d9b", "ppu": 100, "nativeSize": [206,402], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [392.19,-132.78,453.99,-12.17999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Scale/PlaceHolders/Pan1Place1",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1507,-393,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chao_tron", "guid": "e79f8a68aef97e44ba5d86c5742768de", "ppu": 100, "nativeSize": [252,371], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1400, "layerValue": 0, "bounds": [414.3,-173.55,489.9,-62.25], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Scale/PlaceHolders/Pan1Place2",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1272.6,-308.2,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chao_tron", "guid": "e79f8a68aef97e44ba5d86c5742768de", "ppu": 100, "nativeSize": [252,371], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [343.98,-148.11,419.58,-36.81001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Scale/PlaceHolders/Pan2Place1",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1507,-393,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chao_vuong", "guid": "da26a5f4688cc8047b710c8c2cd79cda", "ppu": 100, "nativeSize": [254,398], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1400, "layerValue": 0, "bounds": [414,-177.6,490.2,-58.2], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Scale/PlaceHolders/Pan2Place2",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1272.6,-308.2,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chao_vuong", "guid": "da26a5f4688cc8047b710c8c2cd79cda", "ppu": 100, "nativeSize": [254,398], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [343.68,-152.16,419.88,-32.76001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Scale/PlaceHolders/WaterCanPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1397,-868.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "thung_nuoc", "guid": "e84b4e33698ae914f9feb0bfd8c89321", "ppu": 100, "nativeSize": [474,477], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [348.0001,-332.25,490.2,-189.15], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Scale/PlaceHolders/PotatoPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [1149,-1043,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ro_khoai", "guid": "2849f297d8b42ea41975280bd160d883", "ppu": 100, "nativeSize": [451,416], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [277.05,-375.3,412.35,-250.5], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Scale/PlaceHolders/WoodPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [818.489,-1190.063,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cui", "guid": "b323147b5a4e48d4183b5262e951bc6a", "ppu": 100, "nativeSize": [613,432], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [153.5967,-421.8191,337.4967,-292.2191], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Scale/PlaceHolders/HChair1Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-494,-1336,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_2", "guid": "653246abb4ee05c45af4e6994cd67bf5", "ppu": 100, "nativeSize": [499,410], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1700, "layerValue": 0, "bounds": [-223.05,-462.3,-73.35001,-339.3], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 25,
+      "path": "Scale/PlaceHolders/HChair2Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [443,-1366,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_2", "guid": "653246abb4ee05c45af4e6994cd67bf5", "ppu": 100, "nativeSize": [499,410], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1700, "layerValue": 0, "bounds": [58.05,-471.3,207.75,-348.3], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 26,
+      "path": "Scale/PlaceHolders/TablePlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-15.49864,-1427.206,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_an", "guid": "260563b160374d541b5af0ea053e7556", "ppu": 100, "nativeSize": [824,684], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1500, "layerValue": 0, "bounds": [-128.2496,-530.762,118.9504,-325.562], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 27,
+      "path": "Scale/PlaceHolders/TableCarpetPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-41.16051,-1387.6,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khan_ban_an", "guid": "ee223dfc70a72c94aad4c838d9d9c3c8", "ppu": 100, "nativeSize": [728,591], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1450, "layerValue": 0, "bounds": [-121.5482,-504.9302,96.85186,-327.6302], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 28,
+      "path": "Scale/PlaceHolders/StrawberryPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [169.3678,-1210.31,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_mut_dau", "guid": "4a9e018f72bc3104da60f3ca65cd7370", "ppu": 100, "nativeSize": [254,377], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1300, "layerValue": 0, "bounds": [12.71033,-419.6429,88.91033,-306.5429], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 29,
+      "path": "Scale/PlaceHolders/BreadPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-116.408,-1166.135,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_mi", "guid": "29285d1df9eedda43adb0fbcdfb38c99", "ppu": 100, "nativeSize": [406,357], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1400, "layerValue": 0, "bounds": [-95.8224,-403.3904,25.97761,-296.2904], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 30,
+      "path": "Scale/PlaceHolders/Bread2Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-26,-1331,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_mi_cat_lat", "guid": "3e74c437203a3a941b010f6e7ff326f9", "ppu": 100, "nativeSize": [387,280], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1200, "layerValue": 0, "bounds": [-65.85,-441.3,50.25,-357.3], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 31,
+      "path": "Scale/PlaceHolders/Tree2Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-1385,-657,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chau_cay", "guid": "1119c37b4670f614e8a7f163336f4956", "ppu": 100, "nativeSize": [650,620], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1000, "layerValue": 0, "bounds": [-513,-290.1,-318,-104.1], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/PlaceHolders/Tree2Place/Spine",
+      "parentPath": "Scale/PlaceHolders/Tree2Place",
+      "active": true,
+      "pos": [-4,-262,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "render": { "sortingOrder": -1000, "layerValue": 0, "bounds": [-416.7,-275.7,-416.7,-275.7] }
+    },
+    {
+      "siblingIndex": 32,
+      "path": "Scale/PlaceHolders/Tree1Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-659,806.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chau_cay_treo_tuong", "guid": "7128c4190bff2934884e1b78b6d33fae", "ppu": 100, "nativeSize": [421,868], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [-260.85,111.6,-134.55,372], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 33,
+      "path": "Scale/PlaceHolders/TreeChairPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-1381.448,-940.4575,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_chau_cay", "guid": "eb9717b1509735240a173290740bb02b", "ppu": 100, "nativeSize": [355,302], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2500, "layerValue": 0, "bounds": [-467.6844,-327.4373,-361.1843,-236.8372], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 34,
+      "path": "Scale/PlaceHolders/SofaPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-564,-450,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe__tua", "guid": "7e8801ea01c795e47a4d246857b416c3", "ppu": 100, "nativeSize": [877,1031], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [-300.75,-289.65,-37.64999,19.65001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 35,
+      "path": "Scale/PlaceHolders/MotherBearPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-528,-430,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "mother", "guid": "f6460ea7fefdae04686d66ceb7808746", "ppu": 100, "nativeSize": [589,772], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1850, "layerValue": 0, "bounds": [-246.75,-244.8,-70.05001,-13.20001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/PlaceHolders/MotherBearPlace/Spine",
+      "parentPath": "Scale/PlaceHolders/MotherBearPlace",
+      "active": true,
+      "pos": [44.00001,-490.0001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "render": { "sortingOrder": -1850, "layerValue": 0, "bounds": [-145.2,-276,-145.2,-276] }
+    },
+    {
+      "siblingIndex": 36,
+      "path": "Scale/PlaceHolders/BigCarpetPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-214,-938,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tham_copy", "guid": "9acd7f22505cb584db70828a66ea270d", "ppu": 100, "nativeSize": [927,678], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2800, "layerValue": 0, "bounds": [-203.25,-383.1,74.85,-179.7], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 37,
+      "path": "Scale/PlaceHolders/CircleTablePlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-538,-970,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_tron", "guid": "bab6359457a15004baab8980c26641ea", "ppu": 100, "nativeSize": [468,418], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [-231.6,-353.7,-91.2,-228.3], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 38,
+      "path": "Scale/PlaceHolders/CircleCarpetPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-546.5936,-915.149,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khan", "guid": "83c8399216ef76f479686d3311ad8866", "ppu": 100, "nativeSize": [405,268], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1700, "layerValue": 0, "bounds": [-224.7281,-314.7447,-103.2281,-234.3447], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 39,
+      "path": "Scale/PlaceHolders/CupPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-564,-841,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cup", "guid": "1f96a23e10a5d064892e575fb97e25ec", "ppu": 100, "nativeSize": [252,262], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1600, "layerValue": 0, "bounds": [-207,-291.6,-131.4,-213], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 40,
+      "path": "Scale/PlaceHolders/Item2Place",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [-105,-813,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gio_len_2", "guid": "8a0954f5f7f1dad4abab8dc03bf6e254", "ppu": 100, "nativeSize": [380,384], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [-88.5,-301.5,25.5,-186.3], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 41,
+      "path": "Scale/PlaceHolders/BabyPlace",
+      "parentPath": "Scale/PlaceHolders",
+      "active": true,
+      "pos": [169,-754,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Baby", "guid": "920ad80deceb882419d723ae431d7e68", "ppu": 100, "nativeSize": [476,494], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [-20.7,-300.3,122.1,-152.1], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/Items",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Item2",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gio_len_2", "guid": "8a0954f5f7f1dad4abab8dc03bf6e254", "ppu": 100, "nativeSize": [380,384], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 51, "layerValue": 0, "bounds": [-351.6,-555.6001,-237.6,-440.4], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/Item2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Item2/Shadow",
+      "parentPath": "Scale/Items/Item2",
+      "active": false,
+      "pos": [62,-117,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "gio_len_2_shadow", "guid": "1c1436668be567a4481c9eb4062b44e9", "ppu": 98.79518, "nativeSize": [256,164], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2400, "layerValue": 0, "bounds": [-314.8683,-558.0001,-237.1317,-508.2], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Items/Cup",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cup", "guid": "1f96a23e10a5d064892e575fb97e25ec", "ppu": 100, "nativeSize": [252,262], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 52, "layerValue": 0, "bounds": [-332.4,-537.3,-256.8,-458.7], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/CupPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/Items/CircleCarpet",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khan", "guid": "83c8399216ef76f479686d3311ad8866", "ppu": 100, "nativeSize": [405,268], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 53, "layerValue": 0, "bounds": [-355.35,-538.2001,-233.85,-457.8], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/CircleCarpetPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/Items/CircleTable",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_tron", "guid": "bab6359457a15004baab8980c26641ea", "ppu": 100, "nativeSize": [468,418], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 54, "layerValue": 0, "bounds": [-364.8,-560.7,-224.4,-435.3], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/CircleTablePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/CircleTable/Shadow",
+      "parentPath": "Scale/Items/CircleTable",
+      "active": false,
+      "pos": [0,-105,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_tron_shadow", "guid": "786ce3ea9a0bf8d48aa131a1d6b82509", "ppu": 59.67366, "nativeSize": [256,151], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2500, "layerValue": 0, "bounds": [-358.95,-567.4564,-230.25,-491.5436], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/Items/BigCarpet",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tham_copy", "guid": "9acd7f22505cb584db70828a66ea270d", "ppu": 100, "nativeSize": [927,678], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 55, "layerValue": 0, "bounds": [-433.65,-599.7001,-155.55,-396.3], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/BigCarpetPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Scale/Items/Sofa",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe__tua", "guid": "7e8801ea01c795e47a4d246857b416c3", "ppu": 100, "nativeSize": [877,1031], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 56, "layerValue": 0, "bounds": [-426.15,-652.6501,-163.05,-343.35], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/SofaPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Sofa/Shadow",
+      "parentPath": "Scale/Items/Sofa",
+      "active": false,
+      "pos": [46,-338,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_tua_shadow", "guid": "f88d02e480c07bd468c119491c062173", "ppu": 86.19528, "nativeSize": [512,300], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2500, "layerValue": 0, "bounds": [-369.9,-651.6071,-191.7,-547.1929], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Scale/Items/TreeChair",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_chau_cay", "guid": "eb9717b1509735240a173290740bb02b", "ppu": 100, "nativeSize": [355,302], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 57, "layerValue": 0, "bounds": [-347.85,-543.3,-241.35,-452.7], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/TreeChairPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/TreeChair/Shadow",
+      "parentPath": "Scale/Items/TreeChair",
+      "active": false,
+      "pos": [0,-66,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_chau_cay_shadow", "guid": "39138f8f88db7434eb7f1e642dfcabdd", "ppu": 78.46154, "nativeSize": [256,153], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2600, "layerValue": 0, "bounds": [-343.5412,-547.05,-245.6588,-488.55], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Scale/Items/Tree1",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chau_cay_treo_tuong", "guid": "7128c4190bff2934884e1b78b6d33fae", "ppu": 100, "nativeSize": [421,868], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 58, "layerValue": 0, "bounds": [-357.75,-628.2001,-231.45,-367.8], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/Tree1Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Tree1/Shadow",
+      "parentPath": "Scale/Items/Tree1",
+      "active": false,
+      "pos": [-8,-14,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chau_cay_treo_tuong_shadow", "guid": "cf28d98dcd848d54c8a76024eafaf427", "ppu": 58.90736, "nativeSize": [248,512], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2400, "layerValue": 0, "bounds": [-360.15,-632.5742,-233.85,-371.8258], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Scale/Items/Tree2",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chau_cay", "guid": "1119c37b4670f614e8a7f163336f4956", "ppu": 100, "nativeSize": [650,620], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 59, "layerValue": 0, "bounds": [-392.1,-591.0001,-197.1,-405.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/Tree2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Scale/Items/Bread2",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_mi_cat_lat", "guid": "3e74c437203a3a941b010f6e7ff326f9", "ppu": 100, "nativeSize": [387,280], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 60, "layerValue": 0, "bounds": [-352.65,-540.0001,-236.55,-456], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/Bread2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Bread2/Shadow",
+      "parentPath": "Scale/Items/Bread2",
+      "active": false,
+      "pos": [-4,-42,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_mi_cat_lat_shadow", "guid": "f0d2d3e5e6b5dac48874a7fd8bc7c42f", "ppu": 65.43779, "nativeSize": [256,142], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1350, "layerValue": 0, "bounds": [-354.4817,-543.15,-237.1183,-478.05], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Scale/Items/Bread",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_mi", "guid": "29285d1df9eedda43adb0fbcdfb38c99", "ppu": 100, "nativeSize": [406,357], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 61, "layerValue": 0, "bounds": [-355.5,-551.55,-233.7,-444.45], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/BreadPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Bread/Shadow",
+      "parentPath": "Scale/Items/Bread",
+      "active": false,
+      "pos": [0,-82,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "banh_mi_shadow", "guid": "aba4778cad97ec44da9ecf55360e5639", "ppu": 68.63271, "nativeSize": [256,145], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1425, "layerValue": 0, "bounds": [-350.55,-554.2905,-238.65,-490.9096], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Scale/Items/Strawberry",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_mut_dau", "guid": "4a9e018f72bc3104da60f3ca65cd7370", "ppu": 100, "nativeSize": [254,377], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 62, "layerValue": 0, "bounds": [-332.7,-554.55,-256.5,-441.45], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/StrawberryPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Strawberry/Shadow",
+      "parentPath": "Scale/Items/Strawberry",
+      "active": false,
+      "pos": [0,-127,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_mut_dau_shadow", "guid": "a82c83b1f0a3f8948b7678b94d9ea32a", "ppu": 62.67606, "nativeSize": [128,89], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1450, "layerValue": 0, "bounds": [-325.2337,-557.4,-263.9663,-514.8], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Scale/Items/TableCarpet",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khan_ban_an", "guid": "ee223dfc70a72c94aad4c838d9d9c3c8", "ppu": 100, "nativeSize": [728,591], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 63, "layerValue": 0, "bounds": [-403.8,-586.65,-185.4,-409.3501], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/TableCarpetPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Scale/Items/Table",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_an", "guid": "260563b160374d541b5af0ea053e7556", "ppu": 100, "nativeSize": [824,684], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 64, "layerValue": 0, "bounds": [-418.2,-600.6,-171,-395.4001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/TablePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Table/Shadow",
+      "parentPath": "Scale/Items/Table",
+      "active": false,
+      "pos": [26,-151,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ban_an_shadow", "guid": "8b40d6978c2d49a4a8140d6f0ad704a4", "ppu": 66.39344, "nativeSize": [512,243], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [-402.4741,-598.2,-171.1259,-488.4001], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Scale/Items/Wood",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cui", "guid": "b323147b5a4e48d4183b5262e951bc6a", "ppu": 100, "nativeSize": [613,432], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 65, "layerValue": 0, "bounds": [-386.55,-562.8,-202.65,-433.2], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/WoodPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Wood/Shadow",
+      "parentPath": "Scale/Items/Wood",
+      "active": false,
+      "pos": [0,-70,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "cui_shadow", "guid": "68443e7c19a358a47afcb995fa7672ff", "ppu": 84.24437, "nativeSize": [512,262], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2200, "layerValue": 0, "bounds": [-385.7634,-565.6501,-203.4366,-472.35], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Scale/Items/Potato",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ro_khoai", "guid": "2849f297d8b42ea41975280bd160d883", "ppu": 100, "nativeSize": [451,416], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 66, "layerValue": 0, "bounds": [-362.25,-560.4001,-226.95,-435.6], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/PotatoPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Potato/Shadow",
+      "parentPath": "Scale/Items/Potato",
+      "active": false,
+      "pos": [0,-104,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ro_khoai_shadow", "guid": "fe32baf0061fa7b4da5642fae8aa6cd9", "ppu": 58.31435, "nativeSize": [256,136], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2100, "layerValue": 0, "bounds": [-360.45,-564.1828,-228.75,-494.2172], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Scale/Items/WaterCan",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "thung_nuoc", "guid": "e84b4e33698ae914f9feb0bfd8c89321", "ppu": 100, "nativeSize": [474,477], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 67, "layerValue": 0, "bounds": [-365.7,-569.55,-223.5,-426.4501], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/WaterCanPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/WaterCan/Shadpw",
+      "parentPath": "Scale/Items/WaterCan",
+      "active": false,
+      "pos": [4,-141,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "thung_nuoc_shadow", "guid": "c42ed4381785b704bb215baf73b0a59c", "ppu": 70.13575, "nativeSize": [256,155], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2200, "layerValue": 0, "bounds": [-348.151,-573.45,-238.649,-507.15], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Scale/Items/Knife",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "dao", "guid": "b323a5ce1a9ee894d8032087138d3d9b", "ppu": 100, "nativeSize": [206,402], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 68, "layerValue": 0, "bounds": [-325.5,-558.3,-263.7,-437.7], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/KnifePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Scale/Items/Pic1",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "khung_anh", "guid": "96d44f0b2a59f8c48b0673575ff498f1", "ppu": 100, "nativeSize": [396,465], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 69, "layerValue": 0, "bounds": [-354,-567.7501,-235.2,-428.25], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/Pic1Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Scale/Items/SmallCircleRacket",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chen_nho", "guid": "3e40d4b071242db4c9e77e12580b6a18", "ppu": 100, "nativeSize": [283,232], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 70, "layerValue": 0, "bounds": [-337.05,-532.8,-252.15,-463.2], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/SmallCircleRacketPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/SmallCircleRacket/Shadow",
+      "parentPath": "Scale/Items/SmallCircleRacket",
+      "active": false,
+      "pos": [2.8,-55.1,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chen_nho_shadow", "guid": "fa2555a8580087446b9b0129edb207db", "ppu": 55.40541, "nativeSize": [128,82.00001], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2050, "layerValue": 0, "bounds": [-328.4137,-536.73,-259.1064,-492.33], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Scale/Items/BigCircleRacket",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "to_lon", "guid": "b2c366f3fc73c8a4b8ff7218b4b4472a", "ppu": 100, "nativeSize": [396,421], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 71, "layerValue": 0, "bounds": [-354,-561.1501,-235.2,-434.85], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/BigCircleRacketPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/BigCircleRacket/Shadow",
+      "parentPath": "Scale/Items/BigCircleRacket",
+      "active": false,
+      "pos": [0,-122,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "to_lon_shadow", "guid": "d24108949a9a0344cadf110ffc2f90d2", "ppu": 67, "nativeSize": [256,134], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2050, "layerValue": 0, "bounds": [-351.9135,-564.6,-237.2866,-504.6], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Scale/Items/Board",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "thot", "guid": "36aae1812bf8f7346a346325d2fe8e63", "ppu": 100, "nativeSize": [450,308], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 72, "layerValue": 0, "bounds": [-362.1,-544.2,-227.1,-451.8], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/BoardPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Board/Shadow",
+      "parentPath": "Scale/Items/Board",
+      "active": false,
+      "pos": [4,-35,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "thot_shadow", "guid": "8c0b865cc1e63c74a9aa6d5616eec74a", "ppu": 58.43137, "nativeSize": [256,149], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [-359.1181,-546.7501,-227.6819,-470.25], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Scale/Items/KitChen",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bep", "guid": "53f6142e01127b34cb7a7a80c918d13b", "ppu": 100, "nativeSize": [835,748], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 73, "layerValue": 0, "bounds": [-419.85,-610.2001,-169.35,-385.8], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/KitChenPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/KitChen/Shadow",
+      "parentPath": "Scale/Items/KitChen",
+      "active": false,
+      "pos": [17,-173,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "bep_shadow", "guid": "16d44f337a9447040ade59bf33315a6f", "ppu": 64.1604, "nativeSize": [512,268], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2300, "layerValue": 0, "bounds": [-409.2,-612.5555,-169.8,-487.2445], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Scale/Items/Pot1",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "noi", "guid": "50495f5d0080a33459469e60ac4099ec", "ppu": 100, "nativeSize": [365,315], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 74, "layerValue": 0, "bounds": [-349.35,-545.2501,-239.85,-450.7501], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/Pot1Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Pot1/Shadow",
+      "parentPath": "Scale/Items/Pot1",
+      "active": false,
+      "pos": [11.4,-89.3,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Layer_638", "guid": "b55937118492b86489d9443dbb73efc4", "ppu": 73.14285, "nativeSize": [256,118], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2175, "layerValue": 0, "bounds": [-343.68,-548.9892,-238.68,-500.5908], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Scale/Items/CircleBottle2",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu2", "guid": "dc371cc80c4da1e46ab79210df508d67", "ppu": 100, "nativeSize": [334,284], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 75, "layerValue": 0, "bounds": [-344.7,-540.6,-244.5,-455.4], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/CircleBottle2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/CircleBottle2/Shadow",
+      "parentPath": "Scale/Items/CircleBottle2",
+      "active": false,
+      "pos": [-5,-66.1,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu2_shadow", "guid": "9ae310d38133fb949b0afebe9dd0c3d2", "ppu": 92.89941, "nativeSize": [256,157], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1925, "layerValue": 0, "bounds": [-337.435,-543.18,-254.765,-492.48], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 25,
+      "path": "Scale/Items/CircleBottle1",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu_1", "guid": "e0e207ac82421ba42a61209424c00401", "ppu": 100, "nativeSize": [380,321], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 76, "layerValue": 0, "bounds": [-351.6,-546.1501,-237.6,-449.85], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/CircleBottle1Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/CircleBottle1/Shadow",
+      "parentPath": "Scale/Items/CircleBottle1",
+      "active": false,
+      "pos": [-13.3,-76.7,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hu_1_shadow", "guid": "afa36f2d872e44b40aa7b404dbfd62b5", "ppu": 82.06522, "nativeSize": [256,151], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2050, "layerValue": 0, "bounds": [-345.3821,-548.61,-251.798,-493.41], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 26,
+      "path": "Scale/Items/Box1",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hop_", "guid": "438e0e37ce190434cab047b3ce29b33b", "ppu": 100, "nativeSize": [416,350], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 77, "layerValue": 0, "bounds": [-357,-550.5001,-232.2,-445.5], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/Box1Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Box1/Shadow",
+      "parentPath": "Scale/Items/Box1",
+      "active": false,
+      "pos": [9.8,-68.8,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "hop_shadow", "guid": "32e3dc4f55c25ee4e83934ecf902974c", "ppu": 65.13995, "nativeSize": [256,148], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2050, "layerValue": 0, "bounds": [-350.61,-552.7205,-232.71,-484.5596], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 27,
+      "path": "Scale/Items/Candle",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nen", "guid": "462c04792c5cf6a40a0abc656b2da489", "ppu": 100, "nativeSize": [342,566], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 78, "layerValue": 0, "bounds": [-345.9,-582.9,-243.3,-413.1], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/CandlePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Candle/Shadow",
+      "parentPath": "Scale/Items/Candle",
+      "active": false,
+      "pos": [5,-212,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "nen_shadow", "guid": "37818ae9c52b0b94d9c7da0ebf5c2517", "ppu": 52.32558, "nativeSize": [128,90], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2300, "layerValue": 0, "bounds": [-329.7933,-587.4,-256.4067,-535.8], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 28,
+      "path": "Scale/Items/Fire",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_sui", "guid": "6936f9a6b8fd20042bd9243e6862c83b", "ppu": 78.82231, "nativeSize": [763,2048], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 79, "layerValue": 0, "bounds": [-439.8,-887.7375,-149.4,-108.2627], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/FirePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Fire/Snow",
+      "parentPath": "Scale/Items/Fire",
+      "active": false,
+      "pos": [-194.5676,687,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tuyet_che_ong_khoi", "guid": "614bf7fbf77721b43abf348b701271ef", "ppu": 100, "nativeSize": [1219,941], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2200, "layerValue": 0, "bounds": [-535.8203,-433.05,-170.1203,-150.75], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 29,
+      "path": "Scale/Items/HChair2",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_2", "guid": "653246abb4ee05c45af4e6994cd67bf5", "ppu": 100, "nativeSize": [499,410], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 80, "layerValue": 0, "bounds": [-369.45,-559.5,-219.75,-436.5001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/HChair2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/HChair2/Shadow",
+      "parentPath": "Scale/Items/HChair2",
+      "active": false,
+      "pos": [0,-81,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_2_shadow", "guid": "a0f655385db4a384da403fa7ffa62740", "ppu": 63.59833, "nativeSize": [256,152], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2300, "layerValue": 0, "bounds": [-354.979,-558.15,-234.2211,-486.45], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 30,
+      "path": "Scale/Items/HChair1",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_2", "guid": "653246abb4ee05c45af4e6994cd67bf5", "ppu": 100, "nativeSize": [499,410], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 81, "layerValue": 0, "bounds": [-369.45,-559.5,-219.75,-436.5001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/HChair1Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/HChair1/Shadow",
+      "parentPath": "Scale/Items/HChair1",
+      "active": false,
+      "pos": [0,-81,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ghe_an_2_shadow", "guid": "a0f655385db4a384da403fa7ffa62740", "ppu": 63.59833, "nativeSize": [256,152], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2300, "layerValue": 0, "bounds": [-354.979,-558.15,-234.2211,-486.45], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 31,
+      "path": "Scale/Items/RedBottle",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo_1", "guid": "6882cf8c3f3427e4c96c1670f7e92a3d", "ppu": 100, "nativeSize": [230,285], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 82, "layerValue": 0, "bounds": [-329.1,-540.75,-260.1,-455.2501], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/RedBottlePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 32,
+      "path": "Scale/Items/GreenBottle",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "lo2", "guid": "d10e233918db4634a97a45cd57035634", "ppu": 100, "nativeSize": [230,285], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 83, "layerValue": 0, "bounds": [-329.1,-540.75,-260.1,-455.2501], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/GreenBottlePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 33,
+      "path": "Scale/Items/Pan11",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chao_tron", "guid": "e79f8a68aef97e44ba5d86c5742768de", "ppu": 100, "nativeSize": [252,371], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 84, "layerValue": 0, "bounds": [-332.4,-553.65,-256.8,-442.3501], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/Pan1Place1",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Pan11/Shadow",
+      "parentPath": "Scale/Items/Pan11",
+      "active": false,
+      "pos": [4,-3,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chao_tron_shadow", "guid": "a2e69aaf3cc78884a8bed62d6aca244e", "ppu": 69.00269, "nativeSize": [174,256], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1500, "layerValue": 0, "bounds": [-331.2246,-554.55,-255.5754,-443.25], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 34,
+      "path": "Scale/Items/Pan22",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chao_vuong", "guid": "da26a5f4688cc8047b710c8c2cd79cda", "ppu": 100, "nativeSize": [254,398], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 85, "layerValue": 0, "bounds": [-332.7,-557.7001,-256.5,-438.3], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/Pan2Place2",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Items/Pan22/Shadow",
+      "parentPath": "Scale/Items/Pan22",
+      "active": false,
+      "pos": [4,-5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "chao_vuong_shadow", "guid": "92fb8bc0527968447a85c521fe9fd183", "ppu": 64.17323, "nativeSize": [163,256], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [-331.5,-559.3381,-255.3,-439.6619], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 35,
+      "path": "Scale/Items/BigCabinet",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "tu_bep_lon", "guid": "0ff89289e36995a4db32e289b69aefa7", "ppu": 100, "nativeSize": [702,1017], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 86, "layerValue": 0, "bounds": [-399.9,-650.55,-189.3,-345.45], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/BigCabinetPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 36,
+      "path": "Scale/Items/WallShelf",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "ke_dung_gia_vi", "guid": "fa72b4a463db34849b9b58c20ff9df16", "ppu": 100, "nativeSize": [439,361], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 87, "layerValue": 0, "bounds": [-360.45,-552.1501,-228.75,-443.85], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/WallShelfPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 37,
+      "path": "Scale/Items/KnifeShelf",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-982,-1660,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "KnifeShelfPlace", "guid": "0b55dd7ac15362a4497464db01d7adf2", "ppu": 100, "nativeSize": [448,419], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 88, "layerValue": 0, "bounds": [-361.8,-560.85,-227.4,-435.1501], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/KnifeShelfPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 38,
+      "path": "Scale/Items/Baby",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-979,-1659,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "Baby", "guid": "920ad80deceb882419d723ae431d7e68", "ppu": 100, "nativeSize": [476,494], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 89, "layerValue": 0, "bounds": [-365.1,-571.8001,-222.3,-423.6001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/BabyPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 39,
+      "path": "Scale/Items/MotherBear",
+      "parentPath": "Scale/Items",
+      "active": true,
+      "pos": [-745,-1440,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "mother", "guid": "f6460ea7fefdae04686d66ceb7808746", "ppu": 100, "nativeSize": [589,772], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 90, "layerValue": 0, "bounds": [-311.85,-547.8,-135.15,-316.2001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/PlaceHolders/MotherBearPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    }
+  ],
+  "conflicts": [
+    { "a": "Scale/PlaceHolders/FirePlace", "rangeA": [-2500,-2500], "b": "Scale/PlaceHolders/BigCabinetPlace", "rangeB": [-2800,-2100], "overlappingPairs": 3 },
+    { "a": "Scale/PlaceHolders/BigCabinetPlace", "rangeA": [-2800,-2100], "b": "Scale/PlaceHolders/Pot1Place", "rangeB": [-2150,-2150], "overlappingPairs": 3 },
+    { "a": "Scale/PlaceHolders/BigCabinetPlace", "rangeA": [-2800,-2100], "b": "Scale/PlaceHolders/WallShelfPlace", "rangeB": [-2200,-1800], "overlappingPairs": 5 },
+    { "a": "Scale/PlaceHolders/Box1Place", "rangeA": [-1900,-1900], "b": "Scale/PlaceHolders/WallShelfPlace", "rangeB": [-2200,-1800], "overlappingPairs": 2 },
+    { "a": "Scale/PlaceHolders/BigCircleRacketPlace", "rangeA": [-2000,-2000], "b": "Scale/PlaceHolders/WallShelfPlace", "rangeB": [-2200,-1800], "overlappingPairs": 2 },
+    { "a": "Scale/PlaceHolders/WallShelfPlace", "rangeA": [-2200,-1800], "b": "Scale/PlaceHolders/RedBottlePlace", "rangeB": [-2000,-2000], "overlappingPairs": 2 },
+    { "a": "Scale/PlaceHolders/WallShelfPlace", "rangeA": [-2200,-1800], "b": "Scale/PlaceHolders/GreenBottlePlace", "rangeB": [-1900,-1900], "overlappingPairs": 2 },
+    { "a": "Scale/PlaceHolders/WallShelfPlace", "rangeA": [-2200,-1800], "b": "Scale/PlaceHolders/KnifeShelfPlace", "rangeB": [-2000,-1800], "overlappingPairs": 3 }
+  ]
+}
