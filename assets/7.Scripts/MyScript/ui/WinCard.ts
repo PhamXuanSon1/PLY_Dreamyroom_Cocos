@@ -33,6 +33,10 @@ export class WinCard extends Component {
     @property({ type: Node, tooltip: 'Nút Download.' })
     button: Node | null = null;
 
+    @property({ type: [Node], tooltip: 'UI của game phải tắt khi card hiện (text, thanh tiến trình, logo, nút Install...). '
+        + 'Giữ tắt suốt lúc card hiện — kể cả khi UI.resize bật lại node theo dọc/ngang.' })
+    hideOnShow: Node[] = [];
+
     private baseScale = new Map<Node, Vec3>();
 
     onLoad() {
@@ -42,7 +46,16 @@ export class WinCard extends Component {
     }
 
     onEnable() {
+        this.hideGameUI();
         this.playIntro();
+    }
+
+    lateUpdate() {
+        this.hideGameUI();
+    }
+
+    private hideGameUI(): void {
+        for (const n of this.hideOnShow) if (n && n.isValid && n.active) n.active = false;
     }
 
     onDisable() {

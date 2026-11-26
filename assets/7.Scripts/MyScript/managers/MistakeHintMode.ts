@@ -1,9 +1,10 @@
 /**
  * MistakeHintMode — mode chơi tự do, tay chỉ chỉ hiện khi click mãi 1 item. Tick bật component = bật mode, bỏ tick = game chạy logic cũ.
  *
- *   1. Hint theo số lần click: tắt tay gợi ý tự hiện theo giờ (Idle / Stuck của ItemManager).
+ *   1. Hint theo số lần click: tắt tay gợi ý Stuck của ItemManager; tay Idle (không chạm gì Idle Time To Hint
+ *      giây) vẫn hiện nếu bật `idleHint`, nhưng KHÔNG kèm bóng.
  *      Click (hoặc kéo rồi thả) cùng 1 item `clickLimit` lần mà chưa ghép được -> hiện tay chỉ đích
- *      của item đó. Click item khác -> đếm lại. Ghép đúng 1 item -> đếm lại, tắt tay.
+ *      của item đó + bóng ở đích. Click item khác -> đếm lại. Ghép đúng 1 item -> đếm lại, tắt tay.
  *      Hand Intro / hint dắt tay lần đầu (showFirstDragHint) vẫn chạy như cũ. *
  *   2. Ánh sáng cửa sổ: WindowLight (onlyInMistakeHintMode) tự tắt khi mode không bật.
  *
@@ -51,6 +52,10 @@ export class MistakeHintMode extends Component {
 
     @property({ tooltip: 'Chờ N giây sau khi thả tay mới hiện tay (cho item thả hụt kịp bay về chỗ).', min: 0 })
     hintDelay = 0.3;
+
+    @property({ tooltip: 'Bật: vẫn có tay gợi ý Idle — không chạm gì Idle Time To Hint giây (ItemManager) thì hiện tay (KHÔNG kèm bóng). '
+        + 'Click sai đủ Click Limit lần thì tay hiện kèm bóng ở đích. Tắt: chỉ có tay khi click sai.' })
+    idleHint = true;
 
     // ---------------- Đồ nhỏ tự hiện ----------------
     @property({ group: { name: 'Đồ nhỏ tự hiện', id: 'reveal' }, tooltip: 'Âm thanh ghép của đồ đựng phát XONG, chờ thêm N giây thì đồ nhỏ đầu tiên nảy ra.', min: 0 })

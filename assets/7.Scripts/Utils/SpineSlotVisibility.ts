@@ -28,6 +28,7 @@ export class SpineSlotVisibility extends Component {
     rules: SpineSlotRule[] = [];
 
     private skeleton: sp.Skeleton | null = null;
+    private attachmentNames = new Map<string, string>();
 
     protected onLoad(): void {
         this.skeleton = this.getComponent(sp.Skeleton);
@@ -42,10 +43,13 @@ export class SpineSlotVisibility extends Component {
             if (!slot) continue;
             const show = !!rule.showWhenPlaced && rule.showWhenPlaced.isPlaced;
             const current = slot.getAttachment();
+            // Spine 4.2 (wasm) của Cocos 3.8 không có slot.data.attachmentName -> nhớ tên
+            // attachment lúc slot còn hiện, để hiện lại được sau khi đã ẩn.
+            if (current && current.name) this.attachmentNames.set(rule.slot, current.name);
             if (show && !current) {
-                // về attachment mặc định của slot trong setup pose
-                const name = slot.data.attachmentName;
-                if (name) sk.setAttachment(rule.slot, name);
+                const name = this.attachmentNames.get(rule.slot)
+                    ?? (slot.data as any).attachmentName ?? rule.slot;
+                sk.setAttachment(rule.slot, name);
             } else if (!show && current) {
                 slot.setAttachment(null);
             }

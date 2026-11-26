@@ -51,6 +51,11 @@ export class ItemMovement extends Component {
     originalRotation: Vec3 = new Vec3(0, 0, 0);
 
     private isScaling = false;
+    /** Vị trí ngón tay item đang bay đuổi theo (null = không kéo). */
+    private followTarget: Vec3 | null = null;
+    private tmpPos = new Vec3();
+    /** Lần kéo hiện tại item đã bay tới ngón tay -> dính thẳng theo tay. */
+    private caughtFinger = false;
     /** originalScale đã được chụp từ scale THẬT của node (không phải giá trị serialize). */
     private scaleCaptured = false;
 
@@ -97,6 +102,7 @@ export class ItemMovement extends Component {
      * @param scaleUp false = giữ nguyên scale hiện tại (item khay đã tự set đúng scale target).
      */
     startDragAnimation(scaleUp = true): void {
+        this.resetFollow();
         Tween.stopAllByTarget(this.node);
         this.isScaling = scaleUp;
 
@@ -119,19 +125,65 @@ export class ItemMovement extends Component {
 
     /** Unity: CancelDragAnimation */
     cancelDragAnimation(targetScale: Vec3, targetRotation: Vec3): void {
+        this.stopFollow();
         Tween.stopAllByTarget(this.node);
         this.isScaling = false;
         tween(this.node).to(0.2, { scale: targetScale.clone() }, { easing: 'quadOut' }).start();
         tween(this.node).to(0.2, { eulerAngles: targetRotation.clone() }, { easing: 'quadOut' }).start();
     }
 
-    /** Unity: MoveToPosition — bám thẳng theo con trỏ, không nội suy. */
+    /** Unity: MoveToPosition — kéo: dính thẳng theo con trỏ (huỷ luôn đoạn bay tới tay nếu đang bay). */
     moveToPosition(worldPos: Vec3): void {
+        this.followTarget = null;
+        this.caughtFinger = true;
         this.node.setWorldPosition(worldPos);
+    }
+
+    /**
+     * Lúc MỚI chạm vào item (chưa kéo): item bay tới ngón tay thay vì "dịch chuyển" tức thì
+     * (ItemManager.dragFollowSpeed; 0 = dịch chuyển luôn). Bắt đầu kéo thì moveToPosition dính thẳng theo tay.
+     */
+    flyToPosition(worldPos: Vec3): void {
+        const speed = ItemManager.instance?.dragFollowSpeed ?? 0;
+        if (this.caughtFinger || speed <= 0) {
+            this.moveToPosition(worldPos);
+            return;
+        }
+        if (!this.followTarget) this.followTarget = worldPos.clone();
+        else this.followTarget.set(worldPos);
+    }
+
+    /** Bắt đầu 1 lần kéo mới: lần di chuyển đầu sẽ bay tới ngón tay. */
+    private resetFollow(): void {
+        this.followTarget = null;
+        this.caughtFinger = false;
+    }
+
+    /** Dừng bay tới ngón tay (thả tay / bay vào đích): item đứng yên tại chỗ đang thấy. */
+    stopFollow(): void {
+        this.resetFollow();
+    }
+
+    update(dt: number) {
+        const target = this.followTarget;
+        if (!target) return;
+        const speed = ItemManager.instance?.dragFollowSpeed ?? 0;
+        const cur = this.node.worldPosition;
+        // tới sát ngón tay -> từ giờ dính thẳng theo tay
+        if (speed <= 0 || Vec3.squaredDistance(cur, target) < 16) {
+            this.node.setWorldPosition(target);
+            this.followTarget = null;
+            this.caughtFinger = true;
+            return;
+        }
+        // nội suy theo hàm mũ: mượt và không phụ thuộc FPS
+        Vec3.lerp(this.tmpPos, cur, target, 1 - Math.exp(-speed * dt));
+        this.node.setWorldPosition(this.tmpPos);
     }
 
     /** Unity: StopDragAnimation */
     stopDragAnimation(): void {
+        this.stopFollow();
         if (ItemMovement.enableDragScale && this.isScaling) {
             tween(this.node)
                 .to(0.5, { scale: this.originalScale.clone() }, { easing: 'quadOut' })
@@ -152,6 +204,7 @@ export class ItemMovement extends Component {
 
     /** Unity: MoveToTarget — bay vào vị trí đích rồi gọi callback. */
     moveToTarget(target: Node, duration: number, onComplete?: () => void): void {
+        this.stopFollow();
         const dest = target.worldPosition.clone();
         tween(this.node)
             .to(duration, { worldPosition: dest }, { easing: 'quadOut' })

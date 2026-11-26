@@ -68,7 +68,27 @@ export class UIManager extends Component implements IPointerHandler {
     })
     autoEndShowEndCard = false;
 
+    @property({
+        tooltip: 'Bật: lúc End Game CHƯA hiện End Card (EndUICanvas, vd popup Logo). Chạm đầu tiên mở Store, '
+            + 'người chơi QUAY LẠI game mới hiện End Card; sau đó chạm đâu cũng ra Store. Tắt: hiện ngay lúc End Game.',
+    })
+    endCardOnNextClick = false;
+
+    @property({
+        tooltip: 'Store mở dạng overlay (trang game không bị ẩn) -> sau N giây kể từ lúc mở Store vẫn hiện End Card, '
+            + 'để tắt store là thấy.',
+        min: 0,
+        visible(this: UIManager) { return this.endCardOnNextClick; },
+    })
+    endCardFallbackDelay = 1;
+
     isGameEnded = false;
+    /** End Card đang chờ cú chạm đầu tiên sau End Game (endCardOnNextClick). */
+    private endCardPending = false;
+    /** Đã mở Store, chờ người chơi quay lại game để hiện End Card. */
+    private waitingReturn = false;
+    private leftPage = false;
+    private returnFallbackTimer: ReturnType<typeof setTimeout> | null = null;
 
     /**
      * MapPhaseManager gắn vào: trả true = đang/sắp chuyển lượt -> hoãn End Game theo tiến độ
@@ -105,6 +125,7 @@ export class UIManager extends Component implements IPointerHandler {
     }
 
     onDestroy() {
+        this.stopWaitingReturn();
         if (UIManager.instance === this) UIManager.instance = null;
     }
 
@@ -238,8 +259,9 @@ export class UIManager extends Component implements IPointerHandler {
         DreamyInputManager.canInput = false;
 
         if (showEndCard) {
-            if (this.GameUICanvas) this.GameUICanvas.active = false;
-            if (this.EndUICanvas) this.EndUICanvas.active = true;
+            // endCardOnNextClick: chưa hiện ngay, chờ cú chạm tiếp theo (gotoStore) mới hiện
+            if (this.endCardOnNextClick) this.endCardPending = true;
+            else this.showEndCard();
         }
 
         const im = ItemManager.instance;
@@ -251,7 +273,73 @@ export class UIManager extends Component implements IPointerHandler {
         DreamyInputManager.canInput = true;
     }
 
+    private showEndCard(): void {
+        this.endCardPending = false;
+        if (this.GameUICanvas) this.GameUICanvas.active = false;
+        if (this.EndUICanvas) this.EndUICanvas.active = true;
+    }
+
+    // ======================================================== End Card khi quay lại từ Store
+    /** Cú chạm đầu tiên sau End Game vừa mở Store: chờ người chơi quay lại game rồi hiện End Card. */
+    private waitReturnFromStore(): void {
+        this.endCardPending = false;
+        this.waitingReturn = true;
+        this.leftPage = false;
+        if (typeof document !== 'undefined') document.addEventListener('visibilitychange', this.onVisibilityChange);
+        if (typeof window !== 'undefined') {
+            window.addEventListener('blur', this.onPageLeave);
+            window.addEventListener('focus', this.onPageBack);
+            window.addEventListener('pageshow', this.onPageBack);
+        }
+        // setTimeout (không dùng scheduleOnce): Cocos dừng scheduler khi trang ẩn
+        this.returnFallbackTimer = setTimeout(() => {
+            this.returnFallbackTimer = null;
+            if (this.waitingReturn && !this.leftPage) this.onReturnedFromStore();
+        }, this.endCardFallbackDelay * 1000);
+    }
+
+    private onVisibilityChange = (): void => {
+        if (document.visibilityState === 'hidden') this.onPageLeave();
+        else this.onPageBack();
+    };
+
+    private onPageLeave = (): void => {
+        if (!this.waitingReturn) return;
+        this.leftPage = true;
+        this.clearReturnFallback();
+    };
+
+    private onPageBack = (): void => {
+        if (!this.waitingReturn || !this.leftPage) return;
+        if (typeof document !== 'undefined' && document.visibilityState === 'hidden') return;
+        this.onReturnedFromStore();
+    };
+
+    private onReturnedFromStore(): void {
+        this.stopWaitingReturn();
+        this.showEndCard();
+        // chạm đâu cũng ra Store (lỡ có hệ nào tắt canInput lúc trang ẩn)
+        DreamyInputManager.canInput = true;
+    }
+
+    private clearReturnFallback(): void {
+        if (this.returnFallbackTimer !== null) { clearTimeout(this.returnFallbackTimer); this.returnFallbackTimer = null; }
+    }
+
+    private stopWaitingReturn(): void {
+        this.waitingReturn = false;
+        this.clearReturnFallback();
+        if (typeof document !== 'undefined') document.removeEventListener('visibilitychange', this.onVisibilityChange);
+        if (typeof window !== 'undefined') {
+            window.removeEventListener('blur', this.onPageLeave);
+            window.removeEventListener('focus', this.onPageBack);
+            window.removeEventListener('pageshow', this.onPageBack);
+        }
+    }
+
     gotoStore(): void {
+        // endCardOnNextClick: cú chạm đầu tiên sau End Game -> mở Store, quay lại mới hiện End Card
+        if (this.endCardPending) this.waitReturnFromStore();
         // game controller . redirectToStore
         if (this.gameController instanceof Node) {
             const gc = this.gameController.getComponent(GameController);

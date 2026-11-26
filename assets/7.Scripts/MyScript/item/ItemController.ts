@@ -174,6 +174,8 @@ export class ItemController extends Component implements IPointerHandler {
     private lateShadowUnlocked = false;
     /** Lần kéo hiện tại đang hiện bóng chưa (để không bật lại mỗi frame). */
     private shadowShownThisDrag = false;
+    /** Tay gợi ý (bấm sai nhiều - MistakeHintMode) đang chỉ item này: giữ bóng ở đích, thả hụt cũng không ẩn. */
+    private hintShadow = false;
 
     // ======================================================== Lifecycle
     onLoad() {
@@ -362,8 +364,17 @@ export class ItemController extends Component implements IPointerHandler {
     hitTest(worldPos: Vec3): boolean {
         if (UIManager.instance?.isGameEnded) return false;
         if (this.isPlaced || this.moving || !this.node.activeInHierarchy) return false;
+        // Ở Holder / ngoài phòng, ItemGraphic phóng/thu NODE ẢNH (imageScaleMult) còn collider ở node gốc giữ nguyên
+        // -> quy điểm chạm về hệ của collider (chia cho hệ số quanh tâm item) để vùng bấm khớp đúng với hình.
+        const mult = this.itemGraphic?.imageScaleMult ?? 1;
+        if (mult > 1e-4 && Math.abs(mult - 1) > 1e-4) {
+            const c = this.node.worldPosition;
+            this.hitTmp.set(c.x + (worldPos.x - c.x) / mult, c.y + (worldPos.y - c.y) / mult, worldPos.z);
+            return DreamyInputManager.hitTestCollider(this.node, this.hitTmp);
+        }
         return DreamyInputManager.hitTestCollider(this.node, worldPos);
     }
+    private hitTmp = new Vec3();
 
     /** Bắt đầu nhấc item lên (Pick) */
     onPointerDown(worldPos: Vec3, _ev: EventTouch): boolean {
@@ -387,6 +398,8 @@ export class ItemController extends Component implements IPointerHandler {
 
         // 2. Animation & đưa lên lớp kéo trên cùng
         this.itemMovement.startDragAnimation(!inTray);
+        // vừa chạm: item bay tới ngón tay; bắt đầu kéo (onPointerMove) thì dính thẳng theo tay
+        this.itemMovement.flyToPosition(worldPos);
         this.dragging = true;
         this.itemGraphic.bringToFront();
 
@@ -395,10 +408,11 @@ export class ItemController extends Component implements IPointerHandler {
         //    hoặc item đã tick persistentShadow.
         // Item đang bị SeatHandler chặn không snap được -> không cấp (và không giữ) lượt bóng
         this.usedDragShadow = !this.persistentShadow
+            && !this.hintShadow
             && this.canShowTargetShadow()
             && ItemManager.instance?.canShowDragShadow(this) !== false;
 
-        this.shadowShownThisDrag = this.persistentShadow || this.usedDragShadow || this.lateShadowUnlocked;
+        this.shadowShownThisDrag = this.persistentShadow || this.hintShadow || this.usedDragShadow || this.lateShadowUnlocked;
         if (this.shadowShownThisDrag) this.showTargetShadow();
 
         // 4. Thông báo cho ItemManager
@@ -479,6 +493,20 @@ export class ItemController extends Component implements IPointerHandler {
     }
 
     /**
+     * ItemManager.showMistakeHint: tay gợi ý (bấm sai nhiều) chỉ item này -> hiện luôn bóng ở đích và giữ
+     * tới khi tắt hint (ghép đúng / chuyển sang item khác). on = false: tắt (persistentShadow thì giữ bóng).
+     */
+    setHintShadow(on: boolean): void {
+        if (this.hintShadow === on) {
+            if (on) this.showTargetShadow();
+            return;
+        }
+        this.hintShadow = on;
+        if (on) this.showTargetShadow();
+        else if (!this.dragging) this.hideTargetShadow();
+    }
+
+    /**
      * Bóng ở đích chỉ được hiện khi SeatHandler (nếu có) đã thoả requiredItems
      * và đích không nằm trong đích của item khác chưa ghép (vd đồ trong tủ lạnh).
      */
@@ -529,7 +557,7 @@ export class ItemController extends Component implements IPointerHandler {
     private hideTargetShadow(): void {
         const target = this.targetPoint;
         if (!target || !target.isValid || this.isPlaced) return;
-        if (this.persistentShadow) return;
+        if (this.persistentShadow || this.hintShadow) return;
 
         // trả sprite về màu gốc trước rồi mới ẩn node, để lần sau bật lại sạch sẽ
         this.itemGraphic.restoreTargetSprites();

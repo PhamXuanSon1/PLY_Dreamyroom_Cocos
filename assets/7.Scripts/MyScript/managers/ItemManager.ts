@@ -83,6 +83,13 @@ export class ItemManager extends Component {
     @property({ tooltip: 'Lượng scale của item khi đang kéo (mặc định 1.1).' })
     dragScaleAmount = 1.1;
 
+    @property({
+        tooltip: 'Lúc MỚI chạm vào item (chưa kéo): tốc độ item bay tới ngón tay (càng lớn càng nhanh). '
+            + 'Kéo thì item luôn dính thẳng theo tay. Khoảng 15-25 là mượt; 0 = dịch chuyển tức thì như cũ.',
+        min: 0,
+    })
+    dragFollowSpeed = 18;
+
     // ---------------- First Click Settings ----------------
     @property({ type: [Node], tooltip: 'Các object sẽ được bật lên khi người chơi click lần đầu tiên.' })
     objsToEnableOnFirstClick: Node[] = [];
@@ -347,9 +354,21 @@ export class ItemManager extends Component {
             return;
         }
 
-        // MistakeHintMode: không có hint theo giờ — tay chỉ hiện khi click cùng 1 item đủ N lần (MistakeHintMode.onItemReleased)
-        if (MistakeHintMode.active) {
+        // MistakeHintMode: không có hint Stuck — tay + bóng hiện khi click cùng 1 item đủ N lần (MistakeHintMode.onItemReleased).
+        // idleHint bật: vẫn có tay Idle (không chạm gì idleTimeToHint giây), tay này KHÔNG kèm bóng.
+        const mistake = MistakeHintMode.active;
+        if (mistake) {
             this.updateBoxHandWhenHoldersEmpty();
+            if (mistake.idleHint) {
+                if (this.isDragging) this.idleTimer = 0;
+                else {
+                    this.idleTimer += dt;
+                    if (!this.isStuckHintActive && this.idleTimer >= this.idleTimeToHint && !this.hasShownHint) {
+                        this.showHint();
+                        this.hasShownHint = true;
+                    }
+                }
+            }
             this.checkSpawnExhausted();
             return;
         }
@@ -457,6 +476,7 @@ export class ItemManager extends Component {
     setHintsBlocked(blocked: boolean): void {
         this.hintsBlocked = blocked;
         if (blocked) {
+            this.setMistakeShadowItem(null);
             this.isStuckHintActive = false;
             this.stuckReshowPending = false;
             this.stuckTargetItem = null;
@@ -552,6 +572,8 @@ export class ItemManager extends Component {
         const ui = UIManager.instance;
         if (ui && ui.tuSo >= ui.mauSo) return;
 
+        // tay chuyển sang item khác -> bỏ bóng của item bấm-sai-nhiều cũ
+        if (this.mistakeShadowItem !== item) this.setMistakeShadowItem(null);
         this.isStuckHintActive = true;
         this.stuckTargetItem = item;
         this.hasShownHint = true;
@@ -579,11 +601,24 @@ export class ItemManager extends Component {
         this.hasShownHint = true;
         this.setLastItem(item);
         if (this.handIntro) this.handIntro.active = false;
+        // Bấm sai nhiều -> hiện tay + hiện luôn bóng của item ở đích (giữ tới khi tắt hint)
+        this.setMistakeShadowItem(item);
         this.runHintTween(item);
+    }
+
+    /** Item đang được giữ bóng ở đích vì tay gợi ý bấm-sai-nhiều (showMistakeHint). */
+    private mistakeShadowItem: ItemController | null = null;
+
+    private setMistakeShadowItem(item: ItemController | null): void {
+        const prev = this.mistakeShadowItem;
+        if (prev && prev !== item && prev.isValid) prev.setHintShadow(false);
+        this.mistakeShadowItem = item;
+        if (item && item.isValid) item.setHintShadow(true);
     }
 
     /** Huỷ trạng thái 5s stuck khi người chơi click sang item khác -> chuyển về logic 3s không tương tác */
     cancelStuckHint(): void {
+        this.setMistakeShadowItem(null);
         this.isStuckHintActive = false;
         this.stuckReshowPending = false;
         this.stuckTargetItem = null;
@@ -609,6 +644,7 @@ export class ItemManager extends Component {
 
     /** Hoàn thành ghép item -> tắt hint và reset toàn bộ bộ đếm về trạng thái bình thường */
     onItemCompleted(): void {
+        this.setMistakeShadowItem(null);
         this.isStuckHintActive = false;
         this.stuckReshowPending = false;
         this.stuckTargetItem = null;
