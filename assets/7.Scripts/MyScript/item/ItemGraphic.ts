@@ -142,6 +142,14 @@ export class ItemGraphic extends Component {
         return target.getComponentsInChildren(UIRenderer).length > 0;
     }
 
+    /**
+     * Hệ số đang nhân vào node ảnh (fitToTarget / syncRoomZoomScale). Collider nằm ở node gốc KHÔNG co giãn theo,
+     * nên hit test phải chia lại cho hệ số này (ItemController.hitTest), nếu không vùng bấm lệch kích thước với hình.
+     */
+    get imageScaleMult(): number {
+        return this.zoomMult;
+    }
+
     /** Bỏ hệ số zoom đang nhân vào node ảnh (syncRoomZoomScale) — dùng khi item về lại cây phòng để ở luôn đó. */
     resetZoomScale(): void {
         const img = this.resolveImageNode();

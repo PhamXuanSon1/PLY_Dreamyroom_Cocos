@@ -72,6 +72,8 @@ export enum MaterialType {
     Clock = 39,
     Ring = 40,
     Santa = 41,
+    Snore = 42,
+    HelpMe = 43,
 }
 Enum(MaterialType);
 
@@ -362,8 +364,17 @@ export class ItemController extends Component implements IPointerHandler {
     hitTest(worldPos: Vec3): boolean {
         if (UIManager.instance?.isGameEnded) return false;
         if (this.isPlaced || this.moving || !this.node.activeInHierarchy) return false;
+        // Ở Holder / ngoài phòng, ItemGraphic phóng/thu NODE ẢNH (imageScaleMult) còn collider ở node gốc giữ nguyên
+        // -> quy điểm chạm về hệ của collider (chia cho hệ số quanh tâm item) để vùng bấm khớp đúng với hình.
+        const mult = this.itemGraphic?.imageScaleMult ?? 1;
+        if (mult > 1e-4 && Math.abs(mult - 1) > 1e-4) {
+            const c = this.node.worldPosition;
+            this.hitTmp.set(c.x + (worldPos.x - c.x) / mult, c.y + (worldPos.y - c.y) / mult, worldPos.z);
+            return DreamyInputManager.hitTestCollider(this.node, this.hitTmp);
+        }
         return DreamyInputManager.hitTestCollider(this.node, worldPos);
     }
+    private hitTmp = new Vec3();
 
     /** Bắt đầu nhấc item lên (Pick) */
     onPointerDown(worldPos: Vec3, _ev: EventTouch): boolean {
@@ -387,6 +398,8 @@ export class ItemController extends Component implements IPointerHandler {
 
         // 2. Animation & đưa lên lớp kéo trên cùng
         this.itemMovement.startDragAnimation(!inTray);
+        // vừa chạm: item bay tới ngón tay; bắt đầu kéo (onPointerMove) thì dính thẳng theo tay
+        this.itemMovement.flyToPosition(worldPos);
         this.dragging = true;
         this.itemGraphic.bringToFront();
 

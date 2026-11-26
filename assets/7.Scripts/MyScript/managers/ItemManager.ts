@@ -83,6 +83,13 @@ export class ItemManager extends Component {
     @property({ tooltip: 'Lượng scale của item khi đang kéo (mặc định 1.1).' })
     dragScaleAmount = 1.1;
 
+    @property({
+        tooltip: 'Lúc MỚI chạm vào item (chưa kéo): tốc độ item bay tới ngón tay (càng lớn càng nhanh). '
+            + 'Kéo thì item luôn dính thẳng theo tay. Khoảng 15-25 là mượt; 0 = dịch chuyển tức thì như cũ.',
+        min: 0,
+    })
+    dragFollowSpeed = 18;
+
     // ---------------- First Click Settings ----------------
     @property({ type: [Node], tooltip: 'Các object sẽ được bật lên khi người chơi click lần đầu tiên.' })
     objsToEnableOnFirstClick: Node[] = [];
