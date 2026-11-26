@@ -134,26 +134,53 @@
       "0.Spines\\box-ingame.json": [
         "0.Spines\\box-ingame.atlas.txt"
       ],
-      "3.Sprites\\Ply58\\Spine\\NguaGo.json": [
-        "3.Sprites\\Ply58\\Spine\\NguaGo.atlas.txt"
+      "3.Sprites\\Ply63\\spine\\CanhCut1.json": [
+        "3.Sprites\\Ply63\\spine\\CanhCut1.atlas.txt"
       ],
-      "3.Sprites\\Ply58\\Spine\\Lua.json": [
-        "3.Sprites\\Ply58\\Spine\\Lua.atlas.txt"
+      "3.Sprites\\Ply63\\spine\\CanhCut2.json": [
+        "3.Sprites\\Ply63\\spine\\CanhCut2.atlas.txt"
       ],
-      "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01.json": [
-        "3.Sprites\\Ply58\\Spine\\NguoiTuyet_01.atlas.txt"
+      "3.Sprites\\Ply63\\spine\\Caheo.json": [
+        "3.Sprites\\Ply63\\spine\\Caheo.atlas.txt"
       ],
-      "3.Sprites\\Ply58\\Spine\\Santa.json": [
-        "3.Sprites\\Ply58\\Spine\\Santa.atlas.txt"
+      "3.Sprites\\Ply63\\spine\\CanhCut4.json": [
+        "3.Sprites\\Ply63\\spine\\CanhCut4.atlas.txt"
       ],
-      "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02.json": [
-        "3.Sprites\\Ply58\\Spine\\NguoiTuyet_02.atlas.txt"
+      "3.Sprites\\Ply63\\spine\\CanhCut3.json": [
+        "3.Sprites\\Ply63\\spine\\CanhCut3.atlas.txt"
       ],
-      "3.Sprites\\Ply58\\Spine\\TuanLoc_01.json": [
-        "3.Sprites\\Ply58\\Spine\\TuanLoc_01.atlas.txt"
+      "3.Sprites\\Ply63\\spine\\Char1.json": [
+        "3.Sprites\\Ply63\\spine\\Char1.atlas.txt"
       ],
-      "3.Sprites\\Ply58\\Spine\\TuanLoc_02.json": [
-        "3.Sprites\\Ply58\\Spine\\TuanLoc_02.atlas.txt"
+      "3.Sprites\\Ply63\\spine\\Char2.json": [
+        "3.Sprites\\Ply63\\spine\\Char2.atlas.txt"
+      ],
+      "3.Sprites\\Ply63\\spine\\CotCo.json": [
+        "3.Sprites\\Ply63\\spine\\CotCo.atlas.txt"
+      ],
+      "3.Sprites\\Ply63\\spine\\Char4.json": [
+        "3.Sprites\\Ply63\\spine\\Char4.atlas.txt"
+      ],
+      "3.Sprites\\Ply63\\spine\\Char3.json": [
+        "3.Sprites\\Ply63\\spine\\Char3.atlas.txt"
+      ],
+      "3.Sprites\\Ply63\\spine\\Den.json": [
+        "3.Sprites\\Ply63\\spine\\Den.atlas.txt"
+      ],
+      "3.Sprites\\Ply63\\spine\\Lua.json": [
+        "3.Sprites\\Ply63\\spine\\Lua.atlas.txt"
+      ],
+      "3.Sprites\\Ply63\\spine\\HaiCau.json": [
+        "3.Sprites\\Ply63\\spine\\HaiCau.atlas.txt"
+      ],
+      "3.Sprites\\Ply63\\spine\\Gau.json": [
+        "3.Sprites\\Ply63\\spine\\Gau.atlas.txt"
+      ],
+      "3.Sprites\\Ply63\\spine\\XeKeo.json": [
+        "3.Sprites\\Ply63\\spine\\XeKeo.atlas.txt"
+      ],
+      "3.Sprites\\Ply63\\spine\\Quaivat.json": [
+        "3.Sprites\\Ply63\\spine\\Quaivat.atlas.txt"
       ]
     },
     "uuid": {
@@ -285,6 +312,54 @@
       ],
       "8.Models\\Shaders\\StarGlow.mtl": [
         "2e821639-3c1f-43e7-9e94-15c8dbeccf33"
+      ],
+      "3.Sprites\\Ply63\\spine\\Caheo.json": [
+        "78653af0-bea8-470b-8b00-f5a08b05ac99@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\CanhCut1.json": [
+        "7297d5cf-b72e-4330-9e22-4062bb798d22@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\CanhCut2.json": [
+        "0482987e-230f-47d3-82ad-a25ca757d7de@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\CanhCut3.json": [
+        "0523f350-c65e-48a2-a638-13ff23dd504f@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\CanhCut4.json": [
+        "6b51e0e8-4add-4c63-b5ab-938f2487028b@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\Char1.json": [
+        "66a75baa-bd23-443a-9c5e-885f18ebd905@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\Char2.json": [
+        "21b912fc-4798-4f5d-ad9c-ad02b79afc3a@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\Char3.json": [
+        "d8303a41-d6c4-4272-b202-9d5d58a5cca8@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\Char4.json": [
+        "c43e7af0-6be7-43e5-b246-f5db0ced16c5@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\CotCo.json": [
+        "0fc44fb4-2f14-4e7b-8c5b-2955d2487722@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\Den.json": [
+        "5114d926-0fff-4c4a-ab8e-4b07d9397b08@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\Gau.json": [
+        "46aaf226-6204-4178-be4d-8730ebcd5d34@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\HaiCau.json": [
+        "fa6d067d-f79d-4488-9ff4-b2e2480418fd@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\Lua.json": [
+        "c6b3a335-7d02-450a-9c57-83797a1d4819@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\Quaivat.json": [
+        "ed0a95be-f851-47b5-ae57-271cc43b1f3c@6c48a"
+      ],
+      "3.Sprites\\Ply63\\spine\\XeKeo.json": [
+        "5017f4b7-904e-477e-96a5-7afeb9862b33@6c48a"
       ]
     }
   },

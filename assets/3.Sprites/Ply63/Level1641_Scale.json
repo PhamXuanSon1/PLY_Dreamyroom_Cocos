@@ -1,0 +1,2227 @@
+{
+  "meta": { "K": 100, "scene": "Level1641", "exportRoot": "Scale", "distancesInPx": true, "onlyNodeLinks": true, "zeroZ": true, "exportInactive": true, "ignoreInactiveInConflicts": true, "exportedAt": "2026-11-25T14:21:04" },
+  "assetMap": {
+    "7fcb9eaa3be9fed4d806aa54d8db85f6": "sprites/251_base4",
+    "4c9da0c8d5828ba45a43830a74ec9fb7": "sprites/251_base4_cut_top",
+    "6c4d88c3c912f8d46b98c0179d735a44": "sprites/76_Base3",
+    "7a17bdc1cb73e0e45aa3ebe066a394b8": "sprites/44_Base2",
+    "67f655f09d805c84f84798e8c0aac5be": "sprites/2_Base1",
+    "017c567c5d9a81149a72734045c64fb8": "sprites/2_water_pattern",
+    "44d1bd6efb29d184ba0a7bbe3c74844c": "sprites/252_cay_thong_3",
+    "cffadf3d668c90b4fb5a858d62597310": "sprites/252_cay_thong",
+    "3945cf7db08150f4bb266a0026034321": "sprites/287_Gau_trang",
+    "b2598b86d86a18f42a31aa7df0255a64": "sprites/287_Gau_trang_sd",
+    "a833694401921ab45b43c5437ddbe18a": "sprites/285_gau_bong",
+    "3a649cb59921117439d20985db8e5bfe": "sprites/284_tuan_loc_2",
+    "0e0f73667c50abe4e83a8a4bba61397e": "sprites/284_tuan_loc",
+    "8c2203cb80a41f6478fd961d5c7c9648": "sprites/283_chuong_treo_xe",
+    "436b79d75081cda439ac42b015488d63": "sprites/283_chuong_treo_xe_sd",
+    "e137c1403ec1c0c4982ecadcc7ec832f": "sprites/282_than_tien_ti_ti",
+    "671775c8ee29682459eb8cf9549b4397": "sprites/281_bao_dung_qua",
+    "81b274b49fdcafb4e8a2641d112a1785": "sprites/280_than_xe_tuan_loc",
+    "7bb17ea083cf8f24cbde72a5392778ea": "sprites/280_than_xe_tuan_loc_cut_top",
+    "be1284421fa4dbc409eed94a3c76007b": "sprites/286_fx_blink_xe_tuan_loc",
+    "5db1650b1c341af44acb1f4f16e8d3f9": "sprites/279_keo_cay_3",
+    "c87a6ea45e1cfc74dba89217fd23e8b3": "sprites/278_keo_cay",
+    "e70c4f91dba77f647ae6a02b19c3552e": "sprites/278_keo_cay_sd",
+    "0e4001a7acba2b04087bd9cb5de07fe7": "sprites/277_keo",
+    "0a842cfa27749ca42a1ae206223dbc47": "sprites/276_keo_2",
+    "3a97d7c19dad9d24eb5f0b2e880ef847": "sprites/276_keo_2_sd",
+    "b028ad832067a6e4e86b1b9ab45c9efd": "sprites/275_keo_4",
+    "f3fc511ce8d2d4c4d9623bac7dcb6238": "sprites/275_keo_3",
+    "f1ac564ce52f22d4faa7fe77719fae79": "sprites/275_keo_2",
+    "b4b5a9d9f93965f48afed2295f445cdc": "sprites/275_keo",
+    "5408af9a6a82f304696f022278d19deb": "sprites/275_hop_qua",
+    "ac7045e1a029c4e479ffc06e4901dd6d": "sprites/275_hop_qua_sd",
+    "57bcc1852b5db7f429ccc38e58a45b15": "sprites/275_hop_qua_cut_top",
+    "304e856d040b2b942aa0524cb4136c3f": "sprites/274_snowman",
+    "e6ebbd3b0b5bfb44ba64fb5affccb7d0": "sprites/273_box",
+    "fcb29e5511a245f4aadf63f528592bc3": "sprites/273_box_sd",
+    "d923656b71d0dbe4792808e850fabdb4": "sprites/272_snowman",
+    "83eff4eccbbd9fa45b66f8ccd817896e": "sprites/271_bien",
+    "d067799088bdb9143aecdedc9a687169": "sprites/271_bien_sd",
+    "4a853f006b3d25a4d8fc5f9fb6cee2ef": "sprites/272_gift_2",
+    "1636d93aea16fff43846f78ea920a020": "sprites/272_gift",
+    "fd291dce25fb6cd4d8c245b20e643ade": "sprites/272_keo_cay",
+    "fd438f09e56b00e4e9a9ee7d582c347e": "sprites/271_keo_cay",
+    "61d2dd07f759e054ea3e9c6cf37b3b2f": "sprites/270_tat",
+    "07f6ba98d622d2f41a3137a255695b84": "sprites/270_tat_sd",
+    "079a615bb93a9aa49aee72a16d7d63f2": "sprites/270_tat_cut_top",
+    "8272976d6d169c440a51d055485976a7": "sprites/269_box",
+    "0acdb817ab5828741b3b9cebbc288e36": "sprites/269_box_sd",
+    "cd5efae1d13dc874b8c470eab2df2661": "sprites/268_gio_qua",
+    "4bbca12a911ae6b49b4395ad268c2f78": "sprites/268_gio_qua_sd",
+    "d6cdc36f64161244da839736ccf25795": "sprites/267_box",
+    "3da8cd5c648378a4da0bae9c70297492": "sprites/267_box_sd",
+    "8409cba52f15882478715678331bed61": "sprites/266_snow",
+    "9a96240b860cc504497584e97ab94392": "sprites/266_snow_sd",
+    "e458bbbbe240f404599c0e9fb7e1c59e": "sprites/265_snowman",
+    "493cc8d99f63bb14e9a9bad1dfd9d1ce": "sprites/264_tui_qua",
+    "fc44056bff37265459b5dfb3762b276a": "sprites/264_tui_qua_sd",
+    "35bb592b939472a4c92ea50c8e956145": "sprites/263_box",
+    "35850472f813a494394423d65c8c808f": "sprites/263_box_sd",
+    "7dd7964cfcd333a418c16f816d1e71aa": "sprites/262_box",
+    "077017a9bbb9c6644b727f976392ec80": "sprites/262_box_sd",
+    "804f5a164ccc3574eaff3bc4dc6bcf2b": "sprites/262_box_cut_top",
+    "b598d5a415b374440b84065c554338c2": "sprites/262_nap_box",
+    "809811f4f8fd7a042971a52dc2919371": "sprites/262_tho_bong",
+    "7988fc2e144f6684eae448201d272e9f": "sprites/260_no_tree",
+    "cd399550a2df71246ba2da67d576d769": "sprites/259_den_led",
+    "5fc41f2f56ef4fa42886da2058703f62": "sprites/259_fx_den_led",
+    "7efdaba6eb10c714fa2bd9b4b1faba06": "sprites/258_decor_tree",
+    "6f1753c9eef68a24ca533169a12288bb": "sprites/258_decor_tree_sd",
+    "16685ca44e34d834d808331939908ea6": "sprites/257_tree",
+    "6ff859fcaacaf22438c41d02afcaa796": "sprites/257_tree_sd",
+    "e2bfeb3cd67d4a648a391b500160686c": "sprites/256_box",
+    "937b1d2be751aef4f9cc15b39142ec03": "sprites/256_box_sd",
+    "b05f7870808b8e642b28deae984b3a50": "sprites/255_box",
+    "c7177fea24726104fbed9881afd70a6a": "sprites/255_box_sd",
+    "66cdf516265ccde47a57012a70f449c9": "sprites/254_snowflake_2",
+    "887e9dacc355b2b42b70bd822d364158": "sprites/254_snowflake",
+    "3274a2031afde414098a7f7e5fa60327": "sprites/253_cay_thong_deor_3",
+    "487d42749d47b7c45a687da54155d25b": "sprites/253_cay_thong_deor_2",
+    "55032440df85f5845b5fa90680c12e84": "sprites/253_cay_thong_deor",
+    "688b569fefe236c4198a80eefaa3560f": "sprites/252_bai_tuyet",
+    "08e31876f3735a946acc0b7a0fe1e9eb": "sprites/252_bai_tuyet_sd",
+    "998bd6327fe1395489ccf254a125c063": "sprites/253_monster",
+    "aa5235fb823dc8a45bb26eda94ca33f5": "sprites/253_monster_sd",
+    "2f2992730331af444825138eb7e5f367": "sprites/252_cay_thong_4",
+    "92554229a97a9b042be6617698e0c123": "sprites/252_cay_thong_2",
+    "2678e5ead33439f4ca78a97ebd81ed18": "sprites/262_nap_box_1"
+  },
+  "nodes": [
+    {
+      "siblingIndex": 3,
+      "path": "Scale",
+      "parentPath": null,
+      "active": true,
+      "pos": [0,-346,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/BaseAll",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [-277.9862,-3266.71,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/BaseAll/251 base4",
+      "parentPath": "Scale/BaseAll",
+      "active": true,
+      "pos": [-505.5139,3918.71,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "251_base4", "guid": "7fcb9eaa3be9fed4d806aa54d8db85f6", "ppu": 100, "nativeSize": [1027,614], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4250, "layerValue": 0, "bounds": [-1297,-0.99995,-270.0001,613], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/BaseAll/251 base4/251 base4 cut top",
+      "parentPath": "Scale/BaseAll/251 base4",
+      "active": true,
+      "pos": [45.50004,-0.50001,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "251_base4_cut_top", "guid": "4c9da0c8d5828ba45a43830a74ec9fb7", "ppu": 100, "nativeSize": [936,613], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3900, "layerValue": 0, "bounds": [-1206,-1.00007,-270,611.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/BaseAll/76 Base3",
+      "parentPath": "Scale/BaseAll",
+      "active": true,
+      "pos": [533.986,4214.71,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "76_Base3", "guid": "6c4d88c3c912f8d46b98c0179d735a44", "ppu": 100, "nativeSize": [1546,1442], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -21650, "layerValue": 0, "bounds": [-517.0002,-119.0001,1029,1323], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/BaseAll/44 Base2",
+      "parentPath": "Scale/BaseAll",
+      "active": true,
+      "pos": [1183.486,5055.71,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "44_Base2", "guid": "7a17bdc1cb73e0e45aa3ebe066a394b8", "ppu": 100, "nativeSize": [671,570], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -24500, "layerValue": 0, "bounds": [569.9998,1158,1241,1728], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/BaseAll/2 Base1",
+      "parentPath": "Scale/BaseAll",
+      "active": true,
+      "pos": [-130.0139,4908.21,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "2_Base1", "guid": "67f655f09d805c84f84798e8c0aac5be", "ppu": 100, "nativeSize": [1066,879], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -31250, "layerValue": 0, "bounds": [-941.0001,855.9998,124.9999,1735], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/BaseAll/2 water pattern",
+      "parentPath": "Scale/BaseAll",
+      "active": true,
+      "pos": [277.9861,4206.21,0],
+      "rot": [0,0,0],
+      "scale": [1.00007,0.99894,1],
+      "sprite": { "key": "2_water_pattern", "guid": "017c567c5d9a81149a72734045c64fb8", "ppu": 70.32499, "nativeSize": [2048,1320], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -31300, "layerValue": 0, "bounds": [-4130.775,-5280.24,4130.775,6467.24], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Slots",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Slots/252 cay thong 3Slot",
+      "parentPath": "Scale/Slots",
+      "active": true,
+      "pos": [-1189,907,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_cay_thong_3", "guid": "44d1bd6efb29d184ba0a7bbe3c74844c", "ppu": 100, "nativeSize": [182,264], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4100, "layerValue": 0, "bounds": [-1280,428.9999,-1098,693], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Slots/252 cay thongSlot",
+      "parentPath": "Scale/Slots",
+      "active": true,
+      "pos": [-942,993.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_cay_thong", "guid": "cffadf3d668c90b4fb5a858d62597310", "ppu": 100, "nativeSize": [182,264], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4200, "layerValue": 0, "bounds": [-1033,515.9999,-851,780], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/Level_612 - Cuopy",
+      "parentPath": "Scale",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1",
+      "parentPath": "Scale/Level_612 - Cuopy",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/287 Gau trangPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-746.5001,459.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "287_Gau_trang", "guid": "3945cf7db08150f4bb266a0026034321", "ppu": 100, "nativeSize": [185,209], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -100, "layerValue": 0, "bounds": [-839.0001,8.99998,-654.0001,218], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/287 Gau trangPlace/287 Gau trang sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/287 Gau trangPlace",
+      "active": false,
+      "pos": [1.00002,-3.50003,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "287_Gau_trang_sd", "guid": "b2598b86d86a18f42a31aa7df0255a64", "ppu": 100, "nativeSize": [185,210], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -150, "layerValue": 0, "bounds": [-838,4.99996,-653.0001,214.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/287 Gau trangPlace/GameObject",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/287 Gau trangPlace",
+      "active": true,
+      "pos": [-18,-102,0],
+      "rot": [0,0,0],
+      "scale": [0.5,0.5,0.5],
+      "render": { "sortingOrder": -100, "layerValue": 0, "bounds": [-839.3275,-0.42331,-653.8273,213.7868] }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/XeAnim",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1131,1319,0],
+      "rot": [0,0,0],
+      "scale": [0.5,0.5,0.5],
+      "render": { "sortingOrder": -250, "layerValue": 0, "bounds": [-1131,972.9999,-1131,972.9999] }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/285 gau bongPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1192,1484.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "285_gau_bong", "guid": "a833694401921ab45b43c5437ddbe18a", "ppu": 100, "nativeSize": [132,115], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -250, "layerValue": 0, "bounds": [-1258,1081,-1126,1196], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/284 tuan loc 2Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1065.5,1345.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "284_tuan_loc_2", "guid": "3a649cb59921117439d20985db8e5bfe", "ppu": 100, "nativeSize": [179,223], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -300, "layerValue": 0, "bounds": [-1155,888,-976,1111], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/284 tuan locPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1013.5,1373,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "284_tuan_loc", "guid": "0e0f73667c50abe4e83a8a4bba61397e", "ppu": 100, "nativeSize": [231,198], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -350, "layerValue": 0, "bounds": [-1129,928,-898.0001,1126], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/283 chuong treo xePlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1118,1429,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "283_chuong_treo_xe", "guid": "8c2203cb80a41f6478fd961d5c7c9648", "ppu": 100, "nativeSize": [84,86], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -400, "layerValue": 0, "bounds": [-1160,1040,-1076,1126], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/283 chuong treo xePlace/283 chuong treo xe sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/283 chuong treo xePlace",
+      "active": true,
+      "pos": [-1.00002,-1.50003,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "283_chuong_treo_xe_sd", "guid": "436b79d75081cda439ac42b015488d63", "ppu": 100, "nativeSize": [84,87], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -450, "layerValue": 0, "bounds": [-1161,1038,-1077,1125], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/282 than tien ti tiPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1157.5,1517.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "282_than_tien_ti_ti", "guid": "e137c1403ec1c0c4982ecadcc7ec832f", "ppu": 100, "nativeSize": [169,205], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -550, "layerValue": 0, "bounds": [-1242,1069,-1073,1274], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/281 bao dung quaPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1265,1510.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "281_bao_dung_qua", "guid": "671775c8ee29682459eb8cf9549b4397", "ppu": 100, "nativeSize": [146,101], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -600, "layerValue": 0, "bounds": [-1338,1114,-1192,1215], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1168.5,1430,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "280_than_xe_tuan_loc", "guid": "81b274b49fdcafb4e8a2641d112a1785", "ppu": 100, "nativeSize": [271,216], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -650, "layerValue": 0, "bounds": [-1304,975.9999,-1033,1192], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace/280 than xe tuan loc cut top",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace",
+      "active": true,
+      "pos": [0,-16.50009,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "280_than_xe_tuan_loc_cut_top", "guid": "7bb17ea083cf8f24cbde72a5392778ea", "ppu": 100, "nativeSize": [271,183], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -500, "layerValue": 0, "bounds": [-1304,975.9998,-1033,1159], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace/286 fx blink xe tuan loc",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace",
+      "active": true,
+      "pos": [-76.99986,-46.49992,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "286_fx_blink_xe_tuan_loc", "guid": "be1284421fa4dbc409eed94a3c76007b", "ppu": 100, "nativeSize": [271,207], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -200, "layerValue": 0, "bounds": [-1381,934,-1110,1141], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/279 keo cay 3Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-394.0001,727.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "279_keo_cay_3", "guid": "5db1650b1c341af44acb1f4f16e8d3f9", "ppu": 100, "nativeSize": [88,97], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -700, "layerValue": 0, "bounds": [-438.0001,332.9999,-350.0001,430], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/278 keo cayPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-696.0001,581,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "278_keo_cay", "guid": "c87a6ea45e1cfc74dba89217fd23e8b3", "ppu": 100, "nativeSize": [104,80], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -750, "layerValue": 0, "bounds": [-748.0001,195,-644.0001,275], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/278 keo cayPlace/278 keo cay sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/278 keo cayPlace",
+      "active": true,
+      "pos": [0,-3.00007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "278_keo_cay_sd", "guid": "e70c4f91dba77f647ae6a02b19c3552e", "ppu": 100, "nativeSize": [104,80], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -800, "layerValue": 0, "bounds": [-748.0001,191.9999,-644.0001,271.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/277 keoPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-746.5001,626.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "277_keo", "guid": "0e4001a7acba2b04087bd9cb5de07fe7", "ppu": 100, "nativeSize": [51,73], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -850, "layerValue": 0, "bounds": [-772.0001,244,-721.0001,317], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/276 keo 2Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-880.5,577.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "276_keo_2", "guid": "0a842cfa27749ca42a1ae206223dbc47", "ppu": 100, "nativeSize": [59,53], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -900, "layerValue": 0, "bounds": [-910.0001,205,-851,258], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/276 keo 2Place/276 keo 2 sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/276 keo 2Place",
+      "active": true,
+      "pos": [0,-3.00007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "276_keo_2_sd", "guid": "3a97d7c19dad9d24eb5f0b2e880ef847", "ppu": 100, "nativeSize": [59,53], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -950, "layerValue": 0, "bounds": [-910.0001,202,-851,254.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keo 4Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1093,600.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_keo_4", "guid": "b028ad832067a6e4e86b1b9ab45c9efd", "ppu": 100, "nativeSize": [46,49], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1150, "layerValue": 0, "bounds": [-1116,230,-1070,278.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keo 3Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1067,607,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_keo_3", "guid": "f3fc511ce8d2d4c4d9623bac7dcb6238", "ppu": 100, "nativeSize": [48,90], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1200, "layerValue": 0, "bounds": [-1091,216,-1043,306], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keo 2Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1099.5,615,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_keo_2", "guid": "f1ac564ce52f22d4faa7fe77719fae79", "ppu": 100, "nativeSize": [75,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1250, "layerValue": 0, "bounds": [-1137,213,-1062,325], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keoPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1066.5,610.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_keo", "guid": "b4b5a9d9f93965f48afed2295f445cdc", "ppu": 100, "nativeSize": [83,62], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1300, "layerValue": 0, "bounds": [-1108,234,-1025,296], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 hop quaPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1074,568,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_hop_qua", "guid": "5408af9a6a82f304696f022278d19deb", "ppu": 100, "nativeSize": [142,124], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1350, "layerValue": 0, "bounds": [-1145,160,-1003,284], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 hop quaPlace/275 hop qua sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 hop quaPlace",
+      "active": true,
+      "pos": [0.0001,-2.50006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_hop_qua_sd", "guid": "ac7045e1a029c4e479ffc06e4901dd6d", "ppu": 100, "nativeSize": [142,123], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1400, "layerValue": 0, "bounds": [-1145,157.9999,-1003,280.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 hop quaPlace/275 hop qua cut top",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 hop quaPlace",
+      "active": true,
+      "pos": [-1.50003,-15.49997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_hop_qua_cut_top", "guid": "57bcc1852b5db7f429ccc38e58a45b15", "ppu": 100, "nativeSize": [139,91], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1100, "layerValue": 0, "bounds": [-1145,161,-1006,252], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/274 snowmanPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-595.5001,587.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "274_snowman", "guid": "304e856d040b2b942aa0524cb4136c3f", "ppu": 100, "nativeSize": [93,174], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1450, "layerValue": 0, "bounds": [-642.0001,155,-549.0001,328.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/273 boxPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-537.0001,629.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "273_box", "guid": "e6ebbd3b0b5bfb44ba64fb5affccb7d0", "ppu": 100, "nativeSize": [86,97], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1500, "layerValue": 0, "bounds": [-580.0001,235,-494.0001,332], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/273 boxPlace/273 box sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/273 boxPlace",
+      "active": true,
+      "pos": [0.00005,-2.00005,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "273_box_sd", "guid": "fcb29e5511a245f4aadf63f528592bc3", "ppu": 100, "nativeSize": [86,97], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1550, "layerValue": 0, "bounds": [-580,233,-494.0001,329.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/272 snowmanPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-517.0001,678,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "272_snowman", "guid": "d923656b71d0dbe4792808e850fabdb4", "ppu": 100, "nativeSize": [106,154], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1600, "layerValue": 0, "bounds": [-570.0001,255,-464.0001,409], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/271 bienPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-967.5001,694.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "271_bien", "guid": "83eff4eccbbd9fa45b66f8ccd817896e", "ppu": 100, "nativeSize": [147,159], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1650, "layerValue": 0, "bounds": [-1041,269,-894.0001,428], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/271 bienPlace/271 bien sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/271 bienPlace",
+      "active": true,
+      "pos": [0.0001,-45.00003,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "271_bien_sd", "guid": "d067799088bdb9143aecdedc9a687169", "ppu": 100, "nativeSize": [149,75], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1700, "layerValue": 0, "bounds": [-1042,265.9999,-893,340.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/272 gift 2Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-750.0001,776,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "272_gift_2", "guid": "4a853f006b3d25a4d8fc5f9fb6cee2ef", "ppu": 100, "nativeSize": [56,98], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1800, "layerValue": 0, "bounds": [-778.0001,381,-722,479], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/272 giftPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-711.0001,799,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "272_gift", "guid": "1636d93aea16fff43846f78ea920a020", "ppu": 100, "nativeSize": [66,96], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1850, "layerValue": 0, "bounds": [-744.0001,405,-678.0001,501], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/272 keo cayPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-774.0001,785.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "272_keo_cay", "guid": "fd291dce25fb6cd4d8c245b20e643ade", "ppu": 100, "nativeSize": [70,78], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1900, "layerValue": 0, "bounds": [-809.0001,401,-739.0001,478.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 25,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/271 keo cayPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-741.0001,809,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "271_keo_cay", "guid": "fd438f09e56b00e4e9a9ee7d582c347e", "ppu": 100, "nativeSize": [52,86], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1950, "layerValue": 0, "bounds": [-767.0001,420,-715.0001,506], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 26,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/270 tatPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-733.0001,745,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "270_tat", "guid": "61d2dd07f759e054ea3e9c6cf37b3b2f", "ppu": 100, "nativeSize": [98,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2000, "layerValue": 0, "bounds": [-782.0001,343,-684,455], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/270 tatPlace/270 tat sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/270 tatPlace",
+      "active": true,
+      "pos": [0.00005,-3.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "270_tat_sd", "guid": "07f6ba98d622d2f41a3137a255695b84", "ppu": 100, "nativeSize": [98,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2050, "layerValue": 0, "bounds": [-782,340,-684,451.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/270 tatPlace/270 tat cut top",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/270 tatPlace",
+      "active": true,
+      "pos": [0,-8.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "270_tat_cut_top", "guid": "079a615bb93a9aa49aee72a16d7d63f2", "ppu": 100, "nativeSize": [98,95], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -1750, "layerValue": 0, "bounds": [-782.0001,343,-684,438], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 27,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/269 boxPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-729.0001,683.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "269_box", "guid": "8272976d6d169c440a51d055485976a7", "ppu": 100, "nativeSize": [136,95], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2100, "layerValue": 0, "bounds": [-797,290,-661.0001,385], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/269 boxPlace/269 box sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/269 boxPlace",
+      "active": true,
+      "pos": [0,-3.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "269_box_sd", "guid": "0acdb817ab5828741b3b9cebbc288e36", "ppu": 100, "nativeSize": [136,95], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2150, "layerValue": 0, "bounds": [-797,287,-661.0001,382], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 28,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/268 gio quaPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-834,737.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "268_gio_qua", "guid": "cd5efae1d13dc874b8c470eab2df2661", "ppu": 100, "nativeSize": [98,122], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2200, "layerValue": 0, "bounds": [-883,330.9999,-785.0001,453], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/268 gio quaPlace/268 gio qua sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/268 gio quaPlace",
+      "active": true,
+      "pos": [-3.00007,-48.50002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "268_gio_qua_sd", "guid": "4bbca12a911ae6b49b4395ad268c2f78", "ppu": 100, "nativeSize": [82,31], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2250, "layerValue": 0, "bounds": [-878.0001,327.9999,-796.0001,358.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 29,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/267 boxPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1040,734.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "267_box", "guid": "d6cdc36f64161244da839736ccf25795", "ppu": 100, "nativeSize": [102,115], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2300, "layerValue": 0, "bounds": [-1091,331,-989.0001,446], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/267 boxPlace/267 box sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/267 boxPlace",
+      "active": true,
+      "pos": [0,-4.00004,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "267_box_sd", "guid": "3da8cd5c648378a4da0bae9c70297492", "ppu": 100, "nativeSize": [102,115], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2350, "layerValue": 0, "bounds": [-1091,326.9999,-989.0001,441.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 30,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/266 snowPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-585.0001,677,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "266_snow", "guid": "8409cba52f15882478715678331bed61", "ppu": 100, "nativeSize": [218,96], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2400, "layerValue": 0, "bounds": [-694.0001,283,-476,379], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/266 snowPlace/266 snow sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/266 snowPlace",
+      "active": true,
+      "pos": [0,-3.00002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "266_snow_sd", "guid": "9a96240b860cc504497584e97ab94392", "ppu": 100, "nativeSize": [218,96], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2450, "layerValue": 0, "bounds": [-694.0001,280,-476,376], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 31,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/265 snowmanPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-602.0001,796.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "265_snowman", "guid": "e458bbbbe240f404599c0e9fb7e1c59e", "ppu": 100, "nativeSize": [176,235], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2500, "layerValue": 0, "bounds": [-690.0001,333,-514.0001,567.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 32,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/264 tui quaPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-511.5001,791.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "264_tui_qua", "guid": "493cc8d99f63bb14e9a9bad1dfd9d1ce", "ppu": 100, "nativeSize": [117,119], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2550, "layerValue": 0, "bounds": [-570.0001,386,-453.0001,505], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/264 tui quaPlace/264 tui qua sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/264 tui quaPlace",
+      "active": true,
+      "pos": [0.00005,-3.00007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "264_tui_qua_sd", "guid": "fc44056bff37265459b5dfb3762b276a", "ppu": 100, "nativeSize": [117,119], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2600, "layerValue": 0, "bounds": [-570,382.9999,-453,501.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 33,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/263 boxPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-885.5001,752.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "263_box", "guid": "35bb592b939472a4c92ea50c8e956145", "ppu": 100, "nativeSize": [115,109], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2650, "layerValue": 0, "bounds": [-943,351.9999,-828.0001,461], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/263 boxPlace/263 box sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/263 boxPlace",
+      "active": true,
+      "pos": [0,-2.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "263_box_sd", "guid": "35850472f813a494394423d65c8c808f", "ppu": 100, "nativeSize": [115,109], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2700, "layerValue": 0, "bounds": [-943,349,-828.0001,458], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 34,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-945.5,808,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "262_box", "guid": "7dd7964cfcd333a418c16f816d1e71aa", "ppu": 100, "nativeSize": [143,136], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2900, "layerValue": 0, "bounds": [-1017,394,-874,530], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace/262 box sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace",
+      "active": true,
+      "pos": [0,-2.99997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "262_box_sd", "guid": "077017a9bbb9c6644b727f976392ec80", "ppu": 100, "nativeSize": [143,136], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2950, "layerValue": 0, "bounds": [-1017,391,-874,527], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace/262 box cut top",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace",
+      "active": true,
+      "pos": [0,-13.00006,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "262_box_cut_top", "guid": "804f5a164ccc3574eaff3bc4dc6bcf2b", "ppu": 100, "nativeSize": [143,110], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2800, "layerValue": 0, "bounds": [-1017,393.9999,-874,503.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace/NapBox",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace",
+      "active": true,
+      "pos": [945.5,-808,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace/NapBox/262 nap box close",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace/NapBox",
+      "active": true,
+      "pos": [-945,843.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "262_nap_box", "guid": "b598d5a415b374440b84065c554338c2", "ppu": 100, "nativeSize": [148,108], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2750, "layerValue": 0, "bounds": [-1019,444,-871,551.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace/NapBox/262 nap box open",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace/NapBox",
+      "active": true,
+      "pos": [-945,905,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "262_nap_box", "guid": "b598d5a415b374440b84065c554338c2", "ppu": 100, "nativeSize": [148,108], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2750, "layerValue": 0, "bounds": [-1019,505,-871,613], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace/262 tho bongSlot",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace",
+      "active": true,
+      "pos": [-5.00011,17.50002,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "262_tho_bong", "guid": "809811f4f8fd7a042971a52dc2919371", "ppu": 100, "nativeSize": [107,111], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -2850, "layerValue": 0, "bounds": [-1004,424,-897.0001,535], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 35,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/260 no treePlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-704.5001,1156,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "260_no_tree", "guid": "7988fc2e144f6684eae448201d272e9f", "ppu": 100, "nativeSize": [163,218], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3000, "layerValue": 0, "bounds": [-786.0001,700.9999,-623.0001,918.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 36,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/259 den ledPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-676.0001,932,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "259_den_led", "guid": "cd399550a2df71246ba2da67d576d769", "ppu": 100, "nativeSize": [318,302], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3100, "layerValue": 0, "bounds": [-835.0001,434.9999,-517.0001,737], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/259 den ledPlace/259 fx den led",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/259 den ledPlace",
+      "active": true,
+      "pos": [0,0,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "259_fx_den_led", "guid": "5fc41f2f56ef4fa42886da2058703f62", "ppu": 100, "nativeSize": [412,396], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3050, "layerValue": 0, "bounds": [-882.0001,388,-470.0001,783.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 37,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/258 decor treePlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-679.0001,925.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "258_decor_tree", "guid": "7efdaba6eb10c714fa2bd9b4b1faba06", "ppu": 100, "nativeSize": [316,331], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3150, "layerValue": 0, "bounds": [-837.0001,414,-521.0001,745], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/258 decor treePlace/258 decor tree sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/258 decor treePlace",
+      "active": true,
+      "pos": [0.00005,-3.00016,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "258_decor_tree_sd", "guid": "6f1753c9eef68a24ca533169a12288bb", "ppu": 100, "nativeSize": [316,331], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3200, "layerValue": 0, "bounds": [-837,410.9999,-521,741.9998], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 38,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/257 treePlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-697.5001,930,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "257_tree", "guid": "16685ca44e34d834d808331939908ea6", "ppu": 100, "nativeSize": [409,462], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3250, "layerValue": 0, "bounds": [-902.0001,353,-493,814.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/257 treePlace/257 tree sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/257 treePlace",
+      "active": true,
+      "pos": [-0.99998,-4.00009,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "257_tree_sd", "guid": "6ff859fcaacaf22438c41d02afcaa796", "ppu": 100, "nativeSize": [409,462], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3300, "layerValue": 0, "bounds": [-903,348.9999,-494.0001,810.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 39,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/256 boxPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-468.5,817.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "256_box", "guid": "e2bfeb3cd67d4a648a391b500160686c", "ppu": 100, "nativeSize": [107,120], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3350, "layerValue": 0, "bounds": [-522,411.9999,-415.0001,531.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/256 boxPlace/256 box sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/256 boxPlace",
+      "active": true,
+      "pos": [0.00005,-3.00007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "256_box_sd", "guid": "937b1d2be751aef4f9cc15b39142ec03", "ppu": 100, "nativeSize": [107,120], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3400, "layerValue": 0, "bounds": [-522,408.9999,-415,528.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 40,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/255 boxPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-552.5001,878.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "255_box", "guid": "b05f7870808b8e642b28deae984b3a50", "ppu": 100, "nativeSize": [121,155], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3450, "layerValue": 0, "bounds": [-613.0001,455,-492.0001,610], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/255 boxPlace/255 box sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/255 boxPlace",
+      "active": true,
+      "pos": [0,-3.00007,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "255_box_sd", "guid": "c7177fea24726104fbed9881afd70a6a", "ppu": 100, "nativeSize": [121,155], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3500, "layerValue": 0, "bounds": [-613.0001,451.9999,-492.0001,606.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 41,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/254 snowflake 2Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-893,884,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "254_snowflake_2", "guid": "66cdf516265ccde47a57012a70f449c9", "ppu": 100, "nativeSize": [54,86], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3550, "layerValue": 0, "bounds": [-920.0001,495,-866,581], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 42,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/254 snowflakePlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-863.5,905,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "254_snowflake", "guid": "887e9dacc355b2b42b70bd822d364158", "ppu": 100, "nativeSize": [49,92], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3600, "layerValue": 0, "bounds": [-888,513,-839.0001,605], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 43,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/253 cay thong deor 3Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-564.0001,1026.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "253_cay_thong_deor_3", "guid": "3274a2031afde414098a7f7e5fa60327", "ppu": 100, "nativeSize": [170,261], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3650, "layerValue": 0, "bounds": [-649,549.9999,-479,810.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 44,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/253 cay thong deor 2Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-898.5001,983.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "253_cay_thong_deor_2", "guid": "487d42749d47b7c45a687da54155d25b", "ppu": 100, "nativeSize": [149,229], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3700, "layerValue": 0, "bounds": [-973.0001,523,-824.0001,752], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 45,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/253 cay thong deorPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-807.5001,1042,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "253_cay_thong_deor", "guid": "55032440df85f5845b5fa90680c12e84", "ppu": 100, "nativeSize": [167,292], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3750, "layerValue": 0, "bounds": [-891.0001,550,-724.0001,842], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 46,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/252 bai tuyetPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-716.0001,750.4999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_bai_tuyet", "guid": "688b569fefe236c4198a80eefaa3560f", "ppu": 100, "nativeSize": [728,387], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3800, "layerValue": 0, "bounds": [-1080,211,-352.0001,597.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/252 bai tuyetPlace/252 bai tuyet sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/252 bai tuyetPlace",
+      "active": true,
+      "pos": [0.00005,-5.49998,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_bai_tuyet_sd", "guid": "08e31876f3735a946acc0b7a0fe1e9eb", "ppu": 100, "nativeSize": [728,388], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3850, "layerValue": 0, "bounds": [-1080,205,-352.0001,593], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 47,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/253 monsterPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1198,758.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "253_monster", "guid": "998bd6327fe1395489ccf254a125c063", "ppu": 100, "nativeSize": [220,243], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -3950, "layerValue": 0, "bounds": [-1308,291,-1088,534], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/253 monsterPlace/253 monster sd",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/253 monsterPlace",
+      "active": false,
+      "pos": [0.0001,-2.00009,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "253_monster_sd", "guid": "aa5235fb823dc8a45bb26eda94ca33f5", "ppu": 100, "nativeSize": [220,243], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4000, "layerValue": 0, "bounds": [-1308,288.9999,-1088,531.9999], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/253 monsterPlace/GameObject",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder/253 monsterPlace",
+      "active": true,
+      "pos": [14,-108,0],
+      "rot": [0,0,0],
+      "scale": [0.5,0.5,0.5],
+      "render": { "sortingOrder": -3950, "layerValue": 0, "bounds": [-1184,304.5,-1184,304.5] }
+    },
+    {
+      "siblingIndex": 48,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/252 cay thong 4Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1131,837.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_cay_thong_4", "guid": "2f2992730331af444825138eb7e5f367", "ppu": 100, "nativeSize": [140,231], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4050, "layerValue": 0, "bounds": [-1201,376,-1061,607], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 49,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/252 cay thong 3Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1189,907,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_cay_thong_3", "guid": "44d1bd6efb29d184ba0a7bbe3c74844c", "ppu": 100, "nativeSize": [182,264], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4100, "layerValue": 0, "bounds": [-1280,428.9999,-1098,693], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 50,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/252 cay thong 2Place",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-1042.5,1020.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_cay_thong_2", "guid": "92554229a97a9b042be6617698e0c123", "ppu": 100, "nativeSize": [223,399], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4150, "layerValue": 0, "bounds": [-1154,475,-931.0001,874], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 51,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Placeholder/252 cay thongPlace",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Placeholder",
+      "active": true,
+      "pos": [-942,993.9999,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_cay_thong", "guid": "cffadf3d668c90b4fb5a858d62597310", "ppu": 100, "nativeSize": [182,264], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": -4200, "layerValue": 0, "bounds": [-1033,515.9999,-851,780], "flipX": false, "flipY": false }
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1",
+      "active": true,
+      "pos": [3581,15347,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1]
+    },
+    {
+      "siblingIndex": 0,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/252 cay thong 3",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3629,-14463,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_cay_thong_3", "guid": "44d1bd6efb29d184ba0a7bbe3c74844c", "ppu": 100, "nativeSize": [182,264], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 51, "layerValue": 0, "bounds": [-139,405.9996,43.00005,669.9996], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/252 cay thong 3Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 1,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/252 cay thong",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3382,-14376,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_cay_thong", "guid": "cffadf3d668c90b4fb5a858d62597310", "ppu": 100, "nativeSize": [182,264], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 52, "layerValue": 0, "bounds": [108.0002,493.0006,290.0002,757.0007], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/252 cay thongPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 2,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/252 cay thong 2",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3482.5,-14349.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_cay_thong_2", "guid": "92554229a97a9b042be6617698e0c123", "ppu": 100, "nativeSize": [223,399], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 53, "layerValue": 0, "bounds": [-12.99994,452.0006,210.0001,851.0006], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/252 cay thong 2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 3,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/252 cay thong 4",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3571,-14532.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_cay_thong_4", "guid": "2f2992730331af444825138eb7e5f367", "ppu": 100, "nativeSize": [140,231], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 54, "layerValue": 0, "bounds": [-59.99977,353.0004,80.00023,584.0004], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/252 cay thong 4Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 4,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/252 bai tuyet",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3156,-14619.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "252_bai_tuyet", "guid": "688b569fefe236c4198a80eefaa3560f", "ppu": 100, "nativeSize": [728,387], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 55, "layerValue": 0, "bounds": [60.99999,188.0009,789.0001,575.0009], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/252 bai tuyetPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 5,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/253 cay thong deor 3",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3004,-14343.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "253_cay_thong_deor_3", "guid": "3274a2031afde414098a7f7e5fa60327", "ppu": 100, "nativeSize": [170,261], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 56, "layerValue": 0, "bounds": [492.0001,527.0004,662.0001,788.0004], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/253 cay thong deor 3Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 6,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/253 cay thong deor 2",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3338.5,-14386.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "253_cay_thong_deor_2", "guid": "487d42749d47b7c45a687da54155d25b", "ppu": 100, "nativeSize": [149,229], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 57, "layerValue": 0, "bounds": [167.9999,500.0011,316.9999,729.0011], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/253 cay thong deor 2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 7,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/253 cay thong deor",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3247.5,-14328,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "253_cay_thong_deor", "guid": "55032440df85f5845b5fa90680c12e84", "ppu": 100, "nativeSize": [167,292], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 58, "layerValue": 0, "bounds": [250.0003,527.0002,417.0003,819.0002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/253 cay thong deorPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 8,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/253 monster",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3638,-14611.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "253_monster", "guid": "998bd6327fe1395489ccf254a125c063", "ppu": 100, "nativeSize": [220,243], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 59, "layerValue": 0, "bounds": [-167,268.0011,53.00003,511.0011], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/253 monsterPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 9,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/254 snowflake 2",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3333,-14486,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "254_snowflake_2", "guid": "66cdf516265ccde47a57012a70f449c9", "ppu": 100, "nativeSize": [54,86], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 60, "layerValue": 0, "bounds": [221,472.0001,274.9999,558.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/254 snowflake 2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 10,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/254 snowflake",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3303.5,-14465,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "254_snowflake", "guid": "887e9dacc355b2b42b70bd822d364158", "ppu": 100, "nativeSize": [49,92], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 61, "layerValue": 0, "bounds": [253.0002,490.0007,302.0002,582.0007], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/254 snowflakePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 11,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/255 box",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-2992.5,-14491.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "255_box", "guid": "b05f7870808b8e642b28deae984b3a50", "ppu": 100, "nativeSize": [121,155], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 62, "layerValue": 0, "bounds": [528.0002,432.0008,649.0002,587.0008], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/255 boxPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 12,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/256 box",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-2908.5,-14552,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "256_box", "guid": "e2bfeb3cd67d4a648a391b500160686c", "ppu": 100, "nativeSize": [107,120], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 63, "layerValue": 0, "bounds": [619.0002,388.9997,726.0002,508.9997], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/256 boxPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 13,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/257 tree",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3137.5,-14440,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "257_tree", "guid": "16685ca44e34d834d808331939908ea6", "ppu": 100, "nativeSize": [409,462], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 64, "layerValue": 0, "bounds": [239.0001,330.0007,648.0001,792.0007], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/257 treePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 14,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/258 decor tree",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3119,-14444.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "258_decor_tree", "guid": "7efdaba6eb10c714fa2bd9b4b1faba06", "ppu": 100, "nativeSize": [316,331], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 65, "layerValue": 0, "bounds": [304.0001,391.0009,620.0001,722.0009], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/258 decor treePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 15,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/259 den led",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3116,-14438,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "259_den_led", "guid": "cd399550a2df71246ba2da67d576d769", "ppu": 100, "nativeSize": [318,302], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 66, "layerValue": 0, "bounds": [306.0001,411.9996,624.0002,713.9996], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/259 den ledPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 16,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/260 no tree",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3144.5,-14214,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "260_no_tree", "guid": "7988fc2e144f6684eae448201d272e9f", "ppu": 100, "nativeSize": [163,218], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 67, "layerValue": 0, "bounds": [355.0002,678.0002,518.0002,896.0002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/260 no treePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 17,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/262 box",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3385.5,-14562,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "262_nap_box_1", "guid": "2678e5ead33439f4ca78a97ebd81ed18", "ppu": 100, "nativeSize": [148,158], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 68, "layerValue": 0, "bounds": [121.5002,360.0006,269.5002,518.0006], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/262 boxPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 18,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/263 box",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3325.5,-14617.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "263_box", "guid": "35bb592b939472a4c92ea50c8e956145", "ppu": 100, "nativeSize": [115,109], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 70, "layerValue": 0, "bounds": [198,328.9998,313,437.9998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/263 boxPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 19,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/264 tui qua",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-2951.5,-14578.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "264_tui_qua", "guid": "493cc8d99f63bb14e9a9bad1dfd9d1ce", "ppu": 100, "nativeSize": [117,119], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 71, "layerValue": 0, "bounds": [571.0002,362.9998,688.0002,481.9998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/264 tui quaPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 20,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/265 snowman",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3042,-14573.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "265_snowman", "guid": "e458bbbbe240f404599c0e9fb7e1c59e", "ppu": 100, "nativeSize": [176,235], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 72, "layerValue": 0, "bounds": [451.0001,310.0001,627.0001,545.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/265 snowmanPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 21,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/266 snow",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3025,-14693,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "266_snow", "guid": "8409cba52f15882478715678331bed61", "ppu": 100, "nativeSize": [218,96], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 73, "layerValue": 0, "bounds": [447.0001,260.0009,665.0001,356.0009], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/266 snowPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 22,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/267 box",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3480,-14635.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "267_box", "guid": "d6cdc36f64161244da839736ccf25795", "ppu": 100, "nativeSize": [102,115], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 74, "layerValue": 0, "bounds": [50.00021,308.0005,152.0002,423.0005], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/267 boxPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 23,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/268 gio qua",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3274,-14632,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "268_gio_qua", "guid": "cd5efae1d13dc874b8c470eab2df2661", "ppu": 100, "nativeSize": [98,122], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 75, "layerValue": 0, "bounds": [258.0003,308.0009,356.0004,430.0009], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/268 gio quaPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 24,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/269 box",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3169,-14686.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "269_box", "guid": "8272976d6d169c440a51d055485976a7", "ppu": 100, "nativeSize": [136,95], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 76, "layerValue": 0, "bounds": [344.0001,267.0011,480.0001,362.0011], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/269 boxPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 25,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/270 tat",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3173,-14625,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "270_tat", "guid": "61d2dd07f759e054ea3e9c6cf37b3b2f", "ppu": 100, "nativeSize": [98,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 77, "layerValue": 0, "bounds": [359.0002,320.0001,457.0002,432.0001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/270 tatPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 26,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/271 keo cay",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3181,-14561,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "271_keo_cay", "guid": "fd438f09e56b00e4e9a9ee7d582c347e", "ppu": 100, "nativeSize": [52,86], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 78, "layerValue": 0, "bounds": [374,397.0001,426,483], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/271 keo cayPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 27,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/271 bien",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3407.5,-14675.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "271_bien", "guid": "83eff4eccbbd9fa45b66f8ccd817896e", "ppu": 100, "nativeSize": [147,159], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 79, "layerValue": 0, "bounds": [100.0001,245.9996,247.0001,404.9996], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/271 bienPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 28,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/272 snowman",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-2957,-14692,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "272_snowman", "guid": "d923656b71d0dbe4792808e850fabdb4", "ppu": 100, "nativeSize": [106,154], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 80, "layerValue": 0, "bounds": [571.0002,232.0003,677.0001,386.0003], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/272 snowmanPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 29,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/272 keo cay",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3214,-14584,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "272_keo_cay", "guid": "fd291dce25fb6cd4d8c245b20e643ade", "ppu": 100, "nativeSize": [70,78], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 81, "layerValue": 0, "bounds": [332.0002,378.0005,402.0002,456.0005], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/272 keo cayPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 30,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/272 gift",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3151,-14571,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "272_gift", "guid": "1636d93aea16fff43846f78ea920a020", "ppu": 100, "nativeSize": [66,96], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 82, "layerValue": 0, "bounds": [397.0001,382.001,463.0001,478.001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/272 giftPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 31,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/272 gift 2",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3190,-14594,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "272_gift_2", "guid": "4a853f006b3d25a4d8fc5f9fb6cee2ef", "ppu": 100, "nativeSize": [56,98], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 83, "layerValue": 0, "bounds": [363.0002,357.9999,419.0002,455.9998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/272 gift 2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 32,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/273 box",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-2977,-14740.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "273_box", "guid": "e6ebbd3b0b5bfb44ba64fb5affccb7d0", "ppu": 100, "nativeSize": [86,97], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 84, "layerValue": 0, "bounds": [561.0001,212.0002,647.0001,309.0002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/273 boxPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 33,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/274 snowman",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3035.5,-14782,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "274_snowman", "guid": "304e856d040b2b942aa0524cb4136c3f", "ppu": 100, "nativeSize": [93,174], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 85, "layerValue": 0, "bounds": [499.0002,132.0009,592.0002,306.0009], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/274 snowmanPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 34,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/275 keo 4",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3533,-14769.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_keo_4", "guid": "b028ad832067a6e4e86b1b9ab45c9efd", "ppu": 100, "nativeSize": [46,49], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 86, "layerValue": 0, "bounds": [24.99995,207.0009,70.99995,256.0009], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keo 4Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 35,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/275 keo 2",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3539.5,-14755,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_keo_2", "guid": "f1ac564ce52f22d4faa7fe77719fae79", "ppu": 100, "nativeSize": [75,112], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 87, "layerValue": 0, "bounds": [4.00009,189.9998,79.00009,301.9998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keo 2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 36,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/275 keo",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3506.5,-14759,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_keo", "guid": "b4b5a9d9f93965f48afed2295f445cdc", "ppu": 100, "nativeSize": [83,62], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 88, "layerValue": 0, "bounds": [32.99989,211.0005,115.9999,273.0005], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keoPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 37,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/275 hop qua",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3514,-14802,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_hop_qua", "guid": "5408af9a6a82f304696f022278d19deb", "ppu": 100, "nativeSize": [142,124], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 89, "layerValue": 0, "bounds": [-3.9998,136.9997,138.0002,260.9997], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/275 hop quaPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 38,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/275 keo 3",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3507,-14763,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "275_keo_3", "guid": "f3fc511ce8d2d4c4d9623bac7dcb6238", "ppu": 100, "nativeSize": [48,90], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 90, "layerValue": 0, "bounds": [50.00017,192.9996,98.00017,282.9996], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keo 3Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 39,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/276 keo 2",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3320.5,-14792.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "276_keo_2", "guid": "0a842cfa27749ca42a1ae206223dbc47", "ppu": 100, "nativeSize": [59,53], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 91, "layerValue": 0, "bounds": [230.9999,181.9998,290,234.9998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/276 keo 2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 40,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/277 keo",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3186.5,-14743.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "277_keo", "guid": "0e4001a7acba2b04087bd9cb5de07fe7", "ppu": 100, "nativeSize": [51,73], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 92, "layerValue": 0, "bounds": [369.0002,221.0004,420.0002,294.0004], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/277 keoPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 41,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/278 keo cay",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3136,-14789,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "278_keo_cay", "guid": "c87a6ea45e1cfc74dba89217fd23e8b3", "ppu": 100, "nativeSize": [104,80], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 93, "layerValue": 0, "bounds": [393.0001,172.0002,497.0001,252.0002], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/278 keo cayPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 42,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/279 keo cay 3",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-2834,-14642.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "279_keo_cay_3", "guid": "5db1650b1c341af44acb1f4f16e8d3f9", "ppu": 100, "nativeSize": [88,97], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 94, "layerValue": 0, "bounds": [703.0001,309.9998,791.0001,406.9998], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/279 keo cay 3Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 43,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/280 than xe tuan loc",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3608.5,-13940,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "280_than_xe_tuan_loc", "guid": "81b274b49fdcafb4e8a2641d112a1785", "ppu": 100, "nativeSize": [271,216], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 95, "layerValue": 0, "bounds": [-162.9998,953.0007,108.0002,1169.001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 44,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/281 bao dung qua",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3705,-13859.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "281_bao_dung_qua", "guid": "671775c8ee29682459eb8cf9549b4397", "ppu": 100, "nativeSize": [146,101], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 96, "layerValue": 0, "bounds": [-196.9998,1091,-50.99979,1192], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/281 bao dung quaPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 45,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/282 than tien ti ti",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3597.5,-13852.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "282_than_tien_ti_ti", "guid": "e137c1403ec1c0c4982ecadcc7ec832f", "ppu": 100, "nativeSize": [169,205], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 97, "layerValue": 0, "bounds": [-100.9997,1046.001,68.00029,1251.001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/282 than tien ti tiPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 46,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/283 chuong treo xe",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3558,-13941,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "283_chuong_treo_xe", "guid": "8c2203cb80a41f6478fd961d5c7c9648", "ppu": 100, "nativeSize": [84,86], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 98, "layerValue": 0, "bounds": [-19.00004,1017,64.99995,1103], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/283 chuong treo xePlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 47,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/284 tuan loc",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3453.5,-13997,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "284_tuan_loc", "guid": "0e0f73667c50abe4e83a8a4bba61397e", "ppu": 100, "nativeSize": [231,198], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 99, "layerValue": 0, "bounds": [12.00016,905,243.0002,1103], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/284 tuan locPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 48,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/284 tuan loc 2",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3505.5,-14024.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "284_tuan_loc_2", "guid": "3a649cb59921117439d20985db8e5bfe", "ppu": 100, "nativeSize": [179,223], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 100, "layerValue": 0, "bounds": [-13.99989,865.0006,165.0001,1088.001], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/284 tuan loc 2Place",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 49,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/285 gau bong",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3632,-13885.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "285_gau_bong", "guid": "a833694401921ab45b43c5437ddbe18a", "ppu": 100, "nativeSize": [132,115], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 101, "layerValue": 0, "bounds": [-116.9998,1058.001,15.00017,1173], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/285 gau bongPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    },
+    {
+      "siblingIndex": 50,
+      "path": "Scale/Level_612 - Cuopy/Phase1/Items/287 Gau trang",
+      "parentPath": "Scale/Level_612 - Cuopy/Phase1/Items",
+      "active": true,
+      "pos": [-3186.5,-14910.5,0],
+      "rot": [0,0,0],
+      "scale": [1,1,1],
+      "sprite": { "key": "287_Gau_trang", "guid": "3945cf7db08150f4bb266a0026034321", "ppu": 100, "nativeSize": [185,209], "pivot": [0.5,0.5], "color": [1,1,1,1], "sortingOrder": 102, "layerValue": 0, "bounds": [302.0002,-13.99945,487.0002,195.0005], "flipX": false, "flipY": false },
+      "components": [
+        {
+          "type": "ItemController",
+          "fields": {
+          "targetPoint": "@node:Scale/Level_612 - Cuopy/Phase1/Placeholder/287 Gau trangPlace",
+          "col": null,
+          "currentHolderSlot": null,
+          "itemGraphic": null,
+          "itemMovement": null
+          }
+        }
+      ]
+    }
+  ],
+  "conflicts": [
+    { "a": "Scale/BaseAll", "rangeA": [-31300,-3900], "b": "Scale/Slots", "rangeB": [-4200,-4100], "overlappingPairs": 6 },
+    { "a": "Scale/BaseAll", "rangeA": [-31300,-3900], "b": "Scale/Level_612 - Cuopy", "rangeB": [-4200,102], "overlappingPairs": 354 },
+    { "a": "Scale/Slots", "rangeA": [-4200,-4100], "b": "Scale/Level_612 - Cuopy", "rangeB": [-4200,102], "overlappingPairs": 18 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/285 gau bongPlace", "rangeA": [-250,-250], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace", "rangeB": [-650,-200], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/284 tuan loc 2Place", "rangeA": [-300,-300], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace", "rangeB": [-650,-200], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/284 tuan locPlace", "rangeA": [-350,-350], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace", "rangeB": [-650,-200], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/283 chuong treo xePlace", "rangeA": [-450,-400], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace", "rangeB": [-650,-200], "overlappingPairs": 6 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/282 than tien ti tiPlace", "rangeA": [-550,-550], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace", "rangeB": [-650,-200], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/281 bao dung quaPlace", "rangeA": [-600,-600], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/280 than xe tuan locPlace", "rangeB": [-650,-200], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keo 4Place", "rangeA": [-1150,-1150], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 hop quaPlace", "rangeB": [-1400,-1100], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keo 3Place", "rangeA": [-1200,-1200], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 hop quaPlace", "rangeB": [-1400,-1100], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keo 2Place", "rangeA": [-1250,-1250], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 hop quaPlace", "rangeB": [-1400,-1100], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 keoPlace", "rangeA": [-1300,-1300], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/275 hop quaPlace", "rangeB": [-1400,-1100], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/272 gift 2Place", "rangeA": [-1800,-1800], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/270 tatPlace", "rangeB": [-2050,-1750], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/272 giftPlace", "rangeA": [-1850,-1850], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/270 tatPlace", "rangeB": [-2050,-1750], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/272 keo cayPlace", "rangeA": [-1900,-1900], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/270 tatPlace", "rangeB": [-2050,-1750], "overlappingPairs": 3 },
+    { "a": "Scale/Level_612 - Cuopy/Phase1/Placeholder/271 keo cayPlace", "rangeA": [-1950,-1950], "b": "Scale/Level_612 - Cuopy/Phase1/Placeholder/270 tatPlace", "rangeB": [-2050,-1750], "overlappingPairs": 3 }
+  ]
+}
